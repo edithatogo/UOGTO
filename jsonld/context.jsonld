@@ -1,0 +1,6 @@
+{
+  "@context": [
+    "./core.context.jsonld",
+    "./extensions.context.jsonld"
+  ]
+}

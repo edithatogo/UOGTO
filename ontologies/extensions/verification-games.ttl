@@ -1,0 +1,87 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/verification-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Verification Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:VerificationGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "VerificationGame"@en ;
+    skos:definition "A game modeling formal specification checks."@en .
+
+uogtox:StrategicFormula a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "StrategicFormula"@en ;
+    skos:definition "A temporal logic formula mapping strategy requirements."@en .
+
+uogtox:TemporalProperty a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "TemporalProperty"@en ;
+    skos:definition "Properties modeling time dimensions (CTL, ATL)."@en .
+
+uogtox:ReachabilityProperty a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ReachabilityProperty"@en ;
+    skos:definition "A property checking if a state is reachable."@en .
+
+uogtox:SafetyProperty a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SafetyProperty"@en ;
+    skos:definition "A property checking that a bad state is never reached."@en .
+
+uogtox:LivenessProperty a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LivenessProperty"@en ;
+    skos:definition "A property checking that a good state is eventually reached."@en .
+
+uogtox:ModelCheckingTask a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ModelCheckingTask"@en ;
+    skos:definition "A model verification execution run."@en .
+
+uogtox:CounterexampleTrace a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CounterexampleTrace"@en ;
+    skos:definition "A trace refuting a temporal property."@en .
+
+uogtox:WitnessStrategy a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "WitnessStrategy"@en ;
+    skos:definition "A strategy proving a temporal property."@en .
+
+uogtox:hasFormula a owl:ObjectProperty ;
+    rdfs:label "hasFormula"@en ;
+    rdfs:domain uogtox:ModelCheckingTask ;
+    rdfs:range uogtox:StrategicFormula ;
+    skos:definition "Links a model checker to formulas."@en .
+
+uogtox:hasCounterexample a owl:ObjectProperty ;
+    rdfs:label "hasCounterexample"@en ;
+    rdfs:domain uogtox:ModelCheckingTask ;
+    rdfs:range uogtox:CounterexampleTrace ;
+    skos:definition "Links task run to counterexamples."@en .
+
+uogtox:hasWitnessStrategy a owl:ObjectProperty ;
+    rdfs:label "hasWitnessStrategy"@en ;
+    rdfs:domain uogtox:ModelCheckingTask ;
+    rdfs:range uogtox:WitnessStrategy ;
+    skos:definition "Links task run to witness strategies."@en .
+
+uogtox:isVerified a owl:DatatypeProperty ;
+    rdfs:label "isVerified"@en ;
+    rdfs:domain uogtox:ModelCheckingTask ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Boolean flag indicating validation success."@en .
+
+uogtox:formulaString a owl:DatatypeProperty ;
+    rdfs:label "formulaString"@en ;
+    rdfs:domain uogtox:StrategicFormula ;
+    rdfs:range xsd:string ;
+    skos:definition "Syntax string of the formula."@en .
+

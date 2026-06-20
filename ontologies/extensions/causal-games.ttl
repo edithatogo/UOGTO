@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/causal-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Causal Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:CausalGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "CausalGame"@en ;
+    skos:definition "A game specifying causal dependencies between actions and payoffs."@en .
+
+uogtox:CausalModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CausalModel"@en ;
+    skos:definition "A model encapsulating structural causal equations."@en .
+
+uogtox:CausalGraph a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CausalGraph"@en ;
+    skos:definition "A directed acyclic graph representing causal paths."@en .
+
+uogtox:Intervention a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Intervention"@en ;
+    skos:definition "An active manipulation of a causal variable (do-calculus)."@en .
+
+uogtox:CounterfactualOutcome a owl:Class ;
+    rdfs:subClassOf uogto:Outcome ;
+    rdfs:label "CounterfactualOutcome"@en ;
+    skos:definition "An outcome mapping alternate worlds."@en .
+
+uogtox:StructuralEquation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "StructuralEquation"@en ;
+    skos:definition "An equation mapping endogenous variables to exogenous factors."@en .
+
+uogtox:CausalPayoffModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CausalPayoffModel"@en ;
+    skos:definition "A causal specification of payoff functions."@en .
+
+uogtox:hasCausalModel a owl:ObjectProperty ;
+    rdfs:label "hasCausalModel"@en ;
+    rdfs:domain uogtox:CausalGame ;
+    rdfs:range uogtox:CausalModel ;
+    skos:definition "Links a game to its structural causal model."@en .
+
+uogtox:hasCausalGraph a owl:ObjectProperty ;
+    rdfs:label "hasCausalGraph"@en ;
+    rdfs:domain uogtox:CausalModel ;
+    rdfs:range uogtox:CausalGraph ;
+    skos:definition "Links a causal model to its DAG graph."@en .
+
+uogtox:hasIntervention a owl:ObjectProperty ;
+    rdfs:label "hasIntervention"@en ;
+    rdfs:domain uogto:PlaySession ;
+    rdfs:range uogtox:Intervention ;
+    skos:definition "Links a session to an intervention."@en .
+
+uogtox:hasStructuralEquation a owl:ObjectProperty ;
+    rdfs:label "hasStructuralEquation"@en ;
+    rdfs:domain uogtox:CausalModel ;
+    rdfs:range uogtox:StructuralEquation ;
+    skos:definition "Links a model to equations."@en .
+
+uogtox:hasCounterfactualOutcome a owl:ObjectProperty ;
+    rdfs:label "hasCounterfactualOutcome"@en ;
+    rdfs:domain uogto:PlaySession ;
+    rdfs:range uogtox:CounterfactualOutcome ;
+    skos:definition "Links a session to hypothetical outcomes."@en .
+

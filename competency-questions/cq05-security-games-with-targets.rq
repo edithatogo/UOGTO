@@ -1,0 +1,7 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?target
+WHERE {
+  ?game a uogtox:SecurityGame ;
+        uogtox:hasTarget ?target .
+}

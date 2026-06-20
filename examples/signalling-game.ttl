@@ -1,0 +1,16 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:signalling-game a uogtox:EpistemicGame ;
+    uogto:identifier "signalling" ;
+    uogto:hasPlayer ex:sender, ex:receiver ;
+    uogto:hasInformationSet ex:sender-info-set .
+
+ex:sender a uogto:Player ;
+    uogto:identifier "sender" .
+
+ex:receiver a uogto:Player ;
+    uogto:identifier "receiver" .
+
+ex:sender-info-set a uogto:InformationSet .

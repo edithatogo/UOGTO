@@ -1,0 +1,14 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/normal-form-game",
+  "@type": "GameSpecification",
+  "identifier": "normal-form",
+  "name": "Generic Normal Form Game",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/p1",
+      "@type": "Player",
+      "identifier": "p1"
+    }
+  ]
+}

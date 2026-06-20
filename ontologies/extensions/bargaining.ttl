@@ -1,0 +1,67 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/bargaining> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Bargaining"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:BargainingGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "BargainingGame"@en ;
+    skos:definition "A cooperative scenario where players negotiate a division of resources."@en .
+
+uogtox:BargainingSolution a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "BargainingSolution"@en ;
+    skos:definition "An equilibrium outcome resolving strategic negotiation."@en .
+
+uogtox:NashBargainingSolution a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "NashBargainingSolution"@en ;
+    skos:definition "A bargaining solution maximizing the product of utilities."@en .
+
+uogtox:KalaiSmorodinskySolution a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "KalaiSmorodinskySolution"@en ;
+    skos:definition "A bargaining solution maintaining utility ratios relative to ideal options."@en .
+
+uogtox:BargainingProtocol a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "BargainingProtocol"@en ;
+    skos:definition "Rules defining sequence of offers and counter-offers."@en .
+
+uogtox:hasBargainingSolution a owl:ObjectProperty ;
+    rdfs:label "hasBargainingSolution"@en ;
+    rdfs:domain uogtox:BargainingGame ;
+    rdfs:range uogtox:BargainingSolution ;
+    skos:definition "Assigns a bargaining solution to a bargaining problem."@en .
+
+uogtox:hasBargainingProtocol a owl:ObjectProperty ;
+    rdfs:label "hasBargainingProtocol"@en ;
+    rdfs:domain uogtox:BargainingGame ;
+    rdfs:range uogtox:BargainingProtocol ;
+    skos:definition "Links a game to its negotiation protocol."@en .
+
+uogtox:disagreementPoint a owl:DatatypeProperty ;
+    rdfs:label "disagreementPoint"@en ;
+    rdfs:domain uogtox:BargainingGame ;
+    rdfs:range xsd:double ;
+    skos:definition "Assigns a utility value representing the outcome of negotiation failure."@en .
+
+uogtox:hasNegotiator a owl:ObjectProperty ;
+    rdfs:label "hasNegotiator"@en ;
+    rdfs:domain uogtox:BargainingGame ;
+    rdfs:range uogto:Player ;
+    skos:definition "Identifies negotiators involved."@en .
+
+uogtox:concessionRate a owl:DatatypeProperty ;
+    rdfs:label "concessionRate"@en ;
+    rdfs:domain uogtox:BargainingGame ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric rate at which players concede during bargaining."@en .
+

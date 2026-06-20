@@ -1,0 +1,19 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/payoffs> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Payoffs Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:OrdinalPayoff a owl:Class ;
+    rdfs:subClassOf uogto:Payoff ;
+    rdfs:label "Ordinal Payoff"@en ;
+    skos:definition "A payoff representing relative preference rankings."@en .
+
+uogto:CardinalPayoff a owl:Class ;
+    rdfs:subClassOf uogto:Payoff ;
+    rdfs:label "Cardinal Payoff"@en ;
+    skos:definition "A payoff representing quantitative measurements of utility."@en .

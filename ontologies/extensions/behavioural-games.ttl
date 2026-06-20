@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/behavioural-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Behavioural Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:BehaviouralGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "BehaviouralGame"@en ;
+    skos:definition "A game modeling human-like decisions violating classical rationality."@en .
+
+uogtox:BoundedRationalityModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "BoundedRationalityModel"@en ;
+    skos:definition "Models capturing cognitive resource bounds."@en .
+
+uogtox:QuantalResponseEquilibrium a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "QuantalResponseEquilibrium"@en ;
+    skos:definition "Equilibrium incorporating logit decision noise."@en .
+
+uogtox:LevelKModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LevelKModel"@en ;
+    skos:definition "Model tracking hierarchies of step-by-step thinking."@en .
+
+uogtox:CognitiveHierarchyModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CognitiveHierarchyModel"@en ;
+    skos:definition "Model tracking continuous hierarchies of player thinking depth."@en .
+
+uogtox:FairnessPreference a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FairnessPreference"@en ;
+    skos:definition "Preferences incorporating inequity aversion."@en .
+
+uogtox:ExperimentalProtocol a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ExperimentalProtocol"@en ;
+    skos:definition "The laboratory setup instructions testing behavioural choices."@en .
+
+uogtox:hasBoundedModel a owl:ObjectProperty ;
+    rdfs:label "hasBoundedModel"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:BoundedRationalityModel ;
+    skos:definition "Links a player to bounded models."@en .
+
+uogtox:hasQRE a owl:ObjectProperty ;
+    rdfs:label "hasQRE"@en ;
+    rdfs:domain uogtox:BehaviouralGame ;
+    rdfs:range uogtox:QuantalResponseEquilibrium ;
+    skos:definition "Links a game to QRE profiles."@en .
+
+uogtox:rationalityParameter a owl:DatatypeProperty ;
+    rdfs:label "rationalityParameter"@en ;
+    rdfs:domain uogtox:BoundedRationalityModel ;
+    rdfs:range xsd:double ;
+    skos:definition "Lambda value representing decision noise scaling."@en .
+
+uogtox:cognitiveLevel a owl:DatatypeProperty ;
+    rdfs:label "cognitiveLevel"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer level parameter in Level-K models."@en .
+
+uogtox:inequityAversionAlpha a owl:DatatypeProperty ;
+    rdfs:label "inequityAversionAlpha"@en ;
+    rdfs:domain uogtox:FairnessPreference ;
+    rdfs:range xsd:double ;
+    skos:definition "Alpha parameter representing envy preferences."@en .
+

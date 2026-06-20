@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/compositional-open-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Compositional Open Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:OpenGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "OpenGame"@en ;
+    skos:definition "A game block that can compose with other games."@en .
+
+uogtox:CompositionalGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "CompositionalGame"@en ;
+    skos:definition "A composite game formed by monoidal paths."@en .
+
+uogtox:Lens a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Lens"@en ;
+    skos:definition "A bidirectional mapping transferring play and coplay parameters."@en .
+
+uogtox:StrategyLens a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "StrategyLens"@en ;
+    skos:definition "A lens translating strategy parameters."@en .
+
+uogtox:PlayFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PlayFunction"@en ;
+    skos:definition "The function implementing game forward execution."@en .
+
+uogtox:CoplayFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CoplayFunction"@en ;
+    skos:definition "The function implementing game backward utility transfers."@en .
+
+uogtox:EquilibriumPredicate a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "EquilibriumPredicate"@en ;
+    skos:definition "Predicate defining local equilibrium conditions."@en .
+
+uogtox:MonoidalComposition a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "MonoidalComposition"@en ;
+    skos:definition "The compositional operator combining games."@en .
+
+uogtox:hasLens a owl:ObjectProperty ;
+    rdfs:label "hasLens"@en ;
+    rdfs:domain uogtox:OpenGame ;
+    rdfs:range uogtox:Lens ;
+    skos:definition "Links an open game to its lens."@en .
+
+uogtox:hasPlayFunction a owl:ObjectProperty ;
+    rdfs:label "hasPlayFunction"@en ;
+    rdfs:domain uogtox:OpenGame ;
+    rdfs:range uogtox:PlayFunction ;
+    skos:definition "Links an open game to forward play functions."@en .
+
+uogtox:hasCoplayFunction a owl:ObjectProperty ;
+    rdfs:label "hasCoplayFunction"@en ;
+    rdfs:domain uogtox:OpenGame ;
+    rdfs:range uogtox:CoplayFunction ;
+    skos:definition "Links an open game to backward functions."@en .
+
+uogtox:hasEquilibriumPredicate a owl:ObjectProperty ;
+    rdfs:label "hasEquilibriumPredicate"@en ;
+    rdfs:domain uogtox:OpenGame ;
+    rdfs:range uogtox:EquilibriumPredicate ;
+    skos:definition "Links an open game to its local equilibria."@en .
+
+uogtox:hasComposition a owl:ObjectProperty ;
+    rdfs:label "hasComposition"@en ;
+    rdfs:domain uogtox:CompositionalGame ;
+    rdfs:range uogtox:MonoidalComposition ;
+    skos:definition "Links composite games to elements."@en .
+

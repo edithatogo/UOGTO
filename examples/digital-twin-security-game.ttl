@@ -1,0 +1,13 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:dt-game a uogtox:DigitalTwinGame ;
+    uogto:identifier "digital-twin-security" ;
+    uogto:hasPlayer ex:iot-sensor ;
+    uogtox:hasDigitalTwin ex:sensor-twin .
+
+ex:iot-sensor a uogto:Player ;
+    uogto:identifier "iot-sensor" .
+
+ex:sensor-twin a uogtox:DigitalTwin .

@@ -1,0 +1,20 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/gridworld",
+  "@type": [
+    "GameSpecification",
+    "MarkovGame"
+  ],
+  "identifier": "marl-gridworld",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/grid-agent",
+      "@type": "Player",
+      "identifier": "grid-agent"
+    }
+  ],
+  "hasTransition": {
+    "@id": "http://example.org/gridworld-transition",
+    "@type": "TransitionFunction"
+  }
+}

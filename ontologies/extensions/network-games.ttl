@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/network-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Network Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:NetworkGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "NetworkGame"@en ;
+    skos:definition "A game played over a social or physical network graph."@en .
+
+uogtox:GraphPlayer a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "GraphPlayer"@en ;
+    skos:definition "A node in a network game."@en .
+
+uogtox:NetworkEdge a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "NetworkEdge"@en ;
+    skos:definition "A connection linking players in the network."@en .
+
+uogtox:LocalInteraction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LocalInteraction"@en ;
+    skos:definition "A local game specification among neighboring players."@en .
+
+uogtox:NeighborSet a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "NeighborSet"@en ;
+    skos:definition "The set of immediate neighbors of a graph node."@en .
+
+uogtox:DiffusionGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "DiffusionGame"@en ;
+    skos:definition "A game modeling information or adoption spread."@en .
+
+uogtox:InfluenceGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "InfluenceGame"@en ;
+    skos:definition "A game modeling strategy pressure from peers."@en .
+
+uogtox:hasGraphPlayer a owl:ObjectProperty ;
+    rdfs:label "hasGraphPlayer"@en ;
+    rdfs:domain uogtox:NetworkGame ;
+    rdfs:range uogtox:GraphPlayer ;
+    skos:definition "Links a network game to its player nodes."@en .
+
+uogtox:hasNetworkEdge a owl:ObjectProperty ;
+    rdfs:label "hasNetworkEdge"@en ;
+    rdfs:domain uogtox:NetworkGame ;
+    rdfs:range uogtox:NetworkEdge ;
+    skos:definition "Links a network game to its structural edges."@en .
+
+uogtox:hasLocalInteraction a owl:ObjectProperty ;
+    rdfs:label "hasLocalInteraction"@en ;
+    rdfs:domain uogtox:GraphPlayer ;
+    rdfs:range uogtox:LocalInteraction ;
+    skos:definition "Links a player node to local games."@en .
+
+uogtox:hasNeighborSet a owl:ObjectProperty ;
+    rdfs:label "hasNeighborSet"@en ;
+    rdfs:domain uogtox:GraphPlayer ;
+    rdfs:range uogtox:NeighborSet ;
+    skos:definition "Links a node to neighbors."@en .
+
+uogtox:degreeValue a owl:DatatypeProperty ;
+    rdfs:label "degreeValue"@en ;
+    rdfs:domain uogtox:GraphPlayer ;
+    rdfs:range xsd:integer ;
+    skos:definition "Numeric property representing number of graph edges."@en .
+

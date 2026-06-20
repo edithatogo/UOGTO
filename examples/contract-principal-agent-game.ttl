@@ -1,0 +1,13 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:contract-game a uogtox:ContractGame ;
+    uogto:identifier "contract-game-1" ;
+    uogto:hasPlayer ex:principal-player ;
+    uogtox:hasContract ex:labor-contract .
+
+ex:principal-player a uogto:Player ;
+    uogto:identifier "principal-player" .
+
+ex:labor-contract a uogtox:Contract .

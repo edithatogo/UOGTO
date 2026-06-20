@@ -1,0 +1,19 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/rules> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Rules Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:ConstitutiveRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "Constitutive Rule"@en ;
+    skos:definition "Rules that create or define new forms of activity."@en .
+
+uogto:RegulativeRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "Regulative Rule"@en ;
+    skos:definition "Rules that regulate pre-existing activities."@en .

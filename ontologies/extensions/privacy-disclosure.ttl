@@ -1,0 +1,72 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/privacy-disclosure> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Privacy Disclosure"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:PrivacyBudget a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PrivacyBudget"@en ;
+    skos:definition "Numeric index tracking epsilon differential privacy bounds."@en .
+
+uogtox:PrivateAttribute a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PrivateAttribute"@en ;
+    skos:definition "Data field subject to disclosure protection."@en .
+
+uogtox:DisclosureAction a owl:Class ;
+    rdfs:subClassOf uogto:Action ;
+    rdfs:label "DisclosureAction"@en ;
+    skos:definition "Action exposing private attributes."@en .
+
+uogtox:ConsentPolicy a owl:Class ;
+    rdfs:subClassOf uogto:Strategy ;
+    rdfs:label "ConsentPolicy"@en ;
+    skos:definition "Rule specifying agent approval for disclosure."@en .
+
+uogtox:InformationLeakage a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "InformationLeakage"@en ;
+    skos:definition "Calculated index of disclosure levels."@en .
+
+uogtox:DifferentialPrivacyMechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DifferentialPrivacyMechanism"@en ;
+    skos:definition "Noise algorithm (Laplace, Gaussian) shielding attributes."@en .
+
+uogtox:hasPrivacyBudget a owl:ObjectProperty ;
+    rdfs:label "hasPrivacyBudget"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:PrivacyBudget ;
+    skos:definition "Links an agent to their privacy budget."@en .
+
+uogtox:hasPrivateAttribute a owl:ObjectProperty ;
+    rdfs:label "hasPrivateAttribute"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:PrivateAttribute ;
+    skos:definition "Links an agent to private attributes."@en .
+
+uogtox:hasConsentPolicy a owl:ObjectProperty ;
+    rdfs:label "hasConsentPolicy"@en ;
+    rdfs:domain uogtox:DisclosureAction ;
+    rdfs:range uogtox:ConsentPolicy ;
+    skos:definition "Links disclosure actions to policies."@en .
+
+uogtox:hasDPMechanism a owl:ObjectProperty ;
+    rdfs:label "hasDPMechanism"@en ;
+    rdfs:domain uogtox:DisclosureAction ;
+    rdfs:range uogtox:DifferentialPrivacyMechanism ;
+    skos:definition "Links disclosure to DP mechanisms."@en .
+
+uogtox:epsilonValue a owl:DatatypeProperty ;
+    rdfs:label "epsilonValue"@en ;
+    rdfs:domain uogtox:PrivacyBudget ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric epsilon privacy parameter value."@en .
+

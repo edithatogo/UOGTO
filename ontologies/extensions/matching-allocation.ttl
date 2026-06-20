@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/matching-allocation> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Matching Allocation"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:MatchingMarket a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "MatchingMarket"@en ;
+    skos:definition "A market matching demand and supply agents."@en .
+
+uogtox:Matching a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Matching"@en ;
+    skos:definition "A mapping of agents on one side of the market to another."@en .
+
+uogtox:StableMatching a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "StableMatching"@en ;
+    skos:definition "A matching without blocking pairs."@en .
+
+uogtox:BlockingPair a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "BlockingPair"@en ;
+    skos:definition "A pair of agents who prefer each other to their matches."@en .
+
+uogtox:Allocation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Allocation"@en ;
+    skos:definition "An assignment of goods or resources to agents."@en .
+
+uogtox:EnvyFreeAllocation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "EnvyFreeAllocation"@en ;
+    skos:definition "An allocation where no agent prefers another's bundle."@en .
+
+uogtox:ProportionalAllocation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ProportionalAllocation"@en ;
+    skos:definition "An allocation giving each agent their fair share."@en .
+
+uogtox:FairnessCriterion a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FairnessCriterion"@en ;
+    skos:definition "A metric assessing fairness properties of allocations."@en .
+
+uogtox:hasMatchingMarket a owl:ObjectProperty ;
+    rdfs:label "hasMatchingMarket"@en ;
+    rdfs:domain uogto:PlaySession ;
+    rdfs:range uogtox:MatchingMarket ;
+    skos:definition "Links a session to a market."@en .
+
+uogtox:hasMatching a owl:ObjectProperty ;
+    rdfs:label "hasMatching"@en ;
+    rdfs:domain uogtox:MatchingMarket ;
+    rdfs:range uogtox:Matching ;
+    skos:definition "Links a market to matching assignments."@en .
+
+uogtox:hasAllocation a owl:ObjectProperty ;
+    rdfs:label "hasAllocation"@en ;
+    rdfs:domain uogtox:MatchingMarket ;
+    rdfs:range uogtox:Allocation ;
+    skos:definition "Links a market to allocations."@en .
+
+uogtox:hasBlockingPair a owl:ObjectProperty ;
+    rdfs:label "hasBlockingPair"@en ;
+    rdfs:domain uogtox:Matching ;
+    rdfs:range uogtox:BlockingPair ;
+    skos:definition "Links a matching to its blocking pairs."@en .
+
+uogtox:valuationValue a owl:DatatypeProperty ;
+    rdfs:label "valuationValue"@en ;
+    rdfs:domain uogtox:Allocation ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric valuation assigned to an allocation."@en .
+

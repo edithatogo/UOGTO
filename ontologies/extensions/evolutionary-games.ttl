@@ -1,0 +1,72 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/evolutionary-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Evolutionary Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:EvolutionaryGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "EvolutionaryGame"@en ;
+    skos:definition "A game modeling biological or social strategy evolution."@en .
+
+uogtox:Population a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Population"@en ;
+    skos:definition "The group of agents evolving strategies."@en .
+
+uogtox:ReplicatorDynamic a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ReplicatorDynamic"@en ;
+    skos:definition "Differential equations mapping strategy population shares over time."@en .
+
+uogtox:EvolutionarilyStableStrategy a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "EvolutionarilyStableStrategy"@en ;
+    skos:definition "A strategy resistant to mutation invasion."@en .
+
+uogtox:MutationOperator a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "MutationOperator"@en ;
+    skos:definition "Rules specifying strategy mutation rates."@en .
+
+uogtox:FitnessFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FitnessFunction"@en ;
+    skos:definition "A function mapping strategy outcomes to biological reproductive success."@en .
+
+uogtox:hasPopulation a owl:ObjectProperty ;
+    rdfs:label "hasPopulation"@en ;
+    rdfs:domain uogtox:EvolutionaryGame ;
+    rdfs:range uogtox:Population ;
+    skos:definition "Links an evolutionary game to its populations."@en .
+
+uogtox:hasReplicatorDynamic a owl:ObjectProperty ;
+    rdfs:label "hasReplicatorDynamic"@en ;
+    rdfs:domain uogtox:Population ;
+    rdfs:range uogtox:ReplicatorDynamic ;
+    skos:definition "Links a population to its replicator equations."@en .
+
+uogtox:hasESS a owl:ObjectProperty ;
+    rdfs:label "hasESS"@en ;
+    rdfs:domain uogtox:EvolutionaryGame ;
+    rdfs:range uogtox:EvolutionarilyStableStrategy ;
+    skos:definition "Links an evolutionary game to its stable strategies."@en .
+
+uogtox:hasMutationOperator a owl:ObjectProperty ;
+    rdfs:label "hasMutationOperator"@en ;
+    rdfs:domain uogtox:Population ;
+    rdfs:range uogtox:MutationOperator ;
+    skos:definition "Links a population to mutation rates."@en .
+
+uogtox:hasFitnessFunction a owl:ObjectProperty ;
+    rdfs:label "hasFitnessFunction"@en ;
+    rdfs:domain uogtox:Population ;
+    rdfs:range uogtox:FitnessFunction ;
+    skos:definition "Links a population to its fitness model."@en .
+

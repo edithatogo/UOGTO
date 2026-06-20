@@ -1,0 +1,92 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/game-description-languages> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Game Description Languages"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:RuleEncodedGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "RuleEncodedGame"@en ;
+    skos:definition "A game completely defined by syntax rules."@en .
+
+uogtox:GameDescriptionLanguage a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "GameDescriptionLanguage"@en ;
+    skos:definition "The description language vocabulary (GDL)."@en .
+
+uogtox:GDLGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "GDLGame"@en ;
+    skos:definition "A game defined using GDL syntax."@en .
+
+uogtox:GDLII_Game a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "GDLII Game"@en ;
+    skos:definition "A game defined using GDL-II (imperfect information)."@en .
+
+uogtox:LudiiGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "LudiiGame"@en ;
+    skos:definition "A game defined using the Ludii system format."@en .
+
+uogtox:RulePredicate a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "RulePredicate"@en ;
+    skos:definition "A logical statement in a rule model."@en .
+
+uogtox:LegalMoveRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "LegalMoveRule"@en ;
+    skos:definition "Rules defining valid moves."@en .
+
+uogtox:TerminalRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "TerminalRule"@en ;
+    skos:definition "Rules defining final states."@en .
+
+uogtox:GoalRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "GoalRule"@en ;
+    skos:definition "Rules defining player score achievements."@en .
+
+uogtox:TransitionRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "TransitionRule"@en ;
+    skos:definition "Rules mapping action configurations to next states."@en .
+
+uogtox:hasGDLDescription a owl:DatatypeProperty ;
+    rdfs:label "hasGDLDescription"@en ;
+    rdfs:domain uogtox:RuleEncodedGame ;
+    rdfs:range xsd:string ;
+    skos:definition "Links a game to GDL script content."@en .
+
+uogtox:hasRulePredicate a owl:ObjectProperty ;
+    rdfs:label "hasRulePredicate"@en ;
+    rdfs:domain uogtox:RuleEncodedGame ;
+    rdfs:range uogtox:RulePredicate ;
+    skos:definition "Links rules to GDL predicates."@en .
+
+uogtox:hasLegalMoveRule a owl:ObjectProperty ;
+    rdfs:label "hasLegalMoveRule"@en ;
+    rdfs:domain uogtox:RuleEncodedGame ;
+    rdfs:range uogtox:LegalMoveRule ;
+    skos:definition "Links a game to move rules."@en .
+
+uogtox:hasTerminalRule a owl:ObjectProperty ;
+    rdfs:label "hasTerminalRule"@en ;
+    rdfs:domain uogtox:RuleEncodedGame ;
+    rdfs:range uogtox:TerminalRule ;
+    skos:definition "Links a game to terminal rules."@en .
+
+uogtox:hasGoalRule a owl:ObjectProperty ;
+    rdfs:label "hasGoalRule"@en ;
+    rdfs:domain uogtox:RuleEncodedGame ;
+    rdfs:range uogtox:GoalRule ;
+    skos:definition "Links a game to goal rules."@en .
+

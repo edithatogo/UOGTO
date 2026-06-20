@@ -1,0 +1,16 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/voting-game",
+  "@type": [
+    "GameSpecification",
+    "VotingGame"
+  ],
+  "identifier": "voting-social-choice",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/voter-1",
+      "@type": "Player",
+      "identifier": "voter-1"
+    }
+  ]
+}

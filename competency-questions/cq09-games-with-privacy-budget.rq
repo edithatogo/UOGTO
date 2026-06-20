@@ -1,0 +1,5 @@
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?player ?budget
+WHERE {
+  ?player uogtox:hasPrivacyBudget ?budget .
+}

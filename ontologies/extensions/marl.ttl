@@ -1,0 +1,97 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/marl> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Marl"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:MarkovGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "MarkovGame"@en ;
+    skos:definition "A multi-agent extension of Markov Decision Processes."@en .
+
+uogtox:MultiAgentEnvironment a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "MultiAgentEnvironment"@en ;
+    skos:definition "The simulator environment containing states and transition dynamics."@en .
+
+uogtox:Policy a owl:Class ;
+    rdfs:subClassOf uogto:Strategy ;
+    rdfs:label "Policy"@en ;
+    skos:definition "A mapping from observations to actions for a single MARL agent."@en .
+
+uogtox:JointPolicy a owl:Class ;
+    rdfs:subClassOf uogto:Strategy ;
+    rdfs:label "JointPolicy"@en ;
+    skos:definition "A combination of policies for all agents in a MARL system."@en .
+
+uogtox:RewardFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "RewardFunction"@en ;
+    skos:definition "A function returning rewards based on joint actions and states."@en .
+
+uogtox:ObservationSpace a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ObservationSpace"@en ;
+    skos:definition "The set of all possible environment observations."@en .
+
+uogtox:ActionSpace a owl:Class ;
+    rdfs:subClassOf uogto:Action ;
+    rdfs:label "ActionSpace"@en ;
+    skos:definition "The set of all possible environment actions."@en .
+
+uogtox:LearningAlgorithm a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LearningAlgorithm"@en ;
+    skos:definition "An algorithm (e.g. Q-learning, PPO) updating policy parameters."@en .
+
+uogtox:SelfPlay a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SelfPlay"@en ;
+    skos:definition "A training protocol where agents learn by playing copies of themselves."@en .
+
+uogtox:RegretMetric a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "RegretMetric"@en ;
+    skos:definition "Metric tracking the difference between actual and optimal decisions."@en .
+
+uogtox:ExploitabilityMetric a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ExploitabilityMetric"@en ;
+    skos:definition "Metric tracking how close a joint policy is to a Nash equilibrium."@en .
+
+uogtox:hasPolicy a owl:ObjectProperty ;
+    rdfs:label "hasPolicy"@en ;
+    rdfs:domain uogto:Agent ;
+    rdfs:range uogtox:Policy ;
+    skos:definition "Links an agent to their current policy."@en .
+
+uogtox:hasObservationSpace a owl:ObjectProperty ;
+    rdfs:label "hasObservationSpace"@en ;
+    rdfs:domain uogtox:MultiAgentEnvironment ;
+    rdfs:range uogtox:ObservationSpace ;
+    skos:definition "Links an environment to its observation space."@en .
+
+uogtox:hasActionSpace a owl:ObjectProperty ;
+    rdfs:label "hasActionSpace"@en ;
+    rdfs:domain uogto:Agent ;
+    rdfs:range uogtox:ActionSpace ;
+    skos:definition "Links an agent to their action space."@en .
+
+uogtox:hasLearningAlgorithm a owl:ObjectProperty ;
+    rdfs:label "hasLearningAlgorithm"@en ;
+    rdfs:domain uogtox:MultiAgentEnvironment ;
+    rdfs:range uogtox:LearningAlgorithm ;
+    skos:definition "Links a training run to its algorithm."@en .
+
+uogtox:regretValue a owl:DatatypeProperty ;
+    rdfs:label "regretValue"@en ;
+    rdfs:domain uogtox:RegretMetric ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value tracking cumulative regret."@en .
+

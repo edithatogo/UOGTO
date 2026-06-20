@@ -1,0 +1,92 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/petri-net-devs-hla> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Petri Net Devs Hla"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:PetriNetGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "PetriNetGame"@en ;
+    skos:definition "A game modeled using Petri Net structures."@en .
+
+uogtox:PetriNet a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PetriNet"@en ;
+    skos:definition "The discrete-event bipartite graph representation."@en .
+
+uogtox:Place a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Place"@en ;
+    skos:definition "Graph node representing local states or resources."@en .
+
+uogtox:TransitionNode a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "TransitionNode"@en ;
+    skos:definition "Graph node representing event transitions."@en .
+
+uogtox:Token a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Token"@en ;
+    skos:definition "Marking entities residing in places."@en .
+
+uogtox:Marking a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Marking"@en ;
+    skos:definition "The state vector of token locations across places."@en .
+
+uogtox:DEVSAtomicModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DEVSAtomicModel"@en ;
+    skos:definition "Discrete Event System specification atomic block."@en .
+
+uogtox:DEVSCoupledModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DEVSCoupledModel"@en ;
+    skos:definition "DEVS block formed by composition."@en .
+
+uogtox:Federate a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Federate"@en ;
+    skos:definition "An HLA distributed simulation execution node."@en .
+
+uogtox:FederationObjectModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FederationObjectModel"@en ;
+    skos:definition "HLA simulation protocol catalog (FOM)."@en .
+
+uogtox:hasPetriNet a owl:ObjectProperty ;
+    rdfs:label "hasPetriNet"@en ;
+    rdfs:domain uogtox:PetriNetGame ;
+    rdfs:range uogtox:PetriNet ;
+    skos:definition "Links a Petri Net game to its net model."@en .
+
+uogtox:hasPlace a owl:ObjectProperty ;
+    rdfs:label "hasPlace"@en ;
+    rdfs:domain uogtox:PetriNet ;
+    rdfs:range uogtox:Place ;
+    skos:definition "Links a net model to places."@en .
+
+uogtox:hasTransitionNode a owl:ObjectProperty ;
+    rdfs:label "hasTransitionNode"@en ;
+    rdfs:domain uogtox:PetriNet ;
+    rdfs:range uogtox:TransitionNode ;
+    skos:definition "Links a net model to transition nodes."@en .
+
+uogtox:hasMarking a owl:ObjectProperty ;
+    rdfs:label "hasMarking"@en ;
+    rdfs:domain uogtox:PetriNet ;
+    rdfs:range uogtox:Marking ;
+    skos:definition "Links a net model to its current marking state."@en .
+
+uogtox:tokenCount a owl:DatatypeProperty ;
+    rdfs:label "tokenCount"@en ;
+    rdfs:domain uogtox:Place ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer number of tokens in a place."@en .
+

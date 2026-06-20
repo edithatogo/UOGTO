@@ -1,0 +1,19 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/outcomes> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Outcomes Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:DeterministicOutcome a owl:Class ;
+    rdfs:subClassOf uogto:Outcome ;
+    rdfs:label "Deterministic Outcome"@en ;
+    skos:definition "An outcome determined strictly by player actions."@en .
+
+uogto:StochasticOutcome a owl:Class ;
+    rdfs:subClassOf uogto:Outcome ;
+    rdfs:label "Stochastic Outcome"@en ;
+    skos:definition "An outcome incorporating environmental randomness."@en .

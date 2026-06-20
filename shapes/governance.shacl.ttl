@@ -1,0 +1,21 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+
+uogtox:MechanismShape a sh:NodeShape ;
+    sh:targetClass uogtox:Mechanism ;
+    sh:property [
+        sh:path uogtox:hasAllocationRule ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path uogtox:hasPaymentRule ;
+        sh:minCount 1 ;
+    ] .
+
+uogtox:ContractGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:ContractGame ;
+    sh:property [
+        sh:path uogtox:hasContract ;
+        sh:minCount 1 ;
+    ] .

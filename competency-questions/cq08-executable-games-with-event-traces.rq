@@ -1,0 +1,6 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?game ?trace
+WHERE {
+  ?game a uogto:GameSpecification ;
+        uogto:emitsEventTrace ?trace .
+}

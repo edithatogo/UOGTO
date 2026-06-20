@@ -1,0 +1,67 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/learning-in-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Learning In Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:LearningProcess a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LearningProcess"@en ;
+    skos:definition "An iterative process of strategy updates in repeated play."@en .
+
+uogtox:FictitiousPlay a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FictitiousPlay"@en ;
+    skos:definition "A learning process where players best-respond to empirical strategy distributions of opponents."@en .
+
+uogtox:ReplicatorLearning a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ReplicatorLearning"@en ;
+    skos:definition "An evolutionary learning process modeling relative success."@en .
+
+uogtox:RegretMatching a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "RegretMatching"@en ;
+    skos:definition "A learning process updating actions based on cumulative regrets."@en .
+
+uogtox:QLearning a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "QLearning"@en ;
+    skos:definition "A reinforcement learning process updating action-value estimates."@en .
+
+uogtox:hasLearningProcess a owl:ObjectProperty ;
+    rdfs:label "hasLearningProcess"@en ;
+    rdfs:domain uogto:PlaySession ;
+    rdfs:range uogtox:LearningProcess ;
+    skos:definition "Links a game session to its learning process."@en .
+
+uogtox:learningRate a owl:DatatypeProperty ;
+    rdfs:label "learningRate"@en ;
+    rdfs:domain uogtox:LearningProcess ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric rate parameter for parameter updates."@en .
+
+uogtox:discountFactor a owl:DatatypeProperty ;
+    rdfs:label "discountFactor"@en ;
+    rdfs:domain uogtox:LearningProcess ;
+    rdfs:range xsd:double ;
+    skos:definition "Temporal discount factor for future rewards."@en .
+
+uogtox:hasQTable a owl:ObjectProperty ;
+    rdfs:label "hasQTable"@en ;
+    rdfs:domain uogtox:LearningProcess ;
+    rdfs:range uogto:State ;
+    skos:definition "Identifies value state tables."@en .
+
+uogtox:explorationRate a owl:DatatypeProperty ;
+    rdfs:label "explorationRate"@en ;
+    rdfs:domain uogtox:LearningProcess ;
+    rdfs:range xsd:double ;
+    skos:definition "Epsilon probability of random exploration."@en .
+

@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/differential-hybrid-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Differential Hybrid Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:ContinuousTimeGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "ContinuousTimeGame"@en ;
+    skos:definition "A game modeling continuous state variables and decisions."@en .
+
+uogtox:DifferentialGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "DifferentialGame"@en ;
+    skos:definition "A game modeled via ordinary differential equations."@en .
+
+uogtox:StochasticDifferentialGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "StochasticDifferentialGame"@en ;
+    skos:definition "A differential game incorporating stochastic noise."@en .
+
+uogtox:HybridGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "HybridGame"@en ;
+    skos:definition "A game combining continuous dynamics and discrete mode transitions."@en .
+
+uogtox:ControlVariable a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ControlVariable"@en ;
+    skos:definition "A decision variable continuously adjusted over time."@en .
+
+uogtox:StateEquation a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "StateEquation"@en ;
+    skos:definition "A differential equation defining state updates."@en .
+
+uogtox:Hamiltonian a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Hamiltonian"@en ;
+    skos:definition "The mathematical function modeling optimal control paths."@en .
+
+uogtox:IsaacsCondition a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "IsaacsCondition"@en ;
+    skos:definition "Conditions matching saddle point existence in differential play."@en .
+
+uogtox:hasControlVariable a owl:ObjectProperty ;
+    rdfs:label "hasControlVariable"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:ControlVariable ;
+    skos:definition "Links a player to their control variables."@en .
+
+uogtox:hasStateEquation a owl:ObjectProperty ;
+    rdfs:label "hasStateEquation"@en ;
+    rdfs:domain uogtox:ContinuousTimeGame ;
+    rdfs:range uogtox:StateEquation ;
+    skos:definition "Links a game to its dynamics equations."@en .
+
+uogtox:hasHamiltonian a owl:ObjectProperty ;
+    rdfs:label "hasHamiltonian"@en ;
+    rdfs:domain uogtox:ContinuousTimeGame ;
+    rdfs:range uogtox:Hamiltonian ;
+    skos:definition "Links state analysis to its Hamiltonian."@en .
+
+uogtox:timeHorizon a owl:DatatypeProperty ;
+    rdfs:label "timeHorizon"@en ;
+    rdfs:domain uogtox:ContinuousTimeGame ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric maximum continuous time index."@en .
+
+uogtox:driftRate a owl:DatatypeProperty ;
+    rdfs:label "driftRate"@en ;
+    rdfs:domain uogtox:StateEquation ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric drift value."@en .
+

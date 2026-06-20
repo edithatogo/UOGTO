@@ -1,0 +1,35 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+uogtox:StochasticGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:MarkovGame ;
+    sh:property [
+        sh:path uogto:hasTransition ;
+        sh:minCount 1 ;
+        rdfs:comment "Every StochasticGame or MarkovGame must have a TransitionFunction."
+    ] .
+
+uogtox:BayesianGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:EpistemicGame ;
+    sh:property [
+        sh:path uogto:hasInformationSet ;
+        sh:minCount 1 ;
+        rdfs:comment "Every BayesianGame or EpistemicGame must have a TypeSpace or InformationSet."
+    ] .
+
+uogtox:SecurityGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:SecurityGame ;
+    sh:property [
+        sh:path uogtox:hasDefender ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path uogtox:hasAttacker ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path uogtox:hasTarget ;
+        sh:minCount 1 ;
+    ] .

@@ -1,0 +1,6 @@
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?agent ?toolCall
+WHERE {
+  ?agent a uogtox:LLMAgent ;
+         uogtox:hasToolInvocation ?toolCall .
+}

@@ -1,0 +1,132 @@
+phases:
+  - id: phase_00_bootstrap
+    name: "Bootstrap Repo and Tooling"
+    status: completed
+    tasks:
+      - id: t00_bootstrap_scaffold
+        owner_role: ontology-architect
+        inputs: []
+        outputs: [".gitignore", "pyproject.toml", "Makefile"]
+        validation_command: "pytest tests/test_parse_ttl.py"
+        acceptance_criteria: "Repository layout and base settings created."
+        status: completed
+
+  - id: phase_01_core_ontology
+    name: "Core Ontology Implementation"
+    status: completed
+    tasks:
+      - id: t01_core_ttl
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/core/uogto-core.ttl", "ontologies/core/agents.ttl", "ontologies/core/games.ttl", "ontologies/core/strategies.ttl", "ontologies/core/actions.ttl", "ontologies/core/outcomes.ttl", "ontologies/core/payoffs.ttl", "ontologies/core/information.ttl", "ontologies/core/dynamics.ttl", "ontologies/core/equilibria.ttl", "ontologies/core/rules.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Core ontology compiles and contains mandatory classes and properties."
+        status: completed
+
+  - id: phase_02_classical_and_cooperative_games
+    name: "Classical and Cooperative Games"
+    status: completed
+    tasks:
+      - id: t02_classical_coop
+        owner_role: rdf-owl-engineer
+        inputs: ["ontologies/core/uogto-core.ttl"]
+        outputs: ["ontologies/extensions/cooperative.ttl", "ontologies/extensions/behavioural-games.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Defines normal/extensive form and cooperative classes."
+        status: completed
+
+  - id: phase_03_information_and_epistemic_games
+    name: "Information and Epistemic Games"
+    status: completed
+    tasks:
+      - id: t03_info_epistemic
+        owner_role: rdf-owl-engineer
+        inputs: ["ontologies/core/uogto-core.ttl"]
+        outputs: ["ontologies/extensions/epistemic-games.ttl", "ontologies/extensions/information-design.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Defines belief hierarchies, signaling, type spaces."
+        status: completed
+
+  - id: phase_04_dynamics_simulation_and_execution
+    name: "Dynamics, Simulation and Execution"
+    status: completed
+    tasks:
+      - id: t04_dynamics_sim
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/petri-net-devs-hla.ttl", "ontologies/extensions/kg-execution-bindings.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Petri-net, DEVS, HLA, and Execution bindings specified."
+        status: completed
+
+  - id: phase_05_mechanism_design_social_choice_and_allocation
+    name: "Mechanism Design, Social Choice and Allocation"
+    status: completed
+    tasks:
+      - id: t05_mechanism_design
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/mechanism-design.ttl", "ontologies/extensions/auctions.ttl", "ontologies/extensions/bargaining.ttl", "ontologies/extensions/matching-allocation.ttl", "ontologies/extensions/computational-social-choice.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Incentive compatibility, auctions, voting, and matching modules ready."
+        status: completed
+
+  - id: phase_06_learning_marl_and_evolution
+    name: "Learning, MARL and Evolution"
+    status: completed
+    tasks:
+      - id: t06_learning_marl
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/marl.ttl", "ontologies/extensions/learning-in-games.ttl", "ontologies/extensions/evolutionary-games.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "RL metrics, populations, policies, and ESS defined."
+        status: completed
+
+  - id: phase_07_network_mean_field_and_continuous_games
+    name: "Network, Mean Field and Continuous Games"
+    status: completed
+    tasks:
+      - id: t07_network_mean_field
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/network-games.ttl", "ontologies/extensions/mean-field-games.ttl", "ontologies/extensions/causal-games.ttl", "ontologies/extensions/differential-hybrid-games.ttl", "ontologies/extensions/congestion-routing-games.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Continuous-time, hybrid, routing, causal, and population/network games."
+        status: completed
+
+  - id: phase_08_norms_contracts_institutions_and_deontic_logic
+    name: "Norms, Contracts, Institutions and Deontic Logic"
+    status: completed
+    tasks:
+      - id: t08_norms_contracts
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/institutional-economics.ttl", "ontologies/extensions/deontic-logic.ttl", "ontologies/extensions/contract-theory.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "Obligations, permissions, property rights, principal-agent dynamics."
+        status: completed
+
+  - id: phase_09_llm_agents_digital_twins_and_protocols
+    name: "LLM Agents, Digital Twins and Protocols"
+    status: completed
+    tasks:
+      - id: t09_llm_twins
+        owner_role: rdf-owl-engineer
+        inputs: []
+        outputs: ["ontologies/extensions/llm-agent-games.ttl", "ontologies/extensions/digital-twin-games.ttl", "ontologies/extensions/compositional-open-games.ttl", "ontologies/extensions/trust-reputation-provenance.ttl", "ontologies/extensions/privacy-disclosure.ttl", "ontologies/extensions/verification-games.ttl", "ontologies/extensions/security-games.ttl", "ontologies/extensions/game-description-languages.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "LLM protocols, cyber-physical DTs, open games, security games, trust models."
+        status: completed
+
+  - id: phase_10_validation_examples_docs_release
+    name: "Validation, Examples, Docs and Release"
+    status: completed
+    tasks:
+      - id: t10_release
+        owner_role: docs-release-engineer
+        inputs: []
+        outputs: ["dist/uogto.ttl", "dist/uogto-shapes.ttl"]
+        validation_command: "python scripts/validate.py"
+        acceptance_criteria: "All competency questions, validation tests, and docs pass."
+        status: completed

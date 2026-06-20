@@ -1,0 +1,87 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/deontic-logic> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Deontic Logic"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:DeonticLogicSystem a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DeonticLogicSystem"@en ;
+    skos:definition "A normative system formalizing modalities of obligation, permission, and prohibition."@en .
+
+uogtox:Norm a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Norm"@en ;
+    skos:definition "A norm rule containing deontic modalities."@en .
+
+uogtox:Obligation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Obligation"@en ;
+    skos:definition "A deontic state requiring specific action."@en .
+
+uogtox:Permission a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Permission"@en ;
+    skos:definition "A deontic state allowing specific action."@en .
+
+uogtox:Prohibition a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Prohibition"@en ;
+    skos:definition "A deontic state forbidding specific action."@en .
+
+uogtox:Sanction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Sanction"@en ;
+    skos:definition "A punishment applied to violations."@en .
+
+uogtox:Violation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Violation"@en ;
+    skos:definition "An event trace marking rule breach."@en .
+
+uogtox:ComplianceState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "ComplianceState"@en ;
+    skos:definition "A state marking compliance with norms."@en .
+
+uogtox:DeonticModality a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DeonticModality"@en ;
+    skos:definition "The structural category of the deontic rule."@en .
+
+uogtox:hasObligation a owl:ObjectProperty ;
+    rdfs:label "hasObligation"@en ;
+    rdfs:domain uogtox:ComplianceState ;
+    rdfs:range uogtox:Obligation ;
+    skos:definition "Links a compliance state to obligations."@en .
+
+uogtox:hasPermission a owl:ObjectProperty ;
+    rdfs:label "hasPermission"@en ;
+    rdfs:domain uogtox:ComplianceState ;
+    rdfs:range uogtox:Permission ;
+    skos:definition "Links a compliance state to permissions."@en .
+
+uogtox:hasProhibition a owl:ObjectProperty ;
+    rdfs:label "hasProhibition"@en ;
+    rdfs:domain uogtox:ComplianceState ;
+    rdfs:range uogtox:Prohibition ;
+    skos:definition "Links a compliance state to prohibitions."@en .
+
+uogtox:hasSanction a owl:ObjectProperty ;
+    rdfs:label "hasSanction"@en ;
+    rdfs:domain uogtox:Violation ;
+    rdfs:range uogtox:Sanction ;
+    skos:definition "Links a violation to sanctions."@en .
+
+uogtox:isCompliant a owl:DatatypeProperty ;
+    rdfs:label "isCompliant"@en ;
+    rdfs:domain uogtox:ComplianceState ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Boolean mapping compliance."@en .
+

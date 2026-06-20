@@ -1,0 +1,22 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/prisoners-dilemma",
+  "@type": "GameSpecification",
+  "identifier": "prisoners-dilemma",
+  "name": "Prisoner's Dilemma",
+  "description": "Classical normal-form game of cooperation and defection.",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/alice",
+      "@type": "Player",
+      "identifier": "alice",
+      "name": "Alice"
+    },
+    {
+      "@id": "http://example.org/players/bob",
+      "@type": "Player",
+      "identifier": "bob",
+      "name": "Bob"
+    }
+  ]
+}

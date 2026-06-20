@@ -1,0 +1,15 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:petri-game a uogtox:PetriNetGame ;
+    uogto:identifier "petri-net-execution" ;
+    uogto:hasPlayer ex:token-pusher ;
+    uogtox:hasPlace ex:place-1 ;
+    uogtox:hasTransitionNode ex:transition-1 .
+
+ex:token-pusher a uogto:Player ;
+    uogto:identifier "token-pusher" .
+
+ex:place-1 a uogtox:Place .
+ex:transition-1 a uogtox:TransitionNode .

@@ -1,0 +1,10 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+
+# Additional validation shapes for examples
+uogto:ExamplePlayerShape a sh:NodeShape ;
+    sh:targetClass uogto:Player ;
+    sh:property [
+        sh:path uogto:identifier ;
+        sh:minCount 1 ;
+    ] .

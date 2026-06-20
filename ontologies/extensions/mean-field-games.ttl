@@ -1,0 +1,72 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/mean-field-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Mean Field Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:MeanFieldGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "MeanFieldGame"@en ;
+    skos:definition "A game modeling interactions in infinite agent populations."@en .
+
+uogtox:PopulationState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "PopulationState"@en ;
+    skos:definition "A continuous distribution of players across states."@en .
+
+uogtox:RepresentativeAgent a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "RepresentativeAgent"@en ;
+    skos:definition "An agent representing average player dynamics."@en .
+
+uogtox:DistributionalState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "DistributionalState"@en ;
+    skos:definition "The mathematical distribution of agent characteristics."@en .
+
+uogtox:MeanFieldEquilibrium a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "MeanFieldEquilibrium"@en ;
+    skos:definition "The fixed point of population dynamics and agent policies."@en .
+
+uogtox:PopulationPolicy a owl:Class ;
+    rdfs:subClassOf uogto:Strategy ;
+    rdfs:label "PopulationPolicy"@en ;
+    skos:definition "The generalized strategy profile of the population."@en .
+
+uogtox:hasPopulationState a owl:ObjectProperty ;
+    rdfs:label "hasPopulationState"@en ;
+    rdfs:domain uogtox:MeanFieldGame ;
+    rdfs:range uogtox:PopulationState ;
+    skos:definition "Links a game to population states."@en .
+
+uogtox:hasRepresentativeAgent a owl:ObjectProperty ;
+    rdfs:label "hasRepresentativeAgent"@en ;
+    rdfs:domain uogtox:MeanFieldGame ;
+    rdfs:range uogtox:RepresentativeAgent ;
+    skos:definition "Links a game to its representative agent."@en .
+
+uogtox:hasDistributionalState a owl:ObjectProperty ;
+    rdfs:label "hasDistributionalState"@en ;
+    rdfs:domain uogtox:PopulationState ;
+    rdfs:range uogtox:DistributionalState ;
+    skos:definition "Links a population state to distributions."@en .
+
+uogtox:hasMeanFieldEquilibrium a owl:ObjectProperty ;
+    rdfs:label "hasMeanFieldEquilibrium"@en ;
+    rdfs:domain uogtox:MeanFieldGame ;
+    rdfs:range uogtox:MeanFieldEquilibrium ;
+    skos:definition "Links a game to its equilibria."@en .
+
+uogtox:densityValue a owl:DatatypeProperty ;
+    rdfs:label "densityValue"@en ;
+    rdfs:domain uogtox:PopulationState ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric population density value."@en .
+

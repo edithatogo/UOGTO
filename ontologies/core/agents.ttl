@@ -1,0 +1,19 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/agents> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Agents Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:HumanPlayer a owl:Class ;
+    rdfs:subClassOf uogto:Player ;
+    rdfs:label "Human Player"@en ;
+    skos:definition "A human agent participating in a game."@en .
+
+uogto:ArtificialAgent a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "Artificial Agent"@en ;
+    skos:definition "A software agent participating in a game."@en .

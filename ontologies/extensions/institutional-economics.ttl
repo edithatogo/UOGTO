@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/institutional-economics> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Institutional Economics"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:InstitutionalEconomicsGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "InstitutionalEconomicsGame"@en ;
+    skos:definition "A game modeling transactions, property rights, and governance."@en .
+
+uogtox:Institution a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Institution"@en ;
+    skos:definition "A set of formal or informal rules structure."@en .
+
+uogtox:InstitutionalRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "InstitutionalRule"@en ;
+    skos:definition "A rule defined by an institution."@en .
+
+uogtox:GovernanceMechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "GovernanceMechanism"@en ;
+    skos:definition "A system overseeing rule compliance."@en .
+
+uogtox:PropertyRight a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PropertyRight"@en ;
+    skos:definition "Rules mapping ownership of game assets."@en .
+
+uogtox:TransactionCost a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "TransactionCost"@en ;
+    skos:definition "Utility costs associated with trade execution."@en .
+
+uogtox:EnforcementMechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "EnforcementMechanism"@en ;
+    skos:definition "A mechanism applying sanctions to rule violations."@en .
+
+uogtox:CollectiveChoiceArena a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CollectiveChoiceArena"@en ;
+    skos:definition "An arena where rules are written or amended."@en .
+
+uogtox:hasInstitution a owl:ObjectProperty ;
+    rdfs:label "hasInstitution"@en ;
+    rdfs:domain uogtox:InstitutionalEconomicsGame ;
+    rdfs:range uogtox:Institution ;
+    skos:definition "Links a game to governing institutions."@en .
+
+uogtox:hasPropertyRight a owl:ObjectProperty ;
+    rdfs:label "hasPropertyRight"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:PropertyRight ;
+    skos:definition "Links a player to their assets."@en .
+
+uogtox:hasTransactionCost a owl:ObjectProperty ;
+    rdfs:label "hasTransactionCost"@en ;
+    rdfs:domain uogtox:GameInstance ;
+    rdfs:range uogtox:TransactionCost ;
+    skos:definition "Links a trade to its cost."@en .
+
+uogtox:hasEnforcementMechanism a owl:ObjectProperty ;
+    rdfs:label "hasEnforcementMechanism"@en ;
+    rdfs:domain uogtox:Institution ;
+    rdfs:range uogtox:EnforcementMechanism ;
+    skos:definition "Links an institution to enforcement."@en .
+
+uogtox:costValue a owl:DatatypeProperty ;
+    rdfs:label "costValue"@en ;
+    rdfs:domain uogtox:TransactionCost ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric transaction cost values."@en .
+

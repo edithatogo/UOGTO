@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/kg-execution-bindings> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Kg Execution Bindings"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:ExecutableGameGraph a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "ExecutableGameGraph"@en ;
+    skos:definition "A knowledge graph containing executable semantic rules."@en .
+
+uogtox:ExecutionBinding a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ExecutionBinding"@en ;
+    skos:definition "Mappers mapping ontology elements to software execution objects."@en .
+
+uogtox:RuntimeBinding a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "RuntimeBinding"@en ;
+    skos:definition "Bindings linking parameters to live environments."@en .
+
+uogtox:SolverBinding a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SolverBinding"@en ;
+    skos:definition "Bindings linking model nodes to optimization engines."@en .
+
+uogtox:SimulationBinding a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SimulationBinding"@en ;
+    skos:definition "Bindings linking model nodes to DEVS/HLA simulators."@en .
+
+uogtox:SPARQLExecutionQuery a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SPARQLExecutionQuery"@en ;
+    skos:definition "SPARQL statement executing model updates."@en .
+
+uogtox:ValidationShape a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ValidationShape"@en ;
+    skos:definition "SHACL validation schema applied at runtime."@en .
+
+uogtox:ConstraintViolation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ConstraintViolation"@en ;
+    skos:definition "Output logs reporting model schema errors."@en .
+
+uogtox:hasExecutionBinding a owl:ObjectProperty ;
+    rdfs:label "hasExecutionBinding"@en ;
+    rdfs:domain uogtox:ExecutableGameGraph ;
+    rdfs:range uogtox:ExecutionBinding ;
+    skos:definition "Links an executable graph to execution mappings."@en .
+
+uogtox:hasRuntimeBinding a owl:ObjectProperty ;
+    rdfs:label "hasRuntimeBinding"@en ;
+    rdfs:domain uogtox:ExecutionBinding ;
+    rdfs:range uogtox:RuntimeBinding ;
+    skos:definition "Links a mapping to runtime bindings."@en .
+
+uogtox:hasSolverBinding a owl:ObjectProperty ;
+    rdfs:label "hasSolverBinding"@en ;
+    rdfs:domain uogtox:ExecutionBinding ;
+    rdfs:range uogtox:SolverBinding ;
+    skos:definition "Links a mapping to optimization bindings."@en .
+
+uogtox:hasSimulationBinding a owl:ObjectProperty ;
+    rdfs:label "hasSimulationBinding"@en ;
+    rdfs:domain uogtox:ExecutionBinding ;
+    rdfs:range uogtox:SimulationBinding ;
+    skos:definition "Links a mapping to simulators."@en .
+
+uogtox:queryText a owl:DatatypeProperty ;
+    rdfs:label "queryText"@en ;
+    rdfs:domain uogtox:SPARQLExecutionQuery ;
+    rdfs:range xsd:string ;
+    skos:definition "Syntax string of the execution query."@en .
+

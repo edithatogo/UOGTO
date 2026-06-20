@@ -1,0 +1,6 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?game ?player
+WHERE {
+  ?game a uogto:GameSpecification ;
+        uogto:hasPlayer ?player .
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/stackelberg-security",
+  "@type": [
+    "GameSpecification",
+    "SecurityGame"
+  ],
+  "identifier": "stackelberg-security",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/def",
+      "@type": "Player",
+      "identifier": "def"
+    }
+  ],
+  "hasDefender": {
+    "@id": "http://example.org/defenders/d1",
+    "@type": "Defender"
+  },
+  "hasAttacker": {
+    "@id": "http://example.org/attackers/a1",
+    "@type": "Attacker"
+  },
+  "hasTarget": {
+    "@id": "http://example.org/targets/t1",
+    "@type": "Target"
+  }
+}

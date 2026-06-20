@@ -1,0 +1,14 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix td:     <https://www.w3.org/2019/wot/td#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/alignments/wot-thing-description> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with W3C Web of Things Thing Description"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:Thing rdfs:subClassOf td:Thing .
+uogtox:InteractionAffordance rdfs:subClassOf td:InteractionAffordance .

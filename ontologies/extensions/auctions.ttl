@@ -1,0 +1,72 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/auctions> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Auctions"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:Auction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Auction"@en ;
+    skos:definition "A mechanism for selling or buying goods via bidding."@en .
+
+uogtox:FirstPriceAuction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "FirstPriceAuction"@en ;
+    skos:definition "An auction where the highest bidder wins and pays their bid."@en .
+
+uogtox:SecondPriceAuction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SecondPriceAuction"@en ;
+    skos:definition "An auction where the highest bidder wins and pays the second-highest bid."@en .
+
+uogtox:VickreyAuction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "VickreyAuction"@en ;
+    skos:definition "A sealed-bid second-price auction."@en .
+
+uogtox:EnglishAuction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "EnglishAuction"@en ;
+    skos:definition "An ascending open-cry auction."@en .
+
+uogtox:DutchAuction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DutchAuction"@en ;
+    skos:definition "A descending price auction."@en .
+
+uogtox:hasReservePrice a owl:DatatypeProperty ;
+    rdfs:label "hasReservePrice"@en ;
+    rdfs:domain uogtox:Auction ;
+    rdfs:range xsd:double ;
+    skos:definition "Declares the reserve price of an auction."@en .
+
+uogtox:hasHighestBidder a owl:ObjectProperty ;
+    rdfs:label "hasHighestBidder"@en ;
+    rdfs:domain uogtox:Auction ;
+    rdfs:range uogto:Player ;
+    skos:definition "Identifies the highest bidder in an auction."@en .
+
+uogtox:hasWinningBid a owl:DatatypeProperty ;
+    rdfs:label "hasWinningBid"@en ;
+    rdfs:domain uogtox:Auction ;
+    rdfs:range xsd:double ;
+    skos:definition "Identifies the winning bid amount."@en .
+
+uogtox:hasSecondHighestBid a owl:DatatypeProperty ;
+    rdfs:label "hasSecondHighestBid"@en ;
+    rdfs:domain uogtox:Auction ;
+    rdfs:range xsd:double ;
+    skos:definition "Identifies the second highest bid amount."@en .
+
+uogtox:hasBiddingRule a owl:ObjectProperty ;
+    rdfs:label "hasBiddingRule"@en ;
+    rdfs:domain uogtox:Auction ;
+    rdfs:range uogto:Rule ;
+    skos:definition "Rules defining valid bids."@en .
+

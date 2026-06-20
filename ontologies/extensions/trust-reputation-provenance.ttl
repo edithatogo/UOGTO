@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/trust-reputation-provenance> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Trust Reputation Provenance"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:TrustRelation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "TrustRelation"@en ;
+    skos:definition "Models relative trust parameters among agents."@en .
+
+uogtox:ReputationScore a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ReputationScore"@en ;
+    skos:definition "Models statistical estimation of agent trustworthiness."@en .
+
+uogtox:IdentityClaim a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "IdentityClaim"@en ;
+    skos:definition "Declared cryptographic identifier of an agent."@en .
+
+uogtox:Credential a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Credential"@en ;
+    skos:definition "Cryptographic authorization ticket."@en .
+
+uogtox:ProvenanceTrace a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ProvenanceTrace"@en ;
+    skos:definition "Lineage records tracking action histories (PROV)."@en .
+
+uogtox:AuditEvent a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "AuditEvent"@en ;
+    skos:definition "Log entry reporting compliance violations."@en .
+
+uogtox:ActionAttribution a owl:Class ;
+    rdfs:subClassOf uogto:Action ;
+    rdfs:label "ActionAttribution"@en ;
+    skos:definition "Links an action instance to a signature identity."@en .
+
+uogtox:hasReputationScore a owl:ObjectProperty ;
+    rdfs:label "hasReputationScore"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:ReputationScore ;
+    skos:definition "Links a player to their score."@en .
+
+uogtox:hasIdentityClaim a owl:ObjectProperty ;
+    rdfs:label "hasIdentityClaim"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:IdentityClaim ;
+    skos:definition "Links a player to identity claims."@en .
+
+uogtox:hasCredential a owl:ObjectProperty ;
+    rdfs:label "hasCredential"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:Credential ;
+    skos:definition "Links a player to credentials."@en .
+
+uogtox:hasProvenanceTrace a owl:ObjectProperty ;
+    rdfs:label "hasProvenanceTrace"@en ;
+    rdfs:domain uogto:PlaySession ;
+    rdfs:range uogtox:ProvenanceTrace ;
+    skos:definition "Links a session to lineage logs."@en .
+
+uogtox:scoreValue a owl:DatatypeProperty ;
+    rdfs:label "scoreValue"@en ;
+    rdfs:domain uogtox:ReputationScore ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric score estimate between 0 and 1."@en .
+

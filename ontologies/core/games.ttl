@@ -1,0 +1,19 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/games> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Games Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:FiniteGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "Finite Game"@en ;
+    skos:definition "A game with a finite number of players, strategies, and outcomes."@en .
+
+uogto:InfiniteGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "Infinite Game"@en ;
+    skos:definition "A game featuring infinite player or strategy spaces."@en .

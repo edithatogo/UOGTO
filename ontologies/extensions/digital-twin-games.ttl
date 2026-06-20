@@ -1,0 +1,87 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/digital-twin-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Digital Twin Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:DigitalTwinGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "DigitalTwinGame"@en ;
+    skos:definition "A game modeling physical devices via digital replicas."@en .
+
+uogtox:DigitalTwin a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DigitalTwin"@en ;
+    skos:definition "The digital replica mapping physical device parameters."@en .
+
+uogtox:Thing a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Thing"@en ;
+    skos:definition "The physical device or asset counterpart."@en .
+
+uogtox:InteractionAffordance a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "InteractionAffordance"@en ;
+    skos:definition "Action capabilities exposed by a Digital Twin."@en .
+
+uogtox:PropertyAffordance a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PropertyAffordance"@en ;
+    skos:definition "Read-only attributes exposed by a Digital Twin."@en .
+
+uogtox:ActionAffordance a owl:Class ;
+    rdfs:subClassOf uogto:Action ;
+    rdfs:label "ActionAffordance"@en ;
+    skos:definition "Writable control capabilities exposed by a Digital Twin."@en .
+
+uogtox:EventAffordance a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "EventAffordance"@en ;
+    skos:definition "Unsolicited notification streams emitted by a Digital Twin."@en .
+
+uogtox:ProtocolBinding a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ProtocolBinding"@en ;
+    skos:definition "Network connection settings (HTTP, MQTT)."@en .
+
+uogtox:CyberPhysicalState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "CyberPhysicalState"@en ;
+    skos:definition "The joint physical and digital state configuration."@en .
+
+uogtox:hasDigitalTwin a owl:ObjectProperty ;
+    rdfs:label "hasDigitalTwin"@en ;
+    rdfs:domain uogtox:DigitalTwinGame ;
+    rdfs:range uogtox:DigitalTwin ;
+    skos:definition "Links a game to its digital twins."@en .
+
+uogtox:hasPhysicalThing a owl:ObjectProperty ;
+    rdfs:label "hasPhysicalThing"@en ;
+    rdfs:domain uogtox:DigitalTwin ;
+    rdfs:range uogtox:Thing ;
+    skos:definition "Links a digital twin to its physical source."@en .
+
+uogtox:hasAffordance a owl:ObjectProperty ;
+    rdfs:label "hasAffordance"@en ;
+    rdfs:domain uogtox:DigitalTwin ;
+    rdfs:range uogtox:InteractionAffordance ;
+    skos:definition "Links a digital twin to affordances."@en .
+
+uogtox:hasProtocolBinding a owl:ObjectProperty ;
+    rdfs:label "hasProtocolBinding"@en ;
+    rdfs:domain uogtox:InteractionAffordance ;
+    rdfs:range uogtox:ProtocolBinding ;
+    skos:definition "Links affordances to protocols."@en .
+
+uogtox:samplingInterval a owl:DatatypeProperty ;
+    rdfs:label "samplingInterval"@en ;
+    rdfs:domain uogtox:DigitalTwin ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric monitoring refresh interval."@en .
+

@@ -1,0 +1,20 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/markov-game",
+  "@type": [
+    "GameSpecification",
+    "MarkovGame"
+  ],
+  "identifier": "stochastic-markov",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/marl-player",
+      "@type": "Player",
+      "identifier": "marl-player"
+    }
+  ],
+  "hasTransition": {
+    "@id": "http://example.org/transition-fn",
+    "@type": "TransitionFunction"
+  }
+}

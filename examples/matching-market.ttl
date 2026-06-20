@@ -1,0 +1,15 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:matching-game a uogto:GameSpecification ;
+    uogto:identifier "matching-market" ;
+    uogto:hasPlayer ex:student-1 .
+
+ex:student-1 a uogto:Player ;
+    uogto:identifier "student-1" .
+
+ex:market-run a uogtox:MatchingMarket ;
+    uogtox:hasMatching ex:stable-matching .
+
+ex:stable-matching a uogtox:StableMatching .

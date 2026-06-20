@@ -1,0 +1,72 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/mechanism-design> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Mechanism Design"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:Mechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Mechanism"@en ;
+    skos:definition "A system specifying rules for mapping agent messages to allocations and payments."@en .
+
+uogtox:DirectMechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "DirectMechanism"@en ;
+    skos:definition "A mechanism where agents directly report their private types."@en .
+
+uogtox:AllocationRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "AllocationRule"@en ;
+    skos:definition "A rule mapping agent reports to an allocation of goods or resources."@en .
+
+uogtox:PaymentRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "PaymentRule"@en ;
+    skos:definition "A rule mapping agent reports to payments required from agents."@en .
+
+uogtox:IncentiveCompatibilityConstraint a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "IncentiveCompatibilityConstraint"@en ;
+    skos:definition "A constraint ensuring truthful reporting is a Nash equilibrium."@en .
+
+uogtox:IndividualRationalityConstraint a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "IndividualRationalityConstraint"@en ;
+    skos:definition "A constraint ensuring voluntary participation yields non-negative utility."@en .
+
+uogtox:hasAllocationRule a owl:ObjectProperty ;
+    rdfs:label "hasAllocationRule"@en ;
+    rdfs:domain uogtox:Mechanism ;
+    rdfs:range uogtox:AllocationRule ;
+    skos:definition "Links a mechanism to its allocation rule."@en .
+
+uogtox:hasPaymentRule a owl:ObjectProperty ;
+    rdfs:label "hasPaymentRule"@en ;
+    rdfs:domain uogtox:Mechanism ;
+    rdfs:range uogtox:PaymentRule ;
+    skos:definition "Links a mechanism to its payment rule."@en .
+
+uogtox:hasIncentiveConstraint a owl:ObjectProperty ;
+    rdfs:label "hasIncentiveConstraint"@en ;
+    rdfs:domain uogtox:Mechanism ;
+    rdfs:range uogtox:IncentiveCompatibilityConstraint ;
+    skos:definition "Links a mechanism to incentive constraints."@en .
+
+uogtox:hasParticipationConstraint a owl:ObjectProperty ;
+    rdfs:label "hasParticipationConstraint"@en ;
+    rdfs:domain uogtox:Mechanism ;
+    rdfs:range uogtox:IndividualRationalityConstraint ;
+    skos:definition "Links a mechanism to participation constraints."@en .
+
+uogtox:revenueValue a owl:DatatypeProperty ;
+    rdfs:label "revenueValue"@en ;
+    rdfs:domain uogtox:Mechanism ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric property representing expected mechanism revenue."@en .
+

@@ -1,0 +1,25 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/first-price-auction",
+  "@type": [
+    "GameSpecification",
+    "Auction",
+    "Mechanism"
+  ],
+  "identifier": "first-price-auction",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/bidder-1",
+      "@type": "Player",
+      "identifier": "bidder-1"
+    }
+  ],
+  "hasAllocationRule": {
+    "@id": "http://example.org/alloc-rule",
+    "@type": "AllocationRule"
+  },
+  "hasPaymentRule": {
+    "@id": "http://example.org/payment-rule",
+    "@type": "PaymentRule"
+  }
+}

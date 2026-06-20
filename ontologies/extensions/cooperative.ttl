@@ -1,0 +1,81 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/cooperative> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Cooperative Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:CooperativeGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "Cooperative Game"@en ;
+    skos:definition "A game where players can negotiate binding agreements."@en .
+
+uogtox:CoalitionGame a owl:Class ;
+    rdfs:subClassOf uogtox:CooperativeGame ;
+    rdfs:label "Coalition Game"@en ;
+    skos:definition "A cooperative game focusing on coalition formations."@en .
+
+uogtox:TransferableUtilityGame a owl:Class ;
+    rdfs:subClassOf uogtox:CooperativeGame ;
+    rdfs:label "Transferable Utility Game"@en ;
+    skos:definition "A cooperative game where players can freely transfer utility values."@en .
+
+uogtox:NonTransferableUtilityGame a owl:Class ;
+    rdfs:subClassOf uogtox:CooperativeGame ;
+    rdfs:label "Non-Transferable Utility Game"@en ;
+    skos:definition "A cooperative game where payoffs cannot be transferred."@en .
+
+uogtox:CharacteristicFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Characteristic Function"@en ;
+    skos:definition "A mapping from coalitions to their security payoffs."@en .
+
+uogtox:CoreSolution a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "Core Solution"@en ;
+    skos:definition "A payoff distribution where no coalition has incentive to deviate."@en .
+
+uogtox:ShapleyValue a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "Shapley Value"@en ;
+    skos:definition "A unique distribution of cooperative surplus based on marginal contributions."@en .
+
+uogtox:BargainingSolution a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "Bargaining Solution"@en ;
+    skos:definition "A payoff allocation resolving strategic negotiation."@en .
+
+uogtox:hasCharacteristicFunction a owl:ObjectProperty ;
+    rdfs:label "has characteristic function"@en ;
+    rdfs:domain uogtox:CooperativeGame ;
+    rdfs:range uogtox:CharacteristicFunction ;
+    skos:definition "Links cooperative game to its characteristic function."@en .
+
+uogtox:hasCoalition a owl:ObjectProperty ;
+    rdfs:label "has coalition"@en ;
+    rdfs:domain uogtox:CooperativeGame ;
+    rdfs:range uogto:Coalition ;
+    skos:definition "Links a game to active coalitions."@en .
+
+uogtox:hasCoreSolution a owl:ObjectProperty ;
+    rdfs:label "has core solution"@en ;
+    rdfs:domain uogtox:CooperativeGame ;
+    rdfs:range uogtox:CoreSolution ;
+    skos:definition "Links a cooperative game to its core solutions."@en .
+
+uogtox:hasShapleyValue a owl:ObjectProperty ;
+    rdfs:label "has Shapley value"@en ;
+    rdfs:domain uogtox:CooperativeGame ;
+    rdfs:range uogtox:ShapleyValue ;
+    skos:definition "Assigns a Shapley value profile."@en .
+
+uogtox:coalitionValueValue a owl:DatatypeProperty ;
+    rdfs:label "coalition value value"@en ;
+    rdfs:domain uogtox:CharacteristicFunction ;
+    rdfs:range xsd:double ;
+    skos:definition "Numerical value associated with a coalition."@en .

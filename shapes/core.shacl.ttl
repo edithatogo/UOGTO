@@ -1,0 +1,45 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+uogto:GameSpecificationShape a sh:NodeShape ;
+    sh:targetClass uogto:GameSpecification ;
+    sh:property [
+        sh:path uogto:hasPlayer ;
+        sh:minCount 1 ;
+        rdfs:comment "Every GameSpecification must have at least one Player."
+    ] .
+
+uogto:GameInstanceShape a sh:NodeShape ;
+    sh:targetClass uogto:GameInstance ;
+    sh:property [
+        sh:path uogto:governedByRule ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        rdfs:comment "Every GameInstance references exactly one GameSpecification or rule set."
+    ] .
+
+uogto:PlaySessionShape a sh:NodeShape ;
+    sh:targetClass uogto:PlaySession ;
+    sh:property [
+        sh:path uogto:hasState ;
+        sh:minCount 1 ;
+        rdfs:comment "Every PlaySession must reference at least one GameInstance or State."
+    ] .
+
+uogto:StrategyProfileShape a sh:NodeShape ;
+    sh:targetClass uogto:StrategyProfile ;
+    sh:property [
+        sh:path uogto:hasStrategy ;
+        sh:minCount 1 ;
+        rdfs:comment "Every StrategyProfile must have at least one Strategy."
+    ] .
+
+uogto:OutcomeShape a sh:NodeShape ;
+    sh:targetClass uogto:Outcome ;
+    sh:property [
+        sh:path uogto:assignsPayoff ;
+        sh:minCount 1 ;
+        rdfs:comment "Every Outcome must have at least one Payoff or explicit no-payoff marker."
+    ] .

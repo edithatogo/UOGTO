@@ -1,0 +1,82 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/congestion-routing-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Congestion Routing Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:CongestionGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "CongestionGame"@en ;
+    skos:definition "A game where player payoffs depend on resource load."@en .
+
+uogtox:RoutingGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "RoutingGame"@en ;
+    skos:definition "A congestion game played over a network flow path."@en .
+
+uogtox:PotentialGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "PotentialGame"@en ;
+    skos:definition "A game possessing a global potential function."@en .
+
+uogtox:Resource a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Resource"@en ;
+    skos:definition "An asset consumed or shared by players."@en .
+
+uogtox:ResourceEdge a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ResourceEdge"@en ;
+    skos:definition "A network edge segment acting as a congestion resource."@en .
+
+uogtox:LatencyFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "LatencyFunction"@en ;
+    skos:definition "A function mapping resource load to latency costs."@en .
+
+uogtox:NetworkFlow a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "NetworkFlow"@en ;
+    skos:definition "The distribution of player routes in a network."@en .
+
+uogtox:WardropEquilibrium a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "WardropEquilibrium"@en ;
+    skos:definition "The network equilibrium condition where route costs equalize."@en .
+
+uogtox:hasResource a owl:ObjectProperty ;
+    rdfs:label "hasResource"@en ;
+    rdfs:domain uogtox:CongestionGame ;
+    rdfs:range uogtox:Resource ;
+    skos:definition "Links a congestion game to its resources."@en .
+
+uogtox:hasLatencyFunction a owl:ObjectProperty ;
+    rdfs:label "hasLatencyFunction"@en ;
+    rdfs:domain uogtox:Resource ;
+    rdfs:range uogtox:LatencyFunction ;
+    skos:definition "Links a resource to latency functions."@en .
+
+uogtox:hasNetworkFlow a owl:ObjectProperty ;
+    rdfs:label "hasNetworkFlow"@en ;
+    rdfs:domain uogtox:RoutingGame ;
+    rdfs:range uogtox:NetworkFlow ;
+    skos:definition "Links a routing game to flows."@en .
+
+uogtox:hasWardropEquilibrium a owl:ObjectProperty ;
+    rdfs:label "hasWardropEquilibrium"@en ;
+    rdfs:domain uogtox:RoutingGame ;
+    rdfs:range uogtox:WardropEquilibrium ;
+    skos:definition "Links a routing game to its equilibria."@en .
+
+uogtox:capacityValue a owl:DatatypeProperty ;
+    rdfs:label "capacityValue"@en ;
+    rdfs:domain uogtox:Resource ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric capacity maximum limit."@en .
+

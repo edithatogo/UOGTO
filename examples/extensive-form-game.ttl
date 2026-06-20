@@ -1,0 +1,13 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix ex:     <http://example.org/> .
+
+ex:extensive-form a uogto:GameSpecification ;
+    uogto:identifier "extensive-form" ;
+    uogto:hasPlayer ex:player-1 ;
+    uogto:hasInitialState ex:state-init .
+
+ex:player-1 a uogto:Player ;
+    uogto:identifier "player-1" .
+
+ex:state-init a uogto:InitialState ;
+    uogto:identifier "init-state" .

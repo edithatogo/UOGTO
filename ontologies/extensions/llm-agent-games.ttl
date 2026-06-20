@@ -1,0 +1,92 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/llm-agent-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Llm Agent Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:LLMInteractionGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "LLMInteractionGame"@en ;
+    skos:definition "A game modeling interactions among language models."@en .
+
+uogtox:LLMAgent a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "LLMAgent"@en ;
+    skos:definition "A language model agent behaving strategically."@en .
+
+uogtox:PromptState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "PromptState"@en ;
+    skos:definition "The context input prompt representing agent context."@en .
+
+uogtox:ContextWindow a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ContextWindow"@en ;
+    skos:definition "The input history buffer of a language model."@en .
+
+uogtox:MemoryState a owl:Class ;
+    rdfs:subClassOf uogto:State ;
+    rdfs:label "MemoryState"@en ;
+    skos:definition "Stored variables representing conversational history."@en .
+
+uogtox:ToolInvocation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ToolInvocation"@en ;
+    skos:definition "An agent action invoking external APIs."@en .
+
+uogtox:AgentMessage a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "AgentMessage"@en ;
+    skos:definition "A structural message emitted by an LLM agent."@en .
+
+uogtox:AgentCapability a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "AgentCapability"@en ;
+    skos:definition "Declared functionality of an LLM agent."@en .
+
+uogtox:AgentProtocolSession a owl:Class ;
+    rdfs:subClassOf uogto:Agent ;
+    rdfs:label "AgentProtocolSession"@en ;
+    skos:definition "A session structured via communication protocols."@en .
+
+uogtox:ConsentBoundary a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ConsentBoundary"@en ;
+    skos:definition "Boundaries limiting LLM agent actions."@en .
+
+uogtox:hasPromptState a owl:ObjectProperty ;
+    rdfs:label "hasPromptState"@en ;
+    rdfs:domain uogtox:LLMAgent ;
+    rdfs:range uogtox:PromptState ;
+    skos:definition "Links an LLM agent to prompt states."@en .
+
+uogtox:hasMemoryState a owl:ObjectProperty ;
+    rdfs:label "hasMemoryState"@en ;
+    rdfs:domain uogtox:LLMAgent ;
+    rdfs:range uogtox:MemoryState ;
+    skos:definition "Links an LLM agent to memory."@en .
+
+uogtox:hasToolInvocation a owl:ObjectProperty ;
+    rdfs:label "hasToolInvocation"@en ;
+    rdfs:domain uogtox:AgentMessage ;
+    rdfs:range uogtox:ToolInvocation ;
+    skos:definition "Links an agent message to tool calls."@en .
+
+uogtox:hasConsentBoundary a owl:ObjectProperty ;
+    rdfs:label "hasConsentBoundary"@en ;
+    rdfs:domain uogtox:ToolInvocation ;
+    rdfs:range uogtox:ConsentBoundary ;
+    skos:definition "Links tool calls to boundaries."@en .
+
+uogtox:temperatureValue a owl:DatatypeProperty ;
+    rdfs:label "temperatureValue"@en ;
+    rdfs:domain uogtox:LLMAgent ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric temperature configuration."@en .
+

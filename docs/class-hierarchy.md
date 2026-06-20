@@ -1,0 +1,13 @@
+# Class Hierarchy
+- GameEntity
+  - GameSpecification
+  - GameInstance
+  - PlaySession
+  - Player
+    - HumanPlayer
+  - Agent
+    - ArtificialAgent
+  - Strategy
+  - Action
+  - Outcome
+  - Payoff

@@ -1,0 +1,87 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/security-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Security Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:SecurityGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "SecurityGame"@en ;
+    skos:definition "A game modeling strategic defense and attacks."@en .
+
+uogtox:StackelbergSecurityGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "StackelbergSecurityGame"@en ;
+    skos:definition "A security game where defender commits first."@en .
+
+uogtox:CyberSecurityGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "CyberSecurityGame"@en ;
+    skos:definition "A security game mapping digital network threats."@en .
+
+uogtox:Defender a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Defender"@en ;
+    skos:definition "The player defending resources."@en .
+
+uogtox:Attacker a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Attacker"@en ;
+    skos:definition "The player attacking resources."@en .
+
+uogtox:Target a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Target"@en ;
+    skos:definition "The target resource with defense payoffs."@en .
+
+uogtox:AttackVector a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "AttackVector"@en ;
+    skos:definition "The path selected by the attacker."@en .
+
+uogtox:CoverageSchedule a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CoverageSchedule"@en ;
+    skos:definition "The randomized allocation of defensive resources."@en .
+
+uogtox:ThreatModel a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ThreatModel"@en ;
+    skos:definition "Specifies adversary capabilities."@en .
+
+uogtox:hasDefender a owl:ObjectProperty ;
+    rdfs:label "hasDefender"@en ;
+    rdfs:domain uogtox:SecurityGame ;
+    rdfs:range uogtox:Defender ;
+    skos:definition "Links a security game to its defender."@en .
+
+uogtox:hasAttacker a owl:ObjectProperty ;
+    rdfs:label "hasAttacker"@en ;
+    rdfs:domain uogtox:SecurityGame ;
+    rdfs:range uogtox:Attacker ;
+    skos:definition "Links a security game to its attacker."@en .
+
+uogtox:hasTarget a owl:ObjectProperty ;
+    rdfs:label "hasTarget"@en ;
+    rdfs:domain uogtox:SecurityGame ;
+    rdfs:range uogtox:Target ;
+    skos:definition "Links a security game to target nodes."@en .
+
+uogtox:hasCoverageSchedule a owl:ObjectProperty ;
+    rdfs:label "hasCoverageSchedule"@en ;
+    rdfs:domain uogtox:Defender ;
+    rdfs:range uogtox:CoverageSchedule ;
+    skos:definition "Links defender to a schedule."@en .
+
+uogtox:threatScore a owl:DatatypeProperty ;
+    rdfs:label "threatScore"@en ;
+    rdfs:domain uogtox:Target ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value estimating target threat."@en .
+

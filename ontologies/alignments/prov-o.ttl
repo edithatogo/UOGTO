@@ -1,0 +1,14 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/alignments/prov-o> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with PROV-O"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:Agent rdfs:subClassOf prov:Agent .
+uogto:Action rdfs:subClassOf prov:Activity .
+uogto:Outcome rdfs:subClassOf prov:Entity .

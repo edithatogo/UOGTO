@@ -1,0 +1,6 @@
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?mechanism ?constraint
+WHERE {
+  ?mechanism a uogtox:Mechanism ;
+             uogtox:hasIncentiveConstraint ?constraint .
+}

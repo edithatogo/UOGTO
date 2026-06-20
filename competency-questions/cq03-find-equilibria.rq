@@ -1,0 +1,6 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?game ?equilibrium
+WHERE {
+  ?game a uogto:GameSpecification ;
+        uogto:hasEquilibrium ?equilibrium .
+}

@@ -1,0 +1,87 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/computational-social-choice> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Computational Social Choice"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:VotingGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "VotingGame"@en ;
+    skos:definition "A game representing voting procedures and aggregation."@en .
+
+uogtox:Voter a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Voter"@en ;
+    skos:definition "A player expressing choices over candidates."@en .
+
+uogtox:Candidate a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Candidate"@en ;
+    skos:definition "An option or entity being voted on."@en .
+
+uogtox:Ballot a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Ballot"@en ;
+    skos:definition "A profile of voter preferences."@en .
+
+uogtox:SocialChoiceFunction a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SocialChoiceFunction"@en ;
+    skos:definition "A mapping from voting profiles to selections."@en .
+
+uogtox:VotingRule a owl:Class ;
+    rdfs:subClassOf uogto:Rule ;
+    rdfs:label "VotingRule"@en ;
+    skos:definition "The formal algorithm aggregation of ballots."@en .
+
+uogtox:PreferenceProfile a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PreferenceProfile"@en ;
+    skos:definition "The collected preferences of all voters."@en .
+
+uogtox:CondorcetWinner a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CondorcetWinner"@en ;
+    skos:definition "A candidate winning majority preferences head-to-head."@en .
+
+uogtox:ManipulationProblem a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ManipulationProblem"@en ;
+    skos:definition "A problem evaluating strategic voter manipulation."@en .
+
+uogtox:hasVoter a owl:ObjectProperty ;
+    rdfs:label "hasVoter"@en ;
+    rdfs:domain uogtox:VotingGame ;
+    rdfs:range uogtox:Voter ;
+    skos:definition "Links a voting game to its voters."@en .
+
+uogtox:hasCandidate a owl:ObjectProperty ;
+    rdfs:label "hasCandidate"@en ;
+    rdfs:domain uogtox:VotingGame ;
+    rdfs:range uogtox:Candidate ;
+    skos:definition "Links a voting game to options."@en .
+
+uogtox:hasBallot a owl:ObjectProperty ;
+    rdfs:label "hasBallot"@en ;
+    rdfs:domain uogtox:Voter ;
+    rdfs:range uogtox:Ballot ;
+    skos:definition "Links a voter to their ballot."@en .
+
+uogtox:hasSocialChoiceFunction a owl:ObjectProperty ;
+    rdfs:label "hasSocialChoiceFunction"@en ;
+    rdfs:domain uogtox:VotingGame ;
+    rdfs:range uogtox:SocialChoiceFunction ;
+    skos:definition "Links a voting game to aggregation functions."@en .
+
+uogtox:voteCount a owl:DatatypeProperty ;
+    rdfs:label "voteCount"@en ;
+    rdfs:domain uogtox:Candidate ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer number of votes counted."@en .
+

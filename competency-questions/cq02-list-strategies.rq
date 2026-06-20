@@ -1,0 +1,6 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?player ?strategy
+WHERE {
+  ?player a uogto:Player ;
+          uogto:hasStrategy ?strategy .
+}

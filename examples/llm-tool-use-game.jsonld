@@ -1,0 +1,20 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/llm-game",
+  "@type": "GameSpecification",
+  "identifier": "llm-tool-use",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/llm-agent-1",
+      "@type": [
+        "Player",
+        "LLMAgent"
+      ],
+      "identifier": "llm-agent-1",
+      "hasPromptState": {
+        "@id": "http://example.org/prompts/state-1",
+        "@type": "PromptState"
+      }
+    }
+  ]
+}

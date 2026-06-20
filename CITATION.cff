@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this ontology, please cite it as below."
+authors:
+  - name: "UOGTO Contributors"
+title: "Universal Open Game Theory Ontology (UOGTO)"
+version: 0.1.0
+date-released: 2026-06-20
+url: "https://github.com/uogto/uogto"

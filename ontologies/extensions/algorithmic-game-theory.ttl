@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/algorithmic-game-theory> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Algorithmic Game Theory"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:AlgorithmicGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "AlgorithmicGame"@en ;
+    skos:definition "A game evaluated under computational complexity metrics."@en .
+
+uogtox:ComputationalProblem a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ComputationalProblem"@en ;
+    skos:definition "A problem computing strategic options."@en .
+
+uogtox:EquilibriumComputationProblem a owl:Class ;
+    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:label "EquilibriumComputationProblem"@en ;
+    skos:definition "The specific task of finding game equilibria."@en .
+
+uogtox:ComplexityClass a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ComplexityClass"@en ;
+    skos:definition "The complexity classification (e.g. PPAD, NP)."@en .
+
+uogtox:ApproximationGuarantee a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ApproximationGuarantee"@en ;
+    skos:definition "The precision bounds of approximate solvers."@en .
+
+uogtox:PriceOfAnarchy a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PriceOfAnarchy"@en ;
+    skos:definition "The ratio of worst-case Nash utility to social optimum."@en .
+
+uogtox:PriceOfStability a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PriceOfStability"@en ;
+    skos:definition "The ratio of best-case Nash utility to social optimum."@en .
+
+uogtox:hasComplexityClass a owl:ObjectProperty ;
+    rdfs:label "hasComplexityClass"@en ;
+    rdfs:domain uogtox:EquilibriumComputationProblem ;
+    rdfs:range uogtox:ComplexityClass ;
+    skos:definition "Links computation to complexity classes."@en .
+
+uogtox:hasPriceOfAnarchy a owl:ObjectProperty ;
+    rdfs:label "hasPriceOfAnarchy"@en ;
+    rdfs:domain uogtox:AlgorithmicGame ;
+    rdfs:range uogtox:PriceOfAnarchy ;
+    skos:definition "Links a game to its anarchy index."@en .
+
+uogtox:hasPriceOfStability a owl:ObjectProperty ;
+    rdfs:label "hasPriceOfStability"@en ;
+    rdfs:domain uogtox:AlgorithmicGame ;
+    rdfs:range uogtox:PriceOfStability ;
+    skos:definition "Links a game to its stability index."@en .
+
+uogtox:poaValue a owl:DatatypeProperty ;
+    rdfs:label "poaValue"@en ;
+    rdfs:domain uogtox:PriceOfAnarchy ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric POA ratio value."@en .
+
+uogtox:posValue a owl:DatatypeProperty ;
+    rdfs:label "posValue"@en ;
+    rdfs:domain uogtox:PriceOfStability ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric POS ratio value."@en .
+

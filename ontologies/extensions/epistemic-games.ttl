@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/epistemic-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Epistemic Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:EpistemicGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "EpistemicGame"@en ;
+    skos:definition "A game formalizing beliefs and common knowledge."@en .
+
+uogtox:TypeSpace a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "TypeSpace"@en ;
+    skos:definition "A space grouping player types."@en .
+
+uogtox:Type a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Type"@en ;
+    skos:definition "An agent type representing beliefs and preferences."@en .
+
+uogtox:BeliefHierarchy a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "BeliefHierarchy"@en ;
+    skos:definition "An infinite hierarchy of beliefs about beliefs."@en .
+
+uogtox:CommonKnowledge a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "CommonKnowledge"@en ;
+    skos:definition "A property defining mutual knowledge of all orders."@en .
+
+uogtox:PrivateSignal a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PrivateSignal"@en ;
+    skos:definition "A private information signal."@en .
+
+uogtox:Rationalizability a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Rationalizability"@en ;
+    skos:definition "The set of actions surviving iterated dominance under beliefs."@en .
+
+uogtox:hasTypeSpace a owl:ObjectProperty ;
+    rdfs:label "hasTypeSpace"@en ;
+    rdfs:domain uogtox:EpistemicGame ;
+    rdfs:range uogtox:TypeSpace ;
+    skos:definition "Links an epistemic game to type spaces."@en .
+
+uogtox:hasType a owl:ObjectProperty ;
+    rdfs:label "hasType"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:Type ;
+    skos:definition "Links a player to a type space type."@en .
+
+uogtox:hasBeliefHierarchy a owl:ObjectProperty ;
+    rdfs:label "hasBeliefHierarchy"@en ;
+    rdfs:domain uogtox:Type ;
+    rdfs:range uogtox:BeliefHierarchy ;
+    skos:definition "Links a type to its belief hierarchy."@en .
+
+uogtox:hasPrivateSignal a owl:ObjectProperty ;
+    rdfs:label "hasPrivateSignal"@en ;
+    rdfs:domain uogtox:Type ;
+    rdfs:range uogtox:PrivateSignal ;
+    skos:definition "Links a player type to signals."@en .
+
+uogtox:rationalizableActions a owl:ObjectProperty ;
+    rdfs:label "rationalizableActions"@en ;
+    rdfs:domain uogtox:Type ;
+    rdfs:range uogto:Action ;
+    skos:definition "Links types to actions."@en .
+

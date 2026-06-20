@@ -1,0 +1,77 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/extensions/information-design> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Information Design"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogtox:InformationDesignGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "InformationDesignGame"@en ;
+    skos:definition "A game modeling how information is formatted and disclosed."@en .
+
+uogtox:InformationDesigner a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "InformationDesigner"@en ;
+    skos:definition "An agent (sender) committing to a signal structure."@en .
+
+uogtox:SignalStructure a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "SignalStructure"@en ;
+    skos:definition "A mapping from state of nature to signals."@en .
+
+uogtox:DisclosurePolicy a owl:Class ;
+    rdfs:subClassOf uogto:Strategy ;
+    rdfs:label "DisclosurePolicy"@en ;
+    skos:definition "Rules defining information disclosure bounds."@en .
+
+uogtox:PersuasionMechanism a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PersuasionMechanism"@en ;
+    skos:definition "A mechanism modeling Bayesian persuasion."@en .
+
+uogtox:PosteriorBelief a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "PosteriorBelief"@en ;
+    skos:definition "A receiver belief updating after signals."@en .
+
+uogtox:ReceiverBelief a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "ReceiverBelief"@en ;
+    skos:definition "The belief state of the target audience."@en .
+
+uogtox:hasDesigner a owl:ObjectProperty ;
+    rdfs:label "hasDesigner"@en ;
+    rdfs:domain uogtox:InformationDesignGame ;
+    rdfs:range uogtox:InformationDesigner ;
+    skos:definition "Links information design to its designer."@en .
+
+uogtox:hasSignalStructure a owl:ObjectProperty ;
+    rdfs:label "hasSignalStructure"@en ;
+    rdfs:domain uogtox:InformationDesignGame ;
+    rdfs:range uogtox:SignalStructure ;
+    skos:definition "Links design to signal structures."@en .
+
+uogtox:hasDisclosurePolicy a owl:ObjectProperty ;
+    rdfs:label "hasDisclosurePolicy"@en ;
+    rdfs:domain uogtox:InformationDesignGame ;
+    rdfs:range uogtox:DisclosurePolicy ;
+    skos:definition "Links design to policies."@en .
+
+uogtox:hasPosteriorBelief a owl:ObjectProperty ;
+    rdfs:label "hasPosteriorBelief"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogtox:PosteriorBelief ;
+    skos:definition "Links a receiver to their posterior belief."@en .
+
+uogtox:entropyValue a owl:DatatypeProperty ;
+    rdfs:label "entropyValue"@en ;
+    rdfs:domain uogtox:SignalStructure ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric information metric value."@en .
+

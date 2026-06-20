@@ -1,0 +1,43 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+uogtox:LLMAgentShape a sh:NodeShape ;
+    sh:targetClass uogtox:LLMAgent ;
+    sh:property [
+        sh:path uogtox:hasPromptState ;
+        sh:minCount 1 ;
+    ] .
+
+uogtox:ToolInvocationShape a sh:NodeShape ;
+    sh:targetClass uogtox:ToolInvocation ;
+    sh:property [
+        sh:path uogtox:hasConsentBoundary ;
+        sh:minCount 1 ;
+    ] .
+
+uogtox:DigitalTwinGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:DigitalTwinGame ;
+    sh:property [
+        sh:path uogtox:hasDigitalTwin ;
+        sh:minCount 1 ;
+    ] .
+
+uogtox:PetriNetShape a sh:NodeShape ;
+    sh:targetClass uogtox:PetriNetGame ;
+    sh:property [
+        sh:path uogtox:hasPlace ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path uogtox:hasTransitionNode ;
+        sh:minCount 1 ;
+    ] .
+
+uogtox:ExecutableGameShape a sh:NodeShape ;
+    sh:targetClass uogtox:ExecutableGameGraph ;
+    sh:property [
+        sh:path uogtox:hasExecutionBinding ;
+        sh:minCount 1 ;
+    ] .

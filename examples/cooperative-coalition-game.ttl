@@ -1,0 +1,14 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix ex:     <http://example.org/> .
+
+ex:cooperative-game a uogtox:CoalitionGame ;
+    uogto:identifier "coop-coalition" ;
+    uogto:hasPlayer ex:player-a ;
+    uogtox:hasCharacteristicFunction ex:char-func .
+
+ex:player-a a uogto:Player ;
+    uogto:identifier "player-a" .
+
+ex:char-func a uogtox:CharacteristicFunction ;
+    uogtox:coalitionValueValue 100.0 .
