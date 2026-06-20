@@ -1,0 +1,8 @@
+{
+  "track_id": "uogto_bootstrap_20260620",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-06-20T10:34:00Z",
+  "updated_at": "2026-06-20T12:16:00Z",
+  "description": "Bootstrap the Universal Open Game Theory Ontology (UOGTO) structures, core modules, extensions, SHACL shapes, contexts, examples, and tests."
+}
