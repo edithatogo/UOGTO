@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links doi-status manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -25,6 +25,9 @@ registry-links:
 
 doi-status:
 	python scripts/maintenance/check_doi_status.py
+
+record-doi:
+	python scripts/maintenance/record_zenodo_doi.py "$(DOI)"
 
 manuscript-sources:
 	python scripts/maintenance/build_manuscript_sources.py
