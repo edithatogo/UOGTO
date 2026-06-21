@@ -88,6 +88,9 @@ jobs:
             -getOntologyMetadata \
             -webVowl \
             -uniteSections
+          if [ ! -f site/index.html ] && [ -f site/index-en.html ]; then
+            cp site/index-en.html site/index.html
+          fi
           touch site/.nojekyll
 
       - name: Upload GitHub Pages artifact

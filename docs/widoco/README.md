@@ -25,6 +25,8 @@ Using the merged artifact keeps WIDOCO output aligned with the release artifact 
 
 The generated HTML should be written to `site/`.
 
+WIDOCO emits the English entry page as `index-en.html`. The CI workflow copies it to `index.html` when needed so the GitHub Pages root URL resolves cleanly.
+
 ## CI/CD
 `.github/workflows/widoco-pages.yml` runs validation, tests, semantic audit, publishing metadata checks, builds `dist/uogto.ttl`, downloads the pinned WIDOCO JAR from GitHub releases, generates `site/`, and uploads a Pages artifact.
 

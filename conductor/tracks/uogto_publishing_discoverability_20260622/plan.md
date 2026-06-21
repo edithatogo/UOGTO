@@ -45,6 +45,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Publish generated WIDOCO HTML under the GitHub Pages site root or `/docs/`.
     - [x] Add links from `README.md`, release notes, and registry submission files to the Pages documentation.
     - [x] Gate the deploy job behind `ENABLE_PAGES_DEPLOY=true` so artifact generation can remain green until Pages is enabled in repository settings.
+    - [x] Copy WIDOCO `index-en.html` to `index.html` in CI so the Pages root URL resolves.
 
 ### Required Configuration Files
 - `.github/workflows/widoco-pages.yml`
@@ -56,7 +57,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
   - GitHub Actions run `27910154887` passed the WIDOCO build job on 2026-06-21 UTC after commit `000df52`.
 - [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
   - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
-- [ ] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
+- [~] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
+  - Pages is enabled and workflow run `27910289217` deployed successfully, but the root URL still needs the `index.html` compatibility fix to be redeployed.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission

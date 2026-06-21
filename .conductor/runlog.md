@@ -59,6 +59,11 @@
 - Gated the deploy job behind repository variable `ENABLE_PAGES_DEPLOY=true` so push workflows can keep validating and uploading WIDOCO artifacts until Pages is enabled in repository settings.
 - Verified the follow-up push: `Validate UOGTO` run `27910154892` passed, and `Build WIDOCO Pages` run `27910154887` passed the WIDOCO build/artifact job with deploy skipped by the gate.
 
+## [2026-06-22] - GitHub Pages Enablement
+- Enabled GitHub Pages for `edithatogo/UOGTO` with Actions as the source and set repository variable `ENABLE_PAGES_DEPLOY=true`.
+- Dispatched WIDOCO Pages run `27910289217`; build and deploy both succeeded, and `/index-en.html` returned HTTP 200.
+- Root URL returned HTTP 404 because WIDOCO emitted `index-en.html` but not `index.html`; added a CI copy step so future deployments publish a root index.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
