@@ -5,6 +5,12 @@
 - Added the Zenodo handoff packet to release preflight and the release-assets upload workflow.
 - Added tests covering pending DOI handoff state and release-readiness requirements.
 
+## [2026-06-22] - Zenodo Handoff Release Attachment
+- Dispatched `Publish Release Assets` workflow run `27913777454` for existing release tag `v1.0.0`.
+- Verified the workflow passed release gates, built registry, Zenodo, and w3id handoff packets, passed release preflight, and uploaded assets.
+- Verified `zenodo-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:e9a62ecc806cbc162e9dfd7cd818f0472147f3ac6b6d346a2551b218c072db54`.
+- Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/zenodo-handoff.json` returns an HTTP download redirect.
+
 ## [2026-06-22] - w3id Status Monitor
 - Added `scripts/maintenance/check_w3id_status.py` plus Make, Pixi, and scheduled maintenance wiring for w3id PR and redirect monitoring.
 - Added tests covering the current pending-merge state and future strict failure modes for unmerged PRs and non-live redirects.
