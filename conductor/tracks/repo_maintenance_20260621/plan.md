@@ -6,9 +6,9 @@ This plan outlines the steps to build skills, tools, workflows, and agent specif
 - [x] Task: Set up and verify Pixi package configuration
     - [x] Initialize `pixi.toml` for Python environments and dependencies
     - [x] Verify local Pixi build/run integration works with existing test suite
-- [ ] Task: Configure GitHub CLI local access scripts
-    - [ ] Create wrapper script `scripts/maintenance/check_github.py` to query issues and PRs via `gh` CLI or fallback API requests
-    - [ ] Add basic tests for the check script
+- [x] Task: Configure GitHub CLI local access scripts
+    - [x] Create wrapper script `scripts/maintenance/check_github.py` to query issues and PRs via `gh` CLI or fallback API requests
+    - [x] Add basic tests for the check script
 
 ## Phase 2: Dependency & Validation Automation
 - [ ] Task: Implement bleeding-edge dependency updater
