@@ -69,6 +69,12 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: New
 - **Link**: [./tracks/maintenance_improvements_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/maintenance_improvements_20260621/)
 
+## [ ] Track: systematic_literature_review_20260621
+- **Description**: Establish systematic and scoping literature review workflows using PRISMA checklists, public database API search, deduplication, NLP concept extraction, and UOGTO ontological validation mappings.
+- **Status**: New
+- **Link**: [./tracks/systematic_literature_review_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/systematic_literature_review_20260621/)
+
+
 
 
 
