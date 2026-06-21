@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## [2026-06-21] - Repository Maintenance and Remote Automation
+- Initialized Pixi package manager configurations (`pixi.toml`).
+- Created `scripts/maintenance/check_github.py` to query issues/PRs from remote and generate statuses.
+- Created `scripts/maintenance/update_dependencies.py` to run bleeding-edge upgrades.
+- Created `scripts/maintenance/generate_changelog.py` to parse Git logs and update `CHANGELOG.md` automatically.
+- Created unit tests for the maintenance scripts.
+- Implemented custom Antigravity agent skill `repo-maintenance` at `.agents/skills/repo-maintenance/SKILL.md`.
+- Created GitHub Actions workflow `.github/workflows/maintenance.yml` for CI automation.
+
+
 ## [2026-06-20] - Bootstrap and Core Implementation
 - Initialized empty Git repository.
 - Created repository layout: `ontologies/`, `shapes/`, `jsonld/`, `examples/`, `competency-questions/`, `scripts/`, `tests/`, `docs/`, `.github/workflows/`.

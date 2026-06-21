@@ -1,0 +1,30 @@
+name: Repository Maintenance
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Run weekly on Sundays
+  workflow_dispatch:
+
+jobs:
+  validate-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+
+      - name: Setup Pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: v0.70.2
+          cache-write: ${{ github.event_name == 'schedule' }}
+
+      - name: Check Remote Repository Status
+        run: pixi run python scripts/maintenance/check_github.py
+
+      - name: Upgrade Dependencies & Verify Health
+        run: pixi run python scripts/maintenance/update_dependencies.py
+
+      - name: Generate Auto-Changelog
+        run: pixi run python scripts/maintenance/generate_changelog.py

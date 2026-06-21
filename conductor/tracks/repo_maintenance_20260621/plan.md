@@ -19,8 +19,8 @@ This plan outlines the steps to build skills, tools, workflows, and agent specif
     - [x] Add unit tests for changelog formatting
 
 ## Phase 3: Agent Customization, Skills, and CI/CD Workflows
-- [ ] Task: Create custom Antigravity agent skill
-    - [ ] Write `skills/repo-maintenance/SKILL.md` documenting commands, triggers, and protocols for repository maintenance
-- [ ] Task: Integrate workflows with Conductor and CI/CD
-    - [ ] Add validation actions or runner triggers in `.github/workflows/maintenance.yml`
-    - [ ] Perform manual run/validation of the full suite and update `.conductor/runlog.md` and `.conductor/status.md`
+- [x] Task: Create custom Antigravity agent skill
+    - [x] Write `skills/repo-maintenance/SKILL.md` documenting commands, triggers, and protocols for repository maintenance
+- [x] Task: Integrate workflows with Conductor and CI/CD
+    - [x] Add validation actions or runner triggers in `.github/workflows/maintenance.yml`
+    - [x] Perform manual run/validation of the full suite and update `.conductor/runlog.md` and `.conductor/status.md`
