@@ -42,7 +42,7 @@
 - Open: strict PDF generation on a LaTeX-equipped release machine remains pending.
 
 ## Publishing Live Verification - 2026-06-22
-- Latest `Validate UOGTO` GitHub Actions run `27910976656` passed for commit `fd7dc7e`.
+- Recorded `Validate UOGTO` GitHub Actions run `27910976656` passed for commit `fd7dc7e`.
 - GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910976624` built and deployed successfully for commit `fd7dc7e`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.
