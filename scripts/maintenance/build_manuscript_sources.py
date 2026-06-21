@@ -271,7 +271,7 @@ def review_queue_entries(references: list[dict]) -> list[dict]:
             reasons.append("generated tracking URL was not fully normalized")
         if record["type"] in {"article", "article-journal", "book"} and not record.get("author"):
             reasons.append("missing author metadata")
-        if not record.get("issued"):
+        if record["type"] in {"article", "article-journal", "book"} and not record.get("issued"):
             reasons.append("missing issued date")
         if reasons:
             entries.append(

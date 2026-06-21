@@ -71,7 +71,7 @@ class TestManuscriptSources(unittest.TestCase):
             self.assertEqual(record["provider_candidates"][0]["provider"], "uogto-local-source-inventory")
 
         review_queue = (self.sourceright_dir / "review-queue.jsonl").read_text(encoding="utf-8")
-        self.assertIn('"review_status": "queued"', review_queue)
+        self.assertEqual(review_queue, "")
 
 
 if __name__ == "__main__":

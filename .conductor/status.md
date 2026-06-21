@@ -27,18 +27,18 @@
 - WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27910392764` deployed successfully, and both `https://edithatogo.github.io/UOGTO/` and `/index-en.html` returned HTTP 200.
 - Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
-- SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for final expert metadata review.
+- SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.
 
 ## Next Recommended Task
-- Continue `uogto_publishing_discoverability_20260622` for live release gates, then close the final manuscript expert metadata review before treating the manuscript as publication-ready.
+- Continue `uogto_publishing_discoverability_20260622` for release, DOI, release-asset, LOV, and OLS live gates before treating the project as publication-ready.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
 - SourceRight CSL validation passes for docs/paper/references.csl.json.
-- SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
+- SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 0 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation output is captured at docs/paper/sourceright-citations.md with 11 citation occurrences, 11 matched citations, and 0 issues.
-- Open: final expert metadata review and strict PDF generation on a LaTeX-equipped release machine remain pending.
+- Open: strict PDF generation on a LaTeX-equipped release machine remains pending.
 
 ## Publishing Live Verification - 2026-06-22
 - Latest `Validate UOGTO` GitHub Actions run `27910154892` passed for commit `000df52`.

@@ -31,7 +31,7 @@
           }
         }
       ],
-      "review_status": "queued"
+      "review_status": "not_required"
     },
     "crossref": {
       "provider_candidates": [
@@ -47,7 +47,7 @@
           }
         }
       ],
-      "review_status": "queued"
+      "review_status": "not_required"
     },
     "open-spiel-2019": {
       "provider_candidates": [
@@ -79,7 +79,7 @@
           }
         }
       ],
-      "review_status": "queued"
+      "review_status": "not_required"
     },
     "rapoport-chammah-1965": {
       "provider_candidates": [

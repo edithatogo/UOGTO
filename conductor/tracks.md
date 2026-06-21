@@ -82,7 +82,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## [x] Track: manuscript_source_verification_20260622
 - **Description**: Use SourceRight to normalize, verify, reconcile, and report manuscript sources before the UOGTO scoping manuscript is treated as publication-ready.
-- **Status**: Completed; three records remain queued for final expert metadata review.
+- **Status**: Completed; manuscript SourceRight manual review queue is empty.
 - **Link**: [./tracks/manuscript_source_verification_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/manuscript_source_verification_20260622/)
 
 ## Archived Tracks

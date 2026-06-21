@@ -102,9 +102,10 @@
 - Added docs/paper/references.csl.json, source inventory, review queue, SourceRight validation report, and citation reconciliation output.
 - Split the broad 36-record source inventory from the 11-record manuscript bibliography used by SourceRight.
 - Added `scripts/maintenance/check_manuscript_citations.py` and tests to verify that LaTeX `\cite{...}` keys, manual `\bibitem{...}` entries, and `docs/paper/references.csl.json` stay aligned.
-- SourceRight CSL validation passes; report has 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
+- SourceRight CSL validation passes; report has 11 manuscript references, 0 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation now reports 11 numeric citation occurrences, 11 matched citations, and 0 issues for `docs/paper/manuscript-citations.txt`.
 - Added `make manuscript-check` as a direct local LaTeX citation-key reconciliation gate.
 - `make manuscript-sourcecheck` passes and runs source generation, local LaTeX citation-key reconciliation, SourceRight CSL validation, SourceRight reporting, and SourceRight citation reconciliation.
-- Completed SourceRight manuscript source verification: numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues; repo-native manuscript checks pass; 3 records remain queued for final expert review.
+- Completed SourceRight manuscript source verification: numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues; repo-native manuscript checks pass; the manuscript SourceRight manual review queue is empty.
+- Narrowed manuscript SourceRight manual-review queuing so missing issued dates only queue scholarly article/book records, not web/API/standards references that legitimately lack publication-date metadata.
 - Added `scripts/maintenance/build_manuscript_pdf.py`, `make manuscript-build`, `make manuscript-pdf`, and matching Pixi tasks. The default build gate passes TeX structure checks and compiles when a LaTeX engine is present; the strict PDF gate fails explicitly if no engine is installed.
