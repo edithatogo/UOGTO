@@ -11,7 +11,7 @@
 - Updated the UOGTO w3id handoff packet state from pending PR submission to pending upstream merge/live redirect verification.
 
 ## [2026-06-22] - w3id Submitted-PR Release Attachment
-- Dispatched `Publish Release Assets` workflow run `27913262144` for existing release tag `v1.0.0`.
+- Dispatched `Publish Release Assets` workflow run `27913296574` for existing release tag `v1.0.0`.
 - Verified the workflow passed release gates, built both handoff packets, passed release preflight, and uploaded assets.
 - Verified `w3id-redirect-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:92062da793d8d547a8a4e5682a33d261d3e0a63fa6d1bc9576a9051ac3fc3fea`.
 - Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/w3id-redirect-handoff.json` returns an HTTP download redirect.
