@@ -7,6 +7,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [ ] Enable the GitHub-Zenodo repository link for `edithatogo/UOGTO`.
     - [ ] Verify Zenodo is configured to archive GitHub releases, not every branch push.
     - [x] Add a release asset workflow so generated RDF, SHACL, JSON-LD, checksum, and manifest files are attached to `v1.0.0` before Zenodo archives the release.
+    - [x] Add a generated Zenodo handoff packet to make the account-side DOI step auditable from release assets.
     - [x] Document the release archive flow in `docs/releases/v1.0.md`.
     - [x] Publish GitHub release `v1.0.0`.
     - [x] Verify release-assets workflow attached public artifacts.
@@ -34,6 +35,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Release asset packaging is automated for generated ontology, shape, context, checksum, and manifest files.
 - [x] DOI status monitoring is available through `make doi-status` and `pixi run doi-status-live`.
 - [x] DOI recording is scripted through `python scripts/maintenance/record_zenodo_doi.py <doi>`.
+- [x] `make zenodo-packet` emits `dist/zenodo-handoff.json` with release metadata and pending DOI blockers.
 - [x] `CITATION.cff` metadata matches GitHub release notes and Zenodo metadata.
 - [x] Release notes include validation evidence and links to canonical ontology assets.
 
@@ -126,6 +128,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add a manual approval step before publishing GitHub releases that mint Zenodo DOIs.
     - [x] Add `make release-preflight` as a local readiness and post-release hardening gate for release assets.
     - [x] Include the generated registry handoff packet in release preflight and release asset uploads.
+    - [x] Include the generated Zenodo handoff packet in release preflight and release asset uploads.
     - [x] Align Pixi `release-preflight` with Make so both generate the registry handoff packet before readiness checks.
     - [x] Refresh existing GitHub release `v1.0.0` so `registry-handoff.json` is attached to the live release.
 - [~] Task: Keep documentation continuously current
@@ -154,6 +157,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.
 - [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.
 - [x] Release preflight now requires `dist/registry-handoff.json`, and the release-assets workflow uploads it alongside release metadata artifacts.
+- [x] Release preflight now requires `dist/zenodo-handoff.json`, and the release-assets workflow uploads it alongside registry and w3id handoff artifacts.
 - [x] Pixi `release-preflight` also builds `dist/registry-handoff.json` before running release readiness checks.
 - [x] Release-assets workflow run `27912459022` refreshed `v1.0.0` and attached `registry-handoff.json`; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.

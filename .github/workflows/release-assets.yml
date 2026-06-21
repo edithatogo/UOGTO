@@ -44,6 +44,9 @@ jobs:
       - name: Build registry handoff packet
         run: make registry-packet
 
+      - name: Build Zenodo DOI handoff packet
+        run: make zenodo-packet
+
       - name: Build w3id redirect handoff packet
         run: make w3id-packet
 
@@ -64,5 +67,6 @@ jobs:
             dist/release-assets-manifest.json \
             dist/SHA256SUMS \
             dist/registry-handoff.json \
+            dist/zenodo-handoff.json \
             dist/w3id-redirect-handoff.json \
             --clobber

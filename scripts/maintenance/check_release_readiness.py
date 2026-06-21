@@ -8,6 +8,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.maintenance import (
+    build_zenodo_handoff,
     check_doi_status,
     check_publishing_metadata,
     check_registry_links,
@@ -24,6 +25,7 @@ EXPECTED_RELEASE_ASSETS = set(package_release_assets.REQUIRED_RELEASE_ASSETS) | 
     "release-assets-manifest.json",
     "SHA256SUMS",
     "registry-handoff.json",
+    "zenodo-handoff.json",
     "w3id-redirect-handoff.json",
 }
 PENDING_EXTERNAL_MARKERS = [
@@ -69,6 +71,7 @@ def check_release_manifest() -> None:
             raise AssertionError(f"dist/SHA256SUMS missing checksum entry for {name}")
 
     check_registry_handoff_packet(ROOT / "dist" / "registry-handoff.json")
+    check_zenodo_handoff_packet(ROOT / "dist" / "zenodo-handoff.json")
     check_w3id_handoff_packet(ROOT / "dist" / "w3id-redirect-handoff.json")
 
 
@@ -90,6 +93,18 @@ def check_w3id_handoff_packet(path: Path) -> None:
         raise AssertionError("w3id redirect handoff packet has an unexpected schema")
 
 
+def check_zenodo_handoff_packet(path: Path) -> None:
+    if not path.exists():
+        raise AssertionError("Missing dist/zenodo-handoff.json; run make zenodo-packet first")
+    with path.open("r", encoding="utf-8") as handle:
+        packet = json.load(handle)
+    if packet.get("schema") != "uogto.zenodo-handoff.v1":
+        raise AssertionError("Zenodo handoff packet has an unexpected schema")
+    expected = build_zenodo_handoff.RELEASE_URL
+    if packet.get("release_url") != expected:
+        raise AssertionError("Zenodo handoff packet release URL does not match the expected release")
+
+
 def check_release_workflow() -> None:
     workflow = read_text(".github/workflows/release-assets.yml")
     required_fragments = [
@@ -102,11 +117,13 @@ def check_release_workflow() -> None:
         "make registry-links",
         "make release-assets",
         "make registry-packet",
+        "make zenodo-packet",
         "make w3id-packet",
         "gh release upload",
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
         "dist/registry-handoff.json",
+        "dist/zenodo-handoff.json",
         "dist/w3id-redirect-handoff.json",
         "check_release_readiness.py",
     ]

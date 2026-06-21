@@ -30,6 +30,7 @@
 - LOV submission and OLS indexing remain external registry steps after DOI metadata is live.
 - DOI status monitoring is implemented with `make doi-status` for local placeholder consistency and `pixi run doi-status-live` for public Zenodo lookup.
 - DOI recording is scripted with `python scripts/maintenance/record_zenodo_doi.py <doi>` to update release notes, registry packets, `CITATION.cff`, and `.zenodo.json` after Zenodo minting.
+- Zenodo DOI handoff packet generation is implemented with `make zenodo-packet`; release preflight now requires `dist/zenodo-handoff.json`, and the release-assets workflow is configured to upload it.
 - Registry handoff packet generation is implemented with `make registry-packet`; it writes LOV/OLS submission metadata to `dist/registry-handoff.json` and preserves the pending DOI blocker until Zenodo metadata is recorded.
 - Release preflight, Pixi release-preflight, and the release-assets workflow now require and upload `dist/registry-handoff.json`; workflow run `27912429240` attached it to `v1.0.0` and the asset URL returned an HTTP download redirect.
 - Registry link and release-readiness gates now require the public `registry-handoff.json` release asset URL in LOV/OLS packet docs.
@@ -64,3 +65,4 @@
 - Release-assets workflow dispatch run 27913296574 passed for v1.0.0 and refreshed w3id-redirect-handoff.json; the downloaded asset contains status pending_external_w3id_merge and PR https://github.com/perma-id/w3id.org/pull/6238.
 - Live w3id monitor reports PR `6238` is open with `merged=False`, and `/uogto/`, `/uogto/core`, and `/uogto/extensions` still return 404 until upstream merge propagates.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.
+- Open: `zenodo-handoff.json` release upload dispatch and live asset verification remain pending for the next release-assets refresh.

@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - Zenodo Handoff Release Artifact
+- Added `scripts/maintenance/build_zenodo_handoff.py` plus Make and Pixi wiring to generate `dist/zenodo-handoff.json`.
+- Added the Zenodo handoff packet to release preflight and the release-assets upload workflow.
+- Added tests covering pending DOI handoff state and release-readiness requirements.
+
 ## [2026-06-22] - w3id Status Monitor
 - Added `scripts/maintenance/check_w3id_status.py` plus Make, Pixi, and scheduled maintenance wiring for w3id PR and redirect monitoring.
 - Added tests covering the current pending-merge state and future strict failure modes for unmerged PRs and non-live redirects.
