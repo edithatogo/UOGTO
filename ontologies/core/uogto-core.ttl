@@ -166,6 +166,36 @@ uogto:EventTrace a owl:Class ;
     rdfs:label "Event Trace"@en ;
     skos:definition "A history of state transitions and actions in a session."@en .
 
+uogto:GameNode a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Game Node"@en ;
+    skos:definition "A state configuration node within dynamic/extensive games."@en .
+
+uogto:DecisionNode a owl:Class ;
+    rdfs:subClassOf uogto:GameNode ;
+    rdfs:label "Decision Node"@en ;
+    skos:definition "A game node controlled by a specific player."@en .
+
+uogto:ChanceNode a owl:Class ;
+    rdfs:subClassOf uogto:GameNode ;
+    rdfs:label "Chance Node"@en ;
+    skos:definition "A game node where transition outcomes are decided stochastically."@en .
+
+uogto:TerminalNode a owl:Class ;
+    rdfs:subClassOf uogto:GameNode ;
+    rdfs:label "Terminal Node"@en ;
+    skos:definition "A terminal node in a game model mapping to payoffs."@en .
+
+uogto:PlayerPayoffLink a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Player Payoff Link"@en ;
+    skos:definition "Connects a utility value directly to a player instance."@en .
+
+uogto:PayoffProfile a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Payoff Profile"@en ;
+    skos:definition "Represents the aggregated profile of payoffs for all active players."@en .
+
 # Object Properties
 uogto:hasPlayer a owl:ObjectProperty ;
     rdfs:label "has player"@en ;
@@ -266,6 +296,42 @@ uogto:compiledToExecutionModel a owl:ObjectProperty ;
 uogto:emitsEventTrace a owl:ObjectProperty ;
     rdfs:label "emits event trace"@en ;
     skos:definition "Connects a play session to its event log."@en .
+
+uogto:controlsNode a owl:ObjectProperty ;
+    rdfs:label "controls node"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogto:DecisionNode ;
+    skos:definition "Links a player to the decision node they control."@en .
+
+uogto:belongsToInformationSet a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "belongs to information set"@en ;
+    rdfs:domain uogto:DecisionNode ;
+    rdfs:range uogto:InformationSet ;
+    skos:definition "Functional relation linking a decision node to its single containing information set."@en .
+
+uogto:comprisesStrategy a owl:ObjectProperty ;
+    rdfs:label "comprises strategy"@en ;
+    rdfs:domain uogto:StrategyProfile ;
+    rdfs:range uogto:Strategy ;
+    skos:definition "Links a strategy profile to the specific individual strategies."@en .
+
+uogto:hasPayoff a owl:ObjectProperty ;
+    rdfs:label "has payoff"@en ;
+    rdfs:domain uogto:StrategyProfile ;
+    rdfs:range uogto:PayoffProfile ;
+    skos:definition "Links a strategy profile to its corresponding reified payoff profile."@en .
+
+uogto:hasPayoffForPlayer a owl:ObjectProperty ;
+    rdfs:label "has payoff for player"@en ;
+    rdfs:domain uogto:PayoffProfile ;
+    rdfs:range uogto:PlayerPayoffLink ;
+    skos:definition "Links a payoff profile to individual player-utility mappings."@en .
+
+uogto:payoffPlayer a owl:ObjectProperty ;
+    rdfs:label "payoff player"@en ;
+    rdfs:domain uogto:PlayerPayoffLink ;
+    rdfs:range uogto:Player ;
+    skos:definition "Associates the player payoff mapping back to the player."@en .
 
 # Datatype Properties
 uogto:identifier a owl:DatatypeProperty ;
