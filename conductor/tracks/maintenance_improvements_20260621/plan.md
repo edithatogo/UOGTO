@@ -13,13 +13,13 @@ This plan outlines the implementation of advanced enhancements to repository val
     - [x] Hook it into the validation pre-commit triggers
 
 ## Phase 2: Git Hooks & Release Tagging
-- [ ] Task: Configure git pre-commit hook
-    - [ ] Create pre-commit hook file running validate and checks
-    - [ ] Script pre-commit installation utility
-- [ ] Task: Implement semantic tagging
-    - [ ] Create `scripts/maintenance/tag_release.py` supporting semver upgrades and changelog boundary alignments
-- [ ] Task: Create lockfile vulnerability auditor
-    - [ ] Set up dependency vulnerability scanning (e.g. OSV/safety checks) in `scripts/maintenance/audit_lockfile.py`
+- [x] Task: Configure git pre-commit hook
+    - [x] Create pre-commit hook file running validate and checks
+    - [x] Script pre-commit installation utility
+- [x] Task: Implement semantic tagging
+    - [x] Create `scripts/maintenance/tag_release.py` supporting semver upgrades and changelog boundary alignments
+- [x] Task: Create lockfile vulnerability auditor
+    - [x] Set up dependency vulnerability scanning (e.g. OSV/safety checks) in `scripts/maintenance/audit_lockfile.py`
 
 ## Phase 3: Reporting & Context Staging
 - [ ] Task: Implement HTML SHACL report generator
