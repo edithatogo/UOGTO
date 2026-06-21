@@ -112,6 +112,7 @@ def check_release_notes() -> None:
         "python scripts/maintenance/audit_semantics.py",
         "python scripts/maintenance/check_publishing_metadata.py",
         "python scripts/maintenance/check_registry_links.py",
+        "python scripts/maintenance/build_registry_handoff.py",
         "python scripts/maintenance/check_doi_status.py",
         "python scripts/maintenance/record_zenodo_doi.py",
         "python scripts/maintenance/package_release_assets.py",
@@ -137,6 +138,7 @@ def check_registry_packets(*, require_published: bool = False) -> None:
             EXPECTED_RELEASE_URL,
             EXPECTED_RELEASE_ASSET_BASE + "uogto.ttl",
             EXPECTED_RELEASE_ASSET_BASE + "uogto-shapes.ttl",
+            EXPECTED_RELEASE_ASSET_BASE + "registry-handoff.json",
             "DOI: `TBD after Zenodo archiving`",
         ]:
             if fragment not in text:

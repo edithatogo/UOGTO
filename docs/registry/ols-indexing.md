@@ -20,6 +20,7 @@ Not yet submitted. v1.0 release assets and WIDOCO documentation are public; subm
 - SHACL shapes release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl>
 - Release checksums: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS>
 - Release asset manifest: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/release-assets-manifest.json>
+- Registry handoff packet: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json>
 
 ## OLS Compatibility Checklist
 - [x] Public ontology artifact URL is stable and fetchable.

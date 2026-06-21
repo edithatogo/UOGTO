@@ -23,6 +23,7 @@ UOGTO is a modular OWL/SHACL ontology for game-theoretic semantics, including cl
 - Merged ontology release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl>
 - SHACL shapes release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl>
 - Release checksums: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS>
+- Registry handoff packet: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json>
 - Source modules: `ontologies/core/`, `ontologies/extensions/`, and `ontologies/alignments/`.
 
 ## LOV Checklist

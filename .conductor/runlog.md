@@ -15,6 +15,16 @@
 - Verified `registry-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:043b8c753e09a97e371da9be5c23ab5588da035bea59bfbbfa433adc859b9c7a`.
 - Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json` returns an HTTP download redirect.
 
+## [2026-06-22] - Registry Handoff URL Requirement
+- Promoted the `registry-handoff.json` release asset URL to a required registry publication URL.
+- Added the handoff URL to LOV and OLS registry packet docs.
+- Added the handoff URL to the generated registry handoff artifact map and release-readiness packet checks.
+
+## [2026-06-22] - Registry Namespace Redirect Boundary
+- Strict registry live checks surfaced pending `w3id.org/uogto` namespace redirects.
+- Added explicit namespace URL classification so `--allow-unpublished` skips pending w3id redirects while strict live checks still fail until redirects are configured.
+- Updated the registry metadata checklist and Conductor status to keep the w3id redirect task separate from DOI, LOV, and OLS submission state.
+
 ## [2026-06-22] - Manuscript PDF CI Gate
 - Added `.github/workflows/manuscript-pdf.yml` to install a minimal LaTeX toolchain on Ubuntu and run `make manuscript-pdf`.
 - Added a workflow wiring test so the strict manuscript PDF CI lane keeps using current GitHub actions and the repository `make manuscript-pdf` target.

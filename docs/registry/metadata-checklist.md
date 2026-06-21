@@ -35,6 +35,7 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] Publishing metadata validation command: `python scripts/maintenance/check_publishing_metadata.py`
 - [x] Public merged ontology URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
 - [x] Public SHACL shapes URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
+- [ ] w3id namespace redirects pending for `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#`.
 
 ## Registry Gate
 - [x] GitHub release `v1.0.0` is published.

@@ -15,6 +15,11 @@ class TestRegistryLinks(unittest.TestCase):
         urls = check_registry_links.check_required_urls(text)
         self.assertIn("https://github.com/edithatogo/UOGTO", urls)
         self.assertIn("https://creativecommons.org/licenses/by/4.0/", urls)
+        self.assertIn(
+            "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json",
+            urls,
+        )
+        self.assertIn("https://w3id.org/uogto/core#", urls)
 
     def test_pending_publication_markers_exist_before_release(self):
         text = check_registry_links.read_registry_text()
@@ -27,7 +32,11 @@ class TestRegistryLinks(unittest.TestCase):
 
     @patch("scripts.maintenance.check_registry_links.open_url", return_value=200)
     def test_live_check_can_skip_unpublished_urls(self, mock_open_url):
-        urls = check_registry_links.REQUIRED_STABLE_URLS | check_registry_links.REQUIRED_PUBLICATION_URLS
+        urls = (
+            check_registry_links.REQUIRED_STABLE_URLS
+            | check_registry_links.REQUIRED_PUBLICATION_URLS
+            | check_registry_links.REQUIRED_NAMESPACE_URLS
+        )
         checked = check_registry_links.check_live_urls(urls, allow_unpublished=True)
         self.assertEqual(set(checked), urls)
         called_urls = {call.args[0] for call in mock_open_url.call_args_list}

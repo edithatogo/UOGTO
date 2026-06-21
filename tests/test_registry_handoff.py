@@ -37,6 +37,10 @@ class TestRegistryHandoff(unittest.TestCase):
         build_registry_handoff.write_handoff(output, packet)
         loaded = json.loads(output.read_text(encoding="utf-8"))
         self.assertEqual(loaded["artifacts"]["merged_ontology"], packet["artifacts"]["merged_ontology"])
+        self.assertEqual(
+            loaded["artifacts"]["registry_handoff"],
+            "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json",
+        )
 
 
 if __name__ == "__main__":

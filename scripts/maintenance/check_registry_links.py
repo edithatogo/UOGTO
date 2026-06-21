@@ -24,6 +24,12 @@ REQUIRED_PUBLICATION_URLS = {
     "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl",
     "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl",
     "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS",
+    "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json",
+}
+
+REQUIRED_NAMESPACE_URLS = {
+    "https://w3id.org/uogto/core#",
+    "https://w3id.org/uogto/extensions#",
 }
 
 PENDING_MARKERS = [
@@ -31,6 +37,7 @@ PENDING_MARKERS = [
     "TBD after Zenodo archiving",
     "TBD after the v1.0.0 GitHub release is archived by Zenodo",
     "Not yet submitted",
+    "w3id namespace redirects pending",
 ]
 
 URL_PATTERN = re.compile(r"https?://[^\s>)`]+")
@@ -49,7 +56,7 @@ def extract_urls(text: str) -> set[str]:
 
 def check_required_urls(text: str) -> set[str]:
     urls = extract_urls(text)
-    required = REQUIRED_STABLE_URLS | REQUIRED_PUBLICATION_URLS
+    required = REQUIRED_STABLE_URLS | REQUIRED_PUBLICATION_URLS | REQUIRED_NAMESPACE_URLS
     missing = sorted(url for url in required if url not in urls)
     if missing:
         raise AssertionError(f"Registry docs missing required URLs: {', '.join(missing)}")
@@ -81,7 +88,7 @@ def check_live_urls(
 ) -> list[str]:
     failures = []
     for url in sorted(urls):
-        if allow_unpublished and url in REQUIRED_PUBLICATION_URLS:
+        if allow_unpublished and url in (REQUIRED_PUBLICATION_URLS | REQUIRED_NAMESPACE_URLS):
             continue
         try:
             status = open_url(url, timeout=timeout)

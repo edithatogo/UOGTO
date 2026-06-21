@@ -154,3 +154,5 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Pixi `release-preflight` also builds `dist/registry-handoff.json` before running release readiness checks.
 - [x] Release-assets workflow run `27912459022` refreshed `v1.0.0` and attached `registry-handoff.json`; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.
+- [x] Registry link and release-readiness checks now require the public `registry-handoff.json` URL in LOV/OLS handoff docs and generated packet metadata.
+- [x] Registry live-link checks classify pending w3id namespace redirects as external publication blockers under `--allow-unpublished`, while strict live checks still fail until redirects are configured.

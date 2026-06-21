@@ -32,6 +32,8 @@
 - DOI recording is scripted with `python scripts/maintenance/record_zenodo_doi.py <doi>` to update release notes, registry packets, `CITATION.cff`, and `.zenodo.json` after Zenodo minting.
 - Registry handoff packet generation is implemented with `make registry-packet`; it writes LOV/OLS submission metadata to `dist/registry-handoff.json` and preserves the pending DOI blocker until Zenodo metadata is recorded.
 - Release preflight, Pixi release-preflight, and the release-assets workflow now require and upload `dist/registry-handoff.json`; workflow run `27912429240` attached it to `v1.0.0` and the asset URL returned an HTTP download redirect.
+- Registry link and release-readiness gates now require the public `registry-handoff.json` release asset URL in LOV/OLS packet docs.
+- Registry live-link checks now distinguish strict live mode from `--allow-unpublished`; w3id namespace redirects remain an external publication gate.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
@@ -54,4 +56,5 @@
 - Recorded post-manuscript-CI verification for commit `8118694`: `Validate UOGTO` run `27911901129` passed, `Build Manuscript PDF` run `27911901120` passed, `Build WIDOCO Pages` run `27911901116` passed and deployed, and the Pages root returned HTTP 200.
 - Live DOI check still reports no locally recorded/public Zenodo DOI; registry handoff remains `pending_external_doi`.
 - Release-assets workflow dispatch run `27912429240` passed for `v1.0.0` and attached `registry-handoff.json` to the GitHub release; the release asset URL returned HTTP 302 to the downloadable object.
+- Strict registry live check still fails for pending w3id namespace redirects; scheduled/live maintenance can use `--allow-unpublished` until those redirects are configured.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.

@@ -69,6 +69,7 @@ def build_registry_handoff(*, require_ready: bool = False) -> dict:
             "shacl_shapes": RELEASE_ASSET_BASE + "uogto-shapes.ttl",
             "checksums": RELEASE_ASSET_BASE + "SHA256SUMS",
             "manifest": RELEASE_ASSET_BASE + "release-assets-manifest.json",
+            "registry_handoff": RELEASE_ASSET_BASE + "registry-handoff.json",
         },
         "lov": {
             "submission_document": "docs/registry/lov-submission.md",
