@@ -76,9 +76,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Link**: [./tracks/scoping_review_execution_paper_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/scoping_review_execution_paper_20260621/)
 
 
-## [~] Track: executable_simulation_visualizer_20260621
+## [x] Track: executable_simulation_visualizer_20260621
 - **Description**: Develop the executable RDF game runner simulation engine, the Streamlit interactive playground and SHACL visualizer, and the LLM-as-a-Player evaluation bench.
-- **Status**: In Progress
+- **Status**: Completed
 - **Link**: [./tracks/executable_simulation_visualizer_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/executable_simulation_visualizer_20260621/)
 
 
