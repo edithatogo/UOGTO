@@ -21,5 +21,5 @@ This track covers SourceRight-backed source verification for the UOGTO manuscrip
 - [x] Any uncertain or conflicting records are captured in a review queue or explicit TODO section.
 - [x] `docs/paper/paper.tex` contains citation commands that reconcile against the canonical references.
   - The manuscript contains citation commands, all cited keys exist in the canonical CSL, and SourceRight numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues.
-- [~] Manuscript build/check commands still pass after citation integration.
-  - Repository validation, focused manuscript-source tests, and `make manuscript-sourcecheck` passed. A dedicated LaTeX/PDF manuscript build command is not yet available in this repository.
+- [x] Manuscript build/check commands still pass after citation integration.
+  - Repository validation, focused tests, `make manuscript-build`, and `make manuscript-sourcecheck` passed. Pixi tasks are wired for the same checks. `make manuscript-pdf` is available as the strict PDF gate and requires `latexmk`, `tectonic`, or `pdflatex`.

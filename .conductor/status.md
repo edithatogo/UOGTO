@@ -17,7 +17,7 @@
 - Scheduled maintenance now audits registry documentation links while allowing known unpublished v1.0 publication URLs until release.
 - Release asset packaging now builds generated RDF, SHACL, JSON-LD context, checksum, and manifest files for attachment to the `v1.0.0` GitHub release.
 - Conductor state reconciliation is recorded in `conductor_state_reconciliation_20260622`.
-- SourceRight manuscript source verification is in progress: canonical CSL, sidecar, review queue, report artifacts, manuscript citation plumbing, local LaTeX citation-key checks, and SourceRight numeric citation reconciliation are implemented.
+- SourceRight manuscript source verification is complete: canonical CSL, sidecar, review queue, report artifacts, manuscript citation plumbing, local LaTeX citation-key checks, manuscript build readiness checks, and SourceRight numeric citation reconciliation are implemented.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -27,15 +27,15 @@
 - WIDOCO Pages workflow is configured but still needs a successful GitHub Actions run after push.
 - Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
-- SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for manual metadata review.
-- The manuscript still lacks a dedicated LaTeX/PDF build command in the repository.
+- SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for final expert metadata review.
+- Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.
 
 ## Next Recommended Task
-- Continue `uogto_publishing_discoverability_20260622` for live release gates and close manuscript manual-review/build-command gaps before treating the manuscript as publication-ready.
+- Continue `uogto_publishing_discoverability_20260622` for live release gates, then close the final manuscript expert metadata review before treating the manuscript as publication-ready.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
 - SourceRight CSL validation passes for docs/paper/references.csl.json.
 - SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation output is captured at docs/paper/sourceright-citations.md with 11 citation occurrences, 11 matched citations, and 0 issues.
-- Open: final manual metadata review and a dedicated LaTeX/PDF build remain pending.
+- Open: final expert metadata review and strict PDF generation on a LaTeX-equipped release machine remain pending.

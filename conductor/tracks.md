@@ -80,9 +80,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: Completed
 - **Link**: [./tracks/conductor_state_reconciliation_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/conductor_state_reconciliation_20260622/)
 
-## [~] Track: manuscript_source_verification_20260622
+## [x] Track: manuscript_source_verification_20260622
 - **Description**: Use SourceRight to normalize, verify, reconcile, and report manuscript sources before the UOGTO scoping manuscript is treated as publication-ready.
-- **Status**: In Progress
+- **Status**: Completed; three records remain queued for final expert metadata review.
 - **Link**: [./tracks/manuscript_source_verification_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/manuscript_source_verification_20260622/)
 
 ## Archived Tracks

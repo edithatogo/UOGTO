@@ -16,7 +16,9 @@
   - SourceRight 0.1.20 reconciled the SourceRight-compatible numeric manuscript export: 11 citation occurrences, 11 matched citations, 0 issues. Output is preserved in `docs/paper/sourceright-citations.md`.
 - [x] Task: Document the reproducible SourceRight and manuscript build commands in the track or manuscript README.
   - Rebuild inventory: `make manuscript-sources` or `pixi run manuscript-sources`.
-  - Check local LaTeX citation-key drift: `make manuscript-check`.
+  - Check local LaTeX citation-key drift: `make manuscript-check` or `pixi run manuscript-check`.
+  - Check manuscript TeX build readiness: `make manuscript-build` or `pixi run manuscript-build`.
+  - Require strict PDF compilation on a LaTeX-equipped release machine: `make manuscript-pdf` or `pixi run manuscript-pdf`.
   - Validate CSL: `sourceright validate-csl --json docs/paper/references.csl.json`.
   - Generate report: `sourceright report .sourceright`.
   - Reconcile citations: `sourceright citations docs/paper/manuscript-citations.txt .sourceright`.
@@ -24,7 +26,9 @@
 ## Phase 4: Verification
 - [x] Task: Run SourceRight CSL validation and citation reconciliation.
   - CSL validation passed. Citation reconciliation reports 11 occurrences, 11 matches, and 0 issues.
-- [ ] Task: Run manuscript build/check command once available.
+- [x] Task: Run manuscript build/check command once available.
+  - `make manuscript-build` runs citation checks plus TeX structure validation and compiles a PDF when `latexmk`, `tectonic`, or `pdflatex` is installed.
+  - `make manuscript-pdf` requires a LaTeX engine and fails explicitly when PDF output cannot be produced.
 - [x] Task: Run repository validation gates after source artifacts are added.
-  - Focused manuscript source tests passed, `make validate` passed, and the commit hook ran the repository validation gate successfully for commit `e90946b`.
-  - `make manuscript-sourcecheck` passes with local LaTeX citation-key reconciliation, SourceRight CSL validation, SourceRight reference reporting, and SourceRight citation reconciliation.
+  - Focused manuscript source/build tests passed, `make manuscript-build` passed, `make manuscript-sourcecheck` passed, `make validate` passed, and `make test` passed.
+  - Pixi tasks are wired for `manuscript-check`, `manuscript-build`, `manuscript-pdf`, and `manuscript-sourcecheck`. PDF compilation is not claimed because no local TeX engine is installed.

@@ -96,3 +96,4 @@
 - Added `make manuscript-check` as a direct local LaTeX citation-key reconciliation gate.
 - `make manuscript-sourcecheck` passes and runs source generation, local LaTeX citation-key reconciliation, SourceRight CSL validation, SourceRight reporting, and SourceRight citation reconciliation.
 - Completed SourceRight manuscript source verification: numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues; repo-native manuscript checks pass; 3 records remain queued for final expert review.
+- Added `scripts/maintenance/build_manuscript_pdf.py`, `make manuscript-build`, `make manuscript-pdf`, and matching Pixi tasks. The default build gate passes TeX structure checks and compiles when a LaTeX engine is present; the strict PDF gate fails explicitly if no engine is installed.
