@@ -120,7 +120,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Task: Add publishing release gate
     - [x] Update release checklist to require `make validate`, `make test`, semantic audit, WIDOCO build, citation metadata validation, and registry metadata checklist review.
     - [x] Add a manual approval step before publishing GitHub releases that mint Zenodo DOIs.
-    - [x] Add `make release-preflight` as a local readiness gate before publishing `v1.0.0`.
+    - [x] Add `make release-preflight` as a local readiness and post-release hardening gate for release assets.
 - [~] Task: Keep documentation continuously current
     - [x] Ensure CI regenerates WIDOCO documentation on ontology changes.
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
@@ -134,7 +134,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] Publishing gate is documented and enforced before v1.0 release.
-- [x] Local release preflight validates release assets, metadata, release notes, registry packets, and expected external blockers before publication.
+- [x] Local release preflight validates release assets, metadata, release notes, registry packets, and expected external blockers for future release-asset runs.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [x] Continuous documentation generation remains green after ontology changes.
   - `Build WIDOCO Pages` run `27910392764` passed after Pages enablement and deployed the generated documentation.

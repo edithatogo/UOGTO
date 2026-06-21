@@ -1,10 +1,10 @@
 # Conductor Run Log
 
 ## [2026-06-22] - Release Preflight Gate
-- Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness before a DOI-minting GitHub release.
+- Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness and harden future DOI-minting release updates.
 - Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.
 - Wired the release-assets GitHub Actions workflow to run the release-readiness script after generated assets are built and before upload.
-- Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims.
+- Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims; the gate was added after the initial `v1.0.0` publication.
 
 ## [2026-06-22] - v1.0.0 Release Publication
 - Created GitHub release `v1.0.0`: https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0.
