@@ -1,8 +1,8 @@
 {
   "track_id": "scoping_review_protocol_20260621",
   "type": "feature",
-  "status": "new",
+  "status": "in-progress",
   "created_at": "2026-06-21T20:01:03Z",
-  "updated_at": "2026-06-21T20:01:03Z",
+  "updated_at": "2026-06-21T20:18:26Z",
   "description": "Establish the systematic scoping review protocol using PRISMA-P and PRISMA-S guidelines, formulate eligibility rules, and build the multi-database API client."
 }
