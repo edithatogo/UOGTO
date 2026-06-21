@@ -7,7 +7,12 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.maintenance import check_publishing_metadata, check_registry_links, package_release_assets
+from scripts.maintenance import (
+    check_doi_status,
+    check_publishing_metadata,
+    check_registry_links,
+    package_release_assets,
+)
 
 
 EXPECTED_RELEASE_TAG = "v1.0.0"
@@ -93,6 +98,8 @@ def check_release_notes() -> None:
         "python scripts/maintenance/audit_semantics.py",
         "python scripts/maintenance/check_publishing_metadata.py",
         "python scripts/maintenance/check_registry_links.py",
+        "python scripts/maintenance/check_doi_status.py",
+        "python scripts/maintenance/record_zenodo_doi.py",
         "python scripts/maintenance/package_release_assets.py",
         "make release-preflight",
         "Zenodo DOI: `TBD after the v1.0.0 GitHub release is archived by Zenodo`",
@@ -137,6 +144,7 @@ def check_local_release_readiness(*, require_published: bool = False) -> None:
     check_publishing_metadata.check_workflow()
     check_publishing_metadata.check_registry_annotations()
     check_publishing_metadata.check_registry_docs()
+    check_doi_status.check_local_doi_state(require_doi=require_published)
     check_release_manifest()
     check_release_workflow()
     check_release_notes()
