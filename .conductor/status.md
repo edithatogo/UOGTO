@@ -77,3 +77,4 @@
 - Scheduled maintenance artifact upload is implemented for `dist/publication-status-live.json`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
 - Manual maintenance dispatch `27914704264` failed before artifact upload because `update_dependencies.py` could not import `scripts` under Pixi/Linux; the import path fix is implemented and local verification passed.
 - Manual maintenance dispatch `27914843364` then failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux; cross-platform disk path detection is implemented and local verification passed.
+- Manual maintenance dispatch `27914935755` reached and passed live status artifact upload, then failed in `create-pull-request` because checkout credentials produced a duplicate GitHub Authorization header; checkout credential persistence is disabled and rerun verification is pending.

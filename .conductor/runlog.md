@@ -10,6 +10,8 @@
 - Maintenance rerun `27914843364` failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux.
 - Added cross-platform default disk path detection to `disk_guard.py`.
 - Verified focused disk/update/workflow/publication tests, `make release-preflight`, `make validate`, and `make test`.
+- Maintenance rerun `27914935755` passed live status artifact upload, then failed in `create-pull-request` with duplicate GitHub Authorization headers.
+- Disabled checkout credential persistence in the maintenance workflow; rerun verification remains pending.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.

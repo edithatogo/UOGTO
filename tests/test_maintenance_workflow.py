@@ -10,6 +10,9 @@ def test_maintenance_workflow_uploads_live_publication_status_artifact():
     step_names = {step.get("name") for step in steps}
     assert "Build Live Publication Status" in step_names
     assert "Upload Live Publication Status Artifact" in step_names
+    checkout = steps[0]
+    assert checkout["uses"] == "actions/checkout@v7"
+    assert checkout["with"]["persist-credentials"] is False
 
     workflow_text = workflow_path.read_text(encoding="utf-8")
     expected_fragments = [
