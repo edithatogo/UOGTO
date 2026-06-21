@@ -3,10 +3,10 @@
 This plan outlines the steps for establishing protocols and search clients.
 
 ## Phase 1: Methodology & Checklists
-- [ ] Task: Formulate PRISMA-P Protocol
-    - [ ] Create `docs/review/protocol.md` defining scoping questions and inclusion/exclusion rules
-- [ ] Task: Formulate PRISMA-S Search Protocol
-    - [ ] Add search terms and database strings to the protocol file
+- [x] Task: Formulate PRISMA-P Protocol
+    - [x] Create `docs/review/protocol.md` defining scoping questions and inclusion/exclusion rules
+- [x] Task: Formulate PRISMA-S Search Protocol
+    - [x] Add search terms and database strings to the protocol file
 
 ## Phase 2: Scaffolding API Clients
 - [ ] Task: Build Multi-Database Search Client
