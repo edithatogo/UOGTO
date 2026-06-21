@@ -172,4 +172,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` with submitted-PR state; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` on `v1.0.0` after PR submission; downloaded asset contains `pending_external_w3id_merge` and the PR URL.
 - [x] `make w3id-status` and `pixi run w3id-status-live` monitor PR merge state and live redirects; current live check reports PR open, merged=False, and pending w3id 404s.
-- [x] `make publication-status` emits `dist/publication-status.json` for consolidated release handoff review; release upload verification remains pending.
+- [x] `make publication-status` emits `dist/publication-status.json` for consolidated release handoff review; release-assets workflow run `27914117992` attached it to `v1.0.0` and the public asset URL returned an HTTP download redirect.

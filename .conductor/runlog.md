@@ -5,6 +5,13 @@
 - Wired `make publication-status`, Pixi `publication-status`, release preflight, and release-assets workflow upload.
 - Verified focused publication/release tests, `make release-preflight`, `make validate`, and `make test`.
 
+## [2026-06-22] - Publication Status Release Attachment
+- Verified remote `Validate UOGTO` run `27914083540` and `Build WIDOCO Pages` run `27914083544` passed for commit `7a9242e`.
+- Dispatched `Publish Release Assets` workflow run `27914117992` for existing release tag `v1.0.0`.
+- Verified the workflow passed release gates, built registry, Zenodo, w3id, and publication-status packets, passed release preflight, and uploaded assets.
+- Verified `publication-status.json` is attached to the `v1.0.0` GitHub release with digest `sha256:e52e18db755e23c1e2317cdf8483960a55e374ad2f8b929512a7c4b9f52d8ec5`.
+- Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/publication-status.json` returns an HTTP download redirect and the downloaded packet contains `pending_external_publication_steps`.
+
 ## [2026-06-22] - Zenodo Handoff Release Artifact
 - Added `scripts/maintenance/build_zenodo_handoff.py` plus Make and Pixi wiring to generate `dist/zenodo-handoff.json`.
 - Added the Zenodo handoff packet to release preflight and the release-assets upload workflow.

@@ -67,4 +67,5 @@
 - Live w3id monitor reports PR `6238` is open with `merged=False`, and `/uogto/`, `/uogto/core`, and `/uogto/extensions` still return 404 until upstream merge propagates.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.
 - Release-assets workflow dispatch run `27913777454` passed for `v1.0.0` and attached `zenodo-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
-- `dist/publication-status.json` is now part of local release preflight and the release-assets workflow; release refresh verification is the next external workflow step.
+- `dist/publication-status.json` is now part of local release preflight and the release-assets workflow. Release-assets run `27914117992` attached it to `v1.0.0`; the asset URL returned HTTP 302 and the downloaded packet contains `pending_external_publication_steps` with DOI-blocked LOV/OLS states.
+- The attached `publication-status.json` release asset has digest `sha256:e52e18db755e23c1e2317cdf8483960a55e374ad2f8b929512a7c4b9f52d8ec5`.
