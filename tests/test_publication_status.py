@@ -2,6 +2,7 @@ import shutil
 import unittest
 import uuid
 from pathlib import Path
+from unittest import mock
 
 from scripts.maintenance import build_publication_status
 
@@ -29,6 +30,56 @@ class TestPublicationStatus(unittest.TestCase):
         packet = build_publication_status.build_publication_status()
         build_publication_status.write_status(output, packet)
         self.assertIn('"schema": "uogto.publication-status.v1"', output.read_text(encoding="utf-8"))
+
+    def test_display_path_accepts_relative_output(self):
+        self.assertEqual(
+            build_publication_status.display_path(Path("dist/publication-status-live.json")),
+            str(Path("dist/publication-status-live.json")),
+        )
+
+    def test_live_status_records_url_observations(self):
+        with (
+            mock.patch.object(
+                build_publication_status,
+                "fetch_url",
+                return_value=build_publication_status.UrlObservation(
+                    url="https://example.test/",
+                    status=200,
+                    final_url="https://example.test/",
+                    ok=True,
+                ),
+            ),
+            mock.patch.object(
+                build_publication_status.check_doi_status,
+                "check_live_zenodo",
+                return_value=[],
+            ),
+        ):
+            packet = build_publication_status.build_publication_status(include_live=True)
+        self.assertIn("live", packet)
+        self.assertTrue(packet["live"]["documentation"]["ok"])
+        self.assertEqual(packet["live"]["zenodo_dois"], [])
+
+    def test_require_live_rejects_failed_public_url(self):
+        with (
+            mock.patch.object(
+                build_publication_status,
+                "fetch_url",
+                return_value=build_publication_status.UrlObservation(
+                    url="https://example.test/missing",
+                    status=404,
+                    final_url="https://example.test/missing",
+                    ok=False,
+                ),
+            ),
+            mock.patch.object(
+                build_publication_status.check_doi_status,
+                "check_live_zenodo",
+                return_value=[],
+            ),
+        ):
+            with self.assertRaisesRegex(AssertionError, "Live publication status check failed"):
+                build_publication_status.build_publication_status(require_live=True)
 
 
 if __name__ == "__main__":

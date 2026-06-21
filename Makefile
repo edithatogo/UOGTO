@@ -35,6 +35,9 @@ w3id-packet:
 publication-status:
 	python scripts/maintenance/build_publication_status.py
 
+publication-status-live:
+	python scripts/maintenance/build_publication_status.py --live --output dist/publication-status-live.json
+
 w3id-status:
 	python scripts/maintenance/check_w3id_status.py
 

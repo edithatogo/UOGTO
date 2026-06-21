@@ -42,6 +42,9 @@ jobs:
       - name: Check w3id Pull Request and Redirect Status
         run: pixi run python scripts/maintenance/check_w3id_status.py --live
 
+      - name: Build Live Publication Status
+        run: pixi run python scripts/maintenance/build_publication_status.py --live --output dist/publication-status-live.json
+
       - name: Create Maintenance Pull Request
         uses: peter-evans/create-pull-request@v6
         with:

@@ -1,5 +1,11 @@
 # Conductor Run Log
 
+## [2026-06-22] - Live Publication Status Observations
+- Added optional live observations to the publication status builder for Pages, release assets, and Zenodo DOI search.
+- Wired `make publication-status-live`, Pixi `publication-status-live`, and scheduled maintenance.
+- Verified focused publication/release tests, `python scripts/maintenance/build_publication_status.py --live --output dist/publication-status-live.json`, `make release-preflight`, `make validate`, and `make test`.
+- Local live output recorded release asset observations as live and Zenodo DOI search as empty, leaving status `pending_external_publication_steps`.
+
 ## [2026-06-22] - Publication Status Packet
 - Added a consolidated `publication-status.json` release artifact for Pages, release assets, DOI, Zenodo, w3id, LOV, and OLS state.
 - Wired `make publication-status`, Pixi `publication-status`, release preflight, and release-assets workflow upload.

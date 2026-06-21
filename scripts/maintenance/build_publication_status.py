@@ -1,6 +1,9 @@
 import argparse
 import json
 import sys
+import urllib.error
+import urllib.request
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 
@@ -31,6 +34,14 @@ PUBLICATION_ASSETS = [
 ]
 
 
+@dataclass(frozen=True)
+class UrlObservation:
+    url: str
+    status: int
+    final_url: str
+    ok: bool
+
+
 def doi_summary() -> dict:
     docs_text = check_doi_status.read_doi_docs()
     local_dois = check_doi_status.extract_dois_from_docs(docs_text)
@@ -46,7 +57,29 @@ def release_asset_urls() -> dict:
     return {asset: RELEASE_ASSET_BASE + asset for asset in PUBLICATION_ASSETS}
 
 
-def build_publication_status() -> dict:
+def fetch_url(url: str, *, timeout: int = 20) -> UrlObservation:
+    request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "UOGTO-publication-status"})
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return UrlObservation(url=url, status=response.status, final_url=response.url, ok=response.status < 400)
+    except urllib.error.HTTPError as exc:
+        return UrlObservation(url=url, status=exc.code, final_url=exc.geturl(), ok=False)
+    except urllib.error.URLError:
+        return UrlObservation(url=url, status=0, final_url=url, ok=False)
+
+
+def live_observations(*, timeout: int = 20) -> dict:
+    assets = {name: asdict(fetch_url(url, timeout=timeout)) for name, url in release_asset_urls().items()}
+    pages = asdict(fetch_url(PAGES_URL, timeout=timeout))
+    doi_live = check_doi_status.check_live_zenodo(require_doi=False, timeout=timeout)
+    return {
+        "documentation": pages,
+        "release_assets": assets,
+        "zenodo_dois": doi_live,
+    }
+
+
+def build_publication_status(*, include_live: bool = False, require_live: bool = False, timeout: int = 20) -> dict:
     registry = build_registry_handoff.build_registry_handoff()
     zenodo = build_zenodo_handoff.build_zenodo_handoff()
     w3id = build_w3id_redirect_handoff.build_w3id_handoff()
@@ -69,7 +102,7 @@ def build_publication_status() -> dict:
             }
         )
 
-    return {
+    packet = {
         "schema": "uogto.publication-status.v1",
         "status": "published" if not blockers else "pending_external_publication_steps",
         "release_tag": RELEASE_TAG,
@@ -110,11 +143,35 @@ def build_publication_status() -> dict:
         },
         "blockers": blockers,
     }
+    if include_live or require_live:
+        observations = live_observations(timeout=timeout)
+        packet["live"] = observations
+        failed_urls = []
+        if not observations["documentation"]["ok"]:
+            failed_urls.append(observations["documentation"]["url"])
+        failed_urls.extend(
+            item["url"] for item in observations["release_assets"].values() if not item["ok"]
+        )
+        if failed_urls:
+            packet["status"] = "live_publication_check_failed"
+            for url in failed_urls:
+                packet["blockers"].append({"source": "live", "message": f"Live URL check failed for {url}"})
+        if require_live and failed_urls:
+            raise AssertionError("Live publication status check failed for: " + ", ".join(failed_urls))
+    return packet
 
 
 def write_status(output_path: Path, packet: dict) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(packet, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def display_path(output_path: Path) -> str:
+    resolved = output_path.resolve()
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(output_path)
 
 
 def main() -> None:
@@ -125,11 +182,18 @@ def main() -> None:
         default=DEFAULT_OUTPUT,
         help="JSON output path. Defaults to dist/publication-status.json.",
     )
+    parser.add_argument("--live", action="store_true", help="Record live URL and Zenodo DOI observations.")
+    parser.add_argument("--require-live", action="store_true", help="Fail if Pages or release asset URLs are not live.")
+    parser.add_argument("--timeout", type=int, default=20, help="Per-request timeout in seconds.")
     args = parser.parse_args()
 
-    packet = build_publication_status()
+    packet = build_publication_status(
+        include_live=args.live,
+        require_live=args.require_live,
+        timeout=args.timeout,
+    )
     write_status(args.output, packet)
-    print(f"Wrote {args.output.relative_to(ROOT)} with status {packet['status']}.")
+    print(f"Wrote {display_path(args.output)} with status {packet['status']}.")
 
 
 if __name__ == "__main__":
