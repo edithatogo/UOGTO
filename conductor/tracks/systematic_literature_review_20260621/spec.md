@@ -21,9 +21,13 @@ graph TD
 - **Multi-Database API Query Client**: Automated Python script to download search hits from Crossref, PubMed, Europe PMC, arXiv, and OpenAlex.
 - **Record Deduplication Utility**: Python script using DOI/title matching to clean overlapping database results.
 - **UOGTO Coverage Mappings**: Automated reporting validating UOGTO terms against identified games and formulas.
+- **Literature-to-Ontology (L2O) Graph**: Represents literature nodes in temporary RDF for SPARQL-based coverage alignment.
 
 ### Should Have
 - **NLP Concept Classifier**: Script using TF-IDF/embeddings or regex rules to flag candidate game forms, payoff matrix strings, and parameters.
+- **Active Learning Screening Loop**: Ranker learning developer eligibility choices to prioritize relevant abstracts.
+- **LaTeX/MathML Equation Parser**: Extracts LaTeX math representations of payoffs and variables from text fields.
+- **Semantic Embedding Clustering**: Vectors-based clustering of abstracts using sentence-transformers to identify hidden game forms.
 - **Formula Triangulation**: Parser comparing identified mathematical game equations against target ontological classifications.
 
 ### Could Have
