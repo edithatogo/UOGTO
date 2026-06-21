@@ -1,5 +1,11 @@
 # Conductor Run Log
 
+## [2026-06-22] - w3id Live Publication Status Integration
+- Folded w3id pull request and redirect observations into `build_publication_status.py --live`.
+- `dist/publication-status-live.json` is now the single routine publication monitor for Pages, release assets, Zenodo DOI, and w3id state.
+- Verified focused publication/w3id tests, live status generation, `make release-preflight`, `make validate`, and `make test`.
+- Local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
+
 ## [2026-06-22] - Live Publication Status Observations
 - Added optional live observations to the publication status builder for Pages, release assets, and Zenodo DOI search.
 - Wired `make publication-status-live`, Pixi `publication-status-live`, and scheduled maintenance.

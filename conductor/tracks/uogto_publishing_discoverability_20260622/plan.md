@@ -142,6 +142,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add scheduled and local w3id PR/redirect status monitoring without requiring merge while the upstream PR remains open.
     - [x] Add a consolidated publication status packet covering Pages, release assets, DOI, Zenodo, w3id, LOV, and OLS state.
     - [x] Add live publication status observations for Pages, release assets, and Zenodo DOI search to scheduled maintenance.
+    - [x] Fold w3id PR and redirect observations into the consolidated live publication status packet.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -175,3 +176,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make w3id-status` and `pixi run w3id-status-live` monitor PR merge state and live redirects; current live check reports PR open, merged=False, and pending w3id 404s.
 - [x] `make publication-status` emits `dist/publication-status.json` for consolidated release handoff review; release-assets workflow run `27914117992` attached it to `v1.0.0` and the public asset URL returned an HTTP download redirect.
 - [x] `make publication-status-live` emits live URL/Zenodo observations to `dist/publication-status-live.json`; local run returned `pending_external_publication_steps` with release asset checks live and Zenodo DOI search empty.
+- [x] `make publication-status-live` now includes w3id PR and redirect observations; local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.

@@ -16,6 +16,7 @@ from scripts.maintenance import (
     build_w3id_redirect_handoff,
     build_zenodo_handoff,
     check_doi_status,
+    check_w3id_status,
 )
 
 
@@ -72,10 +73,22 @@ def live_observations(*, timeout: int = 20) -> dict:
     assets = {name: asdict(fetch_url(url, timeout=timeout)) for name, url in release_asset_urls().items()}
     pages = asdict(fetch_url(PAGES_URL, timeout=timeout))
     doi_live = check_doi_status.check_live_zenodo(require_doi=False, timeout=timeout)
+    w3id_pr = check_w3id_status.check_pr_state(require_merged=False, timeout=timeout)
+    w3id_redirects = [
+        asdict(item) for item in check_w3id_status.check_redirects(require_live=False, timeout=timeout)
+    ]
     return {
         "documentation": pages,
         "release_assets": assets,
         "zenodo_dois": doi_live,
+        "w3id": {
+            "pull_request": {
+                "url": check_w3id_status.PR_URL,
+                "state": w3id_pr.get("state"),
+                "merged": bool(w3id_pr.get("merged")),
+            },
+            "redirects": w3id_redirects,
+        },
     }
 
 
@@ -152,6 +165,14 @@ def build_publication_status(*, include_live: bool = False, require_live: bool =
         failed_urls.extend(
             item["url"] for item in observations["release_assets"].values() if not item["ok"]
         )
+        if require_live:
+            if not observations["w3id"]["pull_request"]["merged"]:
+                failed_urls.append(observations["w3id"]["pull_request"]["url"])
+            failed_urls.extend(
+                item["source"]
+                for item in observations["w3id"]["redirects"]
+                if not item["final_url"].startswith(check_w3id_status.EXPECTED_REDIRECT_TARGET)
+            )
         if failed_urls:
             packet["status"] = "live_publication_check_failed"
             for url in failed_urls:

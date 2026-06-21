@@ -54,11 +54,22 @@ class TestPublicationStatus(unittest.TestCase):
                 "check_live_zenodo",
                 return_value=[],
             ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_pr_state",
+                return_value={"state": "open", "merged": False},
+            ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_redirects",
+                return_value=[],
+            ),
         ):
             packet = build_publication_status.build_publication_status(include_live=True)
         self.assertIn("live", packet)
         self.assertTrue(packet["live"]["documentation"]["ok"])
         self.assertEqual(packet["live"]["zenodo_dois"], [])
+        self.assertEqual(packet["live"]["w3id"]["pull_request"]["state"], "open")
 
     def test_require_live_rejects_failed_public_url(self):
         with (
@@ -77,8 +88,49 @@ class TestPublicationStatus(unittest.TestCase):
                 "check_live_zenodo",
                 return_value=[],
             ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_pr_state",
+                return_value={"state": "open", "merged": False},
+            ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_redirects",
+                return_value=[],
+            ),
         ):
             with self.assertRaisesRegex(AssertionError, "Live publication status check failed"):
+                build_publication_status.build_publication_status(require_live=True)
+
+    def test_require_live_rejects_unmerged_w3id_pr(self):
+        with (
+            mock.patch.object(
+                build_publication_status,
+                "fetch_url",
+                return_value=build_publication_status.UrlObservation(
+                    url="https://example.test/",
+                    status=200,
+                    final_url="https://example.test/",
+                    ok=True,
+                ),
+            ),
+            mock.patch.object(
+                build_publication_status.check_doi_status,
+                "check_live_zenodo",
+                return_value=[],
+            ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_pr_state",
+                return_value={"state": "open", "merged": False},
+            ),
+            mock.patch.object(
+                build_publication_status.check_w3id_status,
+                "check_redirects",
+                return_value=[],
+            ),
+        ):
+            with self.assertRaisesRegex(AssertionError, "pull/6238"):
                 build_publication_status.build_publication_status(require_live=True)
 
 
