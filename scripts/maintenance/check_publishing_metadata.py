@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 import yaml
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -133,7 +133,8 @@ def load_yaml(path: Path):
 
 
 def validate_with_schema(instance, schema, name):
-    errors = sorted(Draft202012Validator(schema).iter_errors(instance), key=lambda err: err.path)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    errors = sorted(validator.iter_errors(instance), key=lambda err: err.path)
     if errors:
         details = "; ".join(
             f"{'.'.join(str(part) for part in error.path) or '<root>'}: {error.message}"

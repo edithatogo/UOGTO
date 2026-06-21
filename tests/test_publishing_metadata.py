@@ -34,6 +34,24 @@ class TestPublishingMetadata(unittest.TestCase):
                 }
             )
 
+    def test_rejects_invalid_citation_url_format(self):
+        with self.assertRaises(AssertionError):
+            check_publishing_metadata.validate_citation_schema(
+                {
+                    "cff-version": "1.2.0",
+                    "message": "Cite this.",
+                    "authors": [{"name": "UOGTO Contributors"}],
+                    "title": "Universal Open Game Theory Ontology (UOGTO)",
+                    "version": "1.0.0",
+                    "date-released": "2026-06-22",
+                    "url": "not-a-url",
+                    "repository-code": "https://github.com/edithatogo/UOGTO",
+                    "license": "CC-BY-4.0",
+                    "keywords": ["game theory", "ontology", "semantic web"],
+                    "abstract": "A test abstract.",
+                }
+            )
+
     def test_rejects_incomplete_zenodo_schema(self):
         with self.assertRaises(AssertionError):
             check_publishing_metadata.validate_zenodo_schema(
@@ -41,6 +59,30 @@ class TestPublishingMetadata(unittest.TestCase):
                     "title": "Incomplete",
                     "upload_type": "dataset",
                     "creators": [],
+                }
+            )
+
+    def test_rejects_invalid_zenodo_language(self):
+        with self.assertRaises(AssertionError):
+            check_publishing_metadata.validate_zenodo_schema(
+                {
+                    "title": "Universal Open Game Theory Ontology (UOGTO)",
+                    "upload_type": "dataset",
+                    "description": "A test description.",
+                    "creators": [{"name": "UOGTO Contributors"}],
+                    "license": "cc-by-4.0",
+                    "keywords": ["game theory", "ontology", "semantic web"],
+                    "related_identifiers": [
+                        {
+                            "identifier": "https://github.com/edithatogo/UOGTO",
+                            "relation": "isSupplementTo",
+                            "resource_type": "software",
+                            "scheme": "url",
+                        }
+                    ],
+                    "version": "1.0.0",
+                    "language": "en",
+                    "access_right": "open",
                 }
             )
 

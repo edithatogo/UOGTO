@@ -19,6 +19,11 @@
 - Replaced selected publishing metadata assertions with JSON Schema-backed validation for `CITATION.cff` and `.zenodo.json`.
 - Added negative tests for incomplete citation and Zenodo metadata.
 
+## [2026-06-22] - Publishing Review Follow-Up
+- Added `conductor/product-guidelines.md` so Conductor reviews have a complete local guideline context.
+- Enabled JSON Schema format checking for publishing metadata URLs and dates.
+- Added negative tests for invalid citation URL format and Zenodo language metadata.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
