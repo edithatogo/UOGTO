@@ -1,0 +1,8 @@
+{
+  "track_id": "manuscript_source_verification_20260622",
+  "type": "research-quality",
+  "status": "in-progress",
+  "created_at": "2026-06-22T02:00:00Z",
+  "updated_at": "2026-06-22T02:45:00Z",
+  "description": "Use SourceRight to normalize, verify, reconcile, and report manuscript sources before the UOGTO scoping manuscript is treated as publication-ready."
+}

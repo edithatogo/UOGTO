@@ -27,3 +27,5 @@ registry-links-live = "python scripts/maintenance/check_registry_links.py --live
 manuscript-sources = "python scripts/maintenance/build_manuscript_sources.py"
 release-assets = "python scripts/build.py && python scripts/maintenance/package_release_assets.py"
 check = "python scripts/validate.py && pytest && python scripts/maintenance/audit_semantics.py && python scripts/maintenance/generate_html_report.py && python scripts/maintenance/check_publishing_metadata.py && python scripts/maintenance/check_registry_links.py && python scripts/build.py && python scripts/maintenance/package_release_assets.py"
+
+manuscript-sourcecheck = "python scripts/maintenance/build_manuscript_sources.py && sourceright validate-csl --json docs/paper/references.csl.json && sourceright report .sourceright && sourceright citations docs/paper/manuscript-citations.txt .sourceright"

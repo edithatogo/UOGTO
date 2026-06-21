@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links manuscript-sources release-assets conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links manuscript-sources manuscript-sourcecheck release-assets conductor all
 
 all: build validate test coverage
 
@@ -31,3 +31,9 @@ release-assets: build
 
 conductor:
 	python scripts/conductor.py
+
+
+manuscript-sourcecheck: manuscript-sources
+	sourceright validate-csl --json docs/paper/references.csl.json
+	sourceright report .sourceright
+	sourceright citations docs/paper/manuscript-citations.txt .sourceright

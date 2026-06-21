@@ -1,5 +1,20 @@
 # Conductor Run Log
 
+## [2026-06-22] - Conductor State Reconciliation and SourceRight Track
+- Added completed Conductor track `conductor_state_reconciliation_20260622` to record archive normalization, status updates, CI/Pixi hardening, registry link checks, and follow-up planning.
+- Added `conductor/archive/index.md` so retired and superseded tracks are discoverable without being treated as active work.
+- Added pending Conductor track `manuscript_source_verification_20260622` for SourceRight-backed CSL normalization, citation reconciliation, and manuscript source reporting.
+- Updated Conductor status to make SourceRight verification an explicit remaining manuscript-quality gate.
+- Tightened publishing metadata schema checks so citation repository URLs must be absolute HTTP(S) URLs.
+
+## [2026-06-22] - SourceRight Manuscript Source Verification
+- Added `scripts/maintenance/build_manuscript_sources.py` plus focused tests to build canonical manuscript SourceRight inputs from curated standards, review data, and deep-research references.
+- Generated `docs/paper/references.csl.json`, `docs/paper/source-inventory.json`, `docs/paper/source-review-queue.jsonl`, `.sourceright/references.csl.json`, `.sourceright/references.verification.json`, and `.sourceright/review-queue.jsonl`.
+- Updated `docs/paper/paper.tex` with citation commands and a manual bibliography for the current manuscript source set.
+- Ran `sourceright validate-csl --json docs/paper/references.csl.json`; validation passed with no diagnostics.
+- Generated SourceRight integrity reports at `docs/paper/sourceright-report.md` and `docs/paper/sourceright-report.json`; the report shows 36 references, 36 local provider candidates, 25 manual-review queue items, 0 errors, 31 warnings, and 25 info items.
+- Ran `sourceright citations docs/paper/manuscript-citations.txt .sourceright`; the command completed but SourceRight 0.1.20 detected 0 citation occurrences, so citation-key reconciliation remains open and is recorded in `docs/paper/sourceright-citations.md`.
+
 ## [2026-06-22] - Publishing and Discoverability Planning
 - Added Conductor track `uogto_publishing_discoverability_20260622` after the completed modeling, validation, release, and maintenance phases.
 - Planned Zenodo DOI integration, `CITATION.cff`, `.zenodo.json`, and v1.0 release notes.
@@ -34,6 +49,11 @@
 - Added Make/Pixi tasks and scheduled maintenance workflow execution for registry link checks, with known unpublished v1.0 URLs explicitly allowed until release.
 - Updated the v1.0 release notes and publishing plan to include the registry link gate.
 
+## [2026-06-22] - Release Asset Packaging Gate
+- Added `scripts/maintenance/package_release_assets.py` to generate release asset checksums and a machine-readable release asset manifest.
+- Added `.github/workflows/release-assets.yml` so published/manual releases attach generated RDF, SHACL, JSON-LD context, checksum, and manifest assets after validation gates.
+- Updated LOV/OLS registry docs to use stable GitHub release download URLs instead of ignored local `dist/` paths.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
@@ -66,3 +86,8 @@
 - Successfully built project using `make build`.
 - Successfully validated repo using `make validate`.
 - Successfully verified project coverage using `make coverage` and ran tests.
+
+## 2026-06-22 - Manuscript Source Verification
+- Added docs/paper/references.csl.json, source inventory, review queue, SourceRight validation report, and citation reconciliation output.
+- SourceRight CSL validation passes; report has 36 references, 25 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
+- SourceRight citation reconciliation command runs but currently detects 0 in-text occurrences for the exported manuscript snippet; retained as an explicit follow-up limitation.

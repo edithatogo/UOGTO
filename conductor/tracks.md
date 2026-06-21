@@ -75,9 +75,24 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: In Progress
 - **Link**: [./tracks/uogto_publishing_discoverability_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_publishing_discoverability_20260622/)
 
+## [x] Track: conductor_state_reconciliation_20260622
+- **Description**: Record and normalize Conductor state for archive moves, status updates, CI/Pixi hardening, registry link checks, and SourceRight follow-up planning.
+- **Status**: Completed
+- **Link**: [./tracks/conductor_state_reconciliation_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/conductor_state_reconciliation_20260622/)
+
+## [~] Track: manuscript_source_verification_20260622
+- **Description**: Use SourceRight to normalize, verify, reconcile, and report manuscript sources before the UOGTO scoping manuscript is treated as publication-ready.
+- **Status**: In Progress
+- **Link**: [./tracks/manuscript_source_verification_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/manuscript_source_verification_20260622/)
+
 ## Archived Tracks
 
 These tracks are retained for audit history but are no longer active work items.
+
+## [x] Archived Track: scoping_review_protocol_20260621
+- **Description**: Establish the PRISMA-style scoping review protocol and database search workflow.
+- **Status**: Completed; retained as protocol history.
+- **Link**: [./archive/scoping_review_protocol_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/scoping_review_protocol_20260621/)
 
 ## [x] Archived Track: systematic_literature_review_20260621
 - **Description**: Establish systematic and scoping literature review workflows using PRISMA checklists, public database API search, deduplication, NLP concept extraction, and UOGTO ontological validation mappings.

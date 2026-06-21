@@ -62,6 +62,17 @@ class TestManuscriptSources(unittest.TestCase):
         refs = json.loads((self.paper_dir / "references.csl.json").read_text(encoding="utf-8"))
         self.assertEqual(refs, json.loads((self.sourceright_dir / "references.csl.json").read_text(encoding="utf-8")))
 
+        verification = json.loads(
+            (self.sourceright_dir / "references.verification.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(verification["schema_version"], "sourceright.verification.v1")
+        for record in verification["references"].values():
+            self.assertIn(record["review_status"], {"not_required", "queued"})
+            self.assertEqual(record["provider_candidates"][0]["provider"], "uogto-local-source-inventory")
+
+        review_queue = (self.sourceright_dir / "review-queue.jsonl").read_text(encoding="utf-8")
+        self.assertIn('"review_status": "queued"', review_queue)
+
 
 if __name__ == "__main__":
     unittest.main()

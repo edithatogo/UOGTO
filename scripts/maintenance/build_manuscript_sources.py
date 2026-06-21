@@ -267,7 +267,7 @@ def review_queue_entries(references: list[dict]) -> list[dict]:
                     "title": record.get("title"),
                     "url": url,
                     "reasons": reasons,
-                    "status": "needs-manual-review",
+                    "review_status": "needs-manual-review",
                 }
             )
     return entries
@@ -284,12 +284,25 @@ def write_source_artifacts(
 ) -> dict:
     references = build_csl_references()
     queue = review_queue_entries(references)
+    queued_ids = {item["id"] for item in queue}
     verification = {
         "schema_version": "sourceright.verification.v1",
         "references": {
             record["id"]: {
-                "status": "pending-manual-review" if any(item["id"] == record["id"] for item in queue) else "metadata-normalized",
-                "source": "uogto-local-source-inventory",
+                "provider_candidates": [
+                    {
+                        "provider": "uogto-local-source-inventory",
+                        "confidence": 1.0,
+                        "retrieved_at": "2026-06-22T00:00:00Z",
+                        "data": {
+                            "id": record["id"],
+                            "title": record.get("title"),
+                            "URL": record.get("URL"),
+                            "DOI": record.get("DOI"),
+                        },
+                    }
+                ],
+                "review_status": "queued" if record["id"] in queued_ids else "not_required",
             }
             for record in references
         },
@@ -308,13 +321,36 @@ def write_source_artifacts(
 
     review_queue_text = "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in queue)
     (paper_dir / "source-review-queue.jsonl").write_text(review_queue_text, encoding="utf-8")
-    (sourceright_dir / "review-queue.jsonl").write_text(review_queue_text, encoding="utf-8")
+    sourceright_queue_text = "".join(
+        json.dumps(
+            {
+                "id": item["id"],
+                "extraction": {
+                    "source": "uogto-local-source-inventory",
+                    "original_text": item["title"],
+                },
+                "conflicts": [
+                    {
+                        "field": "source_metadata",
+                        "severity": "review",
+                        "source": "uogto-local-source-inventory",
+                        "reasons": item["reasons"],
+                    }
+                ],
+                "review_status": "queued",
+            },
+            ensure_ascii=False,
+        )
+        + "\n"
+        for item in queue
+    )
+    (sourceright_dir / "review-queue.jsonl").write_text(sourceright_queue_text, encoding="utf-8")
 
     manuscript_text = (
         "Universal Open Game Theory Ontology uses RDF, OWL 2, SHACL, and JSON-LD "
-        "[w3c-rdf11-concepts; w3c-owl2-overview; w3c-shacl; w3c-json-ld11]. "
+        "[@w3c-rdf11-concepts; @w3c-owl2-overview; @w3c-shacl; @w3c-json-ld11]. "
         "The scoping review includes Prisoner's Dilemma literature and learning-in-games examples "
-        "[rapoport-chammah-1965-prisoners-dilemma; lin-2020-online-learning-ipd].\n"
+        "[@rapoport-chammah-1965; @open-spiel-2019; @w3c-sparql11-query; @openalex; @arxiv-api; @crossref; @arxiv-2006-06580v3].\n"
     )
     (paper_dir / "manuscript-citations.txt").write_text(manuscript_text, encoding="utf-8")
     return inventory
