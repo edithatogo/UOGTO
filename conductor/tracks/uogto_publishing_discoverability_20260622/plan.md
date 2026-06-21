@@ -130,6 +130,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
     - [x] Record post-release DOI, Pages, LOV, and OLS status in `.conductor/status.md`.
     - [x] Modernize GitHub Actions workflow pins to Node 24-compatible official action majors after the Pages run surfaced Node 20 deprecation warnings.
+    - [x] Add a machine-readable registry handoff packet generator for LOV/OLS submission metadata and pending DOI blockers.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -145,3 +146,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
   - `Build WIDOCO Pages` run `27911050024` passed after the release-readiness CI evidence update and deployed the generated documentation.
 - [x] GitHub-owned workflow action pins avoid the Node.js 20 deprecation warning path.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.
+- [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.

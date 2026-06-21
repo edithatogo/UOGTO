@@ -11,6 +11,12 @@
 - Remote `Build Manuscript PDF` run `27911901120` passed, proving the strict LaTeX PDF gate in CI.
 - Remote `Build WIDOCO Pages` run `27911901116` passed and deployed, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
 
+## [2026-06-22] - Registry Handoff Packet Guard
+- Confirmed the live DOI check still has no locally recorded or public Zenodo DOI.
+- Added `scripts/maintenance/build_registry_handoff.py` plus `make registry-packet` and Pixi task wiring to emit `dist/registry-handoff.json`.
+- Added tests covering pending DOI blocker state, ready-mode rejection while placeholders remain, and JSON output.
+- Updated the publishing Conductor plan/status so LOV and OLS submission handoff state is represented without claiming external submission.
+
 ## [2026-06-22] - Release Preflight Gate
 - Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness and harden future DOI-minting release updates.
 - Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.
