@@ -14,6 +14,9 @@
 - Disabled checkout credential persistence in the maintenance workflow; rerun verification remains pending.
 - Maintenance rerun `27915044021` passed live status artifact upload, then failed because repository settings do not permit GitHub Actions to create pull requests.
 - Marked the maintenance PR creation step `continue-on-error: true`; rerun verification remains pending.
+- Maintenance rerun `27915165068` passed end to end after PR creation was made non-fatal.
+- Verified `Validate UOGTO` run `27915121389` and `Build WIDOCO Pages` run `27915121386` passed for commit `2f74af8`.
+- Confirmed the successful maintenance run passed `Build Live Publication Status` and `Upload Live Publication Status Artifact`; GitHub still annotates repository PR permission denial and Pixi cache restore warnings, but they are non-blocking for publication monitoring.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.
