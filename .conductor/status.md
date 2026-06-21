@@ -75,3 +75,4 @@
 - Live publication status observations are added to scheduled maintenance so public Pages, release assets, and Zenodo DOI search can be inspected from one generated JSON artifact. Local live output still reports `pending_external_publication_steps` because Zenodo DOI search is empty.
 - `dist/publication-status-live.json` now includes w3id PR and redirect observations. Local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
 - Scheduled maintenance artifact upload is implemented for `dist/publication-status-live.json`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
+- Manual maintenance dispatch `27914704264` failed before artifact upload because `update_dependencies.py` could not import `scripts` under Pixi/Linux; the import path fix is implemented and local verification passed.

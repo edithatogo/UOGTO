@@ -2,6 +2,11 @@ import subprocess
 import sys
 import os
 import shutil
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 WINDOWS_PIXI_PATH = r"C:\Users\60217257\AppData\Local\pixi\bin\pixi.exe"
 
