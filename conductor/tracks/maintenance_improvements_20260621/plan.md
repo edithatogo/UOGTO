@@ -22,7 +22,7 @@ This plan outlines the implementation of advanced enhancements to repository val
     - [x] Set up dependency vulnerability scanning (e.g. OSV/safety checks) in `scripts/maintenance/audit_lockfile.py`
 
 ## Phase 3: Reporting & Context Staging
-- [ ] Task: Implement HTML SHACL report generator
-    - [ ] Create Python exporter generating summary tables of RDF/SHACL validation results
-- [ ] Task: Finalize and run checks
-    - [ ] Execute full suite and update status files
+- [x] Task: Implement HTML SHACL report generator
+    - [x] Create Python exporter generating summary tables of RDF/SHACL validation results
+- [x] Task: Finalize and run checks
+    - [x] Execute full suite and update status files
