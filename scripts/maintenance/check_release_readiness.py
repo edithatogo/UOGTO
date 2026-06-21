@@ -24,6 +24,7 @@ EXPECTED_RELEASE_ASSETS = set(package_release_assets.REQUIRED_RELEASE_ASSETS) | 
     "release-assets-manifest.json",
     "SHA256SUMS",
     "registry-handoff.json",
+    "w3id-redirect-handoff.json",
 }
 PENDING_EXTERNAL_MARKERS = [
     "TBD after Zenodo archiving",
@@ -106,6 +107,7 @@ def check_release_workflow() -> None:
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
         "dist/registry-handoff.json",
+        "dist/w3id-redirect-handoff.json",
         "check_release_readiness.py",
     ]
     missing = [fragment for fragment in required_fragments if fragment not in workflow]

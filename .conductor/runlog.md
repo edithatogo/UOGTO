@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - w3id Handoff Release Artifact
+- Configured the release-assets workflow to upload `dist/w3id-redirect-handoff.json` alongside the registry handoff packet.
+- Tightened release readiness checks so the w3id packet must exist and the workflow must name its upload path.
+- Recorded Conductor status that the external `perma-id/w3id.org` pull request remains the live publication blocker.
+
 ## [2026-06-22] - Existing Release Registry Handoff Asset Refresh
 - Dispatched `Publish Release Assets` workflow run `27912459022` for existing release tag `v1.0.0`.
 - Verified the workflow passed release gates, built release assets, built the registry handoff packet, passed release preflight, and uploaded assets.

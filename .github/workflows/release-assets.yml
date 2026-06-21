@@ -64,4 +64,5 @@ jobs:
             dist/release-assets-manifest.json \
             dist/SHA256SUMS \
             dist/registry-handoff.json \
+            dist/w3id-redirect-handoff.json \
             --clobber
