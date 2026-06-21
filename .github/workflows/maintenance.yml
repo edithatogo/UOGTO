@@ -33,6 +33,9 @@ jobs:
       - name: Generate Auto-Changelog
         run: pixi run python scripts/maintenance/generate_changelog.py
 
+      - name: Check Registry Documentation Links
+        run: pixi run python scripts/maintenance/check_registry_links.py --live --allow-unpublished
+
       - name: Create Maintenance Pull Request
         uses: peter-evans/create-pull-request@v6
         with:

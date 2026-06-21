@@ -108,7 +108,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add a manual approval step before publishing GitHub releases that mint Zenodo DOIs.
 - [~] Task: Keep documentation continuously current
     - [x] Ensure CI regenerates WIDOCO documentation on ontology changes.
-    - [ ] Add scheduled or release-triggered checks for stale registry metadata links.
+    - [x] Add scheduled or release-triggered checks for stale registry metadata links.
     - [x] Record post-release DOI, Pages, LOV, and OLS status in `.conductor/status.md`.
 
 ### Required Configuration Files
@@ -119,5 +119,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] Publishing gate is documented and enforced before v1.0 release.
+- [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [ ] Continuous documentation generation remains green after ontology changes.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.

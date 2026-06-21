@@ -14,6 +14,7 @@
 - Publishing and discoverability planning track added for Zenodo DOI archiving, WIDOCO/GitHub Pages documentation, LOV submission, and OLS indexing.
 - Publishing metadata scaffolding implemented: `CITATION.cff`, `.zenodo.json`, v1.0 release notes, WIDOCO Pages workflow, LOV/OLS registry docs, and metadata checks.
 - Registry annotation checks now validate the primary ontology release header for DCTERMS/VANN metadata and source module ontology labels.
+- Scheduled maintenance now audits registry documentation links while allowing known unpublished v1.0 publication URLs until release.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.

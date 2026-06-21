@@ -29,6 +29,11 @@
 - Extended the publishing metadata gate to parse source ontology modules and verify release-header registry annotations plus module ontology labels.
 - Updated the LOV/OLS metadata checklist and Conductor publishing plan to distinguish repo-side metadata readiness from live DOI, Pages, LOV, and OLS service gates.
 
+## [2026-06-22] - Registry Link Maintenance Gate
+- Added `scripts/maintenance/check_registry_links.py` to verify required registry URLs and optionally perform live HTTP checks.
+- Added Make/Pixi tasks and scheduled maintenance workflow execution for registry link checks, with known unpublished v1.0 URLs explicitly allowed until release.
+- Updated the v1.0 release notes and publishing plan to include the registry link gate.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
