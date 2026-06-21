@@ -15,6 +15,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  WIDOCO_VERSION: v1.4.25
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,18 +41,28 @@ jobs:
           python -m pip install --upgrade pip
           pip install .
 
-      - name: Build merged ontology
-        run: make build
+      - name: Run publishing release gates
+        run: |
+          make validate
+          make test
+          python scripts/maintenance/audit_semantics.py
+          make publishing-metadata
+          make build
 
-      - name: Download latest WIDOCO release
+      - name: Download pinned WIDOCO release
         run: |
           python - <<'PY'
           import json
+          import os
           import urllib.request
 
-          release_url = "https://api.github.com/repos/dgarijo/Widoco/releases/latest"
+          version = os.environ["WIDOCO_VERSION"]
+          release_url = f"https://api.github.com/repos/dgarijo/Widoco/releases/tags/{version}"
           with urllib.request.urlopen(release_url) as response:
               release = json.load(response)
+
+          if release.get("tag_name") != version:
+              raise SystemExit(f"Expected WIDOCO {version}, got {release.get('tag_name')}")
 
           jar_url = None
           for asset in release.get("assets", []):

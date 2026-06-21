@@ -13,6 +13,12 @@
 - Added `scripts/maintenance/check_publishing_metadata.py`, `make publishing-metadata`, Pixi publishing metadata task, and focused pytest coverage.
 - Left Zenodo DOI minting, GitHub Pages workflow verification, LOV submission, and OLS indexing as explicit external release gates.
 
+## [2026-06-22] - Publishing Review Hardening
+- Tightened WIDOCO Pages workflow so validation, tests, semantic audit, publishing metadata checks, and build run before Pages artifact upload.
+- Pinned WIDOCO download to release `v1.4.25` instead of resolving the latest release at runtime.
+- Replaced selected publishing metadata assertions with JSON Schema-backed validation for `CITATION.cff` and `.zenodo.json`.
+- Added negative tests for incomplete citation and Zenodo metadata.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.

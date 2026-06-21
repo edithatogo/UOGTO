@@ -17,7 +17,7 @@ Using the merged artifact keeps WIDOCO output aligned with the release artifact 
    ```bash
    make build
    ```
-3. Download a WIDOCO release JAR from <https://github.com/dgarijo/Widoco/releases>.
+3. Download the pinned WIDOCO release JAR used by CI, currently `v1.4.25`, from <https://github.com/dgarijo/Widoco/releases/tag/v1.4.25>.
 4. Generate documentation:
    ```bash
    java -jar widoco.jar -ontFile dist/uogto.ttl -outFolder site -rewriteAll -getOntologyMetadata -webVowl -uniteSections
@@ -26,4 +26,4 @@ Using the merged artifact keeps WIDOCO output aligned with the release artifact 
 The generated HTML should be written to `site/`.
 
 ## CI/CD
-`.github/workflows/widoco-pages.yml` builds `dist/uogto.ttl`, downloads the latest WIDOCO JAR from GitHub releases, generates `site/`, and deploys the result to GitHub Pages.
+`.github/workflows/widoco-pages.yml` runs validation, tests, semantic audit, publishing metadata checks, builds `dist/uogto.ttl`, downloads the pinned WIDOCO JAR from GitHub releases, generates `site/`, and deploys the result to GitHub Pages.
