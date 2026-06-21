@@ -1,0 +1,18 @@
+# Implementation Plan: Scoping Review Protocol Development
+
+This plan outlines the steps for establishing protocols and search clients.
+
+## Phase 1: Methodology & Checklists
+- [ ] Task: Formulate PRISMA-P Protocol
+    - [ ] Create `docs/review/protocol.md` defining scoping questions and inclusion/exclusion rules
+- [ ] Task: Formulate PRISMA-S Search Protocol
+    - [ ] Add search terms and database strings to the protocol file
+
+## Phase 2: Scaffolding API Clients
+- [ ] Task: Build Multi-Database Search Client
+    - [ ] Implement query scripts in `scripts/review/query_databases.py` for PubMed, Europe PMC, Crossref, arXiv, and OpenAlex
+    - [ ] Verify query client connectivity and save format
+
+## Phase 3: Validation and Baseline Runs
+- [ ] Task: Perform Dry-Run Queries
+    - [ ] Run test queries to estimate data size and log raw statistics
