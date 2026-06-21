@@ -16,6 +16,7 @@
   - SourceRight 0.1.20 reconciled the SourceRight-compatible numeric manuscript export: 11 citation occurrences, 11 matched citations, 0 issues. Output is preserved in `docs/paper/sourceright-citations.md`.
 - [x] Task: Document the reproducible SourceRight and manuscript build commands in the track or manuscript README.
   - Rebuild inventory: `make manuscript-sources` or `pixi run manuscript-sources`.
+  - Check local LaTeX citation-key drift: `make manuscript-check`.
   - Validate CSL: `sourceright validate-csl --json docs/paper/references.csl.json`.
   - Generate report: `sourceright report .sourceright`.
   - Reconcile citations: `sourceright citations docs/paper/manuscript-citations.txt .sourceright`.

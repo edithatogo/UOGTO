@@ -93,4 +93,6 @@
 - Added `scripts/maintenance/check_manuscript_citations.py` and tests to verify that LaTeX `\cite{...}` keys, manual `\bibitem{...}` entries, and `docs/paper/references.csl.json` stay aligned.
 - SourceRight CSL validation passes; report has 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation now reports 11 numeric citation occurrences, 11 matched citations, and 0 issues for `docs/paper/manuscript-citations.txt`.
+- Added `make manuscript-check` as a direct local LaTeX citation-key reconciliation gate.
 - `make manuscript-sourcecheck` passes and runs source generation, local LaTeX citation-key reconciliation, SourceRight CSL validation, SourceRight reporting, and SourceRight citation reconciliation.
+- Completed SourceRight manuscript source verification: numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues; repo-native manuscript checks pass; 3 records remain queued for final expert review.
