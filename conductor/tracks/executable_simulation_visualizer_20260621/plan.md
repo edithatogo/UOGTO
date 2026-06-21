@@ -10,9 +10,9 @@ This plan outlines the deployment of runtimes, interactive playgrounds, and LLM 
     - [x] Verify runner matches classical game outcomes (e.g., Prisoner's Dilemma payoffs)
 
 ## Phase 2: Interactive Web Visualizer
-- [ ] Task: Create Streamlit Dashboard
-    - [ ] Implement `uogto/playground/app.py` supporting Turtle file upload and SHACL validator checks
-    - [ ] Integrate graph layout libraries (e.g., NetworkX, pyvis) to render states and node graphs
+- [x] Task: Create Streamlit Dashboard
+    - [x] Implement `uogto/playground/app.py` supporting Turtle file upload and SHACL validator checks
+    - [x] Integrate graph layout libraries (e.g., NetworkX, pyvis) to render states and node graphs
 
 ## Phase 3: LLM Player Benchmarking
 - [ ] Task: Build LLM Agent Player Harness
