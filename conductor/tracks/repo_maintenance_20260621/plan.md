@@ -11,12 +11,12 @@ This plan outlines the steps to build skills, tools, workflows, and agent specif
     - [x] Add basic tests for the check script
 
 ## Phase 2: Dependency & Validation Automation
-- [ ] Task: Implement bleeding-edge dependency updater
-    - [ ] Create script `scripts/maintenance/update_dependencies.py` utilizing Pixi CLI commands
-    - [ ] Integrate post-update check running validation tests and SHACL constraints
-- [ ] Task: Create Auto-Changelog generator
-    - [ ] Implement `scripts/maintenance/generate_changelog.py` parsing Git logs and formatting Markdown entries
-    - [ ] Add unit tests for changelog formatting
+- [x] Task: Implement bleeding-edge dependency updater
+    - [x] Create script `scripts/maintenance/update_dependencies.py` utilizing Pixi CLI commands
+    - [x] Integrate post-update check running validation tests and SHACL constraints
+- [x] Task: Create Auto-Changelog generator
+    - [x] Implement `scripts/maintenance/generate_changelog.py` parsing Git logs and formatting Markdown entries
+    - [x] Add unit tests for changelog formatting
 
 ## Phase 3: Agent Customization, Skills, and CI/CD Workflows
 - [ ] Task: Create custom Antigravity agent skill
