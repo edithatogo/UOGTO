@@ -34,8 +34,8 @@ graph TD
 - **Automated Dependency Merging**: Automatic PR generation for dependency updates.
 
 ## Acceptance Criteria
-- [ ] Pre-commit hook blocks invalid commits and passes valid ones.
-- [ ] Disk checker logs status and cleans cache if space is low.
-- [ ] Check script successfully queries authenticated REST endpoints using `GITHUB_TOKEN`.
-- [ ] Release tagging script successfully updates tags.
-- [ ] HTML validation report output is generated.
+- [x] Pre-commit hook blocks invalid commits and passes valid ones.
+- [x] Disk checker logs status and cleans cache if space is low.
+- [x] Check script successfully queries authenticated REST endpoints using `GITHUB_TOKEN`.
+- [x] Release tagging script successfully updates tags.
+- [x] HTML validation report output is generated.
