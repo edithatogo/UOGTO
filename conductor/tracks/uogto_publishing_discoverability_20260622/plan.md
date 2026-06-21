@@ -61,11 +61,11 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] WIDOCO runs successfully in CI on the canonical ontology inputs.
-  - GitHub Actions run `27911050024` passed the WIDOCO build and deploy jobs on 2026-06-21 UTC after commit `850bfab`.
+  - GitHub Actions run `27911982986` passed the WIDOCO build and deploy jobs on 2026-06-21 UTC after commit `c752125`.
 - [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
   - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
 - [x] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
-  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27911050024` deployed successfully, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
+  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27911982986` deployed successfully, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission
@@ -143,7 +143,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Local release preflight validates release assets, metadata, release notes, registry packets, and expected external blockers for future release-asset runs.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [x] Continuous documentation generation remains green after ontology changes.
-  - `Build WIDOCO Pages` run `27911050024` passed after the release-readiness CI evidence update and deployed the generated documentation.
+  - `Build WIDOCO Pages` run `27911982986` passed after the release-readiness CI evidence update and deployed the generated documentation.
 - [x] GitHub-owned workflow action pins avoid the Node.js 20 deprecation warning path.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.
 - [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.

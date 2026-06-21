@@ -46,8 +46,8 @@
 - Strict PDF generation passed remotely in GitHub Actions run `27911901120` for commit `8118694`; current local Windows machine still lacks a TeX engine, so local PDF compilation is not claimed.
 
 ## Publishing Live Verification - 2026-06-22
-- Recorded `Validate UOGTO` GitHub Actions run `27911050014` passed for commit `850bfab`.
-- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27911050024` built and deployed successfully for commit `850bfab`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
+- Recorded `Validate UOGTO` GitHub Actions run `27911982989` passed for commit `c752125`.
+- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27911982986` built and deployed successfully for commit `c752125`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
 - Recorded post-manuscript-CI verification for commit `8118694`: `Validate UOGTO` run `27911901129` passed, `Build Manuscript PDF` run `27911901120` passed, `Build WIDOCO Pages` run `27911901116` passed and deployed, and the Pages root returned HTTP 200.
 - Live DOI check still reports no locally recorded/public Zenodo DOI; registry handoff remains `pending_external_doi`.
