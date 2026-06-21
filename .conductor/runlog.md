@@ -12,6 +12,8 @@
 - Verified focused disk/update/workflow/publication tests, `make release-preflight`, `make validate`, and `make test`.
 - Maintenance rerun `27914935755` passed live status artifact upload, then failed in `create-pull-request` with duplicate GitHub Authorization headers.
 - Disabled checkout credential persistence in the maintenance workflow; rerun verification remains pending.
+- Maintenance rerun `27915044021` passed live status artifact upload, then failed because repository settings do not permit GitHub Actions to create pull requests.
+- Marked the maintenance PR creation step `continue-on-error: true`; rerun verification remains pending.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.

@@ -13,6 +13,8 @@ def test_maintenance_workflow_uploads_live_publication_status_artifact():
     checkout = steps[0]
     assert checkout["uses"] == "actions/checkout@v7"
     assert checkout["with"]["persist-credentials"] is False
+    pr_step = next(step for step in steps if step.get("name") == "Create Maintenance Pull Request")
+    assert pr_step["continue-on-error"] is True
 
     workflow_text = workflow_path.read_text(encoding="utf-8")
     expected_fragments = [
