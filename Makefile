@@ -47,7 +47,7 @@ manuscript-pdf: manuscript-check
 release-assets: build
 	python scripts/maintenance/package_release_assets.py
 
-release-preflight: release-assets
+release-preflight: release-assets registry-packet
 	python scripts/maintenance/check_release_readiness.py
 
 conductor:

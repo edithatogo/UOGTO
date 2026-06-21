@@ -23,6 +23,7 @@ EXPECTED_RELEASE_ASSET_BASE = "https://github.com/edithatogo/UOGTO/releases/down
 EXPECTED_RELEASE_ASSETS = set(package_release_assets.REQUIRED_RELEASE_ASSETS) | {
     "release-assets-manifest.json",
     "SHA256SUMS",
+    "registry-handoff.json",
 }
 PENDING_EXTERNAL_MARKERS = [
     "TBD after Zenodo archiving",
@@ -66,6 +67,17 @@ def check_release_manifest() -> None:
         if name not in checksums:
             raise AssertionError(f"dist/SHA256SUMS missing checksum entry for {name}")
 
+    check_registry_handoff_packet(ROOT / "dist" / "registry-handoff.json")
+
+
+def check_registry_handoff_packet(path: Path) -> None:
+    if not path.exists():
+        raise AssertionError("Missing dist/registry-handoff.json; run make registry-packet first")
+    with path.open("r", encoding="utf-8") as handle:
+        packet = json.load(handle)
+    if packet.get("schema") != "uogto.registry-handoff.v1":
+        raise AssertionError("Registry handoff packet has an unexpected schema")
+
 
 def check_release_workflow() -> None:
     workflow = read_text(".github/workflows/release-assets.yml")
@@ -78,9 +90,11 @@ def check_release_workflow() -> None:
         "make publishing-metadata",
         "make registry-links",
         "make release-assets",
+        "make registry-packet",
         "gh release upload",
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
+        "dist/registry-handoff.json",
         "check_release_readiness.py",
     ]
     missing = [fragment for fragment in required_fragments if fragment not in workflow]

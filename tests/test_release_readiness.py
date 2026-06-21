@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from scripts.maintenance import check_release_readiness
+from scripts.maintenance import build_registry_handoff
 from scripts.maintenance import package_release_assets
 
 
@@ -20,6 +21,10 @@ class TestReleaseReadiness(unittest.TestCase):
             if not path.exists():
                 path.write_text(f"test fixture for {asset}\n", encoding="utf-8")
         package_release_assets.write_release_manifest(dist, "1.0.0")
+        build_registry_handoff.write_handoff(
+            dist / "registry-handoff.json",
+            build_registry_handoff.build_registry_handoff(),
+        )
 
     def test_local_release_readiness_passes(self):
         check_release_readiness.check_local_release_readiness()
@@ -29,6 +34,11 @@ class TestReleaseReadiness(unittest.TestCase):
 
     def test_release_workflow_contains_required_gates(self):
         check_release_readiness.check_release_workflow()
+
+    def test_release_preflight_requires_registry_handoff(self):
+        missing = Path(".tmp") / "missing-registry-handoff.json"
+        with self.assertRaises(AssertionError):
+            check_release_readiness.check_registry_handoff_packet(missing)
 
     def test_release_notes_contain_preflight_evidence(self):
         check_release_readiness.check_release_notes()

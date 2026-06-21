@@ -41,6 +41,9 @@ jobs:
       - name: Build release assets
         run: make release-assets
 
+      - name: Build registry handoff packet
+        run: make registry-packet
+
       - name: Run release preflight
         run: python scripts/maintenance/check_release_readiness.py
 
@@ -57,4 +60,5 @@ jobs:
             dist/extensions.context.jsonld \
             dist/release-assets-manifest.json \
             dist/SHA256SUMS \
+            dist/registry-handoff.json \
             --clobber

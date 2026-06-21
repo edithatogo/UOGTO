@@ -17,6 +17,11 @@
 - Added tests covering pending DOI blocker state, ready-mode rejection while placeholders remain, and JSON output.
 - Updated the publishing Conductor plan/status so LOV and OLS submission handoff state is represented without claiming external submission.
 
+## [2026-06-22] - Registry Handoff Release Artifact
+- Wired `make release-preflight` to generate the registry handoff packet before readiness checks.
+- Updated the release-assets workflow to build and upload `dist/registry-handoff.json`.
+- Hardened release-readiness checks and tests so future release runs fail if the registry handoff packet is missing or malformed.
+
 ## [2026-06-22] - Release Preflight Gate
 - Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness and harden future DOI-minting release updates.
 - Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.

@@ -125,6 +125,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Update release checklist to require `make validate`, `make test`, semantic audit, WIDOCO build, citation metadata validation, and registry metadata checklist review.
     - [x] Add a manual approval step before publishing GitHub releases that mint Zenodo DOIs.
     - [x] Add `make release-preflight` as a local readiness and post-release hardening gate for release assets.
+    - [x] Include the generated registry handoff packet in release preflight and release asset uploads.
 - [~] Task: Keep documentation continuously current
     - [x] Ensure CI regenerates WIDOCO documentation on ontology changes.
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
@@ -147,3 +148,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] GitHub-owned workflow action pins avoid the Node.js 20 deprecation warning path.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.
 - [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.
+- [x] Release preflight now requires `dist/registry-handoff.json`, and the release-assets workflow uploads it alongside release metadata artifacts.
