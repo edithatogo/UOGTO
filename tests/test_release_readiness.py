@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 
 from scripts.maintenance import check_release_readiness
 from scripts.maintenance import build_registry_handoff
+from scripts.maintenance import build_w3id_redirect_handoff
 from scripts.maintenance import package_release_assets
 
 
@@ -25,6 +26,10 @@ class TestReleaseReadiness(unittest.TestCase):
             dist / "registry-handoff.json",
             build_registry_handoff.build_registry_handoff(),
         )
+        build_w3id_redirect_handoff.write_handoff(
+            dist / "w3id-redirect-handoff.json",
+            build_w3id_redirect_handoff.build_w3id_handoff(),
+        )
 
     def test_local_release_readiness_passes(self):
         check_release_readiness.check_local_release_readiness()
@@ -39,6 +44,11 @@ class TestReleaseReadiness(unittest.TestCase):
         missing = Path(".tmp") / "missing-registry-handoff.json"
         with self.assertRaises(AssertionError):
             check_release_readiness.check_registry_handoff_packet(missing)
+
+    def test_release_preflight_requires_w3id_handoff(self):
+        missing = Path(".tmp") / "missing-w3id-redirect-handoff.json"
+        with self.assertRaises(AssertionError):
+            check_release_readiness.check_w3id_handoff_packet(missing)
 
     def test_release_notes_contain_preflight_evidence(self):
         check_release_readiness.check_release_notes()

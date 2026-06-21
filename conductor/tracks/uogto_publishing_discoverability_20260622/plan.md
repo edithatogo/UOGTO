@@ -134,6 +134,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Record post-release DOI, Pages, LOV, and OLS status in `.conductor/status.md`.
     - [x] Modernize GitHub Actions workflow pins to Node 24-compatible official action majors after the Pages run surfaced Node 20 deprecation warnings.
     - [x] Add a machine-readable registry handoff packet generator for LOV/OLS submission metadata and pending DOI blockers.
+    - [x] Add a w3id redirect submission document and machine-readable handoff packet for pending namespace redirects.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -156,3 +157,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.
 - [x] Registry link and release-readiness checks now require the public `registry-handoff.json` URL in LOV/OLS handoff docs and generated packet metadata.
 - [x] Registry live-link checks classify pending w3id namespace redirects as external publication blockers under `--allow-unpublished`, while strict live checks still fail until redirects are configured.
+- [x] `make w3id-packet` emits `dist/w3id-redirect-handoff.json` with proposed `uogto/.htaccess` redirect rules for the external w3id PR.

@@ -10,6 +10,7 @@ REGISTRY_DOCS = [
     ROOT / "docs/registry/metadata-checklist.md",
     ROOT / "docs/registry/lov-submission.md",
     ROOT / "docs/registry/ols-indexing.md",
+    ROOT / "docs/registry/w3id-submission.md",
     ROOT / "docs/releases/v1.0.md",
 ]
 

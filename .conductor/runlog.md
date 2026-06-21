@@ -25,6 +25,12 @@
 - Added explicit namespace URL classification so `--allow-unpublished` skips pending w3id redirects while strict live checks still fail until redirects are configured.
 - Updated the registry metadata checklist and Conductor status to keep the w3id redirect task separate from DOI, LOV, and OLS submission state.
 
+## [2026-06-22] - w3id Redirect Handoff Packet
+- Added `docs/registry/w3id-submission.md` with proposed `uogto/.htaccess` rules for the pending namespace redirects.
+- Added `scripts/maintenance/build_w3id_redirect_handoff.py` plus `make w3id-packet` and Pixi task wiring to emit `dist/w3id-redirect-handoff.json`.
+- Added tests covering the generated w3id packet, proposed rewrite rules, and JSON output.
+- Included the w3id submission document in publishing metadata and registry link checks without claiming that the external w3id PR has been submitted.
+
 ## [2026-06-22] - Manuscript PDF CI Gate
 - Added `.github/workflows/manuscript-pdf.yml` to install a minimal LaTeX toolchain on Ubuntu and run `make manuscript-pdf`.
 - Added a workflow wiring test so the strict manuscript PDF CI lane keeps using current GitHub actions and the repository `make manuscript-pdf` target.

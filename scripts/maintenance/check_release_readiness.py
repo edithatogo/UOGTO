@@ -68,6 +68,7 @@ def check_release_manifest() -> None:
             raise AssertionError(f"dist/SHA256SUMS missing checksum entry for {name}")
 
     check_registry_handoff_packet(ROOT / "dist" / "registry-handoff.json")
+    check_w3id_handoff_packet(ROOT / "dist" / "w3id-redirect-handoff.json")
 
 
 def check_registry_handoff_packet(path: Path) -> None:
@@ -77,6 +78,15 @@ def check_registry_handoff_packet(path: Path) -> None:
         packet = json.load(handle)
     if packet.get("schema") != "uogto.registry-handoff.v1":
         raise AssertionError("Registry handoff packet has an unexpected schema")
+
+
+def check_w3id_handoff_packet(path: Path) -> None:
+    if not path.exists():
+        raise AssertionError("Missing dist/w3id-redirect-handoff.json; run make w3id-packet first")
+    with path.open("r", encoding="utf-8") as handle:
+        packet = json.load(handle)
+    if packet.get("schema") != "uogto.w3id-redirect-handoff.v1":
+        raise AssertionError("w3id redirect handoff packet has an unexpected schema")
 
 
 def check_release_workflow() -> None:
@@ -91,6 +101,7 @@ def check_release_workflow() -> None:
         "make registry-links",
         "make release-assets",
         "make registry-packet",
+        "make w3id-packet",
         "gh release upload",
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
