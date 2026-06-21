@@ -7,6 +7,9 @@
 - Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims; the gate was added after the initial `v1.0.0` publication.
 - Stabilized `tests/test_release_readiness.py` so ordinary `pytest` and CI create release-readiness fixture assets before checking the local manifest.
 - Verified commit `fd7dc7e`: `Validate UOGTO` run `27910976656` passed, `Build WIDOCO Pages` run `27910976624` built and deployed successfully, and the public Pages root returned HTTP 200.
+- Verified commit `850bfab`: `Validate UOGTO` run `27911050014` passed and `Build WIDOCO Pages` run `27911050024` built and deployed successfully.
+- Modernized workflow action pins after the latest Pages run reported Node 20 deprecation warnings: `actions/checkout@v7`, `actions/setup-python@v6`, `actions/setup-java@v5`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
+- Updated GitHub-owned workflow actions to current Node 24-compatible major releases: `actions/checkout@v7`, `actions/setup-python@v6`, `actions/setup-java@v5`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
 
 ## [2026-06-22] - v1.0.0 Release Publication
 - Created GitHub release `v1.0.0`: https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0.

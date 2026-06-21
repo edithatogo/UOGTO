@@ -57,11 +57,11 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] WIDOCO runs successfully in CI on the canonical ontology inputs.
-  - GitHub Actions run `27910976624` passed the WIDOCO build and deploy jobs on 2026-06-21 UTC after commit `fd7dc7e`.
+  - GitHub Actions run `27911050024` passed the WIDOCO build and deploy jobs on 2026-06-21 UTC after commit `850bfab`.
 - [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
   - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
 - [x] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
-  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27910976624` deployed successfully, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
+  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27911050024` deployed successfully, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission
@@ -125,6 +125,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Ensure CI regenerates WIDOCO documentation on ontology changes.
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
     - [x] Record post-release DOI, Pages, LOV, and OLS status in `.conductor/status.md`.
+    - [x] Modernize GitHub Actions workflow pins to Node 24-compatible official action majors after the Pages run surfaced Node 20 deprecation warnings.
+    - [x] Update GitHub-owned workflow actions to Node 24-compatible major releases after GitHub Actions deprecation warnings appeared.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -137,5 +139,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Local release preflight validates release assets, metadata, release notes, registry packets, and expected external blockers for future release-asset runs.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [x] Continuous documentation generation remains green after ontology changes.
-  - `Build WIDOCO Pages` run `27910976624` passed after the release-readiness CI fix and deployed the generated documentation.
+  - `Build WIDOCO Pages` run `27911050024` passed after the release-readiness CI evidence update and deployed the generated documentation.
+- [x] GitHub-owned workflow action pins avoid the Node.js 20 deprecation warning path.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.

@@ -25,10 +25,11 @@
 
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
-- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27910976624` built and deployed successfully for commit `fd7dc7e`, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
+- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27911050024` built and deployed successfully for commit `850bfab`, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published, release-assets run `27910615774` attached all expected artifacts, and the primary RDF asset is publicly retrievable.
 - LOV submission and OLS indexing remain external registry steps after DOI metadata is live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
+- GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.
 
 ## Next Recommended Task
@@ -42,7 +43,8 @@
 - Open: strict PDF generation on a LaTeX-equipped release machine remains pending.
 
 ## Publishing Live Verification - 2026-06-22
-- Recorded `Validate UOGTO` GitHub Actions run `27910976656` passed for commit `fd7dc7e`.
-- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910976624` built and deployed successfully for commit `fd7dc7e`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
+- Recorded `Validate UOGTO` GitHub Actions run `27911050014` passed for commit `850bfab`.
+- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27911050024` built and deployed successfully for commit `850bfab`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
+- GitHub Actions workflow pins are being modernized to Node 24-compatible official action majors after the `27911050024` Pages run reported Node 20 deprecation warnings.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.
