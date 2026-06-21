@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+
+uogtox:AlgorithmicSolver a owl:Class ;
+    rdfs:label "Algorithmic Solver"@en ;
+    rdfs:subClassOf uogto:Solver ;
+    skos:definition "An algorithmic solver resolving game theoretic equilibrium."@en .
+

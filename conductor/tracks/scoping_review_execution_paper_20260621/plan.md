@@ -19,8 +19,8 @@ This plan outlines deduplication, classification, and drafting of the UOGTO scop
     - [x] Run RDF mapping check `scripts/review/verify_ontology_coverage.py` and output validation gaps
 
 ## Phase 3: Patches and Paper Writing
-- [ ] Task: Scaffold RDF Patch Generator
-    - [ ] Create patch builder `scripts/review/generate_rdf_patch.py` and update UOGTO classes
-- [ ] Task: Write and Compile arXiv Paper
-    - [ ] Draft LaTeX article source at `docs/paper/paper.tex` mapping review protocol, results, and ontology specification
-    - [ ] Verify PDF compilation succeeds locally
+- [x] Task: Scaffold RDF Patch Generator
+    - [x] Create patch builder `scripts/review/generate_rdf_patch.py` and update UOGTO classes
+- [x] Task: Write and Compile arXiv Paper
+    - [x] Draft LaTeX article source at `docs/paper/paper.tex` mapping review protocol, results, and ontology specification
+    - [x] Verify PDF compilation succeeds locally
