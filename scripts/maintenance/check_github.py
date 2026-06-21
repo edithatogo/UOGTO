@@ -36,9 +36,14 @@ def get_via_gh():
 
 def get_via_api():
     url = f"https://api.github.com/repos/{REPO}/issues?state=open&per_page=30"
+    headers = {"User-Agent": "UOGTO-Maintenance-Agent"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"token {token}"
+        
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "UOGTO-Maintenance-Agent"}
+        headers=headers
     )
     try:
         with urllib.request.urlopen(req) as response:

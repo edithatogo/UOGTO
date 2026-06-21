@@ -17,6 +17,14 @@ def run_cmd(cmd):
         return False
 
 def main():
+    # Integrate protective disk space check
+    from scripts.maintenance.disk_guard import check_disk_space, clean_caches
+    if not check_disk_space():
+        clean_caches()
+        if not check_disk_space():
+            print("Insufficient disk space to proceed.", file=sys.stderr)
+            sys.exit(1)
+
     print("Updating project dependencies to bleeding edge...")
     # Update command
     if not run_cmd([PIXI_PATH, "update"]):

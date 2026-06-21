@@ -3,14 +3,14 @@
 This plan outlines the implementation of advanced enhancements to repository validation, checks, and release tagging.
 
 ## Phase 1: Protective Checks & Authentication Mappings
-- [ ] Task: Implement disk space guardian
-    - [ ] Add disk checking utilities in `scripts/maintenance/disk_guard.py`
-    - [ ] Integrate disk checks into dependency updater and remote checks
-- [ ] Task: Integrate GITHUB_TOKEN auth
-    - [ ] Modify `scripts/maintenance/check_github.py` to authenticate direct API requests via environment token
-- [ ] Task: Create semantic completeness auditor
-    - [ ] Implement `scripts/maintenance/audit_semantics.py` checking labels and definitions on all RDF terms
-    - [ ] Hook it into the validation pre-commit triggers
+- [x] Task: Implement disk space guardian
+    - [x] Add disk checking utilities in `scripts/maintenance/disk_guard.py`
+    - [x] Integrate disk checks into dependency updater and remote checks
+- [x] Task: Integrate GITHUB_TOKEN auth
+    - [x] Modify `scripts/maintenance/check_github.py` to authenticate direct API requests via environment token
+- [x] Task: Create semantic completeness auditor
+    - [x] Implement `scripts/maintenance/audit_semantics.py` checking labels and definitions on all RDF terms
+    - [x] Hook it into the validation pre-commit triggers
 
 ## Phase 2: Git Hooks & Release Tagging
 - [ ] Task: Configure git pre-commit hook
