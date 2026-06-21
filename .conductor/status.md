@@ -76,3 +76,4 @@
 - `dist/publication-status-live.json` now includes w3id PR and redirect observations. Local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
 - Scheduled maintenance artifact upload is implemented for `dist/publication-status-live.json`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
 - Manual maintenance dispatch `27914704264` failed before artifact upload because `update_dependencies.py` could not import `scripts` under Pixi/Linux; the import path fix is implemented and local verification passed.
+- Manual maintenance dispatch `27914843364` then failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux; cross-platform disk path detection is implemented and local verification passed.

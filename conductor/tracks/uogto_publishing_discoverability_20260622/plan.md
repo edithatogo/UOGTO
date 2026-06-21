@@ -180,3 +180,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make publication-status-live` now includes w3id PR and redirect observations; local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
 - [x] Scheduled maintenance uploads `dist/publication-status-live.json` as workflow artifact `publication-status-live`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
   - First manual maintenance dispatch failed before artifact upload because `update_dependencies.py` could not import `scripts` when invoked as a file under Pixi on Linux; repo-root import setup is added and local verification passed.
+  - Second manual maintenance dispatch failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux; cross-platform disk path detection is added and local verification passed.

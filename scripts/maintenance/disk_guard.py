@@ -1,8 +1,14 @@
 import shutil
 import os
 import sys
+from pathlib import Path
 
-def check_disk_space(path="C:\\", threshold_mb=50):
+def default_disk_path():
+    return Path.cwd().anchor or "."
+
+def check_disk_space(path=None, threshold_mb=50):
+    if path is None:
+        path = default_disk_path()
     total, used, free = shutil.disk_usage(path)
     free_mb = free / (1024 * 1024)
     print(f"Free disk space on {path}: {free_mb:.2f} MB")

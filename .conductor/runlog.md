@@ -7,6 +7,9 @@
 - Manual maintenance dispatch `27914704264` failed before artifact upload in `update_dependencies.py` because the script could not import `scripts.maintenance.disk_guard` when run under Pixi on Linux.
 - Added repo-root import setup to `update_dependencies.py`.
 - Verified focused workflow/update-dependencies/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.
+- Maintenance rerun `27914843364` failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux.
+- Added cross-platform default disk path detection to `disk_guard.py`.
+- Verified focused disk/update/workflow/publication tests, `make release-preflight`, `make validate`, and `make test`.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.
