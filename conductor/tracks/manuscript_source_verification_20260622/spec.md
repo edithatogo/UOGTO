@@ -19,7 +19,7 @@ This track covers SourceRight-backed source verification for the UOGTO manuscrip
 - [x] `docs/paper/references.csl.json` exists and passes `sourceright validate-csl`.
 - [x] SourceRight report output is generated and committed in a compact reviewable form.
 - [x] Any uncertain or conflicting records are captured in a review queue or explicit TODO section.
-- [~] `docs/paper/paper.tex` contains citation commands that reconcile against the canonical references.
-  - The manuscript contains citation commands and all cited keys exist in the canonical CSL. SourceRight 0.1.20 citation reconciliation currently detects zero citation occurrences from the text export, so tool-level reconciliation remains open.
+- [x] `docs/paper/paper.tex` contains citation commands that reconcile against the canonical references.
+  - The manuscript contains citation commands, all cited keys exist in the canonical CSL, and SourceRight numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues.
 - [~] Manuscript build/check commands still pass after citation integration.
-  - Repository validation and focused manuscript-source tests passed. A dedicated LaTeX/PDF manuscript build command is not yet available in this repository.
+  - Repository validation, focused manuscript-source tests, and `make manuscript-sourcecheck` passed. A dedicated LaTeX/PDF manuscript build command is not yet available in this repository.

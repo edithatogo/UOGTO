@@ -34,6 +34,7 @@ conductor:
 
 
 manuscript-sourcecheck: manuscript-sources
+	python scripts/maintenance/check_manuscript_citations.py
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright

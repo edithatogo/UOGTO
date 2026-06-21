@@ -1,7 +1,9 @@
 {
   "schema_version": "uogto.manuscript_sources.v1",
   "reference_count": 36,
+  "manuscript_reference_count": 11,
   "review_queue_count": 25,
+  "sourceright_review_queue_count": 3,
   "references": [
     {
       "id": "arxiv-1510-00665v1",

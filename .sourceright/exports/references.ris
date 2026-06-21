@@ -1,0 +1,56 @@
+TY  - GEN
+ID  - arxiv-2006-06580v3
+TI  - Online Learning in Iterated Prisoner's Dilemma to Mimic Human Behavior
+UR  - http://arxiv.org/abs/2006.06580v3
+ER  - 
+TY  - ELEC
+ID  - arxiv-api
+TI  - arXiv API User Manual
+UR  - https://info.arxiv.org/help/api/index.html
+ER  - 
+TY  - ELEC
+ID  - crossref
+TI  - Crossref
+UR  - https://www.crossref.org/
+ER  - 
+TY  - GEN
+ID  - open-spiel-2019
+TI  - OpenSpiel: A Framework for Reinforcement Learning in Games
+UR  - https://arxiv.org/abs/1908.09453
+ER  - 
+TY  - ELEC
+ID  - openalex
+TI  - OpenAlex: The Open Catalog to the Global Research System
+UR  - https://openalex.org/
+ER  - 
+TY  - BOOK
+ID  - rapoport-chammah-1965
+TI  - Prisoner's Dilemma
+DO  - 10.3998/mpub.20269
+UR  - https://doi.org/10.3998/mpub.20269
+ER  - 
+TY  - ELEC
+ID  - w3c-json-ld11
+TI  - JSON-LD 1.1
+UR  - https://www.w3.org/TR/json-ld11/
+ER  - 
+TY  - ELEC
+ID  - w3c-owl2-overview
+TI  - OWL 2 Web Ontology Language Document Overview (Second Edition)
+UR  - https://www.w3.org/TR/owl2-overview/
+ER  - 
+TY  - ELEC
+ID  - w3c-rdf11-concepts
+TI  - RDF 1.1 Concepts and Abstract Syntax
+UR  - https://www.w3.org/TR/rdf11-concepts/
+ER  - 
+TY  - ELEC
+ID  - w3c-shacl
+TI  - Shapes Constraint Language (SHACL)
+UR  - https://www.w3.org/TR/shacl/
+ER  - 
+TY  - ELEC
+ID  - w3c-sparql11-query
+TI  - SPARQL 1.1 Query Language
+UR  - https://www.w3.org/TR/sparql11-query/
+ER  - 

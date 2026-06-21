@@ -14,6 +14,19 @@ REVIEW_DATA_FILES = [
     ROOT / "data" / "processed" / "screened_results.json",
     ROOT / "data" / "processed" / "snowballed_results.json",
 ]
+MANUSCRIPT_REFERENCE_IDS = [
+    "arxiv-2006-06580v3",
+    "arxiv-api",
+    "crossref",
+    "open-spiel-2019",
+    "openalex",
+    "rapoport-chammah-1965",
+    "w3c-json-ld11",
+    "w3c-owl2-overview",
+    "w3c-rdf11-concepts",
+    "w3c-shacl",
+    "w3c-sparql11-query",
+]
 
 MARKDOWN_REFERENCE_RE = re.compile(r'^\[(?P<num>\d+)\]:\s+(?P<url>\S+)\s+"(?P<title>[^"]+)"')
 
@@ -283,7 +296,16 @@ def write_source_artifacts(
     sourceright_dir: Path = SOURCERIGHT_DIR,
 ) -> dict:
     references = build_csl_references()
-    queue = review_queue_entries(references)
+    manuscript_ids = set(MANUSCRIPT_REFERENCE_IDS)
+    manuscript_references = [record for record in references if record["id"] in manuscript_ids]
+    missing_manuscript_ids = sorted(manuscript_ids - {record["id"] for record in manuscript_references})
+    if missing_manuscript_ids:
+        raise AssertionError(
+            "Missing manuscript references: " + ", ".join(missing_manuscript_ids)
+        )
+
+    queue = review_queue_entries(manuscript_references)
+    inventory_queue = review_queue_entries(references)
     queued_ids = {item["id"] for item in queue}
     verification = {
         "schema_version": "sourceright.verification.v1",
@@ -304,22 +326,26 @@ def write_source_artifacts(
                 ],
                 "review_status": "queued" if record["id"] in queued_ids else "not_required",
             }
-            for record in references
+            for record in manuscript_references
         },
     }
     inventory = {
         "schema_version": "uogto.manuscript_sources.v1",
         "reference_count": len(references),
-        "review_queue_count": len(queue),
+        "manuscript_reference_count": len(manuscript_references),
+        "review_queue_count": len(inventory_queue),
+        "sourceright_review_queue_count": len(queue),
         "references": references,
     }
 
-    write_json(paper_dir / "references.csl.json", references)
+    write_json(paper_dir / "references.csl.json", manuscript_references)
     write_json(paper_dir / "source-inventory.json", inventory)
-    write_json(sourceright_dir / "references.csl.json", references)
+    write_json(sourceright_dir / "references.csl.json", manuscript_references)
     write_json(sourceright_dir / "references.verification.json", verification)
 
-    review_queue_text = "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in queue)
+    review_queue_text = "".join(
+        json.dumps(item, ensure_ascii=False) + "\n" for item in inventory_queue
+    )
     (paper_dir / "source-review-queue.jsonl").write_text(review_queue_text, encoding="utf-8")
     sourceright_queue_text = "".join(
         json.dumps(
@@ -346,11 +372,12 @@ def write_source_artifacts(
     )
     (sourceright_dir / "review-queue.jsonl").write_text(sourceright_queue_text, encoding="utf-8")
 
+    numeric_citations = " ".join(
+        f"[{index}]" for index, _record in enumerate(manuscript_references, start=1)
+    )
     manuscript_text = (
-        "Universal Open Game Theory Ontology uses RDF, OWL 2, SHACL, and JSON-LD "
-        "[@w3c-rdf11-concepts; @w3c-owl2-overview; @w3c-shacl; @w3c-json-ld11]. "
-        "The scoping review includes Prisoner's Dilemma literature and learning-in-games examples "
-        "[@rapoport-chammah-1965; @open-spiel-2019; @w3c-sparql11-query; @openalex; @arxiv-api; @crossref; @arxiv-2006-06580v3].\n"
+        "SourceRight numeric citation export for the current UOGTO manuscript bibliography: "
+        f"{numeric_citations}\n"
     )
     (paper_dir / "manuscript-citations.txt").write_text(manuscript_text, encoding="utf-8")
     return inventory
@@ -363,8 +390,9 @@ def main() -> None:
     args = parser.parse_args()
     inventory = write_source_artifacts(Path(args.paper_dir), Path(args.sourceright_dir))
     print(
-        f"Wrote {inventory['reference_count']} manuscript source references "
-        f"with {inventory['review_queue_count']} review-queue entries."
+        f"Wrote {inventory['reference_count']} source inventory references, "
+        f"{inventory['manuscript_reference_count']} manuscript references, "
+        f"and {inventory['sourceright_review_queue_count']} SourceRight review-queue entries."
     )
 
 

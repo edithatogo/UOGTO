@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references schema-version="sourceright.export.v1">
+  <reference id="arxiv-2006-06580v3" type="article">
+    <title>Online Learning in Iterated Prisoner&apos;s Dilemma to Mimic Human Behavior</title>
+    <field name="URL">http://arxiv.org/abs/2006.06580v3</field>
+    <field name="abstract">As an important psychological and social experiment, the Iterated Prisoner&apos;s Dilemma (IPD) treats the choice to cooperate or defect as an atomic action. We propose to study the behaviors of online learning algorithms in the Iterated Prisoner&apos;s Dilemma (IPD) game, where we investigate the full spectrum of reinforcement learning agents: multi-armed bandits, contextual bandits and reinforcement learning. We evaluate them based on a tournament of iterated prisoner&apos;s dilemma where multiple agents can compete in a sequential fashion. This allows us to analyze the dynamics of policies learned by multiple self-interested independent reward-driven agents, and also allows us study the capacity of these algorithms to fit the human behaviors. Results suggest that considering the current situation to make decision is the worst in this kind of social dilemma game. Multiples discoveries on online learning behaviors and clinical validations are stated, as an effort to connect artificial intelligence algorithms with human behaviors and their abnormal states in neuropsychiatric conditions.</field>
+    <field name="source_note">Imported from arxiv.</field>
+  </reference>
+  <reference id="arxiv-api" type="webpage">
+    <title>arXiv API User Manual</title>
+    <field name="URL">https://info.arxiv.org/help/api/index.html</field>
+    <field name="source_note">Literature search metadata source cited by the manuscript.</field>
+  </reference>
+  <reference id="crossref" type="webpage">
+    <title>Crossref</title>
+    <field name="URL">https://www.crossref.org/</field>
+    <field name="source_note">DOI and publication metadata source cited by the manuscript.</field>
+  </reference>
+  <reference id="open-spiel-2019" type="article">
+    <title>OpenSpiel: A Framework for Reinforcement Learning in Games</title>
+    <field name="URL">https://arxiv.org/abs/1908.09453</field>
+    <field name="source_note">Reference implementation and game-learning toolkit cited by the manuscript.</field>
+  </reference>
+  <reference id="openalex" type="webpage">
+    <title>OpenAlex: The Open Catalog to the Global Research System</title>
+    <field name="URL">https://openalex.org/</field>
+    <field name="source_note">Literature search metadata source cited by the manuscript.</field>
+  </reference>
+  <reference id="rapoport-chammah-1965" type="book">
+    <title>Prisoner&apos;s Dilemma</title>
+    <doi>10.3998/mpub.20269</doi>
+    <field name="URL">https://doi.org/10.3998/mpub.20269</field>
+    <field name="source_note">Imported from openalex.</field>
+  </reference>
+  <reference id="w3c-json-ld11" type="webpage">
+    <title>JSON-LD 1.1</title>
+    <field name="URL">https://www.w3.org/TR/json-ld11/</field>
+    <field name="source_note">Linked data serialization standard relevant to UOGTO contexts.</field>
+  </reference>
+  <reference id="w3c-owl2-overview" type="webpage">
+    <title>OWL 2 Web Ontology Language Document Overview (Second Edition)</title>
+    <field name="URL">https://www.w3.org/TR/owl2-overview/</field>
+    <field name="source_note">Core ontology language standard cited by the manuscript.</field>
+  </reference>
+  <reference id="w3c-rdf11-concepts" type="webpage">
+    <title>RDF 1.1 Concepts and Abstract Syntax</title>
+    <field name="URL">https://www.w3.org/TR/rdf11-concepts/</field>
+    <field name="source_note">RDF graph model standard cited by the manuscript.</field>
+  </reference>
+  <reference id="w3c-shacl" type="webpage">
+    <title>Shapes Constraint Language (SHACL)</title>
+    <field name="URL">https://www.w3.org/TR/shacl/</field>
+    <field name="source_note">Validation language standard cited by the manuscript.</field>
+  </reference>
+  <reference id="w3c-sparql11-query" type="webpage">
+    <title>SPARQL 1.1 Query Language</title>
+    <field name="URL">https://www.w3.org/TR/sparql11-query/</field>
+    <field name="source_note">Competency-query language standard cited by the manuscript.</field>
+  </reference>
+</references>

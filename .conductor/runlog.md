@@ -89,5 +89,8 @@
 
 ## 2026-06-22 - Manuscript Source Verification
 - Added docs/paper/references.csl.json, source inventory, review queue, SourceRight validation report, and citation reconciliation output.
-- SourceRight CSL validation passes; report has 36 references, 25 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
-- SourceRight citation reconciliation command runs but currently detects 0 in-text occurrences for the exported manuscript snippet; retained as an explicit follow-up limitation.
+- Split the broad 36-record source inventory from the 11-record manuscript bibliography used by SourceRight.
+- Added `scripts/maintenance/check_manuscript_citations.py` and tests to verify that LaTeX `\cite{...}` keys, manual `\bibitem{...}` entries, and `docs/paper/references.csl.json` stay aligned.
+- SourceRight CSL validation passes; report has 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
+- SourceRight citation reconciliation now reports 11 numeric citation occurrences, 11 matched citations, and 0 issues for `docs/paper/manuscript-citations.txt`.
+- `make manuscript-sourcecheck` passes and runs source generation, local LaTeX citation-key reconciliation, SourceRight CSL validation, SourceRight reporting, and SourceRight citation reconciliation.

@@ -1,43 +1,8 @@
 # Sourceright Citation Reconciliation Report
 
-- Citation occurrences: 0
-- Matched citations: 0
-- Issues: 36
+- Citation occurrences: 11
+- Matched citations: 11
+- Issues: 0
 
-- `uncited_reference` `arxiv-1510-00665v1`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `arxiv-2006-06580v3`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `arxiv-api`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `crossref`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-672-the-application-of-ontology-based`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-673-ontology-based-open-multi-agent`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-674-game-theoretic-control-of-multi`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-675-synthesising-evolutionarily-stable-normative-systems`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-676-multi-agent-system`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part1-677-game-theoretic-lens-on-llm`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-978-game-description-language`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-979-algorithmic-game-theory`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-980-hierarchy-of-beliefs`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-981-on-alternating-time-temporal-logic`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-982-stackelberg-vs-nash-in-security`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-983-differential-game`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-984-quantal-response-equilibrium`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-985-computational-social-choice`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-987-prov-o-the-prov-ontology`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-988-specification-model-context-protocol`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-989-web-of-things-wot-thing`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part3-990-petri-net-markup-language`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part4-814-prompting-codex-openai-developers`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `deep_research_part4-815-subagents-codex-openai-developers`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `doi-10-1017-cbo9781107360174-009`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `doi-10-1017-cbo9781107360174-014`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `doi-10-1063-5-0324288`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `doi-10-1073-pnas-2513282123`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `open-spiel-2019`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `openalex`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `rapoport-chammah-1965`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `w3c-json-ld11`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `w3c-owl2-overview`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `w3c-rdf11-concepts`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `w3c-shacl`: Reference-list entry has no detected in-text citation.
-- `uncited_reference` `w3c-sparql11-query`: Reference-list entry has no detected in-text citation.
+No in-text citation reconciliation issues detected.
 
