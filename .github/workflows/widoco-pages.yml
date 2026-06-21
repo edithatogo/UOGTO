@@ -97,6 +97,7 @@ jobs:
 
   deploy:
     needs: build
+    if: ${{ vars.ENABLE_PAGES_DEPLOY == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

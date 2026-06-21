@@ -24,7 +24,7 @@
 
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
-- WIDOCO Pages workflow is configured but still needs a successful GitHub Actions run after push.
+- WIDOCO Pages workflow is configured; deployment is now gated by `ENABLE_PAGES_DEPLOY=true` because live GitHub Actions runs reached artifact upload but failed deployment while Pages was not enabled.
 - Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for final expert metadata review.

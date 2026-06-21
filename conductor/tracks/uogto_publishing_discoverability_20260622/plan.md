@@ -44,6 +44,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Configure Pages deployment in `.github/workflows/widoco-pages.yml`.
     - [x] Publish generated WIDOCO HTML under the GitHub Pages site root or `/docs/`.
     - [x] Add links from `README.md`, release notes, and registry submission files to the Pages documentation.
+    - [x] Gate the deploy job behind `ENABLE_PAGES_DEPLOY=true` so artifact generation can remain green until Pages is enabled in repository settings.
 
 ### Required Configuration Files
 - `.github/workflows/widoco-pages.yml`
@@ -51,9 +52,9 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - `docs/widoco/README.md`
 
 ### Acceptance Criteria
-- [ ] WIDOCO runs successfully in CI on the canonical ontology inputs.
-- [ ] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
-- [ ] GitHub Pages deploys the generated documentation for the latest `master` build and release tags.
+- [~] WIDOCO runs successfully in CI on the canonical ontology inputs.
+- [~] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
+- [ ] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission

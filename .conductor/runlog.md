@@ -54,6 +54,10 @@
 - Added `.github/workflows/release-assets.yml` so published/manual releases attach generated RDF, SHACL, JSON-LD context, checksum, and manifest assets after validation gates.
 - Updated LOV/OLS registry docs to use stable GitHub release download URLs instead of ignored local `dist/` paths.
 
+## [2026-06-22] - WIDOCO Pages Deployment Gate
+- Checked live GitHub Actions after push: validation passed, WIDOCO artifact generation reached Pages deployment, and deploy failed with GitHub API 404 because Pages is not enabled for the repository.
+- Gated the deploy job behind repository variable `ENABLE_PAGES_DEPLOY=true` so push workflows can keep validating and uploading WIDOCO artifacts until Pages is enabled in repository settings.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.

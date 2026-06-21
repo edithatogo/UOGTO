@@ -26,4 +26,6 @@ Using the merged artifact keeps WIDOCO output aligned with the release artifact 
 The generated HTML should be written to `site/`.
 
 ## CI/CD
-`.github/workflows/widoco-pages.yml` runs validation, tests, semantic audit, publishing metadata checks, builds `dist/uogto.ttl`, downloads the pinned WIDOCO JAR from GitHub releases, generates `site/`, and deploys the result to GitHub Pages.
+`.github/workflows/widoco-pages.yml` runs validation, tests, semantic audit, publishing metadata checks, builds `dist/uogto.ttl`, downloads the pinned WIDOCO JAR from GitHub releases, generates `site/`, and uploads a Pages artifact.
+
+The deployment job is gated by the repository variable `ENABLE_PAGES_DEPLOY=true`. Enable GitHub Pages in the repository settings, set that variable, then rerun the workflow to publish the generated documentation.
