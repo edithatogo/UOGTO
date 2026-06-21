@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - w3id Handoff Asset Refresh After PR Submission
+- Dispatched Publish Release Assets workflow run 27913296574 for v1.0.0 after submitting the upstream w3id pull request.
+- Verified the workflow passed release gates, rebuilt registry and w3id handoff packets, passed release preflight, and uploaded release assets.
+- Downloaded the refreshed w3id-redirect-handoff.json release asset through gh release download and verified it contains status pending_external_w3id_merge and pull request https://github.com/perma-id/w3id.org/pull/6238.
+
 ## [2026-06-22] - w3id Upstream Pull Request Submission
 - Forked perma-id/w3id.org to edithatogo/w3id.org, added uogto/.htaccess and uogto/README.md, and pushed branch uogto-namespace-redirects.
 - Opened upstream pull request https://github.com/perma-id/w3id.org/pull/6238 for the UOGTO namespace redirects.

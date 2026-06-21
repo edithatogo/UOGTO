@@ -60,4 +60,5 @@
 - Strict registry live check still fails for pending w3id namespace redirects; scheduled/live maintenance can use `--allow-unpublished` until those redirects are configured.
 - w3id redirect pull request https://github.com/perma-id/w3id.org/pull/6238 is submitted; upstream merge and live redirect completion remain external.
 - Release-assets workflow dispatch run `27913262144` passed for `v1.0.0` and attached the submitted-PR `w3id-redirect-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
+- Release-assets workflow dispatch run 27913296574 passed for v1.0.0 and refreshed w3id-redirect-handoff.json; the downloaded asset contains status pending_external_w3id_merge and PR https://github.com/perma-id/w3id.org/pull/6238.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.

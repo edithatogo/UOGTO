@@ -163,3 +163,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `Publish Release Assets` workflow dispatch run `27913057014` attached `w3id-redirect-handoff.json` to `v1.0.0`, and the asset URL returned an HTTP download redirect.
 - [x] External w3id pull request submitted at https://github.com/perma-id/w3id.org/pull/6238; upstream merge and live redirect verification remain open.
 - [x] `Publish Release Assets` workflow dispatch run `27913262144` refreshed `w3id-redirect-handoff.json` with submitted-PR state; the asset URL returned an HTTP download redirect.
+- [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` on `v1.0.0` after PR submission; downloaded asset contains `pending_external_w3id_merge` and the PR URL.
