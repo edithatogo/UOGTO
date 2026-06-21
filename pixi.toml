@@ -1,0 +1,19 @@
+[workspace]
+name = "uogto"
+version = "0.1.0"
+description = "Universal Open Game Theory Ontology"
+authors = ["UOGTO Contributors"]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[dependencies]
+python = ">=3.10"
+rdflib = ">=7.0.0"
+pyshacl = ">=0.25.0"
+pytest = ">=8.0.0"
+pyyaml = ">=6.0.1"
+ruff = ">=0.3.0"
+
+[tasks]
+test = "pytest"
+validate = "make validate"
