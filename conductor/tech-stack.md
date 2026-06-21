@@ -8,3 +8,4 @@
 - **Linter/Formatter**: ruff
 - **Automation & CI**: GitHub Actions and Custom Agent Skills
 - **Scoping Review Libraries**: Python standard library (urllib, xml.etree)
+- **Playground & Visualization**: Streamlit, NetworkX, Matplotlib

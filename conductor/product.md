@@ -9,4 +9,5 @@ The repository integrates automated dependency checking (via Pixi), test suites,
 ## Systematic Review Protocols
 Methodological scoping review protocol definitions (PRISMA-P and PRISMA-S compliant) are integrated to support systematic validation of UOGTO coverage against multi-database scholarly indices.
 
-
+## Executable Simulation & Visualizer
+Includes an RDF-based execution runtime engine (`uogto-runner`), an interactive Streamlit-based playground/SHACL graph visualizer, and LLM-as-a-Player simulation hooks.
