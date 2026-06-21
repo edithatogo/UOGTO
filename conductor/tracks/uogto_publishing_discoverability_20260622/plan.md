@@ -10,6 +10,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Document the release archive flow in `docs/releases/v1.0.md`.
     - [x] Publish GitHub release `v1.0.0`.
     - [x] Verify release-assets workflow attached public artifacts.
+    - [x] Add a DOI status gate that keeps local DOI-dependent docs pending until Zenodo exposes a matching public DOI.
 - [x] Task: Add citation metadata
     - [x] Create `CITATION.cff` with title, authors, repository URL, ontology URL, license, version, release date, and preferred citation.
     - [x] Create `.zenodo.json` with creators, title, description, keywords, related identifiers, license, and communities if applicable.
@@ -30,6 +31,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] A GitHub `v1.0.0` release creates a Zenodo archive and DOI.
   - GitHub release `v1.0.0` exists and assets are attached; Zenodo DOI has not appeared in public Zenodo search yet.
 - [x] Release asset packaging is automated for generated ontology, shape, context, checksum, and manifest files.
+- [x] DOI status monitoring is available through `make doi-status` and `pixi run doi-status-live`.
 - [x] `CITATION.cff` metadata matches GitHub release notes and Zenodo metadata.
 - [x] Release notes include validation evidence and links to canonical ontology assets.
 

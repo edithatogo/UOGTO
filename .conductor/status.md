@@ -28,6 +28,7 @@
 - WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27911050024` built and deployed successfully for commit `850bfab`, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published, release-assets run `27910615774` attached all expected artifacts, and the primary RDF asset is publicly retrievable.
 - LOV submission and OLS indexing remain external registry steps after DOI metadata is live.
+- DOI status monitoring is implemented with `make doi-status` for local placeholder consistency and `pixi run doi-status-live` for public Zenodo lookup.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.

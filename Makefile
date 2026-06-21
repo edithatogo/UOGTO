@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links doi-status manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -22,6 +22,9 @@ publishing-metadata:
 
 registry-links:
 	python scripts/maintenance/check_registry_links.py
+
+doi-status:
+	python scripts/maintenance/check_doi_status.py
 
 manuscript-sources:
 	python scripts/maintenance/build_manuscript_sources.py
