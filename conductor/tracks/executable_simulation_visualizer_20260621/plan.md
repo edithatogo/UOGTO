@@ -3,11 +3,11 @@
 This plan outlines the deployment of runtimes, interactive playgrounds, and LLM player hooks.
 
 ## Phase 1: Executable Simulation Engine
-- [ ] Task: Develop RDF Game Runner
-    - [ ] Create `uogto/runner/engine.py` to parse game structures, payoffs, and strategies from RDF graphs
-    - [ ] Write execution loops outputting transition traces as event graphs
-- [ ] Task: Build execution unit tests
-    - [ ] Verify runner matches classical game outcomes (e.g., Prisoner's Dilemma payoffs)
+- [x] Task: Develop RDF Game Runner
+    - [x] Create `uogto/runner/engine.py` to parse game structures, payoffs, and strategies from RDF graphs
+    - [x] Write execution loops outputting transition traces as event graphs
+- [x] Task: Build execution unit tests
+    - [x] Verify runner matches classical game outcomes (e.g., Prisoner's Dilemma payoffs)
 
 ## Phase 2: Interactive Web Visualizer
 - [ ] Task: Create Streamlit Dashboard
