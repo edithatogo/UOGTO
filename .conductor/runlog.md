@@ -5,6 +5,12 @@
 - Opened upstream pull request https://github.com/perma-id/w3id.org/pull/6238 for the UOGTO namespace redirects.
 - Updated the UOGTO w3id handoff packet state from pending PR submission to pending upstream merge/live redirect verification.
 
+## [2026-06-22] - w3id Submitted-PR Release Attachment
+- Dispatched `Publish Release Assets` workflow run `27913262144` for existing release tag `v1.0.0`.
+- Verified the workflow passed release gates, built both handoff packets, passed release preflight, and uploaded assets.
+- Verified `w3id-redirect-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:92062da793d8d547a8a4e5682a33d261d3e0a63fa6d1bc9576a9051ac3fc3fea`.
+- Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/w3id-redirect-handoff.json` returns an HTTP download redirect.
+
 ## [2026-06-22] - w3id Handoff Release Artifact
 - Configured the release-assets workflow to upload `dist/w3id-redirect-handoff.json` alongside the registry handoff packet.
 - Tightened release readiness checks so the w3id packet must exist and the workflow must name its upload path.
