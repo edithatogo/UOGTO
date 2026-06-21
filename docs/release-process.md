@@ -2,3 +2,9 @@
 1. Verify with `make all`.
 2. Increment version in `pyproject.toml` and `ontologies/core/uogto-core.ttl`.
 3. Build assets using `make build`.
+4. Verify publishing metadata with `make publishing-metadata`.
+5. Build or verify WIDOCO documentation before release.
+6. Enable Zenodo GitHub integration for `edithatogo/UOGTO`.
+7. Create a GitHub release tag such as `v1.0.0` only after validation, tests, semantic audit, and documentation checks pass.
+8. Record the minted Zenodo DOI in `docs/releases/v1.0.md`, `docs/registry/lov-submission.md`, and `docs/registry/ols-indexing.md`.
+9. Submit registry requests after DOI and GitHub Pages documentation are live.

@@ -26,6 +26,13 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
    make all
    ```
 
+## Documentation and Citation
+- Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.
+- Release and DOI workflow notes are maintained in [docs/releases/v1.0.md](docs/releases/v1.0.md).
+- Citation metadata is provided in [CITATION.cff](CITATION.cff).
+- Zenodo archive metadata is provided in [.zenodo.json](.zenodo.json).
+- Registry preparation materials for LOV and OLS are under [docs/registry/](docs/registry/).
+
 ## Licensing
 This project is dual-licensed:
 - **Ontology and Documentation**: Creative Commons Attribution 4.0 International (CC-BY-4.0). See [LICENSE](LICENSE).

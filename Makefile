@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage conductor all
+.PHONY: install build validate test coverage publishing-metadata conductor all
 
 all: build validate test coverage
 
@@ -16,6 +16,9 @@ test:
 
 coverage:
 	python scripts/report_coverage.py
+
+publishing-metadata:
+	python scripts/maintenance/check_publishing_metadata.py
 
 conductor:
 	python scripts/conductor.py

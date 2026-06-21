@@ -3,6 +3,16 @@ message: "If you use this ontology, please cite it as below."
 authors:
   - name: "UOGTO Contributors"
 title: "Universal Open Game Theory Ontology (UOGTO)"
-version: 0.1.0
-date-released: 2026-06-20
-url: "https://github.com/uogto/uogto"
+version: 1.0.0
+date-released: 2026-06-22
+url: "https://github.com/edithatogo/UOGTO"
+repository-code: "https://github.com/edithatogo/UOGTO"
+license: "CC-BY-4.0"
+keywords:
+  - game theory
+  - ontology
+  - semantic web
+  - OWL
+  - SHACL
+  - JSON-LD
+abstract: "A modular OWL/SHACL ontology for game-theoretic semantics, including classical games, cooperative games, mechanism design, multi-agent reinforcement learning, simulation execution, norms, contracts, and executable knowledge graph bindings."

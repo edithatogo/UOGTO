@@ -1,0 +1,38 @@
+{
+  "title": "Universal Open Game Theory Ontology (UOGTO)",
+  "upload_type": "dataset",
+  "description": "A modular OWL/SHACL ontology for game-theoretic semantics, including classical games, cooperative games, mechanism design, multi-agent reinforcement learning, simulation execution, norms, contracts, and executable knowledge graph bindings.",
+  "creators": [
+    {
+      "name": "UOGTO Contributors"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "game theory",
+    "ontology",
+    "semantic web",
+    "OWL",
+    "SHACL",
+    "JSON-LD",
+    "mechanism design",
+    "multi-agent systems"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/edithatogo/UOGTO",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://w3id.org/uogto/core#",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset",
+      "scheme": "url"
+    }
+  ],
+  "version": "1.0.0",
+  "language": "eng",
+  "access_right": "open"
+}

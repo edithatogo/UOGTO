@@ -1,0 +1,94 @@
+name: Build WIDOCO Pages
+
+on:
+  push:
+    branches: [ master ]
+    tags: [ "v*" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Build merged ontology
+        run: make build
+
+      - name: Download latest WIDOCO release
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+
+          release_url = "https://api.github.com/repos/dgarijo/Widoco/releases/latest"
+          with urllib.request.urlopen(release_url) as response:
+              release = json.load(response)
+
+          jar_url = None
+          for asset in release.get("assets", []):
+              name = asset.get("name", "")
+              if name.endswith(".jar") and "dependencies" in name.lower():
+                  jar_url = asset["browser_download_url"]
+                  break
+
+          if not jar_url:
+              raise SystemExit("Could not find a WIDOCO dependencies JAR in the latest release assets")
+
+          print(jar_url)
+          urllib.request.urlretrieve(jar_url, "widoco.jar")
+          PY
+
+      - name: Generate WIDOCO HTML
+        run: |
+          mkdir -p site
+          java -jar widoco.jar \
+            -ontFile dist/uogto.ttl \
+            -outFolder site \
+            -rewriteAll \
+            -getOntologyMetadata \
+            -webVowl \
+            -uniteSections
+          touch site/.nojekyll
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

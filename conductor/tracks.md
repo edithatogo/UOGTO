@@ -70,9 +70,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: Completed
 - **Link**: [./tracks/scoping_review_execution_paper_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/scoping_review_execution_paper_20260621/)
 
-## [ ] Track: uogto_publishing_discoverability_20260622
+## [~] Track: uogto_publishing_discoverability_20260622
 - **Description**: Plan and implement post-validation publishing, DOI archiving, WIDOCO documentation, GitHub Pages, LOV submission, and OLS indexing.
-- **Status**: New
+- **Status**: In Progress
 - **Link**: [./tracks/uogto_publishing_discoverability_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_publishing_discoverability_20260622/)
 
 ## Archived Tracks

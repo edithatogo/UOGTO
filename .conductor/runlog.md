@@ -6,6 +6,13 @@
 - Planned WIDOCO HTML documentation generation and GitHub Pages deployment.
 - Planned LOV metadata checklist/submission and OLS indexing request milestones.
 
+## [2026-06-22] - Publishing and Discoverability Implementation
+- Implemented repository-side publishing metadata files: `CITATION.cff`, `.zenodo.json`, and `docs/releases/v1.0.md`.
+- Added WIDOCO documentation configuration, local build notes, and GitHub Pages workflow.
+- Added LOV and OLS registry preparation documents plus shared metadata checklist.
+- Added `scripts/maintenance/check_publishing_metadata.py`, `make publishing-metadata`, Pixi publishing metadata task, and focused pytest coverage.
+- Left Zenodo DOI minting, GitHub Pages workflow verification, LOV submission, and OLS indexing as explicit external release gates.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
