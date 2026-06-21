@@ -9,9 +9,9 @@ This plan outlines the steps for establishing protocols and search clients.
     - [x] Add search terms and database strings to the protocol file
 
 ## Phase 2: Scaffolding API Clients
-- [ ] Task: Build Multi-Database Search Client
-    - [ ] Implement query scripts in `scripts/review/query_databases.py` for PubMed, Europe PMC, Crossref, arXiv, and OpenAlex
-    - [ ] Verify query client connectivity and save format
+- [x] Task: Build Multi-Database Search Client
+    - [x] Implement query scripts in `scripts/review/query_databases.py` for PubMed, Europe PMC, Crossref, arXiv, and OpenAlex
+    - [x] Verify query client connectivity and save format
 
 ## Phase 3: Validation and Baseline Runs
 - [ ] Task: Perform Dry-Run Queries
