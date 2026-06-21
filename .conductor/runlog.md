@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - w3id Upstream Pull Request Submission
+- Forked perma-id/w3id.org to edithatogo/w3id.org, added uogto/.htaccess and uogto/README.md, and pushed branch uogto-namespace-redirects.
+- Opened upstream pull request https://github.com/perma-id/w3id.org/pull/6238 for the UOGTO namespace redirects.
+- Updated the UOGTO w3id handoff packet state from pending PR submission to pending upstream merge/live redirect verification.
+
 ## [2026-06-22] - w3id Handoff Release Artifact
 - Configured the release-assets workflow to upload `dist/w3id-redirect-handoff.json` alongside the registry handoff packet.
 - Tightened release readiness checks so the w3id packet must exist and the workflow must name its upload path.

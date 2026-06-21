@@ -11,6 +11,7 @@ if str(ROOT) not in sys.path:
 
 DEFAULT_OUTPUT = ROOT / "dist" / "w3id-redirect-handoff.json"
 W3ID_REPOSITORY = "https://github.com/perma-id/w3id.org"
+W3ID_PULL_REQUEST_URL = "https://github.com/perma-id/w3id.org/pull/6238"
 W3ID_PATH = "uogto/.htaccess"
 DOCUMENTATION_URL = "https://edithatogo.github.io/UOGTO/"
 RELEASE_ASSET_URL = "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl"
@@ -49,11 +50,12 @@ def render_htaccess() -> str:
 def build_w3id_handoff() -> dict:
     return {
         "schema": "uogto.w3id-redirect-handoff.v1",
-        "status": "pending_external_w3id_pr",
+        "status": "pending_external_w3id_merge",
         "blockers": [
-            "w3id.org namespace redirects require an external pull request to perma-id/w3id.org."
+            "w3id.org namespace redirects require upstream pull request merge and live redirect verification."
         ],
         "w3id_repository": W3ID_REPOSITORY,
+        "w3id_pull_request_url": W3ID_PULL_REQUEST_URL,
         "w3id_path": W3ID_PATH,
         "documentation_url": DOCUMENTATION_URL,
         "release_asset_url": RELEASE_ASSET_URL,

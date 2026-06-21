@@ -1,7 +1,7 @@
 # w3id Namespace Redirect Submission
 
 ## Status
-Not yet submitted. The `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#` namespace IRIs are documented in the ontology, but the corresponding w3id redirects are not live yet.
+Submitted. The namespace redirects are pending upstream merge and live verification.
 
 ## Requested w3id Repository Change
 - Repository: <https://github.com/perma-id/w3id.org>
@@ -23,13 +23,13 @@ RewriteRule ^extensions/?$ https://edithatogo.github.io/UOGTO/ [R=303,L]
 - [x] Confirm current strict registry live check fails on missing w3id redirects.
 - [x] Prepare the proposed `uogto/.htaccess` redirect rules.
 - [x] Generate machine-readable handoff packet with `make w3id-packet`.
-- [ ] Submit pull request to `perma-id/w3id.org`.
-- [ ] Record w3id pull request URL.
+- [x] Submit pull request to `perma-id/w3id.org`.
+- [x] Record w3id pull request URL.
 - [ ] Verify `https://w3id.org/uogto/core#` returns a live redirect after merge.
 - [ ] Verify `https://w3id.org/uogto/extensions#` returns a live redirect after merge.
 - [ ] Remove pending w3id blocker from registry checklist after live verification.
 
 ## Submission Record
-- Pull request URL: `TBD`
-- Review status: `Not submitted`
+- Pull request URL: https://github.com/perma-id/w3id.org/pull/6238
+- Review status: Submitted; pending upstream review
 - Merge status: `TBD`

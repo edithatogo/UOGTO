@@ -19,10 +19,11 @@ class TestW3idRedirectHandoff(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.temp_dir, ignore_errors=True)
 
-    def test_handoff_records_pending_external_pr(self):
+    def test_handoff_records_pending_external_merge(self):
         packet = build_w3id_redirect_handoff.build_w3id_handoff()
         self.assertEqual(packet["schema"], "uogto.w3id-redirect-handoff.v1")
-        self.assertEqual(packet["status"], "pending_external_w3id_pr")
+        self.assertEqual(packet["status"], "pending_external_w3id_merge")
+        self.assertEqual(packet["w3id_pull_request_url"], "https://github.com/perma-id/w3id.org/pull/6238")
         self.assertEqual(packet["w3id_path"], "uogto/.htaccess")
         self.assertIn("URL fragments", packet["namespace_note"])
 
