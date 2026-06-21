@@ -5,6 +5,12 @@
 - Added a workflow wiring test so the strict manuscript PDF CI lane keeps using current GitHub actions and the repository `make manuscript-pdf` target.
 - Updated manuscript SourceRight Conductor status to distinguish CI strict-PDF coverage from the local Windows machine, which still lacks a TeX engine.
 
+## [2026-06-22] - Manuscript PDF CI Remote Verification
+- Verified commit `8118694` on `origin/master`.
+- Remote `Validate UOGTO` run `27911901129` passed.
+- Remote `Build Manuscript PDF` run `27911901120` passed, proving the strict LaTeX PDF gate in CI.
+- Remote `Build WIDOCO Pages` run `27911901116` passed and deployed, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
+
 ## [2026-06-22] - Release Preflight Gate
 - Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness and harden future DOI-minting release updates.
 - Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.

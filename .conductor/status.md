@@ -25,14 +25,14 @@
 
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
-- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27911050024` built and deployed successfully for commit `850bfab`, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
+- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27911901116` built and deployed successfully for commit `8118694`, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published, release-assets run `27910615774` attached all expected artifacts, and the primary RDF asset is publicly retrievable.
 - LOV submission and OLS indexing remain external registry steps after DOI metadata is live.
 - DOI status monitoring is implemented with `make doi-status` for local placeholder consistency and `pixi run doi-status-live` for public Zenodo lookup.
 - DOI recording is scripted with `python scripts/maintenance/record_zenodo_doi.py <doi>` to update release notes, registry packets, `CITATION.cff`, and `.zenodo.json` after Zenodo minting.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
-- Strict manuscript PDF generation requires a LaTeX engine; the repository now has `make manuscript-build`, `make manuscript-pdf`, and a GitHub Actions workflow that installs LaTeX and runs the strict PDF gate.
+- Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
 
 ## Next Recommended Task
 - Continue `uogto_publishing_discoverability_20260622` for release, DOI, release-asset, LOV, and OLS live gates before treating the project as publication-ready.
@@ -42,10 +42,11 @@
 - SourceRight CSL validation passes for docs/paper/references.csl.json.
 - SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 0 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation output is captured at docs/paper/sourceright-citations.md with 11 citation occurrences, 11 matched citations, and 0 issues.
-- Open: strict PDF generation is now wired for CI; current local Windows machine still lacks a TeX engine.
+- Strict PDF generation passed remotely in GitHub Actions run `27911901120` for commit `8118694`; current local Windows machine still lacks a TeX engine, so local PDF compilation is not claimed.
 
 ## Publishing Live Verification - 2026-06-22
 - Recorded `Validate UOGTO` GitHub Actions run `27911050014` passed for commit `850bfab`.
 - GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27911050024` built and deployed successfully for commit `850bfab`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
+- Recorded post-manuscript-CI verification for commit `8118694`: `Validate UOGTO` run `27911901129` passed, `Build Manuscript PDF` run `27911901120` passed, `Build WIDOCO Pages` run `27911901116` passed and deployed, and the Pages root returned HTTP 200.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.
