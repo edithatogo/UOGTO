@@ -57,11 +57,11 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] WIDOCO runs successfully in CI on the canonical ontology inputs.
-  - GitHub Actions run `27910154887` passed the WIDOCO build job on 2026-06-21 UTC after commit `000df52`.
+  - GitHub Actions run `27910976624` passed the WIDOCO build and deploy jobs on 2026-06-21 UTC after commit `fd7dc7e`.
 - [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
   - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
 - [x] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
-  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27910392764` deployed successfully, and both `https://edithatogo.github.io/UOGTO/` and `/index-en.html` returned HTTP 200.
+  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27910976624` deployed successfully, and `https://edithatogo.github.io/UOGTO/` returned HTTP 200.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission
@@ -137,5 +137,5 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Local release preflight validates release assets, metadata, release notes, registry packets, and expected external blockers for future release-asset runs.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [x] Continuous documentation generation remains green after ontology changes.
-  - `Build WIDOCO Pages` run `27910392764` passed after Pages enablement and deployed the generated documentation.
+  - `Build WIDOCO Pages` run `27910976624` passed after the release-readiness CI fix and deployed the generated documentation.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.

@@ -5,6 +5,8 @@
 - Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.
 - Wired the release-assets GitHub Actions workflow to run the release-readiness script after generated assets are built and before upload.
 - Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims; the gate was added after the initial `v1.0.0` publication.
+- Stabilized `tests/test_release_readiness.py` so ordinary `pytest` and CI create release-readiness fixture assets before checking the local manifest.
+- Verified commit `fd7dc7e`: `Validate UOGTO` run `27910976656` passed, `Build WIDOCO Pages` run `27910976624` built and deployed successfully, and the public Pages root returned HTTP 200.
 
 ## [2026-06-22] - v1.0.0 Release Publication
 - Created GitHub release `v1.0.0`: https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0.
