@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - Live Publication Status Artifact Upload
+- Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
+- Added a workflow contract test target so artifact upload remains part of the maintenance lane.
+- Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.
+
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.
 - `dist/publication-status-live.json` is now the single routine publication monitor for Pages, release assets, Zenodo DOI, and w3id state.

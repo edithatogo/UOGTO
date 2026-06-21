@@ -143,6 +143,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add a consolidated publication status packet covering Pages, release assets, DOI, Zenodo, w3id, LOV, and OLS state.
     - [x] Add live publication status observations for Pages, release assets, and Zenodo DOI search to scheduled maintenance.
     - [x] Fold w3id PR and redirect observations into the consolidated live publication status packet.
+    - [x] Upload scheduled live publication status JSON as a CI artifact for review.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -177,3 +178,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make publication-status` emits `dist/publication-status.json` for consolidated release handoff review; release-assets workflow run `27914117992` attached it to `v1.0.0` and the public asset URL returned an HTTP download redirect.
 - [x] `make publication-status-live` emits live URL/Zenodo observations to `dist/publication-status-live.json`; local run returned `pending_external_publication_steps` with release asset checks live and Zenodo DOI search empty.
 - [x] `make publication-status-live` now includes w3id PR and redirect observations; local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
+- [x] Scheduled maintenance uploads `dist/publication-status-live.json` as workflow artifact `publication-status-live`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.

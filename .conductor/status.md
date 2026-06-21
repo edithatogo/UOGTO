@@ -34,6 +34,7 @@
 - Consolidated publication status packet generation is implemented with `make publication-status` so Pages, release assets, DOI, Zenodo, w3id, LOV, and OLS state are reviewable from one generated JSON artifact.
 - Live publication status observation mode is implemented with `make publication-status-live` for scheduled Pages, release asset, and Zenodo DOI checks.
 - Consolidated live publication status includes w3id pull request and redirect observations, so routine publication review can inspect Pages, release assets, Zenodo DOI, and w3id state from one generated artifact.
+- Scheduled maintenance uploads `dist/publication-status-live.json` as workflow artifact `publication-status-live` for direct review.
 - Registry handoff packet generation is implemented with `make registry-packet`; it writes LOV/OLS submission metadata to `dist/registry-handoff.json` and preserves the pending DOI blocker until Zenodo metadata is recorded.
 - Release preflight, Pixi release-preflight, and the release-assets workflow now require and upload `dist/registry-handoff.json`; workflow run `27912429240` attached it to `v1.0.0` and the asset URL returned an HTTP download redirect.
 - Registry link and release-readiness gates now require the public `registry-handoff.json` release asset URL in LOV/OLS packet docs.
@@ -73,3 +74,4 @@
 - The attached `publication-status.json` release asset has digest `sha256:e52e18db755e23c1e2317cdf8483960a55e374ad2f8b929512a7c4b9f52d8ec5`.
 - Live publication status observations are added to scheduled maintenance so public Pages, release assets, and Zenodo DOI search can be inspected from one generated JSON artifact. Local live output still reports `pending_external_publication_steps` because Zenodo DOI search is empty.
 - `dist/publication-status-live.json` now includes w3id PR and redirect observations. Local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
+- Scheduled maintenance artifact upload is implemented for `dist/publication-status-live.json`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
