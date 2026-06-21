@@ -3,9 +3,9 @@
 This plan outlines the steps to build skills, tools, workflows, and agent specifications for UOGTO repository maintenance.
 
 ## Phase 1: Environment & Tooling Setup (Pixi and GitHub CLI)
-- [ ] Task: Set up and verify Pixi package configuration
-    - [ ] Initialize `pixi.toml` for Python environments and dependencies
-    - [ ] Verify local Pixi build/run integration works with existing test suite
+- [x] Task: Set up and verify Pixi package configuration
+    - [x] Initialize `pixi.toml` for Python environments and dependencies
+    - [x] Verify local Pixi build/run integration works with existing test suite
 - [ ] Task: Configure GitHub CLI local access scripts
     - [ ] Create wrapper script `scripts/maintenance/check_github.py` to query issues and PRs via `gh` CLI or fallback API requests
     - [ ] Add basic tests for the check script
