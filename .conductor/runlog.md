@@ -24,6 +24,11 @@
 - Enabled JSON Schema format checking for publishing metadata URLs and dates.
 - Added negative tests for invalid citation URL format and Zenodo language metadata.
 
+## [2026-06-22] - Registry Annotation Gate
+- Added DCTERMS and VANN metadata to the primary UOGTO ontology release header.
+- Extended the publishing metadata gate to parse source ontology modules and verify release-header registry annotations plus module ontology labels.
+- Updated the LOV/OLS metadata checklist and Conductor publishing plan to distinguish repo-side metadata readiness from live DOI, Pages, LOV, and OLS service gates.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.

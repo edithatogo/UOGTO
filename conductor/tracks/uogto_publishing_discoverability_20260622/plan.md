@@ -56,7 +56,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 ## Phase 3: Linked Open Vocabularies Submission
 - [~] Task: Prepare LOV metadata checklist
     - [x] Create `docs/registry/metadata-checklist.md` covering title, description, preferred namespace URI, prefix, version IRI, creators, publisher, license URI, imports, vocabulary status, examples, and documentation URL.
-    - [ ] Verify every ontology module includes required standard annotations such as `rdfs:label`, `skos:definition`, `dcterms:title`, `dcterms:description`, `dcterms:creator`, `dcterms:license`, `owl:versionInfo`, and `vann:preferredNamespacePrefix` where applicable.
+    - [x] Verify ontology headers expose required registry annotations such as `rdfs:label`, `skos:definition`, `dcterms:title`, `dcterms:description`, `dcterms:creator`, `dcterms:license`, `owl:versionInfo`, `vann:preferredNamespacePrefix`, and `vann:preferredNamespaceUri` where applicable.
     - [x] Confirm the license URI is machine-readable and consistent across repository metadata, ontology headers, `CITATION.cff`, and `.zenodo.json`.
 - [x] Task: Create LOV submission package
     - [x] Create `docs/registry/lov-submission.md` with ontology title, abstract, namespace, prefix, homepage, documentation URL, GitHub URL, release URL, DOI, license, maintainers, and contact route.
@@ -72,7 +72,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - Updates to ontology module headers if metadata gaps are found.
 
 ### Acceptance Criteria
-- [ ] Metadata checklist is complete and all mandatory LOV fields are satisfied.
+- [x] Metadata checklist is complete and all mandatory LOV fields are satisfied in repo-side metadata.
 - [ ] Canonical ontology namespace, prefix, documentation URL, license URI, and DOI are stable.
 - [x] LOV submission record exists with submission date, link, and review status.
 - [ ] Any LOV-requested corrections are captured as follow-up Conductor tasks.
@@ -81,7 +81,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] Task: Verify OLS compatibility
     - [x] Create `docs/registry/ols-indexing.md` with OLS inclusion requirements, ontology URL, preferred prefix, title, description, license, homepage, documentation URL, and contact route.
     - [ ] Verify OLS can retrieve the canonical ontology artifact through a stable raw URL, release asset URL, or PURL.
-    - [ ] Confirm ontology metadata exposes version, namespace, labels, definitions, hierarchy, and license in formats suitable for OLS indexing.
+    - [x] Confirm ontology metadata exposes version, namespace, labels, definitions, hierarchy, and license in formats suitable for OLS indexing.
 - [x] Task: Prepare OLS inclusion request
     - [x] Document the requested ontology identifier and display title.
     - [x] Include links to GitHub repository, GitHub Pages WIDOCO documentation, v1.0 release, Zenodo DOI, and canonical RDF download.
@@ -96,6 +96,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - Updates to ontology distribution metadata if OLS compatibility checks fail.
 
 ### Acceptance Criteria
+- [x] OLS compatibility checklist passes for repo-side ontology metadata.
 - [ ] OLS compatibility checklist passes for the published ontology artifact.
 - [ ] Inclusion request is submitted with stable documentation, release, DOI, and RDF artifact links.
 - [ ] OLS review feedback is tracked and resolved or converted into follow-up Conductor tasks.

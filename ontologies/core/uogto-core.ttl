@@ -5,10 +5,18 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
 
 <https://w3id.org/uogto/core> a owl:Ontology ;
     rdfs:label "Universal Open Game Theory Ontology (UOGTO) Core"@en ;
-    owl:versionInfo "0.1.0" ;
+    dcterms:title "Universal Open Game Theory Ontology (UOGTO)"@en ;
+    dcterms:description "The core release ontology for modeling games, strategies, actions, outcomes, payoffs, equilibria, execution traces, and extensible game-theoretic semantics."@en ;
+    dcterms:creator "UOGTO Contributors" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.0.0" ;
+    vann:preferredNamespacePrefix "uogto" ;
+    vann:preferredNamespaceUri "https://w3id.org/uogto/core#" ;
     skos:definition "The core schema for modeling games, strategies, actions, outcomes, and payoffs."@en .
 
 # Core Classes

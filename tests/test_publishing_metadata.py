@@ -21,6 +21,9 @@ class TestPublishingMetadata(unittest.TestCase):
     def test_widoco_workflow(self):
         check_publishing_metadata.check_workflow()
 
+    def test_registry_annotations(self):
+        check_publishing_metadata.check_registry_annotations()
+
     def test_registry_docs(self):
         check_publishing_metadata.check_registry_docs()
 

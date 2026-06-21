@@ -3,12 +3,17 @@ from pathlib import Path
 
 import yaml
 from jsonschema import Draft202012Validator, FormatChecker
+from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib.namespace import OWL, RDF, RDFS, SKOS
 
 
 ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY_URL = "https://github.com/edithatogo/UOGTO"
 CORE_NAMESPACE = "https://w3id.org/uogto/core#"
 CC_BY_4 = "https://creativecommons.org/licenses/by/4.0/"
+PRIMARY_ONTOLOGY_URI = URIRef("https://w3id.org/uogto/core")
+DCTERMS = Namespace("http://purl.org/dc/terms/")
+VANN = Namespace("http://purl.org/vocab/vann/")
 
 
 REQUIRED_FILES = [
@@ -206,6 +211,49 @@ def check_workflow():
             raise AssertionError(f"WIDOCO workflow missing expected gate or command: {expected}")
 
 
+def check_registry_annotations():
+    ttl_files = sorted((ROOT / "ontologies").glob("**/*.ttl"))
+    if not ttl_files:
+        raise AssertionError("No ontology Turtle files found under ontologies/")
+
+    graph = Graph()
+    module_headers = []
+    for ttl_file in ttl_files:
+        module_graph = Graph()
+        module_graph.parse(ttl_file, format="turtle")
+        graph += module_graph
+        module_headers.extend(module_graph.subjects(RDF.type, OWL.Ontology))
+
+    if PRIMARY_ONTOLOGY_URI not in module_headers:
+        raise AssertionError("Primary UOGTO ontology header is missing from source modules")
+
+    required_primary_values = {
+        DCTERMS.title: Literal("Universal Open Game Theory Ontology (UOGTO)", lang="en"),
+        DCTERMS.creator: Literal("UOGTO Contributors"),
+        DCTERMS.license: URIRef(CC_BY_4),
+        OWL.versionInfo: Literal("1.0.0"),
+        VANN.preferredNamespacePrefix: Literal("uogto"),
+        VANN.preferredNamespaceUri: Literal(CORE_NAMESPACE),
+    }
+    for predicate, expected_value in required_primary_values.items():
+        if (PRIMARY_ONTOLOGY_URI, predicate, expected_value) not in graph:
+            raise AssertionError(
+                f"Primary ontology header missing expected {predicate.n3(graph.namespace_manager)} value"
+            )
+
+    for predicate in [RDFS.label, SKOS.definition, DCTERMS.description]:
+        if not list(graph.objects(PRIMARY_ONTOLOGY_URI, predicate)):
+            raise AssertionError(f"Primary ontology header missing {predicate.n3(graph.namespace_manager)}")
+
+    unlabeled = sorted(
+        str(subject)
+        for subject in set(module_headers)
+        if not list(graph.objects(subject, RDFS.label))
+    )
+    if unlabeled:
+        raise AssertionError(f"Ontology module headers missing rdfs:label: {', '.join(unlabeled)}")
+
+
 def check_registry_docs():
     metadata = (ROOT / "docs/registry/metadata-checklist.md").read_text(encoding="utf-8")
     lov = (ROOT / "docs/registry/lov-submission.md").read_text(encoding="utf-8")
@@ -226,6 +274,7 @@ def main():
     check_citation()
     check_zenodo()
     check_workflow()
+    check_registry_annotations()
     check_registry_docs()
     print("Publishing metadata checks passed.")
 

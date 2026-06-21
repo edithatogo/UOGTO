@@ -13,6 +13,7 @@
 - CI maintenance workflow now supports Linux Pixi execution and opens pull requests for generated maintenance changes.
 - Publishing and discoverability planning track added for Zenodo DOI archiving, WIDOCO/GitHub Pages documentation, LOV submission, and OLS indexing.
 - Publishing metadata scaffolding implemented: `CITATION.cff`, `.zenodo.json`, v1.0 release notes, WIDOCO Pages workflow, LOV/OLS registry docs, and metadata checks.
+- Registry annotation checks now validate the primary ontology release header for DCTERMS/VANN metadata and source module ontology labels.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -20,6 +21,7 @@
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
 - WIDOCO Pages workflow is configured but still needs a successful GitHub Actions run after push.
+- Published RDF artifact retrieval still needs verification after the next push/release.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
 
 ## Next Recommended Task

@@ -19,12 +19,14 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 
 ## Ontology Annotation Requirements
 - [x] Every class and property is covered by the semantic audit for `rdfs:label` and `skos:definition`.
-- [ ] Release ontology headers expose or reference `dcterms:title`.
-- [ ] Release ontology headers expose or reference `dcterms:description`.
-- [ ] Release ontology headers expose or reference `dcterms:creator`.
-- [ ] Release ontology headers expose or reference `dcterms:license`.
-- [ ] Release ontology headers expose or reference `owl:versionInfo`.
-- [ ] Release ontology headers expose or reference `vann:preferredNamespacePrefix`.
+- [x] Release ontology header exposes `dcterms:title`.
+- [x] Release ontology header exposes `dcterms:description`.
+- [x] Release ontology header exposes `dcterms:creator`.
+- [x] Release ontology header exposes `dcterms:license`.
+- [x] Release ontology header exposes `owl:versionInfo`.
+- [x] Release ontology header exposes `vann:preferredNamespacePrefix`.
+- [x] Release ontology header exposes `vann:preferredNamespaceUri`.
+- [x] Publishing metadata gate parses ontology source modules and verifies release header metadata.
 
 ## Distribution Requirements
 - [x] Merged ontology build command: `make build`
