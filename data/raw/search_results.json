@@ -1,0 +1,99 @@
+[
+  {
+    "source": "openalex",
+    "id": "https://openalex.org/W4245478579",
+    "doi": "https://doi.org/10.3998/mpub.20269",
+    "title": "Prisoner's Dilemma",
+    "abstract": null,
+    "authors": [
+      "Anatol Rapoport",
+      "Albert M. Chammah"
+    ],
+    "year": 1965,
+    "url": "https://doi.org/10.3998/mpub.20269"
+  },
+  {
+    "source": "openalex",
+    "id": "https://openalex.org/W2219912196",
+    "doi": null,
+    "title": "Prisoner's Dilemma",
+    "abstract": null,
+    "authors": [
+      "Anatol Rapoport"
+    ],
+    "year": 1965,
+    "url": "https://openalex.org/W2219912196"
+  },
+  {
+    "source": "europepmc",
+    "id": "42150079",
+    "doi": "10.1073/pnas.2513282123",
+    "title": "Emergence of cooperation due to opponent-specific responses in Prisoner's Dilemma.",
+    "abstract": null,
+    "authors": [],
+    "year": "2026",
+    "url": "https://europepmc.org/article/MED/42150079"
+  },
+  {
+    "source": "europepmc",
+    "id": "41870267",
+    "doi": "10.1063/5.0324288",
+    "title": "Coevolutionary dynamics of cooperation and zero-trust institutional enforcement in Prisoner's Dilemma games.",
+    "abstract": null,
+    "authors": [],
+    "year": "2026",
+    "url": "https://europepmc.org/article/MED/41870267"
+  },
+  {
+    "source": "arxiv",
+    "id": "http://arxiv.org/abs/2006.06580v3",
+    "doi": null,
+    "title": "Online Learning in Iterated Prisoner's Dilemma to Mimic Human Behavior",
+    "abstract": "As an important psychological and social experiment, the Iterated Prisoner's Dilemma (IPD) treats the choice to cooperate or defect as an atomic action. We propose to study the behaviors of online learning algorithms in the Iterated Prisoner's Dilemma (IPD) game, where we investigate the full spectrum of reinforcement learning agents: multi-armed bandits, contextual bandits and reinforcement learning. We evaluate them based on a tournament of iterated prisoner's dilemma where multiple agents can compete in a sequential fashion. This allows us to analyze the dynamics of policies learned by multiple self-interested independent reward-driven agents, and also allows us study the capacity of these algorithms to fit the human behaviors. Results suggest that considering the current situation to make decision is the worst in this kind of social dilemma game. Multiples discoveries on online learning behaviors and clinical validations are stated, as an effort to connect artificial intelligence algorithms with human behaviors and their abnormal states in neuropsychiatric conditions.",
+    "authors": [
+      "Baihan Lin",
+      "Djallel Bouneffouf",
+      "Guillermo Cecchi"
+    ],
+    "year": "2020",
+    "url": "http://arxiv.org/abs/2006.06580v3"
+  },
+  {
+    "source": "arxiv",
+    "id": "http://arxiv.org/abs/1510.00665v1",
+    "doi": null,
+    "title": "Universalized Prisoner's Dilemma With Risk",
+    "abstract": "In this paper I present a mathematically novel approach to the Prisoner's Dilemma. I do so by first defining recursively a distinct action type, what I call 'universalizing', that I add to the original prisoner's dilemma. Such a modified version of the Prisoner's Dilemma provides a very food productive model of the choices that would be made in a prisoner's dilemma by agents who trust each other. As I show, players playing a universalized prisoner's dilemma get as far out of the dilemma as is mathematically possible. I then add the concept of risk to the universalized version of prisoner's dilemma. Doing so provide a model that is sensitive to the trustworthiness of the agents in any prisoner's dilemma. As I show, with no risk, agents get out of the prisoners dilemma; and with maximal risk, the succumb to it. succumb to it.",
+    "authors": [
+      "Paul Studtmann"
+    ],
+    "year": "2015",
+    "url": "http://arxiv.org/abs/1510.00665v1"
+  },
+  {
+    "source": "crossref",
+    "id": "10.1017/cbo9781107360174.009",
+    "doi": "10.1017/cbo9781107360174.009",
+    "title": "Counterfactuals and the Prisoner's Dilemma",
+    "abstract": null,
+    "authors": [
+      "Giacomo Bonanno"
+    ],
+    "year": 2015,
+    "url": "https://doi.org/10.1017/cbo9781107360174.009"
+  },
+  {
+    "source": "crossref",
+    "id": "10.1017/cbo9781107360174.014",
+    "doi": "10.1017/cbo9781107360174.014",
+    "title": "Prisoner's Dilemma experiments",
+    "abstract": null,
+    "authors": [
+      "Charles Holt",
+      "Cathleen Johnson",
+      "David Schmidtz"
+    ],
+    "year": 2015,
+    "url": "https://doi.org/10.1017/cbo9781107360174.014"
+  }
+]

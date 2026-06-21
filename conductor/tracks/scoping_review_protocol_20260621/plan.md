@@ -14,5 +14,5 @@ This plan outlines the steps for establishing protocols and search clients.
     - [x] Verify query client connectivity and save format
 
 ## Phase 3: Validation and Baseline Runs
-- [ ] Task: Perform Dry-Run Queries
-    - [ ] Run test queries to estimate data size and log raw statistics
+- [x] Task: Perform Dry-Run Queries
+    - [x] Run test queries to estimate data size and log raw statistics
