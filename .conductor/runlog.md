@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - Existing Release Registry Handoff Asset Refresh
+- Dispatched `Publish Release Assets` workflow run `27912459022` for existing release tag `v1.0.0`.
+- Verified the workflow passed release gates, built release assets, built the registry handoff packet, passed release preflight, and uploaded assets.
+- Verified GitHub release `v1.0.0` now includes `registry-handoff.json` and that its public release asset URL returns an HTTP download redirect.
+
 ## [2026-06-22] - Pixi Release Preflight Registry Packet Alignment
 - Updated `pixi run release-preflight` to build `dist/registry-handoff.json` before running release readiness checks, matching `make release-preflight`.
 - Verified focused registry/release-readiness tests, `make release-preflight`, `make validate`, and `make test`.

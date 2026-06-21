@@ -127,6 +127,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add `make release-preflight` as a local readiness and post-release hardening gate for release assets.
     - [x] Include the generated registry handoff packet in release preflight and release asset uploads.
     - [x] Align Pixi `release-preflight` with Make so both generate the registry handoff packet before readiness checks.
+    - [x] Refresh existing GitHub release `v1.0.0` so `registry-handoff.json` is attached to the live release.
 - [~] Task: Keep documentation continuously current
     - [x] Ensure CI regenerates WIDOCO documentation on ontology changes.
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
@@ -151,4 +152,5 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.
 - [x] Release preflight now requires `dist/registry-handoff.json`, and the release-assets workflow uploads it alongside release metadata artifacts.
 - [x] Pixi `release-preflight` also builds `dist/registry-handoff.json` before running release readiness checks.
+- [x] Release-assets workflow run `27912459022` refreshed `v1.0.0` and attached `registry-handoff.json`; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.
