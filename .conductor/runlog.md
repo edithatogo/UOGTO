@@ -1,5 +1,11 @@
 # Conductor Run Log
 
+## [2026-06-22] - Publishing and Discoverability Planning
+- Added Conductor track `uogto_publishing_discoverability_20260622` after the completed modeling, validation, release, and maintenance phases.
+- Planned Zenodo DOI integration, `CITATION.cff`, `.zenodo.json`, and v1.0 release notes.
+- Planned WIDOCO HTML documentation generation and GitHub Pages deployment.
+- Planned LOV metadata checklist/submission and OLS indexing request milestones.
+
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.
 - Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.

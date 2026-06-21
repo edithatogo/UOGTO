@@ -11,12 +11,13 @@
 - Repository maintenance automation implemented (Pixi dependencies, remote issue checks, auto-changelogs, agent skills, and GitHub Actions).
 - Conductor track/archive state normalized; superseded review planning is archived and active track metadata matches completed plans.
 - CI maintenance workflow now supports Linux Pixi execution and opens pull requests for generated maintenance changes.
+- Publishing and discoverability planning track added for Zenodo DOI archiving, WIDOCO/GitHub Pages documentation, LOV submission, and OLS indexing.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
 
 ## Known Gaps
-- Remote repository status is still unavailable until a GitHub remote and/or token is configured.
+- Zenodo integration, WIDOCO Pages publication, LOV submission, and OLS indexing are planned but not yet implemented.
 
 ## Next Recommended Task
-- Configure the GitHub remote/authentication used by `scripts/maintenance/check_github.py`, then let the scheduled maintenance workflow open reviewable PRs.
+- Start `uogto_publishing_discoverability_20260622` with citation metadata (`CITATION.cff`, `.zenodo.json`) and WIDOCO Pages workflow scaffolding.
