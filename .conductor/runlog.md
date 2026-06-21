@@ -5,6 +5,12 @@
 - Tightened release readiness checks so the w3id packet must exist and the workflow must name its upload path.
 - Recorded Conductor status that the external `perma-id/w3id.org` pull request remains the live publication blocker.
 
+## [2026-06-22] - w3id Handoff Release Attachment
+- Dispatched `Publish Release Assets` workflow run `27913057014` for existing release tag `v1.0.0`.
+- Verified the workflow passed release gates, built release assets, built both handoff packets, passed release preflight, and uploaded assets.
+- Verified `w3id-redirect-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:1e69d5d022c173f659760dbdb3310d5f81d59658028d0505de76a758de6e8fde`.
+- Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/w3id-redirect-handoff.json` returns an HTTP download redirect.
+
 ## [2026-06-22] - Existing Release Registry Handoff Asset Refresh
 - Dispatched `Publish Release Assets` workflow run `27912459022` for existing release tag `v1.0.0`.
 - Verified the workflow passed release gates, built release assets, built the registry handoff packet, passed release preflight, and uploaded assets.

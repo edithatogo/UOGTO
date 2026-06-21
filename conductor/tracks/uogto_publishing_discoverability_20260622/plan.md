@@ -160,3 +160,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Registry live-link checks classify pending w3id namespace redirects as external publication blockers under `--allow-unpublished`, while strict live checks still fail until redirects are configured.
 - [x] `make w3id-packet` emits `dist/w3id-redirect-handoff.json` with proposed `uogto/.htaccess` redirect rules for the external w3id PR.
 - [x] Release preflight now requires `dist/w3id-redirect-handoff.json`, and the release-assets workflow uploads it alongside `registry-handoff.json`.
+- [x] `Publish Release Assets` workflow dispatch run `27913057014` attached `w3id-redirect-handoff.json` to `v1.0.0`, and the asset URL returned an HTTP download redirect.
