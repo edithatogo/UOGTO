@@ -57,8 +57,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
   - GitHub Actions run `27910154887` passed the WIDOCO build job on 2026-06-21 UTC after commit `000df52`.
 - [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
   - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
-- [~] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
-  - Pages is enabled and workflow run `27910289217` deployed successfully, but the root URL still needs the `index.html` compatibility fix to be redeployed.
+- [x] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
+  - Pages is enabled, `ENABLE_PAGES_DEPLOY=true` is set, workflow run `27910392764` deployed successfully, and both `https://edithatogo.github.io/UOGTO/` and `/index-en.html` returned HTTP 200.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
 ## Phase 3: Linked Open Vocabularies Submission
@@ -130,5 +130,5 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Publishing gate is documented and enforced before v1.0 release.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
 - [x] Continuous documentation generation remains green after ontology changes.
-  - `Build WIDOCO Pages` run `27910154887` passed after the deployment gate change; deploy was skipped until Pages is enabled.
+  - `Build WIDOCO Pages` run `27910392764` passed after Pages enablement and deployed the generated documentation.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.

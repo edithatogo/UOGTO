@@ -63,6 +63,7 @@
 - Enabled GitHub Pages for `edithatogo/UOGTO` with Actions as the source and set repository variable `ENABLE_PAGES_DEPLOY=true`.
 - Dispatched WIDOCO Pages run `27910289217`; build and deploy both succeeded, and `/index-en.html` returned HTTP 200.
 - Root URL returned HTTP 404 because WIDOCO emitted `index-en.html` but not `index.html`; added a CI copy step so future deployments publish a root index.
+- Pushed and verified the root-index fix: WIDOCO Pages run `27910392764` deployed successfully, paired `Validate UOGTO` run `27910392787` passed, and both the Pages root URL and `/index-en.html` returned HTTP 200.
 
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.

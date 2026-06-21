@@ -24,7 +24,7 @@
 
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
-- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27910289217` deployed successfully, `/index-en.html` returned HTTP 200, and a root `index.html` compatibility fix is queued for redeployment.
+- WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27910392764` deployed successfully, and both `https://edithatogo.github.io/UOGTO/` and `/index-en.html` returned HTTP 200.
 - Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for final expert metadata review.
@@ -43,5 +43,5 @@
 ## Publishing Live Verification - 2026-06-22
 - Latest `Validate UOGTO` GitHub Actions run `27910154892` passed for commit `000df52`.
 - Latest `Build WIDOCO Pages` GitHub Actions run `27910154887` passed the build/artifact job for commit `000df52`; deploy was skipped because `ENABLE_PAGES_DEPLOY` is not set to `true`.
-- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910289217` deployed successfully; `/index-en.html` returned HTTP 200.
-- Open: redeploy the `index.html` compatibility fix, create `v1.0.0`, then verify Zenodo DOI, release assets, LOV, and OLS.
+- GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910392764` deployed successfully; root and `/index-en.html` returned HTTP 200.
+- Open: create `v1.0.0`, then verify Zenodo DOI, release assets, LOV, and OLS.
