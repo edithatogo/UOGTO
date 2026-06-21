@@ -126,7 +126,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add scheduled or release-triggered checks for stale registry metadata links.
     - [x] Record post-release DOI, Pages, LOV, and OLS status in `.conductor/status.md`.
     - [x] Modernize GitHub Actions workflow pins to Node 24-compatible official action majors after the Pages run surfaced Node 20 deprecation warnings.
-    - [x] Update GitHub-owned workflow actions to Node 24-compatible major releases after GitHub Actions deprecation warnings appeared.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
