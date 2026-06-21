@@ -151,3 +151,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make registry-packet` emits `dist/registry-handoff.json` so the LOV/OLS handoff can be reviewed before external submission, while `--require-ready` fails until DOI metadata is recorded.
 - [x] Release preflight now requires `dist/registry-handoff.json`, and the release-assets workflow uploads it alongside release metadata artifacts.
 - [x] Pixi `release-preflight` also builds `dist/registry-handoff.json` before running release readiness checks.
+- [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.

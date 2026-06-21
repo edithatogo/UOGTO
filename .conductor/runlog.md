@@ -4,6 +4,12 @@
 - Updated `pixi run release-preflight` to build `dist/registry-handoff.json` before running release readiness checks, matching `make release-preflight`.
 - Verified focused registry/release-readiness tests, `make release-preflight`, `make validate`, and `make test`.
 
+## [2026-06-22] - Registry Handoff Release Attachment
+- Dispatched `Publish Release Assets` workflow for `v1.0.0`.
+- Workflow run `27912429240` passed and completed the release gates, release asset build, registry handoff packet build, release preflight, and GitHub release upload steps.
+- Verified `registry-handoff.json` is attached to the `v1.0.0` GitHub release with digest `sha256:043b8c753e09a97e371da9be5c23ab5588da035bea59bfbbfa433adc859b9c7a`.
+- Verified `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/registry-handoff.json` returns an HTTP download redirect.
+
 ## [2026-06-22] - Manuscript PDF CI Gate
 - Added `.github/workflows/manuscript-pdf.yml` to install a minimal LaTeX toolchain on Ubuntu and run `make manuscript-pdf`.
 - Added a workflow wiring test so the strict manuscript PDF CI lane keeps using current GitHub actions and the repository `make manuscript-pdf` target.
