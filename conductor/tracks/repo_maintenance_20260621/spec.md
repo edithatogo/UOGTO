@@ -3,24 +3,35 @@
 ## Overview
 This track defines and implements the custom skills, tools, workflows, and agent specifications required for automated repository maintenance of the UOGTO project. It focuses on keeping dependencies bleeding edge (using Pixi), checking remote issues and PRs (agentic/GitHub CLI), validating repository integrity (via tests/SHACL), and generating release artifacts and changelogs.
 
-## Functional Requirements
-1. **Dependency Maintenance (Pixi)**:
-   - Provide a script/workflow to check for newer dependency versions via Pixi.
-   - Automate update of `pixi.toml` / lockfile to ensure bleeding-edge dependencies.
-2. **Remote Issue & PR Checking**:
-   - Create local scripts/workflows leveraging GitHub CLI (`gh`) and custom agent skills to query issues and PRs.
-   - Produce a structured summary of new issues/PRs to be consumed by the agent.
-3. **Repository Validation & Consistency**:
-   - Automated triggers to run `make validate` or `make test` before/after upgrades.
-   - Run SHACL validations and check coverage thresholds.
-4. **Auto-Changelog and Metadata Releases**:
-   - Generate auto-changelog entry from recent commits when updates occur.
-   - Update repository metadata (e.g., `.conductor/runlog.md`, `CHANGELOG.md`).
+## System Design
+```mermaid
+graph TD
+    Developer([Developer / Agent]) -->|Triggers script| Script[Maintenance CLI Tool]
+    Script -->|Updates dependencies| Pixi[Pixi Package Manager]
+    Script -->|Queries issues/PRs| GH[GitHub CLI / API]
+    Pixi -->|Installs latest versions| Conda[Conda-Forge / PyPI]
+    GH -->|Fetches issues & PRs| Remote[GitHub Remote Repo]
+    Pixi -->|Triggers checks| Validator[RDFLib, PySHACL & pytest]
+    Validator -->|Pass/Fail| GitCommit[Git Commit & Auto-Changelog]
+```
 
-## Non-Functional Requirements
-- **Security**: Do not hardcode credentials/tokens; utilize environment variables or GitHub CLI authentication.
-- **Modularity**: Implement scripts in a dedicated `scripts/maintenance` directory and document them as custom agent skills.
-- **Portability**: Support local execution via developer CLI commands and integration into CI/CD pipelines (e.g., GitHub Actions).
+## MoSCoW Prioritization
+
+### Must Have (Essential)
+- **Pixi Dependency Upgrader**: Automated script to safely update packages to bleeding edge.
+- **Repository Health Checker**: Runs tests, RDFLib parses, and SHACL validation post-upgrade.
+- **Task Committing**: Automatic git committing of updates upon validation success.
+
+### Should Have (Important but not vital)
+- **GitHub Issues/PR Checker**: Script using `gh` CLI or fallback API to generate a structured issues summary.
+- **Auto-Changelog Generator**: Formats commit history into clean markdown changelogs.
+
+### Could Have (Nice to have)
+- **CI/CD Integration**: A `.github/workflows/maintenance.yml` trigger for automated schedule-based runs.
+- **Custom Agent Skill**: Custom Antigravity skill mapping to ease subagent delegation.
+
+### Won't Have (Deferred)
+- **Auto-merging PRs**: Automatic merging of remote pull requests without developer review.
 
 ## Acceptance Criteria
 - [ ] Pixi-based dependency check and update scripts are functional.
