@@ -1,0 +1,149 @@
+{
+  "schema_version": "sourceright.verification.v1",
+  "references": {
+    "arxiv-1510-00665v1": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "arxiv-2006-06580v3": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "arxiv-api": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "crossref": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-672-the-application-of-ontology-based": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-673-ontology-based-open-multi-agent": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-674-game-theoretic-control-of-multi": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-675-synthesising-evolutionarily-stable-normative-systems": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-676-multi-agent-system": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part1-677-game-theoretic-lens-on-llm": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-978-game-description-language": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-979-algorithmic-game-theory": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-980-hierarchy-of-beliefs": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-981-on-alternating-time-temporal-logic": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-982-stackelberg-vs-nash-in-security": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-983-differential-game": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-984-quantal-response-equilibrium": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-985-computational-social-choice": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-987-prov-o-the-prov-ontology": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-988-specification-model-context-protocol": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-989-web-of-things-wot-thing": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part3-990-petri-net-markup-language": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part4-814-prompting-codex-openai-developers": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "deep_research_part4-815-subagents-codex-openai-developers": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "doi-10-1017-cbo9781107360174-009": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "doi-10-1017-cbo9781107360174-014": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "doi-10-1063-5-0324288": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "doi-10-1073-pnas-2513282123": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "open-spiel-2019": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "openalex": {
+      "status": "pending-manual-review",
+      "source": "uogto-local-source-inventory"
+    },
+    "rapoport-chammah-1965": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "w3c-json-ld11": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "w3c-owl2-overview": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "w3c-rdf11-concepts": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "w3c-shacl": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    },
+    "w3c-sparql11-query": {
+      "status": "metadata-normalized",
+      "source": "uogto-local-source-inventory"
+    }
+  }
+}

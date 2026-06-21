@@ -1,0 +1,1 @@
+Universal Open Game Theory Ontology uses RDF, OWL 2, SHACL, and JSON-LD [w3c-rdf11-concepts; w3c-owl2-overview; w3c-shacl; w3c-json-ld11]. The scoping review includes Prisoner's Dilemma literature and learning-in-games examples [rapoport-chammah-1965-prisoners-dilemma; lin-2020-online-learning-ipd].
