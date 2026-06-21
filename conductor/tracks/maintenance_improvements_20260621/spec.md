@@ -20,10 +20,12 @@ graph TD
 - **Disk Space Pre-check**: Integration of C-drive free space queries and cache clearance logic into maintenance tools.
 - **Git Pre-commit Hook**: Configured local pre-commit hook enforcing `make validate` before commits are processed.
 - **GITHUB_TOKEN integration**: Support fetching issues/PRs using token authorization.
+- **Semantic Completeness Audit**: Script verifying that every class/property has `rdfs:label` and `skos:definition`.
 
 ### Should Have
 - **Semantic Tagging**: Automated tagging (`vX.Y.Z`) on successful releases.
 - **HTML SHACL Report**: Export validation failure/success reports in human-friendly HTML structure.
+- **Lockfile Vulnerability Audit**: Automated verification of dependencies in `pixi.lock` against vulnerability databases.
 
 ### Could Have
 - **JSON-LD Schema Staging**: Automated building and copying of schema assets to static pages folder.
