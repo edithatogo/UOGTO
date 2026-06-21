@@ -204,7 +204,7 @@ def check_workflow():
         "make publishing-metadata",
         "make build",
         "releases/tags/{version}",
-        "actions/deploy-pages@v4",
+        "actions/deploy-pages@v5",
         "dist/uogto.ttl",
     ]:
         if expected not in workflow_text:
