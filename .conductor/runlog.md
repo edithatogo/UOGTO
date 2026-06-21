@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - Publication Status Packet
+- Added a consolidated `publication-status.json` release artifact for Pages, release assets, DOI, Zenodo, w3id, LOV, and OLS state.
+- Wired `make publication-status`, Pixi `publication-status`, release preflight, and release-assets workflow upload.
+- Verified focused publication/release tests, `make release-preflight`, `make validate`, and `make test`.
+
 ## [2026-06-22] - Zenodo Handoff Release Artifact
 - Added `scripts/maintenance/build_zenodo_handoff.py` plus Make and Pixi wiring to generate `dist/zenodo-handoff.json`.
 - Added the Zenodo handoff packet to release preflight and the release-assets upload workflow.

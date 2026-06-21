@@ -10,6 +10,7 @@ from scripts.maintenance import check_release_readiness
 from scripts.maintenance import build_registry_handoff
 from scripts.maintenance import build_zenodo_handoff
 from scripts.maintenance import build_w3id_redirect_handoff
+from scripts.maintenance import build_publication_status
 from scripts.maintenance import package_release_assets
 
 
@@ -35,6 +36,10 @@ class TestReleaseReadiness(unittest.TestCase):
             dist / "w3id-redirect-handoff.json",
             build_w3id_redirect_handoff.build_w3id_handoff(),
         )
+        build_publication_status.write_status(
+            dist / "publication-status.json",
+            build_publication_status.build_publication_status(),
+        )
 
     def test_local_release_readiness_passes(self):
         check_release_readiness.check_local_release_readiness()
@@ -59,6 +64,11 @@ class TestReleaseReadiness(unittest.TestCase):
         missing = Path(".tmp") / "missing-zenodo-handoff.json"
         with self.assertRaises(AssertionError):
             check_release_readiness.check_zenodo_handoff_packet(missing)
+
+    def test_release_preflight_requires_publication_status(self):
+        missing = Path(".tmp") / "missing-publication-status.json"
+        with self.assertRaises(AssertionError):
+            check_release_readiness.check_publication_status_packet(missing)
 
     def test_release_notes_contain_preflight_evidence(self):
         check_release_readiness.check_release_notes()

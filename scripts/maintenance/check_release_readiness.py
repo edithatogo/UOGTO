@@ -8,6 +8,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.maintenance import (
+    build_publication_status,
     build_zenodo_handoff,
     check_doi_status,
     check_publishing_metadata,
@@ -27,6 +28,7 @@ EXPECTED_RELEASE_ASSETS = set(package_release_assets.REQUIRED_RELEASE_ASSETS) | 
     "registry-handoff.json",
     "zenodo-handoff.json",
     "w3id-redirect-handoff.json",
+    "publication-status.json",
 }
 PENDING_EXTERNAL_MARKERS = [
     "TBD after Zenodo archiving",
@@ -73,6 +75,7 @@ def check_release_manifest() -> None:
     check_registry_handoff_packet(ROOT / "dist" / "registry-handoff.json")
     check_zenodo_handoff_packet(ROOT / "dist" / "zenodo-handoff.json")
     check_w3id_handoff_packet(ROOT / "dist" / "w3id-redirect-handoff.json")
+    check_publication_status_packet(ROOT / "dist" / "publication-status.json")
 
 
 def check_registry_handoff_packet(path: Path) -> None:
@@ -105,6 +108,17 @@ def check_zenodo_handoff_packet(path: Path) -> None:
         raise AssertionError("Zenodo handoff packet release URL does not match the expected release")
 
 
+def check_publication_status_packet(path: Path) -> None:
+    if not path.exists():
+        raise AssertionError("Missing dist/publication-status.json; run make publication-status first")
+    with path.open("r", encoding="utf-8") as handle:
+        packet = json.load(handle)
+    if packet.get("schema") != "uogto.publication-status.v1":
+        raise AssertionError("Publication status packet has an unexpected schema")
+    if packet.get("release_url") != build_publication_status.RELEASE_URL:
+        raise AssertionError("Publication status packet release URL does not match the expected release")
+
+
 def check_release_workflow() -> None:
     workflow = read_text(".github/workflows/release-assets.yml")
     required_fragments = [
@@ -119,12 +133,14 @@ def check_release_workflow() -> None:
         "make registry-packet",
         "make zenodo-packet",
         "make w3id-packet",
+        "make publication-status",
         "gh release upload",
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
         "dist/registry-handoff.json",
         "dist/zenodo-handoff.json",
         "dist/w3id-redirect-handoff.json",
+        "dist/publication-status.json",
         "check_release_readiness.py",
     ]
     missing = [fragment for fragment in required_fragments if fragment not in workflow]
@@ -145,6 +161,7 @@ def check_release_notes() -> None:
         "python scripts/maintenance/build_registry_handoff.py",
         "python scripts/maintenance/check_doi_status.py",
         "python scripts/maintenance/record_zenodo_doi.py",
+        "python scripts/maintenance/build_publication_status.py",
         "python scripts/maintenance/package_release_assets.py",
         "make release-preflight",
         "Zenodo DOI: `TBD after the v1.0.0 GitHub release is archived by Zenodo`",
