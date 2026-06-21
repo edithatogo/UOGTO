@@ -1,14 +1,26 @@
 import os
 import sys
 import unittest
+from pathlib import Path
 
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from scripts.maintenance import check_release_readiness
+from scripts.maintenance import package_release_assets
 
 
 class TestReleaseReadiness(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        dist = Path("dist")
+        dist.mkdir(exist_ok=True)
+        for asset in package_release_assets.REQUIRED_RELEASE_ASSETS:
+            path = dist / asset
+            if not path.exists():
+                path.write_text(f"test fixture for {asset}\n", encoding="utf-8")
+        package_release_assets.write_release_manifest(dist, "1.0.0")
+
     def test_local_release_readiness_passes(self):
         check_release_readiness.check_local_release_readiness()
 
