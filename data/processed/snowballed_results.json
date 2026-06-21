@@ -1,0 +1,20 @@
+[
+  {
+    "source": "arxiv",
+    "id": "http://arxiv.org/abs/2006.06580v3",
+    "doi": null,
+    "title": "Online Learning in Iterated Prisoner's Dilemma to Mimic Human Behavior",
+    "abstract": "As an important psychological and social experiment, the Iterated Prisoner's Dilemma (IPD) treats the choice to cooperate or defect as an atomic action. We propose to study the behaviors of online learning algorithms in the Iterated Prisoner's Dilemma (IPD) game, where we investigate the full spectrum of reinforcement learning agents: multi-armed bandits, contextual bandits and reinforcement learning. We evaluate them based on a tournament of iterated prisoner's dilemma where multiple agents can compete in a sequential fashion. This allows us to analyze the dynamics of policies learned by multiple self-interested independent reward-driven agents, and also allows us study the capacity of these algorithms to fit the human behaviors. Results suggest that considering the current situation to make decision is the worst in this kind of social dilemma game. Multiples discoveries on online learning behaviors and clinical validations are stated, as an effort to connect artificial intelligence algorithms with human behaviors and their abnormal states in neuropsychiatric conditions.",
+    "authors": [
+      "Baihan Lin",
+      "Djallel Bouneffouf",
+      "Guillermo Cecchi"
+    ],
+    "year": "2020",
+    "url": "http://arxiv.org/abs/2006.06580v3",
+    "relevance_score": 1,
+    "categories": [
+      "stochastic_marl"
+    ]
+  }
+]

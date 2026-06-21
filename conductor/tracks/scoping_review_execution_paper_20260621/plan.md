@@ -3,12 +3,12 @@
 This plan outlines deduplication, classification, and drafting of the UOGTO scoping paper.
 
 ## Phase 1: Deduplication & Screening Setup
-- [ ] Task: Execute Deduplication Script
-    - [ ] Implement `scripts/review/deduplicate.py`
-    - [ ] Run deduplication over raw search downloads
-- [ ] Task: Implement Active Learning and Snowballing
-    - [ ] Create `scripts/review/active_screening.py` and run screening loop
-    - [ ] Build snowballing scraper `scripts/review/snowball.py` to fetch cited references
+- [x] Task: Execute Deduplication Script
+    - [x] Implement `scripts/review/deduplicate.py`
+    - [x] Run deduplication over raw search downloads
+- [x] Task: Implement Active Learning and Snowballing
+    - [x] Create `scripts/review/active_screening.py` and run screening loop
+    - [x] Build snowballing scraper `scripts/review/snowball.py` to fetch cited references
 
 ## Phase 2: Math Parsing & Graph Alignments
 - [ ] Task: Build Multi-Format Math Parser & OCR
