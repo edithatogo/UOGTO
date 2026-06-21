@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -37,6 +37,9 @@ manuscript-pdf: manuscript-check
 
 release-assets: build
 	python scripts/maintenance/package_release_assets.py
+
+release-preflight: release-assets
+	python scripts/maintenance/check_release_readiness.py
 
 conductor:
 	python scripts/conductor.py

@@ -41,6 +41,9 @@ jobs:
       - name: Build release assets
         run: make release-assets
 
+      - name: Run release preflight
+        run: python scripts/maintenance/check_release_readiness.py
+
       - name: Upload assets to GitHub release
         env:
           GH_TOKEN: ${{ github.token }}

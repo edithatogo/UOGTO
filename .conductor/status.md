@@ -16,6 +16,7 @@
 - Registry annotation checks now validate the primary ontology release header for DCTERMS/VANN metadata and source module ontology labels.
 - Scheduled maintenance now audits registry documentation links while allowing known unpublished v1.0 publication URLs until release.
 - Release asset packaging now builds generated RDF, SHACL, JSON-LD context, checksum, and manifest files for attachment to the `v1.0.0` GitHub release.
+- Local release preflight now validates generated release assets, metadata, release notes, registry packets, and expected external blockers before publication.
 - Conductor state reconciliation is recorded in `conductor_state_reconciliation_20260622`.
 - SourceRight manuscript source verification is complete: canonical CSL, sidecar, review queue, report artifacts, manuscript citation plumbing, local LaTeX citation-key checks, manuscript build readiness checks, and SourceRight numeric citation reconciliation are implemented.
 
@@ -44,4 +45,4 @@
 - Latest `Validate UOGTO` GitHub Actions run `27910154892` passed for commit `000df52`.
 - Latest `Build WIDOCO Pages` GitHub Actions run `27910154887` passed the build/artifact job for commit `000df52`; deploy was skipped because `ENABLE_PAGES_DEPLOY` is not set to `true`.
 - GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910392764` deployed successfully; root and `/index-en.html` returned HTTP 200.
-- Open: create `v1.0.0`, then verify Zenodo DOI, release assets, LOV, and OLS.
+- Open: create `v1.0.0`, then verify Zenodo DOI, uploaded release assets, LOV, and OLS.

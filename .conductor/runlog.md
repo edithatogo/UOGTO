@@ -1,5 +1,11 @@
 # Conductor Run Log
 
+## [2026-06-22] - Release Preflight Gate
+- Added `scripts/maintenance/check_release_readiness.py` to validate local v1.0 release readiness before a DOI-minting GitHub release.
+- Added `make release-preflight` plus a Pixi `release-preflight` task and included the readiness script in the aggregate Pixi `check` task.
+- Wired the release-assets GitHub Actions workflow to run the release-readiness script after generated assets are built and before upload.
+- Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims.
+
 ## [2026-06-22] - Conductor State Reconciliation and SourceRight Track
 - Added completed Conductor track `conductor_state_reconciliation_20260622` to record archive normalization, status updates, CI/Pixi hardening, registry link checks, and follow-up planning.
 - Added `conductor/archive/index.md` so retired and superseded tracks are discoverable without being treated as active work.
