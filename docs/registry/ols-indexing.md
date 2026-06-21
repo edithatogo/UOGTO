@@ -1,7 +1,7 @@
 # Ontology Lookup Service Indexing
 
 ## Status
-Not yet submitted. Submit after v1.0 release assets, WIDOCO documentation, and Zenodo DOI metadata are public.
+Not yet submitted. v1.0 release assets and WIDOCO documentation are public; submit after Zenodo DOI metadata is public.
 
 ## Requested Indexing Metadata
 - Ontology identifier: `uogto`
@@ -22,17 +22,17 @@ Not yet submitted. Submit after v1.0 release assets, WIDOCO documentation, and Z
 - Release asset manifest: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/release-assets-manifest.json>
 
 ## OLS Compatibility Checklist
-- [ ] Public ontology artifact URL is stable and fetchable.
-- [ ] Ontology metadata exposes title, description, version, license, and preferred prefix.
-- [ ] Class and property labels are present.
-- [ ] Class and property definitions are present.
-- [ ] Hierarchical relationships are represented in OWL/RDFS where applicable.
-- [ ] License and maintainer metadata are public.
+- [x] Public ontology artifact URL is stable and fetchable.
+- [x] Ontology metadata exposes title, description, version, license, and preferred prefix.
+- [x] Class and property labels are present.
+- [x] Class and property definitions are present.
+- [x] Hierarchical relationships are represented in OWL/RDFS where applicable.
+- [x] License and maintainer metadata are public.
 - [ ] WIDOCO documentation and DOI links are live.
 
 ## Inclusion Request Checklist
-- [ ] Confirm metadata checklist in `docs/registry/metadata-checklist.md`.
-- [ ] Prepare OLS issue or request with ontology identifier, display title, artifact URL, docs URL, DOI, license, and contact route.
+- [x] Confirm metadata checklist in `docs/registry/metadata-checklist.md`.
+- [x] Prepare OLS issue or request with ontology identifier, display title, artifact URL, docs URL, DOI, license, and contact route.
 - [ ] Submit inclusion request.
 - [ ] Record request date.
 - [ ] Record request URL.

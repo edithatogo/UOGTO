@@ -26,8 +26,8 @@
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
 - WIDOCO Pages workflow is green and GitHub Pages is enabled. Run `27910392764` deployed successfully, and both `https://edithatogo.github.io/UOGTO/` and `/index-en.html` returned HTTP 200.
-- Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
-- LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
+- GitHub release `v1.0.0` is published, release-assets run `27910615774` attached all expected artifacts, and the primary RDF asset is publicly retrievable.
+- LOV submission and OLS indexing remain external registry steps after DOI metadata is live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.
 
@@ -45,4 +45,5 @@
 - Latest `Validate UOGTO` GitHub Actions run `27910154892` passed for commit `000df52`.
 - Latest `Build WIDOCO Pages` GitHub Actions run `27910154887` passed the build/artifact job for commit `000df52`; deploy was skipped because `ENABLE_PAGES_DEPLOY` is not set to `true`.
 - GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27910392764` deployed successfully; root and `/index-en.html` returned HTTP 200.
-- Open: create `v1.0.0`, then verify Zenodo DOI, uploaded release assets, LOV, and OLS.
+- GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
+- Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.

@@ -1,7 +1,7 @@
 # Linked Open Vocabularies Submission
 
 ## Status
-Not yet submitted. Submit after `v1.0.0` is published, the Zenodo DOI is minted, and WIDOCO documentation is live.
+Not yet submitted. `v1.0.0` is published and WIDOCO documentation is live; submit after the Zenodo DOI is minted.
 
 ## Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -26,8 +26,8 @@ UOGTO is a modular OWL/SHACL ontology for game-theoretic semantics, including cl
 - Source modules: `ontologies/core/`, `ontologies/extensions/`, and `ontologies/alignments/`.
 
 ## LOV Checklist
-- [ ] Confirm all metadata requirements in `docs/registry/metadata-checklist.md`.
-- [ ] Confirm the WIDOCO documentation URL is reachable.
+- [x] Confirm all metadata requirements in `docs/registry/metadata-checklist.md`.
+- [x] Confirm the WIDOCO documentation URL is reachable.
 - [ ] Confirm the Zenodo DOI resolves.
 - [ ] Submit the vocabulary through the current LOV submission route.
 - [ ] Record submission date.

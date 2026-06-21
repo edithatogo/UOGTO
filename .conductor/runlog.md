@@ -6,6 +6,13 @@
 - Wired the release-assets GitHub Actions workflow to run the release-readiness script after generated assets are built and before upload.
 - Updated v1.0 release notes and the publishing Conductor track so DOI, LOV, and OLS remain explicit external gates rather than local completion claims.
 
+## [2026-06-22] - v1.0.0 Release Publication
+- Created GitHub release `v1.0.0`: https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0.
+- Release-assets workflow run `27910615774` passed and attached `uogto.ttl`, `uogto-shapes.ttl`, JSON-LD contexts, `SHA256SUMS`, and `release-assets-manifest.json`.
+- WIDOCO Pages tag workflow run `27910615818` passed after rerun; the first failure was a transient GitHub API 504 while downloading WIDOCO.
+- Verified `https://edithatogo.github.io/UOGTO/` returned HTTP 200 and the `uogto.ttl` release asset returned an HTTP download redirect.
+- Zenodo public search did not show a UOGTO DOI record yet, so DOI-dependent LOV and OLS submission remain open.
+
 ## [2026-06-22] - Conductor State Reconciliation and SourceRight Track
 - Added completed Conductor track `conductor_state_reconciliation_20260622` to record archive normalization, status updates, CI/Pixi hardening, registry link checks, and follow-up planning.
 - Added `conductor/archive/index.md` so retired and superseded tracks are discoverable without being treated as active work.

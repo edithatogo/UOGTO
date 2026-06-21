@@ -33,12 +33,12 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] Validation command: `make validate`
 - [x] Test command: `make test`
 - [x] Publishing metadata validation command: `python scripts/maintenance/check_publishing_metadata.py`
-- [ ] Public merged ontology URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
-- [ ] Public SHACL shapes URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
+- [x] Public merged ontology URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
+- [x] Public SHACL shapes URL is available from a release asset, GitHub Pages, raw GitHub URL, or PURL.
 
 ## Registry Gate
-- [ ] GitHub release `v1.0.0` is published.
+- [x] GitHub release `v1.0.0` is published.
 - [ ] Zenodo DOI is minted and recorded.
-- [ ] WIDOCO Pages documentation is live.
-- [ ] LOV submission document is complete.
-- [ ] OLS indexing document is complete.
+- [x] WIDOCO Pages documentation is live.
+- [x] LOV submission document is complete.
+- [x] OLS indexing document is complete.

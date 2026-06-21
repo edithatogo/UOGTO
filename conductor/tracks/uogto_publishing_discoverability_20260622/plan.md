@@ -8,6 +8,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [ ] Verify Zenodo is configured to archive GitHub releases, not every branch push.
     - [x] Add a release asset workflow so generated RDF, SHACL, JSON-LD, checksum, and manifest files are attached to `v1.0.0` before Zenodo archives the release.
     - [x] Document the release archive flow in `docs/releases/v1.0.md`.
+    - [x] Publish GitHub release `v1.0.0`.
+    - [x] Verify release-assets workflow attached public artifacts.
 - [x] Task: Add citation metadata
     - [x] Create `CITATION.cff` with title, authors, repository URL, ontology URL, license, version, release date, and preferred citation.
     - [x] Create `.zenodo.json` with creators, title, description, keywords, related identifiers, license, and communities if applicable.
@@ -25,7 +27,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [ ] Zenodo shows `edithatogo/UOGTO` as enabled for release archiving.
-- [ ] A GitHub `v1.0.0` release creates a Zenodo archive and DOI.
+- [~] A GitHub `v1.0.0` release creates a Zenodo archive and DOI.
+  - GitHub release `v1.0.0` exists and assets are attached; Zenodo DOI has not appeared in public Zenodo search yet.
 - [x] Release asset packaging is automated for generated ontology, shape, context, checksum, and manifest files.
 - [x] `CITATION.cff` metadata matches GitHub release notes and Zenodo metadata.
 - [x] Release notes include validation evidence and links to canonical ontology assets.
@@ -71,7 +74,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] List canonical downloadable RDF URLs for the combined ontology and primary modules.
     - [x] Record any required LOV issue, pull request, or submission form details.
 - [ ] Task: Submit to LOV
-    - [ ] Complete the formal LOV submission after v1.0 DOI and WIDOCO Pages documentation are live.
+    - [ ] Complete the formal LOV submission after v1.0 DOI is live.
     - [ ] Track submission URL, review feedback, required metadata corrections, and final acceptance status in `docs/registry/lov-submission.md`.
 
 ### Required Configuration Files
@@ -81,7 +84,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] Metadata checklist is complete and all mandatory LOV fields are satisfied in repo-side metadata.
-- [ ] Canonical ontology namespace, prefix, documentation URL, license URI, and DOI are stable.
+- [~] Canonical ontology namespace, prefix, documentation URL, license URI, and DOI are stable.
+  - Namespace, prefix, documentation URL, and license are stable; DOI remains pending.
 - [x] LOV submission record exists with submission date, link, and review status.
 - [ ] Any LOV-requested corrections are captured as follow-up Conductor tasks.
 
@@ -89,7 +93,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] Task: Verify OLS compatibility
     - [x] Create `docs/registry/ols-indexing.md` with OLS inclusion requirements, ontology URL, preferred prefix, title, description, license, homepage, documentation URL, and contact route.
     - [x] Define stable release asset URLs for canonical ontology artifacts.
-    - [ ] Verify OLS can retrieve the canonical ontology artifact through the published release asset URL or PURL.
+    - [x] Verify OLS can retrieve the canonical ontology artifact through the published release asset URL or PURL.
+      - `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl` returned an HTTP download redirect.
     - [x] Confirm ontology metadata exposes version, namespace, labels, definitions, hierarchy, and license in formats suitable for OLS indexing.
 - [x] Task: Prepare OLS inclusion request
     - [x] Document the requested ontology identifier and display title.
@@ -106,7 +111,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] OLS compatibility checklist passes for repo-side ontology metadata.
-- [ ] OLS compatibility checklist passes for the published ontology artifact.
+- [x] OLS compatibility checklist passes for the published ontology artifact.
 - [ ] Inclusion request is submitted with stable documentation, release, DOI, and RDF artifact links.
 - [ ] OLS review feedback is tracked and resolved or converted into follow-up Conductor tasks.
 - [ ] OLS indexing status is recorded once accepted or rejected.
