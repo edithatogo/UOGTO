@@ -29,6 +29,6 @@ graph TD
 - **Real-time 3D Graphics**: Strictly limited to 2D network node graphs and tables.
 
 ## Acceptance Criteria
-- [ ] Runner parses and executes a standard NormalFormGame or MarkovGame graph.
-- [ ] Streamlit interface successfully displays graph statistics, nodes, and SHACL compliance.
-- [ ] LLM agent can act as a player in a simulated round with recorded event output.
+- [x] Runner parses and executes a standard NormalFormGame or MarkovGame graph.
+- [x] Streamlit interface successfully displays graph statistics, nodes, and SHACL compliance.
+- [x] LLM agent can act as a player in a simulated round with recorded event output.
