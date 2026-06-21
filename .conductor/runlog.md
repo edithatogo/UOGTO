@@ -1,5 +1,12 @@
 # Conductor Run Log
 
+## [2026-06-21] - Conductor Status Normalization and CI Hardening
+- Reconciled completed scoping-review execution track metadata with checked implementation plans.
+- Marked systematic literature review planning as superseded by the completed protocol and execution-paper tracks, then prepared it for archive.
+- Checked repository-maintenance acceptance criteria after maintenance scripts and tests were verified.
+- Added Linux Pixi platform support, cross-platform Pixi discovery, semantic audit/report generation in checks, and scheduled maintenance PR creation.
+- Added pytest sandbox cache directories to `.gitignore`.
+
 ## [2026-06-21] - Repository Maintenance and Remote Automation
 - Initialized Pixi package manager configurations (`pixi.toml`).
 - Created `scripts/maintenance/check_github.py` to query issues/PRs from remote and generate statuses.

@@ -1,8 +1,17 @@
 import subprocess
 import sys
 import os
+import shutil
 
-PIXI_PATH = r"C:\Users\60217257\AppData\Local\pixi\bin\pixi.exe"
+WINDOWS_PIXI_PATH = r"C:\Users\60217257\AppData\Local\pixi\bin\pixi.exe"
+
+def pixi_command():
+    found = shutil.which("pixi")
+    if found:
+        return found
+    if os.name == "nt" and os.path.exists(WINDOWS_PIXI_PATH):
+        return WINDOWS_PIXI_PATH
+    return "pixi"
 
 def run_cmd(cmd):
     try:
@@ -17,6 +26,8 @@ def run_cmd(cmd):
         return False
 
 def main():
+    pixi = pixi_command()
+
     # Integrate protective disk space check
     from scripts.maintenance.disk_guard import check_disk_space, clean_caches
     if not check_disk_space():
@@ -27,13 +38,12 @@ def main():
 
     print("Updating project dependencies to bleeding edge...")
     # Update command
-    if not run_cmd([PIXI_PATH, "update"]):
+    if not run_cmd([pixi, "update"]):
         print("Dependency update failed.", file=sys.stderr)
         sys.exit(1)
         
-    print("Running project validation tests...")
-    # Run test command
-    if not run_cmd([PIXI_PATH, "run", "test"]):
+    print("Running project validation, tests, semantic audit, and HTML report generation...")
+    if not run_cmd([pixi, "run", "check"]):
         print("Validation tests failed post-update! Reverting changes is recommended.", file=sys.stderr)
         sys.exit(1)
         

@@ -43,8 +43,8 @@ graph TD
 - **Fully Automated PDF Article Downloader**: Downloading full-text PDFs (due to publisher firewalls and licensing limits).
 
 ## Acceptance Criteria
-- [ ] Systematic review protocol documented using PRISMA-P guidelines.
-- [ ] Multi-database search script successfully downloads structured JSON/CSV data.
-- [ ] Deduplication logic matches and resolves duplicate records.
-- [ ] NLP extraction logic isolates candidate games and variables from abstracts.
-- [ ] Ontological mapping report generates coverage matrices for UOGTO.
+- [x] Systematic review protocol documented using PRISMA-P guidelines.
+- [x] Multi-database search script successfully downloads structured JSON/CSV data.
+- [x] Deduplication logic matches and resolves duplicate records.
+- [x] NLP extraction logic isolates candidate games and variables from abstracts.
+- [x] Ontological mapping report generates coverage matrices for UOGTO.

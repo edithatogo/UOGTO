@@ -35,8 +35,8 @@ graph TD
 - **Direct journal upload**: Automated submission to journals (strictly compiles locally for arXiv).
 
 ## Acceptance Criteria
-- [ ] Deduplication cleans overlapping records.
-- [ ] active learning screenings and math parsing function correctly.
-- [ ] Ontological mapping report generates clear gaps table.
-- [ ] Turtle patches generated for all gaps.
-- [ ] arXiv paper drafted at `docs/paper/paper.tex`.
+- [x] Deduplication cleans overlapping records.
+- [x] Active learning screenings and math parsing function correctly.
+- [x] Ontological mapping report generates clear gaps table.
+- [x] Turtle patches generated for all gaps.
+- [x] arXiv paper drafted at `docs/paper/paper.tex`.

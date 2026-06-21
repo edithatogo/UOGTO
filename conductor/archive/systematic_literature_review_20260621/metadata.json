@@ -1,0 +1,9 @@
+{
+  "track_id": "systematic_literature_review_20260621",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-06-21T19:45:24Z",
+  "updated_at": "2026-06-21T22:15:00Z",
+  "description": "Establish systematic and scoping literature review workflows using PRISMA checklists, public database API search, deduplication, NLP concept extraction, and UOGTO ontological validation mappings.",
+  "resolution": "Superseded by scoping_review_protocol_20260621 and scoping_review_execution_paper_20260621; archived after artifacts were verified."
+}

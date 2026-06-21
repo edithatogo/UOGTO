@@ -65,7 +65,26 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Link**: [./tracks/repo_maintenance_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/repo_maintenance_20260621/)
 
 
-## [~] Track: scoping_review_execution_paper_20260621
+## [x] Track: scoping_review_execution_paper_20260621
 - **Description**: Execute the scoping review search, deduplicate results, run active learning and NLP classifiers, map gaps to UOGTO, and draft the academic paper manuscript for arXiv release.
-- **Status**: In Progress
+- **Status**: Completed
 - **Link**: [./tracks/scoping_review_execution_paper_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/scoping_review_execution_paper_20260621/)
+
+## Archived Tracks
+
+These tracks are retained for audit history but are no longer active work items.
+
+## [x] Archived Track: systematic_literature_review_20260621
+- **Description**: Establish systematic and scoping literature review workflows using PRISMA checklists, public database API search, deduplication, NLP concept extraction, and UOGTO ontological validation mappings.
+- **Status**: Completed; superseded by `scoping_review_protocol_20260621` and `scoping_review_execution_paper_20260621`.
+- **Link**: [./archive/systematic_literature_review_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/systematic_literature_review_20260621/)
+
+## [x] Archived Track: maintenance_improvements_20260621
+- **Description**: Retired maintenance-improvement planning track consolidated into `repo_maintenance_20260621`.
+- **Status**: Archived.
+- **Link**: [./archive/maintenance_improvements_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/maintenance_improvements_20260621/)
+
+## [x] Archived Track: executable_simulation_visualizer_20260621
+- **Description**: Retired executable-simulation visualizer planning track.
+- **Status**: Archived.
+- **Link**: [./archive/executable_simulation_visualizer_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/executable_simulation_visualizer_20260621/)

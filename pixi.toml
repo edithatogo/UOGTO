@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Universal Open Game Theory Ontology"
 authors = ["UOGTO Contributors"]
 channels = ["conda-forge"]
-platforms = ["win-64"]
+platforms = ["win-64", "linux-64"]
 
 [dependencies]
 python = ">=3.10"
@@ -15,5 +15,9 @@ pyyaml = ">=6.0.1"
 ruff = ">=0.3.0"
 
 [tasks]
+build = "python scripts/build.py"
 test = "pytest"
 validate = "make validate"
+audit-semantics = "python scripts/maintenance/audit_semantics.py"
+html-report = "python scripts/maintenance/generate_html_report.py"
+check = "python scripts/validate.py && pytest && python scripts/maintenance/audit_semantics.py && python scripts/maintenance/generate_html_report.py"

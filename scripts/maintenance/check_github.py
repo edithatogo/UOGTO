@@ -5,7 +5,8 @@ import urllib.error
 import sys
 import os
 
-REPO = "legal-nz/UOGTO"
+DEFAULT_REPO = "legal-nz/UOGTO"
+REPO = os.environ.get("GITHUB_REPOSITORY", DEFAULT_REPO)
 OUTPUT_FILE = "conductor/remote_status.md"
 
 def run_cmd(cmd):
@@ -15,14 +16,33 @@ def run_cmd(cmd):
     except (subprocess.CalledProcessError, FileNotFoundError):
         return None
 
-def get_via_gh():
+def repo_from_remote(remote_url):
+    if not remote_url:
+        return None
+    cleaned = remote_url.strip()
+    if cleaned.endswith(".git"):
+        cleaned = cleaned[:-4]
+    if cleaned.startswith("git@github.com:"):
+        return cleaned.split(":", 1)[1]
+    marker = "github.com/"
+    if marker in cleaned:
+        return cleaned.split(marker, 1)[1]
+    return None
+
+def resolve_repo_slug():
+    if os.environ.get("GITHUB_REPOSITORY"):
+        return os.environ["GITHUB_REPOSITORY"]
+    remote = run_cmd(["git", "config", "--get", "remote.origin.url"])
+    return repo_from_remote(remote) or DEFAULT_REPO
+
+def get_via_gh(repo=REPO):
     # Verify gh auth
     auth = run_cmd(["gh", "auth", "status"])
     if not auth:
         return None, None
     
-    issues_raw = run_cmd(["gh", "issue", "list", "--repo", REPO, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
-    prs_raw = run_cmd(["gh", "pr", "list", "--repo", REPO, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
+    issues_raw = run_cmd(["gh", "issue", "list", "--repo", repo, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
+    prs_raw = run_cmd(["gh", "pr", "list", "--repo", repo, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
     
     if issues_raw is None or prs_raw is None:
         return None, None
@@ -34,8 +54,8 @@ def get_via_gh():
     except json.JSONDecodeError:
         return None, None
 
-def get_via_api():
-    url = f"https://api.github.com/repos/{REPO}/issues?state=open&per_page=30"
+def get_via_api(repo=REPO):
+    url = f"https://api.github.com/repos/{repo}/issues?state=open&per_page=30"
     headers = {"User-Agent": "UOGTO-Maintenance-Agent"}
     token = os.environ.get("GITHUB_TOKEN")
     if token:
@@ -101,15 +121,17 @@ def write_fallback_summary(reason):
     print(f"Fallback summary written to {OUTPUT_FILE}")
 
 def main():
+    repo = resolve_repo_slug()
     print("Checking remote repository status...")
-    issues, prs = get_via_gh()
+    print(f"Repository: {repo}")
+    issues, prs = get_via_gh(repo)
     if issues is None or prs is None:
         print("gh CLI not authenticated or failed. Falling back to public GitHub API...")
-        issues, prs = get_via_api()
+        issues, prs = get_via_api(repo)
         
     if issues is None and prs is None:
         print("Failed to fetch remote repository data. Writing fallback summary...")
-        write_fallback_summary("Repository not found or API access limits exceeded.")
+        write_fallback_summary(f"Repository '{repo}' not found, no remote configured, or API access limits exceeded.")
         sys.exit(0)
         
     write_summary(issues, prs)

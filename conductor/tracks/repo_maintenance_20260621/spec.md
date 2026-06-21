@@ -34,8 +34,8 @@ graph TD
 - **Auto-merging PRs**: Automatic merging of remote pull requests without developer review.
 
 ## Acceptance Criteria
-- [ ] Pixi-based dependency check and update scripts are functional.
-- [ ] GitHub CLI / agent integration for remote issue and PR queries functions and creates summary files.
-- [ ] A Makefile target or custom task validates repository health post-maintenance.
-- [ ] Auto-changelog generation tool outputs correct Markdown format.
-- [ ] Test cases run successfully on the new maintenance scripts.
+- [x] Pixi-based dependency check and update scripts are functional.
+- [x] GitHub CLI / agent integration for remote issue and PR queries functions and creates summary files.
+- [x] A Makefile target or custom task validates repository health post-maintenance.
+- [x] Auto-changelog generation tool outputs correct Markdown format.
+- [x] Test cases run successfully on the new maintenance scripts.
