@@ -58,3 +58,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Description**: Build combined assets, run SHACL validations, run queries, and prepare documentation.
 - **Status**: Completed
 - **Link**: [./tracks/uogto_release_validation_20260620/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_release_validation_20260620/)
+
+## [ ] Track: repo_maintenance_20260621
+- **Description**: Create skills, tools, workflows and agents which will help with maintenance, updating the repo, ensuring everything is bleeding edge, checking for any new issues or PRs on the remote repo.
+- **Status**: New
+- **Link**: [./tracks/repo_maintenance_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/repo_maintenance_20260621/)
+
