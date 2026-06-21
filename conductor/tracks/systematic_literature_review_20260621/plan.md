@@ -15,15 +15,17 @@ This plan details the phases for building, executing, and documenting the litera
 - [ ] Task: Implement deduplication scripts
     - [ ] Create `scripts/review/deduplicate.py` matching DOIs, titles, and authors
 - [ ] Task: Implement NLP Game theory extraction
-    - [ ] Create `scripts/review/extract_concepts.py` utilizing text classification/embeddings to identify game definitions, matrices, and variables
     - [ ] Implement semantic embedding clustering (sentence-transformers) to group abstracts
-- [ ] Task: Build Active Learning and LaTeX parsing utilities
+    - [ ] Create temporal semantic drift calibrator to adjust historical era classifications
+- [ ] Task: Build Active Learning, Snowballing, and Equation Parsing Utilities
     - [ ] Implement active learning loop (`scripts/review/active_screening.py`) to rank abstracts based on eligibility choices
-    - [ ] Implement `scripts/review/parse_math.py` to extract LaTeX equation strings from text
+    - [ ] Implement `scripts/review/parse_math.py` to extract LaTeX, MathML, Quarto, and Typst equation strings from text
+    - [ ] Implement `scripts/review/snowball.py` to execute citation network snowballing via OpenAlex
 
 ## Phase 3: Triangulation & UOGTO Mappings
 - [ ] Task: Formulate formula triangulation script
-    - [ ] Parse extracted math representations and verify properties
-- [ ] Task: Generate UOGTO coverage reports
+    - [ ] Parse extracted math representations (LaTeX, MathML, Typst, Quarto) and verify properties
+- [ ] Task: Generate UOGTO coverage reports & RDF patches
     - [ ] Compile L2O Graph representing extracted literature
     - [ ] Run SPARQL coverage query checks (`scripts/review/verify_ontology_coverage.py`) aligning L2O and UOGTO, outputting gaps
+    - [ ] Implement RDF patch generator (`scripts/review/generate_rdf_patch.py`) to draft Turtle (.ttl) files for identified gaps

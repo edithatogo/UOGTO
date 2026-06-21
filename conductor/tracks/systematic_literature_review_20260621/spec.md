@@ -26,9 +26,12 @@ graph TD
 ### Should Have
 - **NLP Concept Classifier**: Script using TF-IDF/embeddings or regex rules to flag candidate game forms, payoff matrix strings, and parameters.
 - **Active Learning Screening Loop**: Ranker learning developer eligibility choices to prioritize relevant abstracts.
-- **LaTeX/MathML Equation Parser**: Extracts LaTeX math representations of payoffs and variables from text fields.
+- **Multi-format Equation Parser**: Extracts LaTeX, MathML, Quarto, and Typst mathematical representations from text fields.
 - **Semantic Embedding Clustering**: Vectors-based clustering of abstracts using sentence-transformers to identify hidden game forms.
 - **Formula Triangulation**: Parser comparing identified mathematical game equations against target ontological classifications.
+- **Automated Snowballing Search**: Script querying citation networks (forward/backward) via OpenAlex to expand search.
+- **Temporal Semantic Drift Detection**: Adjusts terminology classification boundaries across historical publication eras.
+- **RDF Ontological Patch Generator**: LLM/template-assisted generator drafting Turtle (.ttl) class structures for identified gaps.
 
 ### Could Have
 - **Interactive Review Dashboard**: Simple markdown or web-based UI to browse extracted articles and their mapping status.
