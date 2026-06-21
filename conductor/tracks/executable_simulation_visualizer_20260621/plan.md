@@ -15,6 +15,6 @@ This plan outlines the deployment of runtimes, interactive playgrounds, and LLM 
     - [x] Integrate graph layout libraries (e.g., NetworkX, pyvis) to render states and node graphs
 
 ## Phase 3: LLM Player Benchmarking
-- [ ] Task: Build LLM Agent Player Harness
-    - [ ] Create API connectors querying LLM agents for choices in simulated UOGTO games
-    - [ ] Record game traces and verify behavioral metrics
+- [x] Task: Build LLM Agent Player Harness
+    - [x] Create API connectors querying LLM agents for choices in simulated UOGTO games
+    - [x] Record game traces and verify behavioral metrics

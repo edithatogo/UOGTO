@@ -102,5 +102,13 @@ class TestRDFGameRunner(unittest.TestCase):
         self.assertEqual(payoffs.get("http://example.org/alice"), 3.0)
         self.assertEqual(payoffs.get("http://example.org/bob"), 3.0)
 
+    def test_llm_player_bench(self):
+        from uogto.runner.llm_player import LLMPlayerBench
+        bench = LLMPlayerBench(self.ttl_path)
+        res = bench.run_session("http://example.org/prisoners-dilemma")
+        self.assertIn("choices", res)
+        self.assertIn("payoffs", res)
+        self.assertEqual(res["payoffs"].get("http://example.org/alice"), 3.0)
+
 if __name__ == "__main__":
     unittest.main()
