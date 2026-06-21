@@ -17,6 +17,9 @@
 - Maintenance rerun `27915165068` passed end to end after PR creation was made non-fatal.
 - Verified `Validate UOGTO` run `27915121389` and `Build WIDOCO Pages` run `27915121386` passed for commit `2f74af8`.
 - Confirmed the successful maintenance run passed `Build Live Publication Status` and `Upload Live Publication Status Artifact`; GitHub still annotates repository PR permission denial and Pixi cache restore warnings, but they are non-blocking for publication monitoring.
+- Checked upstream action releases after run `27915165068`: `actions/upload-artifact` latest `v7.0.1`, `peter-evans/create-pull-request` latest `v8.1.1`, and `prefix-dev/setup-pixi` latest `v0.9.6`.
+- Updated the maintenance workflow pins to `actions/upload-artifact@v7`, `peter-evans/create-pull-request@v8`, and `prefix-dev/setup-pixi@v0.9.6`, with workflow contract tests covering the pins.
+- Verified `python -m pytest tests\test_maintenance_workflow.py`, `make release-preflight`, `make validate`, and `make test` after the pin refresh.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.

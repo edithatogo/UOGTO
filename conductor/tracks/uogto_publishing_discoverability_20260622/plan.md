@@ -144,6 +144,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add live publication status observations for Pages, release assets, and Zenodo DOI search to scheduled maintenance.
     - [x] Fold w3id PR and redirect observations into the consolidated live publication status packet.
     - [x] Upload scheduled live publication status JSON as a CI artifact for review.
+    - [x] Refresh maintenance workflow action pins after successful live-status artifact verification surfaced Node.js 20 deprecation annotations.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -184,3 +185,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
   - Third manual maintenance dispatch reached and passed live status artifact upload, then failed in `create-pull-request` because checkout credentials produced a duplicate GitHub Authorization header; maintenance checkout credential persistence is disabled.
   - Fourth manual maintenance dispatch reached and passed live status artifact upload, then failed because repository settings do not permit GitHub Actions to create pull requests; PR creation is made non-fatal.
   - Fifth manual maintenance dispatch `27915165068` passed end to end, including `Build Live Publication Status` and `Upload Live Publication Status Artifact`; the PR permission denial remains as a non-blocking annotation.
+- [x] Maintenance workflow action pins are refreshed to `actions/upload-artifact@v7`, `peter-evans/create-pull-request@v8`, and `prefix-dev/setup-pixi@v0.9.6` after checking current upstream releases; local workflow contract tests, `make release-preflight`, `make validate`, and `make test` passed.
