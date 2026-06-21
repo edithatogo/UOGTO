@@ -46,6 +46,18 @@ class TestManuscriptBuild(unittest.TestCase):
         self.assertFalse(result["compiled"])
         self.assertIn("No LaTeX engine found", result["skipped"])
 
+    def test_manuscript_pdf_workflow_runs_strict_gate(self):
+        workflow = Path('.github/workflows/manuscript-pdf.yml').read_text(encoding='utf-8')
+        for expected in [
+            'name: Build Manuscript PDF',
+            'actions/checkout@v7',
+            'actions/setup-python@v6',
+            'latexmk',
+            'texlive-latex-base',
+            'make manuscript-pdf',
+        ]:
+            self.assertIn(expected, workflow)
+
     def test_build_check_fails_without_engine_when_pdf_required(self):
         self.write_valid_paper()
         with mock.patch("scripts.maintenance.build_manuscript_pdf.find_latex_engine", return_value=None):

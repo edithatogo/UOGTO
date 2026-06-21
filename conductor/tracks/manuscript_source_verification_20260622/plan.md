@@ -19,6 +19,7 @@
   - Check local LaTeX citation-key drift: `make manuscript-check` or `pixi run manuscript-check`.
   - Check manuscript TeX build readiness: `make manuscript-build` or `pixi run manuscript-build`.
   - Require strict PDF compilation on a LaTeX-equipped release machine: `make manuscript-pdf` or `pixi run manuscript-pdf`.
+  - Run the strict PDF gate in CI through `.github/workflows/manuscript-pdf.yml`, which installs LaTeX and executes `make manuscript-pdf`.
   - Validate CSL: `sourceright validate-csl --json docs/paper/references.csl.json`.
   - Generate report: `sourceright report .sourceright`.
   - Reconcile citations: `sourceright citations docs/paper/manuscript-citations.txt .sourceright`.
@@ -31,4 +32,4 @@
   - `make manuscript-pdf` requires a LaTeX engine and fails explicitly when PDF output cannot be produced.
 - [x] Task: Run repository validation gates after source artifacts are added.
   - Focused manuscript source/build tests passed, `make manuscript-build` passed, `make manuscript-sourcecheck` passed, `make validate` passed, and `make test` passed.
-  - Pixi tasks are wired for `manuscript-check`, `manuscript-build`, `manuscript-pdf`, and `manuscript-sourcecheck`. PDF compilation is not claimed because no local TeX engine is installed.
+  - Pixi tasks are wired for `manuscript-check`, `manuscript-build`, `manuscript-pdf`, and `manuscript-sourcecheck`. A GitHub Actions workflow now provides a LaTeX-equipped strict PDF lane; local Windows PDF compilation is still not claimed because no local TeX engine is installed.

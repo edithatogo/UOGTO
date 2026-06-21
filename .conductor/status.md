@@ -32,7 +32,7 @@
 - DOI recording is scripted with `python scripts/maintenance/record_zenodo_doi.py <doi>` to update release notes, registry packets, `CITATION.cff`, and `.zenodo.json` after Zenodo minting.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
-- Strict manuscript PDF generation requires a release machine with `latexmk`, `tectonic`, or `pdflatex`; the repository now has `make manuscript-build` and `make manuscript-pdf` gates.
+- Strict manuscript PDF generation requires a LaTeX engine; the repository now has `make manuscript-build`, `make manuscript-pdf`, and a GitHub Actions workflow that installs LaTeX and runs the strict PDF gate.
 
 ## Next Recommended Task
 - Continue `uogto_publishing_discoverability_20260622` for release, DOI, release-asset, LOV, and OLS live gates before treating the project as publication-ready.
@@ -42,7 +42,7 @@
 - SourceRight CSL validation passes for docs/paper/references.csl.json.
 - SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 0 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation output is captured at docs/paper/sourceright-citations.md with 11 citation occurrences, 11 matched citations, and 0 issues.
-- Open: strict PDF generation on a LaTeX-equipped release machine remains pending.
+- Open: strict PDF generation is now wired for CI; current local Windows machine still lacks a TeX engine.
 
 ## Publishing Live Verification - 2026-06-22
 - Recorded `Validate UOGTO` GitHub Actions run `27911050014` passed for commit `850bfab`.
