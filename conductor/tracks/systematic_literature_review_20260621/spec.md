@@ -32,6 +32,9 @@ graph TD
 - **Automated Snowballing Search**: Script querying citation networks (forward/backward) via OpenAlex to expand search.
 - **Temporal Semantic Drift Detection**: Adjusts terminology classification boundaries across historical publication eras.
 - **RDF Ontological Patch Generator**: LLM/template-assisted generator drafting Turtle (.ttl) class structures for identified gaps.
+- **Multi-modal Payoff Matrix Parser**: Extracts normal form grid cells and payoff matrices from visual PDF tables/images.
+- **Cross-ontology Alignment Validation**: Maps literature concepts to Wikidata, SUMO, or DOLCE upper ontologies.
+- **CI Literature Watchdog**: Scheduled Action querying preprint platforms monthly for newly published game variants.
 
 ### Could Have
 - **Interactive Review Dashboard**: Simple markdown or web-based UI to browse extracted articles and their mapping status.
