@@ -24,7 +24,7 @@
 
 ## Known Gaps
 - Zenodo account-side GitHub integration and DOI minting remain external release steps.
-- WIDOCO Pages workflow is configured; deployment is now gated by `ENABLE_PAGES_DEPLOY=true` because live GitHub Actions runs reached artifact upload but failed deployment while Pages was not enabled.
+- WIDOCO Pages workflow is green for artifact generation: run `27910154887` built WIDOCO HTML and uploaded the Pages artifact successfully; deployment remains gated by `ENABLE_PAGES_DEPLOY=true` until Pages is enabled.
 - Published RDF artifact retrieval still needs verification after the `v1.0.0` release asset workflow runs.
 - LOV submission and OLS indexing remain external registry steps after DOI and Pages documentation are live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; three manuscript source records remain queued for final expert metadata review.
@@ -39,3 +39,8 @@
 - SourceRight report is captured at docs/paper/sourceright-report.md with 11 manuscript references, 3 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
 - SourceRight citation reconciliation output is captured at docs/paper/sourceright-citations.md with 11 citation occurrences, 11 matched citations, and 0 issues.
 - Open: final expert metadata review and strict PDF generation on a LaTeX-equipped release machine remain pending.
+
+## Publishing Live Verification - 2026-06-22
+- Latest `Validate UOGTO` GitHub Actions run `27910154892` passed for commit `000df52`.
+- Latest `Build WIDOCO Pages` GitHub Actions run `27910154887` passed the build/artifact job for commit `000df52`; deploy was skipped because `ENABLE_PAGES_DEPLOY` is not set to `true`.
+- Open: enable GitHub Pages in repository settings, set `ENABLE_PAGES_DEPLOY=true`, create `v1.0.0`, then verify Zenodo DOI, release assets, LOV, and OLS.

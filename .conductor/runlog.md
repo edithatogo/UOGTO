@@ -57,6 +57,7 @@
 ## [2026-06-22] - WIDOCO Pages Deployment Gate
 - Checked live GitHub Actions after push: validation passed, WIDOCO artifact generation reached Pages deployment, and deploy failed with GitHub API 404 because Pages is not enabled for the repository.
 - Gated the deploy job behind repository variable `ENABLE_PAGES_DEPLOY=true` so push workflows can keep validating and uploading WIDOCO artifacts until Pages is enabled in repository settings.
+- Verified the follow-up push: `Validate UOGTO` run `27910154892` passed, and `Build WIDOCO Pages` run `27910154887` passed the WIDOCO build/artifact job with deploy skipped by the gate.
 
 ## [2026-06-21] - Conductor Status Normalization and CI Hardening
 - Reconciled completed scoping-review execution track metadata with checked implementation plans.

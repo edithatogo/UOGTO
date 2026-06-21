@@ -52,8 +52,10 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - `docs/widoco/README.md`
 
 ### Acceptance Criteria
-- [~] WIDOCO runs successfully in CI on the canonical ontology inputs.
-- [~] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
+- [x] WIDOCO runs successfully in CI on the canonical ontology inputs.
+  - GitHub Actions run `27910154887` passed the WIDOCO build job on 2026-06-21 UTC after commit `000df52`.
+- [x] Generated HTML includes ontology metadata, class/property documentation, namespace declarations, and license information.
+  - The same run generated WIDOCO HTML from `dist/uogto.ttl` and uploaded the Pages artifact successfully.
 - [ ] GitHub Pages deploys the generated documentation for the latest `master` build and release tags after Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set.
 - [x] Documentation links are stable and included in the v1.0 release notes.
 
@@ -125,5 +127,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 ### Acceptance Criteria
 - [x] Publishing gate is documented and enforced before v1.0 release.
 - [x] Scheduled maintenance runs registry documentation link checks with known unpublished release URLs explicitly allowed.
-- [ ] Continuous documentation generation remains green after ontology changes.
+- [x] Continuous documentation generation remains green after ontology changes.
+  - `Build WIDOCO Pages` run `27910154887` passed after the deployment gate change; deploy was skipped until Pages is enabled.
 - [x] DOI, documentation, LOV, and OLS statuses are visible from Conductor status.
