@@ -20,6 +20,8 @@
 - Checked upstream action releases after run `27915165068`: `actions/upload-artifact` latest `v7.0.1`, `peter-evans/create-pull-request` latest `v8.1.1`, and `prefix-dev/setup-pixi` latest `v0.9.6`.
 - Updated the maintenance workflow pins to `actions/upload-artifact@v7`, `peter-evans/create-pull-request@v8`, and `prefix-dev/setup-pixi@v0.9.6`, with workflow contract tests covering the pins.
 - Verified `python -m pytest tests\test_maintenance_workflow.py`, `make release-preflight`, `make validate`, and `make test` after the pin refresh.
+- Verified push commit `7a35ff4`: `Validate UOGTO` run `27915341380` passed and `Build WIDOCO Pages` run `27915341370` passed and deployed.
+- Verified manual maintenance dispatch `27915375191` passed end to end with refreshed action pins, including live publication-status artifact upload; the previous Node.js 20 deprecation annotation is gone, leaving only the nonfatal repository PR-permission annotation.
 
 ## [2026-06-22] - w3id Live Publication Status Integration
 - Folded w3id pull request and redirect observations into `build_publication_status.py --live`.
