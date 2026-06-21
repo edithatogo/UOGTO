@@ -1,5 +1,9 @@
 # Conductor Run Log
 
+## [2026-06-22] - Pixi Release Preflight Registry Packet Alignment
+- Updated `pixi run release-preflight` to build `dist/registry-handoff.json` before running release readiness checks, matching `make release-preflight`.
+- Verified focused registry/release-readiness tests, `make release-preflight`, `make validate`, and `make test`.
+
 ## [2026-06-22] - Manuscript PDF CI Gate
 - Added `.github/workflows/manuscript-pdf.yml` to install a minimal LaTeX toolchain on Ubuntu and run `make manuscript-pdf`.
 - Added a workflow wiring test so the strict manuscript PDF CI lane keeps using current GitHub actions and the repository `make manuscript-pdf` target.
