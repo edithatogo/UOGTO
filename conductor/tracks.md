@@ -69,12 +69,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: New
 - **Link**: [./tracks/maintenance_improvements_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/maintenance_improvements_20260621/)
 
-## [x] Track: scoping_review_protocol_20260621
-- **Description**: Establish the systematic scoping review protocol using PRISMA-P and PRISMA-S guidelines, formulate eligibility rules, and build the multi-database API client.
-- **Status**: Completed
-- **Link**: [./tracks/scoping_review_protocol_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/scoping_review_protocol_20260621/)
-
-
 
 ## [ ] Track: scoping_review_execution_paper_20260621
 - **Description**: Execute the scoping review search, deduplicate results, run active learning and NLP classifiers, map gaps to UOGTO, and draft the academic paper manuscript for arXiv release.
