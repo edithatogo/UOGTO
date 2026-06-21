@@ -6,6 +6,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] Task: Configure Zenodo repository integration
     - [ ] Enable the GitHub-Zenodo repository link for `edithatogo/UOGTO`.
     - [ ] Verify Zenodo is configured to archive GitHub releases, not every branch push.
+    - [x] Add a release asset workflow so generated RDF, SHACL, JSON-LD, checksum, and manifest files are attached to `v1.0.0` before Zenodo archives the release.
     - [x] Document the release archive flow in `docs/releases/v1.0.md`.
 - [x] Task: Add citation metadata
     - [x] Create `CITATION.cff` with title, authors, repository URL, ontology URL, license, version, release date, and preferred citation.
@@ -20,10 +21,12 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - `CITATION.cff`
 - `.zenodo.json`
 - `docs/releases/v1.0.md`
+- `.github/workflows/release-assets.yml`
 
 ### Acceptance Criteria
 - [ ] Zenodo shows `edithatogo/UOGTO` as enabled for release archiving.
 - [ ] A GitHub `v1.0.0` release creates a Zenodo archive and DOI.
+- [x] Release asset packaging is automated for generated ontology, shape, context, checksum, and manifest files.
 - [x] `CITATION.cff` metadata matches GitHub release notes and Zenodo metadata.
 - [x] Release notes include validation evidence and links to canonical ontology assets.
 
@@ -80,7 +83,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 ## Phase 4: Ontology Lookup Service Indexing
 - [~] Task: Verify OLS compatibility
     - [x] Create `docs/registry/ols-indexing.md` with OLS inclusion requirements, ontology URL, preferred prefix, title, description, license, homepage, documentation URL, and contact route.
-    - [ ] Verify OLS can retrieve the canonical ontology artifact through a stable raw URL, release asset URL, or PURL.
+    - [x] Define stable release asset URLs for canonical ontology artifacts.
+    - [ ] Verify OLS can retrieve the canonical ontology artifact through the published release asset URL or PURL.
     - [x] Confirm ontology metadata exposes version, namespace, labels, definitions, hierarchy, and license in formats suitable for OLS indexing.
 - [x] Task: Prepare OLS inclusion request
     - [x] Document the requested ontology identifier and display title.

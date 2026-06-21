@@ -23,6 +23,6 @@
 ## Phase 4: Verification
 - [~] Task: Run SourceRight CSL validation and citation reconciliation.
   - CSL validation passed. Citation reconciliation ran but reports zero detected citation occurrences.
-- [x] Task: Run manuscript build/check command once available.
+- [ ] Task: Run manuscript build/check command once available.
 - [x] Task: Run repository validation gates after source artifacts are added.
-  - Focused manuscript source tests passed, and the commit hook ran the repository validation gate successfully for commit `f6f40a6`.
+  - Focused manuscript source tests passed, `make validate` passed, and the commit hook ran the repository validation gate successfully for commit `e90946b`.

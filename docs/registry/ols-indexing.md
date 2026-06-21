@@ -16,10 +16,10 @@ Not yet submitted. Submit after v1.0 release assets, WIDOCO documentation, and Z
 - Maintainer route: GitHub issues on `edithatogo/UOGTO`
 
 ## Candidate Artifact URLs
-- Merged ontology release asset: `TBD after v1.0.0 release`
-- Merged ontology repository path: <https://github.com/edithatogo/UOGTO/blob/master/dist/uogto.ttl>
-- Raw merged ontology URL: <https://raw.githubusercontent.com/edithatogo/UOGTO/master/dist/uogto.ttl>
-- SHACL shapes release asset: `TBD after v1.0.0 release`
+- Merged ontology release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl>
+- SHACL shapes release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl>
+- Release checksums: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS>
+- Release asset manifest: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/release-assets-manifest.json>
 
 ## OLS Compatibility Checklist
 - [ ] Public ontology artifact URL is stable and fetchable.

@@ -2,10 +2,9 @@ import unittest
 from unittest.mock import patch, MagicMock
 import sys
 import os
+from pathlib import Path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from scripts.maintenance.check_github import get_via_gh, get_via_api, write_summary
-
-import os
 
 class TestCheckGithub(unittest.TestCase):
     @patch('scripts.maintenance.check_github.run_cmd')
@@ -39,12 +38,14 @@ class TestCheckGithub(unittest.TestCase):
     def test_write_summary(self):
         issues = [{"number": 1, "title": "A", "url": "u1", "updatedAt": "t1"}]
         prs = [{"number": 2, "title": "B", "url": "u2", "updatedAt": "t2"}]
-        
-        with patch('scripts.maintenance.check_github.OUTPUT_FILE', 'conductor/test_remote_status.md'):
+
+        output_file = Path(".tmp") / "test_remote_status.md"
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+
+        with patch('scripts.maintenance.check_github.OUTPUT_FILE', str(output_file)):
             write_summary(issues, prs)
-            self.assertTrue(os.path.exists('conductor/test_remote_status.md'))
-            with open('conductor/test_remote_status.md', 'r') as f:
+            self.assertTrue(output_file.exists())
+            with output_file.open('r') as f:
                 content = f.read()
                 self.assertIn("A", content)
                 self.assertIn("B", content)
-            os.remove('conductor/test_remote_status.md')

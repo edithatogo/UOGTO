@@ -66,8 +66,8 @@ CITATION_SCHEMA = {
         "title": {"type": "string", "minLength": 1},
         "version": {"type": "string", "minLength": 1},
         "date-released": {"type": "string", "format": "date"},
-        "url": {"type": "string", "format": "uri"},
-        "repository-code": {"type": "string", "format": "uri"},
+        "url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+        "repository-code": {"type": "string", "format": "uri", "pattern": "^https?://"},
         "license": {"const": "CC-BY-4.0"},
         "keywords": {
             "type": "array",

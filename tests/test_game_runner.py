@@ -1,14 +1,17 @@
 import unittest
 import os
-import tempfile
+import shutil
+import uuid
+from pathlib import Path
 from rdflib import Graph
 from uogto.runner.engine import RDFGameRunner, UOGTO
 
 class TestRDFGameRunner(unittest.TestCase):
     def setUp(self):
         # We will create a temporary Turtle file containing a simple NormalFormGame specification
-        self.temp_dir = tempfile.TemporaryDirectory()
-        self.ttl_path = os.path.join(self.temp_dir.name, "test_game.ttl")
+        self.temp_dir = Path(".tmp") / f"test_game_runner_{uuid.uuid4().hex}"
+        self.temp_dir.mkdir(parents=True, exist_ok=True)
+        self.ttl_path = os.path.join(self.temp_dir, "test_game.ttl")
         
         # Write a simple game graph with Alice and Bob, action choices (Cooperate, Defect),
         # and payoff values mapping to action profiles.
@@ -70,7 +73,7 @@ class TestRDFGameRunner(unittest.TestCase):
         self.runner = RDFGameRunner(self.ttl_path)
 
     def tearDown(self):
-        self.temp_dir.cleanup()
+        shutil.rmtree(self.temp_dir, ignore_errors=True)
 
     def test_get_game_specification(self):
         specs = self.runner.get_game_specification()

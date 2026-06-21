@@ -1,0 +1,57 @@
+name: Publish Release Assets
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to attach assets to"
+        required: true
+        default: "v1.0.0"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Run release gates
+        run: |
+          make validate
+          make test
+          python scripts/maintenance/audit_semantics.py
+          make publishing-metadata
+          make registry-links
+
+      - name: Build release assets
+        run: make release-assets
+
+      - name: Upload assets to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          gh release upload "$RELEASE_TAG" \
+            dist/uogto.ttl \
+            dist/uogto-shapes.ttl \
+            dist/context.jsonld \
+            dist/core.context.jsonld \
+            dist/extensions.context.jsonld \
+            dist/release-assets-manifest.json \
+            dist/SHA256SUMS \
+            --clobber

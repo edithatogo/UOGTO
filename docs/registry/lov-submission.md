@@ -20,8 +20,9 @@ Not yet submitted. Submit after `v1.0.0` is published, the Zenodo DOI is minted,
 UOGTO is a modular OWL/SHACL ontology for game-theoretic semantics, including classical games, cooperative games, games of incomplete information, mechanism design, multi-agent reinforcement learning, network and continuous games, norms and contract theory, LLM/digital twin games, and executable knowledge graph bindings.
 
 ## Canonical RDF Downloads
-- Merged ontology: `dist/uogto.ttl` in the repository and v1.0 release assets.
-- SHACL shapes: `dist/uogto-shapes.ttl` in the repository and v1.0 release assets.
+- Merged ontology release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl>
+- SHACL shapes release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl>
+- Release checksums: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS>
 - Source modules: `ontologies/core/`, `ontologies/extensions/`, and `ontologies/alignments/`.
 
 ## LOV Checklist

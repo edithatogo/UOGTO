@@ -21,7 +21,9 @@ REQUIRED_STABLE_URLS = {
 REQUIRED_PUBLICATION_URLS = {
     "https://edithatogo.github.io/UOGTO/",
     "https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0",
-    "https://raw.githubusercontent.com/edithatogo/UOGTO/master/dist/uogto.ttl",
+    "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl",
+    "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl",
+    "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/SHA256SUMS",
 }
 
 PENDING_MARKERS = [
