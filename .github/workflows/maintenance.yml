@@ -39,6 +39,9 @@ jobs:
       - name: Check Zenodo DOI Status
         run: pixi run python scripts/maintenance/check_doi_status.py --live
 
+      - name: Check w3id Pull Request and Redirect Status
+        run: pixi run python scripts/maintenance/check_w3id_status.py --live
+
       - name: Create Maintenance Pull Request
         uses: peter-evans/create-pull-request@v6
         with:

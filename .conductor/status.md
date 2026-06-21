@@ -35,6 +35,7 @@
 - Registry link and release-readiness gates now require the public `registry-handoff.json` release asset URL in LOV/OLS packet docs.
 - Registry live-link checks now distinguish strict live mode from `--allow-unpublished`; w3id namespace redirects remain an external publication gate.
 - w3id redirect handoff is prepared in docs/registry/w3id-submission.md and make w3id-packet; release preflight now requires dist/w3id-redirect-handoff.json, and release-assets run 27913296574 attached the submitted-PR packet to v1.0.0. The external perma-id/w3id.org pull request is submitted at https://github.com/perma-id/w3id.org/pull/6238 and remains pending upstream merge/live redirect verification.
+- w3id PR and redirect monitoring is implemented with `make w3id-status`, `pixi run w3id-status-live`, and scheduled maintenance; live status currently reports PR open, merged=False, and w3id endpoints returning 404.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
@@ -61,4 +62,5 @@
 - w3id redirect pull request https://github.com/perma-id/w3id.org/pull/6238 is submitted; upstream merge and live redirect completion remain external.
 - Release-assets workflow dispatch run `27913296574` passed for `v1.0.0` and attached the submitted-PR `w3id-redirect-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
 - Release-assets workflow dispatch run 27913296574 passed for v1.0.0 and refreshed w3id-redirect-handoff.json; the downloaded asset contains status pending_external_w3id_merge and PR https://github.com/perma-id/w3id.org/pull/6238.
+- Live w3id monitor reports PR `6238` is open with `merged=False`, and `/uogto/`, `/uogto/core`, and `/uogto/extensions` still return 404 until upstream merge propagates.
 - Open: Zenodo DOI has not surfaced publicly yet; LOV and OLS submission remain blocked on DOI metadata.

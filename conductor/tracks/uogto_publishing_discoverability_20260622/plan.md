@@ -136,6 +136,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Add a machine-readable registry handoff packet generator for LOV/OLS submission metadata and pending DOI blockers.
     - [x] Add a w3id redirect submission document and machine-readable handoff packet for pending namespace redirects.
     - [x] Require and upload the w3id redirect handoff packet in release preflight and release-assets workflow configuration.
+    - [x] Add scheduled and local w3id PR/redirect status monitoring without requiring merge while the upstream PR remains open.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -164,3 +165,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] External w3id pull request submitted at https://github.com/perma-id/w3id.org/pull/6238; upstream merge and live redirect verification remain open.
 - [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` with submitted-PR state; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` on `v1.0.0` after PR submission; downloaded asset contains `pending_external_w3id_merge` and the PR URL.
+- [x] `make w3id-status` and `pixi run w3id-status-live` monitor PR merge state and live redirects; current live check reports PR open, merged=False, and pending w3id 404s.

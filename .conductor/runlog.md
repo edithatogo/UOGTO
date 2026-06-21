@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - w3id Status Monitor
+- Added `scripts/maintenance/check_w3id_status.py` plus Make, Pixi, and scheduled maintenance wiring for w3id PR and redirect monitoring.
+- Added tests covering the current pending-merge state and future strict failure modes for unmerged PRs and non-live redirects.
+- Verified `python scripts/maintenance/check_w3id_status.py --live` reports PR `6238` open, `merged=False`, and w3id `/uogto/`, `/uogto/core`, and `/uogto/extensions` returning 404 until upstream merge.
+
 ## [2026-06-22] - w3id Handoff Asset Refresh After PR Submission
 - Dispatched Publish Release Assets workflow run 27913296574 for v1.0.0 after submitting the upstream w3id pull request.
 - Verified the workflow passed release gates, rebuilt registry and w3id handoff packets, passed release preflight, and uploaded release assets.

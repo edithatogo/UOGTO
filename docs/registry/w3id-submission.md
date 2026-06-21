@@ -25,6 +25,7 @@ RewriteRule ^extensions/?$ https://edithatogo.github.io/UOGTO/ [R=303,L]
 - [x] Generate machine-readable handoff packet with `make w3id-packet`.
 - [x] Submit pull request to `perma-id/w3id.org`.
 - [x] Record w3id pull request URL.
+- [x] Add `make w3id-status` monitoring for the upstream PR and live redirects.
 - [ ] Verify `https://w3id.org/uogto/core#` returns a live redirect after merge.
 - [ ] Verify `https://w3id.org/uogto/extensions#` returns a live redirect after merge.
 - [ ] Remove pending w3id blocker from registry checklist after live verification.
@@ -33,3 +34,4 @@ RewriteRule ^extensions/?$ https://edithatogo.github.io/UOGTO/ [R=303,L]
 - Pull request URL: https://github.com/perma-id/w3id.org/pull/6238
 - Review status: Submitted; pending upstream review
 - Merge status: `TBD`
+- Monitoring command: `make w3id-status`; live check: `python scripts/maintenance/check_w3id_status.py --live`
