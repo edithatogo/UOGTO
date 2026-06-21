@@ -6,3 +6,7 @@ Universal Open Game Theory Ontology (UOGTO) is a modular, version-controlled rep
 ## Automation & Maintenance
 The repository integrates automated dependency checking (via Pixi), test suites, SHACL validation pipelines, and remote issue summaries via custom agent skills and GitHub Actions CI.
 
+## Systematic Review Protocols
+Methodological scoping review protocol definitions (PRISMA-P and PRISMA-S compliant) are integrated to support systematic validation of UOGTO coverage against multi-database scholarly indices.
+
+

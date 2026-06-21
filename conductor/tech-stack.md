@@ -7,3 +7,4 @@
 - **Tests**: pytest
 - **Linter/Formatter**: ruff
 - **Automation & CI**: GitHub Actions and Custom Agent Skills
+- **Scoping Review Libraries**: Python standard library (urllib, xml.etree)
