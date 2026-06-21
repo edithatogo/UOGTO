@@ -1,8 +1,8 @@
 {
   "track_id": "scoping_review_execution_paper_20260621",
   "type": "feature",
-  "status": "new",
+  "status": "in-progress",
   "created_at": "2026-06-21T20:01:03Z",
-  "updated_at": "2026-06-21T20:01:03Z",
+  "updated_at": "2026-06-21T20:27:20Z",
   "description": "Execute the scoping review search, deduplicate results, run active learning and NLP classifiers, map gaps to UOGTO, and draft the academic paper manuscript for arXiv release."
 }
