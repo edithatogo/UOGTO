@@ -90,3 +90,4 @@
 - Remote-status generation now filters the automated `chore/automated-maintenance` branch when using `gh`, preventing the maintenance PR from reporting itself as open repository work.
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
 - Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Current `--json` status is `missing_token`; public Zenodo DOI search remains empty; w3id PR `6238` remains open/mergeable but unmerged and live redirects still return 404.
+- Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
