@@ -91,3 +91,4 @@
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
 - Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed `--json` status is `no_uogto_deposition_found`; public Zenodo DOI search remains empty; w3id PR `6238` has no comments/reviews, remains open/mergeable but unmerged, and live redirects still return 404. UOGTO has no open issues or PRs.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
+- Remote verification for commit `db59bdb` passed: `Validate UOGTO` run `27949544161` succeeded and `Build WIDOCO Pages` run `27949544173` built and deployed successfully.
