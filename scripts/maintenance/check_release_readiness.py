@@ -26,6 +26,7 @@ EXPECTED_RELEASE_ASSETS = set(package_release_assets.REQUIRED_RELEASE_ASSETS) | 
     "release-assets-manifest.json",
     "SHA256SUMS",
     "registry-handoff.json",
+    "extended-registry-handoff.json",
     "zenodo-handoff.json",
     "w3id-redirect-handoff.json",
     "publication-status.json",
@@ -75,6 +76,7 @@ def check_release_manifest() -> None:
             raise AssertionError(f"dist/SHA256SUMS missing checksum entry for {name}")
 
     check_registry_handoff_packet(ROOT / "dist" / "registry-handoff.json")
+    check_extended_registry_handoff_packet(ROOT / "dist" / "extended-registry-handoff.json")
     check_zenodo_handoff_packet(ROOT / "dist" / "zenodo-handoff.json")
     check_w3id_handoff_packet(ROOT / "dist" / "w3id-redirect-handoff.json")
     check_publication_status_packet(ROOT / "dist" / "publication-status.json")
@@ -87,6 +89,16 @@ def check_registry_handoff_packet(path: Path) -> None:
         packet = json.load(handle)
     if packet.get("schema") != "uogto.registry-handoff.v1":
         raise AssertionError("Registry handoff packet has an unexpected schema")
+
+
+
+def check_extended_registry_handoff_packet(path: Path) -> None:
+    if not path.exists():
+        raise AssertionError("Missing dist/extended-registry-handoff.json; run make extended-registry-packet first")
+    with path.open("r", encoding="utf-8") as handle:
+        packet = json.load(handle)
+    if packet.get("schema") != "uogto.extended-registry-handoff.v1":
+        raise AssertionError("Extended registry handoff packet has an unexpected schema")
 
 
 def check_w3id_handoff_packet(path: Path) -> None:
@@ -133,6 +145,7 @@ def check_release_workflow() -> None:
         "make registry-links",
         "make release-assets",
         "make registry-packet",
+        "make extended-registry-packet",
         "make zenodo-packet",
         "make w3id-packet",
         "make publication-status",
@@ -140,6 +153,7 @@ def check_release_workflow() -> None:
         "dist/release-assets-manifest.json",
         "dist/SHA256SUMS",
         "dist/registry-handoff.json",
+        "dist/extended-registry-handoff.json",
         "dist/zenodo-handoff.json",
         "dist/w3id-redirect-handoff.json",
         "dist/publication-status.json",
@@ -161,6 +175,7 @@ def check_release_notes() -> None:
         "python scripts/maintenance/check_publishing_metadata.py",
         "python scripts/maintenance/check_registry_links.py",
         "python scripts/maintenance/build_registry_handoff.py",
+        "python scripts/maintenance/build_extended_registry_handoff.py",
         "python scripts/maintenance/check_zenodo_depositions.py",
         "python scripts/maintenance/check_doi_status.py",
         "python scripts/maintenance/record_zenodo_doi.py",
@@ -170,6 +185,7 @@ def check_release_notes() -> None:
         "Zenodo DOI: <https://doi.org/10.5281/zenodo.20796937>",
         "LOV submission issue: <https://github.com/pyvandenbussche/lov/issues/83>",
         "OLS indexing issue: <https://github.com/EBISPOT/ols4/issues/1305>",
+        "extended-registry-handoff.json",
     ]
     missing = [fragment for fragment in required_fragments if fragment not in release_notes]
     if missing:

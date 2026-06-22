@@ -25,6 +25,7 @@ REQUIRED_FILES = [
     "docs/registry/metadata-checklist.md",
     "docs/registry/lov-submission.md",
     "docs/registry/ols-indexing.md",
+    "docs/registry/extended-discoverability-submissions.md",
     "docs/registry/w3id-submission.md",
     ".github/workflows/widoco-pages.yml",
 ]
@@ -260,6 +261,7 @@ def check_registry_docs():
     lov = (ROOT / "docs/registry/lov-submission.md").read_text(encoding="utf-8")
     ols = (ROOT / "docs/registry/ols-indexing.md").read_text(encoding="utf-8")
     w3id = (ROOT / "docs/registry/w3id-submission.md").read_text(encoding="utf-8")
+    extended = (ROOT / "docs/registry/extended-discoverability-submissions.md").read_text(encoding="utf-8")
     release = (ROOT / "docs/releases/v1.0.md").read_text(encoding="utf-8")
     for expected in [
         REPOSITORY_URL,
@@ -268,8 +270,10 @@ def check_registry_docs():
         "https://doi.org/10.5281/zenodo.20796937",
         "https://github.com/pyvandenbussche/lov/issues/83",
         "https://github.com/EBISPOT/ols4/issues/1305",
+        "https://github.com/biopragmatics/bioregistry/issues/1999",
+        "http://prefix.cc/uogto.file.txt",
     ]:
-        if expected not in metadata + lov + ols + w3id + release:
+        if expected not in metadata + lov + ols + w3id + extended + release:
             raise AssertionError(f"Registry documentation missing expected text: {expected}")
 
 

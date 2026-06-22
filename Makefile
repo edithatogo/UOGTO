@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -25,6 +25,9 @@ registry-links:
 
 registry-packet:
 	python scripts/maintenance/build_registry_handoff.py
+
+extended-registry-packet:
+	python scripts/maintenance/build_extended_registry_handoff.py
 
 zenodo-packet:
 	python scripts/maintenance/build_zenodo_handoff.py
@@ -65,7 +68,7 @@ manuscript-pdf: manuscript-check
 release-assets: build
 	python scripts/maintenance/package_release_assets.py
 
-release-preflight: release-assets registry-packet zenodo-packet w3id-packet publication-status
+release-preflight: release-assets registry-packet extended-registry-packet zenodo-packet w3id-packet publication-status
 	python scripts/maintenance/check_release_readiness.py
 
 conductor:

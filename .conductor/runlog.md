@@ -1,5 +1,14 @@
 # Conductor Run Log
 
+## [2026-06-23] - Extended Discoverability Registry Implementation
+- Implemented the shared second-wave registry packet in `docs/registry/extended-discoverability-submissions.md` and `scripts/maintenance/build_extended_registry_handoff.py`.
+- Wired `dist/extended-registry-handoff.json` into Make, Pixi, publication-status generation, release-readiness checks, and the `Publish Release Assets` workflow.
+- Submitted `uogto` to prefix.cc and verified the live mapping at http://prefix.cc/uogto.file.txt; `uogtox` remains blocked by prefix.cc's one-per-day contribution limit until after 2026-06-24.
+- Opened Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 after confirming no existing UOGTO issue.
+- Recorded FAIRsharing and Wikidata as prepared but blocked by authenticated account workflows, Ontobee as deferred pending live w3id redirects, BioPortal as conditional/not submitted, and OBO Foundry as not prioritized.
+- Local gates passed after implementation: `make release-preflight`, `make validate`, and `make test` (108 passed).
+- Remaining evidence work: commit and push this state, verify remote validation/Pages, then dispatch `Publish Release Assets` for `extended-registry-handoff.json` and record the run.
+
 ## [2026-06-22] - Extended Discoverability Track Creation
 - Created Conductor track `uogto_extended_discoverability_registries_20260622`.
 - Incorporated second-wave recommendations into the track plan: FAIRsharing, prefix.cc, Wikidata, Ontobee feasibility, conditional BioPortal, conditional Bioregistry, and OBO Foundry as not prioritized unless UOGTO is repositioned for biological or biomedical ontology governance.

@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 
 from scripts.maintenance import check_release_readiness
 from scripts.maintenance import build_registry_handoff
+from scripts.maintenance import build_extended_registry_handoff
 from scripts.maintenance import build_zenodo_handoff
 from scripts.maintenance import build_w3id_redirect_handoff
 from scripts.maintenance import build_publication_status
@@ -27,6 +28,10 @@ class TestReleaseReadiness(unittest.TestCase):
         build_registry_handoff.write_handoff(
             dist / "registry-handoff.json",
             build_registry_handoff.build_registry_handoff(),
+        )
+        build_extended_registry_handoff.write_handoff(
+            dist / "extended-registry-handoff.json",
+            build_extended_registry_handoff.build_extended_registry_handoff(),
         )
         build_zenodo_handoff.write_handoff(
             dist / "zenodo-handoff.json",
@@ -54,6 +59,11 @@ class TestReleaseReadiness(unittest.TestCase):
         missing = Path(".tmp") / "missing-registry-handoff.json"
         with self.assertRaises(AssertionError):
             check_release_readiness.check_registry_handoff_packet(missing)
+
+    def test_release_preflight_requires_extended_registry_handoff(self):
+        missing = Path(".tmp") / "missing-extended-registry-handoff.json"
+        with self.assertRaises(AssertionError):
+            check_release_readiness.check_extended_registry_handoff_packet(missing)
 
     def test_release_preflight_requires_w3id_handoff(self):
         missing = Path(".tmp") / "missing-w3id-redirect-handoff.json"

@@ -23,7 +23,7 @@
 - LOV submission is open at https://github.com/pyvandenbussche/lov/issues/83.
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence at https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045.
-- Extended discoverability planning track `uogto_extended_discoverability_registries_20260622` is created for FAIRsharing, prefix.cc, Wikidata, Ontobee feasibility, conditional BioPortal, conditional Bioregistry, and the OBO Foundry non-priority decision.
+- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; external actions remain pending for authenticated FAIRsharing/Wikidata work, prefix.cc `uogtox`, Ontobee after w3id, and Bioregistry review.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -52,7 +52,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Continue `uogto_publishing_discoverability_20260622` for w3id live redirect and first-wave registry-review gates, then execute `uogto_extended_discoverability_registries_20260622` for second-wave discoverability submissions.
+- Continue first-wave w3id live redirect and LOV/OLS maintainer review gates, then monitor the second-wave external blockers: FAIRsharing authenticated submission, Wikidata authenticated item creation, prefix.cc `uogtox` retry after 2026-06-24, Ontobee after live w3id redirects, and Bioregistry issue #1999 review.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
@@ -96,6 +96,7 @@
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
 - Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed checks were used without printing the token; Zenodo record `20796937` is now published, and w3id PR `6238` has no comments/reviews, remains open/mergeable but unmerged, and live redirects still return 404.
 - LOV issue `https://github.com/pyvandenbussche/lov/issues/83` and OLS issue `https://github.com/EBISPOT/ols4/issues/1305` are open; both reference the public DOI, WIDOCO docs, release, and canonical RDF asset.
+- Extended discoverability repo-side implementation is complete locally: `uogto` is live at prefix.cc, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999` is open, FAIRsharing/Wikidata are prepared but account-blocked, Ontobee is deferred pending w3id, and BioPortal/OBO Foundry are recorded as conditional/not prioritized.
 - w3id PR `https://github.com/perma-id/w3id.org/pull/6238` remains open/mergeable with no review comments; DOI/publication evidence was added in comment `https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045`.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
 - Remote verification for commit `db59bdb` passed: `Validate UOGTO` run `27949544161` succeeded and `Build WIDOCO Pages` run `27949544173` built and deployed successfully.

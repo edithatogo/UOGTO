@@ -12,6 +12,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.maintenance import (
+    build_extended_registry_handoff,
     build_registry_handoff,
     build_w3id_redirect_handoff,
     build_zenodo_handoff,
@@ -29,6 +30,7 @@ PUBLICATION_ASSETS = [
     "release-assets-manifest.json",
     "SHA256SUMS",
     "registry-handoff.json",
+    "extended-registry-handoff.json",
     "zenodo-handoff.json",
     "w3id-redirect-handoff.json",
     "publication-status.json",
@@ -94,6 +96,7 @@ def live_observations(*, timeout: int = 20) -> dict:
 
 def build_publication_status(*, include_live: bool = False, require_live: bool = False, timeout: int = 20) -> dict:
     registry = build_registry_handoff.build_registry_handoff()
+    extended_registry = build_extended_registry_handoff.build_extended_registry_handoff()
     zenodo = build_zenodo_handoff.build_zenodo_handoff()
     w3id = build_w3id_redirect_handoff.build_w3id_handoff()
     doi = doi_summary()
@@ -101,11 +104,18 @@ def build_publication_status(*, include_live: bool = False, require_live: bool =
     blockers = []
     for source, packet in [
         ("registry", registry),
+        ("extended_registry", extended_registry),
         ("zenodo", zenodo),
         ("w3id", w3id),
     ]:
         for blocker in packet.get("blockers", []):
-            blockers.append({"source": source, "message": blocker})
+            if isinstance(blocker, dict):
+                entry = {"source": source, "message": blocker.get("message", "")}
+                if blocker.get("target"):
+                    entry["target"] = blocker["target"]
+                blockers.append(entry)
+            else:
+                blockers.append({"source": source, "message": blocker})
 
     if doi["status"] != "recorded":
         blockers.append(
@@ -135,6 +145,10 @@ def build_publication_status(*, include_live: bool = False, require_live: bool =
             "registry": {
                 "status": registry["status"],
                 "packet": "dist/registry-handoff.json",
+            },
+            "extended_registry": {
+                "status": extended_registry["status"],
+                "packet": "dist/extended-registry-handoff.json",
             },
             "zenodo": {
                 "status": zenodo["status"],
