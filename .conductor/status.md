@@ -23,6 +23,7 @@
 - LOV submission is open at https://github.com/pyvandenbussche/lov/issues/83.
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence at https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045.
+- Extended discoverability planning track `uogto_extended_discoverability_registries_20260622` is created for FAIRsharing, prefix.cc, Wikidata, Ontobee feasibility, conditional BioPortal, conditional Bioregistry, and the OBO Foundry non-priority decision.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -51,7 +52,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Continue `uogto_publishing_discoverability_20260622` for w3id live redirect and external registry-review gates before treating the project as fully publication-ready.
+- Continue `uogto_publishing_discoverability_20260622` for w3id live redirect and first-wave registry-review gates, then execute `uogto_extended_discoverability_registries_20260622` for second-wave discoverability submissions.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.

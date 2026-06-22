@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-22] - Extended Discoverability Track Creation
+- Created Conductor track `uogto_extended_discoverability_registries_20260622`.
+- Incorporated second-wave recommendations into the track plan: FAIRsharing, prefix.cc, Wikidata, Ontobee feasibility, conditional BioPortal, conditional Bioregistry, and OBO Foundry as not prioritized unless UOGTO is repositioned for biological or biomedical ontology governance.
+- Registered the track in `conductor/tracks.md` and updated Conductor status so future `$conductor-status` reports the second-wave discoverability lane.
+
 ## [2026-06-22] - DOI Publication and Registry Submission
 - Published Zenodo record `20796937` for UOGTO v1.0.0 release assets and recorded DOI `10.5281/zenodo.20796937`.
 - Verified `https://zenodo.org/api/records/20796937` returns the expected UOGTO title/DOI and `https://doi.org/10.5281/zenodo.20796937` resolves to the Zenodo record.
