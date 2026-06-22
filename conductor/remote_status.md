@@ -1,10 +1,7 @@
 # Remote Repository Status
 
-> [!NOTE]
-> Remote repository query not available: Repository 'legal-nz/UOGTO' not found, no remote configured, or API access limits exceeded.
-
 ## Open Issues
-No remote connection. Unable to fetch open issues.
+No open issues found.
 
 ## Open Pull Requests
-No remote connection. Unable to fetch open pull requests.
+- [#1](https://github.com/edithatogo/UOGTO/pull/1): chore: automated repository maintenance (Updated: 2026-06-22T01:11:34Z)
