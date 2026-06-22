@@ -16,6 +16,11 @@
 - Reviewed updated maintenance PR `#1`; validation-report churn was gone, but `conductor/remote_status.md` still listed the automated maintenance PR itself.
 - Updated `check_github.py` so `gh pr list` requests `headRefName` and filters the `chore/automated-maintenance` branch out of remote-status summaries.
 - Verified focused maintenance tests, `make release-preflight`, `make validate`, and `make test` after the self-reference filter.
+- Closed stale automated maintenance PR `#1` and deleted branch `chore/automated-maintenance`.
+- Fresh maintenance dispatch `27923789206` passed end to end and created PR `#2` from current master.
+- Verified PR `#2` diff contained only the expected changelog entry and `conductor/remote_status.md` refresh with no self-reference and no validation-report churn.
+- Merged PR `#2`; local master fast-forwarded to merge commit `a10f0d9`.
+- Verified post-merge local `make validate` and `make test`, plus remote `Validate UOGTO` run `27923845421` and `Build WIDOCO Pages` run `27923845414`.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
 - Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.
