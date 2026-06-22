@@ -9,13 +9,15 @@ from scripts.maintenance import check_doi_status
 
 
 class TestDoiStatus(unittest.TestCase):
-    def test_local_docs_track_pending_doi(self):
+    def test_local_docs_track_recorded_doi(self):
         dois = check_doi_status.check_local_doi_state()
-        self.assertEqual(dois, [])
+        self.assertIn("10.5281/zenodo.20796937", dois)
 
     def test_require_doi_rejects_placeholders(self):
-        with self.assertRaises(AssertionError):
-            check_doi_status.check_local_doi_state(require_doi=True)
+        self.assertIn(
+            "10.5281/zenodo.20796937",
+            check_doi_status.check_local_doi_state(require_doi=True),
+        )
 
     def test_extracts_doi_tokens(self):
         text = "DOI: `10.5281/zenodo.12345` and <https://doi.org/10.5281/zenodo.67890>."
@@ -65,6 +67,27 @@ class TestDoiStatus(unittest.TestCase):
             check_doi_status.fetch_json = lambda _url, timeout=20: {"hits": {"hits": []}}
             with self.assertRaises(AssertionError):
                 check_doi_status.check_live_zenodo(require_doi=True)
+        finally:
+            check_doi_status.fetch_json = original_fetch
+
+    def test_live_accepts_direct_record_lookup_for_recorded_doi(self):
+        original_fetch = check_doi_status.fetch_json
+        try:
+            def fake_fetch(url, timeout=20):
+                if url.startswith(check_doi_status.ZENODO_RECORDS_API + "?"):
+                    return {"hits": {"hits": []}}
+                return {
+                    "metadata": {
+                        "title": "Universal Open Game Theory Ontology (UOGTO)",
+                        "doi": "10.5281/zenodo.20796937",
+                    }
+                }
+
+            check_doi_status.fetch_json = fake_fetch
+            self.assertEqual(
+                check_doi_status.check_live_zenodo(require_doi=True),
+                ["10.5281/zenodo.20796937"],
+            )
         finally:
             check_doi_status.fetch_json = original_fetch
 

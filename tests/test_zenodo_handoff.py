@@ -14,14 +14,16 @@ class TestZenodoHandoff(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.temp_dir, ignore_errors=True)
 
-    def test_pending_handoff_records_external_doi_blocker(self):
+    def test_handoff_records_published_doi_state(self):
         packet = build_zenodo_handoff.build_zenodo_handoff()
         self.assertEqual(packet["schema"], "uogto.zenodo-handoff.v1")
-        self.assertEqual(packet["status"], "pending_external_zenodo_doi")
-        self.assertIn("Zenodo DOI", packet["blockers"][0])
+        self.assertEqual(packet["status"], "doi_recorded")
+        self.assertEqual(packet["blockers"], [])
+        self.assertEqual(packet["local_dois"], ["10.5281/zenodo.20796937"])
         self.assertEqual(packet["release_tag"], "v1.0.0")
         self.assertIn("uogto.ttl", packet["release_assets"])
         self.assertEqual(packet["account_side_cli"]["token_env"], "ZENODO_ACCESS_TOKEN")
+        self.assertIn("--live --require-doi", packet["verification_actions"][0])
 
     def test_write_handoff_outputs_json(self):
         output = self.temp_dir / "zenodo-handoff.json"

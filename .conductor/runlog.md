@@ -1,5 +1,16 @@
 # Conductor Run Log
 
+## [2026-06-22] - DOI Publication and Registry Submission
+- Published Zenodo record `20796937` for UOGTO v1.0.0 release assets and recorded DOI `10.5281/zenodo.20796937`.
+- Verified `https://zenodo.org/api/records/20796937` returns the expected UOGTO title/DOI and `https://doi.org/10.5281/zenodo.20796937` resolves to the Zenodo record.
+- Added direct Zenodo record fallback to `check_doi_status.py` so strict DOI checks pass even before Zenodo search indexing catches up.
+- Confirmed upstream w3id PR `6238` has no comments or reviews to address, remains open, and is mergeable.
+- Added DOI/publication evidence to w3id PR `6238`: https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045.
+- Confirmed no existing UOGTO LOV issue, then opened LOV submission issue https://github.com/pyvandenbussche/lov/issues/83.
+- Confirmed no existing UOGTO OLS issue, inspected the current OLS new-ontology template, then opened OLS indexing issue https://github.com/EBISPOT/ols4/issues/1305.
+- Updated release notes, registry docs, metadata checklist, generated handoff semantics, and publication status semantics so DOI, LOV, and OLS are no longer reported as blocked.
+- Remaining external publication blocker is upstream w3id merge and live redirect propagation.
+
 ## [2026-06-22] - Live Publication Status Artifact Upload
 - Enabled GitHub Actions workflow write permissions and PR create/approve capability for `edithatogo/UOGTO`.
 - Verified the repository setting reports `default_workflow_permissions=write` and `can_approve_pull_request_reviews=true`.

@@ -14,6 +14,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Verify release-assets workflow attached public artifacts.
     - [x] Add a DOI status gate that keeps local DOI-dependent docs pending until Zenodo exposes a matching public DOI.
     - [x] Add a DOI recording helper to propagate the minted Zenodo DOI through release and registry metadata.
+    - [x] Publish a Zenodo record for the UOGTO v1.0.0 release assets and record DOI `10.5281/zenodo.20796937`.
 - [x] Task: Add citation metadata
     - [x] Create `CITATION.cff` with title, authors, repository URL, ontology URL, license, version, release date, and preferred citation.
     - [x] Create `.zenodo.json` with creators, title, description, keywords, related identifiers, license, and communities if applicable.
@@ -31,12 +32,12 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [ ] Zenodo shows `edithatogo/UOGTO` as enabled for release archiving.
-- [~] A GitHub `v1.0.0` release creates a Zenodo archive and DOI.
-  - GitHub release `v1.0.0` exists and assets are attached; Zenodo DOI has not appeared in public Zenodo search yet.
+- [x] A UOGTO `v1.0.0` Zenodo archive DOI is minted and recorded.
+  - DOI `10.5281/zenodo.20796937` resolves to Zenodo record `20796937`; the strict DOI gate passes through direct record lookup while search indexing catches up.
 - [x] Release asset packaging is automated for generated ontology, shape, context, checksum, and manifest files.
 - [x] DOI status monitoring is available through `make doi-status` and `pixi run doi-status-live`.
 - [x] DOI recording is scripted through `python scripts/maintenance/record_zenodo_doi.py <doi>`.
-- [x] `make zenodo-packet` emits `dist/zenodo-handoff.json` with release metadata and pending DOI blockers.
+- [x] `make zenodo-packet` emits `dist/zenodo-handoff.json` with release metadata and recorded DOI state.
 - [x] `CITATION.cff` metadata matches GitHub release notes and Zenodo metadata.
 - [x] Release notes include validation evidence and links to canonical ontology assets.
 
@@ -80,9 +81,10 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Create `docs/registry/lov-submission.md` with ontology title, abstract, namespace, prefix, homepage, documentation URL, GitHub URL, release URL, DOI, license, maintainers, and contact route.
     - [x] List canonical downloadable RDF URLs for the combined ontology and primary modules.
     - [x] Record any required LOV issue, pull request, or submission form details.
-- [ ] Task: Submit to LOV
-    - [ ] Complete the formal LOV submission after v1.0 DOI is live.
-    - [ ] Track submission URL, review feedback, required metadata corrections, and final acceptance status in `docs/registry/lov-submission.md`.
+- [~] Task: Submit to LOV
+    - [x] Complete the formal LOV submission after v1.0 DOI is live.
+    - [x] Track submission URL and review status in `docs/registry/lov-submission.md`.
+    - [ ] Track review feedback, required metadata corrections, and final acceptance status in `docs/registry/lov-submission.md`.
 
 ### Required Configuration Files
 - `docs/registry/metadata-checklist.md`
@@ -91,8 +93,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 
 ### Acceptance Criteria
 - [x] Metadata checklist is complete and all mandatory LOV fields are satisfied in repo-side metadata.
-- [~] Canonical ontology namespace, prefix, documentation URL, license URI, and DOI are stable.
-  - Namespace, prefix, documentation URL, and license are stable; DOI remains pending.
+- [x] Canonical ontology namespace, prefix, documentation URL, license URI, and DOI are stable.
+  - Namespace, prefix, documentation URL, license, and DOI `10.5281/zenodo.20796937` are stable.
 - [x] LOV submission record exists with submission date, link, and review status.
 - [ ] Any LOV-requested corrections are captured as follow-up Conductor tasks.
 
@@ -107,9 +109,10 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Document the requested ontology identifier and display title.
     - [x] Include links to GitHub repository, GitHub Pages WIDOCO documentation, v1.0 release, Zenodo DOI, and canonical RDF download.
     - [x] Record expected refresh cadence and maintainer contact details.
-- [ ] Task: Submit OLS indexing request
-    - [ ] Submit the inclusion request after LOV submission materials and WIDOCO documentation are complete.
-    - [ ] Track request URL, reviewer feedback, metadata changes, and indexing outcome in `docs/registry/ols-indexing.md`.
+- [~] Task: Submit OLS indexing request
+    - [x] Submit the inclusion request after LOV submission materials and WIDOCO documentation are complete.
+    - [x] Track request URL and review status in `docs/registry/ols-indexing.md`.
+    - [ ] Track reviewer feedback, metadata changes, and indexing outcome in `docs/registry/ols-indexing.md`.
 
 ### Required Configuration Files
 - `docs/registry/ols-indexing.md`
@@ -119,7 +122,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 ### Acceptance Criteria
 - [x] OLS compatibility checklist passes for repo-side ontology metadata.
 - [x] OLS compatibility checklist passes for the published ontology artifact.
-- [ ] Inclusion request is submitted with stable documentation, release, DOI, and RDF artifact links.
+- [x] Inclusion request is submitted with stable documentation, release, DOI, and RDF artifact links.
 - [ ] OLS review feedback is tracked and resolved or converted into follow-up Conductor tasks.
 - [ ] OLS indexing status is recorded once accepted or rejected.
 
@@ -149,6 +152,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Enable repository Actions permissions needed for the maintenance workflow to create pull requests.
     - [x] Harden generated maintenance outputs to avoid no-op changelog entries and nondeterministic validation-report churn.
     - [x] Verify current LOV and OLS submission routes for DOI-ready handoff.
+    - [x] Record Zenodo DOI, submit LOV issue, submit OLS issue, and add DOI evidence to the w3id PR.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -193,9 +197,13 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] GitHub Actions workflow permissions are enabled for write and pull-request creation; manual maintenance dispatch `27923148929` passed and created maintenance PR `#1`.
 - [x] Maintenance-generation churn is reduced: validation-report file discovery is sorted and empty changelog entries are skipped; focused tests, `make release-preflight`, `make validate`, and `make test` passed locally.
 - [x] Current registry submission routes are recorded: LOV candidate repository `pyvandenbussche/lov` and OLS repository `EBISPOT/ols4` with its new-ontology issue template.
+- [x] Zenodo DOI is minted and recorded: https://doi.org/10.5281/zenodo.20796937.
+- [x] LOV submission issue is open: https://github.com/pyvandenbussche/lov/issues/83.
+- [x] OLS indexing issue is open: https://github.com/EBISPOT/ols4/issues/1305.
+- [x] w3id PR `6238` has a DOI/publication evidence comment: https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045.
 - [x] Historical LOV `/dataset/lov/` route is excluded from live-checked docs after maintenance dispatch `27923371952` proved it returns 404; the live LOV root `https://lov.linkeddata.es/` is recorded instead.
 - [x] Automated maintenance remote-status summaries filter the `chore/automated-maintenance` branch so the maintenance PR does not report itself as open repository work.
 - [x] Stale maintenance PR `#1` was closed; fresh maintenance PR `#2` was created by run `27923789206`, verified, merged as `a10f0d9`, and remote validation/Pages passed.
 - [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; the parent `legal-nz/.env` token was found and used without printing it.
-- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, Chrome `/me/uploads` redirected to login, and the authenticated terminal depositions check reports `no_uogto_deposition_found`.
+- [x] Zenodo DOI is no longer open: record `20796937` is published with DOI `10.5281/zenodo.20796937`; public DOI resolution returns the Zenodo record.
 - [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.

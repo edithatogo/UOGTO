@@ -146,12 +146,14 @@ def build_publication_status(*, include_live: bool = False, require_live: bool =
                 "pull_request_url": w3id["w3id_pull_request_url"],
             },
             "lov": {
-                "status": "blocked_until_doi_recorded" if doi["status"] != "recorded" else "ready_for_submission",
+                "status": registry["lov"]["status"],
                 "document": "docs/registry/lov-submission.md",
+                "submission_url": registry["lov"].get("submission_url"),
             },
             "ols": {
-                "status": "blocked_until_doi_recorded" if doi["status"] != "recorded" else "ready_for_submission",
+                "status": registry["ols"]["status"],
                 "document": "docs/registry/ols-indexing.md",
+                "request_url": registry["ols"].get("request_url"),
             },
         },
         "blockers": blockers,

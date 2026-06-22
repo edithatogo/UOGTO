@@ -34,6 +34,8 @@ PENDING_EXTERNAL_MARKERS = [
     "TBD after Zenodo archiving",
     "TBD after the v1.0.0 GitHub release is archived by Zenodo",
     "Not yet submitted",
+    "pending upstream merge",
+    "pending until `perma-id/w3id.org` merges",
 ]
 
 
@@ -165,7 +167,9 @@ def check_release_notes() -> None:
         "python scripts/maintenance/build_publication_status.py",
         "python scripts/maintenance/package_release_assets.py",
         "make release-preflight",
-        "Zenodo DOI: `TBD after the v1.0.0 GitHub release is archived by Zenodo`",
+        "Zenodo DOI: <https://doi.org/10.5281/zenodo.20796937>",
+        "LOV submission issue: <https://github.com/pyvandenbussche/lov/issues/83>",
+        "OLS indexing issue: <https://github.com/EBISPOT/ols4/issues/1305>",
     ]
     missing = [fragment for fragment in required_fragments if fragment not in release_notes]
     if missing:
@@ -187,7 +191,7 @@ def check_registry_packets(*, require_published: bool = False) -> None:
             EXPECTED_RELEASE_ASSET_BASE + "uogto.ttl",
             EXPECTED_RELEASE_ASSET_BASE + "uogto-shapes.ttl",
             EXPECTED_RELEASE_ASSET_BASE + "registry-handoff.json",
-            "DOI: `TBD after Zenodo archiving`",
+            "DOI: <https://doi.org/10.5281/zenodo.20796937>",
         ]:
             if fragment not in text:
                 raise AssertionError(f"{relative_path} missing fragment: {fragment}")
@@ -227,7 +231,7 @@ def main() -> None:
     if args.require_published:
         print("Published-release readiness checks passed.")
     else:
-        print("Local release readiness checks passed; DOI, LOV, and OLS remain external gates.")
+        print("Local release readiness checks passed; w3id merge/redirects and registry maintainer reviews remain external gates.")
 
 
 if __name__ == "__main__":

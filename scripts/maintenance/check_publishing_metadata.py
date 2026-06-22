@@ -265,7 +265,9 @@ def check_registry_docs():
         REPOSITORY_URL,
         CORE_NAMESPACE,
         CC_BY_4,
-        "TBD after",
+        "https://doi.org/10.5281/zenodo.20796937",
+        "https://github.com/pyvandenbussche/lov/issues/83",
+        "https://github.com/EBISPOT/ols4/issues/1305",
     ]:
         if expected not in metadata + lov + ols + w3id + release:
             raise AssertionError(f"Registry documentation missing expected text: {expected}")

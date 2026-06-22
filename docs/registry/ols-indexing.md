@@ -1,7 +1,7 @@
 # Ontology Lookup Service Indexing
 
 ## Status
-Not yet submitted. v1.0 release assets and WIDOCO documentation are public; submit after Zenodo DOI metadata is public.
+Submitted on 2026-06-22 through the active OLS GitHub issue route after v1.0 release assets, WIDOCO documentation, and Zenodo DOI metadata were public.
 
 Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4` at <https://github.com/EBISPOT/ols4>, with homepage <https://www.ebi.ac.uk/ols4/>. The repository exposes a dedicated issue template for adding a new ontology: <https://github.com/EBISPOT/ols4/blob/dev/.github/ISSUE_TEMPLATE/add-a-new-ontology-to-the-ebi-ols-instance-.md>.
 
@@ -13,7 +13,7 @@ Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4
 - Homepage: <https://github.com/edithatogo/UOGTO>
 - Documentation: <https://edithatogo.github.io/UOGTO/>
 - Release URL: <https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0>
-- DOI: `TBD after Zenodo archiving`
+- DOI: <https://doi.org/10.5281/zenodo.20796937>
 - License: <https://creativecommons.org/licenses/by/4.0/>
 - Maintainer route: GitHub issues on `edithatogo/UOGTO`
 
@@ -31,19 +31,19 @@ Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4
 - [x] Class and property definitions are present.
 - [x] Hierarchical relationships are represented in OWL/RDFS where applicable.
 - [x] License and maintainer metadata are public.
-- [ ] WIDOCO documentation and DOI links are live.
+- [x] WIDOCO documentation and DOI links are live.
 
 ## Inclusion Request Checklist
 - [x] Confirm metadata checklist in `docs/registry/metadata-checklist.md`.
 - [x] Prepare OLS issue or request with ontology identifier, display title, artifact URL, docs URL, DOI, license, and contact route.
-- [ ] Submit inclusion request.
-- [ ] Record request date.
-- [ ] Record request URL.
+- [x] Submit inclusion request.
+- [x] Record request date.
+- [x] Record request URL.
 - [ ] Track reviewer feedback.
 - [ ] Convert requested changes into Conductor follow-up tasks.
 
 ## Request Record
-- Request date: `TBD`
-- Request URL: `TBD`
-- Review status: `Not submitted`
+- Request date: `2026-06-22`
+- Request URL: <https://github.com/EBISPOT/ols4/issues/1305>
+- Review status: `Submitted; awaiting OLS maintainer review`
 - Indexing status: `TBD`

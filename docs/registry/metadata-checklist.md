@@ -15,7 +15,7 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] Citation metadata: `CITATION.cff`
 - [x] Zenodo metadata: `.zenodo.json`
 - [x] WIDOCO documentation target: <https://edithatogo.github.io/UOGTO/>
-- [ ] Zenodo DOI: `TBD after v1.0.0 release archiving`
+- [x] Zenodo DOI: <https://doi.org/10.5281/zenodo.20796937>
 
 ## Ontology Annotation Requirements
 - [x] Every class and property is covered by the semantic audit for `rdfs:label` and `skos:definition`.
@@ -39,7 +39,9 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 
 ## Registry Gate
 - [x] GitHub release `v1.0.0` is published.
-- [ ] Zenodo DOI is minted and recorded.
+- [x] Zenodo DOI is minted and recorded.
 - [x] WIDOCO Pages documentation is live.
 - [x] LOV submission document is complete.
+- [x] LOV submission issue is open: <https://github.com/pyvandenbussche/lov/issues/83>.
 - [x] OLS indexing document is complete.
+- [x] OLS indexing issue is open: <https://github.com/EBISPOT/ols4/issues/1305>.

@@ -76,7 +76,7 @@ class TestReleaseReadiness(unittest.TestCase):
     def test_registry_packets_track_external_placeholders(self):
         check_release_readiness.check_registry_packets()
 
-    def test_published_mode_rejects_pending_external_markers(self):
+    def test_published_mode_rejects_pending_w3id_markers(self):
         with self.assertRaises(AssertionError):
             check_release_readiness.check_registry_packets(require_published=True)
 

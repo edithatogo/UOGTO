@@ -1,7 +1,7 @@
 # Linked Open Vocabularies Submission
 
 ## Status
-Not yet submitted. `v1.0.0` is published and WIDOCO documentation is live; submit after the Zenodo DOI is minted.
+Submitted on 2026-06-22 through the active LOV GitHub issue route after `v1.0.0`, WIDOCO documentation, release assets, and the Zenodo DOI were public.
 
 Submission route checked 2026-06-22: Linked Open Vocabularies frontend repository `pyvandenbussche/lov` is active at <https://github.com/pyvandenbussche/lov>. The current LOV site root is <https://lov.linkeddata.es/>; the historical `/dataset/lov/` URL redirects to a 404. No repository issue template was exposed through the GitHub contents API, so the final submission route should be confirmed at submission time.
 
@@ -14,7 +14,7 @@ Submission route checked 2026-06-22: Linked Open Vocabularies frontend repositor
 - Documentation: <https://edithatogo.github.io/UOGTO/>
 - GitHub repository: <https://github.com/edithatogo/UOGTO>
 - Release URL: <https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0>
-- DOI: `TBD after Zenodo archiving`
+- DOI: <https://doi.org/10.5281/zenodo.20796937>
 - License: <https://creativecommons.org/licenses/by/4.0/>
 - Maintainer route: GitHub issues on `edithatogo/UOGTO`
 
@@ -31,15 +31,15 @@ UOGTO is a modular OWL/SHACL ontology for game-theoretic semantics, including cl
 ## LOV Checklist
 - [x] Confirm all metadata requirements in `docs/registry/metadata-checklist.md`.
 - [x] Confirm the WIDOCO documentation URL is reachable.
-- [ ] Confirm the Zenodo DOI resolves.
-- [ ] Submit the vocabulary through the current LOV submission route.
-- [ ] Record submission date.
-- [ ] Record submission URL or issue URL.
+- [x] Confirm the Zenodo DOI resolves.
+- [x] Submit the vocabulary through the current LOV submission route.
+- [x] Record submission date.
+- [x] Record submission URL or issue URL.
 - [ ] Track LOV review feedback.
 - [ ] Convert requested changes into Conductor follow-up tasks.
 
 ## Submission Record
-- Submission date: `TBD`
-- Submission URL: `TBD`
-- Review status: `Not submitted`
+- Submission date: `2026-06-22`
+- Submission URL: <https://github.com/pyvandenbussche/lov/issues/83>
+- Review status: `Submitted; awaiting LOV maintainer review`
 - Acceptance status: `TBD`

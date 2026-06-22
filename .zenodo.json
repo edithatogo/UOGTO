@@ -30,6 +30,12 @@
       "relation": "isIdenticalTo",
       "resource_type": "dataset",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.20796937",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset",
+      "scheme": "doi"
     }
   ],
   "version": "1.0.0",

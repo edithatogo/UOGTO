@@ -22,6 +22,9 @@ DOCUMENTATION_URL = "https://edithatogo.github.io/UOGTO/"
 RELEASE_URL = "https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0"
 RELEASE_ASSET_BASE = "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
+LOV_SUBMISSION_URL = "https://github.com/pyvandenbussche/lov/issues/83"
+OLS_REQUEST_URL = "https://github.com/EBISPOT/ols4/issues/1305"
+SUBMISSION_DATE = "2026-06-22"
 
 
 def doi_state() -> tuple[list[str], bool]:
@@ -44,7 +47,7 @@ def build_registry_handoff(*, require_ready: bool = False) -> dict:
         raise AssertionError("Registry handoff is not ready: " + "; ".join(blockers))
 
     doi = dois[0] if dois else None
-    status = "ready_for_submission" if not blockers else "pending_external_doi"
+    status = "submitted_to_registries" if not blockers else "pending_external_doi"
     doi_value = f"https://doi.org/{doi}" if doi else None
 
     return {
@@ -72,21 +75,19 @@ def build_registry_handoff(*, require_ready: bool = False) -> dict:
             "registry_handoff": RELEASE_ASSET_BASE + "registry-handoff.json",
         },
         "lov": {
+            "status": "submitted" if not blockers else "blocked_until_doi_recorded",
             "submission_document": "docs/registry/lov-submission.md",
-            "required_before_submit": [
-                "Confirm Zenodo DOI resolves.",
-                "Submit through the current LOV submission route.",
-                "Record submission URL and review status.",
-            ],
+            "submission_date": SUBMISSION_DATE if not blockers else None,
+            "submission_url": LOV_SUBMISSION_URL if not blockers else None,
+            "review_status": "awaiting_maintainer_review" if not blockers else "not_submitted",
         },
         "ols": {
+            "status": "submitted" if not blockers else "blocked_until_doi_recorded",
             "submission_document": "docs/registry/ols-indexing.md",
             "requested_identifier": PREFERRED_PREFIX,
-            "required_before_submit": [
-                "Confirm Zenodo DOI resolves.",
-                "Submit OLS inclusion request.",
-                "Record request URL and indexing status.",
-            ],
+            "request_date": SUBMISSION_DATE if not blockers else None,
+            "request_url": OLS_REQUEST_URL if not blockers else None,
+            "review_status": "awaiting_maintainer_review" if not blockers else "not_submitted",
         },
         "required_urls": registry_urls(),
     }

@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EXPECTED_TITLE = "Universal Open Game Theory Ontology"
 EXPECTED_REPOSITORY = "https://github.com/edithatogo/UOGTO"
 ZENODO_RECORDS_API = "https://zenodo.org/api/records"
+ZENODO_RECORD_API = "https://zenodo.org/api/records/{record_id}"
 DOI_PLACEHOLDERS = [
     "TBD after v1.0.0 release archiving",
     "TBD after Zenodo archiving",
@@ -87,6 +88,26 @@ def find_uogto_zenodo_dois(payload: dict) -> list[str]:
     return sorted(set(dois))
 
 
+def zenodo_record_id_from_doi(doi: str) -> str | None:
+    prefix = "10.5281/zenodo."
+    if doi.startswith(prefix):
+        return doi.removeprefix(prefix)
+    return None
+
+
+def check_direct_zenodo_doi(doi: str, timeout: int = 20) -> str | None:
+    record_id = zenodo_record_id_from_doi(doi)
+    if not record_id:
+        return None
+    record = fetch_json(ZENODO_RECORD_API.format(record_id=record_id), timeout=timeout)
+    record_doi = extract_record_doi(record)
+    if record_doi != doi:
+        return None
+    if not record_matches_uogto(record):
+        return None
+    return doi
+
+
 def check_local_doi_state(*, require_doi: bool = False) -> list[str]:
     text = read_doi_docs()
     dois = extract_dois_from_docs(text)
@@ -95,14 +116,20 @@ def check_local_doi_state(*, require_doi: bool = False) -> list[str]:
             raise AssertionError("DOI placeholders remain in DOI-dependent docs")
         if not dois:
             raise AssertionError("No DOI is recorded in DOI-dependent docs")
-    elif not has_doi_placeholder(text):
-        raise AssertionError("DOI placeholders are absent; run with --require-doi after recording the DOI")
+    elif not has_doi_placeholder(text) and not dois:
+        raise AssertionError("DOI placeholders are absent but no DOI is recorded in DOI-dependent docs")
     return dois
 
 
 def check_live_zenodo(*, require_doi: bool = False, timeout: int = 20) -> list[str]:
     payload = fetch_json(build_zenodo_query_url(), timeout=timeout)
     dois = find_uogto_zenodo_dois(payload)
+    if not dois:
+        for doi in extract_dois_from_docs(read_doi_docs()):
+            direct_doi = check_direct_zenodo_doi(doi, timeout=timeout)
+            if direct_doi:
+                dois.append(direct_doi)
+        dois = sorted(set(dois))
     if require_doi and not dois:
         raise AssertionError("No matching UOGTO DOI found in public Zenodo records")
     return dois
