@@ -12,13 +12,26 @@ class TestCheckGithub(unittest.TestCase):
         mock_run_cmd.side_effect = [
             "Authenticated", 
             '[{"number": 1, "title": "Test Issue", "state": "open", "url": "http://x", "updatedAt": "now"}]', 
-            '[{"number": 2, "title": "Test PR", "state": "open", "url": "http://y", "updatedAt": "now"}]' 
+            '[{"number": 2, "title": "Test PR", "state": "open", "url": "http://y", "updatedAt": "now", "headRefName": "feature"}]' 
         ]
         issues, prs = get_via_gh()
         self.assertIsNotNone(issues)
         self.assertEqual(len(issues), 1)
         self.assertEqual(issues[0]["title"], "Test Issue")
         self.assertEqual(prs[0]["title"], "Test PR")
+
+    @patch('scripts.maintenance.check_github.run_cmd')
+    def test_get_via_gh_filters_maintenance_pr(self, mock_run_cmd):
+        mock_run_cmd.side_effect = [
+            "Authenticated",
+            "[]",
+            '[{"number": 2, "title": "Maintenance", "state": "open", "url": "http://y", "updatedAt": "now", "headRefName": "chore/automated-maintenance"}]'
+        ]
+
+        issues, prs = get_via_gh()
+
+        self.assertEqual(issues, [])
+        self.assertEqual(prs, [])
 
     @patch('urllib.request.urlopen')
     def test_get_via_api(self, mock_urlopen):

@@ -193,5 +193,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Maintenance-generation churn is reduced: validation-report file discovery is sorted and empty changelog entries are skipped; focused tests, `make release-preflight`, `make validate`, and `make test` passed locally.
 - [x] Current registry submission routes are recorded: LOV candidate repository `pyvandenbussche/lov` and OLS repository `EBISPOT/ols4` with its new-ontology issue template.
 - [x] Historical LOV `/dataset/lov/` route is excluded from live-checked docs after maintenance dispatch `27923371952` proved it returns 404; the live LOV root `https://lov.linkeddata.es/` is recorded instead.
+- [x] Automated maintenance remote-status summaries filter the `chore/automated-maintenance` branch so the maintenance PR does not report itself as open repository work.
 - [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, and Chrome setup for account-side inspection failed before a browser session could start.
 - [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.

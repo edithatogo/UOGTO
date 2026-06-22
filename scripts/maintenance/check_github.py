@@ -8,6 +8,7 @@ import os
 DEFAULT_REPO = "legal-nz/UOGTO"
 REPO = os.environ.get("GITHUB_REPOSITORY", DEFAULT_REPO)
 OUTPUT_FILE = "conductor/remote_status.md"
+MAINTENANCE_BRANCH = "chore/automated-maintenance"
 
 def run_cmd(cmd):
     try:
@@ -42,14 +43,14 @@ def get_via_gh(repo=REPO):
         return None, None
     
     issues_raw = run_cmd(["gh", "issue", "list", "--repo", repo, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
-    prs_raw = run_cmd(["gh", "pr", "list", "--repo", repo, "--limit", "10", "--json", "number,title,state,url,updatedAt"])
+    prs_raw = run_cmd(["gh", "pr", "list", "--repo", repo, "--limit", "10", "--json", "number,title,state,url,updatedAt,headRefName"])
     
     if issues_raw is None or prs_raw is None:
         return None, None
     
     try:
         issues = json.loads(issues_raw)
-        prs = json.loads(prs_raw)
+        prs = filter_maintenance_prs(json.loads(prs_raw))
         return issues, prs
     except json.JSONDecodeError:
         return None, None
@@ -87,6 +88,12 @@ def get_via_api(repo=REPO):
     except urllib.error.URLError as e:
         print(f"API fallback failed: {e}", file=sys.stderr)
         return None, None
+
+def filter_maintenance_prs(prs):
+    return [
+        pr for pr in prs
+        if pr.get("headRefName") != MAINTENANCE_BRANCH
+    ]
 
 def write_summary(issues, prs):
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)

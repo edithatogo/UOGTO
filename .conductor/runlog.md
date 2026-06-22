@@ -13,6 +13,9 @@
 - Post-hardening maintenance dispatch `27923371952` failed at `Check Registry Documentation Links` because `http://lov.okfn.org/dataset/lov/` redirects to `https://lov.linkeddata.es/dataset/lov/`, which returns 404.
 - Verified `https://lov.linkeddata.es/` returns HTTP 200 and updated the LOV submission route note to use the live root URL while documenting that historical `/dataset/lov/` is dead.
 - Verified `python scripts\maintenance\check_registry_links.py --live --allow-unpublished`, `make release-preflight`, `make validate`, and `make test` after the LOV URL correction.
+- Reviewed updated maintenance PR `#1`; validation-report churn was gone, but `conductor/remote_status.md` still listed the automated maintenance PR itself.
+- Updated `check_github.py` so `gh pr list` requests `headRefName` and filters the `chore/automated-maintenance` branch out of remote-status summaries.
+- Verified focused maintenance tests, `make release-preflight`, `make validate`, and `make test` after the self-reference filter.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
 - Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.
