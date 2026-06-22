@@ -1,4 +1,9 @@
 # Changelog
+## [2026-06-22]
+
+### Bug Fixes
+- fix-lov-route-maintenance-check (9314221)
+
 ## [2026-06-21]
 
 ### Features
