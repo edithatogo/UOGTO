@@ -145,6 +145,9 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Fold w3id PR and redirect observations into the consolidated live publication status packet.
     - [x] Upload scheduled live publication status JSON as a CI artifact for review.
     - [x] Refresh maintenance workflow action pins after successful live-status artifact verification surfaced Node.js 20 deprecation annotations.
+    - [x] Enable repository Actions permissions needed for the maintenance workflow to create pull requests.
+    - [x] Harden generated maintenance outputs to avoid no-op changelog entries and nondeterministic validation-report churn.
+    - [x] Verify current LOV and OLS submission routes for DOI-ready handoff.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -186,3 +189,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
   - Fourth manual maintenance dispatch reached and passed live status artifact upload, then failed because repository settings do not permit GitHub Actions to create pull requests; PR creation is made non-fatal.
   - Fifth manual maintenance dispatch `27915165068` passed end to end, including `Build Live Publication Status` and `Upload Live Publication Status Artifact`; the PR permission denial remains as a non-blocking annotation.
 - [x] Maintenance workflow action pins are refreshed to `actions/upload-artifact@v7`, `peter-evans/create-pull-request@v8`, and `prefix-dev/setup-pixi@v0.9.6` after checking current upstream releases; local workflow contract tests, `make release-preflight`, `make validate`, and `make test` passed, push runs `27915341380` and `27915341370` passed, and manual maintenance dispatch `27915375191` passed without the previous Node.js 20 deprecation annotation.
+- [x] GitHub Actions workflow permissions are enabled for write and pull-request creation; manual maintenance dispatch `27923148929` passed and created maintenance PR `#1`.
+- [x] Maintenance-generation churn is reduced: validation-report file discovery is sorted and empty changelog entries are skipped; focused tests, `make release-preflight`, `make validate`, and `make test` passed locally.
+- [x] Current registry submission routes are recorded: LOV candidate repository `pyvandenbussche/lov` and OLS repository `EBISPOT/ols4` with its new-ontology issue template.
+- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, and Chrome setup for account-side inspection failed before a browser session could start.
+- [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.

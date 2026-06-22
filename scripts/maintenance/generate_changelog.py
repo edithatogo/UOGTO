@@ -52,11 +52,15 @@ def generate_entry(categories):
             has_content = True
             
     if not has_content:
-        entry += "No notable changes in this release.\n\n"
+        return ""
         
     return entry
 
 def update_changelog(new_entry):
+    if not new_entry:
+        print(f"No notable changelog updates for {CHANGELOG_PATH}.")
+        return
+
     existing_content = ""
     if os.path.exists(CHANGELOG_PATH):
         with open(CHANGELOG_PATH, "r", encoding="utf-8") as f:

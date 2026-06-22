@@ -3,6 +3,8 @@
 ## Status
 Not yet submitted. v1.0 release assets and WIDOCO documentation are public; submit after Zenodo DOI metadata is public.
 
+Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4` at <https://github.com/EBISPOT/ols4>, with homepage <https://www.ebi.ac.uk/ols4/>. The repository exposes a dedicated issue template for adding a new ontology: <https://github.com/EBISPOT/ols4/blob/dev/.github/ISSUE_TEMPLATE/add-a-new-ontology-to-the-ebi-ols-instance-.md>.
+
 ## Requested Indexing Metadata
 - Ontology identifier: `uogto`
 - Display title: Universal Open Game Theory Ontology

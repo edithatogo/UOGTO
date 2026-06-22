@@ -8,18 +8,18 @@ def generate_html_report(output_path="validation_report.html"):
     
     # 1. Load ontology files
     g = Graph()
-    ttl_files = glob.glob("ontologies/**/*.ttl", recursive=True)
+    ttl_files = sorted(glob.glob("ontologies/**/*.ttl", recursive=True))
     for ttl in ttl_files:
         g.parse(ttl, format="turtle")
             
     # 2. Parse SHACL files
     shacl_g = Graph()
-    shacl_files = glob.glob("shapes/*.ttl")
+    shacl_files = sorted(glob.glob("shapes/*.ttl"))
     for shacl in shacl_files:
         shacl_g.parse(shacl, format="turtle")
 
     # 3. Validate examples with SHACL
-    example_files = glob.glob("examples/*")
+    example_files = sorted(glob.glob("examples/*"))
     
     rows = ""
     for ex in example_files:

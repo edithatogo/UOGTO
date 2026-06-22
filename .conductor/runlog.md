@@ -1,6 +1,15 @@
 # Conductor Run Log
 
 ## [2026-06-22] - Live Publication Status Artifact Upload
+- Enabled GitHub Actions workflow write permissions and PR create/approve capability for `edithatogo/UOGTO`.
+- Verified the repository setting reports `default_workflow_permissions=write` and `can_approve_pull_request_reviews=true`.
+- Manual maintenance dispatch `27923148929` passed end to end and created `https://github.com/edithatogo/UOGTO/pull/1`.
+- Reviewed maintenance PR `#1`; it contained remote-status refresh, validation report row reordering, and a no-op changelog entry.
+- Hardened maintenance generation by sorting validation-report input file discovery and skipping changelog writes when there are no categorized changes.
+- Verified focused maintenance tests, `make release-preflight`, `make validate`, and `make test` after the churn hardening.
+- Refreshed Zenodo public search for `UOGTO`; it returned zero records, so there is still no DOI to record.
+- Refreshed w3id PR state; PR `6238` is open, clean, and mergeable, with live w3id redirects still pending upstream merge.
+- Attempted Chrome browser-control setup for account-side Zenodo inspection, but the Chrome runtime bridge failed before a browser session could start; repo/API-backed checks continued.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
 - Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.

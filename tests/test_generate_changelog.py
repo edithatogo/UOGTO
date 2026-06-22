@@ -30,7 +30,13 @@ class TestGenerateChangelog(unittest.TestCase):
             "Chores & Maintenance": []
         }
         entry = generate_entry(categories)
-        self.assertIn("No notable changes", entry)
+        self.assertEqual("", entry)
+
+    @patch("builtins.open", new_callable=mock_open, read_data="# Changelog\n\nOld entries")
+    @patch("os.path.exists", return_value=True)
+    def test_update_changelog_skips_empty_entry(self, mock_exists, mock_file):
+        update_changelog("")
+        mock_file.assert_not_called()
 
     @patch("builtins.open", new_callable=mock_open, read_data="# Changelog\n\nOld entries")
     @patch("os.path.exists", return_value=True)
