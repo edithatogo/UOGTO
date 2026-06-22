@@ -44,7 +44,7 @@
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
-- Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; current local status is `missing_token` until `ZENODO_ACCESS_TOKEN` is configured.
+- Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
 - Continue `uogto_publishing_discoverability_20260622` for release, DOI, release-asset, LOV, and OLS live gates before treating the project as publication-ready.
@@ -89,5 +89,5 @@
 - Post-hardening maintenance dispatch `27923371952` failed on the registry link checker because the historical LOV `/dataset/lov/` URL redirects to 404; the LOV route note now uses the live root `https://lov.linkeddata.es/`, and local live registry link checks pass.
 - Remote-status generation now filters the automated `chore/automated-maintenance` branch when using `gh`, preventing the maintenance PR from reporting itself as open repository work.
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
-- Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Current `--json` status is `missing_token`; public Zenodo DOI search remains empty; w3id PR `6238` remains open/mergeable but unmerged and live redirects still return 404.
+- Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed `--json` status is `no_uogto_deposition_found`; public Zenodo DOI search remains empty; w3id PR `6238` has no comments/reviews, remains open/mergeable but unmerged, and live redirects still return 404. UOGTO has no open issues or PRs.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.

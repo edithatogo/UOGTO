@@ -4,6 +4,7 @@ import os
 import sys
 import urllib.parse
 import urllib.request
+from urllib.error import HTTPError, URLError
 from pathlib import Path
 
 
@@ -80,7 +81,26 @@ def build_account_status(
             "blockers": [f"{TOKEN_ENV} is not set; account-side Zenodo depositions cannot be inspected."],
         }
 
-    depositions = fetcher(token, api_base=api_base, timeout=timeout)
+    try:
+        depositions = fetcher(token, api_base=api_base, timeout=timeout)
+    except HTTPError as error:
+        status = "invalid_or_rejected_token" if error.code in {400, 401, 403} else "zenodo_api_error"
+        return {
+            "schema": "uogto.zenodo-account-status.v1",
+            "status": status,
+            "token_env": TOKEN_ENV,
+            "uogto_depositions": [],
+            "blockers": [f"Zenodo depositions API returned HTTP {error.code}; token was not printed."],
+        }
+    except (TimeoutError, URLError) as error:
+        return {
+            "schema": "uogto.zenodo-account-status.v1",
+            "status": "zenodo_api_error",
+            "token_env": TOKEN_ENV,
+            "uogto_depositions": [],
+            "blockers": [f"Zenodo depositions API request failed: {error.__class__.__name__}."],
+        }
+
     matches = [summarize_deposition(item) for item in depositions if deposition_matches_uogto(item)]
     return {
         "schema": "uogto.zenodo-account-status.v1",

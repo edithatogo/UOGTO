@@ -1,4 +1,5 @@
 import unittest
+from urllib.error import HTTPError
 
 from scripts.maintenance import check_zenodo_depositions
 
@@ -56,6 +57,16 @@ class TestZenodoDepositions(unittest.TestCase):
         )
         self.assertEqual(status["status"], "no_uogto_deposition_found")
         self.assertEqual(status["uogto_depositions"], [])
+
+    def test_rejected_token_is_structured_status(self):
+        def fake_fetcher(_token, api_base, timeout):
+            raise HTTPError("https://zenodo.org/api/deposit/depositions", 401, "Unauthorized", {}, None)
+
+        status = check_zenodo_depositions.build_account_status(
+            token="token", fetcher=fake_fetcher
+        )
+        self.assertEqual(status["status"], "invalid_or_rejected_token")
+        self.assertIn("HTTP 401", status["blockers"][0])
 
 
 if __name__ == "__main__":

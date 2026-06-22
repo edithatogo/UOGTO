@@ -196,6 +196,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Historical LOV `/dataset/lov/` route is excluded from live-checked docs after maintenance dispatch `27923371952` proved it returns 404; the live LOV root `https://lov.linkeddata.es/` is recorded instead.
 - [x] Automated maintenance remote-status summaries filter the `chore/automated-maintenance` branch so the maintenance PR does not report itself as open repository work.
 - [x] Stale maintenance PR `#1` was closed; fresh maintenance PR `#2` was created by run `27923789206`, verified, merged as `a10f0d9`, and remote validation/Pages passed.
-- [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; current local status is `missing_token`, so account-side depositions remain unavailable until a token is configured.
-- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, Chrome `/me/uploads` redirected to login, and the terminal depositions check reports `missing_token` until `ZENODO_ACCESS_TOKEN` is configured.
+- [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; the parent `legal-nz/.env` token was found and used without printing it.
+- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, Chrome `/me/uploads` redirected to login, and the authenticated terminal depositions check reports `no_uogto_deposition_found`.
 - [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.

@@ -23,8 +23,11 @@
 - Verified post-merge local `make validate` and `make test`, plus remote `Validate UOGTO` run `27923845421` and `Build WIDOCO Pages` run `27923845414`.
 - Added `scripts/maintenance/check_zenodo_depositions.py` to inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`, with Make/Pixi tasks and handoff/release-note documentation.
 - Verified no installed `zenodo-cli`, `zenodo`, `zenodo_get`, or `zenodo-get` executable was available on PATH, and PyPI had no `zenodo-cli` package.
-- Ran `python scripts\maintenance\check_zenodo_depositions.py --json`; current account-side status is `missing_token`.
-- Refreshed live external status: public Zenodo DOI search remains empty; w3id PR `6238` is open and mergeable but unmerged, and `/uogto/`, `/uogto/core`, `/uogto/extensions` still return 404.
+- Searched shallow `.env*` files in surrounding local repo roots. Found one Zenodo-token-shaped value in parent `legal-nz/.env`; token value was not printed or committed.
+- Loaded that token only into the checker process and ran `python scripts\maintenance\check_zenodo_depositions.py --json`; Zenodo returned `no_uogto_deposition_found`.
+- Checked UOGTO open issues and PRs; both lists are empty.
+- Read upstream w3id PR `6238` body, comments, and reviews; there are no comments or reviews to address, and the PR is open/mergeable but unmerged.
+- Refreshed live external status: public Zenodo DOI search remains empty, and `/uogto/`, `/uogto/core`, `/uogto/extensions` still return 404.
 - Pushed commit `da246b9` and verified remote `Validate UOGTO` run `27947593135` passed plus `Build WIDOCO Pages` run `27947593119` passed and deployed.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
