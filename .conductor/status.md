@@ -85,3 +85,4 @@
 - Maintenance PR `#1` exposed generated-report/changelog churn; deterministic validation-report ordering and no-op changelog generation for empty entries are implemented locally with focused tests and full validation gates.
 - Zenodo public API search for `UOGTO` still returns zero records, so no DOI is available to record and DOI-dependent LOV/OLS submissions remain blocked.
 - w3id pull request `https://github.com/perma-id/w3id.org/pull/6238` remains open, clean, and mergeable; live `/uogto/` redirects still return 404 until upstream merges and deploys.
+- Post-hardening maintenance dispatch `27923371952` failed on the registry link checker because the historical LOV `/dataset/lov/` URL redirects to 404; the LOV route note now uses the live root `https://lov.linkeddata.es/`, and local live registry link checks pass.

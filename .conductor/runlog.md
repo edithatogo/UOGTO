@@ -10,6 +10,9 @@
 - Refreshed Zenodo public search for `UOGTO`; it returned zero records, so there is still no DOI to record.
 - Refreshed w3id PR state; PR `6238` is open, clean, and mergeable, with live w3id redirects still pending upstream merge.
 - Attempted Chrome browser-control setup for account-side Zenodo inspection, but the Chrome runtime bridge failed before a browser session could start; repo/API-backed checks continued.
+- Post-hardening maintenance dispatch `27923371952` failed at `Check Registry Documentation Links` because `http://lov.okfn.org/dataset/lov/` redirects to `https://lov.linkeddata.es/dataset/lov/`, which returns 404.
+- Verified `https://lov.linkeddata.es/` returns HTTP 200 and updated the LOV submission route note to use the live root URL while documenting that historical `/dataset/lov/` is dead.
+- Verified `python scripts\maintenance\check_registry_links.py --live --allow-unpublished`, `make release-preflight`, `make validate`, and `make test` after the LOV URL correction.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
 - Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.

@@ -3,7 +3,7 @@
 ## Status
 Not yet submitted. `v1.0.0` is published and WIDOCO documentation is live; submit after the Zenodo DOI is minted.
 
-Submission route checked 2026-06-22: Linked Open Vocabularies frontend repository `pyvandenbussche/lov` is active at <https://github.com/pyvandenbussche/lov> with homepage <http://lov.okfn.org/dataset/lov/>. No repository issue template was exposed through the GitHub contents API, so the final submission route should be confirmed at submission time.
+Submission route checked 2026-06-22: Linked Open Vocabularies frontend repository `pyvandenbussche/lov` is active at <https://github.com/pyvandenbussche/lov>. The current LOV site root is <https://lov.linkeddata.es/>; the historical `/dataset/lov/` URL redirects to a 404. No repository issue template was exposed through the GitHub contents API, so the final submission route should be confirmed at submission time.
 
 ## Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
