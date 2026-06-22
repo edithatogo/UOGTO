@@ -10,6 +10,10 @@
 - Confirmed no existing UOGTO OLS issue, inspected the current OLS new-ontology template, then opened OLS indexing issue https://github.com/EBISPOT/ols4/issues/1305.
 - Updated release notes, registry docs, metadata checklist, generated handoff semantics, and publication status semantics so DOI, LOV, and OLS are no longer reported as blocked.
 - Remaining external publication blocker is upstream w3id merge and live redirect propagation.
+- Pushed commit `d438c42`; remote `Validate UOGTO` run `27952260669` passed and `Build WIDOCO Pages` run `27952260682` passed/deployed.
+- Dispatched release-assets refresh run `27952354134` for `v1.0.0`; it passed release gates, rebuilt registry/Zenodo/w3id/publication-status packets, ran release preflight, and uploaded assets to the GitHub release.
+- Downloaded refreshed release packets and verified `registry-handoff.json` status `submitted_to_registries`, `zenodo-handoff.json` status `doi_recorded`, `publication-status.json` status `pending_external_publication_steps`, LOV status `submitted`, OLS status `submitted`, and w3id status `pending_external_w3id_merge`.
+- Verified live Pages root returned HTTP 200 and DOI `https://doi.org/10.5281/zenodo.20796937` resolves to Zenodo record `20796937` with HTTP 200.
 
 ## [2026-06-22] - Live Publication Status Artifact Upload
 - Enabled GitHub Actions workflow write permissions and PR create/approve capability for `edithatogo/UOGTO`.

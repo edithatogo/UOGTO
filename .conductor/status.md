@@ -98,3 +98,6 @@
 - w3id PR `https://github.com/perma-id/w3id.org/pull/6238` remains open/mergeable with no review comments; DOI/publication evidence was added in comment `https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045`.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
 - Remote verification for commit `db59bdb` passed: `Validate UOGTO` run `27949544161` succeeded and `Build WIDOCO Pages` run `27949544173` built and deployed successfully.
+- Remote verification for commit `d438c42` passed: `Validate UOGTO` run `27952260669` succeeded and `Build WIDOCO Pages` run `27952260682` built/deployed successfully.
+- Release-assets refresh run `27952354134` passed for `v1.0.0`, rebuilding and uploading release packets that report `registry-handoff.json` status `submitted_to_registries`, `zenodo-handoff.json` status `doi_recorded`, and `publication-status.json` status `pending_external_publication_steps` with LOV/OLS submitted and w3id pending.
+- Live Pages root returned HTTP 200 after the `d438c42` deployment; DOI `https://doi.org/10.5281/zenodo.20796937` redirected to `https://zenodo.org/records/20796937` and returned HTTP 200.
