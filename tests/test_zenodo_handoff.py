@@ -21,6 +21,7 @@ class TestZenodoHandoff(unittest.TestCase):
         self.assertIn("Zenodo DOI", packet["blockers"][0])
         self.assertEqual(packet["release_tag"], "v1.0.0")
         self.assertIn("uogto.ttl", packet["release_assets"])
+        self.assertEqual(packet["account_side_cli"]["token_env"], "ZENODO_ACCESS_TOKEN")
 
     def test_write_handoff_outputs_json(self):
         output = self.temp_dir / "zenodo-handoff.json"

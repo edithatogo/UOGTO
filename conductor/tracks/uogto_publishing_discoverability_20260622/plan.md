@@ -8,6 +8,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [ ] Verify Zenodo is configured to archive GitHub releases, not every branch push.
     - [x] Add a release asset workflow so generated RDF, SHACL, JSON-LD, checksum, and manifest files are attached to `v1.0.0` before Zenodo archives the release.
     - [x] Add a generated Zenodo handoff packet to make the account-side DOI step auditable from release assets.
+    - [x] Add a token-aware Zenodo depositions CLI check so account-side release archive state can be inspected without Chrome when `ZENODO_ACCESS_TOKEN` is available.
     - [x] Document the release archive flow in `docs/releases/v1.0.md`.
     - [x] Publish GitHub release `v1.0.0`.
     - [x] Verify release-assets workflow attached public artifacts.
@@ -195,5 +196,6 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Historical LOV `/dataset/lov/` route is excluded from live-checked docs after maintenance dispatch `27923371952` proved it returns 404; the live LOV root `https://lov.linkeddata.es/` is recorded instead.
 - [x] Automated maintenance remote-status summaries filter the `chore/automated-maintenance` branch so the maintenance PR does not report itself as open repository work.
 - [x] Stale maintenance PR `#1` was closed; fresh maintenance PR `#2` was created by run `27923789206`, verified, merged as `a10f0d9`, and remote validation/Pages passed.
-- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, and Chrome setup for account-side inspection failed before a browser session could start.
+- [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; current local status is `missing_token`, so account-side depositions remain unavailable until a token is configured.
+- [~] Zenodo DOI remains account-side/external: public Zenodo API search for `UOGTO` returned zero records on 2026-06-22, Chrome `/me/uploads` redirected to login, and the terminal depositions check reports `missing_token` until `ZENODO_ACCESS_TOKEN` is configured.
 - [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.

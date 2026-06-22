@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet zenodo-packet w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -28,6 +28,9 @@ registry-packet:
 
 zenodo-packet:
 	python scripts/maintenance/build_zenodo_handoff.py
+
+zenodo-depositions:
+	python scripts/maintenance/check_zenodo_depositions.py
 
 w3id-packet:
 	python scripts/maintenance/build_w3id_redirect_handoff.py

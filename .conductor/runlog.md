@@ -21,6 +21,10 @@
 - Verified PR `#2` diff contained only the expected changelog entry and `conductor/remote_status.md` refresh with no self-reference and no validation-report churn.
 - Merged PR `#2`; local master fast-forwarded to merge commit `a10f0d9`.
 - Verified post-merge local `make validate` and `make test`, plus remote `Validate UOGTO` run `27923845421` and `Build WIDOCO Pages` run `27923845414`.
+- Added `scripts/maintenance/check_zenodo_depositions.py` to inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`, with Make/Pixi tasks and handoff/release-note documentation.
+- Verified no installed `zenodo-cli`, `zenodo`, `zenodo_get`, or `zenodo-get` executable was available on PATH, and PyPI had no `zenodo-cli` package.
+- Ran `python scripts\maintenance\check_zenodo_depositions.py --json`; current account-side status is `missing_token`.
+- Refreshed live external status: public Zenodo DOI search remains empty; w3id PR `6238` is open and mergeable but unmerged, and `/uogto/`, `/uogto/core`, `/uogto/extensions` still return 404.
 - Wired scheduled maintenance to upload `dist/publication-status-live.json` as workflow artifact `publication-status-live`.
 - Added a workflow contract test target so artifact upload remains part of the maintenance lane.
 - Verified focused workflow/publication tests, live status generation, `make release-preflight`, `make validate`, and `make test`.

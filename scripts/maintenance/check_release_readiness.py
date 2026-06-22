@@ -159,6 +159,7 @@ def check_release_notes() -> None:
         "python scripts/maintenance/check_publishing_metadata.py",
         "python scripts/maintenance/check_registry_links.py",
         "python scripts/maintenance/build_registry_handoff.py",
+        "python scripts/maintenance/check_zenodo_depositions.py",
         "python scripts/maintenance/check_doi_status.py",
         "python scripts/maintenance/record_zenodo_doi.py",
         "python scripts/maintenance/build_publication_status.py",

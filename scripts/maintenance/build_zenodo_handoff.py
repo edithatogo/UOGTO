@@ -48,10 +48,16 @@ def build_zenodo_handoff() -> dict:
             "docs/registry/lov-submission.md",
             "docs/registry/ols-indexing.md",
         ],
+        "account_side_cli": {
+            "command": "python scripts/maintenance/check_zenodo_depositions.py --json",
+            "token_env": "ZENODO_ACCESS_TOKEN",
+            "strict_command": "python scripts/maintenance/check_zenodo_depositions.py --require-token --require-uogto",
+        },
         "local_dois": local_dois,
         "required_external_actions": [
             "Enable Zenodo GitHub integration for edithatogo/UOGTO if it is not already enabled.",
             "Confirm Zenodo archives GitHub releases for v1.0.0.",
+            "If browser access is unavailable, set ZENODO_ACCESS_TOKEN and run python scripts/maintenance/check_zenodo_depositions.py --json.",
             "Wait for Zenodo to mint a DOI for the GitHub release archive.",
             "Run python scripts/maintenance/record_zenodo_doi.py <doi> once the DOI is available.",
             "Run python scripts/maintenance/check_doi_status.py --live --require-doi after recording the DOI.",
