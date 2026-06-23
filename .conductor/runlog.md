@@ -7,7 +7,9 @@
 - Opened Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 after confirming no existing UOGTO issue.
 - Recorded FAIRsharing and Wikidata as prepared but blocked by authenticated account workflows, Ontobee as deferred pending live w3id redirects, BioPortal as conditional/not submitted, and OBO Foundry as not prioritized.
 - Local gates passed after implementation: `make release-preflight`, `make validate`, and `make test` (108 passed).
-- Remaining evidence work: commit and push this state, verify remote validation/Pages, then dispatch `Publish Release Assets` for `extended-registry-handoff.json` and record the run.
+- Pushed implementation commit `8b52503`; remote `Validate UOGTO` run `27960976638` passed and `Build WIDOCO Pages` run `27960977018` passed/deployed.
+- Dispatched `Publish Release Assets` run `27961110915`; it passed release gates, built `extended-registry-handoff.json`, passed release preflight, and uploaded the asset to `v1.0.0`.
+- Verified the release asset URL returns schema `uogto.extended-registry-handoff.v1`, status `external_actions_pending`, prefix.cc status `partial`, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999`, and digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018`.
 
 ## [2026-06-22] - Extended Discoverability Track Creation
 - Created Conductor track `uogto_extended_discoverability_registries_20260622`.

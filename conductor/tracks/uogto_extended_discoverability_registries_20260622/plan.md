@@ -92,16 +92,16 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] OBO Foundry is not treated as open work in routine status.
 
 ## Phase 9: Publication Packet Refresh
-- [~] Task: Fold accepted/submitted second-wave registry state into release metadata.
+- [x] Task: Fold accepted/submitted second-wave registry state into release metadata.
     - [x] Update registry documentation, generated publication packet logic, release-readiness checks, Make/Pixi tasks, and the release-assets workflow for `dist/extended-registry-handoff.json`.
     - [x] Refresh local release assets after repo-side packet semantics were updated and local gates passed.
-    - [ ] Record remote workflow evidence after the implementation commit is pushed and `Publish Release Assets` is dispatched.
+    - [x] Record remote workflow evidence after the implementation commit was pushed and `Publish Release Assets` was dispatched.
 
 ### Acceptance Criteria
 - [x] Local `make release-preflight`, `make validate`, and `make test` pass.
-- [ ] Updated registry state is committed and pushed.
-- [ ] Remote validation and Pages workflows pass.
-- [ ] `Publish Release Assets` is dispatched and verified for `extended-registry-handoff.json` after push.
+- [x] Updated registry state is committed and pushed.
+- [x] Remote validation and Pages workflows pass.
+- [x] `Publish Release Assets` is dispatched and verified for `extended-registry-handoff.json` after push.
 
 ## Current External Blockers
 - FAIRsharing record creation requires an authenticated FAIRsharing maintainer account.
@@ -109,3 +109,10 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - prefix.cc accepted `uogto` but rejected the same-day `uogtox` submission with a one-per-day contribution limit; retry after 2026-06-24.
 - Ontobee should wait until the upstream w3id PR is merged and live redirects resolve.
 - Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 is pending maintainer review.
+
+## Remote Evidence
+- Implementation commit `8b52503` was pushed to `origin/master`.
+- Remote `Validate UOGTO` run `27960976638` passed for `8b52503`.
+- Remote `Build WIDOCO Pages` run `27960977018` passed and deployed for `8b52503`.
+- `Publish Release Assets` workflow run `27961110915` passed for `v1.0.0` and uploaded `extended-registry-handoff.json`.
+- Release asset <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/extended-registry-handoff.json> was downloaded and verified with schema `uogto.extended-registry-handoff.v1`, status `external_actions_pending`, prefix.cc status `partial`, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999`, and digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018`.
