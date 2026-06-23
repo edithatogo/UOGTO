@@ -1,5 +1,11 @@
 # Conductor Run Log
 
+## [2026-06-23] - Registry Follow-Up Remote Verification
+- Pushed commit `24b9601` and verified remote `Validate UOGTO` run `28023497374` plus `Build WIDOCO Pages` run `28023497352` passed.
+- Dispatched `Publish Release Assets` run `28023545152`; it passed release gates, rebuilt registry/w3id/publication packets, passed release preflight, and uploaded assets to `v1.0.0`.
+- Downloaded refreshed release packets and verified `extended-registry-handoff.json` reports only FAIRsharing/Wikidata blockers with digest `sha256:07c9e9e66b69582065b97c01fa61df05ad6da8c04ff39a51069e0b70c9f93081`.
+- Downloaded refreshed `w3id-redirect-handoff.json` and verified status `live_redirects_verified`, empty blockers, merged_at `2026-06-22T12:29:07Z`, and digest `sha256:82ea92c3fb8465a6bd97dfdfc51545b4e24e08d56ed2e4e7d1b26bd8a58a48ca`.
+- Downloaded refreshed `publication-status.json` and verified status `pending_external_publication_steps`, w3id `live_redirects_verified`, blockers only for FAIRsharing/Wikidata, and digest `sha256:f4ad2c38e8af6e9d8659246f2d8714966a9c9dbfdefa0dfb58d14639fb67caa4`.
 ## [2026-06-23] - Extended Discoverability Registry Implementation
 - Implemented the shared second-wave registry packet in `docs/registry/extended-discoverability-submissions.md` and `scripts/maintenance/build_extended_registry_handoff.py`.
 - Wired `dist/extended-registry-handoff.json` into Make, Pixi, publication-status generation, release-readiness checks, and the `Publish Release Assets` workflow.

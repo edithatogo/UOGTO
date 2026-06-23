@@ -125,3 +125,12 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - Ontobee indexing request is open at https://github.com/OntoZoo/ontobee/issues/212.
 - Bioregistry issue body was updated to the requested new-prefix template and recorded in https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
 - FAIRsharing and Wikidata remain account-authenticated external actions; no repository-safe credentials were found.
+
+## Remote Evidence - 2026-06-23 Follow-Up
+- Follow-up implementation commit $commit was pushed to origin/master.
+- Remote Validate UOGTO run $validateRun passed for $commit.
+- Remote Build WIDOCO Pages run $pagesRun passed and deployed for $commit.
+- Publish Release Assets workflow run $releaseRun passed for 1.0.0 and refreshed extended-registry-handoff.json, w3id-redirect-handoff.json, and publication-status.json.
+- Refreshed extended-registry-handoff.json was downloaded and verified with status external_actions_pending, blockers airsharing,wikidata, prefix.cc status submitted, Ontobee issue https://github.com/OntoZoo/ontobee/issues/212, Bioregistry template-update comment https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220, and digest $extendedHash.
+- Refreshed w3id-redirect-handoff.json was downloaded and verified with status live_redirects_verified, empty blockers, merged_at 2026-06-22T12:29:07Z, and digest $w3idHash.
+- Refreshed publication-status.json was downloaded and verified with status pending_external_publication_steps, w3id status live_redirects_verified, blockers only for airsharing and wikidata, and digest $publicationHash.

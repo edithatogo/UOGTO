@@ -111,3 +111,10 @@
 - Ontobee indexing request is open at <https://github.com/OntoZoo/ontobee/issues/212>.
 - Bioregistry issue 1999 was updated to the requested new-prefix template and recorded at <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>.
 - FAIRsharing and Wikidata remain blocked by authenticated maintainer-account workflows; no repository-safe credentials were found.
+
+## Remote Verification - 2026-06-23
+- Commit $commit passed remote Validate UOGTO run $validateRun and Build WIDOCO Pages run $pagesRun.
+- Publish Release Assets run $releaseRun passed and refreshed release packets for 1.0.0.
+- Refreshed extended-registry-handoff.json has blockers only for FAIRsharing and Wikidata, prefix.cc status submitted, Ontobee issue #212, Bioregistry template-update evidence, and digest $extendedHash.
+- Refreshed w3id-redirect-handoff.json has status live_redirects_verified, empty blockers, merged_at 2026-06-22T12:29:07Z, and digest $w3idHash.
+- Refreshed publication-status.json has status pending_external_publication_steps with blockers only for FAIRsharing and Wikidata and digest $publicationHash.
