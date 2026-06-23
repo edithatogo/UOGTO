@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is partially implemented. Repo-side metadata, a machine-readable packet, prefix.cc core prefix registration, and Bioregistry issue submission are complete. FAIRsharing and Wikidata require authenticated account actions. `uogtox` prefix.cc registration is blocked by prefix.cc's one-per-day contribution limit. Ontobee is deferred until w3id redirects are live. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, and account-bound FAIRsharing and Wikidata handoffs prepared. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -23,6 +23,7 @@ Second-wave discoverability is partially implemented. Repo-side metadata, a mach
 - LOV submission: <https://github.com/pyvandenbussche/lov/issues/83>
 - OLS request: <https://github.com/EBISPOT/ols4/issues/1305>
 - w3id redirect PR: <https://github.com/perma-id/w3id.org/pull/6238>
+- w3id redirect status: merged at `2026-06-22T12:29:07Z`; `/uogto/core` and `/uogto/extensions` return 303 redirects to <https://edithatogo.github.io/UOGTO/>.
 - Zenodo record: <https://zenodo.org/records/20796937>
 
 ## Target Records
@@ -37,12 +38,12 @@ Second-wave discoverability is partially implemented. Repo-side metadata, a mach
 - Next action: create a FAIRsharing record from the shared submission metadata after logging in with the maintainer account.
 
 ### prefix.cc
-- Status: `partial`
-- `uogto`: submitted and live at <http://prefix.cc/uogto.file.txt>, mapping to `https://w3id.org/uogto/core#`.
-- `uogtox`: pending due prefix.cc one-per-day contribution limit, mapping target `https://w3id.org/uogto/extensions#`.
+- Status: `submitted`
 - Route: <http://prefix.cc/>
-- Evidence: prefix.cc accepted the `uogto` POST and returned the submitted namespace expansion; a subsequent `uogtox` POST returned `You can add only one per day. Please try again tomorrow.`
-- Next action: submit `uogtox` after 2026-06-24 local time.
+- `uogto`: submitted and live at <http://prefix.cc/uogto.file.txt>, mapping to `https://w3id.org/uogto/core#`.
+- `uogtox`: submitted and live at <http://prefix.cc/uogtox.file.txt>, mapping to `https://w3id.org/uogto/extensions#`.
+- Evidence: prefix.cc accepted the `uogto` POST and the later `uogtox` retry; both TXT endpoints return the expected mappings.
+- Next action: monitor for any future mapping correction requests; no repo-side blocker remains.
 
 ### Wikidata
 - Status: `prepared_account_required`
@@ -59,10 +60,11 @@ Second-wave discoverability is partially implemented. Repo-side metadata, a mach
   - license: Creative Commons Attribution 4.0 International
 
 ### Ontobee
-- Status: `deferred_pending_w3id`
+- Status: `submitted`
 - Route: <https://ontobee.org/>
-- Rationale: Ontobee is most useful once stable namespace redirects resolve and can be used as linked-data term entry points. UOGTO's w3id PR is still pending upstream merge/live redirect propagation.
-- Next action: reassess after `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#` resolve through w3id.
+- Issue: <https://github.com/OntoZoo/ontobee/issues/212>
+- Evidence: w3id PR `6238` is merged and live redirects resolve before submission.
+- Next action: track Ontobee issue review feedback and record the index URL if accepted.
 
 ### BioPortal
 - Status: `not_submitted_conditional`
@@ -71,12 +73,15 @@ Second-wave discoverability is partially implemented. Repo-side metadata, a mach
 - Next action: do not submit unless that domain-positioning note is approved.
 
 ### Bioregistry
-- Status: `submitted`
+- Status: `submitted_template_updated`
 - Route: <https://bioregistry.io/>
 - Issue: <https://github.com/biopragmatics/bioregistry/issues/1999>
+- Maintainer template request: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415>
+- Template update comment: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>
 - Requested prefix: `uogto`
 - Requested URI format: `https://w3id.org/uogto/core#`
-- Evidence: no prior UOGTO Bioregistry issue was found before opening issue `1999`.
+- Evidence: no prior UOGTO Bioregistry issue was found before opening issue `1999`; the issue body was updated to the new-prefix template without inventing an ORCID absent from repository metadata.
+- Next action: track maintainer review feedback.
 
 ### OBO Foundry
 - Status: `not_prioritized`
@@ -85,8 +90,7 @@ Second-wave discoverability is partially implemented. Repo-side metadata, a mach
 - Next action: no routine action; revisit only with a concrete biomedical governance fit.
 
 ## Follow-Up Queue
-- Retry prefix.cc `uogtox` submission after the one-per-day rate limit resets.
 - Submit FAIRsharing through an authenticated maintainer session.
 - Create or update Wikidata through an authenticated maintainer session.
-- Reassess Ontobee after w3id redirects are live.
+- Track Ontobee issue review feedback and index outcome.
 - Track Bioregistry issue review feedback.

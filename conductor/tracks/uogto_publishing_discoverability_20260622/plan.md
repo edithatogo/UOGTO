@@ -176,17 +176,17 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Release-assets workflow run `27912459022` refreshed `v1.0.0` and attached `registry-handoff.json`; the asset URL returned an HTTP download redirect.
 - [x] `Publish Release Assets` workflow dispatch run `27912429240` attached `registry-handoff.json` to the existing `v1.0.0` release and the asset URL returned an HTTP download redirect.
 - [x] Registry link and release-readiness checks now require the public `registry-handoff.json` URL in LOV/OLS handoff docs and generated packet metadata.
-- [x] Registry live-link checks classify pending w3id namespace redirects as external publication blockers under `--allow-unpublished`, while strict live checks still fail until redirects are configured.
+- [x] Registry live-link checks formerly classified w3id namespace redirects as external blockers; live redirects are now verified and the pending blocker is removed.
 - [x] `make w3id-packet` emits `dist/w3id-redirect-handoff.json` with proposed `uogto/.htaccess` redirect rules for the external w3id PR.
 - [x] Release preflight now requires `dist/w3id-redirect-handoff.json`, and the release-assets workflow uploads it alongside `registry-handoff.json`.
 - [x] `Publish Release Assets` workflow dispatch run `27913057014` attached `w3id-redirect-handoff.json` to `v1.0.0`, and the asset URL returned an HTTP download redirect.
-- [x] External w3id pull request submitted at https://github.com/perma-id/w3id.org/pull/6238; upstream merge and live redirect verification remain open.
+- [x] External w3id pull request submitted at https://github.com/perma-id/w3id.org/pull/6238; upstream merge and live redirect verification are complete.
 - [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` with submitted-PR state; the asset URL returned an HTTP download redirect.
-- [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` on `v1.0.0` after PR submission; downloaded asset contains `pending_external_w3id_merge` and the PR URL.
-- [x] `make w3id-status` and `pixi run w3id-status-live` monitor PR merge state and live redirects; current live check reports PR open, merged=False, and pending w3id 404s.
+- [x] `Publish Release Assets` workflow dispatch run `27913296574` refreshed `w3id-redirect-handoff.json` on `v1.0.0` after PR submission; the 2026-06-23 follow-up records `live_redirects_verified` after merge and live redirect checks.
+- [x] `make w3id-status` and `pixi run w3id-status-live` monitor PR merge state and live redirects; current live check reports merged/live redirects.
 - [x] `make publication-status` emits `dist/publication-status.json` for consolidated release handoff review; release-assets workflow run `27914117992` attached it to `v1.0.0` and the public asset URL returned an HTTP download redirect.
 - [x] `make publication-status-live` emits live URL/Zenodo observations to `dist/publication-status-live.json`; local run returned `pending_external_publication_steps` with release asset checks live and Zenodo DOI search empty.
-- [x] `make publication-status-live` now includes w3id PR and redirect observations; local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
+- [x] `make publication-status-live` now includes w3id PR and redirect observations; current local live output records merged/live w3id redirects while preserving `pending_external_publication_steps` for registry-review/account gates.
 - [x] Scheduled maintenance uploads `dist/publication-status-live.json` as workflow artifact `publication-status-live`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
   - First manual maintenance dispatch failed before artifact upload because `update_dependencies.py` could not import `scripts` when invoked as a file under Pixi on Linux; repo-root import setup is added and local verification passed.
   - Second manual maintenance dispatch failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux; cross-platform disk path detection is added and local verification passed.
@@ -206,4 +206,4 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] Stale maintenance PR `#1` was closed; fresh maintenance PR `#2` was created by run `27923789206`, verified, merged as `a10f0d9`, and remote validation/Pages passed.
 - [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; the parent `legal-nz/.env` token was found and used without printing it.
 - [x] Zenodo DOI is no longer open: record `20796937` is published with DOI `10.5281/zenodo.20796937`; public DOI resolution returns the Zenodo record.
-- [~] w3id remains upstream/external: PR `6238` is open, clean, and mergeable, while live redirects still return 404 until upstream merge/deploy.
+- [x] w3id is resolved: PR `6238` is merged, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.

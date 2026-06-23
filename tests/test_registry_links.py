@@ -21,9 +21,9 @@ class TestRegistryLinks(unittest.TestCase):
         )
         self.assertIn("https://w3id.org/uogto/core#", urls)
 
-    def test_pending_publication_markers_exist_before_release(self):
+    def test_no_pending_publication_markers_after_release(self):
         text = check_registry_links.read_registry_text()
-        self.assertTrue(check_registry_links.has_pending_publication_markers(text))
+        self.assertFalse(check_registry_links.has_pending_publication_markers(text))
 
     def test_rejects_missing_required_url(self):
         text = "\n".join(check_registry_links.REQUIRED_STABLE_URLS)

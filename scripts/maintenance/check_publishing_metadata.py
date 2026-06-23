@@ -272,6 +272,9 @@ def check_registry_docs():
         "https://github.com/EBISPOT/ols4/issues/1305",
         "https://github.com/biopragmatics/bioregistry/issues/1999",
         "http://prefix.cc/uogto.file.txt",
+        "http://prefix.cc/uogtox.file.txt",
+        "https://github.com/OntoZoo/ontobee/issues/212",
+        "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
     ]:
         if expected not in metadata + lov + ols + w3id + extended + release:
             raise AssertionError(f"Registry documentation missing expected text: {expected}")

@@ -50,12 +50,11 @@ def render_htaccess() -> str:
 def build_w3id_handoff() -> dict:
     return {
         "schema": "uogto.w3id-redirect-handoff.v1",
-        "status": "pending_external_w3id_merge",
-        "blockers": [
-            "w3id.org namespace redirects require upstream pull request merge and live redirect verification."
-        ],
+        "status": "live_redirects_verified",
+        "blockers": [],
         "w3id_repository": W3ID_REPOSITORY,
         "w3id_pull_request_url": W3ID_PULL_REQUEST_URL,
+        "merged_at": "2026-06-22T12:29:07Z",
         "w3id_path": W3ID_PATH,
         "documentation_url": DOCUMENTATION_URL,
         "release_asset_url": RELEASE_ASSET_URL,
@@ -70,6 +69,14 @@ def write_handoff(output_path: Path, packet: dict) -> None:
     output_path.write_text(json.dumps(packet, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+
+def display_path(output_path: Path) -> str:
+    resolved = output_path.resolve()
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(output_path)
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build the UOGTO w3id redirect handoff packet.")
     parser.add_argument(
@@ -82,7 +89,7 @@ def main() -> None:
 
     packet = build_w3id_handoff()
     write_handoff(args.output, packet)
-    print(f"Wrote {args.output.relative_to(ROOT)} with status {packet['status']}.")
+    print(f"Wrote {display_path(args.output)} with status {packet['status']}.")
 
 
 if __name__ == "__main__":

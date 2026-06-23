@@ -1,7 +1,7 @@
 # w3id Namespace Redirect Submission
 
 ## Status
-Submitted. The namespace redirects are pending upstream merge and live verification.
+Merged and live. The upstream PR is merged, and the namespace redirects resolve to the UOGTO documentation site.
 
 ## Requested w3id Repository Change
 - Repository: <https://github.com/perma-id/w3id.org>
@@ -26,12 +26,17 @@ RewriteRule ^extensions/?$ https://edithatogo.github.io/UOGTO/ [R=303,L]
 - [x] Submit pull request to `perma-id/w3id.org`.
 - [x] Record w3id pull request URL.
 - [x] Add `make w3id-status` monitoring for the upstream PR and live redirects.
-- [ ] Verify `https://w3id.org/uogto/core#` returns a live redirect after merge.
-- [ ] Verify `https://w3id.org/uogto/extensions#` returns a live redirect after merge.
-- [ ] Remove pending w3id blocker from registry checklist after live verification.
+- [x] Verify `https://w3id.org/uogto/core#` returns a live redirect after merge.
+- [x] Verify `https://w3id.org/uogto/extensions#` returns a live redirect after merge.
+- [x] Remove pending w3id blocker from registry checklist after live verification.
 
 ## Submission Record
 - Pull request URL: https://github.com/perma-id/w3id.org/pull/6238
-- Review status: Submitted; pending upstream review
-- Merge status: `TBD`
-- Monitoring command: `make w3id-status`; live check: `python scripts/maintenance/check_w3id_status.py --live`
+- Review status: Merged
+- Merge status: `MERGED` at `2026-06-22T12:29:07Z`
+- Live redirects verified:
+  - `https://w3id.org/uogto/core` -> `https://edithatogo.github.io/UOGTO/` (303)
+  - `https://w3id.org/uogto/extensions` -> `https://edithatogo.github.io/UOGTO/` (303)
+  - `https://w3id.org/uogto/core#` -> `https://edithatogo.github.io/UOGTO/` (303)
+  - `https://w3id.org/uogto/extensions#` -> `https://edithatogo.github.io/UOGTO/` (303)
+- Monitoring command: `make w3id-status`; live check: `python scripts/maintenance/check_w3id_status.py --live --require-merged --require-live`

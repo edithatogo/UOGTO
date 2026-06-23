@@ -25,7 +25,7 @@ class TestPublicationStatus(unittest.TestCase):
         self.assertEqual(packet["checks"]["lov"]["submission_url"], "https://github.com/pyvandenbussche/lov/issues/83")
         self.assertEqual(packet["checks"]["ols"]["status"], "submitted")
         self.assertEqual(packet["checks"]["ols"]["request_url"], "https://github.com/EBISPOT/ols4/issues/1305")
-        self.assertEqual(packet["checks"]["w3id"]["status"], "pending_external_w3id_merge")
+        self.assertEqual(packet["checks"]["w3id"]["status"], "live_redirects_verified")
         self.assertEqual(packet["checks"]["extended_registry"]["status"], "external_actions_pending")
         self.assertEqual(packet["checks"]["extended_registry"]["packet"], "dist/extended-registry-handoff.json")
         self.assertIn("extended-registry-handoff.json", packet["assets"])

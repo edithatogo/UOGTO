@@ -22,8 +22,8 @@
 - Zenodo DOI `10.5281/zenodo.20796937` is minted and recorded; direct Zenodo record lookup and DOI resolution both return record `20796937`.
 - LOV submission is open at https://github.com/pyvandenbussche/lov/issues/83.
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
-- w3id PR `6238` has been updated with DOI and publication evidence at https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045.
-- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; external actions remain pending for authenticated FAIRsharing/Wikidata work, prefix.cc `uogtox`, Ontobee after w3id, and Bioregistry review.
+- w3id PR `6238` has been updated with DOI and publication evidence, merged at `2026-06-22T12:29:07Z`, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
+- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, and Bioregistry template-update submission are complete; external actions remain pending for authenticated FAIRsharing/Wikidata work and registry maintainer review.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -43,16 +43,16 @@
 - Registry handoff packet generation is implemented with `make registry-packet`; it writes submitted LOV/OLS issue metadata to `dist/registry-handoff.json` after Zenodo DOI recording.
 - Release preflight, Pixi release-preflight, and the release-assets workflow now require and upload `dist/registry-handoff.json`; workflow run `27912429240` attached it to `v1.0.0` and the asset URL returned an HTTP download redirect.
 - Registry link and release-readiness gates now require the public `registry-handoff.json` release asset URL in LOV/OLS packet docs.
-- Registry live-link checks now distinguish strict live mode from `--allow-unpublished`; w3id namespace redirects remain an external publication gate.
-- w3id redirect handoff is prepared in docs/registry/w3id-submission.md and make w3id-packet; release preflight now requires dist/w3id-redirect-handoff.json, and release-assets run 27913296574 attached the submitted-PR packet to v1.0.0. The external perma-id/w3id.org pull request is submitted at https://github.com/perma-id/w3id.org/pull/6238 and remains pending upstream merge/live redirect verification.
-- w3id PR and redirect monitoring is implemented with `make w3id-status`, `pixi run w3id-status-live`, and scheduled maintenance; live status currently reports PR open, merged=False, and w3id endpoints returning 404.
+- Registry live-link checks now distinguish strict live mode from account-bound or maintainer-review external gates; w3id namespace redirects are live.
+- w3id redirect handoff is prepared in docs/registry/w3id-submission.md and make w3id-packet; release preflight requires dist/w3id-redirect-handoff.json. The external perma-id/w3id.org pull request https://github.com/perma-id/w3id.org/pull/6238 is merged and live redirects are verified.
+- w3id PR and redirect monitoring is implemented with `make w3id-status`, `pixi run w3id-status-live`, and scheduled maintenance; current state records PR merged and redirects live.
 - SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Continue first-wave w3id live redirect and LOV/OLS maintainer review gates, then monitor the second-wave external blockers: FAIRsharing authenticated submission, Wikidata authenticated item creation, prefix.cc `uogtox` retry after 2026-06-24, Ontobee after live w3id redirects, and Bioregistry issue #1999 review.
+- Continue LOV/OLS maintainer review gates, then monitor the second-wave external blockers: FAIRsharing authenticated submission, Wikidata authenticated item creation, Ontobee issue #212 review, and Bioregistry issue #1999 review.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
@@ -69,17 +69,17 @@
 - Recorded post-manuscript-CI verification for commit `8118694`: `Validate UOGTO` run `27911901129` passed, `Build Manuscript PDF` run `27911901120` passed, `Build WIDOCO Pages` run `27911901116` passed and deployed, and the Pages root returned HTTP 200.
 - Live DOI check records DOI `10.5281/zenodo.20796937`; registry handoff is no longer DOI-blocked.
 - Release-assets workflow dispatch run `27912429240` passed for `v1.0.0` and attached `registry-handoff.json` to the GitHub release; the release asset URL returned HTTP 302 to the downloadable object.
-- Strict registry live check still fails for pending w3id namespace redirects; scheduled/live maintenance can use `--allow-unpublished` until those redirects are configured.
-- w3id redirect pull request https://github.com/perma-id/w3id.org/pull/6238 is submitted; upstream merge and live redirect completion remain external.
+- Strict registry live checks no longer fail for w3id namespace redirects; scheduled/live maintenance can use external-review status for remaining registry gates.
+- w3id redirect pull request https://github.com/perma-id/w3id.org/pull/6238 is merged and live redirect completion is verified.
 - Release-assets workflow dispatch run `27913296574` passed for `v1.0.0` and attached the submitted-PR `w3id-redirect-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
-- Release-assets workflow dispatch run 27913296574 passed for v1.0.0 and refreshed w3id-redirect-handoff.json; the downloaded asset contains status pending_external_w3id_merge and PR https://github.com/perma-id/w3id.org/pull/6238.
-- Live w3id monitor reports PR `6238` is open with `merged=False`, and `/uogto/`, `/uogto/core`, and `/uogto/extensions` still return 404 until upstream merge propagates.
+- Release-assets workflow dispatch run 27913296574 passed for v1.0.0 and refreshed w3id-redirect-handoff.json; the 2026-06-23 follow-up changes the generated packet to `live_redirects_verified` after PR merge and redirect checks.
+- Live w3id monitor reports PR `6238` merged and `/uogto/core` plus `/uogto/extensions` redirect to the UOGTO documentation site.
 - Zenodo DOI is recorded and resolves publicly; LOV and OLS requests are submitted and awaiting maintainer review.
 - Release-assets workflow dispatch run `27913777454` passed for `v1.0.0` and attached `zenodo-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
-- `dist/publication-status.json` is part of local release preflight and the release-assets workflow; current generated status should report DOI recorded plus LOV/OLS submitted, with w3id as the remaining external publication blocker.
+- `dist/publication-status.json` is part of local release preflight and the release-assets workflow; current generated status should report DOI recorded, LOV/OLS submitted, w3id live, and FAIRsharing/Wikidata as remaining account-bound blockers.
 - The attached `publication-status.json` release asset has digest `sha256:e52e18db755e23c1e2317cdf8483960a55e374ad2f8b929512a7c4b9f52d8ec5`.
-- Live publication status observations are added to scheduled maintenance so public Pages, release assets, and Zenodo DOI search can be inspected from one generated JSON artifact. Local live output still reports `pending_external_publication_steps` because Zenodo DOI search is empty.
-- `dist/publication-status-live.json` now includes w3id PR and redirect observations. Local live output records PR `merged=false` and three pending 404 namespace redirects while preserving `pending_external_publication_steps`.
+- Live publication status observations are added to scheduled maintenance so public Pages, release assets, and Zenodo DOI search can be inspected from one generated JSON artifact.
+- `dist/publication-status-live.json` includes w3id PR and redirect observations. Current generated output records live w3id redirects while preserving `pending_external_publication_steps` for registry review/account gates.
 - Scheduled maintenance artifact upload is implemented for `dist/publication-status-live.json`; local workflow contract verification, `make release-preflight`, `make validate`, and `make test` passed.
 - Manual maintenance dispatch `27914704264` failed before artifact upload because `update_dependencies.py` could not import `scripts` under Pixi/Linux; the import path fix is implemented and local verification passed.
 - Manual maintenance dispatch `27914843364` then failed before artifact upload because `disk_guard.py` defaulted to `C:\` on Linux; cross-platform disk path detection is implemented and local verification passed.
@@ -90,17 +90,24 @@
 - GitHub Actions repository workflow permissions are now set to write with pull-request approval/create enabled; manual maintenance dispatch `27923148929` passed and opened maintenance PR `#1`.
 - Maintenance PR `#1` exposed generated-report/changelog churn; deterministic validation-report ordering and no-op changelog generation for empty entries are implemented locally with focused tests and full validation gates.
 - Zenodo record `20796937` is published with DOI `10.5281/zenodo.20796937`; direct DOI and record checks pass even if public search indexing lags.
-- w3id pull request `https://github.com/perma-id/w3id.org/pull/6238` remains open, clean, and mergeable; live `/uogto/` redirects still return 404 until upstream merges and deploys.
+- w3id pull request `https://github.com/perma-id/w3id.org/pull/6238` is merged; live `/uogto/core` and `/uogto/extensions` redirects return 303 to the UOGTO documentation site.
 - Post-hardening maintenance dispatch `27923371952` failed on the registry link checker because the historical LOV `/dataset/lov/` URL redirects to 404; the LOV route note now uses the live root `https://lov.linkeddata.es/`, and local live registry link checks pass.
 - Remote-status generation now filters the automated `chore/automated-maintenance` branch when using `gh`, preventing the maintenance PR from reporting itself as open repository work.
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
-- Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed checks were used without printing the token; Zenodo record `20796937` is now published, and w3id PR `6238` has no comments/reviews, remains open/mergeable but unmerged, and live redirects still return 404.
+- Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed checks were used without printing the token; Zenodo record `20796937` is now published, and w3id PR `6238` is now merged with live redirects verified.
 - LOV issue `https://github.com/pyvandenbussche/lov/issues/83` and OLS issue `https://github.com/EBISPOT/ols4/issues/1305` are open; both reference the public DOI, WIDOCO docs, release, and canonical RDF asset.
-- Extended discoverability repo-side implementation is complete locally: `uogto` is live at prefix.cc, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999` is open, FAIRsharing/Wikidata are prepared but account-blocked, Ontobee is deferred pending w3id, and BioPortal/OBO Foundry are recorded as conditional/not prioritized.
+- Extended discoverability repo-side implementation is complete locally: `uogto` and `uogtox` are live at prefix.cc, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212` is open, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999` is template-updated, FAIRsharing/Wikidata are prepared but account-blocked, and BioPortal/OBO Foundry are recorded as conditional/not prioritized.
 - Extended discoverability release evidence is recorded: commit `8b52503` passed remote `Validate UOGTO` run `27960976638`, remote `Build WIDOCO Pages` run `27960977018`, and `Publish Release Assets` run `27961110915`; the `extended-registry-handoff.json` release asset is attached with digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018`.
-- w3id PR `https://github.com/perma-id/w3id.org/pull/6238` remains open/mergeable with no review comments; DOI/publication evidence was added in comment `https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045`.
+- w3id PR `https://github.com/perma-id/w3id.org/pull/6238` is merged; DOI/publication evidence was added in comment `https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045`.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
 - Remote verification for commit `db59bdb` passed: `Validate UOGTO` run `27949544161` succeeded and `Build WIDOCO Pages` run `27949544173` built and deployed successfully.
 - Remote verification for commit `d438c42` passed: `Validate UOGTO` run `27952260669` succeeded and `Build WIDOCO Pages` run `27952260682` built/deployed successfully.
-- Release-assets refresh run `27952354134` passed for `v1.0.0`, rebuilding and uploading release packets that report `registry-handoff.json` status `submitted_to_registries`, `zenodo-handoff.json` status `doi_recorded`, and `publication-status.json` status `pending_external_publication_steps` with LOV/OLS submitted and w3id pending.
+- Release-assets refresh run `27952354134` passed for `v1.0.0`, rebuilding and uploading release packets that report `registry-handoff.json` status `submitted_to_registries`, `zenodo-handoff.json` status `doi_recorded`, and historical `publication-status.json` status `pending_external_publication_steps`; current local generation records w3id live and remaining registry-review/account gates.
 - Live Pages root returned HTTP 200 after the `d438c42` deployment; DOI `https://doi.org/10.5281/zenodo.20796937` redirected to `https://zenodo.org/records/20796937` and returned HTTP 200.
+
+## Extended Discoverability Follow-Up - 2026-06-23
+- w3id PR 6238 is merged and /uogto/core plus /uogto/extensions return 303 redirects to <https://edithatogo.github.io/UOGTO/>.
+- prefix.cc uogtox is live at <http://prefix.cc/uogtox.file.txt>; both UOGTO prefixes are submitted.
+- Ontobee indexing request is open at <https://github.com/OntoZoo/ontobee/issues/212>.
+- Bioregistry issue 1999 was updated to the requested new-prefix template and recorded at <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>.
+- FAIRsharing and Wikidata remain blocked by authenticated maintainer-account workflows; no repository-safe credentials were found.

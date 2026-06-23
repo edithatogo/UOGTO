@@ -45,8 +45,8 @@ def check_local_w3id_state() -> dict:
         raise AssertionError("w3id submission document does not record the upstream pull request URL")
 
     packet = build_w3id_redirect_handoff.build_w3id_handoff()
-    if packet.get("status") != "pending_external_w3id_merge":
-        raise AssertionError("w3id handoff packet must remain pending_external_w3id_merge until live redirects work")
+    if packet.get("status") != "live_redirects_verified":
+        raise AssertionError("w3id handoff packet must record live_redirects_verified after merge and redirect verification")
     if packet.get("w3id_pull_request_url") != PR_URL:
         raise AssertionError("w3id handoff packet pull request URL does not match the submission record")
     return packet
@@ -91,7 +91,7 @@ def main() -> None:
     args = parser.parse_args()
 
     check_local_w3id_state()
-    messages = ["Local w3id submission state is pending upstream merge."]
+    messages = ["Local w3id submission state records merged and live redirects."]
 
     if args.live or args.require_merged:
         pr = check_pr_state(require_merged=args.require_merged, timeout=args.timeout)

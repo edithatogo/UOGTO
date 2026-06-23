@@ -5,9 +5,9 @@ from scripts.maintenance import check_w3id_status
 
 
 class TestW3idStatus(unittest.TestCase):
-    def test_local_state_tracks_pending_merge_and_pr_url(self):
+    def test_local_state_tracks_live_redirects_and_pr_url(self):
         packet = check_w3id_status.check_local_w3id_state()
-        self.assertEqual(packet["status"], "pending_external_w3id_merge")
+        self.assertEqual(packet["status"], "live_redirects_verified")
         self.assertEqual(packet["w3id_pull_request_url"], "https://github.com/perma-id/w3id.org/pull/6238")
 
     def test_require_merged_rejects_open_pr(self):

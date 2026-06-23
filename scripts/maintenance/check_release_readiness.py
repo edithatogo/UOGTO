@@ -35,8 +35,6 @@ PENDING_EXTERNAL_MARKERS = [
     "TBD after Zenodo archiving",
     "TBD after the v1.0.0 GitHub release is archived by Zenodo",
     "Not yet submitted",
-    "pending upstream merge",
-    "pending until `perma-id/w3id.org` merges",
 ]
 
 
@@ -247,7 +245,7 @@ def main() -> None:
     if args.require_published:
         print("Published-release readiness checks passed.")
     else:
-        print("Local release readiness checks passed; w3id merge/redirects and registry maintainer reviews remain external gates.")
+        print("Local release readiness checks passed; registry maintainer reviews and authenticated external actions remain external gates.")
 
 
 if __name__ == "__main__":

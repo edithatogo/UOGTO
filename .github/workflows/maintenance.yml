@@ -35,7 +35,7 @@ jobs:
         run: pixi run python scripts/maintenance/generate_changelog.py
 
       - name: Check Registry Documentation Links
-        run: pixi run python scripts/maintenance/check_registry_links.py --live --allow-unpublished
+        run: pixi run python scripts/maintenance/check_registry_links.py --live
 
       - name: Check Zenodo DOI Status
         run: pixi run python scripts/maintenance/check_doi_status.py --live

@@ -39,18 +39,16 @@ TARGETS = {
         "blocker": "Authenticated FAIRsharing account and JavaScript submission workflow required.",
     },
     "prefix_cc": {
-        "status": "partial",
+        "status": "submitted",
         "route": "http://prefix.cc/",
         "submitted": {
             "uogto": {
                 "uri": CORE_NAMESPACE,
                 "evidence": "http://prefix.cc/uogto.file.txt",
-            }
-        },
-        "pending": {
+            },
             "uogtox": {
                 "uri": EXTENSION_NAMESPACE,
-                "blocker": "prefix.cc one-per-day contribution limit; retry after 2026-06-24.",
+                "evidence": "http://prefix.cc/uogtox.file.txt",
             }
         },
     },
@@ -60,9 +58,10 @@ TARGETS = {
         "blocker": "Authenticated Wikidata account and edit token required; searches found no existing UOGTO item.",
     },
     "ontobee": {
-        "status": "deferred_pending_w3id",
+        "status": "submitted",
         "route": "https://ontobee.org/",
-        "blocker": "Wait for w3id redirects before requesting linked-data term indexing.",
+        "issue": "https://github.com/OntoZoo/ontobee/issues/212",
+        "evidence": "w3id PR 6238 is merged and /uogto/core plus /uogto/extensions return 303 redirects to the UOGTO documentation.",
     },
     "bioportal": {
         "status": "not_submitted_conditional",
@@ -70,9 +69,11 @@ TARGETS = {
         "decision": "Do not submit without a defensible biomedical, clinical, public-health, behavioural-science, or health-simulation positioning note.",
     },
     "bioregistry": {
-        "status": "submitted",
+        "status": "submitted_template_updated",
         "route": "https://bioregistry.io/",
         "issue": "https://github.com/biopragmatics/bioregistry/issues/1999",
+        "maintainer_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415",
+        "template_update_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
     },
     "obo_foundry": {
         "status": "not_prioritized",
@@ -131,6 +132,14 @@ def write_handoff(output_path: Path, packet: dict) -> None:
     output_path.write_text(json.dumps(packet, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+
+def display_path(output_path: Path) -> str:
+    resolved = output_path.resolve()
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(output_path)
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build the UOGTO extended registry handoff packet.")
     parser.add_argument(
@@ -143,7 +152,7 @@ def main() -> None:
 
     packet = build_extended_registry_handoff()
     write_handoff(args.output, packet)
-    print(f"Wrote {args.output.relative_to(ROOT)} with status {packet['status']}.")
+    print(f"Wrote {display_path(args.output)} with status {packet['status']}.")
 
 
 if __name__ == "__main__":

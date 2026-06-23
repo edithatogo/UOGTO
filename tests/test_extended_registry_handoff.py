@@ -21,7 +21,13 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         self.assertEqual(packet["schema"], "uogto.extended-registry-handoff.v1")
         self.assertEqual(packet["status"], "external_actions_pending")
         self.assertEqual(packet["targets"]["prefix_cc"]["submitted"]["uogto"]["uri"], "https://w3id.org/uogto/core#")
+        self.assertEqual(packet["targets"]["prefix_cc"]["submitted"]["uogtox"]["uri"], "https://w3id.org/uogto/extensions#")
+        self.assertEqual(packet["targets"]["ontobee"]["issue"], "https://github.com/OntoZoo/ontobee/issues/212")
         self.assertEqual(packet["targets"]["bioregistry"]["issue"], "https://github.com/biopragmatics/bioregistry/issues/1999")
+        self.assertEqual(
+            packet["targets"]["bioregistry"]["template_update_comment"],
+            "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
+        )
         self.assertEqual(packet["targets"]["obo_foundry"]["status"], "not_prioritized")
         self.assertIn("10.5281/zenodo.20796937", packet["ontology"]["doi"])
 
@@ -29,9 +35,9 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         packet = build_extended_registry_handoff.build_extended_registry_handoff()
         blockers = {item["target"]: item["message"] for item in packet["blockers"]}
         self.assertIn("fairsharing", blockers)
-        self.assertIn("prefix_cc", blockers)
+        self.assertNotIn("prefix_cc", blockers)
         self.assertIn("wikidata", blockers)
-        self.assertIn("ontobee", blockers)
+        self.assertNotIn("ontobee", blockers)
         self.assertNotIn("bioportal", blockers)
         self.assertNotIn("obo_foundry", blockers)
 
@@ -40,12 +46,18 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
             with self.assertRaisesRegex(AssertionError, "canonical metadata"):
                 build_extended_registry_handoff.build_extended_registry_handoff()
 
+    def test_display_path_accepts_relative_output(self):
+        self.assertEqual(
+            build_extended_registry_handoff.display_path(Path("dist/extended-registry-handoff.json")),
+            str(Path("dist/extended-registry-handoff.json")),
+        )
+
     def test_write_handoff_outputs_json(self):
         output = self.temp_dir / "extended-registry-handoff.json"
         packet = build_extended_registry_handoff.build_extended_registry_handoff()
         build_extended_registry_handoff.write_handoff(output, packet)
         loaded = json.loads(output.read_text(encoding="utf-8"))
-        self.assertEqual(loaded["targets"]["prefix_cc"]["status"], "partial")
+        self.assertEqual(loaded["targets"]["prefix_cc"]["status"], "submitted")
 
 
 if __name__ == "__main__":

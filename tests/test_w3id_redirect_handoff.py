@@ -19,10 +19,12 @@ class TestW3idRedirectHandoff(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.temp_dir, ignore_errors=True)
 
-    def test_handoff_records_pending_external_merge(self):
+    def test_handoff_records_live_redirects(self):
         packet = build_w3id_redirect_handoff.build_w3id_handoff()
         self.assertEqual(packet["schema"], "uogto.w3id-redirect-handoff.v1")
-        self.assertEqual(packet["status"], "pending_external_w3id_merge")
+        self.assertEqual(packet["status"], "live_redirects_verified")
+        self.assertEqual(packet["blockers"], [])
+        self.assertEqual(packet["merged_at"], "2026-06-22T12:29:07Z")
         self.assertEqual(packet["w3id_pull_request_url"], "https://github.com/perma-id/w3id.org/pull/6238")
         self.assertEqual(packet["w3id_path"], "uogto/.htaccess")
         self.assertIn("URL fragments", packet["namespace_note"])
@@ -33,6 +35,12 @@ class TestW3idRedirectHandoff(unittest.TestCase):
         self.assertIn("RewriteRule ^core/?$", htaccess)
         self.assertIn("RewriteRule ^extensions/?$", htaccess)
         self.assertIn("[R=303,L]", htaccess)
+
+    def test_display_path_accepts_relative_output(self):
+        self.assertEqual(
+            build_w3id_redirect_handoff.display_path(Path("dist/w3id-redirect-handoff.json")),
+            str(Path("dist/w3id-redirect-handoff.json")),
+        )
 
     def test_write_handoff_outputs_json(self):
         output = self.temp_dir / "w3id-redirect-handoff.json"

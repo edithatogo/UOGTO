@@ -38,7 +38,6 @@ PENDING_MARKERS = [
     "TBD after Zenodo archiving",
     "TBD after the v1.0.0 GitHub release is archived by Zenodo",
     "Not yet submitted",
-    "w3id namespace redirects pending",
 ]
 
 URL_PATTERN = re.compile(r"https?://[^\s>)`]+")

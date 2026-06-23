@@ -1,6 +1,6 @@
 # Implementation Plan: Extended Discoverability Registries
 
-This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and w3id PR update. Repo-side packet integration is implemented; remaining work is limited to authenticated external submissions, upstream registry review, and prefix.cc rate-limit follow-up.
+This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to authenticated external submissions and upstream registry review.
 
 ## Phase 1: Shared Submission Packet
 - [x] Task: Create a reusable extended-registry submission packet.
@@ -11,7 +11,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 ### Acceptance Criteria
 - [x] Submission packet exists and links to all public canonical assets.
 - [x] Packet includes `uogto` and `uogtox` prefix mappings.
-- [x] Packet records external first-wave status: DOI minted, LOV submitted, OLS submitted, w3id pending upstream merge.
+- [x] Packet records external first-wave status: DOI minted, LOV submitted, OLS submitted, and w3id merged/live.
 - [x] `make release-preflight`, `make validate`, and `make test` pass locally.
 
 ## Phase 2: FAIRsharing Submission
@@ -27,14 +27,14 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] Any requested metadata changes will be converted into follow-up tasks after external review feedback exists.
 
 ## Phase 3: prefix.cc Namespace Registration
-- [~] Task: Register UOGTO prefixes.
+- [x] Task: Register UOGTO prefixes.
     - [x] Confirm the current prefix.cc add/update route.
     - [x] Submit `uogto` mapping to `https://w3id.org/uogto/core#`.
-    - [ ] Submit `uogtox` mapping to `https://w3id.org/uogto/extensions#`.
+    - [x] Submit `uogtox` mapping to `https://w3id.org/uogto/extensions#`.
     - [x] Record submission and live lookup evidence.
 
 ### Acceptance Criteria
-- [~] `uogto` is live in prefix.cc; `uogtox` is pending with evidence because prefix.cc returned a one-per-day contribution limit and a retry-after date of 2026-06-24.
+- [x] `uogto` and `uogtox` are live in prefix.cc with TXT endpoint evidence.
 - [x] Registry docs and Conductor state record the mapping status.
 
 ## Phase 4: Wikidata Item
@@ -52,13 +52,13 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 ## Phase 5: Ontobee Feasibility
 - [x] Task: Assess Ontobee after w3id redirect status is resolved.
     - [x] Check whether Ontobee should wait for stable namespace redirects and linked-data entry points.
-    - [x] Confirm the current blocker as pending w3id PR merge/live redirect propagation.
-    - [x] Record a deferred decision rather than submit prematurely.
+    - [x] Confirm w3id PR merge/live redirect propagation before submission.
+    - [x] Submit the Ontobee indexing request after live w3id redirects were verified.
 
 ### Acceptance Criteria
-- [x] Ontobee decision is recorded as deferred.
-- [ ] If submitted later, request URL and review state are captured.
-- [x] Deferred blocker is specific: pending w3id redirects.
+- [x] Ontobee decision is recorded as submitted.
+- [x] Request URL and review state are captured: https://github.com/OntoZoo/ontobee/issues/212.
+- [x] Former w3id blocker is resolved; Ontobee is now external review pending.
 
 ## Phase 6: Conditional BioPortal Submission
 - [x] Task: Decide whether BioPortal is in scope.
@@ -80,7 +80,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 ### Acceptance Criteria
 - [x] Bioregistry decision is recorded with rationale.
 - [x] Request URL and prefix metadata are captured: https://github.com/biopragmatics/bioregistry/issues/1999.
-- [x] External maintainer review remains pending and is visible in status/runlog.
+- [x] Maintainer template feedback and template-update comment are visible in status/runlog: https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
 
 ## Phase 8: Negative Decision - OBO Foundry
 - [x] Task: Record OBO Foundry as not prioritized.
@@ -106,13 +106,22 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 ## Current External Blockers
 - FAIRsharing record creation requires an authenticated FAIRsharing maintainer account.
 - Wikidata item creation requires an authenticated Wikidata account and edit token.
-- prefix.cc accepted `uogto` but rejected the same-day `uogtox` submission with a one-per-day contribution limit; retry after 2026-06-24.
-- Ontobee should wait until the upstream w3id PR is merged and live redirects resolve.
-- Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 is pending maintainer review.
+
+
+## External Review Pending
+- Ontobee indexing request https://github.com/OntoZoo/ontobee/issues/212 is pending maintainer review.
+- Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 is pending maintainer review after the new-prefix template update comment https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
 
 ## Remote Evidence
 - Implementation commit `8b52503` was pushed to `origin/master`.
 - Remote `Validate UOGTO` run `27960976638` passed for `8b52503`.
 - Remote `Build WIDOCO Pages` run `27960977018` passed and deployed for `8b52503`.
 - `Publish Release Assets` workflow run `27961110915` passed for `v1.0.0` and uploaded `extended-registry-handoff.json`.
-- Release asset <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/extended-registry-handoff.json> was downloaded and verified with schema `uogto.extended-registry-handoff.v1`, status `external_actions_pending`, prefix.cc status `partial`, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999`, and digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018`.
+- Release asset <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/extended-registry-handoff.json> was downloaded and verified with schema `uogto.extended-registry-handoff.v1`, status `external_actions_pending`, prefix.cc status `partial`, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999`, and digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018` before the 2026-06-23 follow-up refresh.
+
+## Follow-Up Evidence - 2026-06-23
+- w3id PR https://github.com/perma-id/w3id.org/pull/6238 is merged at 2026-06-22T12:29:07Z; /uogto/core and /uogto/extensions return 303 redirects to the UOGTO documentation site.
+- prefix.cc uogtox retry succeeded and <http://prefix.cc/uogtox.file.txt> returns https://w3id.org/uogto/extensions#.
+- Ontobee indexing request is open at https://github.com/OntoZoo/ontobee/issues/212.
+- Bioregistry issue body was updated to the requested new-prefix template and recorded in https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
+- FAIRsharing and Wikidata remain account-authenticated external actions; no repository-safe credentials were found.
