@@ -22,7 +22,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
     - [x] Record account-required blocker and maintainer next action.
 
 ### Acceptance Criteria
-- [~] FAIRsharing submission URL or record URL is captured in `docs/registry/`; currently blocked pending an authenticated FAIRsharing maintainer session.
+- [~] FAIRsharing submission URL or record URL is captured in `docs/registry/`; currently blocked because the live FAIRsharing Chrome workflow did not expose a reliable submission page.
 - [x] FAIRsharing status is visible in Conductor status/runlog.
 - [x] Any requested metadata changes will be converted into follow-up tasks after external review feedback exists.
 
@@ -38,16 +38,16 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] Registry docs and Conductor state record the mapping status.
 
 ## Phase 4: Wikidata Item
-- [~] Task: Create or update Wikidata coverage.
+- [x] Task: Create or update Wikidata coverage.
     - [x] Search Wikidata for an existing UOGTO item before creating a new one.
     - [x] Prepare statements for DOI, GitHub repository, documentation/homepage, release/version, license, ontology classification, and maintainers where supported.
-    - [ ] Create or update the Wikidata item.
-    - [x] Record account-required blocker and no-duplicate search evidence.
+    - [x] Create the Wikidata item: https://www.wikidata.org/wiki/Q140323510.
+    - [x] Record account-authenticated creation evidence and no-duplicate search evidence.
 
 ### Acceptance Criteria
-- [~] Wikidata item URL is recorded; currently blocked pending an authenticated Wikidata edit session.
-- [x] DOI, repository, documentation, and license statements are prepared in `docs/registry/extended-discoverability-submissions.md`.
-- [x] No duplicate Wikidata item was found before deferring authenticated creation.
+- [x] Wikidata item URL is recorded: https://www.wikidata.org/wiki/Q140323510.
+- [x] DOI, repository, documentation, ontology classification, and license statements are live on the Wikidata item.
+- [x] No duplicate Wikidata item was found before creation.
 
 ## Phase 5: Ontobee Feasibility
 - [x] Task: Assess Ontobee after w3id redirect status is resolved.
@@ -127,10 +127,17 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - FAIRsharing and Wikidata remain account-authenticated external actions; no repository-safe credentials were found.
 
 ## Remote Evidence - 2026-06-23 Follow-Up
-- Follow-up implementation commit $commit was pushed to origin/master.
-- Remote Validate UOGTO run $validateRun passed for $commit.
-- Remote Build WIDOCO Pages run $pagesRun passed and deployed for $commit.
-- Publish Release Assets workflow run $releaseRun passed for 1.0.0 and refreshed extended-registry-handoff.json, w3id-redirect-handoff.json, and publication-status.json.
-- Refreshed extended-registry-handoff.json was downloaded and verified with status external_actions_pending, blockers airsharing,wikidata, prefix.cc status submitted, Ontobee issue https://github.com/OntoZoo/ontobee/issues/212, Bioregistry template-update comment https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220, and digest $extendedHash.
-- Refreshed w3id-redirect-handoff.json was downloaded and verified with status live_redirects_verified, empty blockers, merged_at 2026-06-22T12:29:07Z, and digest $w3idHash.
-- Refreshed publication-status.json was downloaded and verified with status pending_external_publication_steps, w3id status live_redirects_verified, blockers only for airsharing and wikidata, and digest $publicationHash.
+- Follow-up implementation commit `24b9601` was pushed to `origin/master`.
+- Remote `Validate UOGTO` run `28023497374` passed for `24b9601`.
+- Remote `Build WIDOCO Pages` run `28023497352` passed and deployed for `24b9601`.
+- `Publish Release Assets` workflow run `28023545152` passed for `v1.0.0` and refreshed `extended-registry-handoff.json`, `w3id-redirect-handoff.json`, and `publication-status.json`.
+- Refreshed `extended-registry-handoff.json` was downloaded and verified with status `external_actions_pending`, blockers `fairsharing,wikidata`, prefix.cc status `submitted`, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212`, Bioregistry template-update comment `https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220`, and digest `sha256:07c9e9e66b69582065b97c01fa61df05ad6da8c04ff39a51069e0b70c9f93081`.
+- Refreshed `w3id-redirect-handoff.json` was downloaded and verified with status `live_redirects_verified`, empty blockers, merged_at `2026-06-22T12:29:07Z`, and digest `sha256:82ea92c3fb8465a6bd97dfdfc51545b4e24e08d56ed2e4e7d1b26bd8a58a48ca`.
+- Refreshed `publication-status.json` was downloaded and verified with status `pending_external_publication_steps`, w3id status `live_redirects_verified`, blockers only for `fairsharing` and `wikidata`, and digest `sha256:f4ad2c38e8af6e9d8659246f2d8714966a9c9dbfdefa0dfb58d14639fb67caa4`.
+
+## Live Account Evidence - 2026-06-24
+- Wikidata duplicate check for `Universal Open Game Theory Ontology` returned no matching item before creation.
+- Created Wikidata item https://www.wikidata.org/wiki/Q140323510 through the authenticated `Doughnuted` session.
+- Added and verified statements: instance of ontology (`Q324254`), DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International (`Q20007257`).
+- Verified live pages in Chrome: Wikidata item, Zenodo record `https://zenodo.org/records/20796937`, documentation site, and GitHub repository.
+- FAIRsharing root resolved with title `FAIRsharing`, but DOM/screenshot inspection hung and the search route destabilized Chrome control; FAIRsharing remains blocked pending a stable site/account workflow or manual maintainer submission.

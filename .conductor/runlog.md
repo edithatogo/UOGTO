@@ -1,5 +1,12 @@
 # Conductor Run Log
 
+## [2026-06-24] - Wikidata Live Submission and FAIRsharing Recheck
+- Used Chrome with the authenticated Wikidata session to search for `Universal Open Game Theory Ontology`; no duplicate item was found before creation.
+- Created Wikidata item https://www.wikidata.org/wiki/Q140323510.
+- Added and verified statements: instance of ontology (`Q324254`), DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International (`Q20007257`).
+- Verified live page health in Chrome for the Wikidata item, Zenodo record, UOGTO documentation site, and GitHub repository.
+- Rechecked FAIRsharing in Chrome; root page title loaded as `FAIRsharing`, but DOM/screenshot inspection hung and the search/submission route destabilized Chrome control, so no reliable submission form was available.
+
 ## [2026-06-23] - Registry Follow-Up Remote Verification
 - Pushed commit `24b9601` and verified remote `Validate UOGTO` run `28023497374` plus `Build WIDOCO Pages` run `28023497352` passed.
 - Dispatched `Publish Release Assets` run `28023545152`; it passed release gates, rebuilt registry/w3id/publication packets, passed release preflight, and uploaded assets to `v1.0.0`.
@@ -339,3 +346,11 @@
 - Completed SourceRight manuscript source verification: numeric citation reconciliation reports 11 occurrences, 11 matches, and 0 issues; repo-native manuscript checks pass; the manuscript SourceRight manual review queue is empty.
 - Narrowed manuscript SourceRight manual-review queuing so missing issued dates only queue scholarly article/book records, not web/API/standards references that legitimately lack publication-date metadata.
 - Added `scripts/maintenance/build_manuscript_pdf.py`, `make manuscript-build`, `make manuscript-pdf`, and matching Pixi tasks. The default build gate passes TeX structure checks and compiles when a LaTeX engine is present; the strict PDF gate fails explicitly if no engine is installed.
+
+## [2026-06-23] - Upstream Registry Thread Comment Audit
+
+- Checked upstream PR perma-id/w3id.org#6238 using the GitHub connector.
+- Result: merged PR has no review submissions and no inline review threads; the only discussion comment is the existing publication metadata update.
+- Checked active upstream registry issues biopragmatics/bioregistry#1999, OntoZoo/ontobee#212, pyvandenbussche/lov#83, and EBISPOT/ols4#1305.
+- Result: Bioregistry had one maintainer comment requesting the new prefix issue template; the issue body and follow-up comment already address it. Ontobee, LOV, and OLS currently have no comments.
+- Remaining action: no upstream PR/issue comments currently require code, metadata, or response changes. Continue to monitor FAIRsharing and Wikidata separately because those remain account-authenticated submission tasks rather than GitHub PR comments.

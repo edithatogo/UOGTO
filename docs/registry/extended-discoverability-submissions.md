@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, and account-bound FAIRsharing and Wikidata handoffs prepared. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, and live Wikidata item `Q140323510`. FAIRsharing remains account/site-workflow blocked. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -29,13 +29,13 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 ## Target Records
 
 ### FAIRsharing
-- Status: `prepared_account_required`
+- Status: `blocked_site_workflow`
 - Route: <https://fairsharing.org/>
 - Guidance: <https://fairsharing.gitbook.io/fairsharing/record-sections-and-fields/general-information/registry-type>
 - Recommended registry type: Standards record, terminology artefact / ontology.
 - Evidence: FAIRsharing describes terminology artefacts as controlled vocabularies or ontologies and requires enough metadata for community-backed standards.
-- Blocker: submission/update requires an authenticated FAIRsharing account and JavaScript web workflow; no repository-safe token is available.
-- Next action: create a FAIRsharing record from the shared submission metadata after logging in with the maintainer account.
+- Blocker: submission/update requires an authenticated FAIRsharing account and JavaScript web workflow; Chrome checks on 2026-06-24 found the FAIRsharing root only partially inspectable and the search/submission route destabilized browser-control, so no reliable submission form was available.
+- Next action: retry FAIRsharing after the site/browser workflow is stable, or submit manually from the shared submission metadata and record the returned FAIRsharing URL.
 
 ### prefix.cc
 - Status: `submitted`
@@ -46,18 +46,21 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Next action: monitor for any future mapping correction requests; no repo-side blocker remains.
 
 ### Wikidata
-- Status: `prepared_account_required`
-- Route: <https://www.wikidata.org/>
-- Search evidence: Wikidata API search for `UOGTO` and `Universal Open Game Theory Ontology` returned no matching item.
-- Blocker: creating or editing a Wikidata item requires an authenticated Wikidata account and edit token.
-- Suggested statements:
+- Status: `created_verified`
+- Route: <https://www.wikidata.org/wiki/Q140323510>
+- Item: <https://www.wikidata.org/wiki/Q140323510>
+- Search evidence: Wikidata search for `Universal Open Game Theory Ontology` returned no matching item before creation.
+- Account evidence: created through the authenticated Wikidata session `Doughnuted` on 2026-06-24.
+- Verified statements:
   - label: Universal Open Game Theory Ontology
-  - aliases: UOGTO
-  - description: modular OWL/SHACL ontology for game-theoretic semantics
+  - aliases: UOGTO; Open Game Theory Ontology; Universal Open Game-Theory Ontology
+  - description: modular OWL and SHACL ontology for game-theoretic semantics
+  - instance of: ontology (`Q324254`)
   - DOI: `10.5281/zenodo.20796937`
   - official website / documentation: `https://edithatogo.github.io/UOGTO/`
-  - source code repository: `https://github.com/edithatogo/UOGTO`
-  - license: Creative Commons Attribution 4.0 International
+  - source code repository URL: `https://github.com/edithatogo/UOGTO`
+  - copyright license: Creative Commons Attribution 4.0 International (`Q20007257`)
+- Live verification: Wikidata item, documentation site, GitHub repository, and Zenodo record loaded successfully in Chrome; DOI resolved to `https://zenodo.org/records/20796937`.
 
 ### Ontobee
 - Status: `submitted`

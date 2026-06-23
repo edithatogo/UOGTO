@@ -23,7 +23,7 @@
 - LOV submission is open at https://github.com/pyvandenbussche/lov/issues/83.
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence, merged at `2026-06-22T12:29:07Z`, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
-- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, and Bioregistry template-update submission are complete; external actions remain pending for authenticated FAIRsharing/Wikidata work and registry maintainer review.
+- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, Bioregistry template-update submission, and Wikidata item `Q140323510` are complete; external actions remain pending for FAIRsharing and registry maintainer review.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -113,8 +113,14 @@
 - FAIRsharing and Wikidata remain blocked by authenticated maintainer-account workflows; no repository-safe credentials were found.
 
 ## Remote Verification - 2026-06-23
-- Commit $commit passed remote Validate UOGTO run $validateRun and Build WIDOCO Pages run $pagesRun.
-- Publish Release Assets run $releaseRun passed and refreshed release packets for 1.0.0.
-- Refreshed extended-registry-handoff.json has blockers only for FAIRsharing and Wikidata, prefix.cc status submitted, Ontobee issue #212, Bioregistry template-update evidence, and digest $extendedHash.
-- Refreshed w3id-redirect-handoff.json has status live_redirects_verified, empty blockers, merged_at 2026-06-22T12:29:07Z, and digest $w3idHash.
-- Refreshed publication-status.json has status pending_external_publication_steps with blockers only for FAIRsharing and Wikidata and digest $publicationHash.
+- Commit `24b9601` passed remote `Validate UOGTO` run `28023497374` and `Build WIDOCO Pages` run `28023497352`.
+- `Publish Release Assets` run `28023545152` passed and refreshed release packets for `v1.0.0`.
+- Refreshed `extended-registry-handoff.json` has blockers only for FAIRsharing and Wikidata, prefix.cc status `submitted`, Ontobee issue #212, Bioregistry template-update evidence, and digest `sha256:07c9e9e66b69582065b97c01fa61df05ad6da8c04ff39a51069e0b70c9f93081`.
+- Refreshed `w3id-redirect-handoff.json` has status `live_redirects_verified`, empty blockers, merged_at `2026-06-22T12:29:07Z`, and digest `sha256:82ea92c3fb8465a6bd97dfdfc51545b4e24e08d56ed2e4e7d1b26bd8a58a48ca`.
+- Refreshed `publication-status.json` has status `pending_external_publication_steps` with blockers only for FAIRsharing and Wikidata and digest `sha256:f4ad2c38e8af6e9d8659246f2d8714966a9c9dbfdefa0dfb58d14639fb67caa4`.
+
+## Live Account Evidence - 2026-06-24
+- Wikidata item created and verified: https://www.wikidata.org/wiki/Q140323510.
+- Wikidata statements verified in Chrome: instance of ontology, DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International.
+- DOI resolved to Zenodo record `https://zenodo.org/records/20796937`; Zenodo record title, UOGTO documentation, and GitHub repository pages loaded successfully.
+- FAIRsharing remains blocked: root title loaded, but page inspection hung and the search/submission route destabilized Chrome control.
