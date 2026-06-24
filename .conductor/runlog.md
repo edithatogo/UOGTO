@@ -5,6 +5,11 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 4
+- Added `scripts/maintenance/generate_ontology_mapping_candidates.py` to generate deterministic external-to-UOGTO mapping candidates from `term-inventory.jsonl` using exact IRI, exact label, normalized label, synonym, lexical, definition, hierarchy, property-signature, token-vector, type-compatibility, and source-reliability evidence.
+- Generated `docs/ontology-comparison/mapping-candidates.jsonl` with 460 candidates across 4 downloaded external RDF sources, each carrying candidate predicate, confidence score, evidence features, status, and review flags.
+- Wired `make ontology-comparison-mappings` and Pixi task support, and added focused pytest coverage for equivalence classification, property compatibility, deterministic generation, validation, JSONL round-trip, and generated repo candidate coverage.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 3
 - Added `scripts/maintenance/extract_comparison_terms.py` to extract comparable term rows from UOGTO TTL modules, downloaded external RDF artifacts, and metadata-only/non-RDF source records.
 - Generated `docs/ontology-comparison/term-inventory.jsonl` with 4,037 rows across 69 UOGTO/external sources, preserving source id, family, artifact path, term IRI, type, labels, definitions, comments, synonyms, hierarchy context, domains, ranges, imports, tokens, and language.

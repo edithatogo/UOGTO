@@ -51,18 +51,19 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Tests cover RDF and non-RDF extraction fixtures.
 
 ## Phase 4: Mapping Candidate Generation
-- [ ] Task: Generate mapping candidates.
-    - [ ] Add `scripts/maintenance/generate_ontology_mapping_candidates.py`.
-    - [ ] Compute exact IRI, exact label, normalized label, synonym, definition, hierarchy-context, property-signature, and embedding-assisted candidates.
-    - [ ] Emit `docs/ontology-comparison/mapping-candidates.jsonl`.
-- [ ] Task: Score and classify candidates.
-    - [ ] Score candidates by lexical similarity, definition similarity, structural context, domain/range compatibility, and source reliability.
-    - [ ] Classify candidate predicates: `skos:exactMatch`, `skos:closeMatch`, `skos:broadMatch`, `skos:narrowMatch`, `skos:relatedMatch`, `owl:equivalentClass`, `owl:equivalentProperty`, `rdfs:subClassOf`, `rdfs:subPropertyOf`, and `no_match`.
+- [x] Task: Generate mapping candidates.
+    - [x] Add `scripts/maintenance/generate_ontology_mapping_candidates.py`.
+    - [x] Compute exact IRI, exact label, normalized label, synonym, definition, hierarchy-context, property-signature, and embedding-assisted candidates.
+    - [x] Emit `docs/ontology-comparison/mapping-candidates.jsonl`.
+- [x] Task: Score and classify candidates.
+    - [x] Score candidates by lexical similarity, definition similarity, structural context, domain/range compatibility, and source reliability.
+    - [x] Classify candidate predicates: `skos:exactMatch`, `skos:closeMatch`, `skos:broadMatch`, `skos:narrowMatch`, `skos:relatedMatch`, `owl:equivalentClass`, `owl:equivalentProperty`, `rdfs:subClassOf`, `rdfs:subPropertyOf`, and `no_match`.
+    - [x] Wire `make ontology-comparison-mappings`, Pixi support, generated `docs/ontology-comparison/mapping-candidates.jsonl`, and pytest coverage.
 
 ### Acceptance Criteria
-- [ ] Candidate generation is deterministic for a fixed source inventory.
-- [ ] Each candidate includes evidence features and confidence score.
-- [ ] Low-confidence and high-impact mappings are flagged for review.
+- [x] Candidate generation is deterministic for a fixed source inventory.
+- [x] Each candidate includes evidence features and confidence score.
+- [x] Low-confidence and high-impact mappings are flagged for review.
 
 ## Phase 5: Human-Review Workflow and Accepted Alignments
 - [ ] Task: Create review artifacts.
