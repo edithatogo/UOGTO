@@ -9,6 +9,10 @@
 - Expanded ontology-quality benchmarking for `uogto_article_hardening_protocol_20260624` with SHACL coverage metrics that distinguish example-graph shape linkage, module-shape coverage, and competency-question to example-graph linkage.
 - Added a privacy-budget example graph so the privacy competency question is linked to a concrete example, and the quality report now records all query/example links explicitly.
 
+## [2026-06-24] - Ontology Design-Pattern Documentation
+- Added `docs/ontology-design-patterns.md` documenting how UOGTO models games, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, and execution bindings.
+- Added a README link and focused test coverage so the pattern guide remains aligned with the repo's core modelling vocabulary.
+
 ## [2026-06-24] - Article Hardening ROBOT-Style Reports
 - Added an optional Java-backed ROBOT-style reporting layer for `uogto_article_hardening_protocol_20260624` while preserving RDFLib/pySHACL as the portable baseline.
 - Generated `docs/article-hardening/robot/status.json`, `reasoner-check.md`, `report.md`, `merged-ontology.ttl`, `merge-diff.md`, `import-extraction.ttl`, and `import-extraction.md` from the current ontology graphs.
