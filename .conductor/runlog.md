@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Track Creation
+- Created Conductor track `uogto_comparative_simulation_ontology_mapping_20260624` for discovery, sourcing, mapping, overlap analysis, network/descriptive analysis, and comprehensive visualisation of game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
+- Added a detailed specification with source provenance, licence handling, mapping confidence, review workflow, overlap metrics, network analysis, and visualisation/reporting requirements.
+- Added a nine-phase implementation plan covering discovery protocol, source harvesting, term extraction, mapping candidate generation, human review, accepted alignments, overlap metrics, network analysis, visualisation/reporting, tests, and Conductor integration.
+
 ## [2026-06-24] - Wikidata Live Submission and FAIRsharing Recheck
 - Used Chrome with the authenticated Wikidata session to search for `Universal Open Game Theory Ontology`; no duplicate item was found before creation.
 - Created Wikidata item https://www.wikidata.org/wiki/Q140323510.

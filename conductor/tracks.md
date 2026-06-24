@@ -80,6 +80,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: External Review Pending
 - **Link**: [./tracks/uogto_extended_discoverability_registries_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_extended_discoverability_registries_20260622/)
 
+## [ ] Track: uogto_comparative_simulation_ontology_mapping_20260624
+- **Description**: Discover, source, map, analyse, and visualise game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
+- **Status**: Planned
+- **Link**: [./tracks/uogto_comparative_simulation_ontology_mapping_20260624/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_comparative_simulation_ontology_mapping_20260624/)
+
 ## [x] Track: conductor_state_reconciliation_20260622
 - **Description**: Record and normalize Conductor state for archive moves, status updates, CI/Pixi hardening, registry link checks, and SourceRight follow-up planning.
 - **Status**: Completed
