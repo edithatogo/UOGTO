@@ -1,0 +1,71 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+
+<https://w3id.org/uogto/core/governance>
+    a owl:Ontology ;
+    rdfs:label "UOGTO governance metadata"@en ;
+    skos:definition "Ontology-level governance metadata for status, maturity, stewardship, review timing, source evidence, and competency-question linkage."@en ;
+    owl:versionInfo "2026-06-24" ;
+    dcterms:modified "2026-06-24"^^xsd:date ;
+    prov:wasDerivedFrom <https://w3id.org/uogto/core> ;
+    uogto:hasGovernanceRecord uogto:currentGovernanceRecord .
+
+uogto:OntologyGovernanceRecord a owl:Class ;
+    rdfs:label "Ontology governance record"@en ;
+    skos:definition "A record that captures repository-level governance metadata for UOGTO."@en .
+
+uogto:hasGovernanceRecord a owl:ObjectProperty ;
+    rdfs:label "has governance record"@en ;
+    skos:definition "Connects an ontology IRI to its governance record."@en ;
+    rdfs:domain owl:Ontology ;
+    rdfs:range uogto:OntologyGovernanceRecord .
+
+uogto:governanceStatus a owl:DatatypeProperty ;
+    rdfs:label "governance status"@en ;
+    skos:definition "The current governance state of the ontology, such as active, review, or archived."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:string .
+
+uogto:maturityLevel a owl:DatatypeProperty ;
+    rdfs:label "maturity level"@en ;
+    skos:definition "The maturity assessment of the ontology, such as draft, curated, research-grade, or release-ready."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:string .
+
+uogto:steward a owl:DatatypeProperty ;
+    rdfs:label "steward"@en ;
+    skos:definition "The person, team, or role responsible for governance decisions and review."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:string .
+
+uogto:reviewDate a owl:DatatypeProperty ;
+    rdfs:label "review date"@en ;
+    skos:definition "The date on which the governance record was last reviewed."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:date .
+
+uogto:sourceEvidenceReference a owl:DatatypeProperty ;
+    rdfs:label "source evidence reference"@en ;
+    skos:definition "A compact reference to evidence surfaces supporting the current governance record."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:string .
+
+uogto:competencyQuestionReference a owl:DatatypeProperty ;
+    rdfs:label "competency question reference"@en ;
+    skos:definition "A compact reference to competency questions linked to the governance record."@en ;
+    rdfs:domain uogto:OntologyGovernanceRecord ;
+    rdfs:range xsd:string .
+
+uogto:currentGovernanceRecord a uogto:OntologyGovernanceRecord ;
+    uogto:governanceStatus "active" ;
+    uogto:maturityLevel "research-grade" ;
+    uogto:steward "UOGTO maintainers" ;
+    uogto:reviewDate "2026-06-24"^^xsd:date ;
+    uogto:sourceEvidenceReference "docs/article-hardening/search-log.jsonl; docs/article-hardening/source-extension-inventory.json; docs/article-hardening/quality-metrics.json; docs/article-hardening/case-studies.md; docs/article-hardening/term-changelog.md" ;
+    uogto:competencyQuestionReference "competency-questions/cq01-list-players.rq; competency-questions/cq02-list-strategies.rq; competency-questions/cq03-find-equilibria.rq; competency-questions/cq04-games-with-incomplete-information.rq; competency-questions/cq05-security-games-with-targets.rq; competency-questions/cq06-mechanisms-with-incentive-constraints.rq; competency-questions/cq07-llm-games-with-tool-invocations.rq; competency-questions/cq08-executable-games-with-event-traces.rq; competency-questions/cq09-games-with-privacy-budget.rq; competency-questions/cq10-modules-and-imports.rq" .
+
