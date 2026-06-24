@@ -163,6 +163,10 @@ def render_report(path, inventory, review_rows, overlap, network):
     report = '# Comparative Simulation Ontology Mapping Report\n\n'
     report += '## Scope\nThis report summarises the reproducible comparison of public game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO. It is generated from the track artifacts in `docs/ontology-comparison/`.\n\n'
     report += '## Methodology\nThe workflow uses the discovery protocol, source inventory, source provenance, normalized term inventory, deterministic mapping candidates, reviewed mappings, overlap metrics, and network analysis artifacts. Redistributable RDF sources are parsed directly; non-redistributable or standards-document sources are represented as metadata-only or transformed-summary records so the report does not overclaim source access.\n\n'
+    licence_counts = Counter(source.get('licence_disposition', 'unspecified') for source in inventory.get('sources', []))
+    licence_rows = '\n'.join('- {}: {}'.format(key, value) for key, value in sorted(licence_counts.items()))
+    report += '## Inclusion and Exclusion Summary\nThe discovery protocol records registry, repository, literature, and standards-body routes. Included records are retained when they are ontologies, vocabularies, schemas, metamodels, or formal standards that can inform game-theory or simulation semantics. Narrative-only or non-redistributable resources are not imported as ontology artifacts; they are kept as metadata-only or transformed-summary records where appropriate.\n\n{}\n\n'.format(licence_rows)
+    report += '## Mapping Methods\nMapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.\n\n'
     report += '## Source Inventory\n- Candidate sources: {}\n- External terms: {}\n- UOGTO terms: {}\n- Review candidates: {}\n- Accepted mappings: {}\n\n'.format(len(inventory.get('sources', [])), summary['external_term_count'], summary['uogto_term_count'], summary['review_candidate_count'], accepted)
     report += '## Mapping Review Results\n- Accepted: {}\n- Needs domain review: {}\n- Rejected: {}\n\nThe accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate and rejected rows remain audit records and should not be treated as asserted ontology alignments.\n\n'.format(accepted, needs_review, rejected)
     report += '## Overlap Findings\n| Source | Unmatched terms | Candidate coverage |\n| --- | ---: | ---: |\n{}\n\n'.format(top_sources_md)
@@ -196,7 +200,7 @@ def validate_outputs(figures_dir=DEFAULT_FIGURES, report_path=DEFAULT_REPORT):
         if '<svg' not in text or '</svg>' not in text:
             raise AssertionError('Figure is not valid SVG text: ' + name)
     report = report_path.read_text(encoding='utf-8')
-    required = ['# Comparative Simulation Ontology Mapping Report','## Methodology','## Source Inventory','## Mapping Review Results','## Overlap Findings','## Network Findings','## Visualisations','## Recommended UOGTO Follow-Up Work','## Reproducibility']
+    required = ['# Comparative Simulation Ontology Mapping Report','## Methodology','## Inclusion and Exclusion Summary','## Mapping Methods','## Source Inventory','## Mapping Review Results','## Overlap Findings','## Network Findings','## Visualisations','## Recommended UOGTO Follow-Up Work','## Reproducibility']
     for section in required:
         if section not in report:
             raise AssertionError('Missing report section: ' + section)

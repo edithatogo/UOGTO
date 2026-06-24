@@ -82,6 +82,9 @@ def validate_artifacts(base=BASE):
             raise AssertionError("Figure is not SVG: " + name)
         if "figures/" + name not in report:
             raise AssertionError("Report does not link figure: " + name)
+    for section in ["## Inclusion and Exclusion Summary", "## Mapping Methods"]:
+        if section not in report:
+            raise AssertionError("Report missing required section: " + section)
     if "Candidate and rejected rows remain audit records" not in report:
         raise AssertionError("Report must separate accepted evidence from candidate/future work")
     return {

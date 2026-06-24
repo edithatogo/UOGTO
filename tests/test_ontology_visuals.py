@@ -41,6 +41,8 @@ class TestOntologyComparisonVisuals(unittest.TestCase):
         report = self.report.read_text(encoding="utf-8")
         self.assertIn("Accepted mappings: 10", report)
         self.assertIn("Source-similarity edges: 391", report)
+        self.assertIn("## Inclusion and Exclusion Summary", report)
+        self.assertIn("## Mapping Methods", report)
 
     def test_report_links_all_required_figures(self):
         inventory = {"sources": [{"id": "ext", "name": "External"}]}

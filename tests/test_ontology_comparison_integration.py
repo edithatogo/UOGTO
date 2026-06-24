@@ -40,6 +40,11 @@ class TestOntologyComparisonIntegration(unittest.TestCase):
         readme = Path("README.md").read_text(encoding="utf-8")
         self.assertIn("docs/ontology-comparison/report.md", readme)
 
+    def test_report_contains_required_method_sections(self):
+        report = Path("docs/ontology-comparison/report.md").read_text(encoding="utf-8")
+        self.assertIn("## Inclusion and Exclusion Summary", report)
+        self.assertIn("## Mapping Methods", report)
+
 
 if __name__ == "__main__":
     unittest.main()
