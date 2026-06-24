@@ -1,0 +1,18 @@
+{
+  "agreement": {
+    "agreement_rate": 0.0,
+    "kappa": 0.0,
+    "pair_count": 0
+  },
+  "dataset": {
+    "accepted_rows": 0,
+    "adjudicated_rows": 0,
+    "rejected_rows": 0,
+    "reviewed_rows": 0,
+    "sample_size": 0
+  },
+  "sample": [],
+  "source": {
+    "review_csv": "C:\\Users\\60217257\\OneDrive - Flinders\\repos\\legal-nz\\UOGTO\\docs\\ontology-comparison\\mapping-review.csv"
+  }
+}

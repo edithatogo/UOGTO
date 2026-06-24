@@ -138,3 +138,5 @@
 - FAIRsharing draft record created and populated: https://fairsharing.org/8382.
 - FAIRsharing required `data processes and conditions` metadata persisted on 2026-06-24; public page now reports the record is awaiting FAIRsharing curator review.
 - FAIRsharing recommended-but-nonblocking gaps: organisation links, publications, citations, and record associations.
+
+- Added reviewer calibration sampling with balanced accepted/rejected mapping review, agreement scoring, and adjudication-ready outputs.
