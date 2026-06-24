@@ -463,3 +463,5 @@
 - Added network sensitivity artifacts and validation for community/bridge changes across mapping filters.
 - 2026-06-25: Added PRISMA 2020-style source discovery and screening flow diagrams to the article-hardening evidence package.
 
+- 2026-06-25: Added tabular-artifact storage policy plus CSV/Markdown/JSON/Parquet exports for article-hardening analysis tables.
+

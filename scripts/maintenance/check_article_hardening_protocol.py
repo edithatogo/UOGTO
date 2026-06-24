@@ -29,6 +29,8 @@ QUALITY_METRICS = DOCS / "quality-metrics.json"
 REASONER_REPORT = DOCS / "reasoner-report.md"
 FIGURES = DOCS / "figures"
 RO_CRATE_PACKAGE = DOCS / "ro-crate-package.md"
+TABULAR_STORAGE = DOCS / "tabular-artifact-storage.md"
+EXPORT_TABULAR_ARTIFACTS = ROOT / "scripts" / "maintenance" / "export_tabular_artifacts.py"
 DUAL_SCREENING = DOCS / "dual-screening.md"
 DUAL_SCREENING_SAMPLE = DOCS / "dual-screening-sample.csv"
 ROBOT_DIR = DOCS / "robot"
@@ -49,6 +51,18 @@ EVIDENCE_FILES = [
     DOCS / "protocol-checklist.md",
     DOCS / "structured-summary.md",
     DOCS / "prisma-scr-artifact-map.md",
+    DOCS / "manual-review-sample.md",
+    DOCS / "manual-review-sample.json",
+    DOCS / "manual-review-sample.parquet",
+    DOCS / "dual-screening-sample.md",
+    DOCS / "dual-screening-sample.json",
+    DOCS / "dual-screening-sample.parquet",
+    DOCS / "uogto-inclusion-candidates.md",
+    DOCS / "uogto-inclusion-candidates.json",
+    DOCS / "uogto-inclusion-candidates.parquet",
+    DOCS / "use-case-coverage-matrix.md",
+    DOCS / "use-case-coverage-matrix.json",
+    DOCS / "use-case-coverage-matrix.parquet",
 ]
 REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
 RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
@@ -79,8 +93,21 @@ REQUIRED_FILES = [
     DOCS / "protocol-checklist.md",
     DOCS / "structured-summary.md",
     DOCS / "prisma-scr-artifact-map.md",
+    DOCS / "manual-review-sample.md",
+    DOCS / "manual-review-sample.json",
+    DOCS / "manual-review-sample.parquet",
+    DOCS / "dual-screening-sample.md",
+    DOCS / "dual-screening-sample.json",
+    DOCS / "dual-screening-sample.parquet",
+    DOCS / "uogto-inclusion-candidates.md",
+    DOCS / "uogto-inclusion-candidates.json",
+    DOCS / "uogto-inclusion-candidates.parquet",
+    DOCS / "use-case-coverage-matrix.md",
+    DOCS / "use-case-coverage-matrix.json",
+    DOCS / "use-case-coverage-matrix.parquet",
     DOCS / "search-strategy.md",
     RO_CRATE_PACKAGE,
+    TABULAR_STORAGE,
     DUAL_SCREENING,
     DUAL_SCREENING_SAMPLE,
     FIGURES / "README.md",
@@ -101,6 +128,7 @@ REQUIRED_FILES = [
     SOURCE_EXTENSION_SUMMARY,
     QUALITY_METRICS,
     REASONER_REPORT,
+    EXPORT_TABULAR_ARTIFACTS,
     *ROBOT_REQUIRED_FILES,
     *EVIDENCE_FILES,
 ]
@@ -124,6 +152,7 @@ PROTOCOL_SECTIONS = [
     "## Funding and Conflicts",
     "## Dual Screening and Adjudication",
     "## RO-Crate Output",
+    "## Tabular Artifact Storage",
     "## PRISMA 2020 Flow Diagrams",
 ]
 
@@ -136,6 +165,11 @@ PROTOCOL_TERMS = [
     "contextual entities",
     "provenance",
     "workflows and scripts",
+    "tabular analysis artifacts",
+    "CSV",
+    "Markdown",
+    "JSON",
+    "Parquet",
     "parsed_rdf_owl",
     "PRISMA 2020",
     "dual_screening",
@@ -240,6 +274,7 @@ def validate_checklist() -> None:
         "docs/article-hardening/prisma-scr-artifact-map.md",
         "docs/article-hardening/search-strategy.md",
         "docs/article-hardening/ro-crate-package.md",
+        "docs/article-hardening/tabular-artifact-storage.md",
         "docs/article-hardening/dual-screening.md",
         "docs/article-hardening/dual-screening-sample.csv",
         ".conductor/runlog.md",
@@ -340,7 +375,11 @@ def validate_quality_benchmark() -> None:
 
 def main() -> None:
     for path in REQUIRED_FILES:
-        _read(path)
+        if path.suffix == ".parquet":
+            if not path.exists():
+                raise SystemExit(f"Missing required article-hardening artifact: {path}")
+        else:
+            _read(path)
     validate_protocol()
     validate_search_strategy()
     validate_checklist()

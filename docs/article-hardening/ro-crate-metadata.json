@@ -4,8 +4,12 @@
     {
       "@id": "ro-crate-metadata.json",
       "@type": "CreativeWork",
-      "conformsTo": { "@id": "https://w3id.org/ro/crate/1.1" },
-      "about": { "@id": "./" }
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
     },
     {
       "@id": "./",
@@ -14,25 +18,105 @@
       "description": "Scoping-review-style protocol, search log, inventory, benchmark, and synthesis artifacts for the UOGTO article-hardening track.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "hasPart": [
-        { "@id": "ro-crate-package.md" },
-        { "@id": "protocol.md" },
-        { "@id": "protocol-checklist.md" },
-        { "@id": "structured-summary.md" },
-        { "@id": "prisma-scr-artifact-map.md" },
-        { "@id": "search-strategy.md" },
-        { "@id": "search-log.jsonl" },
-        { "@id": "source-extension-inventory.json" },
-        { "@id": "source-extension-inventory.md" },
-        { "@id": "quality-metrics.json" },
-        { "@id": "reasoner-report.md" },
-        { "@id": "case-studies.md" },
-        { "@id": "manual-review-sample.csv" },
-        { "@id": "uogto-inclusion-candidates.csv" },
-        { "@id": "uogto-inclusion-decisions.md" },
-        { "@id": "competency-benchmark.md" },
-        { "@id": "use-case-coverage-matrix.csv" },
-        { "@id": "dual-screening.md" },
-        { "@id": "dual-screening-sample.csv" }
+        {
+          "@id": "ro-crate-package.md"
+        },
+        {
+          "@id": "protocol.md"
+        },
+        {
+          "@id": "protocol-checklist.md"
+        },
+        {
+          "@id": "structured-summary.md"
+        },
+        {
+          "@id": "prisma-scr-artifact-map.md"
+        },
+        {
+          "@id": "search-strategy.md"
+        },
+        {
+          "@id": "search-log.jsonl"
+        },
+        {
+          "@id": "source-extension-inventory.json"
+        },
+        {
+          "@id": "source-extension-inventory.md"
+        },
+        {
+          "@id": "quality-metrics.json"
+        },
+        {
+          "@id": "reasoner-report.md"
+        },
+        {
+          "@id": "case-studies.md"
+        },
+        {
+          "@id": "manual-review-sample.csv"
+        },
+        {
+          "@id": "uogto-inclusion-candidates.csv"
+        },
+        {
+          "@id": "uogto-inclusion-decisions.md"
+        },
+        {
+          "@id": "competency-benchmark.md"
+        },
+        {
+          "@id": "use-case-coverage-matrix.csv"
+        },
+        {
+          "@id": "dual-screening.md"
+        },
+        {
+          "@id": "dual-screening-sample.csv"
+        },
+        {
+          "@id": "tabular-artifact-storage.md"
+        },
+        {
+          "@id": "manual-review-sample.md"
+        },
+        {
+          "@id": "manual-review-sample.json"
+        },
+        {
+          "@id": "manual-review-sample.parquet"
+        },
+        {
+          "@id": "dual-screening-sample.md"
+        },
+        {
+          "@id": "dual-screening-sample.json"
+        },
+        {
+          "@id": "dual-screening-sample.parquet"
+        },
+        {
+          "@id": "uogto-inclusion-candidates.md"
+        },
+        {
+          "@id": "uogto-inclusion-candidates.json"
+        },
+        {
+          "@id": "uogto-inclusion-candidates.parquet"
+        },
+        {
+          "@id": "use-case-coverage-matrix.md"
+        },
+        {
+          "@id": "use-case-coverage-matrix.json"
+        },
+        {
+          "@id": "use-case-coverage-matrix.parquet"
+        },
+        {
+          "@id": "scripts/maintenance/export_tabular_artifacts.py"
+        }
       ]
     }
   ]

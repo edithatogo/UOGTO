@@ -1,0 +1,54 @@
+{
+  "source_csv": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/docs/article-hardening/manual-review-sample.csv",
+  "row_count": 5,
+  "columns": [
+    "source_id",
+    "source_family",
+    "reviewer",
+    "decision",
+    "rationale",
+    "notes"
+  ],
+  "rows": [
+    {
+      "source_id": "sample-001",
+      "source_family": "game-theory-ontology",
+      "reviewer": "ontology_peer_reviewer",
+      "decision": "accepted",
+      "rationale": "Conceptually overlaps UOGTO and supports mapping coverage",
+      "notes": "Illustrative manual review sample"
+    },
+    {
+      "source_id": "sample-002",
+      "source_family": "agent-based-modeling-ontology",
+      "reviewer": "ontology_peer_reviewer",
+      "decision": "accepted",
+      "rationale": "Useful for execution bindings and trace alignment",
+      "notes": "Illustrative manual review sample"
+    },
+    {
+      "source_id": "sample-003",
+      "source_family": "system-dynamics-ontology",
+      "reviewer": "editorial_reviewer",
+      "decision": "accepted",
+      "rationale": "Supports feedback-loop modelling and comparative synthesis",
+      "notes": "Illustrative manual review sample"
+    },
+    {
+      "source_id": "sample-004",
+      "source_family": "metadata-only-registry-entry",
+      "reviewer": "red_team_reviewer",
+      "decision": "rejected_out_of_scope",
+      "rationale": "Registry metadata alone was not enough for a mapping claim",
+      "notes": "Illustrative manual review sample"
+    },
+    {
+      "source_id": "sample-005",
+      "source_family": "no_relevant_ontology_found",
+      "reviewer": "devil_advocate_reviewer",
+      "decision": "negative_evidence",
+      "rationale": "Search returned no suitable formalism for the stated subdomain",
+      "notes": "Illustrative manual review sample"
+    }
+  ]
+}

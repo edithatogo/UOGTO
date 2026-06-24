@@ -1,0 +1,60 @@
+{
+  "source_csv": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/docs/article-hardening/dual-screening-sample.csv",
+  "row_count": 5,
+  "columns": [
+    "proposal_id",
+    "source_id",
+    "researcher_proposal",
+    "peer_decision",
+    "red_team_challenge",
+    "final_disposition",
+    "rationale"
+  ],
+  "rows": [
+    {
+      "proposal_id": "screen-001",
+      "source_id": "strategic-game-theory-ontology",
+      "researcher_proposal": "add_to_uogto",
+      "peer_decision": "accept",
+      "red_team_challenge": "no_overclaim_detected",
+      "final_disposition": "accept",
+      "rationale": "Core strategic interaction vocabulary strengthens the ontology baseline."
+    },
+    {
+      "proposal_id": "screen-002",
+      "source_id": "discrete-event-simulation-ontology",
+      "researcher_proposal": "align_external_only",
+      "peer_decision": "reject",
+      "red_team_challenge": "scope_is_broader_than_uogto",
+      "final_disposition": "reject",
+      "rationale": "The construct is relevant but should remain a mapping target rather than a direct addition."
+    },
+    {
+      "proposal_id": "screen-003",
+      "source_id": "agent-based-modelling-ontology",
+      "researcher_proposal": "add_to_uogto",
+      "peer_decision": "accept",
+      "red_team_challenge": "no_overclaim_detected",
+      "final_disposition": "accept",
+      "rationale": "Execution and trace semantics support UOGTO's simulation-binding module."
+    },
+    {
+      "proposal_id": "screen-004",
+      "source_id": "system-dynamics-vocabulary",
+      "researcher_proposal": "defer_pending_evidence",
+      "peer_decision": "reject",
+      "red_team_challenge": "insufficient_case_support",
+      "final_disposition": "reject",
+      "rationale": "More evidence is needed before the claim can be promoted beyond a provisional alignment."
+    },
+    {
+      "proposal_id": "screen-005",
+      "source_id": "llm-agent-tool-use-game",
+      "researcher_proposal": "add_to_uogto",
+      "peer_decision": "accept",
+      "red_team_challenge": "red_team_requested_scope_check",
+      "final_disposition": "accept_with_revision",
+      "rationale": "The red team asked for a narrower articulation of tool-use and control-flow terms."
+    }
+  ]
+}

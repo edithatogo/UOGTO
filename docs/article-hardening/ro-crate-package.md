@@ -36,6 +36,8 @@ RO-Crate output must be created alongside the protocol and search strategy, not 
 ## Included artifacts
 
 - `docs/article-hardening/ro-crate-metadata.json`
+- `docs/article-hardening/tabular-artifact-storage.md`
+- `scripts/maintenance/export_tabular_artifacts.py`
 - `docs/article-hardening/protocol.md`
 - `docs/article-hardening/protocol-checklist.md`
 - `docs/article-hardening/structured-summary.md`

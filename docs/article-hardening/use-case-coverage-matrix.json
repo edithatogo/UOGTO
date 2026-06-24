@@ -1,0 +1,78 @@
+{
+  "source_csv": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/docs/article-hardening/use-case-coverage-matrix.csv",
+  "row_count": 8,
+  "columns": [
+    "use_case",
+    "module",
+    "source_family",
+    "coverage",
+    "status",
+    "notes"
+  ],
+  "rows": [
+    {
+      "use_case": "auction_and_mechanism_design",
+      "module": "core",
+      "source_family": "strategic_game_theory",
+      "coverage": "high",
+      "status": "covered",
+      "notes": "Strong conceptual overlap with payoffs and outcomes"
+    },
+    {
+      "use_case": "voting_and_social_choice",
+      "module": "core",
+      "source_family": "collective_choice_theory",
+      "coverage": "medium",
+      "status": "covered",
+      "notes": "Useful for preference aggregation and outcome comparison"
+    },
+    {
+      "use_case": "security_stackelberg_game",
+      "module": "extensions",
+      "source_family": "security_game_theory",
+      "coverage": "medium",
+      "status": "covered",
+      "notes": "Useful for defender-attacker strategy modelling"
+    },
+    {
+      "use_case": "marl_markov_game",
+      "module": "execution",
+      "source_family": "reinforcement_learning_ontologies",
+      "coverage": "high",
+      "status": "covered",
+      "notes": "Supports multi-agent action/state trace alignment"
+    },
+    {
+      "use_case": "abm_policy_simulation",
+      "module": "execution",
+      "source_family": "agent_based_modelling",
+      "coverage": "high",
+      "status": "covered",
+      "notes": "Supports sessions, agents, traces, and interventions"
+    },
+    {
+      "use_case": "system_dynamics_feedback_game",
+      "module": "extensions",
+      "source_family": "system_dynamics",
+      "coverage": "medium",
+      "status": "covered",
+      "notes": "Supports causal feedback and stock-flow reasoning"
+    },
+    {
+      "use_case": "llm_agent_tool_use_game",
+      "module": "extensions",
+      "source_family": "llm_agent_frameworks",
+      "coverage": "medium",
+      "status": "covered",
+      "notes": "Supports tool-use and protocol binding comparisons"
+    },
+    {
+      "use_case": "executable_trace_provenance_case",
+      "module": "core",
+      "source_family": "workflow_and_provenance",
+      "coverage": "high",
+      "status": "covered",
+      "notes": "Supports provenance of generated evidence and maps"
+    }
+  ]
+}

@@ -95,6 +95,23 @@ Every included or screened source should be charted with:
 - `screening_rationale`
 - `limitations`
 
+## Tabular Artifact Storage
+tabular analysis artifacts in this package are stored in human-readable and machine-stable forms:
+
+- CSV for compact interchange and review
+- Markdown for direct inspection in the repository
+- JSON for stable structured extraction
+- Parquet for efficient downstream analysis
+
+The current table families are:
+
+- `manual-review-sample`
+- `dual-screening-sample`
+- `uogto-inclusion-candidates`
+- `use-case-coverage-matrix`
+
+The generated outputs are maintained by `scripts/maintenance/export_tabular_artifacts.py`.
+
 ## Synthesis Plan
 The synthesis must separate:
 
