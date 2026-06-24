@@ -96,16 +96,17 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Tests cover metric calculations on fixtures.
 
 ## Phase 7: Network Analysis
-- [ ] Task: Build ontology and term networks.
-    - [ ] Add `scripts/maintenance/analyse_ontology_networks.py`.
-    - [ ] Build source ontology graph, term-alignment bipartite graph, source similarity graph, import/uses graph, and UOGTO module coverage graph.
-    - [ ] Compute degree, betweenness, closeness, connected components, community clusters, bridge terms, orphan terms, and central source families.
-    - [ ] Emit `docs/ontology-comparison/network-analysis.json`.
+- [x] Task: Build ontology and term networks.
+    - [x] Add `scripts/maintenance/analyse_ontology_networks.py`.
+    - [x] Build source ontology graph, term-alignment bipartite graph, source similarity graph, import/uses graph, and UOGTO module coverage graph.
+    - [x] Compute degree, betweenness, closeness, connected components, community clusters, bridge terms, orphan terms, and central source families.
+    - [x] Emit `docs/ontology-comparison/network-analysis.json`.
+    - [x] Wire `make ontology-comparison-networks`, Pixi support, generated network analysis, and pytest coverage.
 
 ### Acceptance Criteria
-- [ ] Network outputs are deterministic and documented.
-- [ ] Network analysis distinguishes ontology-level and term-level graphs.
-- [ ] Results highlight bridge concepts and isolated modelling paradigms.
+- [x] Network outputs are deterministic and documented.
+- [x] Network analysis distinguishes ontology-level and term-level graphs.
+- [x] Results highlight bridge concepts and isolated modelling paradigms.
 
 ## Phase 8: Visualisation and Report
 - [ ] Task: Generate static figures.
