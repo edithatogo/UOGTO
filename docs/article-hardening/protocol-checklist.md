@@ -43,6 +43,14 @@
 | UOGTO governance | Phase review agents | Require peer, editorial, red-team, and devil's-advocate reviewers. | `conductor/agents/article-hardening-review-agents.json`; `conductor/workflows/article-hardening-phase-review.md` | complete |
 | UOGTO governance | Phase research agents | Require discovery, standards, evidence-curation, gap-analysis, and reproducibility researchers. | `conductor/agents/article-hardening-research-agents.json`; `conductor/workflows/article-hardening-research-workflow.md` | complete |- Protocol amendments are recorded in `.conductor/runlog.md`.
 
+
+
+## Supporting Review Surfaces
+
+| Standard | Item | Required Reporting Element | Repository Artifact | Status |
+| --- | --- | --- | --- | --- |
+| UOGTO governance | Dual screening and adjudication | Record researcher proposal, peer acceptance/rejection, red-team challenge, and final disposition. | `docs/article-hardening/dual-screening.md`; `docs/article-hardening/dual-screening-sample.csv` | complete |
+
 ## PRISMA 2020 Flow Diagrams
 
 | Standard | Item | Required Reporting Element | Repository Artifact | Status |

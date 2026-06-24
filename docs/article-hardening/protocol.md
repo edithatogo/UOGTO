@@ -148,3 +148,19 @@ This package also includes PRISMA 2020-style flow diagrams for source discovery 
 - `docs/article-hardening/figures/prisma-2020-screening-flow.md`
 
 The diagrams are derived from the current `search-log.jsonl` and `source-extension-inventory.json` artifacts and should be refreshed whenever those counts change.
+
+
+## Dual Screening and Adjudication
+A simulated dual-screening workflow is used for evidence-package review:
+
+- the researcher proposes an inclusion or exclusion disposition,
+- the peer reviewer accepts or rejects the proposal,
+- the red team reviewer challenges overclaims, weak evidence, or scope drift,
+- the final disposition is recorded in the dual-screening sample register.
+
+This keeps the screening chain explicit without implying that every package element has undergone live double-blind review. The checker treats this surface as `dual_screening` for validation and reporting.
+
+Artifacts:
+
+- `docs/article-hardening/dual-screening.md`
+- `docs/article-hardening/dual-screening-sample.csv`

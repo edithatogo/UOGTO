@@ -28,6 +28,8 @@ SOURCE_EXTENSION_SUMMARY = DOCS / "source-extension-inventory.md"
 QUALITY_METRICS = DOCS / "quality-metrics.json"
 REASONER_REPORT = DOCS / "reasoner-report.md"
 FIGURES = DOCS / "figures"
+DUAL_SCREENING = DOCS / "dual-screening.md"
+DUAL_SCREENING_SAMPLE = DOCS / "dual-screening-sample.csv"
 ROBOT_DIR = DOCS / "robot"
 EVIDENCE_FILES = [
     DOCS / "search-log.jsonl",
@@ -77,6 +79,8 @@ REQUIRED_FILES = [
     DOCS / "structured-summary.md",
     DOCS / "prisma-scr-artifact-map.md",
     DOCS / "search-strategy.md",
+    DUAL_SCREENING,
+    DUAL_SCREENING_SAMPLE,
     FIGURES / "README.md",
     FIGURES / "prisma-2020-source-discovery-flow.md",
     FIGURES / "prisma-2020-screening-flow.md",
@@ -116,6 +120,7 @@ PROTOCOL_SECTIONS = [
     "## Limitations",
     "## Protocol Amendments",
     "## Funding and Conflicts",
+    "## Dual Screening and Adjudication",
     "## PRISMA 2020 Flow Diagrams",
 ]
 
@@ -125,6 +130,7 @@ PROTOCOL_TERMS = [
     "RO-Crate 1.1",
     "parsed_rdf_owl",
     "PRISMA 2020",
+    "dual_screening",
     "structured_non_rdf",
     "metadata_only",
     "literature_only",
@@ -225,6 +231,8 @@ def validate_checklist() -> None:
         "docs/article-hardening/structured-summary.md",
         "docs/article-hardening/prisma-scr-artifact-map.md",
         "docs/article-hardening/search-strategy.md",
+        "docs/article-hardening/dual-screening.md",
+        "docs/article-hardening/dual-screening-sample.csv",
         ".conductor/runlog.md",
     ]
     for artifact in required_artifacts:

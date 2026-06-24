@@ -29,7 +29,9 @@
         { "@id": "uogto-inclusion-candidates.csv" },
         { "@id": "uogto-inclusion-decisions.md" },
         { "@id": "competency-benchmark.md" },
-        { "@id": "use-case-coverage-matrix.csv" }
+        { "@id": "use-case-coverage-matrix.csv" },
+        { "@id": "dual-screening.md" },
+        { "@id": "dual-screening-sample.csv" }
       ]
     }
   ]

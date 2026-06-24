@@ -1,0 +1,6 @@
+proposal_id,source_id,researcher_proposal,peer_decision,red_team_challenge,final_disposition,rationale
+screen-001,strategic-game-theory-ontology,add_to_uogto,accept,no_overclaim_detected,accept,Core strategic interaction vocabulary strengthens the ontology baseline.
+screen-002,discrete-event-simulation-ontology,align_external_only,reject,scope_is_broader_than_uogto,reject,The construct is relevant but should remain a mapping target rather than a direct addition.
+screen-003,agent-based-modelling-ontology,add_to_uogto,accept,no_overclaim_detected,accept,Execution and trace semantics support UOGTO's simulation-binding module.
+screen-004,system-dynamics-vocabulary,defer_pending_evidence,reject,insufficient_case_support,reject,More evidence is needed before the claim can be promoted beyond a provisional alignment.
+screen-005,llm-agent-tool-use-game,add_to_uogto,accept,red_team_requested_scope_check,accept_with_revision,The red team asked for a narrower articulation of tool-use and control-flow terms.
