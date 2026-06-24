@@ -29,6 +29,7 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 ## Documentation and Citation
 - Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.
 - Ontology design-pattern documentation is available at [docs/ontology-design-patterns.md](docs/ontology-design-patterns.md).
+- Audience-specific guidance is available at [docs/uogto-for.md](docs/uogto-for.md).
 - Citation and reuse guidance is available at [docs/how-to-cite-and-reuse-uogto.md](docs/how-to-cite-and-reuse-uogto.md).
 - Release and DOI workflow notes are maintained in [docs/releases/v1.0.md](docs/releases/v1.0.md).
 - Citation metadata is provided in [CITATION.cff](CITATION.cff).
