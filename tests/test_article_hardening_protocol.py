@@ -67,3 +67,33 @@ def test_review_workflow_and_skill_are_present_and_role_aware():
     assert "phase-review-log.jsonl" in workflow
     assert "red-team" in workflow
     assert "devil" in workflow
+
+
+def test_research_agent_registry_declares_required_research_roles():
+    import json
+
+    registry = json.loads(
+        (ROOT / "conductor" / "agents" / "article-hardening-research-agents.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    role_ids = {role["id"] for role in registry["research_roles"]}
+    for role in checker.REQUIRED_RESEARCHERS + checker.OPTIONAL_PHASE_RESEARCHERS:
+        assert role in role_ids
+    for role in checker.REQUIRED_RESEARCHERS:
+        assert role in registry["minimum_phase_research_set"]
+
+
+def test_research_workflow_and_skill_are_present_and_role_aware():
+    workflow = (
+        ROOT / "conductor" / "workflows" / "article-hardening-research-workflow.md"
+    ).read_text(encoding="utf-8")
+    skill = (
+        ROOT / ".agents" / "skills" / "article-hardening-research" / "SKILL.md"
+    ).read_text(encoding="utf-8")
+    for role in checker.REQUIRED_RESEARCHERS:
+        assert role in workflow
+        assert role in skill
+    assert "phase-research-log.jsonl" in workflow
+    assert "evidence" in workflow
+    assert "reproducibility" in workflow

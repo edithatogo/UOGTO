@@ -1,0 +1,1 @@
+{"phase":1,"status":"research_system_initialized","researchers":["evidence_curation_researcher","reproducibility_curator"],"notes":"Research agent registry, workflow, skill, and log scaffold added after Phase 1 so subsequent phases have explicit research handoffs before review."}

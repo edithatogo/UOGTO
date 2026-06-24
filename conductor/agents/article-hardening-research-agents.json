@@ -1,0 +1,89 @@
+{
+  "schema": "uogto.article-hardening-research-agents.v1",
+  "track": "uogto_article_hardening_protocol_20260624",
+  "research_roles": [
+    {
+      "id": "registry_discovery_researcher",
+      "label": "Registry Discovery Researcher",
+      "research_type": "source_discovery",
+      "phase_scope": [2, 3],
+      "focus": [
+        "ontology registry searches",
+        "source-extension inventory candidates",
+        "duplicate and supersession checks",
+        "registry-specific limitations"
+      ],
+      "required_output": "docs/article-hardening/research/phase-{phase}-registry-discovery.md"
+    },
+    {
+      "id": "standards_landscape_researcher",
+      "label": "Standards Landscape Researcher",
+      "research_type": "standards_review",
+      "phase_scope": [2, 3, 5, 7],
+      "focus": [
+        "standards-body sources",
+        "formal modelling languages",
+        "structured non-RDF charting",
+        "article-relevant standards limitations"
+      ],
+      "required_output": "docs/article-hardening/research/phase-{phase}-standards-landscape.md"
+    },
+    {
+      "id": "game_theory_gap_researcher",
+      "label": "Game-Theory Gap Researcher",
+      "research_type": "uogto_gap_analysis",
+      "phase_scope": [5, 6, 7, 8],
+      "focus": [
+        "missing game-theory constructs",
+        "competency-question gaps",
+        "UOGTO inclusion candidates",
+        "reasons to prefer external alignment"
+      ],
+      "required_output": "docs/article-hardening/research/phase-{phase}-game-theory-gap-analysis.md"
+    },
+    {
+      "id": "evidence_curation_researcher",
+      "label": "Evidence Curation Researcher",
+      "research_type": "evidence_curation",
+      "phase_scope": [2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "evidence-level classification",
+        "licence and provenance disposition",
+        "metadata-only evidence boundaries",
+        "source-to-claim traceability"
+      ],
+      "required_output": "docs/article-hardening/research/phase-{phase}-evidence-curation.md"
+    },
+    {
+      "id": "reproducibility_curator",
+      "label": "Reproducibility Curator",
+      "research_type": "reproducibility_curation",
+      "phase_scope": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "RO-Crate completeness",
+        "script-to-artifact provenance",
+        "deterministic regeneration",
+        "validation command evidence"
+      ],
+      "required_output": "docs/article-hardening/research/phase-{phase}-reproducibility-curation.md"
+    }
+  ],
+  "minimum_phase_research_set": [
+    "evidence_curation_researcher",
+    "reproducibility_curator"
+  ],
+  "additional_phase_researchers": {
+    "2": ["registry_discovery_researcher", "standards_landscape_researcher"],
+    "3": ["registry_discovery_researcher", "standards_landscape_researcher"],
+    "5": ["standards_landscape_researcher", "game_theory_gap_researcher"],
+    "6": ["game_theory_gap_researcher"],
+    "7": ["standards_landscape_researcher", "game_theory_gap_researcher"],
+    "8": ["game_theory_gap_researcher"]
+  },
+  "phase_gate": {
+    "requires_research_plan": true,
+    "requires_search_or_evidence_log": true,
+    "requires_source_to_claim_traceability": true,
+    "research_log_path": "docs/article-hardening/research/phase-research-log.jsonl"
+  }
+}

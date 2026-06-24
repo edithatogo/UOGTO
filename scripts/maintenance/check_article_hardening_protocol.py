@@ -8,20 +8,29 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs" / "article-hardening"
-AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
-WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md"
-SKILL = ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL.md"
+REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
+RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
+REVIEW_WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md"
+RESEARCH_WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-research-workflow.md"
+REVIEW_SKILL = ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL.md"
+RESEARCH_SKILL = ROOT / ".agents" / "skills" / "article-hardening-research" / "SKILL.md"
 REVIEWS = DOCS / "reviews"
+RESEARCH = DOCS / "research"
 
 REQUIRED_FILES = [
     DOCS / "protocol.md",
     DOCS / "protocol-checklist.md",
     DOCS / "search-strategy.md",
-    AGENTS,
-    WORKFLOW,
-    SKILL,
+    REVIEW_AGENTS,
+    RESEARCH_AGENTS,
+    REVIEW_WORKFLOW,
+    RESEARCH_WORKFLOW,
+    REVIEW_SKILL,
+    RESEARCH_SKILL,
     REVIEWS / "README.md",
     REVIEWS / "phase-review-log.jsonl",
+    RESEARCH / "README.md",
+    RESEARCH / "phase-research-log.jsonl",
 ]
 
 PROTOCOL_SECTIONS = [
@@ -84,6 +93,18 @@ REQUIRED_REVIEWERS = [
 OPTIONAL_PHASE_REVIEWERS = ["simulation_modelling_peer_reviewer"]
 
 
+REQUIRED_RESEARCHERS = [
+    "evidence_curation_researcher",
+    "reproducibility_curator",
+]
+
+OPTIONAL_PHASE_RESEARCHERS = [
+    "registry_discovery_researcher",
+    "standards_landscape_researcher",
+    "game_theory_gap_researcher",
+]
+
+
 def _read(path: Path) -> str:
     if not path.exists():
         raise SystemExit(f"Missing required article-hardening artifact: {path}")
@@ -136,7 +157,7 @@ def validate_checklist() -> None:
 
 
 def validate_review_agents() -> None:
-    registry = json.loads(_read(AGENTS))
+    registry = json.loads(_read(REVIEW_AGENTS))
     role_ids = {role.get("id") for role in registry.get("review_roles", [])}
     missing = [role for role in REQUIRED_REVIEWERS + OPTIONAL_PHASE_REVIEWERS if role not in role_ids]
     if missing:
@@ -150,8 +171,8 @@ def validate_review_agents() -> None:
             if not role.get(field):
                 raise SystemExit(f"Review role {role.get('id')} missing field: {field}")
 
-    workflow = _read(WORKFLOW)
-    skill = _read(SKILL)
+    workflow = _read(REVIEW_WORKFLOW)
+    skill = _read(REVIEW_SKILL)
     review_readme = _read(REVIEWS / "README.md")
     review_log = _read(REVIEWS / "phase-review-log.jsonl")
     for role in REQUIRED_REVIEWERS:
@@ -161,6 +182,35 @@ def validate_review_agents() -> None:
         if term not in workflow and term not in review_readme:
             raise SystemExit(f"Review workflow missing reporting term: {term}")
 
+
+def validate_research_agents() -> None:
+    registry = json.loads(_read(RESEARCH_AGENTS))
+    role_ids = {role.get("id") for role in registry.get("research_roles", [])}
+    missing = [
+        role for role in REQUIRED_RESEARCHERS + OPTIONAL_PHASE_RESEARCHERS if role not in role_ids
+    ]
+    if missing:
+        raise SystemExit(f"Research agent registry missing roles: {', '.join(missing)}")
+    minimum = registry.get("minimum_phase_research_set", [])
+    missing_minimum = [role for role in REQUIRED_RESEARCHERS if role not in minimum]
+    if missing_minimum:
+        raise SystemExit(f"Minimum phase research set missing roles: {', '.join(missing_minimum)}")
+    for role in registry.get("research_roles", []):
+        for field in ["label", "research_type", "phase_scope", "focus", "required_output"]:
+            if not role.get(field):
+                raise SystemExit(f"Research role {role.get('id')} missing field: {field}")
+
+    workflow = _read(RESEARCH_WORKFLOW)
+    skill = _read(RESEARCH_SKILL)
+    research_readme = _read(RESEARCH / "README.md")
+    research_log = _read(RESEARCH / "phase-research-log.jsonl")
+    for role in REQUIRED_RESEARCHERS:
+        if role not in workflow or role not in skill or role not in research_log:
+            raise SystemExit(f"Research workflow/skill/log missing required role: {role}")
+    for term in ["research", "evidence", "reproducibility", "phase-research-log.jsonl"]:
+        if term not in workflow and term not in research_readme:
+            raise SystemExit(f"Research workflow missing reporting term: {term}")
+
 def main() -> None:
     for path in REQUIRED_FILES:
         _read(path)
@@ -168,10 +218,11 @@ def main() -> None:
     validate_search_strategy()
     validate_checklist()
     validate_review_agents()
+    validate_research_agents()
     print(
         "Article-hardening protocol valid: "
         "PRISMA-ScR scaffold, PRISMA-S fields, RO-Crate requirements, "
-        "UOGTO inclusion reporting rules, and phase-review agents present."
+        "UOGTO inclusion reporting rules, phase-research agents, and phase-review agents present."
     )
 
 

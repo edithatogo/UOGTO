@@ -20,6 +20,7 @@
 | RO-Crate 1.1 | Contextual entities | Require standards, licences, people/organizations where available, and external source references. | `docs/article-hardening/search-strategy.md` | complete |
 | UOGTO governance | Missing-element triage | Require evidence-backed add/align/defer/reject/domain-review decisions for missing game-theory elements. | `docs/article-hardening/protocol.md` | complete |
 | UOGTO governance | Phase review agents | Require peer, editorial, red-team, and devil's-advocate reviewers for each implementation phase. | `conductor/agents/article-hardening-review-agents.json`; `conductor/workflows/article-hardening-phase-review.md` | complete |
+| UOGTO governance | Phase research agents | Require discovery, standards, evidence-curation, gap-analysis, and reproducibility researchers before phase review. | `conductor/agents/article-hardening-research-agents.json`; `conductor/workflows/article-hardening-research-workflow.md` | complete |
 
 ## Reporting Improvements To Preserve
 

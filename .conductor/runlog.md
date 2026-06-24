@@ -1,5 +1,9 @@
 # Conductor Run Log
 
+## [2026-06-24] - Article Hardening Research Governance
+- Added research governance for `uogto_article_hardening_protocol_20260624`: registry discovery, standards landscape, game-theory gap analysis, evidence curation, and reproducibility curation are now declared as concrete research agents with required outputs.
+- Added the article-hardening research workflow, repo-local research skill, research log scaffold, and validator/test coverage so research handoffs are explicit before peer, editorial, red-team, and devil's-advocate review.
+
 ## [2026-06-24] - Article Hardening Review Governance
 - Added phase-review governance for `uogto_article_hardening_protocol_20260624`: peer reviewers, methods/editorial review, evidence red-team review, and devil's-advocate review are now declared as concrete agents with required outputs.
 - Added the article-hardening review workflow, repo-local review skill, review log scaffold, and validator/test coverage so the reporting approach includes reviewer gates at each phase.
