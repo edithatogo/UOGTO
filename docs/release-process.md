@@ -11,5 +11,5 @@
 10. Submit registry requests after DOI and GitHub Pages documentation are live.
 
 ## arXiv Submission
-- For TeX submissions, run `make arxiv-preflight` and verify the generated PDF before upload.
+- For TeX submissions, run `make arxiv-preflight` and verify the generated PDF before upload. The arXiv source package is cleaned with `make arxiv-source-package` so unused figures, auxiliary files, referee letters, journal templates, and hidden junk are excluded.
 - This follows arXiv's April 2025 TeX processing update, which requires submitters to view and confirm the rendered PDF during submission.
