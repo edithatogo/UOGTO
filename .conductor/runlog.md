@@ -1,5 +1,12 @@
 # Conductor Run Log
 
+## [2026-06-24] - Article Hardening Protocol Track Creation
+- Created Conductor track `uogto_article_hardening_protocol_20260624` to incorporate post-comparison recommendations into a broader article-hardening and evidence-generation lane.
+- Added a detailed specification covering PRISMA-ScR/PRISMA-S protocol structure, RO-Crate 1.1 packaging, broader ontology/formalism discovery, ontology-quality metrics, reasoner/SHACL evaluation, competency-question benchmarking, mapping robustness, manual review sampling, and article-ready tables/figures.
+- Added an eight-phase implementation plan from protocol creation through broader discovery, acquisition, RO-Crate packaging, quality evaluation, competency benchmarking, mapping robustness, article outputs, validation, and Conductor integration.
+- Added `protocol-standard.md` documenting how PRISMA-ScR, PRISMA-S, and RO-Crate are used and the minimum search-log and crate metadata requirements.
+
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 1
 - Implemented Phase 1 discovery protocol at `docs/ontology-comparison/discovery-protocol.md` with search surfaces, exact query strings, inclusion/exclusion rules, licence dispositions, review states, and evidence requirements.
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
