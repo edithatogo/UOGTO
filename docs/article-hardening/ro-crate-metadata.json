@@ -14,6 +14,7 @@
       "description": "Scoping-review-style protocol, search log, inventory, benchmark, and synthesis artifacts for the UOGTO article-hardening track.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "hasPart": [
+        { "@id": "ro-crate-package.md" },
         { "@id": "protocol.md" },
         { "@id": "protocol-checklist.md" },
         { "@id": "structured-summary.md" },

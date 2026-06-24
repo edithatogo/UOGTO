@@ -35,4 +35,5 @@ This file maps each PRISMA-ScR reporting item to the repository surfaces that ca
 | 23 | Source discovery flow diagram | `docs/article-hardening/figures/prisma-2020-source-discovery-flow.md` | PRISMA 2020-style discovery flow for search routes, records, and negative evidence. |
 | 24 | Screening flow diagram | `docs/article-hardening/figures/prisma-2020-screening-flow.md` | PRISMA 2020-style screening flow for inclusion, exclusion, and retention. |
 | 25 | Dual screening and adjudication | `docs/article-hardening/dual-screening.md`; `docs/article-hardening/dual-screening-sample.csv` | Simulated researcher-to-peer-to-red-team review chain for screening and disposition. |
+| 26 | RO-Crate package output | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | Early RO-Crate package narrative and metadata surface. |
 

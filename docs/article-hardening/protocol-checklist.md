@@ -32,6 +32,19 @@
 - Require every proposed UOGTO addition to identify competency-question, interoperability, article-claim, conceptual-clarity, or validation/example impact.
 - Preserve ROBOT-style outputs as optional article-hardening enrichments; never let them replace the portable RDFLib/pySHACL baseline.
 - Keep protocol amendments visible in Conductor state so article methods do not drift from implementation.
+
+
+## RO-Crate Output
+
+| Standard | Item | Required Reporting Element | Repository Artifact | Status |
+| --- | --- | --- | --- | --- |
+| RO-Crate 1.1 | Early package output | Produce the crate metadata and package narrative at protocol time, not as an end-stage export. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
+| RO-Crate 1.1 | Root data entity | Identify the article-hardening package as the root dataset. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
+| RO-Crate 1.1 | Data entities | List the protocol, logs, inventories, benchmarks, review logs, and analysis artefacts as data entities. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
+| RO-Crate 1.1 | Contextual entities | Record standards, licences, repositories, and related contextual entities. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
+| RO-Crate 1.1 | Provenance | Preserve provenance through search, inventory, review, and research logs. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
+| RO-Crate 1.1 | Workflows and scripts | Link validation and review workflows and the package-building scripts. | `docs/article-hardening/ro-crate-package.md`; `scripts/maintenance/check_article_hardening_protocol.py` | complete |
+
 ## Supporting Standards
 
 | Standard | Item | Required Reporting Element | Repository Artifact | Status |

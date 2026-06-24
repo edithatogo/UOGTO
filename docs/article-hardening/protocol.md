@@ -21,6 +21,16 @@ The completed UOGTO comparative ontology mapping track produced a reproducible b
 5. Identify game-theory elements absent from UOGTO and decide whether each should be added, aligned externally, deferred, rejected, or sent for domain review.
 6. Produce article-ready tables, figures, methods text, results text, and reproducibility metadata.
 
+
+
+## RO-Crate Output
+The RO-Crate 1.1 package is produced early and treated as a protocol artifact, not a closing export.
+
+- `docs/article-hardening/ro-crate-package.md`
+- `docs/article-hardening/ro-crate-metadata.json`
+
+The crate captures the root data entity, data entities, contextual entities, provenance, and workflows and scripts that support the article-hardening evidence package.
+
 ## Review Questions
 1. Which existing ontologies, vocabularies, standards, schemas, and formalisms overlap with UOGTO's intended game-theory and simulation scope?
 2. Which UOGTO modules are well covered by external comparators, and which are UOGTO-specific or under-represented elsewhere?
