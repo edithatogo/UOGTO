@@ -5,6 +5,10 @@
 - Added `scripts/maintenance/build_article_hardening_quality.py`, Make/Pixi wiring, protocol validation, and pytest coverage so quality metrics are deterministic and article-ready.
 - Recorded the current boundary that comparator-source quality metrics will expand after Phase 3 acquisition adds parsed external artifacts.
 
+## [2026-06-24] - Article Hardening SHACL Coverage Metrics
+- Expanded ontology-quality benchmarking for `uogto_article_hardening_protocol_20260624` with SHACL coverage metrics that distinguish example-graph shape linkage, module-shape coverage, and competency-question to example-graph linkage.
+- Added a privacy-budget example graph so the privacy competency question is linked to a concrete example, and the quality report now records all query/example links explicitly.
+
 ## [2026-06-24] - Article Hardening ROBOT-Style Reports
 - Added an optional Java-backed ROBOT-style reporting layer for `uogto_article_hardening_protocol_20260624` while preserving RDFLib/pySHACL as the portable baseline.
 - Generated `docs/article-hardening/robot/status.json`, `reasoner-check.md`, `report.md`, `merged-ontology.ttl`, `merge-diff.md`, `import-extraction.ttl`, and `import-extraction.md` from the current ontology graphs.

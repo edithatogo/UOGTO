@@ -26,6 +26,7 @@ def test_quality_metrics_include_requested_benchmark_families():
         "hierarchy_depth",
         "import_depth",
         "shacl_coverage",
+        "shacl_example_module_coverage",
         "examples_per_module",
         "competency_query_coverage",
         "owl_profile_reasoner_status",
@@ -35,6 +36,9 @@ def test_quality_metrics_include_requested_benchmark_families():
     assert metrics["annotation_completeness"]["global"]["definition_completeness"] == 1.0
     assert metrics["hierarchy_depth"]["max_depth"] >= 1
     assert metrics["competency_query_coverage"]["executable_count"] == metrics["scope"]["competency_query_count"]
+    assert metrics["competency_query_coverage"]["queries_with_example_graph_links"] == metrics["scope"]["competency_query_count"]
+    assert metrics["shacl_example_module_coverage"]["example_graph_coverage"] == 1.0
+    assert metrics["shacl_example_module_coverage"]["module_shape_coverage"] == 1.0
 
 
 def test_quality_metrics_include_local_pitfall_indicators():

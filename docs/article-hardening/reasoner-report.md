@@ -4,47 +4,52 @@ This report is generated from `scripts/maintenance/build_article_hardening_quali
 
 ## Scope
 
-- Ontology files: 48
+- Ontology files: 49
 - SHACL files: 5
-- Example files: 16
+- Example files: 17
 - Competency queries: 10
 
 ## Annotation Completeness
 
-- Classes: 298
-- Properties: 197
+- Classes: 299
+- Properties: 204
 - Label completeness: 1.0
 - Definition completeness: 1.0
 
 ## Structural Metrics
 
-- Orphan classes: 0 of 298 (0.0)
-- Object properties: 149
-- Datatype properties: 48
-- Relation richness, properties per class: 0.6611
-- Domain coverage: 0.8173
-- Range coverage: 0.8731
+- Orphan classes: 1 of 299 (0.0033)
+- Object properties: 150
+- Datatype properties: 54
+- Relation richness, properties per class: 0.6823
+- Domain coverage: 0.8235
+- Range coverage: 0.8775
 - Maximum class hierarchy depth: 3
-- Root classes: 1
+- Root classes: 2
 - Maximum local import depth: 1
 - External import count: 0
 
 ## SHACL and Example Coverage
 
-- SHACL target class coverage: 0.0537
-- SHACL property path coverage: 0.1015
-- Modules with examples: 13
-- Example files: 16
+- SHACL target class coverage: 0.0535
+- SHACL property path coverage: 0.098
+- SHACL shape-term coverage: 36 terms
+- Example graphs with SHACL links: 17 of 17
+- Module shape coverage: 9 of 9
+- Modules with examples: 14
+- Example files: 17
 
 ## Competency Query Coverage
 
 - Executable queries: 10 of 10
-- Queries returning results against ontology plus examples: 3
+- Queries returning results against ontology plus examples: 4
+- Queries linked to example graphs: 10
+- Example-graph linkage ratio: 1.0
 - Modules mentioned by competency queries: 5
 
 ## Pitfall Indicators
 
-- Local OOPS-style open issue count: 3
+- Local OOPS-style open issue count: 4
 - Missing labels: 0
 - Missing definitions: 0
 

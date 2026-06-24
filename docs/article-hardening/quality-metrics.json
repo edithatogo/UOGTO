@@ -1,13 +1,13 @@
 {
   "annotation_completeness": {
     "global": {
-      "class_count": 298,
-      "defined_count": 495,
+      "class_count": 299,
+      "defined_count": 503,
       "definition_completeness": 1.0,
-      "entity_count": 495,
+      "entity_count": 503,
       "label_completeness": 1.0,
-      "labelled_count": 495,
-      "property_count": 197
+      "labelled_count": 503,
+      "property_count": 204
     },
     "modules": {
       "alignments/mcp-a2a": {
@@ -185,6 +185,17 @@
         "missing_definitions": [],
         "missing_labels": [],
         "property_count": 42
+      },
+      "core/uogto-governance": {
+        "class_count": 1,
+        "defined_count": 8,
+        "definition_completeness": 1.0,
+        "entity_count": 8,
+        "label_completeness": 1.0,
+        "labelled_count": 8,
+        "missing_definitions": [],
+        "missing_labels": [],
+        "property_count": 7
       },
       "extensions/algorithmic-game-theory": {
         "class_count": 7,
@@ -541,6 +552,7 @@
     }
   },
   "competency_query_coverage": {
+    "example_graph_linkage_ratio": 1.0,
     "executable_count": 10,
     "executable_ratio": 1.0,
     "module_coverage_count": 5,
@@ -567,10 +579,25 @@
     },
     "queries": [
       {
+        "example_graph_link_source": "query_results",
+        "example_graphs": [
+          "examples/extensive-form-game.ttl",
+          "examples/first-price-auction.jsonld",
+          "examples/llm-tool-use-game.jsonld",
+          "examples/marl-gridworld-game.jsonld",
+          "examples/matching-market.ttl",
+          "examples/normal-form-game.jsonld",
+          "examples/prisoners-dilemma.jsonld",
+          "examples/privacy-budget-game.jsonld",
+          "examples/security-stackelberg-game.jsonld",
+          "examples/stag-hunt.ttl",
+          "examples/stochastic-markov-game.jsonld",
+          "examples/voting-social-choice-game.jsonld"
+        ],
         "modules": [
           "core/uogto-core"
         ],
-        "ontology_plus_examples_result_count": 13,
+        "ontology_plus_examples_result_count": 14,
         "ontology_result_count": 0,
         "query": "competency-questions/cq01-list-players.rq",
         "status": "executable",
@@ -580,6 +607,13 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/extensive-form-game.ttl",
+          "examples/normal-form-game.jsonld",
+          "examples/prisoners-dilemma.jsonld",
+          "examples/stag-hunt.ttl"
+        ],
         "modules": [
           "core/uogto-core"
         ],
@@ -593,6 +627,13 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/normal-form-game.jsonld",
+          "examples/prisoners-dilemma.jsonld",
+          "examples/stag-hunt.ttl",
+          "examples/stochastic-markov-game.jsonld"
+        ],
         "modules": [
           "core/uogto-core"
         ],
@@ -606,6 +647,12 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/extensive-form-game.ttl",
+          "examples/signalling-game.ttl",
+          "examples/stochastic-markov-game.jsonld"
+        ],
         "modules": [
           "core/uogto-core"
         ],
@@ -619,6 +666,10 @@
         ]
       },
       {
+        "example_graph_link_source": "query_results",
+        "example_graphs": [
+          "examples/security-stackelberg-game.jsonld"
+        ],
         "modules": [
           "extensions/security-games"
         ],
@@ -632,6 +683,12 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/contract-principal-agent-game.ttl",
+          "examples/first-price-auction.jsonld",
+          "examples/matching-market.ttl"
+        ],
         "modules": [
           "extensions/mechanism-design"
         ],
@@ -645,6 +702,10 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/llm-tool-use-game.jsonld"
+        ],
         "modules": [
           "extensions/llm-agent-games"
         ],
@@ -658,6 +719,12 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/digital-twin-security-game.ttl",
+          "examples/marl-gridworld-game.jsonld",
+          "examples/petri-net-execution-game.ttl"
+        ],
         "modules": [
           "core/uogto-core"
         ],
@@ -671,10 +738,14 @@
         ]
       },
       {
+        "example_graph_link_source": "query_results",
+        "example_graphs": [
+          "examples/privacy-budget-game.jsonld"
+        ],
         "modules": [
           "extensions/privacy-disclosure"
         ],
-        "ontology_plus_examples_result_count": 0,
+        "ontology_plus_examples_result_count": 1,
         "ontology_result_count": 0,
         "query": "competency-questions/cq09-games-with-privacy-budget.rq",
         "status": "executable",
@@ -683,6 +754,12 @@
         ]
       },
       {
+        "example_graph_link_source": "curated",
+        "example_graphs": [
+          "examples/llm-tool-use-game.jsonld",
+          "examples/normal-form-game.jsonld",
+          "examples/petri-net-execution-game.ttl"
+        ],
         "modules": [],
         "ontology_plus_examples_result_count": 46,
         "ontology_result_count": 46,
@@ -691,12 +768,14 @@
         "terms": []
       }
     ],
-    "queries_with_example_results": 3,
+    "queries_with_example_graph_links": 10,
+    "queries_with_example_results": 4,
+    "queries_without_example_graph_links": [],
     "query_count": 10
   },
   "created": "2026-06-24",
   "examples_per_module": {
-    "example_count": 16,
+    "example_count": 17,
     "example_terms": {
       "examples/contract-principal-agent-game.ttl": [
         "https://w3id.org/uogto/core#Player",
@@ -794,6 +873,16 @@
         "https://w3id.org/uogto/core#hasPlayer",
         "https://w3id.org/uogto/core#identifier",
         "https://w3id.org/uogto/core#name"
+      ],
+      "examples/privacy-budget-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/core#name",
+        "https://w3id.org/uogto/extensions#PrivacyBudget",
+        "https://w3id.org/uogto/extensions#epsilonValue",
+        "https://w3id.org/uogto/extensions#hasPrivacyBudget"
       ],
       "examples/security-stackelberg-game.jsonld": [
         "https://w3id.org/uogto/core#GameSpecification",
@@ -902,7 +991,7 @@
         "examples": []
       },
       "core/uogto-core": {
-        "example_count": 16,
+        "example_count": 17,
         "examples": [
           "examples/contract-principal-agent-game.ttl",
           "examples/cooperative-coalition-game.ttl",
@@ -915,12 +1004,17 @@
           "examples/normal-form-game.jsonld",
           "examples/petri-net-execution-game.ttl",
           "examples/prisoners-dilemma.jsonld",
+          "examples/privacy-budget-game.jsonld",
           "examples/security-stackelberg-game.jsonld",
           "examples/signalling-game.ttl",
           "examples/stag-hunt.ttl",
           "examples/stochastic-markov-game.jsonld",
           "examples/voting-social-choice-game.jsonld"
         ]
+      },
+      "core/uogto-governance": {
+        "example_count": 0,
+        "examples": []
       },
       "extensions/algorithmic-game-theory": {
         "example_count": 0,
@@ -1058,8 +1152,10 @@
         ]
       },
       "extensions/privacy-disclosure": {
-        "example_count": 0,
-        "examples": []
+        "example_count": 1,
+        "examples": [
+          "examples/privacy-budget-game.jsonld"
+        ]
       },
       "extensions/security-games": {
         "example_count": 1,
@@ -1076,19 +1172,20 @@
         "examples": []
       }
     },
-    "modules_with_examples": 13
+    "modules_with_examples": 14
   },
   "hierarchy_depth": {
     "depth_distribution": {
-      "0": 1,
+      "0": 2,
       "1": 185,
       "2": 109,
       "3": 3
     },
     "max_depth": 3,
-    "root_class_count": 1,
+    "root_class_count": 2,
     "root_classes": [
-      "https://w3id.org/uogto/core#GameEntity"
+      "https://w3id.org/uogto/core#GameEntity",
+      "https://w3id.org/uogto/core#OntologyGovernanceRecord"
     ]
   },
   "import_depth": {
@@ -1187,6 +1284,10 @@
         "local_import_depth": 1
       },
       "core/uogto-core": {
+        "imports": [],
+        "local_import_depth": 0
+      },
+      "core/uogto-governance": {
         "imports": [],
         "local_import_depth": 0
       },
@@ -1383,10 +1484,12 @@
     }
   },
   "orphan_classes": {
-    "class_count": 298,
-    "classes": [],
-    "count": 0,
-    "orphan_ratio": 0.0
+    "class_count": 299,
+    "classes": [
+      "https://w3id.org/uogto/core#OntologyGovernanceRecord"
+    ],
+    "count": 1,
+    "orphan_ratio": 0.0033
   },
   "owl_profile_reasoner_status": {
     "owl_profile_screen": {
@@ -1401,8 +1504,8 @@
       "owlrl_available": true,
       "owlrl_error": null,
       "owlrl_status": "passed",
-      "owlrl_triples_after": 6453,
-      "owlrl_triples_before": 2275
+      "owlrl_triples_after": 6574,
+      "owlrl_triples_before": 2327
     }
   },
   "pitfall_indicators": {
@@ -1410,43 +1513,222 @@
       "external_import_count": 0,
       "missing_definitions": 0,
       "missing_labels": 0,
-      "orphan_classes": 0,
+      "orphan_classes": 1,
       "properties_without_domain": 36,
       "properties_without_range": 25,
       "reasoner_not_passed": false,
-      "shacl_uncovered_class_count": 282
+      "shacl_uncovered_class_count": 283
     },
     "method": "local OOPS-style proxy indicators; no external OOPS service was called",
-    "open_issue_count": 3
+    "open_issue_count": 4
   },
   "relation_richness": {
     "annotation_property_count": 0,
-    "class_count": 298,
-    "datatype_property_count": 48,
-    "domain_coverage": 0.8173,
-    "object_property_count": 149,
-    "properties_per_class": 0.6611,
-    "property_count": 197,
-    "range_coverage": 0.8731,
+    "class_count": 299,
+    "datatype_property_count": 54,
+    "domain_coverage": 0.8235,
+    "object_property_count": 150,
+    "properties_per_class": 0.6823,
+    "property_count": 204,
+    "range_coverage": 0.8775,
     "subclass_axiom_count": 306,
-    "subclass_axioms_per_class": 1.0268
+    "subclass_axioms_per_class": 1.0234
   },
   "schema": "uogto.article-hardening.quality-metrics.v1",
   "scope": {
     "competency_query_count": 10,
-    "example_file_count": 16,
-    "ontology_file_count": 48,
+    "example_file_count": 17,
+    "ontology_file_count": 49,
     "shape_file_count": 5
   },
   "shacl_coverage": {
     "node_shape_count": 16,
     "property_path_count": 20,
-    "property_path_coverage": 0.1015,
+    "property_path_coverage": 0.098,
     "property_paths_missing_from_ontology": [],
     "property_shape_count": 0,
     "shape_file_count": 5,
+    "shape_term_count": 36,
+    "shape_terms_in_ontology": 36,
     "target_class_count": 16,
-    "target_class_coverage": 0.0537,
+    "target_class_coverage": 0.0535,
     "target_classes_missing_from_ontology": []
+  },
+  "shacl_example_module_coverage": {
+    "example_graph_count": 17,
+    "example_graph_coverage": 1.0,
+    "example_graphs_with_shape_links": 17,
+    "example_shape_links": {
+      "examples/contract-principal-agent-game.ttl": [
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#ContractGame",
+        "https://w3id.org/uogto/extensions#hasContract"
+      ],
+      "examples/cooperative-coalition-game.ttl": [
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/digital-twin-security-game.ttl": [
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#DigitalTwinGame",
+        "https://w3id.org/uogto/extensions#hasDigitalTwin"
+      ],
+      "examples/extensive-form-game.ttl": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/first-price-auction.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#Mechanism",
+        "https://w3id.org/uogto/extensions#hasAllocationRule",
+        "https://w3id.org/uogto/extensions#hasPaymentRule"
+      ],
+      "examples/llm-tool-use-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#LLMAgent",
+        "https://w3id.org/uogto/extensions#hasPromptState"
+      ],
+      "examples/marl-gridworld-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#hasTransition",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#MarkovGame"
+      ],
+      "examples/matching-market.ttl": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/normal-form-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/petri-net-execution-game.ttl": [
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#PetriNetGame",
+        "https://w3id.org/uogto/extensions#hasPlace",
+        "https://w3id.org/uogto/extensions#hasTransitionNode"
+      ],
+      "examples/prisoners-dilemma.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/privacy-budget-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/security-stackelberg-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#SecurityGame",
+        "https://w3id.org/uogto/extensions#hasAttacker",
+        "https://w3id.org/uogto/extensions#hasDefender",
+        "https://w3id.org/uogto/extensions#hasTarget"
+      ],
+      "examples/signalling-game.ttl": [
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasInformationSet",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#EpistemicGame"
+      ],
+      "examples/stag-hunt.ttl": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ],
+      "examples/stochastic-markov-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#hasTransition",
+        "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/extensions#MarkovGame"
+      ],
+      "examples/voting-social-choice-game.jsonld": [
+        "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#identifier"
+      ]
+    },
+    "examples_without_shape_links": [],
+    "module_count": 9,
+    "module_shape_coverage": 1.0,
+    "module_shape_links": {
+      "core/uogto-core": [
+        "examples/contract-principal-agent-game.ttl",
+        "examples/cooperative-coalition-game.ttl",
+        "examples/digital-twin-security-game.ttl",
+        "examples/extensive-form-game.ttl",
+        "examples/first-price-auction.jsonld",
+        "examples/llm-tool-use-game.jsonld",
+        "examples/marl-gridworld-game.jsonld",
+        "examples/matching-market.ttl",
+        "examples/normal-form-game.jsonld",
+        "examples/petri-net-execution-game.ttl",
+        "examples/prisoners-dilemma.jsonld",
+        "examples/privacy-budget-game.jsonld",
+        "examples/security-stackelberg-game.jsonld",
+        "examples/signalling-game.ttl",
+        "examples/stag-hunt.ttl",
+        "examples/stochastic-markov-game.jsonld",
+        "examples/voting-social-choice-game.jsonld"
+      ],
+      "extensions/contract-theory": [
+        "examples/contract-principal-agent-game.ttl"
+      ],
+      "extensions/digital-twin-games": [
+        "examples/digital-twin-security-game.ttl"
+      ],
+      "extensions/epistemic-games": [
+        "examples/signalling-game.ttl"
+      ],
+      "extensions/llm-agent-games": [
+        "examples/llm-tool-use-game.jsonld"
+      ],
+      "extensions/marl": [
+        "examples/marl-gridworld-game.jsonld",
+        "examples/stochastic-markov-game.jsonld"
+      ],
+      "extensions/mechanism-design": [
+        "examples/first-price-auction.jsonld"
+      ],
+      "extensions/petri-net-devs-hla": [
+        "examples/petri-net-execution-game.ttl"
+      ],
+      "extensions/security-games": [
+        "examples/security-stackelberg-game.jsonld"
+      ]
+    },
+    "modules_with_shape_links": 9,
+    "modules_without_shape_links": []
   }
 }

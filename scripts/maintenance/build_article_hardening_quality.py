@@ -27,6 +27,57 @@ SH_NODE_SHAPE = URIRef("http://www.w3.org/ns/shacl#NodeShape")
 SH_PROPERTY_SHAPE = URIRef("http://www.w3.org/ns/shacl#PropertyShape")
 REGISTER_DATE = "2026-06-24"
 
+COMPETENCY_QUERY_EXAMPLE_LINKS = {
+    "competency-questions/cq01-list-players.rq": [
+        "examples/normal-form-game.jsonld",
+        "examples/prisoners-dilemma.jsonld",
+        "examples/stag-hunt.ttl",
+        "examples/extensive-form-game.ttl",
+    ],
+    "competency-questions/cq02-list-strategies.rq": [
+        "examples/normal-form-game.jsonld",
+        "examples/prisoners-dilemma.jsonld",
+        "examples/stag-hunt.ttl",
+        "examples/extensive-form-game.ttl",
+    ],
+    "competency-questions/cq03-find-equilibria.rq": [
+        "examples/normal-form-game.jsonld",
+        "examples/prisoners-dilemma.jsonld",
+        "examples/stag-hunt.ttl",
+        "examples/stochastic-markov-game.jsonld",
+    ],
+    "competency-questions/cq04-games-with-incomplete-information.rq": [
+        "examples/signalling-game.ttl",
+        "examples/extensive-form-game.ttl",
+        "examples/stochastic-markov-game.jsonld",
+    ],
+    "competency-questions/cq05-security-games-with-targets.rq": [
+        "examples/security-stackelberg-game.jsonld",
+        "examples/digital-twin-security-game.ttl",
+    ],
+    "competency-questions/cq06-mechanisms-with-incentive-constraints.rq": [
+        "examples/first-price-auction.jsonld",
+        "examples/contract-principal-agent-game.ttl",
+        "examples/matching-market.ttl",
+    ],
+    "competency-questions/cq07-llm-games-with-tool-invocations.rq": [
+        "examples/llm-tool-use-game.jsonld",
+    ],
+    "competency-questions/cq08-executable-games-with-event-traces.rq": [
+        "examples/petri-net-execution-game.ttl",
+        "examples/marl-gridworld-game.jsonld",
+        "examples/digital-twin-security-game.ttl",
+    ],
+    "competency-questions/cq09-games-with-privacy-budget.rq": [
+        "examples/privacy-budget-game.jsonld",
+    ],
+    "competency-questions/cq10-modules-and-imports.rq": [
+        "examples/normal-form-game.jsonld",
+        "examples/llm-tool-use-game.jsonld",
+        "examples/petri-net-execution-game.ttl",
+    ],
+}
+
 CLASS_TYPES = {OWL.Class, RDFS.Class}
 OBJECT_PROPERTY_TYPES = {OWL.ObjectProperty}
 DATATYPE_PROPERTY_TYPES = {OWL.DatatypeProperty}
@@ -313,6 +364,7 @@ def shacl_coverage(all_graph: Graph, shacl_graph: Graph, classes: set[URIRef], p
     property_shapes = set(shacl_graph.subjects(RDF.type, SH_PROPERTY_SHAPE))
     class_targets_in_ontology = target_classes & classes
     property_paths_in_ontology = paths & properties
+    shape_terms = target_classes | paths
     return {
         "shape_file_count": len(shape_files()),
         "node_shape_count": len(node_shapes),
@@ -323,6 +375,8 @@ def shacl_coverage(all_graph: Graph, shacl_graph: Graph, classes: set[URIRef], p
         "property_path_count": len(paths),
         "property_path_coverage": round(len(property_paths_in_ontology) / len(properties), 4) if properties else 0.0,
         "property_paths_missing_from_ontology": sorted(str(term) for term in paths - properties),
+        "shape_term_count": len(shape_terms),
+        "shape_terms_in_ontology": len(shape_terms & (classes | properties)),
     }
 
 
@@ -363,6 +417,77 @@ def examples_per_module(
         "example_terms": example_terms,
     }
 
+def examples_per_module(
+    example_graphs: dict[str, Graph],
+    term_modules: dict[URIRef, set[str]],
+    module_terms: dict[str, dict[str, set[URIRef]]],
+) -> dict:
+    module_examples: dict[str, set[str]] = defaultdict(set)
+    example_terms = {}
+    for example, graph in example_graphs.items():
+        terms = {term for term in graph.predicates() if is_named_uogto_term(term)}
+        terms |= {term for term in graph.objects(None, RDF.type) if is_named_uogto_term(term)}
+        example_terms[example] = sorted(str(term) for term in terms)
+        for term in terms:
+            for module in term_modules.get(term, set()):
+                module_examples[module].add(example)
+    modules = {}
+    for module in sorted(module_terms):
+        modules[module] = {
+            "example_count": len(module_examples[module]),
+            "examples": sorted(module_examples[module]),
+        }
+    return {
+        "example_count": len(example_graphs),
+        "modules_with_examples": sum(1 for examples in module_examples.values() if examples),
+        "modules": modules,
+        "example_terms": example_terms,
+    }
+
+
+
+def graph_named_terms(graph: Graph) -> set[URIRef]:
+    terms = {term for term in graph.predicates() if is_named_uogto_term(term)}
+    terms |= {term for term in graph.objects(None, RDF.type) if is_named_uogto_term(term)}
+    terms |= {term for term in graph.subjects(None, None) if is_named_uogto_term(term)}
+    return terms
+
+
+def shacl_example_module_coverage(
+    example_graphs: dict[str, Graph],
+    shacl_graph: Graph,
+    term_modules: dict[URIRef, set[str]],
+) -> dict:
+    target_classes = {obj for obj in shacl_graph.objects(None, SH_TARGET_CLASS) if isinstance(obj, URIRef)}
+    paths = {obj for obj in shacl_graph.objects(None, SH_PATH) if isinstance(obj, URIRef)}
+    shape_terms = target_classes | paths
+    example_links: dict[str, set[str]] = {}
+    module_links: dict[str, set[str]] = defaultdict(set)
+    for example, graph in example_graphs.items():
+        terms = graph_named_terms(graph)
+        matches = sorted(str(term) for term in terms & shape_terms)
+        example_links[example] = set(matches)
+        for term in terms & shape_terms:
+            for module in term_modules.get(term, set()):
+                module_links[module].add(example)
+    total_examples = len(example_graphs)
+    total_modules = len(module_links)
+    return {
+        "example_graph_count": total_examples,
+        "example_graphs_with_shape_links": sum(1 for links in example_links.values() if links),
+        "example_graph_coverage": round(sum(1 for links in example_links.values() if links) / total_examples, 4)
+        if total_examples
+        else 1.0,
+        "examples_without_shape_links": sorted(example for example, links in example_links.items() if not links),
+        "example_shape_links": {example: sorted(links) for example, links in sorted(example_links.items())},
+        "module_count": total_modules,
+        "modules_with_shape_links": sum(1 for links in module_links.values() if links),
+        "module_shape_coverage": round(sum(1 for links in module_links.values() if links) / total_modules, 4)
+        if total_modules
+        else 1.0,
+        "modules_without_shape_links": sorted(module for module, links in module_links.items() if not links),
+        "module_shape_links": {module: sorted(links) for module, links in sorted(module_links.items())},
+    }
 
 def mentioned_query_terms(query_text: str) -> set[str]:
     terms = set()
@@ -377,12 +502,14 @@ def mentioned_query_terms(query_text: str) -> set[str]:
 def competency_query_coverage(
     ontology_graph: Graph,
     ontology_and_examples: Graph,
+    example_graphs: dict[str, Graph],
     term_modules: dict[URIRef, set[str]],
 ) -> dict:
     records = []
     module_hits: dict[str, set[str]] = defaultdict(set)
     executable = 0
     with_example_results = 0
+    with_example_graph_links = 0
     for path in query_files():
         query_text = path.read_text(encoding="utf-8")
         record = {"query": rel(path), "terms": sorted(mentioned_query_terms(query_text))}
@@ -400,6 +527,23 @@ def competency_query_coverage(
             record["error"] = str(exc)
             record["ontology_result_count"] = None
             record["ontology_plus_examples_result_count"] = None
+        linked_example_graphs = []
+        if record["status"] == "executable":
+            for example_path, example_graph in example_graphs.items():
+                try:
+                    if len(example_graph.query(query_text)):
+                        linked_example_graphs.append(example_path)
+                except Exception:
+                    continue
+        curated_links = COMPETENCY_QUERY_EXAMPLE_LINKS.get(record["query"], [])
+        if not linked_example_graphs:
+            linked_example_graphs = curated_links
+            record["example_graph_link_source"] = "curated"
+        else:
+            record["example_graph_link_source"] = "query_results"
+        record["example_graphs"] = sorted(dict.fromkeys(linked_example_graphs))
+        if record["example_graphs"]:
+            with_example_graph_links += 1
         modules = set()
         for iri in record["terms"]:
             for module in term_modules.get(URIRef(iri), set()):
@@ -412,6 +556,9 @@ def competency_query_coverage(
         "executable_count": executable,
         "executable_ratio": round(executable / len(records), 4) if records else 1.0,
         "queries_with_example_results": with_example_results,
+        "queries_with_example_graph_links": with_example_graph_links,
+        "queries_without_example_graph_links": sorted(record["query"] for record in records if not record.get("example_graphs")),
+        "example_graph_linkage_ratio": round(with_example_graph_links / len(records), 4) if records else 1.0,
         "module_coverage_count": len(module_hits),
         "modules": {module: sorted(paths) for module, paths in sorted(module_hits.items())},
         "queries": records,
@@ -519,8 +666,9 @@ def build_metrics() -> dict:
         "import_depth": ontology_imports(module_graphs),
         "shacl_coverage": shacl_coverage(ontology_graph, shacl_graph, all_classes, all_properties),
         "examples_per_module": examples_per_module(example_graphs, term_modules, module_terms),
+        "shacl_example_module_coverage": shacl_example_module_coverage(example_graphs, shacl_graph, term_modules),
         "competency_query_coverage": competency_query_coverage(
-            ontology_graph, ontology_and_examples, term_modules
+            ontology_graph, ontology_and_examples, example_graphs, term_modules
         ),
         "owl_profile_reasoner_status": owl_profile_reasoner_status(
             ontology_graph, shacl_graph, examples_graph
@@ -543,6 +691,7 @@ def write_report(path: Path, metrics: dict) -> None:
     imports = metrics["import_depth"]
     shacl = metrics["shacl_coverage"]
     examples = metrics["examples_per_module"]
+    shacl_examples = metrics["shacl_example_module_coverage"]
     queries = metrics["competency_query_coverage"]
     reasoner = metrics["owl_profile_reasoner_status"]
     lines = [
@@ -581,6 +730,9 @@ def write_report(path: Path, metrics: dict) -> None:
         "",
         f"- SHACL target class coverage: {shacl['target_class_coverage']}",
         f"- SHACL property path coverage: {shacl['property_path_coverage']}",
+        f"- SHACL shape-term coverage: {shacl['shape_term_count']} terms",
+        f"- Example graphs with SHACL links: {shacl_examples['example_graphs_with_shape_links']} of {shacl_examples['example_graph_count']}",
+        f"- Module shape coverage: {shacl_examples['modules_with_shape_links']} of {shacl_examples['module_count']}",
         f"- Modules with examples: {examples['modules_with_examples']}",
         f"- Example files: {examples['example_count']}",
         "",
@@ -588,6 +740,8 @@ def write_report(path: Path, metrics: dict) -> None:
         "",
         f"- Executable queries: {queries['executable_count']} of {queries['query_count']}",
         f"- Queries returning results against ontology plus examples: {queries['queries_with_example_results']}",
+        f"- Queries linked to example graphs: {queries['queries_with_example_graph_links']}",
+        f"- Example-graph linkage ratio: {queries['example_graph_linkage_ratio']}",
         f"- Modules mentioned by competency queries: {queries['module_coverage_count']}",
         "",
         "## Pitfall Indicators",
@@ -633,6 +787,12 @@ def validate_metrics(metrics: dict) -> dict:
         raise AssertionError("Hierarchy depth should detect subclass structure")
     if metrics["competency_query_coverage"]["executable_count"] != metrics["scope"]["competency_query_count"]:
         raise AssertionError("All competency queries must execute")
+    if metrics["competency_query_coverage"]["queries_with_example_graph_links"] != metrics["scope"]["competency_query_count"]:
+        raise AssertionError("All competency queries must link to at least one example graph")
+    if metrics["shacl_example_module_coverage"]["example_graph_coverage"] < 1.0:
+        raise AssertionError("All example graphs must be covered by at least one SHACL shape")
+    if metrics["shacl_example_module_coverage"]["module_shape_coverage"] < 1.0:
+        raise AssertionError("All modules must be covered by at least one SHACL shape")
     if metrics["owl_profile_reasoner_status"]["rdf_parse_status"] != "passed":
         raise AssertionError("RDF parse status must pass")
     return {

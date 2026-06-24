@@ -1,0 +1,20 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@id": "http://example.org/privacy-budget-game",
+  "@type": "GameSpecification",
+  "identifier": "privacy-budget",
+  "name": "Privacy Budget Game",
+  "hasPlayer": [
+    {
+      "@id": "http://example.org/players/privacy-agent-1",
+      "@type": "Player",
+      "identifier": "privacy-agent-1",
+      "hasPrivacyBudget": {
+        "@id": "http://example.org/privacy/budget-1",
+        "@type": "PrivacyBudget",
+        "identifier": "budget-1",
+        "epsilonValue": 1.0
+      }
+    }
+  ]
+}
