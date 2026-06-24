@@ -5,6 +5,11 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 9
+- Added `scripts/maintenance/check_ontology_comparison_artifacts.py` as the final artifact-contract gate for source inventory, provenance, term inventory, mapping candidates, reviewed mappings, accepted alignments, overlap metrics, network metrics, report links, and SVG figures.
+- Added `make ontology-comparison-check`, `make ontology-comparison-all`, matching Pixi tasks, and focused integration tests for generated artifact completeness, build wiring, and README report linkage.
+- Linked the comparison report from `README.md`, marked the plan and metadata complete, and archived the track after `make validate` and `make test` passed locally.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 8
 - Added `scripts/maintenance/visualise_ontology_comparison.py` to generate dependency-free static SVG figures and a reproducible Markdown report from the inventory, reviewed mappings, overlap metrics, and network analysis artifacts.
 - Generated seven figures under `docs/ontology-comparison/figures/`: source-size bars, match-class bars, source/module heatmap, UOGTO coverage treemap, source-similarity network, mapping-flow Sankey-style diagram, and reviewer workload bars.

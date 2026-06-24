@@ -125,16 +125,16 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Report clearly separates evidence-backed mappings from candidate/future work.
 
 ## Phase 9: CI, Release, and Conductor Integration
-- [ ] Task: Add validation and tests.
-    - [ ] Add Make/Pixi tasks for source inventory validation, term extraction, mapping generation, overlap analysis, network analysis, visualisation generation, and report checks.
-    - [ ] Add pytest coverage for inventory schema, extraction, mapping scoring, alignment TTL generation, overlap metrics, network metrics, and report existence.
-    - [ ] Ensure `make validate` and `make test` pass.
-- [ ] Task: Update documentation and Conductor state.
-    - [ ] Link the comparison report from registry/release docs if useful.
-    - [ ] Update `.conductor/status.md`, `.conductor/runlog.md`, and this plan as each phase completes.
-    - [ ] Archive the track only after reviewed alignments, analyses, visualisations, and validation gates pass.
+- [x] Task: Add validation and tests.
+    - [x] Add Make/Pixi tasks for source inventory validation, term extraction, mapping generation, overlap analysis, network analysis, visualisation generation, and report checks.
+    - [x] Add pytest coverage for inventory schema, extraction, mapping scoring, alignment TTL generation, overlap metrics, network metrics, and report existence.
+    - [x] Ensure `make validate` and `make test` pass.
+- [x] Task: Update documentation and Conductor state.
+    - [x] Link the comparison report from registry/release docs if useful.
+    - [x] Update `.conductor/status.md`, `.conductor/runlog.md`, and this plan as each phase completes.
+    - [x] Archive the track only after reviewed alignments, analyses, visualisations, and validation gates pass.
 
 ### Acceptance Criteria
-- [ ] CI/local tests cover all generated artifacts.
-- [ ] Conductor status accurately reports implementation progress and remaining review work.
-- [ ] Completed artifacts are committed and pushed.
+- [x] CI/local tests cover all generated artifacts.
+- [x] Conductor status accurately reports implementation progress and remaining review work.
+- [x] Completed artifacts are committed and pushed.

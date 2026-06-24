@@ -32,6 +32,7 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - Citation metadata is provided in [CITATION.cff](CITATION.cff).
 - Zenodo archive metadata is provided in [.zenodo.json](.zenodo.json).
 - Registry preparation materials for LOV and OLS are under [docs/registry/](docs/registry/).
+- Comparative ontology mapping outputs, figures, and report are under [docs/ontology-comparison/](docs/ontology-comparison/), with the main report at [docs/ontology-comparison/report.md](docs/ontology-comparison/report.md).
 
 ## Licensing
 This project is dual-licensed:
