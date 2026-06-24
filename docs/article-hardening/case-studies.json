@@ -1,0 +1,150 @@
+{
+  "version": "1.0",
+  "purpose": "Representative case studies for hardening the UOGTO article and its supporting ontology analysis.",
+  "cases": [
+    {
+      "case_id": "auction-mechanism-design",
+      "title": "Auction and mechanism design",
+      "focus": "Allocation rules, incentive compatibility, auction formats, and mechanism properties.",
+      "why_it_matters": "Stress-tests whether UOGTO captures strategic allocation, payments, and mechanism-level execution semantics rather than only abstract payoff relations.",
+      "analysis_lens": [
+        "ontology coverage",
+        "mapping completeness",
+        "competency-query support",
+        "executable trace linkage"
+      ],
+      "expected_artifacts": [
+        "candidate term mapping",
+        "module gap assessment",
+        "example instance",
+        "competency query"
+      ]
+    },
+    {
+      "case_id": "voting-social-choice",
+      "title": "Voting and social choice",
+      "focus": "Preference aggregation, voting rules, collective choice, and social welfare criteria.",
+      "why_it_matters": "Checks whether UOGTO distinguishes individual strategy from collective decision rules and can represent outcome selection under institutional constraints.",
+      "analysis_lens": [
+        "relation richness",
+        "hierarchy placement",
+        "external alignment only",
+        "disposition triage"
+      ],
+      "expected_artifacts": [
+        "cross-ontology alignment",
+        "review note",
+        "benchmark case",
+        "documentation example"
+      ]
+    },
+    {
+      "case_id": "security-stackelberg",
+      "title": "Security and Stackelberg games",
+      "focus": "Leader-follower commitment, defender-attacker roles, and adversarial strategic timing.",
+      "why_it_matters": "Tests whether UOGTO can model asymmetric information, commitment, and sequential best response without collapsing the domain into generic sequential play.",
+      "analysis_lens": [
+        "role semantics",
+        "timing semantics",
+        "module overlap",
+        "domain review"
+      ],
+      "expected_artifacts": [
+        "module recommendation",
+        "alignment record",
+        "triage disposition",
+        "case-study note"
+      ]
+    },
+    {
+      "case_id": "marl-markov-game",
+      "title": "Multi-agent reinforcement learning and Markov games",
+      "focus": "State transitions, policy learning, joint action spaces, and stochastic dynamics.",
+      "why_it_matters": "Validates that UOGTO can describe learning agents, environment state, and repeated interaction with traceable execution, not just static game forms.",
+      "analysis_lens": [
+        "state transition coverage",
+        "traceability",
+        "import depth",
+        "reasoner profile"
+      ],
+      "expected_artifacts": [
+        "state/action model",
+        "example trace",
+        "benchmark metric",
+        "mapping summary"
+      ]
+    },
+    {
+      "case_id": "abm-policy-simulation",
+      "title": "Agent-based policy simulation",
+      "focus": "Population heterogeneity, adaptive behavior, rule-driven interaction, and policy outcome analysis.",
+      "why_it_matters": "Separates agent-based simulation semantics from game-theoretic commitments while showing where overlap is legitimate and where alignment should remain external only.",
+      "analysis_lens": [
+        "scope separation",
+        "defer vs reject triage",
+        "network analysis",
+        "descriptive analysis"
+      ],
+      "expected_artifacts": [
+        "scope decision",
+        "ontology boundary note",
+        "case comparison",
+        "review commentary"
+      ]
+    },
+    {
+      "case_id": "system-dynamics-feedback",
+      "title": "System-dynamics feedback game",
+      "focus": "Feedback loops, endogenous state evolution, policy levers, and long-run behavior.",
+      "why_it_matters": "Exercises the boundary between game-theoretic interaction and dynamic systems models so the article can justify what belongs in UOGTO and what belongs in adjacent modelling ontologies.",
+      "analysis_lens": [
+        "causal loop coverage",
+        "hierarchy depth",
+        "out-of-scope triage",
+        "external alignment"
+      ],
+      "expected_artifacts": [
+        "boundary rationale",
+        "mapping note",
+        "candidate disposition",
+        "synthesis paragraph"
+      ]
+    },
+    {
+      "case_id": "llm-agent-tool-use",
+      "title": "LLM-agent and tool-use game",
+      "focus": "Agent tool selection, planner-executor feedback, prompt-mediated strategies, and observed action traces.",
+      "why_it_matters": "Captures emerging strategic interaction patterns in agentic systems and distinguishes them from general software workflows or provenance metadata.",
+      "analysis_lens": [
+        "executability",
+        "trace provenance",
+        "domain review",
+        "living evidence register"
+      ],
+      "expected_artifacts": [
+        "executive trace case",
+        "provenance model",
+        "review disposition",
+        "article example"
+      ]
+    },
+    {
+      "case_id": "executable-trace-provenance",
+      "title": "Executable trace and provenance",
+      "focus": "Run logs, decision traces, provenance capture, and reproducible execution evidence.",
+      "why_it_matters": "Provides the bridge from formal ontology modelling to the paper's evidence model by showing how executable artefacts support claims about game state, interaction history, and review decisions.",
+      "analysis_lens": [
+        "provenance linkage",
+        "evidence auditability",
+        "benchmark coverage",
+        "publication readiness"
+      ],
+      "expected_artifacts": [
+        "trace example",
+        "evidence register",
+        "quality benchmark",
+        "documentation cross-reference"
+      ]
+    }
+  ]
+}
