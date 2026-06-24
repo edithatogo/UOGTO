@@ -94,7 +94,22 @@ This track turns the completed comparative ontology baseline into a broader publ
 - [ ] Manual-review sample is balanced across source families and confidence bands.
 - [ ] Accepted claims in the article evidence package are review-backed.
 
-## Phase 7: Article Tables, Figures, and Narrative Evidence
+## Phase 7: UOGTO Inclusion Decisions for Missing Game-Theory Elements
+- [ ] Task: Identify missing or under-modelled game-theory elements.
+    - [ ] Compare UOGTO against parsed and metadata-only game-theory ontology/formalism sources for absent classes, properties, axioms, relation patterns, metadata conventions, and modelling constructs.
+    - [ ] Classify gaps by domain: normal-form games, extensive-form games, cooperative games, Bayesian/epistemic games, stochastic/dynamic games, mechanism design, social choice, open games/compositional games, game description languages, equilibrium/refinement concepts, and computational/game-AI constructs.
+    - [ ] Create `docs/article-hardening/uogto-inclusion-candidates.csv` with source evidence, candidate UOGTO term, gap type, affected module, competency-question impact, interoperability impact, modelling risk, and proposed disposition.
+- [ ] Task: Decide whether each candidate should be included in UOGTO.
+    - [ ] Define decision categories: `add_to_uogto`, `align_external_only`, `defer_pending_evidence`, `reject_as_duplicate`, `reject_out_of_scope`, and `requires_domain_review`.
+    - [ ] Create `docs/article-hardening/uogto-inclusion-decisions.md` summarising accepted additions, deferred candidates, rejected candidates, rationale, and required ontology module changes.
+    - [ ] For `add_to_uogto` candidates, specify required class/property names, labels, SKOS definitions, SHACL/example/test impacts, and migration or backwards-compatibility risks before implementation.
+
+### Acceptance Criteria
+- [ ] Every material missing game-theory element has a recorded evidence source and decision rationale.
+- [ ] Inclusion recommendations distinguish ontology expansion from external alignment-only mappings.
+- [ ] No UOGTO expansion is proposed without a competency-question, interoperability, article-claim, or conceptual-clarity justification.
+
+## Phase 8: Article Tables, Figures, and Narrative Evidence
 - [ ] Task: Generate article-ready tables.
     - [ ] Produce source-family table, eligibility table, quality-metrics table, use-case coverage table, mapping-overlap table, and limitations/threats-to-validity table.
     - [ ] Store generated tables under `docs/article-hardening/article-tables/`.
@@ -110,7 +125,7 @@ This track turns the completed comparative ontology baseline into a broader publ
 - [ ] Narrative inserts cite artifact paths and avoid overclaiming metadata-only sources.
 - [ ] Figures render in GitHub and are suitable for manuscript adaptation.
 
-## Phase 8: Validation, Documentation, and Conductor Integration
+## Phase 9: Validation, Documentation, and Conductor Integration
 - [ ] Task: Add validation tasks and tests.
     - [ ] Add Make/Pixi targets for protocol validation, extended inventory checks, source acquisition checks, RO-Crate validation, quality metrics, competency benchmarks, mapping robustness, and article artifact generation.
     - [ ] Add pytest coverage for schemas, deterministic generation, and required report sections.

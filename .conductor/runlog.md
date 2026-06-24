@@ -1,5 +1,9 @@
 # Conductor Run Log
 
+## [2026-06-24] - Article Hardening Missing-Element Triage Update
+- Updated `uogto_article_hardening_protocol_20260624` so broader ontology comparison explicitly identifies game-theory elements absent from UOGTO and decides whether each should be added to UOGTO, aligned externally, deferred, rejected as duplicate, rejected as out of scope, or sent for domain review.
+- Added required outputs for inclusion candidates and decisions, plus a dedicated phase for evidence-backed UOGTO expansion recommendations with competency-question, interoperability, article-claim, and conceptual-clarity justifications.
+
 ## [2026-06-24] - Article Hardening Protocol Track Creation
 - Created Conductor track `uogto_article_hardening_protocol_20260624` to incorporate post-comparison recommendations into a broader article-hardening and evidence-generation lane.
 - Added a detailed specification covering PRISMA-ScR/PRISMA-S protocol structure, RO-Crate 1.1 packaging, broader ontology/formalism discovery, ontology-quality metrics, reasoner/SHACL evaluation, competency-question benchmarking, mapping robustness, manual review sampling, and article-ready tables/figures.

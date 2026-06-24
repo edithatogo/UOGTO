@@ -20,6 +20,7 @@ The track protocol must be written as a scoping-review protocol aligned with:
 - Extend source inventory and inclusion/exclusion logging only where new candidates pass the protocol rules.
 - Evaluate UOGTO and comparator artifacts using ontology-quality metrics, reasoning checks, SHACL validation, annotation completeness, relation richness, module coverage, mapping confidence, and reproducibility checks.
 - Benchmark UOGTO against competency questions and use-case coverage matrices relevant to game theory, simulation, agent-based modelling, system dynamics, mechanism design, multi-agent reinforcement learning, and executable knowledge graphs.
+- Identify game-theory ontology elements, relation patterns, axioms, modelling constructs, or metadata conventions that are absent from UOGTO; evaluate whether each should be added, aligned externally, deferred, or rejected using evidence-backed inclusion criteria.
 - Produce article-ready figures and tables that distinguish evidence-backed results from metadata-only sources, speculative mappings, and future-work candidates.
 - Package all reproducible outputs in an RO-Crate manifest with provenance links back to the exact scripts and source artifacts.
 
@@ -38,6 +39,7 @@ The implementation must start broad and include at least these families in the p
 
 ## Out of Scope
 - Expanding UOGTO semantics solely because an external term exists.
+- Adding missing game-theory elements without evidence that they improve UOGTO competency-question coverage, interoperability, conceptual clarity, or article claims.
 - Claiming coverage from lexical similarity without review evidence.
 - Republishing non-redistributable third-party artifacts.
 - Treating XML, JSON, PDF, or narrative standards as OWL ontologies unless a documented transformation or structured extraction method is created.
@@ -55,6 +57,8 @@ The implementation must start broad and include at least these families in the p
 - `docs/article-hardening/competency-benchmark.md`
 - `docs/article-hardening/use-case-coverage-matrix.csv`
 - `docs/article-hardening/manual-review-sample.csv`
+- `docs/article-hardening/uogto-inclusion-candidates.csv`
+- `docs/article-hardening/uogto-inclusion-decisions.md`
 - `docs/article-hardening/article-tables/`
 - `docs/article-hardening/figures/`
 - `docs/article-hardening/ro-crate-metadata.json`
@@ -65,5 +69,6 @@ The implementation must start broad and include at least these families in the p
 - The protocol cites or links the relevant protocol standards and records where the track intentionally adapts them for ontology engineering rather than clinical evidence synthesis.
 - New ontology/formalism candidates are recorded with discovery route, source type, licence disposition, inclusion status, and relevance rationale.
 - Quality, reasoning, SHACL, mapping, and competency-question checks are reproducible from repository scripts.
+- Missing game-theory elements are triaged into add-to-UOGTO, external-alignment-only, defer, reject, and out-of-scope decisions with rationale, evidence source, competency-question impact, and required ontology-module target.
 - Article-ready evidence separates parsed RDF/OWL sources, structured non-RDF standards, metadata-only sources, and excluded sources.
 - `make validate` or `make test` passes before the track is treated as ready for implementation review.
