@@ -45,6 +45,8 @@
 | RO-Crate 1.1 | Provenance | Preserve provenance through search, inventory, review, and research logs. | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | complete |
 | RO-Crate 1.1 | Workflows and scripts | Link validation and review workflows and the package-building scripts. | `docs/article-hardening/ro-crate-package.md`; `scripts/maintenance/check_article_hardening_protocol.py` | complete |
 | RO-Crate 1.1 | Tabular analysis artifacts | Store review and analysis tables in CSV, Markdown, JSON, and Parquet forms where appropriate. | `docs/article-hardening/tabular-artifact-storage.md`; `scripts/maintenance/export_tabular_artifacts.py` | complete |
+| RO-Crate 1.1 | Article evidence dashboard | Generate a dashboard that exposes only validated tables and figures and separates evidence levels. | `docs/article-hardening/article-evidence-dashboard.md`; `docs/article-hardening/article-evidence-dashboard.html`; `docs/article-hardening/article-evidence-dashboard.json`; `scripts/maintenance/build_article_evidence_dashboard.py` | complete |
+| RO-Crate 1.1 | Article evidence dashboard | Generate a dashboard that exposes only validated tables and figures and separates evidence levels. | `docs/article-hardening/article-evidence-dashboard.md`; `docs/article-hardening/article-evidence-dashboard.html`; `docs/article-hardening/article-evidence-dashboard.json`; `scripts/maintenance/build_article_evidence_dashboard.py` | complete |
 
 ## Supporting Standards
 

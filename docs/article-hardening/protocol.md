@@ -112,6 +112,24 @@ The current table families are:
 
 The generated outputs are maintained by `scripts/maintenance/export_tabular_artifacts.py`.
 
+## Article Evidence Dashboard
+The article evidence dashboard is generated from validated tables and figures only.
+
+- `docs/article-hardening/article-evidence-dashboard.md`
+- `docs/article-hardening/article-evidence-dashboard.html`
+- `docs/article-hardening/article-evidence-dashboard.json`
+
+It separates source evidence into parsed RDF, structured non-RDF, metadata-only, literature-only, and excluded categories so that the article can report evidence strength without mixing source types.
+
+## Article Evidence Dashboard
+The article evidence dashboard is generated from validated tables and figures only.
+
+- `docs/article-hardening/article-evidence-dashboard.md`
+- `docs/article-hardening/article-evidence-dashboard.html`
+- `docs/article-hardening/article-evidence-dashboard.json`
+
+It separates source evidence into parsed RDF, structured non-RDF, metadata-only, literature-only, and excluded categories so that the article can report evidence strength without mixing source types.
+
 ## Synthesis Plan
 The synthesis must separate:
 
