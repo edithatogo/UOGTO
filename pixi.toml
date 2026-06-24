@@ -31,6 +31,7 @@ ontology-comparison-harvest = "python scripts/maintenance/harvest_comparison_sou
 ontology-comparison-terms = "python scripts/maintenance/extract_comparison_terms.py"
 ontology-comparison-mappings = "python scripts/maintenance/generate_ontology_mapping_candidates.py"
 ontology-comparison-alignments = "python scripts/maintenance/build_comparison_alignments.py"
+ontology-comparison-overlap = "python scripts/maintenance/analyse_ontology_overlap.py"
 zenodo-packet = "python scripts/maintenance/build_zenodo_handoff.py"
 zenodo-depositions = "python scripts/maintenance/check_zenodo_depositions.py"
 w3id-packet = "python scripts/maintenance/build_w3id_redirect_handoff.py"

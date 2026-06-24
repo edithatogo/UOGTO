@@ -81,18 +81,19 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Alignment TTL parses and uses stable UOGTO IRIs.
 
 ## Phase 6: Overlap and Descriptive Analysis
-- [ ] Task: Compute overlap metrics.
-    - [ ] Add `scripts/maintenance/analyse_ontology_overlap.py`.
-    - [ ] Compute source-by-UOGTO overlap counts, precision-review summaries, term-type coverage, domain-module coverage, unmatched-source concepts, UOGTO-unique concepts, and source-cluster overlap.
-    - [ ] Emit `docs/ontology-comparison/overlap-metrics.json`.
-- [ ] Task: Produce descriptive summaries.
-    - [ ] Summarise source size, term-type distributions, annotation completeness, hierarchy depth, property density, import count, licence coverage, and parse status.
-    - [ ] Identify candidate UOGTO enhancement areas and areas where UOGTO already has stronger coverage.
+- [x] Task: Compute overlap metrics.
+    - [x] Add `scripts/maintenance/analyse_ontology_overlap.py`.
+    - [x] Compute source-by-UOGTO overlap counts, precision-review summaries, term-type coverage, domain-module coverage, unmatched-source concepts, UOGTO-unique concepts, and source-cluster overlap.
+    - [x] Emit `docs/ontology-comparison/overlap-metrics.json`.
+- [x] Task: Produce descriptive summaries.
+    - [x] Summarise source size, term-type distributions, annotation completeness, hierarchy depth, property density, import count, licence coverage, and parse status.
+    - [x] Identify candidate UOGTO enhancement areas and areas where UOGTO already has stronger coverage.
+    - [x] Wire `make ontology-comparison-overlap`, Pixi support, generated overlap metrics, and pytest coverage.
 
 ### Acceptance Criteria
-- [ ] Metrics separate source coverage, UOGTO coverage, and bidirectional overlap.
-- [ ] Outputs identify high-overlap, low-overlap, and no-match areas.
-- [ ] Tests cover metric calculations on fixtures.
+- [x] Metrics separate source coverage, UOGTO coverage, and bidirectional overlap.
+- [x] Outputs identify high-overlap, low-overlap, and no-match areas.
+- [x] Tests cover metric calculations on fixtures.
 
 ## Phase 7: Network Analysis
 - [ ] Task: Build ontology and term networks.

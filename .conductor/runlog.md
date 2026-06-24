@@ -5,6 +5,11 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 6
+- Added `scripts/maintenance/analyse_ontology_overlap.py` to compute source-by-UOGTO overlap counts, source/UOGTO coverage, review precision, term-type coverage, domain-module coverage, source-cluster overlap, unmatched source concepts, and UOGTO-unique concepts.
+- Generated `docs/ontology-comparison/overlap-metrics.json` with descriptive summaries for source sizes, term-type distributions, annotation completeness, hierarchy parent counts, property density, import counts, licence coverage, parse status, candidate enhancement areas, and UOGTO stronger-coverage areas.
+- Wired `make ontology-comparison-overlap` and Pixi task support, and added focused pytest coverage for precision summaries, descriptive metrics, coverage separation, generated repo metrics, and JSON validation.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 5
 - Added `scripts/maintenance/build_comparison_alignments.py` to generate a review-ready mapping CSV and accepted alignment TTL from `mapping-candidates.jsonl`.
 - Generated `docs/ontology-comparison/mapping-review.csv` with 460 rows, review statuses, decision predicates, reviewer/rationale fields, review flags, and serialized evidence for auditability.

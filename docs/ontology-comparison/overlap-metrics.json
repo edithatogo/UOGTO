@@ -1,0 +1,5453 @@
+{
+  "bidirectional_overlap": {
+    "source_by_uogto": [
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_alignments_prov-o"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_core_actions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_core_agents"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_core_information"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_core_strategies"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 43,
+        "needs_domain_review": 0,
+        "rejected": 43,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_core_uogto-core"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_auctions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_bargaining"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_causal-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_compositional-open-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_computational-social-choice"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_congestion-routing-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_contract-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_cooperative"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_differential-hybrid-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_evolutionary-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_game-description-languages"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_information-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_institutional-economics"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_kg-execution-bindings"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_llm-agent-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_marl"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 7,
+        "needs_domain_review": 0,
+        "rejected": 7,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_matching-allocation"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_mean-field-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_mechanism-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_network-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_petri-net-devs-hla"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 4,
+        "needs_domain_review": 0,
+        "rejected": 4,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_security-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "owl_time",
+        "uogto_source_id": "uogto_extensions_verification-games"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_alignments_mcp-a2a"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 28,
+        "needs_domain_review": 1,
+        "rejected": 27,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_alignments_prov-o"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 0,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_alignments_wot-thing-description"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_core_actions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_core_agents"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 36,
+        "needs_domain_review": 0,
+        "rejected": 35,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_core_uogto-core"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_algorithmic-game-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_auctions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_computational-social-choice"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_contract-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_cooperative"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_differential-hybrid-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_institutional-economics"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 4,
+        "needs_domain_review": 0,
+        "rejected": 4,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_llm-agent-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_marl"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_matching-allocation"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_mean-field-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_mechanism-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_network-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_security-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "prov_o",
+        "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 11,
+        "needs_domain_review": 0,
+        "rejected": 10,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_alignments_schema-org"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 13,
+        "needs_domain_review": 0,
+        "rejected": 13,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_core_actions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_core_rules"
+      },
+      {
+        "accepted": 4,
+        "candidate_count": 36,
+        "needs_domain_review": 0,
+        "rejected": 32,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_core_uogto-core"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_algorithmic-game-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_auctions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 9,
+        "needs_domain_review": 0,
+        "rejected": 9,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_contract-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_cooperative"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_deontic-logic"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_digital-twin-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_epistemic-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_information-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 11,
+        "needs_domain_review": 0,
+        "rejected": 11,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_marl"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_matching-allocation"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_mechanism-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_network-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_petri-net-devs-hla"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_privacy-disclosure"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 6,
+        "needs_domain_review": 0,
+        "rejected": 6,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 0,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_alignments_mcp-a2a"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_alignments_prov-o"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_alignments_schema-org"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_core_agents"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_core_strategies"
+      },
+      {
+        "accepted": 1,
+        "candidate_count": 34,
+        "needs_domain_review": 0,
+        "rejected": 33,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_core_uogto-core"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_auctions"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_bargaining"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_behavioural-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_causal-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_compositional-open-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 4,
+        "needs_domain_review": 0,
+        "rejected": 4,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_computational-social-choice"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_contract-theory"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_cooperative"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_deontic-logic"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_differential-hybrid-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_digital-twin-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_evolutionary-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 4,
+        "needs_domain_review": 0,
+        "rejected": 4,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_information-design"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 5,
+        "needs_domain_review": 0,
+        "rejected": 5,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_institutional-economics"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 4,
+        "needs_domain_review": 0,
+        "rejected": 4,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_llm-agent-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_marl"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_matching-allocation"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_mean-field-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_network-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_petri-net-devs-hla"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 1,
+        "needs_domain_review": 0,
+        "rejected": 1,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_privacy-disclosure"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_security-games"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 2,
+        "needs_domain_review": 0,
+        "rejected": 2,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 13,
+        "needs_domain_review": 0,
+        "rejected": 13,
+        "source_id": "ssn_sosa",
+        "uogto_source_id": "uogto_extensions_verification-games"
+      }
+    ],
+    "source_review_summaries": {
+      "owl_time": {
+        "accepted": 0,
+        "accepted_candidate_rate": 0.0,
+        "candidate_count": 120,
+        "deferred": 0,
+        "needs_domain_review": 0,
+        "rejected": 120,
+        "review_precision": 0.0
+      },
+      "prov_o": {
+        "accepted": 3,
+        "accepted_candidate_rate": 0.0259,
+        "candidate_count": 116,
+        "deferred": 0,
+        "needs_domain_review": 1,
+        "rejected": 112,
+        "review_precision": 0.0261
+      },
+      "schema_org": {
+        "accepted": 5,
+        "accepted_candidate_rate": 0.0417,
+        "candidate_count": 120,
+        "deferred": 0,
+        "needs_domain_review": 0,
+        "rejected": 115,
+        "review_precision": 0.0417
+      },
+      "ssn_sosa": {
+        "accepted": 2,
+        "accepted_candidate_rate": 0.0192,
+        "candidate_count": 104,
+        "deferred": 0,
+        "needs_domain_review": 0,
+        "rejected": 102,
+        "review_precision": 0.0192
+      }
+    }
+  },
+  "descriptive_summaries": {
+    "bfo": {
+      "annotation_completeness": 1.0,
+      "family": "upper_ontology",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "bfo",
+      "source_kind": "external_metadata",
+      "source_name": "Basic Formal Ontology",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "devs": {
+      "annotation_completeness": 1.0,
+      "family": "discrete_event_simulation",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "devs",
+      "source_kind": "external_metadata",
+      "source_name": "DEVS formalism and DEVS metamodel resources",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "dolce": {
+      "annotation_completeness": 1.0,
+      "family": "upper_ontology",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "dolce",
+      "source_kind": "external_metadata",
+      "source_name": "DOLCE",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "emmo": {
+      "annotation_completeness": 1.0,
+      "family": "upper_modelling_reference",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "emmo",
+      "source_kind": "external_metadata",
+      "source_name": "European Materials and Modelling Ontology",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "game_ontology_project": {
+      "annotation_completeness": 1.0,
+      "family": "game_studies",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "game_ontology_project",
+      "source_kind": "external_metadata",
+      "source_name": "Game Ontology Project",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "gdlf_gamelan": {
+      "annotation_completeness": 1.0,
+      "family": "game_description_language",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "gdlf_gamelan",
+      "source_kind": "external_metadata",
+      "source_name": "Game Description Language and GDL resources",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "hla_fom": {
+      "annotation_completeness": 1.0,
+      "family": "distributed_simulation",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "hla_fom",
+      "source_kind": "external_metadata",
+      "source_name": "High Level Architecture Federation Object Model resources",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "kaos": {
+      "annotation_completeness": 1.0,
+      "family": "agent_policy",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "kaos",
+      "source_kind": "external_metadata",
+      "source_name": "KAoS ontology and policy services",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "kisao": {
+      "annotation_completeness": 1.0,
+      "family": "simulation_algorithm",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "kisao",
+      "source_kind": "external_metadata",
+      "source_name": "Kinetic Simulation Algorithm Ontology",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "miase": {
+      "annotation_completeness": 1.0,
+      "family": "simulation_experiment",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "miase",
+      "source_kind": "external_metadata",
+      "source_name": "Minimum Information About a Simulation Experiment",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "odd_protocol": {
+      "annotation_completeness": 1.0,
+      "family": "agent_based_modelling",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "odd_protocol",
+      "source_kind": "external_metadata",
+      "source_name": "ODD protocol for agent-based models",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "ontouml_ufo": {
+      "annotation_completeness": 1.0,
+      "family": "upper_ontology",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "ontouml_ufo",
+      "source_kind": "external_metadata",
+      "source_name": "OntoUML / Unified Foundational Ontology",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "osmo": {
+      "annotation_completeness": 1.0,
+      "family": "modelling_simulation_interoperability",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "osmo",
+      "source_kind": "external_metadata",
+      "source_name": "Ontology for Simulation, Modelling, and Optimization",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "owl_time": {
+      "annotation_completeness": 0.732,
+      "family": "time",
+      "hierarchy_parent_term_count": 27,
+      "import_count": 0,
+      "licence_disposition": "redistributable_artifact",
+      "parse_status": "parsed",
+      "property_density": 0.5979,
+      "retrieval_mode": "downloaded",
+      "source_id": "owl_time",
+      "source_kind": "external_rdf",
+      "source_name": "OWL-Time",
+      "term_count": 97,
+      "term_type_distribution": {
+        "class": 20,
+        "datatype_property": 25,
+        "object_property": 33,
+        "ontology_metadata": 1,
+        "resource": 18
+      }
+    },
+    "p_plan": {
+      "annotation_completeness": 1.0,
+      "family": "workflow_plan",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "p_plan",
+      "source_kind": "external_metadata",
+      "source_name": "P-Plan ontology",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "prov_o": {
+      "annotation_completeness": 0.0,
+      "family": "provenance",
+      "hierarchy_parent_term_count": 64,
+      "import_count": 0,
+      "licence_disposition": "redistributable_artifact",
+      "parse_status": "parsed",
+      "property_density": 0.6796,
+      "retrieval_mode": "downloaded",
+      "source_id": "prov_o",
+      "source_kind": "external_rdf",
+      "source_name": "PROV-O",
+      "term_count": 103,
+      "term_type_distribution": {
+        "annotation_property": 20,
+        "class": 31,
+        "datatype_property": 6,
+        "object_property": 44,
+        "ontology_metadata": 2
+      }
+    },
+    "schema_org": {
+      "annotation_completeness": 0.0,
+      "family": "general_web_schema",
+      "hierarchy_parent_term_count": 1140,
+      "import_count": 0,
+      "licence_disposition": "redistributable_artifact",
+      "parse_status": "parsed",
+      "property_density": 0.5207,
+      "retrieval_mode": "downloaded",
+      "source_id": "schema_org",
+      "source_kind": "external_rdf",
+      "source_name": "schema.org",
+      "term_count": 3219,
+      "term_type_distribution": {
+        "class": 1030,
+        "property": 1676,
+        "resource": 513
+      }
+    },
+    "sed_ml": {
+      "annotation_completeness": 1.0,
+      "family": "simulation_experiment",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "sed_ml",
+      "source_kind": "external_metadata",
+      "source_name": "Simulation Experiment Description Markup Language",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "ssn_sosa": {
+      "annotation_completeness": 0.449,
+      "family": "observation_sensor",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": "redistributable_artifact",
+      "parse_status": "parsed",
+      "property_density": 0.551,
+      "retrieval_mode": "downloaded",
+      "source_id": "ssn_sosa",
+      "source_kind": "external_rdf",
+      "source_name": "SSN/SOSA",
+      "term_count": 49,
+      "term_type_distribution": {
+        "annotation_property": 11,
+        "class": 21,
+        "object_property": 15,
+        "ontology_metadata": 1,
+        "property": 1
+      }
+    },
+    "uogto_alignments_mcp-a2a": {
+      "annotation_completeness": 0.0,
+      "family": "alignments",
+      "hierarchy_parent_term_count": 1,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_alignments_mcp-a2a",
+      "source_kind": "uogto",
+      "source_name": "mcp-a2a",
+      "term_count": 2,
+      "term_type_distribution": {
+        "class": 1,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_alignments_open-games": {
+      "annotation_completeness": 0.0,
+      "family": "alignments",
+      "hierarchy_parent_term_count": 1,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_alignments_open-games",
+      "source_kind": "uogto",
+      "source_name": "open-games",
+      "term_count": 2,
+      "term_type_distribution": {
+        "class": 1,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_alignments_prov-o": {
+      "annotation_completeness": 0.0,
+      "family": "alignments",
+      "hierarchy_parent_term_count": 3,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_alignments_prov-o",
+      "source_kind": "uogto",
+      "source_name": "prov-o",
+      "term_count": 4,
+      "term_type_distribution": {
+        "class": 3,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_alignments_schema-org": {
+      "annotation_completeness": 0.0,
+      "family": "alignments",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_alignments_schema-org",
+      "source_kind": "uogto",
+      "source_name": "schema-org",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_alignments_wot-thing-description": {
+      "annotation_completeness": 0.0,
+      "family": "alignments",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_alignments_wot-thing-description",
+      "source_kind": "uogto",
+      "source_name": "wot-thing-description",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_actions": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_actions",
+      "source_kind": "uogto",
+      "source_name": "actions",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_agents": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_agents",
+      "source_kind": "uogto",
+      "source_name": "agents",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_dynamics": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_dynamics",
+      "source_kind": "uogto",
+      "source_name": "dynamics",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_equilibria": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_equilibria",
+      "source_kind": "uogto",
+      "source_name": "equilibria",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_games": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_games",
+      "source_kind": "uogto",
+      "source_name": "games",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_information": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_information",
+      "source_kind": "uogto",
+      "source_name": "information",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_outcomes": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_outcomes",
+      "source_kind": "uogto",
+      "source_name": "outcomes",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_payoffs": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_payoffs",
+      "source_kind": "uogto",
+      "source_name": "payoffs",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_rules": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_rules",
+      "source_kind": "uogto",
+      "source_name": "rules",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_strategies": {
+      "annotation_completeness": 0.6667,
+      "family": "core",
+      "hierarchy_parent_term_count": 2,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_strategies",
+      "source_kind": "uogto",
+      "source_name": "strategies",
+      "term_count": 3,
+      "term_type_distribution": {
+        "class": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_uogto-core": {
+      "annotation_completeness": 1.0,
+      "family": "core",
+      "hierarchy_parent_term_count": 36,
+      "import_count": 0,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.525,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_uogto-core",
+      "source_kind": "uogto",
+      "source_name": "uogto-core",
+      "term_count": 80,
+      "term_type_distribution": {
+        "class": 37,
+        "datatype_property": 11,
+        "object_property": 31,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_algorithmic-game-theory": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "source_kind": "uogto",
+      "source_name": "algorithmic-game-theory",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "datatype_property": 2,
+        "object_property": 3,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_algorithmic-solvers-patch": {
+      "annotation_completeness": 1.0,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 1,
+      "import_count": 0,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.0,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_algorithmic-solvers-patch",
+      "source_kind": "uogto",
+      "source_name": "algorithmic-solvers-patch",
+      "term_count": 1,
+      "term_type_distribution": {
+        "class": 1
+      }
+    },
+    "uogto_extensions_auctions": {
+      "annotation_completeness": 0.9167,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 6,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4167,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_auctions",
+      "source_kind": "uogto",
+      "source_name": "auctions",
+      "term_count": 12,
+      "term_type_distribution": {
+        "class": 6,
+        "datatype_property": 3,
+        "object_property": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_bargaining": {
+      "annotation_completeness": 0.9091,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 5,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4545,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_bargaining",
+      "source_kind": "uogto",
+      "source_name": "bargaining",
+      "term_count": 11,
+      "term_type_distribution": {
+        "class": 5,
+        "datatype_property": 2,
+        "object_property": 3,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_behavioural-games": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_behavioural-games",
+      "source_kind": "uogto",
+      "source_name": "behavioural-games",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "datatype_property": 3,
+        "object_property": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_causal-games": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_causal-games",
+      "source_kind": "uogto",
+      "source_name": "causal-games",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "object_property": 5,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_compositional-open-games": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_compositional-open-games",
+      "source_kind": "uogto",
+      "source_name": "compositional-open-games",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "object_property": 5,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_computational-social-choice": {
+      "annotation_completeness": 0.9333,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 9,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3333,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_computational-social-choice",
+      "source_kind": "uogto",
+      "source_name": "computational-social-choice",
+      "term_count": 15,
+      "term_type_distribution": {
+        "class": 9,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_congestion-routing-games": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "source_kind": "uogto",
+      "source_name": "congestion-routing-games",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_contract-theory": {
+      "annotation_completeness": 0.9375,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 10,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3125,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_contract-theory",
+      "source_kind": "uogto",
+      "source_name": "contract-theory",
+      "term_count": 16,
+      "term_type_distribution": {
+        "class": 10,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_cooperative": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_cooperative",
+      "source_kind": "uogto",
+      "source_name": "cooperative",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_deontic-logic": {
+      "annotation_completeness": 0.9333,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 9,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3333,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_deontic-logic",
+      "source_kind": "uogto",
+      "source_name": "deontic-logic",
+      "term_count": 15,
+      "term_type_distribution": {
+        "class": 9,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_differential-hybrid-games": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "source_kind": "uogto",
+      "source_name": "differential-hybrid-games",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 2,
+        "object_property": 3,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_digital-twin-games": {
+      "annotation_completeness": 0.9333,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 9,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3333,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_digital-twin-games",
+      "source_kind": "uogto",
+      "source_name": "digital-twin-games",
+      "term_count": 15,
+      "term_type_distribution": {
+        "class": 9,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_epistemic-games": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_epistemic-games",
+      "source_kind": "uogto",
+      "source_name": "epistemic-games",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "object_property": 5,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_evolutionary-games": {
+      "annotation_completeness": 0.9167,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 6,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4167,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_evolutionary-games",
+      "source_kind": "uogto",
+      "source_name": "evolutionary-games",
+      "term_count": 12,
+      "term_type_distribution": {
+        "class": 6,
+        "object_property": 5,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_game-description-languages": {
+      "annotation_completeness": 0.9375,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 10,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3125,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_game-description-languages",
+      "source_kind": "uogto",
+      "source_name": "game-description-languages",
+      "term_count": 16,
+      "term_type_distribution": {
+        "class": 10,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_information-design": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_information-design",
+      "source_kind": "uogto",
+      "source_name": "information-design",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_institutional-economics": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_institutional-economics",
+      "source_kind": "uogto",
+      "source_name": "institutional-economics",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_kg-execution-bindings": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_kg-execution-bindings",
+      "source_kind": "uogto",
+      "source_name": "kg-execution-bindings",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_learning-in-games": {
+      "annotation_completeness": 0.9091,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 5,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4545,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_learning-in-games",
+      "source_kind": "uogto",
+      "source_name": "learning-in-games",
+      "term_count": 11,
+      "term_type_distribution": {
+        "class": 5,
+        "datatype_property": 3,
+        "object_property": 2,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_llm-agent-games": {
+      "annotation_completeness": 0.9375,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 10,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3125,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_llm-agent-games",
+      "source_kind": "uogto",
+      "source_name": "llm-agent-games",
+      "term_count": 16,
+      "term_type_distribution": {
+        "class": 10,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_marl": {
+      "annotation_completeness": 0.9412,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 11,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.2941,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_marl",
+      "source_kind": "uogto",
+      "source_name": "marl",
+      "term_count": 17,
+      "term_type_distribution": {
+        "class": 11,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_matching-allocation": {
+      "annotation_completeness": 0.9286,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 8,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3571,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_matching-allocation",
+      "source_kind": "uogto",
+      "source_name": "matching-allocation",
+      "term_count": 14,
+      "term_type_distribution": {
+        "class": 8,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_mean-field-games": {
+      "annotation_completeness": 0.9167,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 6,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4167,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_mean-field-games",
+      "source_kind": "uogto",
+      "source_name": "mean-field-games",
+      "term_count": 12,
+      "term_type_distribution": {
+        "class": 6,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_mechanism-design": {
+      "annotation_completeness": 0.9167,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 6,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4167,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_mechanism-design",
+      "source_kind": "uogto",
+      "source_name": "mechanism-design",
+      "term_count": 12,
+      "term_type_distribution": {
+        "class": 6,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_network-games": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_network-games",
+      "source_kind": "uogto",
+      "source_name": "network-games",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_petri-net-devs-hla": {
+      "annotation_completeness": 0.9375,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 10,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3125,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_petri-net-devs-hla",
+      "source_kind": "uogto",
+      "source_name": "petri-net-devs-hla",
+      "term_count": 16,
+      "term_type_distribution": {
+        "class": 10,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_privacy-disclosure": {
+      "annotation_completeness": 0.9167,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 6,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.4167,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_privacy-disclosure",
+      "source_kind": "uogto",
+      "source_name": "privacy-disclosure",
+      "term_count": 12,
+      "term_type_distribution": {
+        "class": 6,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_security-games": {
+      "annotation_completeness": 0.9333,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 9,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3333,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_security-games",
+      "source_kind": "uogto",
+      "source_name": "security-games",
+      "term_count": 15,
+      "term_type_distribution": {
+        "class": 9,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_trust-reputation-provenance": {
+      "annotation_completeness": 0.9231,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 7,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3846,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_trust-reputation-provenance",
+      "source_kind": "uogto",
+      "source_name": "trust-reputation-provenance",
+      "term_count": 13,
+      "term_type_distribution": {
+        "class": 7,
+        "datatype_property": 1,
+        "object_property": 4,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_extensions_verification-games": {
+      "annotation_completeness": 0.9333,
+      "family": "extensions",
+      "hierarchy_parent_term_count": 9,
+      "import_count": 1,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.3333,
+      "retrieval_mode": null,
+      "source_id": "uogto_extensions_verification-games",
+      "source_kind": "uogto",
+      "source_name": "verification-games",
+      "term_count": 15,
+      "term_type_distribution": {
+        "class": 9,
+        "datatype_property": 2,
+        "object_property": 3,
+        "ontology_metadata": 1
+      }
+    },
+    "vimmp_ontologies": {
+      "annotation_completeness": 1.0,
+      "family": "modelling_simulation_interoperability",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "needs_licence_review",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "vimmp_ontologies",
+      "source_kind": "external_metadata",
+      "source_name": "Virtual Materials Marketplace Ontologies",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    },
+    "xmile": {
+      "annotation_completeness": 1.0,
+      "family": "system_dynamics",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": "metadata_only",
+      "parse_status": "not_attempted",
+      "property_density": 0.0,
+      "retrieval_mode": "metadata_only",
+      "source_id": "xmile",
+      "source_kind": "external_metadata",
+      "source_name": "XMILE System Dynamics Standard",
+      "term_count": 1,
+      "term_type_distribution": {
+        "source_metadata": 1
+      }
+    }
+  },
+  "domain_module_coverage": {
+    "uogto_alignments_mcp-a2a": 2,
+    "uogto_alignments_schema-org": 1,
+    "uogto_alignments_wot-thing-description": 1,
+    "uogto_core_uogto-core": 6
+  },
+  "licence_coverage": {
+    "metadata_only": 8,
+    "needs_licence_review": 9,
+    "redistributable_artifact": 4
+  },
+  "parse_status_coverage": {
+    "not_attempted": 17,
+    "parsed": 4
+  },
+  "recommended_uogto_enhancement_areas": [
+    {
+      "candidate_coverage": 0.0137,
+      "source_id": "schema_org",
+      "unmatched_terms": 3175
+    },
+    {
+      "candidate_coverage": 0.2474,
+      "source_id": "owl_time",
+      "unmatched_terms": 73
+    },
+    {
+      "candidate_coverage": 0.4466,
+      "source_id": "prov_o",
+      "unmatched_terms": 57
+    },
+    {
+      "candidate_coverage": 0.4694,
+      "source_id": "ssn_sosa",
+      "unmatched_terms": 26
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "bfo",
+      "unmatched_terms": 1
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "devs",
+      "unmatched_terms": 1
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "dolce",
+      "unmatched_terms": 1
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "emmo",
+      "unmatched_terms": 1
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "game_ontology_project",
+      "unmatched_terms": 1
+    },
+    {
+      "candidate_coverage": 0.0,
+      "source_id": "gdlf_gamelan",
+      "unmatched_terms": 1
+    }
+  ],
+  "schema": "uogto.ontology-comparison.overlap-metrics.v1",
+  "source_cluster_overlap": {
+    "general_web_schema": {
+      "accepted": 5,
+      "rejected": 115
+    },
+    "observation_sensor": {
+      "accepted": 2,
+      "rejected": 102
+    },
+    "provenance": {
+      "accepted": 3,
+      "needs_domain_review": 1,
+      "rejected": 112
+    },
+    "time": {
+      "rejected": 120
+    }
+  },
+  "source_coverage": {
+    "bfo": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "devs": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "dolce": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "emmo": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "game_ontology_project": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "gdlf_gamelan": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "hla_fom": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "kaos": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "kisao": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "miase": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "odd_protocol": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "ontouml_ufo": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "osmo": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "owl_time": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.2474,
+      "candidate_term_count": 24,
+      "term_count": 97
+    },
+    "p_plan": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "prov_o": {
+      "accepted_coverage": 0.0291,
+      "accepted_term_count": 3,
+      "candidate_coverage": 0.4466,
+      "candidate_term_count": 46,
+      "term_count": 103
+    },
+    "schema_org": {
+      "accepted_coverage": 0.0016,
+      "accepted_term_count": 5,
+      "candidate_coverage": 0.0137,
+      "candidate_term_count": 44,
+      "term_count": 3219
+    },
+    "sed_ml": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "ssn_sosa": {
+      "accepted_coverage": 0.0408,
+      "accepted_term_count": 2,
+      "candidate_coverage": 0.4694,
+      "candidate_term_count": 23,
+      "term_count": 49
+    },
+    "vimmp_ontologies": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    },
+    "xmile": {
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
+      "candidate_coverage": 0.0,
+      "candidate_term_count": 0,
+      "term_count": 1
+    }
+  },
+  "summary": {
+    "accepted_mapping_count": 10,
+    "external_source_count": 21,
+    "external_term_count": 3485,
+    "review_candidate_count": 460,
+    "uogto_term_count": 552
+  },
+  "term_type_coverage": {
+    "external": {
+      "annotation_property": 31,
+      "class": 1102,
+      "datatype_property": 31,
+      "object_property": 92,
+      "ontology_metadata": 4,
+      "property": 1677,
+      "resource": 531,
+      "source_metadata": 17
+    },
+    "uogto": {
+      "class": 308,
+      "datatype_property": 48,
+      "object_property": 149,
+      "ontology_metadata": 47
+    }
+  },
+  "unmatched_source_concepts": [
+    {
+      "label": "Basic Formal Ontology",
+      "source_id": "bfo",
+      "term_iri": "https://github.com/BFO-ontology/BFO-2020",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "DEVS formalism and DEVS metamodel resources",
+      "source_id": "devs",
+      "term_iri": "https://acims.asu.edu/devs/",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "DOLCE",
+      "source_id": "dolce",
+      "term_iri": "https://www.loa.istc.cnr.it/dolce/overview.html",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "European Materials and Modelling Ontology",
+      "source_id": "emmo",
+      "term_iri": "https://github.com/emmo-repo/EMMO",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Game Ontology Project",
+      "source_id": "game_ontology_project",
+      "term_iri": "https://www.gameontology.com/",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Game Description Language and GDL resources",
+      "source_id": "gdlf_gamelan",
+      "term_iri": "https://en.wikipedia.org/wiki/Game_Description_Language",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "High Level Architecture Federation Object Model resources",
+      "source_id": "hla_fom",
+      "term_iri": "https://www.sisostds.org/",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "KAoS ontology and policy services",
+      "source_id": "kaos",
+      "term_iri": "https://ontology.ihmc.us/kaos.html",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Kinetic Simulation Algorithm Ontology",
+      "source_id": "kisao",
+      "term_iri": "https://github.com/SED-ML/KiSAO",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Minimum Information About a Simulation Experiment",
+      "source_id": "miase",
+      "term_iri": "https://co.mbine.org/standards/miase",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "ODD protocol for agent-based models",
+      "source_id": "odd_protocol",
+      "term_iri": "https://www.jasss.org/23/2/7.html",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "OntoUML / Unified Foundational Ontology",
+      "source_id": "ontouml_ufo",
+      "term_iri": "https://github.com/OntoUML",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Ontology for Simulation, Modelling, and Optimization",
+      "source_id": "osmo",
+      "term_iri": "https://github.com/virtual-materials-marketplace/osmo",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "P-Plan ontology",
+      "source_id": "p_plan",
+      "term_iri": "http://purl.org/net/p-plan",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Simulation Experiment Description Markup Language",
+      "source_id": "sed_ml",
+      "term_iri": "https://github.com/sed-ml/sed-ml",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Virtual Materials Marketplace Ontologies",
+      "source_id": "vimmp_ontologies",
+      "term_iri": "https://github.com/virtual-materials-marketplace",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "XMILE System Dynamics Standard",
+      "source_id": "xmile",
+      "term_iri": "https://www.oasis-open.org/standard/xmile-v1-0/",
+      "term_type": "source_metadata"
+    },
+    {
+      "label": "Day of week",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#DayOfWeek",
+      "term_type": "class"
+    },
+    {
+      "label": "January",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#January",
+      "term_type": "class"
+    },
+    {
+      "label": "Proper interval",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#ProperInterval",
+      "term_type": "class"
+    },
+    {
+      "label": "Time Zone",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#TimeZone",
+      "term_type": "class"
+    },
+    {
+      "label": "day",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#day",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "has XSD duration",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#hasXSDDuration",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hora",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#hour",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "duraci\u00f3n en horas",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#hours",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "en fecha XSD",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inXSDDate",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "en fecha-tiempo XSD",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inXSDDateTime",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "en fecha-sello de tiempo XSD",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inXSDDateTimeStamp",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "en a\u00f1o gregoriano XSD",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inXSDgYear",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "en a\u00f1o-mes gregoriano XSD",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inXSDgYearMonth",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "minute",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#minute",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "minutes",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#minutes",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "mes",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#month",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "duraci\u00f3n en meses",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#months",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "Name of temporal position",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#nominalPosition",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "Numeric value of temporal duration",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#numericDuration",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "Numeric value of temporal position",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#numericPosition",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "second",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#second",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "duraci\u00f3n en segundos",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#seconds",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "semana",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#week",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "duraci\u00f3n en semanas",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#weeks",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "has XSD date-time",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#xsdDateTime",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "year",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#year",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "duraci\u00f3n en a\u00f1os",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#years",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "after",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#after",
+      "term_type": "object_property"
+    },
+    {
+      "label": "antes",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#before",
+      "term_type": "object_property"
+    },
+    {
+      "label": "day of week",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#dayOfWeek",
+      "term_type": "object_property"
+    },
+    {
+      "label": "Temporal reference system used",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#hasTRS",
+      "term_type": "object_property"
+    },
+    {
+      "label": "has time",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#hasTime",
+      "term_type": "object_property"
+    },
+    {
+      "label": "en descripci\u00f3n de fecha-hora",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inDateTime",
+      "term_type": "object_property"
+    },
+    {
+      "label": "Temporal position",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inTemporalPosition",
+      "term_type": "object_property"
+    },
+    {
+      "label": "Time position",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inTimePosition",
+      "term_type": "object_property"
+    },
+    {
+      "label": "has time instant inside",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#inside",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval after",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalAfter",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval before",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalBefore",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval contains",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalContains",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval disjoint",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalDisjoint",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval during",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalDuring",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval equals",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalEquals",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval finished by",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalFinishedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval finishes",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalFinishes",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval in",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalIn",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval meets",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalMeets",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval met by",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalMetBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval overlapped by",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalOverlappedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval overlaps",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalOverlaps",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval started by",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalStartedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "interval starts",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#intervalStarts",
+      "term_type": "object_property"
+    },
+    {
+      "label": "mes del a\u00f1o",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#monthOfYear",
+      "term_type": "object_property"
+    },
+    {
+      "label": "en huso horario",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#timeZone",
+      "term_type": "object_property"
+    },
+    {
+      "label": "temporal unit type",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitType",
+      "term_type": "object_property"
+    },
+    {
+      "label": "OWL-Time",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "sello de tiempo",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+      "term_type": "resource"
+    },
+    {
+      "label": "Freitag",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Friday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Lundi",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Monday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Sabato",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Saturday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Dimanche",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Sunday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Czwartek",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Thursday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Dienstag",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Tuesday",
+      "term_type": "resource"
+    },
+    {
+      "label": "Mercoled\u00ec",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#Wednesday",
+      "term_type": "resource"
+    },
+    {
+      "label": "D\u00eda generalizado",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#generalDay",
+      "term_type": "resource"
+    },
+    {
+      "label": "Generalized month",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#generalMonth",
+      "term_type": "resource"
+    },
+    {
+      "label": "A\u00f1o generalizado",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#generalYear",
+      "term_type": "resource"
+    },
+    {
+      "label": "Day (unit of temporal duration)",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitDay",
+      "term_type": "resource"
+    },
+    {
+      "label": "Hour (unit of temporal duration)",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitHour",
+      "term_type": "resource"
+    },
+    {
+      "label": "Minute",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitMinute",
+      "term_type": "resource"
+    },
+    {
+      "label": "Monat",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitMonth",
+      "term_type": "resource"
+    },
+    {
+      "label": "Second (unit of temporal duration)",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitSecond",
+      "term_type": "resource"
+    },
+    {
+      "label": "Week (unit of temporal duration)",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitWeek",
+      "term_type": "resource"
+    },
+    {
+      "label": "1 \ub144",
+      "source_id": "owl_time",
+      "term_iri": "http://www.w3.org/2006/time#unitYear",
+      "term_type": "resource"
+    },
+    {
+      "label": "comment",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "isDefinedBy",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "label",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "seeAlso",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "versionInfo",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/2002/07/owl#versionInfo",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "aq",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#aq",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "category",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#category",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "component",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#component",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "constraints",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#constraints",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "definition",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#definition",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "dm",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#dm",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "editorialNote",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#editorialNote",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "editorsDefinition",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#editorsDefinition",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "inverse",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#inverse",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "n",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#n",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "order",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#order",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "qualifiedForm",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedForm",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "sharesDefinitionWith",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#sharesDefinitionWith",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "todo",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#todo",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "unqualifiedForm",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#unqualifiedForm",
+      "term_type": "annotation_property"
+    },
+    {
+      "label": "Activity",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#Activity",
+      "term_type": "class"
+    },
+    {
+      "label": "InstantaneousEvent",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#InstantaneousEvent",
+      "term_type": "class"
+    },
+    {
+      "label": "invalidatedAtTime",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#invalidatedAtTime",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "actedOnBehalfOf",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#actedOnBehalfOf",
+      "term_type": "object_property"
+    },
+    {
+      "label": "activity",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#activity",
+      "term_type": "object_property"
+    },
+    {
+      "label": "alternateOf",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#alternateOf",
+      "term_type": "object_property"
+    },
+    {
+      "label": "entity",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#entity",
+      "term_type": "object_property"
+    },
+    {
+      "label": "generated",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#generated",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hadActivity",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#hadActivity",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hadMember",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#hadMember",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hadPrimarySource",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#hadPrimarySource",
+      "term_type": "object_property"
+    },
+    {
+      "label": "influenced",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#influenced",
+      "term_type": "object_property"
+    },
+    {
+      "label": "influencer",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#influencer",
+      "term_type": "object_property"
+    },
+    {
+      "label": "invalidated",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#invalidated",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedAssociation",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedAssociation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedAttribution",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedAttribution",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedCommunication",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedCommunication",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedDelegation",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedDelegation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedDerivation",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedDerivation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedEnd",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedEnd",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedGeneration",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedGeneration",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedInfluence",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedInfluence",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedInvalidation",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedInvalidation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedPrimarySource",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedPrimarySource",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedQuotation",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedQuotation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedRevision",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedRevision",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedStart",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedStart",
+      "term_type": "object_property"
+    },
+    {
+      "label": "qualifiedUsage",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#qualifiedUsage",
+      "term_type": "object_property"
+    },
+    {
+      "label": "used",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#used",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasAssociatedWith",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasAttributedTo",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasDerivedFrom",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasGeneratedBy",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasInfluencedBy",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasInfluencedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "wasQuotedFrom",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#wasQuotedFrom",
+      "term_type": "object_property"
+    },
+    {
+      "label": "",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov#",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "W3C PROVenance Interchange Ontology (PROV-O)",
+      "source_id": "prov_o",
+      "term_iri": "http://www.w3.org/ns/prov-o#",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "F31_Performance",
+      "source_id": "schema_org",
+      "term_iri": "http://iflastandards.info/ns/lrm/lrmoo/F31_Performance",
+      "term_type": "class"
+    },
+    {
+      "label": "105590001",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/105590001",
+      "term_type": "class"
+    },
+    {
+      "label": "116154003",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/116154003",
+      "term_type": "class"
+    },
+    {
+      "label": "277132007",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/277132007",
+      "term_type": "class"
+    },
+    {
+      "label": "387713003",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/387713003",
+      "term_type": "class"
+    },
+    {
+      "label": "410942007",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/410942007",
+      "term_type": "class"
+    },
+    {
+      "label": "50731006",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/50731006",
+      "term_type": "class"
+    },
+    {
+      "label": "51114001",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/51114001",
+      "term_type": "class"
+    },
+    {
+      "label": "63653004",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.bioontology.org/ontology/SNOMEDCT/63653004",
+      "term_type": "class"
+    },
+    {
+      "label": "Dataset",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.org/dc/dcmitype/Dataset",
+      "term_type": "class"
+    },
+    {
+      "label": "Image",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.org/dc/dcmitype/Image",
+      "term_type": "class"
+    },
+    {
+      "label": "Text",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.org/dc/dcmitype/Text",
+      "term_type": "class"
+    },
+    {
+      "label": "Issue",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.org/ontology/bibo/Issue",
+      "term_type": "class"
+    },
+    {
+      "label": "Periodical",
+      "source_id": "schema_org",
+      "term_iri": "http://purl.org/ontology/bibo/Periodical",
+      "term_type": "class"
+    },
+    {
+      "label": "Dataset",
+      "source_id": "schema_org",
+      "term_iri": "http://rdfs.org/ns/void#Dataset",
+      "term_type": "class"
+    },
+    {
+      "label": "Result",
+      "source_id": "schema_org",
+      "term_iri": "http://sarif.info/Result",
+      "term_type": "class"
+    },
+    {
+      "label": "BrandName",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#BrandName",
+      "term_type": "class"
+    },
+    {
+      "label": "Country",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#Country",
+      "term_type": "class"
+    },
+    {
+      "label": "ElectronicDocument",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#ElectronicDocument",
+      "term_type": "class"
+    },
+    {
+      "label": "FinancialCard",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#FinancialCard",
+      "term_type": "class"
+    },
+    {
+      "label": "GeographicalCoordinate",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#GeographicalCoordinate",
+      "term_type": "class"
+    },
+    {
+      "label": "Invoice",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#Invoice",
+      "term_type": "class"
+    },
+    {
+      "label": "LineTradeAgreement",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#LineTradeAgreement",
+      "term_type": "class"
+    },
+    {
+      "label": "Offer",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#Offer",
+      "term_type": "class"
+    },
+    {
+      "label": "Order",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#Order",
+      "term_type": "class"
+    },
+    {
+      "label": "SpecifiedCertificate",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#SpecifiedCertificate",
+      "term_type": "class"
+    },
+    {
+      "label": "SpecifiedTradeProduct",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#SpecifiedTradeProduct",
+      "term_type": "class"
+    },
+    {
+      "label": "TradeAddress",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#TradeAddress",
+      "term_type": "class"
+    },
+    {
+      "label": "TradeProduct",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#TradeProduct",
+      "term_type": "class"
+    },
+    {
+      "label": "TransportMethod",
+      "source_id": "schema_org",
+      "term_iri": "http://unece.org/vocab#TransportMethod",
+      "term_type": "class"
+    },
+    {
+      "label": "VCard",
+      "source_id": "schema_org",
+      "term_iri": "http://www.w3.org/2006/vcard/ns#VCard",
+      "term_type": "class"
+    },
+    {
+      "label": "Catalog",
+      "source_id": "schema_org",
+      "term_iri": "http://www.w3.org/ns/dcat#Catalog",
+      "term_type": "class"
+    },
+    {
+      "label": "Dataset",
+      "source_id": "schema_org",
+      "term_iri": "http://www.w3.org/ns/dcat#Dataset",
+      "term_type": "class"
+    },
+    {
+      "label": "Error",
+      "source_id": "schema_org",
+      "term_iri": "http://www.w3.org/ns/hydra/core#Error",
+      "term_type": "class"
+    },
+    {
+      "label": "atTime",
+      "source_id": "schema_org",
+      "term_iri": "http://www.w3.org/ns/prov#atTime",
+      "term_type": "class"
+    },
+    {
+      "label": "Person",
+      "source_id": "schema_org",
+      "term_iri": "http://xmlns.com/foaf/0.1/Person",
+      "term_type": "class"
+    },
+    {
+      "label": "CertificationDetails",
+      "source_id": "schema_org",
+      "term_iri": "https://ref.gs1.org/voc/CertificationDetails",
+      "term_type": "class"
+    },
+    {
+      "label": "ContactPoint",
+      "source_id": "schema_org",
+      "term_iri": "https://ref.gs1.org/voc/ContactPoint",
+      "term_type": "class"
+    },
+    {
+      "label": "Country",
+      "source_id": "schema_org",
+      "term_iri": "https://ref.gs1.org/voc/Country",
+      "term_type": "class"
+    },
+    {
+      "label": "PostalAddress",
+      "source_id": "schema_org",
+      "term_iri": "https://ref.gs1.org/voc/PostalAddress",
+      "term_type": "class"
+    },
+    {
+      "label": "3DModel",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/3DModel",
+      "term_type": "class"
+    },
+    {
+      "label": "AMRadioChannel",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AMRadioChannel",
+      "term_type": "class"
+    },
+    {
+      "label": "AboutPage",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AboutPage",
+      "term_type": "class"
+    },
+    {
+      "label": "AdultEntertainment",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AdultEntertainment",
+      "term_type": "class"
+    },
+    {
+      "label": "AdultOrientedEnumeration",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AdultOrientedEnumeration",
+      "term_type": "class"
+    },
+    {
+      "label": "AdvertiserContentArticle",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AdvertiserContentArticle",
+      "term_type": "class"
+    },
+    {
+      "label": "AggregateOffer",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AggregateOffer",
+      "term_type": "class"
+    },
+    {
+      "label": "AggregateRating",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AggregateRating",
+      "term_type": "class"
+    },
+    {
+      "label": "Airport",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Airport",
+      "term_type": "class"
+    },
+    {
+      "label": "AmpStory",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AmpStory",
+      "term_type": "class"
+    },
+    {
+      "label": "AmusementPark",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AmusementPark",
+      "term_type": "class"
+    },
+    {
+      "label": "AnalysisNewsArticle",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AnalysisNewsArticle",
+      "term_type": "class"
+    },
+    {
+      "label": "AnimalShelter",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AnimalShelter",
+      "term_type": "class"
+    },
+    {
+      "label": "Answer",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Answer",
+      "term_type": "class"
+    },
+    {
+      "label": "Apartment",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Apartment",
+      "term_type": "class"
+    },
+    {
+      "label": "ApartmentComplex",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ApartmentComplex",
+      "term_type": "class"
+    },
+    {
+      "label": "AppendAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AppendAction",
+      "term_type": "class"
+    },
+    {
+      "label": "ApplyAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ApplyAction",
+      "term_type": "class"
+    },
+    {
+      "label": "ApprovedIndication",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ApprovedIndication",
+      "term_type": "class"
+    },
+    {
+      "label": "Aquarium",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Aquarium",
+      "term_type": "class"
+    },
+    {
+      "label": "ArchiveComponent",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ArchiveComponent",
+      "term_type": "class"
+    },
+    {
+      "label": "ArchiveOrganization",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ArchiveOrganization",
+      "term_type": "class"
+    },
+    {
+      "label": "ArriveAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ArriveAction",
+      "term_type": "class"
+    },
+    {
+      "label": "ArtGallery",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/ArtGallery",
+      "term_type": "class"
+    },
+    {
+      "label": "Artery",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Artery",
+      "term_type": "class"
+    },
+    {
+      "label": "Article",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Article",
+      "term_type": "class"
+    },
+    {
+      "label": "AskAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AskAction",
+      "term_type": "class"
+    },
+    {
+      "label": "AskPublicNewsArticle",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AskPublicNewsArticle",
+      "term_type": "class"
+    },
+    {
+      "label": "AssessAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AssessAction",
+      "term_type": "class"
+    },
+    {
+      "label": "AssignAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AssignAction",
+      "term_type": "class"
+    },
+    {
+      "label": "Atlas",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Atlas",
+      "term_type": "class"
+    },
+    {
+      "label": "Attorney",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Attorney",
+      "term_type": "class"
+    },
+    {
+      "label": "Audience",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Audience",
+      "term_type": "class"
+    },
+    {
+      "label": "AudioObject",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AudioObject",
+      "term_type": "class"
+    },
+    {
+      "label": "AudioObjectSnapshot",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AudioObjectSnapshot",
+      "term_type": "class"
+    },
+    {
+      "label": "Audiobook",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Audiobook",
+      "term_type": "class"
+    },
+    {
+      "label": "AuthenticateAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AuthenticateAction",
+      "term_type": "class"
+    },
+    {
+      "label": "AuthorizeAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AuthorizeAction",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoBodyShop",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoBodyShop",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoDealer",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoDealer",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoPartsStore",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoPartsStore",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoRental",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoRental",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoRepair",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoRepair",
+      "term_type": "class"
+    },
+    {
+      "label": "AutoWash",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutoWash",
+      "term_type": "class"
+    },
+    {
+      "label": "AutomatedTeller",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutomatedTeller",
+      "term_type": "class"
+    },
+    {
+      "label": "AutomotiveBusiness",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AutomotiveBusiness",
+      "term_type": "class"
+    },
+    {
+      "label": "BackgroundNewsArticle",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BackgroundNewsArticle",
+      "term_type": "class"
+    },
+    {
+      "label": "Bakery",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Bakery",
+      "term_type": "class"
+    },
+    {
+      "label": "BankAccount",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BankAccount",
+      "term_type": "class"
+    },
+    {
+      "label": "BankOrCreditUnion",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BankOrCreditUnion",
+      "term_type": "class"
+    },
+    {
+      "label": "BarOrPub",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BarOrPub",
+      "term_type": "class"
+    },
+    {
+      "label": "Barcode",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Barcode",
+      "term_type": "class"
+    },
+    {
+      "label": "Beach",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Beach",
+      "term_type": "class"
+    },
+    {
+      "label": "BeautySalon",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BeautySalon",
+      "term_type": "class"
+    },
+    {
+      "label": "BedAndBreakfast",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BedAndBreakfast",
+      "term_type": "class"
+    },
+    {
+      "label": "BedDetails",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BedDetails",
+      "term_type": "class"
+    },
+    {
+      "label": "BedType",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BedType",
+      "term_type": "class"
+    },
+    {
+      "label": "BefriendAction",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BefriendAction",
+      "term_type": "class"
+    },
+    {
+      "label": "BikeStore",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BikeStore",
+      "term_type": "class"
+    },
+    {
+      "label": "BioChemEntity",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BioChemEntity",
+      "term_type": "class"
+    },
+    {
+      "label": "Blog",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/Blog",
+      "term_type": "class"
+    },
+    {
+      "label": "BlogPosting",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BlogPosting",
+      "term_type": "class"
+    },
+    {
+      "label": "BloodTest",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/BloodTest",
+      "term_type": "class"
+    }
+  ],
+  "uogto_coverage": {
+    "accepted_coverage": 0.0127,
+    "accepted_term_count": 7,
+    "candidate_coverage": 0.2699,
+    "candidate_term_count": 149,
+    "term_count": 552
+  },
+  "uogto_stronger_coverage_areas": [
+    {
+      "unique_terms": 27,
+      "uogto_source_id": "uogto_core_uogto-core"
+    },
+    {
+      "unique_terms": 14,
+      "uogto_source_id": "uogto_extensions_deontic-logic"
+    },
+    {
+      "unique_terms": 14,
+      "uogto_source_id": "uogto_extensions_game-description-languages"
+    },
+    {
+      "unique_terms": 14,
+      "uogto_source_id": "uogto_extensions_petri-net-devs-hla"
+    },
+    {
+      "unique_terms": 13,
+      "uogto_source_id": "uogto_extensions_compositional-open-games"
+    },
+    {
+      "unique_terms": 13,
+      "uogto_source_id": "uogto_extensions_computational-social-choice"
+    },
+    {
+      "unique_terms": 13,
+      "uogto_source_id": "uogto_extensions_congestion-routing-games"
+    },
+    {
+      "unique_terms": 13,
+      "uogto_source_id": "uogto_extensions_kg-execution-bindings"
+    },
+    {
+      "unique_terms": 13,
+      "uogto_source_id": "uogto_extensions_marl"
+    },
+    {
+      "unique_terms": 12,
+      "uogto_source_id": "uogto_extensions_behavioural-games"
+    }
+  ],
+  "uogto_unique_concepts": [
+    {
+      "label": "UOGTO Alignment with Model Context Protocol",
+      "source_id": "uogto_alignments_mcp-a2a",
+      "term_iri": "https://w3id.org/uogto/alignments/mcp-a2a",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "OpenGame",
+      "source_id": "uogto_alignments_open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#OpenGame",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Alignment with Open Games",
+      "source_id": "uogto_alignments_open-games",
+      "term_iri": "https://w3id.org/uogto/alignments/open-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Alignment with PROV-O",
+      "source_id": "uogto_alignments_prov-o",
+      "term_iri": "https://w3id.org/uogto/alignments/prov-o",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Alignment with Schema.org",
+      "source_id": "uogto_alignments_schema-org",
+      "term_iri": "https://w3id.org/uogto/alignments/schema-org",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "InteractionAffordance",
+      "source_id": "uogto_alignments_wot-thing-description",
+      "term_iri": "https://w3id.org/uogto/extensions#InteractionAffordance",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Alignment with W3C Web of Things Thing Description",
+      "source_id": "uogto_alignments_wot-thing-description",
+      "term_iri": "https://w3id.org/uogto/alignments/wot-thing-description",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Core - Actions Module",
+      "source_id": "uogto_core_actions",
+      "term_iri": "https://w3id.org/uogto/core/actions",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Core - Agents Module",
+      "source_id": "uogto_core_agents",
+      "term_iri": "https://w3id.org/uogto/core/agents",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Continuous Dynamics",
+      "source_id": "uogto_core_dynamics",
+      "term_iri": "https://w3id.org/uogto/core#ContinuousDynamics",
+      "term_type": "class"
+    },
+    {
+      "label": "Discrete Dynamics",
+      "source_id": "uogto_core_dynamics",
+      "term_iri": "https://w3id.org/uogto/core#DiscreteDynamics",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Dynamics Module",
+      "source_id": "uogto_core_dynamics",
+      "term_iri": "https://w3id.org/uogto/core/dynamics",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Nash Equilibrium",
+      "source_id": "uogto_core_equilibria",
+      "term_iri": "https://w3id.org/uogto/core#NashEquilibrium",
+      "term_type": "class"
+    },
+    {
+      "label": "Subgame Perfect Equilibrium",
+      "source_id": "uogto_core_equilibria",
+      "term_iri": "https://w3id.org/uogto/core#SubgamePerfectEquilibrium",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Equilibria Module",
+      "source_id": "uogto_core_equilibria",
+      "term_iri": "https://w3id.org/uogto/core/equilibria",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Finite Game",
+      "source_id": "uogto_core_games",
+      "term_iri": "https://w3id.org/uogto/core#FiniteGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Infinite Game",
+      "source_id": "uogto_core_games",
+      "term_iri": "https://w3id.org/uogto/core#InfiniteGame",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Games Module",
+      "source_id": "uogto_core_games",
+      "term_iri": "https://w3id.org/uogto/core/games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Core - Information Module",
+      "source_id": "uogto_core_information",
+      "term_iri": "https://w3id.org/uogto/core/information",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Deterministic Outcome",
+      "source_id": "uogto_core_outcomes",
+      "term_iri": "https://w3id.org/uogto/core#DeterministicOutcome",
+      "term_type": "class"
+    },
+    {
+      "label": "Stochastic Outcome",
+      "source_id": "uogto_core_outcomes",
+      "term_iri": "https://w3id.org/uogto/core#StochasticOutcome",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Outcomes Module",
+      "source_id": "uogto_core_outcomes",
+      "term_iri": "https://w3id.org/uogto/core/outcomes",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Cardinal Payoff",
+      "source_id": "uogto_core_payoffs",
+      "term_iri": "https://w3id.org/uogto/core#CardinalPayoff",
+      "term_type": "class"
+    },
+    {
+      "label": "Ordinal Payoff",
+      "source_id": "uogto_core_payoffs",
+      "term_iri": "https://w3id.org/uogto/core#OrdinalPayoff",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Payoffs Module",
+      "source_id": "uogto_core_payoffs",
+      "term_iri": "https://w3id.org/uogto/core/payoffs",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Regulative Rule",
+      "source_id": "uogto_core_rules",
+      "term_iri": "https://w3id.org/uogto/core#RegulativeRule",
+      "term_type": "class"
+    },
+    {
+      "label": "UOGTO Core - Rules Module",
+      "source_id": "uogto_core_rules",
+      "term_iri": "https://w3id.org/uogto/core/rules",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "UOGTO Core - Strategies Module",
+      "source_id": "uogto_core_strategies",
+      "term_iri": "https://w3id.org/uogto/core/strategies",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Belief",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#Belief",
+      "term_type": "class"
+    },
+    {
+      "label": "Decision Node",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#DecisionNode",
+      "term_type": "class"
+    },
+    {
+      "label": "Equilibrium",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#Equilibrium",
+      "term_type": "class"
+    },
+    {
+      "label": "Execution Model",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#ExecutionModel",
+      "term_type": "class"
+    },
+    {
+      "label": "Information Set",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#InformationSet",
+      "term_type": "class"
+    },
+    {
+      "label": "Norm",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#Norm",
+      "term_type": "class"
+    },
+    {
+      "label": "Payoff",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#Payoff",
+      "term_type": "class"
+    },
+    {
+      "label": "Payoff Profile",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#PayoffProfile",
+      "term_type": "class"
+    },
+    {
+      "label": "Play Session",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#PlaySession",
+      "term_type": "class"
+    },
+    {
+      "label": "Player Payoff Link",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#PlayerPayoffLink",
+      "term_type": "class"
+    },
+    {
+      "label": "Strategy Profile",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#StrategyProfile",
+      "term_type": "class"
+    },
+    {
+      "label": "confidence",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#confidence",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "probability",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#probability",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "source reference",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#sourceReference",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "belongs to information set",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#belongsToInformationSet",
+      "term_type": "object_property"
+    },
+    {
+      "label": "compiled to execution model",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#compiledToExecutionModel",
+      "term_type": "object_property"
+    },
+    {
+      "label": "controls node",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#controlsNode",
+      "term_type": "object_property"
+    },
+    {
+      "label": "emits event trace",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#emitsEventTrace",
+      "term_type": "object_property"
+    },
+    {
+      "label": "governed by norm",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#governedByNorm",
+      "term_type": "object_property"
+    },
+    {
+      "label": "governed by rule",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#governedByRule",
+      "term_type": "object_property"
+    },
+    {
+      "label": "participates in",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#participatesIn",
+      "term_type": "object_property"
+    },
+    {
+      "label": "produces outcome",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#producesOutcome",
+      "term_type": "object_property"
+    },
+    {
+      "label": "selects action",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#selectsAction",
+      "term_type": "object_property"
+    },
+    {
+      "label": "solved by",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#solvedBy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "transitions from",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#transitionsFrom",
+      "term_type": "object_property"
+    },
+    {
+      "label": "transitions to",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core#transitionsTo",
+      "term_type": "object_property"
+    },
+    {
+      "label": "Universal Open Game Theory Ontology (UOGTO) Core",
+      "source_id": "uogto_core_uogto-core",
+      "term_iri": "https://w3id.org/uogto/core",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "AlgorithmicGame",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#AlgorithmicGame",
+      "term_type": "class"
+    },
+    {
+      "label": "ApproximationGuarantee",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#ApproximationGuarantee",
+      "term_type": "class"
+    },
+    {
+      "label": "ComplexityClass",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#ComplexityClass",
+      "term_type": "class"
+    },
+    {
+      "label": "ComputationalProblem",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#ComputationalProblem",
+      "term_type": "class"
+    },
+    {
+      "label": "EquilibriumComputationProblem",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#EquilibriumComputationProblem",
+      "term_type": "class"
+    },
+    {
+      "label": "PriceOfAnarchy",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#PriceOfAnarchy",
+      "term_type": "class"
+    },
+    {
+      "label": "PriceOfStability",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#PriceOfStability",
+      "term_type": "class"
+    },
+    {
+      "label": "hasComplexityClass",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#hasComplexityClass",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPriceOfAnarchy",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPriceOfAnarchy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPriceOfStability",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPriceOfStability",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Algorithmic Game Theory",
+      "source_id": "uogto_extensions_algorithmic-game-theory",
+      "term_iri": "https://w3id.org/uogto/extensions/algorithmic-game-theory",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Algorithmic Solver",
+      "source_id": "uogto_extensions_algorithmic-solvers-patch",
+      "term_iri": "https://w3id.org/uogto/extensions#AlgorithmicSolver",
+      "term_type": "class"
+    },
+    {
+      "label": "DutchAuction",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#DutchAuction",
+      "term_type": "class"
+    },
+    {
+      "label": "EnglishAuction",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#EnglishAuction",
+      "term_type": "class"
+    },
+    {
+      "label": "FirstPriceAuction",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#FirstPriceAuction",
+      "term_type": "class"
+    },
+    {
+      "label": "SecondPriceAuction",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#SecondPriceAuction",
+      "term_type": "class"
+    },
+    {
+      "label": "VickreyAuction",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#VickreyAuction",
+      "term_type": "class"
+    },
+    {
+      "label": "hasReservePrice",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#hasReservePrice",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasSecondHighestBid",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#hasSecondHighestBid",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasWinningBid",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#hasWinningBid",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasHighestBidder",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions#hasHighestBidder",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Auctions",
+      "source_id": "uogto_extensions_auctions",
+      "term_iri": "https://w3id.org/uogto/extensions/auctions",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "BargainingGame",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#BargainingGame",
+      "term_type": "class"
+    },
+    {
+      "label": "BargainingProtocol",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#BargainingProtocol",
+      "term_type": "class"
+    },
+    {
+      "label": "BargainingSolution",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#BargainingSolution",
+      "term_type": "class"
+    },
+    {
+      "label": "KalaiSmorodinskySolution",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#KalaiSmorodinskySolution",
+      "term_type": "class"
+    },
+    {
+      "label": "NashBargainingSolution",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#NashBargainingSolution",
+      "term_type": "class"
+    },
+    {
+      "label": "concessionRate",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#concessionRate",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "disagreementPoint",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions#disagreementPoint",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "UOGTO Extension - Bargaining",
+      "source_id": "uogto_extensions_bargaining",
+      "term_iri": "https://w3id.org/uogto/extensions/bargaining",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "BehaviouralGame",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#BehaviouralGame",
+      "term_type": "class"
+    },
+    {
+      "label": "BoundedRationalityModel",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#BoundedRationalityModel",
+      "term_type": "class"
+    },
+    {
+      "label": "CognitiveHierarchyModel",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CognitiveHierarchyModel",
+      "term_type": "class"
+    },
+    {
+      "label": "ExperimentalProtocol",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ExperimentalProtocol",
+      "term_type": "class"
+    },
+    {
+      "label": "FairnessPreference",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#FairnessPreference",
+      "term_type": "class"
+    },
+    {
+      "label": "LevelKModel",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#LevelKModel",
+      "term_type": "class"
+    },
+    {
+      "label": "QuantalResponseEquilibrium",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#QuantalResponseEquilibrium",
+      "term_type": "class"
+    },
+    {
+      "label": "cognitiveLevel",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#cognitiveLevel",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "inequityAversionAlpha",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#inequityAversionAlpha",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "rationalityParameter",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#rationalityParameter",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasQRE",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasQRE",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Behavioural Games",
+      "source_id": "uogto_extensions_behavioural-games",
+      "term_iri": "https://w3id.org/uogto/extensions/behavioural-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "CausalGame",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CausalGame",
+      "term_type": "class"
+    },
+    {
+      "label": "CausalGraph",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CausalGraph",
+      "term_type": "class"
+    },
+    {
+      "label": "CausalModel",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CausalModel",
+      "term_type": "class"
+    },
+    {
+      "label": "CausalPayoffModel",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CausalPayoffModel",
+      "term_type": "class"
+    },
+    {
+      "label": "CounterfactualOutcome",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CounterfactualOutcome",
+      "term_type": "class"
+    },
+    {
+      "label": "Intervention",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Intervention",
+      "term_type": "class"
+    },
+    {
+      "label": "StructuralEquation",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#StructuralEquation",
+      "term_type": "class"
+    },
+    {
+      "label": "hasCausalGraph",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasCausalGraph",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasCausalModel",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasCausalModel",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasCounterfactualOutcome",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasCounterfactualOutcome",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasStructuralEquation",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasStructuralEquation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Causal Games",
+      "source_id": "uogto_extensions_causal-games",
+      "term_iri": "https://w3id.org/uogto/extensions/causal-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "CompositionalGame",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CompositionalGame",
+      "term_type": "class"
+    },
+    {
+      "label": "CoplayFunction",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CoplayFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "EquilibriumPredicate",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#EquilibriumPredicate",
+      "term_type": "class"
+    },
+    {
+      "label": "Lens",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Lens",
+      "term_type": "class"
+    },
+    {
+      "label": "MonoidalComposition",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#MonoidalComposition",
+      "term_type": "class"
+    },
+    {
+      "label": "OpenGame",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#OpenGame",
+      "term_type": "class"
+    },
+    {
+      "label": "PlayFunction",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#PlayFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "StrategyLens",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#StrategyLens",
+      "term_type": "class"
+    },
+    {
+      "label": "hasComposition",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasComposition",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasCoplayFunction",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasCoplayFunction",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasEquilibriumPredicate",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasEquilibriumPredicate",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPlayFunction",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPlayFunction",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Compositional Open Games",
+      "source_id": "uogto_extensions_compositional-open-games",
+      "term_iri": "https://w3id.org/uogto/extensions/compositional-open-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Ballot",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#Ballot",
+      "term_type": "class"
+    },
+    {
+      "label": "Candidate",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#Candidate",
+      "term_type": "class"
+    },
+    {
+      "label": "CondorcetWinner",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#CondorcetWinner",
+      "term_type": "class"
+    },
+    {
+      "label": "ManipulationProblem",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#ManipulationProblem",
+      "term_type": "class"
+    },
+    {
+      "label": "PreferenceProfile",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#PreferenceProfile",
+      "term_type": "class"
+    },
+    {
+      "label": "SocialChoiceFunction",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#SocialChoiceFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "Voter",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#Voter",
+      "term_type": "class"
+    },
+    {
+      "label": "VotingGame",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#VotingGame",
+      "term_type": "class"
+    },
+    {
+      "label": "VotingRule",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#VotingRule",
+      "term_type": "class"
+    },
+    {
+      "label": "voteCount",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#voteCount",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasSocialChoiceFunction",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#hasSocialChoiceFunction",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasVoter",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions#hasVoter",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Computational Social Choice",
+      "source_id": "uogto_extensions_computational-social-choice",
+      "term_iri": "https://w3id.org/uogto/extensions/computational-social-choice",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "CongestionGame",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CongestionGame",
+      "term_type": "class"
+    },
+    {
+      "label": "LatencyFunction",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#LatencyFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "NetworkFlow",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#NetworkFlow",
+      "term_type": "class"
+    },
+    {
+      "label": "PotentialGame",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#PotentialGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Resource",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Resource",
+      "term_type": "class"
+    },
+    {
+      "label": "ResourceEdge",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ResourceEdge",
+      "term_type": "class"
+    },
+    {
+      "label": "RoutingGame",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#RoutingGame",
+      "term_type": "class"
+    },
+    {
+      "label": "WardropEquilibrium",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#WardropEquilibrium",
+      "term_type": "class"
+    },
+    {
+      "label": "capacityValue",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#capacityValue",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasNetworkFlow",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasNetworkFlow",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasResource",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasResource",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasWardropEquilibrium",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasWardropEquilibrium",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Congestion Routing Games",
+      "source_id": "uogto_extensions_congestion-routing-games",
+      "term_iri": "https://w3id.org/uogto/extensions/congestion-routing-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Contract",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#Contract",
+      "term_type": "class"
+    },
+    {
+      "label": "ContractGame",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#ContractGame",
+      "term_type": "class"
+    },
+    {
+      "label": "HiddenInformation",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#HiddenInformation",
+      "term_type": "class"
+    },
+    {
+      "label": "IncentiveScheme",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#IncentiveScheme",
+      "term_type": "class"
+    },
+    {
+      "label": "MonitoringTechnology",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#MonitoringTechnology",
+      "term_type": "class"
+    },
+    {
+      "label": "ParticipationConstraint",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#ParticipationConstraint",
+      "term_type": "class"
+    },
+    {
+      "label": "Principal",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#Principal",
+      "term_type": "class"
+    },
+    {
+      "label": "PrincipalAgentGame",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#PrincipalAgentGame",
+      "term_type": "class"
+    },
+    {
+      "label": "hasIncentiveScheme",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#hasIncentiveScheme",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPrincipal",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPrincipal",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Contract Theory",
+      "source_id": "uogto_extensions_contract-theory",
+      "term_iri": "https://w3id.org/uogto/extensions/contract-theory",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Bargaining Solution",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#BargainingSolution",
+      "term_type": "class"
+    },
+    {
+      "label": "Characteristic Function",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#CharacteristicFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "Coalition Game",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#CoalitionGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Cooperative Game",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#CooperativeGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Core Solution",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#CoreSolution",
+      "term_type": "class"
+    },
+    {
+      "label": "Non-Transferable Utility Game",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#NonTransferableUtilityGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Shapley Value",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#ShapleyValue",
+      "term_type": "class"
+    },
+    {
+      "label": "Transferable Utility Game",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#TransferableUtilityGame",
+      "term_type": "class"
+    },
+    {
+      "label": "has Shapley value",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions#hasShapleyValue",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Cooperative Games",
+      "source_id": "uogto_extensions_cooperative",
+      "term_iri": "https://w3id.org/uogto/extensions/cooperative",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "ComplianceState",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#ComplianceState",
+      "term_type": "class"
+    },
+    {
+      "label": "DeonticModality",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#DeonticModality",
+      "term_type": "class"
+    },
+    {
+      "label": "Norm",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Norm",
+      "term_type": "class"
+    },
+    {
+      "label": "Obligation",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Obligation",
+      "term_type": "class"
+    },
+    {
+      "label": "Permission",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Permission",
+      "term_type": "class"
+    },
+    {
+      "label": "Prohibition",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Prohibition",
+      "term_type": "class"
+    },
+    {
+      "label": "Sanction",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Sanction",
+      "term_type": "class"
+    },
+    {
+      "label": "Violation",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#Violation",
+      "term_type": "class"
+    },
+    {
+      "label": "isCompliant",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#isCompliant",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasObligation",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#hasObligation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPermission",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPermission",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasProhibition",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#hasProhibition",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasSanction",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions#hasSanction",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Deontic Logic",
+      "source_id": "uogto_extensions_deontic-logic",
+      "term_iri": "https://w3id.org/uogto/extensions/deontic-logic",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "ContinuousTimeGame",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ContinuousTimeGame",
+      "term_type": "class"
+    },
+    {
+      "label": "ControlVariable",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ControlVariable",
+      "term_type": "class"
+    },
+    {
+      "label": "DifferentialGame",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#DifferentialGame",
+      "term_type": "class"
+    },
+    {
+      "label": "Hamiltonian",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Hamiltonian",
+      "term_type": "class"
+    },
+    {
+      "label": "HybridGame",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#HybridGame",
+      "term_type": "class"
+    },
+    {
+      "label": "IsaacsCondition",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#IsaacsCondition",
+      "term_type": "class"
+    },
+    {
+      "label": "StateEquation",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#StateEquation",
+      "term_type": "class"
+    },
+    {
+      "label": "StochasticDifferentialGame",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#StochasticDifferentialGame",
+      "term_type": "class"
+    },
+    {
+      "label": "driftRate",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#driftRate",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasStateEquation",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasStateEquation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Differential Hybrid Games",
+      "source_id": "uogto_extensions_differential-hybrid-games",
+      "term_iri": "https://w3id.org/uogto/extensions/differential-hybrid-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "CyberPhysicalState",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CyberPhysicalState",
+      "term_type": "class"
+    },
+    {
+      "label": "DigitalTwin",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#DigitalTwin",
+      "term_type": "class"
+    },
+    {
+      "label": "DigitalTwinGame",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#DigitalTwinGame",
+      "term_type": "class"
+    },
+    {
+      "label": "InteractionAffordance",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#InteractionAffordance",
+      "term_type": "class"
+    },
+    {
+      "label": "ProtocolBinding",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ProtocolBinding",
+      "term_type": "class"
+    },
+    {
+      "label": "samplingInterval",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#samplingInterval",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasAffordance",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasAffordance",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPhysicalThing",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPhysicalThing",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasProtocolBinding",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasProtocolBinding",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Digital Twin Games",
+      "source_id": "uogto_extensions_digital-twin-games",
+      "term_iri": "https://w3id.org/uogto/extensions/digital-twin-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "BeliefHierarchy",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#BeliefHierarchy",
+      "term_type": "class"
+    },
+    {
+      "label": "CommonKnowledge",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#CommonKnowledge",
+      "term_type": "class"
+    },
+    {
+      "label": "EpistemicGame",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#EpistemicGame",
+      "term_type": "class"
+    },
+    {
+      "label": "PrivateSignal",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#PrivateSignal",
+      "term_type": "class"
+    },
+    {
+      "label": "Rationalizability",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Rationalizability",
+      "term_type": "class"
+    },
+    {
+      "label": "TypeSpace",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#TypeSpace",
+      "term_type": "class"
+    },
+    {
+      "label": "hasBeliefHierarchy",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasBeliefHierarchy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPrivateSignal",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPrivateSignal",
+      "term_type": "object_property"
+    },
+    {
+      "label": "rationalizableActions",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions#rationalizableActions",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Epistemic Games",
+      "source_id": "uogto_extensions_epistemic-games",
+      "term_iri": "https://w3id.org/uogto/extensions/epistemic-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "EvolutionarilyStableStrategy",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#EvolutionarilyStableStrategy",
+      "term_type": "class"
+    },
+    {
+      "label": "EvolutionaryGame",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#EvolutionaryGame",
+      "term_type": "class"
+    },
+    {
+      "label": "FitnessFunction",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#FitnessFunction",
+      "term_type": "class"
+    },
+    {
+      "label": "MutationOperator",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#MutationOperator",
+      "term_type": "class"
+    },
+    {
+      "label": "Population",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#Population",
+      "term_type": "class"
+    },
+    {
+      "label": "ReplicatorDynamic",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#ReplicatorDynamic",
+      "term_type": "class"
+    },
+    {
+      "label": "hasPopulation",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPopulation",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasReplicatorDynamic",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions#hasReplicatorDynamic",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Evolutionary Games",
+      "source_id": "uogto_extensions_evolutionary-games",
+      "term_iri": "https://w3id.org/uogto/extensions/evolutionary-games",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "GDLGame",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#GDLGame",
+      "term_type": "class"
+    },
+    {
+      "label": "GDLII Game",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#GDLII_Game",
+      "term_type": "class"
+    },
+    {
+      "label": "GoalRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#GoalRule",
+      "term_type": "class"
+    },
+    {
+      "label": "LegalMoveRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#LegalMoveRule",
+      "term_type": "class"
+    },
+    {
+      "label": "LudiiGame",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#LudiiGame",
+      "term_type": "class"
+    },
+    {
+      "label": "RuleEncodedGame",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#RuleEncodedGame",
+      "term_type": "class"
+    },
+    {
+      "label": "RulePredicate",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#RulePredicate",
+      "term_type": "class"
+    },
+    {
+      "label": "TerminalRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#TerminalRule",
+      "term_type": "class"
+    },
+    {
+      "label": "TransitionRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#TransitionRule",
+      "term_type": "class"
+    },
+    {
+      "label": "hasGoalRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#hasGoalRule",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasLegalMoveRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#hasLegalMoveRule",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasRulePredicate",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#hasRulePredicate",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasTerminalRule",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions#hasTerminalRule",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Game Description Languages",
+      "source_id": "uogto_extensions_game-description-languages",
+      "term_iri": "https://w3id.org/uogto/extensions/game-description-languages",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "DisclosurePolicy",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#DisclosurePolicy",
+      "term_type": "class"
+    },
+    {
+      "label": "InformationDesignGame",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#InformationDesignGame",
+      "term_type": "class"
+    },
+    {
+      "label": "InformationDesigner",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#InformationDesigner",
+      "term_type": "class"
+    },
+    {
+      "label": "PersuasionMechanism",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#PersuasionMechanism",
+      "term_type": "class"
+    },
+    {
+      "label": "PosteriorBelief",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#PosteriorBelief",
+      "term_type": "class"
+    },
+    {
+      "label": "ReceiverBelief",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#ReceiverBelief",
+      "term_type": "class"
+    },
+    {
+      "label": "entropyValue",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#entropyValue",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "hasDisclosurePolicy",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#hasDisclosurePolicy",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasPosteriorBelief",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#hasPosteriorBelief",
+      "term_type": "object_property"
+    },
+    {
+      "label": "hasSignalStructure",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions#hasSignalStructure",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO Extension - Information Design",
+      "source_id": "uogto_extensions_information-design",
+      "term_iri": "https://w3id.org/uogto/extensions/information-design",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "CollectiveChoiceArena",
+      "source_id": "uogto_extensions_institutional-economics",
+      "term_iri": "https://w3id.org/uogto/extensions#CollectiveChoiceArena",
+      "term_type": "class"
+    },
+    {
+      "label": "EnforcementMechanism",
+      "source_id": "uogto_extensions_institutional-economics",
+      "term_iri": "https://w3id.org/uogto/extensions#EnforcementMechanism",
+      "term_type": "class"
+    }
+  ]
+}
