@@ -1,0 +1,36 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": { "@id": "https://w3id.org/ro/crate/1.1" },
+      "about": { "@id": "./" }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "UOGTO Article-Hardening Evidence Package",
+      "description": "Scoping-review-style protocol, search log, inventory, benchmark, and synthesis artifacts for the UOGTO article-hardening track.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "hasPart": [
+        { "@id": "protocol.md" },
+        { "@id": "protocol-checklist.md" },
+        { "@id": "structured-summary.md" },
+        { "@id": "prisma-scr-artifact-map.md" },
+        { "@id": "search-strategy.md" },
+        { "@id": "search-log.jsonl" },
+        { "@id": "source-extension-inventory.json" },
+        { "@id": "source-extension-inventory.md" },
+        { "@id": "quality-metrics.json" },
+        { "@id": "reasoner-report.md" },
+        { "@id": "case-studies.md" },
+        { "@id": "manual-review-sample.csv" },
+        { "@id": "uogto-inclusion-candidates.csv" },
+        { "@id": "uogto-inclusion-decisions.md" },
+        { "@id": "competency-benchmark.md" },
+        { "@id": "use-case-coverage-matrix.csv" }
+      ]
+    }
+  ]
+}

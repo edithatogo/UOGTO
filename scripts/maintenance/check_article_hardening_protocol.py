@@ -12,7 +12,40 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from scripts.maintenance import build_article_hardening_inventory as inventory_builder
 from scripts.maintenance import build_article_hardening_quality as quality_builder
+
 DOCS = ROOT / "docs" / "article-hardening"
+REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
+RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
+REVIEW_WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md"
+RESEARCH_WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-research-workflow.md"
+REVIEW_SKILL = ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL.md"
+RESEARCH_SKILL = ROOT / ".agents" / "skills" / "article-hardening-research" / "SKILL.md"
+REVIEWS = DOCS / "reviews"
+RESEARCH = DOCS / "research"
+SEARCH_LOG = DOCS / "search-log.jsonl"
+SOURCE_EXTENSION_INVENTORY = DOCS / "source-extension-inventory.json"
+SOURCE_EXTENSION_SUMMARY = DOCS / "source-extension-inventory.md"
+QUALITY_METRICS = DOCS / "quality-metrics.json"
+REASONER_REPORT = DOCS / "reasoner-report.md"
+ROBOT_DIR = DOCS / "robot"
+EVIDENCE_FILES = [
+    DOCS / "search-log.jsonl",
+    DOCS / "source-extension-inventory.json",
+    DOCS / "source-extension-inventory.md",
+    DOCS / "quality-metrics.json",
+    DOCS / "reasoner-report.md",
+    DOCS / "case-studies.md",
+    DOCS / "case-studies.json",
+    DOCS / "manual-review-sample.csv",
+    DOCS / "uogto-inclusion-candidates.csv",
+    DOCS / "uogto-inclusion-decisions.md",
+    DOCS / "competency-benchmark.md",
+    DOCS / "use-case-coverage-matrix.csv",
+    DOCS / "ro-crate-metadata.json",
+    DOCS / "protocol-checklist.md",
+    DOCS / "structured-summary.md",
+    DOCS / "prisma-scr-artifact-map.md",
+]
 REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
 RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
 REVIEW_WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md"
@@ -40,6 +73,8 @@ ROBOT_REQUIRED_FILES = [
 REQUIRED_FILES = [
     DOCS / "protocol.md",
     DOCS / "protocol-checklist.md",
+    DOCS / "structured-summary.md",
+    DOCS / "prisma-scr-artifact-map.md",
     DOCS / "search-strategy.md",
     REVIEW_AGENTS,
     RESEARCH_AGENTS,
@@ -57,6 +92,7 @@ REQUIRED_FILES = [
     QUALITY_METRICS,
     REASONER_REPORT,
     *ROBOT_REQUIRED_FILES,
+    *EVIDENCE_FILES,
 ]
 
 PROTOCOL_SECTIONS = [
@@ -173,7 +209,6 @@ def validate_search_strategy() -> None:
         if f"`{route}`" not in strategy:
             raise SystemExit(f"Search strategy missing route taxonomy: {route}")
 
-
 def validate_checklist() -> None:
     checklist = _read(DOCS / "protocol-checklist.md")
     for standard in CHECKLIST_STANDARDS:
@@ -181,12 +216,27 @@ def validate_checklist() -> None:
             raise SystemExit(f"Protocol checklist missing standard: {standard}")
     required_artifacts = [
         "docs/article-hardening/protocol.md",
+        "docs/article-hardening/structured-summary.md",
+        "docs/article-hardening/prisma-scr-artifact-map.md",
         "docs/article-hardening/search-strategy.md",
         ".conductor/runlog.md",
     ]
     for artifact in required_artifacts:
         if artifact not in checklist:
             raise SystemExit(f"Protocol checklist missing artifact reference: {artifact}")
+    if checklist.count("| PRISMA-ScR |") < 22:
+        raise SystemExit("Protocol checklist must map all 20 essential and 2 optional PRISMA-ScR items")
+    for item in [
+        "Structured summary",
+        "Protocol and registration",
+        "Critical appraisal of individual sources of evidence",
+        "Critical appraisal within sources of evidence",
+        "Summary of evidence",
+        "Conclusions",
+        "Funding",
+    ]:
+        if item not in checklist:
+            raise SystemExit(f"Protocol checklist missing PRISMA-ScR item: {item}")
 
 
 

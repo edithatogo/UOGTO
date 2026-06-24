@@ -895,6 +895,7 @@ def validate_search_log(records: list[dict]) -> dict:
         if record["record_id"] in ids:
             raise AssertionError(f"Duplicate search record_id: {record['record_id']}")
         ids.add(record["record_id"])
+
         if record["surface_type"] not in SURFACE_TYPES:
             raise AssertionError(f"Search record {record['record_id']} has invalid surface_type")
         if record["evidence_level"] != "mixed" and record["evidence_level"] not in EVIDENCE_LEVELS:
@@ -904,7 +905,10 @@ def validate_search_log(records: list[dict]) -> dict:
         expected_hash = record_hash(record)
         if record["record_hash"] != expected_hash:
             raise AssertionError(f"Search record {record['record_id']} has invalid record_hash")
-        if not record["source_ids_added"]:
+        negative = record["screening_decision"] == "negative_evidence_no_relevant_ontology_found"
+        if negative and record["included_count"] != 0:
+            raise AssertionError(f"Negative evidence search record {record['record_id']} must have zero included sources")
+        if not negative and not record["source_ids_added"]:
             raise AssertionError(f"Search record {record['record_id']} must add or preserve source IDs")
         if not record["inclusion_rationale"] or not record["licence"] or not record["reviewer_handoff"]:
             raise AssertionError(f"Search record {record['record_id']} lacks rationale, licence, or handoff")

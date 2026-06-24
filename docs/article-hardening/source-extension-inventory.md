@@ -89,3 +89,7 @@ SSSOM is included as the mapping-standard source for ontology alignment TSV/YAML
 ## Reviewer Handoff
 
 Phase 2 records are ready for evidence-curation, reproducibility, standards-landscape, game-theory-gap, peer-review, methods-editorial, red-team, and devil's-advocate review before Phase 3 acquisition.
+
+## Negative Evidence
+
+- `phase2-negative-evidence`: searched targeted game-theory ontology registry and repository routes and found no additional relevant ontology to include. This route is preserved as negative evidence, not as a source. 

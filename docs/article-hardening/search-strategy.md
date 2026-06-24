@@ -84,3 +84,7 @@ The future `docs/article-hardening/ro-crate-metadata.json` must describe:
 - Some relevant standards are not machine-readable ontologies.
 - Metadata-only sources can support discovery and contextual claims, but not term-level mapping claims.
 - Future article text must not imply full UOGTO coverage from lexical similarity alone.
+
+## Negative Evidence
+
+Search routes that return no relevant ontology or formalism should be recorded as `negative_evidence_no_relevant_ontology_found` with `included_count` equal to zero and `source_ids_added` empty. These routes are valid article evidence because they delimit what was searched and not found. 

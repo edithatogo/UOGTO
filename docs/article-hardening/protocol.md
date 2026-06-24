@@ -119,3 +119,24 @@ Material changes to source families, eligibility criteria, charting fields, evid
 
 ## Funding and Conflicts
 No external funding or conflicts are recorded in this repository protocol unless added later by the project owner.
+
+## Negative Evidence
+
+Negative evidence routes use the term `negative_evidence_no_relevant_ontology_found` for searches that were executed but returned no relevant ontology or formalism. The article must treat these outcomes as searched-and-not-found evidence, not as proof of universal absence. 
+
+## PRISMA-ScR Evidence Package
+The protocol is packaged as a scoping-review evidence bundle through the following repository artifacts:
+
+- `docs/article-hardening/structured-summary.md`
+- `docs/article-hardening/protocol-checklist.md`
+- `docs/article-hardening/prisma-scr-artifact-map.md`
+- `docs/article-hardening/search-strategy.md`
+- `docs/article-hardening/search-log.jsonl`
+- `docs/article-hardening/source-extension-inventory.json`
+- `docs/article-hardening/source-extension-inventory.md`
+- `docs/article-hardening/quality-metrics.json`
+- `docs/article-hardening/reasoner-report.md`
+- `docs/article-hardening/case-studies.md`
+- `docs/article-hardening/ro-crate-metadata.json`
+
+The checklist maps the 20 essential and 2 optional PRISMA-ScR items to these artifacts, while the artifact map expands the crosswalk for drafting and review. Negative evidence remains recorded as a searched-and-not-found outcome rather than an absence proof.
