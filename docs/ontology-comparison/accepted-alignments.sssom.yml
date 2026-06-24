@@ -1,0 +1,22 @@
+curie_map:
+  dcterms: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
+  gs1: https://ref.gs1.org/voc/
+  ogp: http://ogp.me/ns#
+  prov: http://www.w3.org/ns/prov#
+  schema: https://schema.org/
+  sosa: http://www.w3.org/ns/sosa/
+  uogto: https://w3id.org/uogto/core#
+  uogtoalign: https://w3id.org/uogto/alignments/comparison#
+  uogtosrc: https://w3id.org/uogto/source/
+  uogtotool: https://w3id.org/uogto/tool/
+  uogtox: https://w3id.org/uogto/extensions#
+mapping_set_id: uogtoalign:accepted-alignments-sssom
+mapping_set_title: UOGTO comparative ontology accepted alignments
+mapping_set_description: "Accepted UOGTO comparative ontology mappings exported in SSSOM TSV for review, publication, and comparison alongside accepted-alignments.ttl."
+license: https://creativecommons.org/licenses/by/4.0/
+sssom_version: 1.1
+mapping_date: 2026-06-24
+mapping_tool: uogtotool:build_comparison_alignments
+mapping_tool_version: repo-script
+object_source: uogtosrc:uogto

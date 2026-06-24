@@ -2,7 +2,11 @@ import argparse, csv, json, sys
 from pathlib import Path
 from rdflib import Graph
 
+
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from scripts.maintenance import build_comparison_alignments as align
 BASE = ROOT / "docs" / "ontology-comparison"
 REQUIRED_FILES = [
     "discovery-protocol.md",
@@ -14,6 +18,8 @@ REQUIRED_FILES = [
     "mapping-candidates.jsonl",
     "mapping-review.csv",
     "accepted-alignments.ttl",
+    "accepted-alignments.sssom.yml",
+    "accepted-alignments.sssom.tsv",
     "overlap-metrics.json",
     "network-analysis.json",
     "report.md",
@@ -71,6 +77,11 @@ def validate_artifacts(base=BASE):
     graph = Graph(); graph.parse(base / "accepted-alignments.ttl", format="turtle")
     if len(graph) == 0:
         raise AssertionError("Accepted alignment TTL must parse with triples")
+    sssom_summary = align.validate_sssom_outputs(
+        base / "accepted-alignments.sssom.tsv",
+        base / "accepted-alignments.sssom.yml",
+        expected_count=len(accepted),
+    )
     figures_dir = base / "figures"
     report = (base / "report.md").read_text(encoding="utf-8")
     for name in REQUIRED_FIGURES:
@@ -93,6 +104,7 @@ def validate_artifacts(base=BASE):
         "candidates": len(candidates),
         "accepted_mappings": len(accepted),
         "figures": len(REQUIRED_FIGURES),
+        "sssom_rows": sssom_summary["row_count"],
     }
 
 

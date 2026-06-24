@@ -19,6 +19,7 @@ class TestOntologyComparisonIntegration(unittest.TestCase):
         self.assertEqual(summary["sources"], 21)
         self.assertEqual(summary["accepted_mappings"], 10)
         self.assertEqual(summary["figures"], len(check.REQUIRED_FIGURES))
+        self.assertEqual(summary["sssom_rows"], 10)
         self.assertGreater(summary["terms"], 1000)
         self.assertGreater(summary["candidates"], 100)
 
@@ -32,8 +33,10 @@ class TestOntologyComparisonIntegration(unittest.TestCase):
         makefile = Path("Makefile").read_text(encoding="utf-8")
         pixi = Path("pixi.toml").read_text(encoding="utf-8")
         self.assertIn("ontology-comparison-check", makefile)
+        self.assertIn("ontology-comparison-sssom", makefile)
         self.assertIn("ontology-comparison-all", makefile)
         self.assertIn("ontology-comparison-check", pixi)
+        self.assertIn("ontology-comparison-sssom", pixi)
         self.assertIn("ontology-comparison-all", pixi)
 
     def test_readme_links_comparison_report(self):

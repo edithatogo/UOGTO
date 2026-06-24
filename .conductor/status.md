@@ -28,6 +28,9 @@
 - Article-hardening protocol track `uogto_article_hardening_protocol_20260624` is planned. It will extend the completed comparative mapping baseline into a broader publication-grade evidence package using a PRISMA-ScR/PRISMA-S search and reporting protocol plus RO-Crate 1.1 reproducibility packaging, covering additional game-description, simulation, systems-biology, workflow/process, Petri-net, automata, planning/service, and reference ontology/formalism sources, and explicit triage of missing game-theory ontology elements for possible UOGTO inclusion, external alignment, deferral, or rejection.
 - Article-hardening Phase 1 is implemented: `docs/article-hardening/protocol.md`, `protocol-checklist.md`, and `search-strategy.md` define the PRISMA-ScR protocol structure, PRISMA-S search-log fields, evidence levels, eligibility/charting rules, missing-element decision rules, and RO-Crate reporting requirements; `make article-hardening-protocol` validates the scaffold.
 - Article-hardening review governance is implemented: `conductor/agents/article-hardening-review-agents.json`, `conductor/workflows/article-hardening-phase-review.md`, `.agents/skills/article-hardening-review/SKILL.md`, and `docs/article-hardening/reviews/phase-review-log.jsonl` define required peer, editorial, red-team, and devil's-advocate phase review gates.
+- Article-hardening ontology-quality benchmarking is implemented: `docs/article-hardening/quality-metrics.json` and `reasoner-report.md` report annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, SHACL coverage, examples per module, competency-query coverage, local OOPS-style pitfall indicators, and OWL profile/reasoner status.
+- Article-hardening Phase 2 evidence register is implemented: `docs/article-hardening/search-log.jsonl`, `source-extension-inventory.json`, and `source-extension-inventory.md` provide hash-chained append-only search events, source hashes, evidence levels, inclusion rationales, licence dispositions, and reviewer handoffs for 39 sources.
+- Ontology-comparison mappings now include SSSOM outputs alongside Turtle: `docs/ontology-comparison/accepted-alignments.sssom.tsv` and `accepted-alignments.sssom.yml` are generated from the accepted review rows while keeping `accepted-alignments.ttl` unchanged as RDF alignment output.
 - Article-hardening research governance is implemented: `conductor/agents/article-hardening-research-agents.json`, `conductor/workflows/article-hardening-research-workflow.md`, `.agents/skills/article-hardening-research/SKILL.md`, and `docs/article-hardening/research/phase-research-log.jsonl` define source-discovery, standards-landscape, game-theory-gap, evidence-curation, and reproducibility research handoffs before phase review.
 
 ## Completed Modules
@@ -57,7 +60,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Implement Phase 2 of `uogto_article_hardening_protocol_20260624`: extend source discovery, create the append-only search log, and build the source-extension inventory from the Phase 1 reporting schema.
+- Append live Phase 2 registry/API searches to `docs/article-hardening/search-log.jsonl`, then implement Phase 3 source acquisition/RO-Crate packaging and extend quality benchmarking to parsed external comparator artifacts.
 - Continue monitoring LOV/OLS, FAIRsharing curator review, Ontobee issue #212, and Bioregistry issue #1999.
 
 ## Manuscript Source Verification - 2026-06-22

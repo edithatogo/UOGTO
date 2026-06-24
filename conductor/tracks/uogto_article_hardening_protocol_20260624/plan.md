@@ -25,16 +25,18 @@ This track turns the completed comparative ontology baseline into a broader publ
     - [ ] Search repository surfaces: GitHub, GitLab, SourceForge where relevant, standards-body repositories, and project documentation sites.
     - [ ] Search game description and game AI resources: GDL, GDL-II/GDL-III/GDLZ, Ludii, General Video Game AI, Game Ontology Project, and procedural game-description schemas.
     - [ ] Search modelling and simulation resources: DEVS, HLA/FOM, ODD/ABM, XMILE, Petri net, BPMN/process, timed/hybrid automata, SBO/SBML/CellML/SBGN/SED-ML/KiSAO/MIASE/TEDDY, OSMO, EMMO, VIMMP, and physics-based simulation ontologies.
-- [ ] Task: Build the extended inventory.
-    - [ ] Create `docs/article-hardening/search-strategy.md`.
-    - [ ] Create append-only `docs/article-hardening/search-log.jsonl`.
-    - [ ] Create `docs/article-hardening/source-extension-inventory.json` and generated Markdown summary.
-    - [ ] Preserve the completed comparative mapping inventory as the baseline and explicitly mark newly added candidates.
+- [x] Task: Build the extended inventory.
+    - [x] Create `docs/article-hardening/search-strategy.md`.
+    - [x] Create append-only `docs/article-hardening/search-log.jsonl`.
+    - [x] Create `docs/article-hardening/source-extension-inventory.json` and generated Markdown summary.
+    - [x] Preserve the completed comparative mapping inventory as the baseline and explicitly mark newly added candidates.
+
+Phase 2 note: the living evidence register is implemented with deterministic seed records and hash validation; live registry/API searches remain append-only follow-up records before Phase 3 acquisition.
 
 ### Acceptance Criteria
-- [ ] Each search route records query string, date, surface, result count where available, screening decision, and limitations.
-- [ ] Every new candidate has a source-family assignment and eligibility rationale.
-- [ ] Metadata-only and non-redistributable sources are labelled as such.
+- [x] Each search route records query string, date, surface, result count where available, screening decision, and limitations.
+- [x] Every new candidate has a source-family assignment and eligibility rationale.
+- [x] Metadata-only and non-redistributable sources are labelled as such.
 
 ## Phase 3: Source Acquisition and Reproducible Packaging
 - [ ] Task: Acquire permissible artifacts.
@@ -52,18 +54,20 @@ This track turns the completed comparative ontology baseline into a broader publ
 - [ ] Restricted or metadata-only sources are represented without republishing prohibited content.
 
 ## Phase 4: Ontology Quality and Formal-Reasoning Evaluation
-- [ ] Task: Add ontology-quality metrics.
-    - [ ] Measure annotation completeness, missing labels/definitions, class/property counts, object/datatype property balance, hierarchy depth, import depth, relation richness, domain/range use, module coverage, and orphan concepts.
-    - [ ] Add OOPS-style pitfall checks where feasible without depending on external services.
-    - [ ] Compare UOGTO metrics against parsed external RDF/OWL sources and summarize non-RDF sources separately.
-- [ ] Task: Add reasoner and validation checks.
-    - [ ] Run RDFLib parse checks, OWL profile/consistency checks where feasible, SHACL validation for UOGTO examples, and mapping TTL validation.
-    - [ ] Produce `docs/article-hardening/quality-metrics.json` and `docs/article-hardening/reasoner-report.md`.
+- [x] Task: Add ontology-quality metrics.
+    - [x] Measure annotation completeness, missing labels/definitions, class/property counts, object/datatype property balance, hierarchy depth, import depth, relation richness, domain/range use, module coverage, and orphan concepts.
+    - [x] Add OOPS-style pitfall checks where feasible without depending on external services.
+    - [x] Compare UOGTO metrics against parsed external RDF/OWL sources and summarize non-RDF sources separately.
+- [x] Task: Add reasoner and validation checks.
+    - [x] Run RDFLib parse checks, OWL profile/consistency checks where feasible, SHACL validation for UOGTO examples, and mapping TTL validation.
+    - [x] Produce `docs/article-hardening/quality-metrics.json` and `docs/article-hardening/reasoner-report.md`.
+
+Phase 4 note: quality benchmarking currently covers UOGTO local ontology artifacts, local OOPS-style proxy indicators, SHACL/example/query coverage, and OWL/RDFS status; external comparator metrics will be added after Phase 3 acquisition expands parsed artifacts.
 
 ### Acceptance Criteria
-- [ ] Metrics distinguish UOGTO, parsed external ontologies, structured non-RDF sources, and metadata-only sources.
-- [ ] Reasoner/validation limitations are explicit.
-- [ ] Tests cover metric schema and deterministic report generation.
+- [x] Metrics distinguish UOGTO, parsed external ontologies, structured non-RDF sources, and metadata-only sources.
+- [x] Reasoner/validation limitations are explicit.
+- [x] Tests cover metric schema and deterministic report generation.
 
 ## Phase 5: Competency Questions and Use-Case Benchmarking
 - [ ] Task: Define article-relevant competency questions.

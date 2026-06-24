@@ -3,10 +3,15 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from scripts.maintenance import build_article_hardening_inventory as inventory_builder
+from scripts.maintenance import build_article_hardening_quality as quality_builder
 DOCS = ROOT / "docs" / "article-hardening"
 REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
 RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
@@ -16,6 +21,11 @@ REVIEW_SKILL = ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL
 RESEARCH_SKILL = ROOT / ".agents" / "skills" / "article-hardening-research" / "SKILL.md"
 REVIEWS = DOCS / "reviews"
 RESEARCH = DOCS / "research"
+SEARCH_LOG = DOCS / "search-log.jsonl"
+SOURCE_EXTENSION_INVENTORY = DOCS / "source-extension-inventory.json"
+SOURCE_EXTENSION_SUMMARY = DOCS / "source-extension-inventory.md"
+QUALITY_METRICS = DOCS / "quality-metrics.json"
+REASONER_REPORT = DOCS / "reasoner-report.md"
 
 REQUIRED_FILES = [
     DOCS / "protocol.md",
@@ -31,6 +41,11 @@ REQUIRED_FILES = [
     REVIEWS / "phase-review-log.jsonl",
     RESEARCH / "README.md",
     RESEARCH / "phase-research-log.jsonl",
+    SEARCH_LOG,
+    SOURCE_EXTENSION_INVENTORY,
+    SOURCE_EXTENSION_SUMMARY,
+    QUALITY_METRICS,
+    REASONER_REPORT,
 ]
 
 PROTOCOL_SECTIONS = [
@@ -67,6 +82,7 @@ PROTOCOL_TERMS = [
 ]
 
 SEARCH_FIELDS = [
+    "record_id",
     "searched_at",
     "surface",
     "surface_type",
@@ -75,9 +91,16 @@ SEARCH_FIELDS = [
     "result_count",
     "screened_count",
     "included_count",
+    "evidence_level",
+    "screening_decision",
+    "inclusion_rationale",
+    "licence",
+    "reviewer_handoff",
     "route_limitations",
     "operator_notes",
     "source_ids_added",
+    "previous_record_hash",
+    "record_hash",
 ]
 
 CHECKLIST_STANDARDS = ["PRISMA-ScR", "PRISMA-S", "RO-Crate 1.1", "UOGTO governance"]
@@ -211,6 +234,26 @@ def validate_research_agents() -> None:
         if term not in workflow and term not in research_readme:
             raise SystemExit(f"Research workflow missing reporting term: {term}")
 
+
+def validate_source_extension_register() -> None:
+    summary = inventory_builder.check_outputs(SEARCH_LOG, SOURCE_EXTENSION_INVENTORY)
+    if summary["source_count"] < 39:
+        raise SystemExit("Source-extension inventory has too few sources")
+    if summary["search_record_count"] < 6:
+        raise SystemExit("Search log has too few records")
+    summary_text = _read(SOURCE_EXTENSION_SUMMARY)
+    for term in ["hash chained", "Later searches should append records", "SSSOM"]:
+        if term not in summary_text:
+            raise SystemExit(f"Source-extension summary missing term: {term}")
+
+
+
+def validate_quality_benchmark() -> None:
+    summary = quality_builder.check_outputs(QUALITY_METRICS, REASONER_REPORT)
+    if summary["classes"] < 100 or summary["properties"] < 50:
+        raise SystemExit("Quality metrics have unexpectedly low ontology term counts")
+
+
 def main() -> None:
     for path in REQUIRED_FILES:
         _read(path)
@@ -219,10 +262,12 @@ def main() -> None:
     validate_checklist()
     validate_review_agents()
     validate_research_agents()
+    validate_source_extension_register()
+    validate_quality_benchmark()
     print(
         "Article-hardening protocol valid: "
         "PRISMA-ScR scaffold, PRISMA-S fields, RO-Crate requirements, "
-        "UOGTO inclusion reporting rules, phase-research agents, and phase-review agents present."
+        "UOGTO inclusion reporting rules, Phase 2 source register, ontology-quality benchmark, phase-research agents, and phase-review agents present."
     )
 
 

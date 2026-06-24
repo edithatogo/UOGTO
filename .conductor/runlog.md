@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## [2026-06-24] - Article Hardening Quality Benchmark
+- Added ontology-quality benchmarking for `uogto_article_hardening_protocol_20260624`: generated `docs/article-hardening/quality-metrics.json` and `reasoner-report.md` with annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, SHACL coverage, examples per module, competency-query coverage, local OOPS-style pitfall indicators, and OWL profile/reasoner status.
+- Added `scripts/maintenance/build_article_hardening_quality.py`, Make/Pixi wiring, protocol validation, and pytest coverage so quality metrics are deterministic and article-ready.
+- Recorded the current boundary that comparator-source quality metrics will expand after Phase 3 acquisition adds parsed external artifacts.
+
+## [2026-06-24] - Article Hardening Phase 2 Living Evidence Register
+- Implemented the Phase 2 living evidence register for `uogto_article_hardening_protocol_20260624`: generated `docs/article-hardening/search-log.jsonl`, `source-extension-inventory.json`, and `source-extension-inventory.md` with query strings, result/screening/inclusion counts, evidence levels, inclusion rationales, licence dispositions, reviewer handoffs, hash-chained search records, and immutable source hashes.
+- Preserved the completed comparative ontology source inventory as the baseline and appended 18 new article-hardening candidates, including SSSOM, OAEI, GDL variants, Ludii, GVGAI/VGDL, PNML, BPMN, OWL-S, PDDL, SBML, SBO, CellML, SBGN, Modelica, FMI, and SysML.
+- Added SSSOM TSV/YAML mapping outputs for accepted ontology mappings while preserving `docs/ontology-comparison/accepted-alignments.ttl`; normal ontology-comparison checks now require both Turtle and SSSOM outputs.
+
 ## [2026-06-24] - Article Hardening Research Governance
 - Added research governance for `uogto_article_hardening_protocol_20260624`: registry discovery, standards landscape, game-theory gap analysis, evidence curation, and reproducibility curation are now declared as concrete research agents with required outputs.
 - Added the article-hardening research workflow, repo-local research skill, research log scaffold, and validator/test coverage so research handoffs are explicit before peer, editorial, red-team, and devil's-advocate review.

@@ -4,9 +4,10 @@
 This search strategy records the PRISMA-S reporting fields, search route taxonomy, seed query families, and RO-Crate packaging expectations for the UOGTO article-hardening track.
 
 ## PRISMA-S Search Log Fields
-Each line in `docs/article-hardening/search-log.jsonl` must include:
+Each line in `docs/article-hardening/search-log.jsonl` must include the standard PRISMA-S route fields plus the stricter living-register fields needed for append-only evidence review:
 
 - `searched_at`: ISO 8601 date or datetime.
+- `record_id`: stable append-only search-event identifier.
 - `surface`: searched registry, repository, database, website, or standards source.
 - `surface_type`: one of `ontology_registry`, `scholarly_index`, `archive`, `repository`, `standards_body`, `project_site`, `web_search`, or `baseline_artifact`.
 - `query`: exact query string, API request, URL, or manual browsing route.
@@ -17,6 +18,13 @@ Each line in `docs/article-hardening/search-log.jsonl` must include:
 - `route_limitations`: known limitations, authentication boundaries, unstable ranking, pagination limits, or API constraints.
 - `operator_notes`: short notes on interpretation, duplicates, or manual judgement.
 - `source_ids_added`: list of source identifiers added to the inventory.
+- `evidence_level`: strongest evidence level represented by included sources on this route.
+- `screening_decision`: route-level inclusion, exclusion, duplicate, or deferral decision.
+- `inclusion_rationale`: reason the route or source family belongs in the article-hardening evidence package.
+- `licence`: route-level licence disposition or pointer to per-source licence dispositions.
+- `reviewer_handoff`: assigned research/review roles and next action.
+- `previous_record_hash`: prior JSONL record hash for append-only chain validation.
+- `record_hash`: SHA-256 hash over the record payload excluding `record_hash`.
 
 ## Search Route Taxonomy
 Search routes must be grouped by:
