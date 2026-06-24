@@ -1,0 +1,1 @@
+{"phase":1,"status":"planned_review_system_initialized","reviewers":["ontology_peer_reviewer","methods_editor","evidence_red_team","devils_advocate_reviewer"],"notes":"Review agent registry, workflow, and skill added after Phase 1 implementation so subsequent phases have explicit peer/editorial/red-team/devil's-advocate gates."}

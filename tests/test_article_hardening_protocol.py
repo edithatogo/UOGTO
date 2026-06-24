@@ -45,3 +45,25 @@ def test_protocol_check_fails_when_required_file_is_missing(monkeypatch):
     monkeypatch.setattr(checker, "DOCS", ROOT / "__missing_article_hardening__")
     with pytest.raises(SystemExit, match="Missing required article-hardening artifact"):
         checker.main()
+
+
+def test_review_agent_registry_declares_required_review_roles():
+    import json
+
+    registry = json.loads((ROOT / "conductor" / "agents" / "article-hardening-review-agents.json").read_text(encoding="utf-8"))
+    role_ids = {role["id"] for role in registry["review_roles"]}
+    for role in checker.REQUIRED_REVIEWERS + checker.OPTIONAL_PHASE_REVIEWERS:
+        assert role in role_ids
+    for role in checker.REQUIRED_REVIEWERS:
+        assert role in registry["minimum_phase_review_set"]
+
+
+def test_review_workflow_and_skill_are_present_and_role_aware():
+    workflow = (ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md").read_text(encoding="utf-8")
+    skill = (ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL.md").read_text(encoding="utf-8")
+    for role in checker.REQUIRED_REVIEWERS:
+        assert role in workflow
+        assert role in skill
+    assert "phase-review-log.jsonl" in workflow
+    assert "red-team" in workflow
+    assert "devil" in workflow

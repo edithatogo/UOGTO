@@ -1,0 +1,92 @@
+{
+  "schema": "uogto.article-hardening-review-agents.v1",
+  "track": "uogto_article_hardening_protocol_20260624",
+  "review_roles": [
+    {
+      "id": "ontology_peer_reviewer",
+      "label": "Ontology Peer Reviewer",
+      "review_type": "peer_review",
+      "phase_scope": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "ontology design coherence",
+        "UOGTO module fit",
+        "term inclusion rationale",
+        "OWL/RDF/SHACL modelling implications"
+      ],
+      "required_output": "docs/article-hardening/reviews/phase-{phase}-ontology-peer-review.md"
+    },
+    {
+      "id": "simulation_modelling_peer_reviewer",
+      "label": "Simulation and Modelling Peer Reviewer",
+      "review_type": "peer_review",
+      "phase_scope": [2, 3, 4, 5, 6, 7, 8],
+      "focus": [
+        "simulation ontology relevance",
+        "modelling-formalism coverage",
+        "source-family classification",
+        "use-case and competency-question coverage"
+      ],
+      "required_output": "docs/article-hardening/reviews/phase-{phase}-simulation-modelling-peer-review.md"
+    },
+    {
+      "id": "methods_editor",
+      "label": "Methods and Reporting Editor",
+      "review_type": "editorial_review",
+      "phase_scope": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "PRISMA-ScR alignment",
+        "PRISMA-S search reporting",
+        "RO-Crate reproducibility reporting",
+        "methods/results wording"
+      ],
+      "required_output": "docs/article-hardening/reviews/phase-{phase}-methods-editorial-review.md"
+    },
+    {
+      "id": "evidence_red_team",
+      "label": "Evidence Red Team Reviewer",
+      "review_type": "red_team_review",
+      "phase_scope": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "overclaim detection",
+        "metadata-only evidence limits",
+        "licence/provenance risks",
+        "unsupported article claims"
+      ],
+      "required_output": "docs/article-hardening/reviews/phase-{phase}-red-team-review.md"
+    },
+    {
+      "id": "devils_advocate_reviewer",
+      "label": "Devil's Advocate Reviewer",
+      "review_type": "devils_advocate_review",
+      "phase_scope": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "focus": [
+        "alternative explanations",
+        "missed sources",
+        "weak inclusion decisions",
+        "reasons not to expand UOGTO"
+      ],
+      "required_output": "docs/article-hardening/reviews/phase-{phase}-devils-advocate-review.md"
+    }
+  ],
+  "minimum_phase_review_set": [
+    "ontology_peer_reviewer",
+    "methods_editor",
+    "evidence_red_team",
+    "devils_advocate_reviewer"
+  ],
+  "additional_phase_reviewers": {
+    "2": ["simulation_modelling_peer_reviewer"],
+    "3": ["simulation_modelling_peer_reviewer"],
+    "4": ["simulation_modelling_peer_reviewer"],
+    "5": ["simulation_modelling_peer_reviewer"],
+    "6": ["simulation_modelling_peer_reviewer"],
+    "7": ["simulation_modelling_peer_reviewer"],
+    "8": ["simulation_modelling_peer_reviewer"]
+  },
+  "phase_gate": {
+    "requires_review_plan": true,
+    "requires_issue_log": true,
+    "requires_disposition_summary": true,
+    "review_log_path": "docs/article-hardening/reviews/phase-review-log.jsonl"
+  }
+}

@@ -1,5 +1,9 @@
 # Conductor Run Log
 
+## [2026-06-24] - Article Hardening Review Governance
+- Added phase-review governance for `uogto_article_hardening_protocol_20260624`: peer reviewers, methods/editorial review, evidence red-team review, and devil's-advocate review are now declared as concrete agents with required outputs.
+- Added the article-hardening review workflow, repo-local review skill, review log scaffold, and validator/test coverage so the reporting approach includes reviewer gates at each phase.
+
 ## [2026-06-24] - Article Hardening Protocol Phase 1
 - Implemented Phase 1 of `uogto_article_hardening_protocol_20260624` with a PRISMA-ScR-aligned protocol, protocol checklist, PRISMA-S search strategy, evidence-level rules, eligibility/charting fields, missing-element decision rules, and RO-Crate reporting requirements.
 - Added `scripts/maintenance/check_article_hardening_protocol.py`, `make article-hardening-protocol`, Pixi task wiring, and pytest coverage so the reporting approach is validated rather than only described.

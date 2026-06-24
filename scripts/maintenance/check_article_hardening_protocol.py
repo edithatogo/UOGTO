@@ -2,16 +2,26 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs" / "article-hardening"
+AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
+WORKFLOW = ROOT / "conductor" / "workflows" / "article-hardening-phase-review.md"
+SKILL = ROOT / ".agents" / "skills" / "article-hardening-review" / "SKILL.md"
+REVIEWS = DOCS / "reviews"
 
 REQUIRED_FILES = [
     DOCS / "protocol.md",
     DOCS / "protocol-checklist.md",
     DOCS / "search-strategy.md",
+    AGENTS,
+    WORKFLOW,
+    SKILL,
+    REVIEWS / "README.md",
+    REVIEWS / "phase-review-log.jsonl",
 ]
 
 PROTOCOL_SECTIONS = [
@@ -64,6 +74,16 @@ SEARCH_FIELDS = [
 CHECKLIST_STANDARDS = ["PRISMA-ScR", "PRISMA-S", "RO-Crate 1.1", "UOGTO governance"]
 
 
+REQUIRED_REVIEWERS = [
+    "ontology_peer_reviewer",
+    "methods_editor",
+    "evidence_red_team",
+    "devils_advocate_reviewer",
+]
+
+OPTIONAL_PHASE_REVIEWERS = ["simulation_modelling_peer_reviewer"]
+
+
 def _read(path: Path) -> str:
     if not path.exists():
         raise SystemExit(f"Missing required article-hardening artifact: {path}")
@@ -114,16 +134,44 @@ def validate_checklist() -> None:
             raise SystemExit(f"Protocol checklist missing artifact reference: {artifact}")
 
 
+
+def validate_review_agents() -> None:
+    registry = json.loads(_read(AGENTS))
+    role_ids = {role.get("id") for role in registry.get("review_roles", [])}
+    missing = [role for role in REQUIRED_REVIEWERS + OPTIONAL_PHASE_REVIEWERS if role not in role_ids]
+    if missing:
+        raise SystemExit(f"Review agent registry missing roles: {', '.join(missing)}")
+    minimum = registry.get("minimum_phase_review_set", [])
+    missing_minimum = [role for role in REQUIRED_REVIEWERS if role not in minimum]
+    if missing_minimum:
+        raise SystemExit(f"Minimum phase review set missing roles: {', '.join(missing_minimum)}")
+    for role in registry.get("review_roles", []):
+        for field in ["label", "review_type", "phase_scope", "focus", "required_output"]:
+            if not role.get(field):
+                raise SystemExit(f"Review role {role.get('id')} missing field: {field}")
+
+    workflow = _read(WORKFLOW)
+    skill = _read(SKILL)
+    review_readme = _read(REVIEWS / "README.md")
+    review_log = _read(REVIEWS / "phase-review-log.jsonl")
+    for role in REQUIRED_REVIEWERS:
+        if role not in workflow or role not in skill or role not in review_log:
+            raise SystemExit(f"Review workflow/skill/log missing required role: {role}")
+    for term in ["peer", "editorial", "red-team", "devil", "phase-review-log.jsonl"]:
+        if term not in workflow and term not in review_readme:
+            raise SystemExit(f"Review workflow missing reporting term: {term}")
+
 def main() -> None:
     for path in REQUIRED_FILES:
         _read(path)
     validate_protocol()
     validate_search_strategy()
     validate_checklist()
+    validate_review_agents()
     print(
         "Article-hardening protocol valid: "
         "PRISMA-ScR scaffold, PRISMA-S fields, RO-Crate requirements, "
-        "and UOGTO inclusion reporting rules present."
+        "UOGTO inclusion reporting rules, and phase-review agents present."
     )
 
 
