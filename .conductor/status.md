@@ -140,3 +140,5 @@
 - FAIRsharing recommended-but-nonblocking gaps: organisation links, publications, citations, and record associations.
 
 - Added reviewer calibration sampling with balanced accepted/rejected mapping review, agreement scoring, and adjudication-ready outputs.
+
+- Added network-analysis sensitivity scenarios for metadata-only exclusion, accepted-only mappings, and close/related mapping inclusion.

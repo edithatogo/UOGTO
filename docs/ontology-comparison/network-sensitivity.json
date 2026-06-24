@@ -1,0 +1,4077 @@
+{
+  "scenarios": {
+    "all_sources__accepted_mappings": {
+      "alignment_graph": {
+        "bridge_terms": [
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#description"
+          },
+          {
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://ogp.me/ns#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/identifier"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/2002/07/owl#Thing"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Role"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/sosa/observes"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://xmlns.com/foaf/0.1/Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://ref.gs1.org/voc/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://schema.org/Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Role"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#identifier"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#observes"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/extensions#Thing"
+          }
+        ],
+        "communities": [
+          [
+            "source:http://ogp.me/ns#description",
+            "source:http://purl.org/dc/terms/description",
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ]
+        ],
+        "edges": [
+          [
+            "source:http://ogp.me/ns#description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "owl:equivalentClass"
+          ]
+        ],
+        "metrics": {
+          "component_count": 7,
+          "connected_components": [
+            [
+              "source:http://ogp.me/ns#description",
+              "source:http://purl.org/dc/terms/description",
+              "source:https://ref.gs1.org/voc/description",
+              "uogto:https://w3id.org/uogto/core#description"
+            ],
+            [
+              "source:http://purl.org/dc/terms/identifier",
+              "uogto:https://w3id.org/uogto/core#identifier"
+            ],
+            [
+              "source:http://www.w3.org/2002/07/owl#Thing",
+              "uogto:https://w3id.org/uogto/extensions#Thing"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Agent",
+              "source:http://xmlns.com/foaf/0.1/Agent",
+              "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Role",
+              "uogto:https://w3id.org/uogto/core#Role"
+            ],
+            [
+              "source:http://www.w3.org/ns/sosa/observes",
+              "uogto:https://w3id.org/uogto/core#observes"
+            ],
+            [
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ]
+          ],
+          "degree": {
+            "source:http://ogp.me/ns#description": 1,
+            "source:http://purl.org/dc/terms/description": 1,
+            "source:http://purl.org/dc/terms/identifier": 1,
+            "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Role": 1,
+            "source:http://www.w3.org/ns/sosa/observes": 1,
+            "source:http://xmlns.com/foaf/0.1/Agent": 1,
+            "source:https://ref.gs1.org/voc/description": 1,
+            "source:https://schema.org/Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Role": 1,
+            "uogto:https://w3id.org/uogto/core#description": 3,
+            "uogto:https://w3id.org/uogto/core#identifier": 1,
+            "uogto:https://w3id.org/uogto/core#observes": 1,
+            "uogto:https://w3id.org/uogto/extensions#Thing": 1
+          },
+          "edge_count": 10,
+          "node_count": 17,
+          "orphan_nodes": []
+        },
+        "nodes": [
+          "source:http://ogp.me/ns#description",
+          "source:http://purl.org/dc/terms/description",
+          "source:http://purl.org/dc/terms/identifier",
+          "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Role",
+          "source:http://www.w3.org/ns/sosa/observes",
+          "source:http://xmlns.com/foaf/0.1/Agent",
+          "source:https://ref.gs1.org/voc/description",
+          "source:https://schema.org/Action",
+          "uogto:https://w3id.org/uogto/core#Action",
+          "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Role",
+          "uogto:https://w3id.org/uogto/core#description",
+          "uogto:https://w3id.org/uogto/core#identifier",
+          "uogto:https://w3id.org/uogto/core#observes",
+          "uogto:https://w3id.org/uogto/extensions#Thing"
+        ]
+      },
+      "source_graph": {
+        "bridge_terms": [
+          {
+            "degree": 46,
+            "node": "import:core"
+          },
+          {
+            "degree": 17,
+            "node": "metadata_only_sources"
+          },
+          {
+            "degree": 3,
+            "node": "format:turtle"
+          },
+          {
+            "degree": 2,
+            "node": "ssn_sosa"
+          },
+          {
+            "degree": 1,
+            "node": "bfo"
+          },
+          {
+            "degree": 1,
+            "node": "devs"
+          },
+          {
+            "degree": 1,
+            "node": "dolce"
+          },
+          {
+            "degree": 1,
+            "node": "emmo"
+          },
+          {
+            "degree": 1,
+            "node": "format:xml"
+          },
+          {
+            "degree": 1,
+            "node": "game_ontology_project"
+          },
+          {
+            "degree": 1,
+            "node": "gdlf_gamelan"
+          },
+          {
+            "degree": 1,
+            "node": "hla_fom"
+          },
+          {
+            "degree": 1,
+            "node": "import:sosa"
+          },
+          {
+            "degree": 1,
+            "node": "kaos"
+          },
+          {
+            "degree": 1,
+            "node": "kisao"
+          },
+          {
+            "degree": 1,
+            "node": "miase"
+          },
+          {
+            "degree": 1,
+            "node": "odd_protocol"
+          },
+          {
+            "degree": 1,
+            "node": "ontouml_ufo"
+          },
+          {
+            "degree": 1,
+            "node": "osmo"
+          },
+          {
+            "degree": 1,
+            "node": "owl_time"
+          }
+        ],
+        "communities": [
+          [
+            "bfo",
+            "devs",
+            "dolce",
+            "emmo",
+            "game_ontology_project",
+            "gdlf_gamelan",
+            "hla_fom",
+            "kaos",
+            "kisao",
+            "metadata_only_sources",
+            "miase",
+            "odd_protocol",
+            "ontouml_ufo",
+            "osmo",
+            "p_plan",
+            "sed_ml",
+            "vimmp_ontologies",
+            "xmile"
+          ],
+          [
+            "format:turtle",
+            "import:sosa",
+            "owl_time",
+            "schema_org",
+            "ssn_sosa"
+          ],
+          [
+            "format:xml",
+            "prov_o"
+          ],
+          [
+            "import:core",
+            "uogto_alignments_mcp-a2a",
+            "uogto_alignments_open-games",
+            "uogto_alignments_prov-o",
+            "uogto_alignments_schema-org",
+            "uogto_alignments_wot-thing-description",
+            "uogto_core_actions",
+            "uogto_core_agents",
+            "uogto_core_dynamics",
+            "uogto_core_equilibria",
+            "uogto_core_games",
+            "uogto_core_information",
+            "uogto_core_outcomes",
+            "uogto_core_payoffs",
+            "uogto_core_rules",
+            "uogto_core_strategies",
+            "uogto_extensions_algorithmic-game-theory",
+            "uogto_extensions_auctions",
+            "uogto_extensions_bargaining",
+            "uogto_extensions_behavioural-games",
+            "uogto_extensions_causal-games",
+            "uogto_extensions_compositional-open-games",
+            "uogto_extensions_computational-social-choice",
+            "uogto_extensions_congestion-routing-games",
+            "uogto_extensions_contract-theory",
+            "uogto_extensions_cooperative",
+            "uogto_extensions_deontic-logic",
+            "uogto_extensions_differential-hybrid-games",
+            "uogto_extensions_digital-twin-games",
+            "uogto_extensions_epistemic-games",
+            "uogto_extensions_evolutionary-games",
+            "uogto_extensions_game-description-languages",
+            "uogto_extensions_information-design",
+            "uogto_extensions_institutional-economics",
+            "uogto_extensions_kg-execution-bindings",
+            "uogto_extensions_learning-in-games",
+            "uogto_extensions_llm-agent-games",
+            "uogto_extensions_marl",
+            "uogto_extensions_matching-allocation",
+            "uogto_extensions_mean-field-games",
+            "uogto_extensions_mechanism-design",
+            "uogto_extensions_network-games",
+            "uogto_extensions_petri-net-devs-hla",
+            "uogto_extensions_privacy-disclosure",
+            "uogto_extensions_security-games",
+            "uogto_extensions_trust-reputation-provenance",
+            "uogto_extensions_verification-games"
+          ],
+          [
+            "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_extensions_algorithmic-solvers-patch"
+          ]
+        ],
+        "edges": [
+          [
+            "bfo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "devs",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "dolce",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "emmo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "game_ontology_project",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "gdlf_gamelan",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "hla_fom",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "kaos",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "kisao",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "miase",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "odd_protocol",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "ontouml_ufo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "osmo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "owl_time",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "p_plan",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "prov_o",
+            "format:xml",
+            "format"
+          ],
+          [
+            "schema_org",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "sed_ml",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "ssn_sosa",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "import:sosa",
+            "imports"
+          ],
+          [
+            "uogto_alignments_mcp-a2a",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_prov-o",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_schema-org",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_wot-thing-description",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_actions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_agents",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_dynamics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_equilibria",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_information",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_outcomes",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_payoffs",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_rules",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_strategies",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_algorithmic-game-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_auctions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_bargaining",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_behavioural-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_causal-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_compositional-open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_computational-social-choice",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_congestion-routing-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_contract-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_cooperative",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_deontic-logic",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_differential-hybrid-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_digital-twin-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_epistemic-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_evolutionary-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_game-description-languages",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_information-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_institutional-economics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_kg-execution-bindings",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_learning-in-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_llm-agent-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_marl",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_matching-allocation",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mean-field-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mechanism-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_network-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_petri-net-devs-hla",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_privacy-disclosure",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_security-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_trust-reputation-provenance",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_verification-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "vimmp_ontologies",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "xmile",
+            "metadata_only_sources",
+            "metadata"
+          ]
+        ],
+        "metrics": {
+          "component_count": 6,
+          "connected_components": [
+            [
+              "bfo",
+              "devs",
+              "dolce",
+              "emmo",
+              "game_ontology_project",
+              "gdlf_gamelan",
+              "hla_fom",
+              "kaos",
+              "kisao",
+              "metadata_only_sources",
+              "miase",
+              "odd_protocol",
+              "ontouml_ufo",
+              "osmo",
+              "p_plan",
+              "sed_ml",
+              "vimmp_ontologies",
+              "xmile"
+            ],
+            [
+              "format:turtle",
+              "import:sosa",
+              "owl_time",
+              "schema_org",
+              "ssn_sosa"
+            ],
+            [
+              "format:xml",
+              "prov_o"
+            ],
+            [
+              "import:core",
+              "uogto_alignments_mcp-a2a",
+              "uogto_alignments_open-games",
+              "uogto_alignments_prov-o",
+              "uogto_alignments_schema-org",
+              "uogto_alignments_wot-thing-description",
+              "uogto_core_actions",
+              "uogto_core_agents",
+              "uogto_core_dynamics",
+              "uogto_core_equilibria",
+              "uogto_core_games",
+              "uogto_core_information",
+              "uogto_core_outcomes",
+              "uogto_core_payoffs",
+              "uogto_core_rules",
+              "uogto_core_strategies",
+              "uogto_extensions_algorithmic-game-theory",
+              "uogto_extensions_auctions",
+              "uogto_extensions_bargaining",
+              "uogto_extensions_behavioural-games",
+              "uogto_extensions_causal-games",
+              "uogto_extensions_compositional-open-games",
+              "uogto_extensions_computational-social-choice",
+              "uogto_extensions_congestion-routing-games",
+              "uogto_extensions_contract-theory",
+              "uogto_extensions_cooperative",
+              "uogto_extensions_deontic-logic",
+              "uogto_extensions_differential-hybrid-games",
+              "uogto_extensions_digital-twin-games",
+              "uogto_extensions_epistemic-games",
+              "uogto_extensions_evolutionary-games",
+              "uogto_extensions_game-description-languages",
+              "uogto_extensions_information-design",
+              "uogto_extensions_institutional-economics",
+              "uogto_extensions_kg-execution-bindings",
+              "uogto_extensions_learning-in-games",
+              "uogto_extensions_llm-agent-games",
+              "uogto_extensions_marl",
+              "uogto_extensions_matching-allocation",
+              "uogto_extensions_mean-field-games",
+              "uogto_extensions_mechanism-design",
+              "uogto_extensions_network-games",
+              "uogto_extensions_petri-net-devs-hla",
+              "uogto_extensions_privacy-disclosure",
+              "uogto_extensions_security-games",
+              "uogto_extensions_trust-reputation-provenance",
+              "uogto_extensions_verification-games"
+            ],
+            [
+              "uogto_core_uogto-core"
+            ],
+            [
+              "uogto_extensions_algorithmic-solvers-patch"
+            ]
+          ],
+          "degree": {
+            "bfo": 1,
+            "devs": 1,
+            "dolce": 1,
+            "emmo": 1,
+            "format:turtle": 3,
+            "format:xml": 1,
+            "game_ontology_project": 1,
+            "gdlf_gamelan": 1,
+            "hla_fom": 1,
+            "import:core": 46,
+            "import:sosa": 1,
+            "kaos": 1,
+            "kisao": 1,
+            "metadata_only_sources": 17,
+            "miase": 1,
+            "odd_protocol": 1,
+            "ontouml_ufo": 1,
+            "osmo": 1,
+            "owl_time": 1,
+            "p_plan": 1,
+            "prov_o": 1,
+            "schema_org": 1,
+            "sed_ml": 1,
+            "ssn_sosa": 2,
+            "uogto_alignments_mcp-a2a": 1,
+            "uogto_alignments_open-games": 1,
+            "uogto_alignments_prov-o": 1,
+            "uogto_alignments_schema-org": 1,
+            "uogto_alignments_wot-thing-description": 1,
+            "uogto_core_actions": 1,
+            "uogto_core_agents": 1,
+            "uogto_core_dynamics": 1,
+            "uogto_core_equilibria": 1,
+            "uogto_core_games": 1,
+            "uogto_core_information": 1,
+            "uogto_core_outcomes": 1,
+            "uogto_core_payoffs": 1,
+            "uogto_core_rules": 1,
+            "uogto_core_strategies": 1,
+            "uogto_core_uogto-core": 0,
+            "uogto_extensions_algorithmic-game-theory": 1,
+            "uogto_extensions_algorithmic-solvers-patch": 0,
+            "uogto_extensions_auctions": 1,
+            "uogto_extensions_bargaining": 1,
+            "uogto_extensions_behavioural-games": 1,
+            "uogto_extensions_causal-games": 1,
+            "uogto_extensions_compositional-open-games": 1,
+            "uogto_extensions_computational-social-choice": 1,
+            "uogto_extensions_congestion-routing-games": 1,
+            "uogto_extensions_contract-theory": 1,
+            "uogto_extensions_cooperative": 1,
+            "uogto_extensions_deontic-logic": 1,
+            "uogto_extensions_differential-hybrid-games": 1,
+            "uogto_extensions_digital-twin-games": 1,
+            "uogto_extensions_epistemic-games": 1,
+            "uogto_extensions_evolutionary-games": 1,
+            "uogto_extensions_game-description-languages": 1,
+            "uogto_extensions_information-design": 1,
+            "uogto_extensions_institutional-economics": 1,
+            "uogto_extensions_kg-execution-bindings": 1,
+            "uogto_extensions_learning-in-games": 1,
+            "uogto_extensions_llm-agent-games": 1,
+            "uogto_extensions_marl": 1,
+            "uogto_extensions_matching-allocation": 1,
+            "uogto_extensions_mean-field-games": 1,
+            "uogto_extensions_mechanism-design": 1,
+            "uogto_extensions_network-games": 1,
+            "uogto_extensions_petri-net-devs-hla": 1,
+            "uogto_extensions_privacy-disclosure": 1,
+            "uogto_extensions_security-games": 1,
+            "uogto_extensions_trust-reputation-provenance": 1,
+            "uogto_extensions_verification-games": 1,
+            "vimmp_ontologies": 1,
+            "xmile": 1
+          },
+          "edge_count": 68,
+          "node_count": 74,
+          "orphan_nodes": [
+            "uogto_core_uogto-core",
+            "uogto_extensions_algorithmic-solvers-patch"
+          ]
+        },
+        "nodes": [
+          "bfo",
+          "devs",
+          "dolce",
+          "emmo",
+          "format:turtle",
+          "format:xml",
+          "game_ontology_project",
+          "gdlf_gamelan",
+          "hla_fom",
+          "import:core",
+          "import:sosa",
+          "kaos",
+          "kisao",
+          "metadata_only_sources",
+          "miase",
+          "odd_protocol",
+          "ontouml_ufo",
+          "osmo",
+          "owl_time",
+          "p_plan",
+          "prov_o",
+          "schema_org",
+          "sed_ml",
+          "ssn_sosa",
+          "uogto_alignments_mcp-a2a",
+          "uogto_alignments_open-games",
+          "uogto_alignments_prov-o",
+          "uogto_alignments_schema-org",
+          "uogto_alignments_wot-thing-description",
+          "uogto_core_actions",
+          "uogto_core_agents",
+          "uogto_core_dynamics",
+          "uogto_core_equilibria",
+          "uogto_core_games",
+          "uogto_core_information",
+          "uogto_core_outcomes",
+          "uogto_core_payoffs",
+          "uogto_core_rules",
+          "uogto_core_strategies",
+          "uogto_core_uogto-core",
+          "uogto_extensions_algorithmic-game-theory",
+          "uogto_extensions_algorithmic-solvers-patch",
+          "uogto_extensions_auctions",
+          "uogto_extensions_bargaining",
+          "uogto_extensions_behavioural-games",
+          "uogto_extensions_causal-games",
+          "uogto_extensions_compositional-open-games",
+          "uogto_extensions_computational-social-choice",
+          "uogto_extensions_congestion-routing-games",
+          "uogto_extensions_contract-theory",
+          "uogto_extensions_cooperative",
+          "uogto_extensions_deontic-logic",
+          "uogto_extensions_differential-hybrid-games",
+          "uogto_extensions_digital-twin-games",
+          "uogto_extensions_epistemic-games",
+          "uogto_extensions_evolutionary-games",
+          "uogto_extensions_game-description-languages",
+          "uogto_extensions_information-design",
+          "uogto_extensions_institutional-economics",
+          "uogto_extensions_kg-execution-bindings",
+          "uogto_extensions_learning-in-games",
+          "uogto_extensions_llm-agent-games",
+          "uogto_extensions_marl",
+          "uogto_extensions_matching-allocation",
+          "uogto_extensions_mean-field-games",
+          "uogto_extensions_mechanism-design",
+          "uogto_extensions_network-games",
+          "uogto_extensions_petri-net-devs-hla",
+          "uogto_extensions_privacy-disclosure",
+          "uogto_extensions_security-games",
+          "uogto_extensions_trust-reputation-provenance",
+          "uogto_extensions_verification-games",
+          "vimmp_ontologies",
+          "xmile"
+        ]
+      }
+    },
+    "all_sources__accepted_plus_close_related": {
+      "alignment_graph": {
+        "bridge_terms": [
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
+          },
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://ogp.me/ns#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/identifier"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/2002/07/owl#Thing"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Role"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/sosa/observes"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://xmlns.com/foaf/0.1/Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://ref.gs1.org/voc/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://schema.org/Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Role"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#identifier"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#observes"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/extensions#Thing"
+          }
+        ],
+        "communities": [
+          [
+            "source:http://ogp.me/ns#description",
+            "source:http://purl.org/dc/terms/description",
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "source:http://www.w3.org/ns/prov#agent",
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ]
+        ],
+        "edges": [
+          [
+            "source:http://ogp.me/ns#description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "skos:relatedMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "owl:equivalentClass"
+          ]
+        ],
+        "metrics": {
+          "component_count": 7,
+          "connected_components": [
+            [
+              "source:http://ogp.me/ns#description",
+              "source:http://purl.org/dc/terms/description",
+              "source:https://ref.gs1.org/voc/description",
+              "uogto:https://w3id.org/uogto/core#description"
+            ],
+            [
+              "source:http://purl.org/dc/terms/identifier",
+              "uogto:https://w3id.org/uogto/core#identifier"
+            ],
+            [
+              "source:http://www.w3.org/2002/07/owl#Thing",
+              "uogto:https://w3id.org/uogto/extensions#Thing"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Agent",
+              "source:http://www.w3.org/ns/prov#agent",
+              "source:http://xmlns.com/foaf/0.1/Agent",
+              "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Role",
+              "uogto:https://w3id.org/uogto/core#Role"
+            ],
+            [
+              "source:http://www.w3.org/ns/sosa/observes",
+              "uogto:https://w3id.org/uogto/core#observes"
+            ],
+            [
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ]
+          ],
+          "degree": {
+            "source:http://ogp.me/ns#description": 1,
+            "source:http://purl.org/dc/terms/description": 1,
+            "source:http://purl.org/dc/terms/identifier": 1,
+            "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Role": 1,
+            "source:http://www.w3.org/ns/prov#agent": 1,
+            "source:http://www.w3.org/ns/sosa/observes": 1,
+            "source:http://xmlns.com/foaf/0.1/Agent": 1,
+            "source:https://ref.gs1.org/voc/description": 1,
+            "source:https://schema.org/Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Agent": 3,
+            "uogto:https://w3id.org/uogto/core#Role": 1,
+            "uogto:https://w3id.org/uogto/core#description": 3,
+            "uogto:https://w3id.org/uogto/core#identifier": 1,
+            "uogto:https://w3id.org/uogto/core#observes": 1,
+            "uogto:https://w3id.org/uogto/extensions#Thing": 1
+          },
+          "edge_count": 11,
+          "node_count": 18,
+          "orphan_nodes": []
+        },
+        "nodes": [
+          "source:http://ogp.me/ns#description",
+          "source:http://purl.org/dc/terms/description",
+          "source:http://purl.org/dc/terms/identifier",
+          "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Role",
+          "source:http://www.w3.org/ns/prov#agent",
+          "source:http://www.w3.org/ns/sosa/observes",
+          "source:http://xmlns.com/foaf/0.1/Agent",
+          "source:https://ref.gs1.org/voc/description",
+          "source:https://schema.org/Action",
+          "uogto:https://w3id.org/uogto/core#Action",
+          "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Role",
+          "uogto:https://w3id.org/uogto/core#description",
+          "uogto:https://w3id.org/uogto/core#identifier",
+          "uogto:https://w3id.org/uogto/core#observes",
+          "uogto:https://w3id.org/uogto/extensions#Thing"
+        ]
+      },
+      "source_graph": {
+        "bridge_terms": [
+          {
+            "degree": 46,
+            "node": "import:core"
+          },
+          {
+            "degree": 17,
+            "node": "metadata_only_sources"
+          },
+          {
+            "degree": 3,
+            "node": "format:turtle"
+          },
+          {
+            "degree": 2,
+            "node": "ssn_sosa"
+          },
+          {
+            "degree": 1,
+            "node": "bfo"
+          },
+          {
+            "degree": 1,
+            "node": "devs"
+          },
+          {
+            "degree": 1,
+            "node": "dolce"
+          },
+          {
+            "degree": 1,
+            "node": "emmo"
+          },
+          {
+            "degree": 1,
+            "node": "format:xml"
+          },
+          {
+            "degree": 1,
+            "node": "game_ontology_project"
+          },
+          {
+            "degree": 1,
+            "node": "gdlf_gamelan"
+          },
+          {
+            "degree": 1,
+            "node": "hla_fom"
+          },
+          {
+            "degree": 1,
+            "node": "import:sosa"
+          },
+          {
+            "degree": 1,
+            "node": "kaos"
+          },
+          {
+            "degree": 1,
+            "node": "kisao"
+          },
+          {
+            "degree": 1,
+            "node": "miase"
+          },
+          {
+            "degree": 1,
+            "node": "odd_protocol"
+          },
+          {
+            "degree": 1,
+            "node": "ontouml_ufo"
+          },
+          {
+            "degree": 1,
+            "node": "osmo"
+          },
+          {
+            "degree": 1,
+            "node": "owl_time"
+          }
+        ],
+        "communities": [
+          [
+            "bfo",
+            "devs",
+            "dolce",
+            "emmo",
+            "game_ontology_project",
+            "gdlf_gamelan",
+            "hla_fom",
+            "kaos",
+            "kisao",
+            "metadata_only_sources",
+            "miase",
+            "odd_protocol",
+            "ontouml_ufo",
+            "osmo",
+            "p_plan",
+            "sed_ml",
+            "vimmp_ontologies",
+            "xmile"
+          ],
+          [
+            "format:turtle",
+            "import:sosa",
+            "owl_time",
+            "schema_org",
+            "ssn_sosa"
+          ],
+          [
+            "format:xml",
+            "prov_o"
+          ],
+          [
+            "import:core",
+            "uogto_alignments_mcp-a2a",
+            "uogto_alignments_open-games",
+            "uogto_alignments_prov-o",
+            "uogto_alignments_schema-org",
+            "uogto_alignments_wot-thing-description",
+            "uogto_core_actions",
+            "uogto_core_agents",
+            "uogto_core_dynamics",
+            "uogto_core_equilibria",
+            "uogto_core_games",
+            "uogto_core_information",
+            "uogto_core_outcomes",
+            "uogto_core_payoffs",
+            "uogto_core_rules",
+            "uogto_core_strategies",
+            "uogto_extensions_algorithmic-game-theory",
+            "uogto_extensions_auctions",
+            "uogto_extensions_bargaining",
+            "uogto_extensions_behavioural-games",
+            "uogto_extensions_causal-games",
+            "uogto_extensions_compositional-open-games",
+            "uogto_extensions_computational-social-choice",
+            "uogto_extensions_congestion-routing-games",
+            "uogto_extensions_contract-theory",
+            "uogto_extensions_cooperative",
+            "uogto_extensions_deontic-logic",
+            "uogto_extensions_differential-hybrid-games",
+            "uogto_extensions_digital-twin-games",
+            "uogto_extensions_epistemic-games",
+            "uogto_extensions_evolutionary-games",
+            "uogto_extensions_game-description-languages",
+            "uogto_extensions_information-design",
+            "uogto_extensions_institutional-economics",
+            "uogto_extensions_kg-execution-bindings",
+            "uogto_extensions_learning-in-games",
+            "uogto_extensions_llm-agent-games",
+            "uogto_extensions_marl",
+            "uogto_extensions_matching-allocation",
+            "uogto_extensions_mean-field-games",
+            "uogto_extensions_mechanism-design",
+            "uogto_extensions_network-games",
+            "uogto_extensions_petri-net-devs-hla",
+            "uogto_extensions_privacy-disclosure",
+            "uogto_extensions_security-games",
+            "uogto_extensions_trust-reputation-provenance",
+            "uogto_extensions_verification-games"
+          ],
+          [
+            "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_extensions_algorithmic-solvers-patch"
+          ]
+        ],
+        "edges": [
+          [
+            "bfo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "devs",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "dolce",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "emmo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "game_ontology_project",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "gdlf_gamelan",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "hla_fom",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "kaos",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "kisao",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "miase",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "odd_protocol",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "ontouml_ufo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "osmo",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "owl_time",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "p_plan",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "prov_o",
+            "format:xml",
+            "format"
+          ],
+          [
+            "schema_org",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "sed_ml",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "ssn_sosa",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "import:sosa",
+            "imports"
+          ],
+          [
+            "uogto_alignments_mcp-a2a",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_prov-o",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_schema-org",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_wot-thing-description",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_actions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_agents",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_dynamics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_equilibria",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_information",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_outcomes",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_payoffs",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_rules",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_strategies",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_algorithmic-game-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_auctions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_bargaining",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_behavioural-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_causal-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_compositional-open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_computational-social-choice",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_congestion-routing-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_contract-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_cooperative",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_deontic-logic",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_differential-hybrid-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_digital-twin-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_epistemic-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_evolutionary-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_game-description-languages",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_information-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_institutional-economics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_kg-execution-bindings",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_learning-in-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_llm-agent-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_marl",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_matching-allocation",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mean-field-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mechanism-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_network-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_petri-net-devs-hla",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_privacy-disclosure",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_security-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_trust-reputation-provenance",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_verification-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "vimmp_ontologies",
+            "metadata_only_sources",
+            "metadata"
+          ],
+          [
+            "xmile",
+            "metadata_only_sources",
+            "metadata"
+          ]
+        ],
+        "metrics": {
+          "component_count": 6,
+          "connected_components": [
+            [
+              "bfo",
+              "devs",
+              "dolce",
+              "emmo",
+              "game_ontology_project",
+              "gdlf_gamelan",
+              "hla_fom",
+              "kaos",
+              "kisao",
+              "metadata_only_sources",
+              "miase",
+              "odd_protocol",
+              "ontouml_ufo",
+              "osmo",
+              "p_plan",
+              "sed_ml",
+              "vimmp_ontologies",
+              "xmile"
+            ],
+            [
+              "format:turtle",
+              "import:sosa",
+              "owl_time",
+              "schema_org",
+              "ssn_sosa"
+            ],
+            [
+              "format:xml",
+              "prov_o"
+            ],
+            [
+              "import:core",
+              "uogto_alignments_mcp-a2a",
+              "uogto_alignments_open-games",
+              "uogto_alignments_prov-o",
+              "uogto_alignments_schema-org",
+              "uogto_alignments_wot-thing-description",
+              "uogto_core_actions",
+              "uogto_core_agents",
+              "uogto_core_dynamics",
+              "uogto_core_equilibria",
+              "uogto_core_games",
+              "uogto_core_information",
+              "uogto_core_outcomes",
+              "uogto_core_payoffs",
+              "uogto_core_rules",
+              "uogto_core_strategies",
+              "uogto_extensions_algorithmic-game-theory",
+              "uogto_extensions_auctions",
+              "uogto_extensions_bargaining",
+              "uogto_extensions_behavioural-games",
+              "uogto_extensions_causal-games",
+              "uogto_extensions_compositional-open-games",
+              "uogto_extensions_computational-social-choice",
+              "uogto_extensions_congestion-routing-games",
+              "uogto_extensions_contract-theory",
+              "uogto_extensions_cooperative",
+              "uogto_extensions_deontic-logic",
+              "uogto_extensions_differential-hybrid-games",
+              "uogto_extensions_digital-twin-games",
+              "uogto_extensions_epistemic-games",
+              "uogto_extensions_evolutionary-games",
+              "uogto_extensions_game-description-languages",
+              "uogto_extensions_information-design",
+              "uogto_extensions_institutional-economics",
+              "uogto_extensions_kg-execution-bindings",
+              "uogto_extensions_learning-in-games",
+              "uogto_extensions_llm-agent-games",
+              "uogto_extensions_marl",
+              "uogto_extensions_matching-allocation",
+              "uogto_extensions_mean-field-games",
+              "uogto_extensions_mechanism-design",
+              "uogto_extensions_network-games",
+              "uogto_extensions_petri-net-devs-hla",
+              "uogto_extensions_privacy-disclosure",
+              "uogto_extensions_security-games",
+              "uogto_extensions_trust-reputation-provenance",
+              "uogto_extensions_verification-games"
+            ],
+            [
+              "uogto_core_uogto-core"
+            ],
+            [
+              "uogto_extensions_algorithmic-solvers-patch"
+            ]
+          ],
+          "degree": {
+            "bfo": 1,
+            "devs": 1,
+            "dolce": 1,
+            "emmo": 1,
+            "format:turtle": 3,
+            "format:xml": 1,
+            "game_ontology_project": 1,
+            "gdlf_gamelan": 1,
+            "hla_fom": 1,
+            "import:core": 46,
+            "import:sosa": 1,
+            "kaos": 1,
+            "kisao": 1,
+            "metadata_only_sources": 17,
+            "miase": 1,
+            "odd_protocol": 1,
+            "ontouml_ufo": 1,
+            "osmo": 1,
+            "owl_time": 1,
+            "p_plan": 1,
+            "prov_o": 1,
+            "schema_org": 1,
+            "sed_ml": 1,
+            "ssn_sosa": 2,
+            "uogto_alignments_mcp-a2a": 1,
+            "uogto_alignments_open-games": 1,
+            "uogto_alignments_prov-o": 1,
+            "uogto_alignments_schema-org": 1,
+            "uogto_alignments_wot-thing-description": 1,
+            "uogto_core_actions": 1,
+            "uogto_core_agents": 1,
+            "uogto_core_dynamics": 1,
+            "uogto_core_equilibria": 1,
+            "uogto_core_games": 1,
+            "uogto_core_information": 1,
+            "uogto_core_outcomes": 1,
+            "uogto_core_payoffs": 1,
+            "uogto_core_rules": 1,
+            "uogto_core_strategies": 1,
+            "uogto_core_uogto-core": 0,
+            "uogto_extensions_algorithmic-game-theory": 1,
+            "uogto_extensions_algorithmic-solvers-patch": 0,
+            "uogto_extensions_auctions": 1,
+            "uogto_extensions_bargaining": 1,
+            "uogto_extensions_behavioural-games": 1,
+            "uogto_extensions_causal-games": 1,
+            "uogto_extensions_compositional-open-games": 1,
+            "uogto_extensions_computational-social-choice": 1,
+            "uogto_extensions_congestion-routing-games": 1,
+            "uogto_extensions_contract-theory": 1,
+            "uogto_extensions_cooperative": 1,
+            "uogto_extensions_deontic-logic": 1,
+            "uogto_extensions_differential-hybrid-games": 1,
+            "uogto_extensions_digital-twin-games": 1,
+            "uogto_extensions_epistemic-games": 1,
+            "uogto_extensions_evolutionary-games": 1,
+            "uogto_extensions_game-description-languages": 1,
+            "uogto_extensions_information-design": 1,
+            "uogto_extensions_institutional-economics": 1,
+            "uogto_extensions_kg-execution-bindings": 1,
+            "uogto_extensions_learning-in-games": 1,
+            "uogto_extensions_llm-agent-games": 1,
+            "uogto_extensions_marl": 1,
+            "uogto_extensions_matching-allocation": 1,
+            "uogto_extensions_mean-field-games": 1,
+            "uogto_extensions_mechanism-design": 1,
+            "uogto_extensions_network-games": 1,
+            "uogto_extensions_petri-net-devs-hla": 1,
+            "uogto_extensions_privacy-disclosure": 1,
+            "uogto_extensions_security-games": 1,
+            "uogto_extensions_trust-reputation-provenance": 1,
+            "uogto_extensions_verification-games": 1,
+            "vimmp_ontologies": 1,
+            "xmile": 1
+          },
+          "edge_count": 68,
+          "node_count": 74,
+          "orphan_nodes": [
+            "uogto_core_uogto-core",
+            "uogto_extensions_algorithmic-solvers-patch"
+          ]
+        },
+        "nodes": [
+          "bfo",
+          "devs",
+          "dolce",
+          "emmo",
+          "format:turtle",
+          "format:xml",
+          "game_ontology_project",
+          "gdlf_gamelan",
+          "hla_fom",
+          "import:core",
+          "import:sosa",
+          "kaos",
+          "kisao",
+          "metadata_only_sources",
+          "miase",
+          "odd_protocol",
+          "ontouml_ufo",
+          "osmo",
+          "owl_time",
+          "p_plan",
+          "prov_o",
+          "schema_org",
+          "sed_ml",
+          "ssn_sosa",
+          "uogto_alignments_mcp-a2a",
+          "uogto_alignments_open-games",
+          "uogto_alignments_prov-o",
+          "uogto_alignments_schema-org",
+          "uogto_alignments_wot-thing-description",
+          "uogto_core_actions",
+          "uogto_core_agents",
+          "uogto_core_dynamics",
+          "uogto_core_equilibria",
+          "uogto_core_games",
+          "uogto_core_information",
+          "uogto_core_outcomes",
+          "uogto_core_payoffs",
+          "uogto_core_rules",
+          "uogto_core_strategies",
+          "uogto_core_uogto-core",
+          "uogto_extensions_algorithmic-game-theory",
+          "uogto_extensions_algorithmic-solvers-patch",
+          "uogto_extensions_auctions",
+          "uogto_extensions_bargaining",
+          "uogto_extensions_behavioural-games",
+          "uogto_extensions_causal-games",
+          "uogto_extensions_compositional-open-games",
+          "uogto_extensions_computational-social-choice",
+          "uogto_extensions_congestion-routing-games",
+          "uogto_extensions_contract-theory",
+          "uogto_extensions_cooperative",
+          "uogto_extensions_deontic-logic",
+          "uogto_extensions_differential-hybrid-games",
+          "uogto_extensions_digital-twin-games",
+          "uogto_extensions_epistemic-games",
+          "uogto_extensions_evolutionary-games",
+          "uogto_extensions_game-description-languages",
+          "uogto_extensions_information-design",
+          "uogto_extensions_institutional-economics",
+          "uogto_extensions_kg-execution-bindings",
+          "uogto_extensions_learning-in-games",
+          "uogto_extensions_llm-agent-games",
+          "uogto_extensions_marl",
+          "uogto_extensions_matching-allocation",
+          "uogto_extensions_mean-field-games",
+          "uogto_extensions_mechanism-design",
+          "uogto_extensions_network-games",
+          "uogto_extensions_petri-net-devs-hla",
+          "uogto_extensions_privacy-disclosure",
+          "uogto_extensions_security-games",
+          "uogto_extensions_trust-reputation-provenance",
+          "uogto_extensions_verification-games",
+          "vimmp_ontologies",
+          "xmile"
+        ]
+      }
+    },
+    "parsed_sources_only__accepted_mappings": {
+      "alignment_graph": {
+        "bridge_terms": [
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#description"
+          },
+          {
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://ogp.me/ns#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/identifier"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/2002/07/owl#Thing"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Role"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/sosa/observes"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://xmlns.com/foaf/0.1/Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://ref.gs1.org/voc/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://schema.org/Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Role"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#identifier"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#observes"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/extensions#Thing"
+          }
+        ],
+        "communities": [
+          [
+            "source:http://ogp.me/ns#description",
+            "source:http://purl.org/dc/terms/description",
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ]
+        ],
+        "edges": [
+          [
+            "source:http://ogp.me/ns#description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "owl:equivalentClass"
+          ]
+        ],
+        "metrics": {
+          "component_count": 7,
+          "connected_components": [
+            [
+              "source:http://ogp.me/ns#description",
+              "source:http://purl.org/dc/terms/description",
+              "source:https://ref.gs1.org/voc/description",
+              "uogto:https://w3id.org/uogto/core#description"
+            ],
+            [
+              "source:http://purl.org/dc/terms/identifier",
+              "uogto:https://w3id.org/uogto/core#identifier"
+            ],
+            [
+              "source:http://www.w3.org/2002/07/owl#Thing",
+              "uogto:https://w3id.org/uogto/extensions#Thing"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Agent",
+              "source:http://xmlns.com/foaf/0.1/Agent",
+              "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Role",
+              "uogto:https://w3id.org/uogto/core#Role"
+            ],
+            [
+              "source:http://www.w3.org/ns/sosa/observes",
+              "uogto:https://w3id.org/uogto/core#observes"
+            ],
+            [
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ]
+          ],
+          "degree": {
+            "source:http://ogp.me/ns#description": 1,
+            "source:http://purl.org/dc/terms/description": 1,
+            "source:http://purl.org/dc/terms/identifier": 1,
+            "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Role": 1,
+            "source:http://www.w3.org/ns/sosa/observes": 1,
+            "source:http://xmlns.com/foaf/0.1/Agent": 1,
+            "source:https://ref.gs1.org/voc/description": 1,
+            "source:https://schema.org/Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Role": 1,
+            "uogto:https://w3id.org/uogto/core#description": 3,
+            "uogto:https://w3id.org/uogto/core#identifier": 1,
+            "uogto:https://w3id.org/uogto/core#observes": 1,
+            "uogto:https://w3id.org/uogto/extensions#Thing": 1
+          },
+          "edge_count": 10,
+          "node_count": 17,
+          "orphan_nodes": []
+        },
+        "nodes": [
+          "source:http://ogp.me/ns#description",
+          "source:http://purl.org/dc/terms/description",
+          "source:http://purl.org/dc/terms/identifier",
+          "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Role",
+          "source:http://www.w3.org/ns/sosa/observes",
+          "source:http://xmlns.com/foaf/0.1/Agent",
+          "source:https://ref.gs1.org/voc/description",
+          "source:https://schema.org/Action",
+          "uogto:https://w3id.org/uogto/core#Action",
+          "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Role",
+          "uogto:https://w3id.org/uogto/core#description",
+          "uogto:https://w3id.org/uogto/core#identifier",
+          "uogto:https://w3id.org/uogto/core#observes",
+          "uogto:https://w3id.org/uogto/extensions#Thing"
+        ]
+      },
+      "source_graph": {
+        "bridge_terms": [
+          {
+            "degree": 46,
+            "node": "import:core"
+          },
+          {
+            "degree": 3,
+            "node": "format:turtle"
+          },
+          {
+            "degree": 2,
+            "node": "ssn_sosa"
+          },
+          {
+            "degree": 1,
+            "node": "format:xml"
+          },
+          {
+            "degree": 1,
+            "node": "import:sosa"
+          },
+          {
+            "degree": 1,
+            "node": "owl_time"
+          },
+          {
+            "degree": 1,
+            "node": "prov_o"
+          },
+          {
+            "degree": 1,
+            "node": "schema_org"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_mcp-a2a"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_open-games"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_prov-o"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_schema-org"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_wot-thing-description"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_actions"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_agents"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_dynamics"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_equilibria"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_games"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_information"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_outcomes"
+          }
+        ],
+        "communities": [
+          [
+            "bfo"
+          ],
+          [
+            "devs"
+          ],
+          [
+            "dolce"
+          ],
+          [
+            "emmo"
+          ],
+          [
+            "format:turtle",
+            "import:sosa",
+            "owl_time",
+            "schema_org",
+            "ssn_sosa"
+          ],
+          [
+            "format:xml",
+            "prov_o"
+          ],
+          [
+            "game_ontology_project"
+          ],
+          [
+            "gdlf_gamelan"
+          ],
+          [
+            "hla_fom"
+          ],
+          [
+            "import:core",
+            "uogto_alignments_mcp-a2a",
+            "uogto_alignments_open-games",
+            "uogto_alignments_prov-o",
+            "uogto_alignments_schema-org",
+            "uogto_alignments_wot-thing-description",
+            "uogto_core_actions",
+            "uogto_core_agents",
+            "uogto_core_dynamics",
+            "uogto_core_equilibria",
+            "uogto_core_games",
+            "uogto_core_information",
+            "uogto_core_outcomes",
+            "uogto_core_payoffs",
+            "uogto_core_rules",
+            "uogto_core_strategies",
+            "uogto_extensions_algorithmic-game-theory",
+            "uogto_extensions_auctions",
+            "uogto_extensions_bargaining",
+            "uogto_extensions_behavioural-games",
+            "uogto_extensions_causal-games",
+            "uogto_extensions_compositional-open-games",
+            "uogto_extensions_computational-social-choice",
+            "uogto_extensions_congestion-routing-games",
+            "uogto_extensions_contract-theory",
+            "uogto_extensions_cooperative",
+            "uogto_extensions_deontic-logic",
+            "uogto_extensions_differential-hybrid-games",
+            "uogto_extensions_digital-twin-games",
+            "uogto_extensions_epistemic-games",
+            "uogto_extensions_evolutionary-games",
+            "uogto_extensions_game-description-languages",
+            "uogto_extensions_information-design",
+            "uogto_extensions_institutional-economics",
+            "uogto_extensions_kg-execution-bindings",
+            "uogto_extensions_learning-in-games",
+            "uogto_extensions_llm-agent-games",
+            "uogto_extensions_marl",
+            "uogto_extensions_matching-allocation",
+            "uogto_extensions_mean-field-games",
+            "uogto_extensions_mechanism-design",
+            "uogto_extensions_network-games",
+            "uogto_extensions_petri-net-devs-hla",
+            "uogto_extensions_privacy-disclosure",
+            "uogto_extensions_security-games",
+            "uogto_extensions_trust-reputation-provenance",
+            "uogto_extensions_verification-games"
+          ],
+          [
+            "kaos"
+          ],
+          [
+            "kisao"
+          ],
+          [
+            "miase"
+          ],
+          [
+            "odd_protocol"
+          ],
+          [
+            "ontouml_ufo"
+          ],
+          [
+            "osmo"
+          ],
+          [
+            "p_plan"
+          ],
+          [
+            "sed_ml"
+          ],
+          [
+            "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_extensions_algorithmic-solvers-patch"
+          ],
+          [
+            "vimmp_ontologies"
+          ],
+          [
+            "xmile"
+          ]
+        ],
+        "edges": [
+          [
+            "owl_time",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "prov_o",
+            "format:xml",
+            "format"
+          ],
+          [
+            "schema_org",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "import:sosa",
+            "imports"
+          ],
+          [
+            "uogto_alignments_mcp-a2a",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_prov-o",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_schema-org",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_wot-thing-description",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_actions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_agents",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_dynamics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_equilibria",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_information",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_outcomes",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_payoffs",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_rules",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_strategies",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_algorithmic-game-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_auctions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_bargaining",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_behavioural-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_causal-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_compositional-open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_computational-social-choice",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_congestion-routing-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_contract-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_cooperative",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_deontic-logic",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_differential-hybrid-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_digital-twin-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_epistemic-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_evolutionary-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_game-description-languages",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_information-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_institutional-economics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_kg-execution-bindings",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_learning-in-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_llm-agent-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_marl",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_matching-allocation",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mean-field-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mechanism-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_network-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_petri-net-devs-hla",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_privacy-disclosure",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_security-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_trust-reputation-provenance",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_verification-games",
+            "import:core",
+            "imports"
+          ]
+        ],
+        "metrics": {
+          "component_count": 22,
+          "connected_components": [
+            [
+              "bfo"
+            ],
+            [
+              "devs"
+            ],
+            [
+              "dolce"
+            ],
+            [
+              "emmo"
+            ],
+            [
+              "format:turtle",
+              "import:sosa",
+              "owl_time",
+              "schema_org",
+              "ssn_sosa"
+            ],
+            [
+              "format:xml",
+              "prov_o"
+            ],
+            [
+              "game_ontology_project"
+            ],
+            [
+              "gdlf_gamelan"
+            ],
+            [
+              "hla_fom"
+            ],
+            [
+              "import:core",
+              "uogto_alignments_mcp-a2a",
+              "uogto_alignments_open-games",
+              "uogto_alignments_prov-o",
+              "uogto_alignments_schema-org",
+              "uogto_alignments_wot-thing-description",
+              "uogto_core_actions",
+              "uogto_core_agents",
+              "uogto_core_dynamics",
+              "uogto_core_equilibria",
+              "uogto_core_games",
+              "uogto_core_information",
+              "uogto_core_outcomes",
+              "uogto_core_payoffs",
+              "uogto_core_rules",
+              "uogto_core_strategies",
+              "uogto_extensions_algorithmic-game-theory",
+              "uogto_extensions_auctions",
+              "uogto_extensions_bargaining",
+              "uogto_extensions_behavioural-games",
+              "uogto_extensions_causal-games",
+              "uogto_extensions_compositional-open-games",
+              "uogto_extensions_computational-social-choice",
+              "uogto_extensions_congestion-routing-games",
+              "uogto_extensions_contract-theory",
+              "uogto_extensions_cooperative",
+              "uogto_extensions_deontic-logic",
+              "uogto_extensions_differential-hybrid-games",
+              "uogto_extensions_digital-twin-games",
+              "uogto_extensions_epistemic-games",
+              "uogto_extensions_evolutionary-games",
+              "uogto_extensions_game-description-languages",
+              "uogto_extensions_information-design",
+              "uogto_extensions_institutional-economics",
+              "uogto_extensions_kg-execution-bindings",
+              "uogto_extensions_learning-in-games",
+              "uogto_extensions_llm-agent-games",
+              "uogto_extensions_marl",
+              "uogto_extensions_matching-allocation",
+              "uogto_extensions_mean-field-games",
+              "uogto_extensions_mechanism-design",
+              "uogto_extensions_network-games",
+              "uogto_extensions_petri-net-devs-hla",
+              "uogto_extensions_privacy-disclosure",
+              "uogto_extensions_security-games",
+              "uogto_extensions_trust-reputation-provenance",
+              "uogto_extensions_verification-games"
+            ],
+            [
+              "kaos"
+            ],
+            [
+              "kisao"
+            ],
+            [
+              "miase"
+            ],
+            [
+              "odd_protocol"
+            ],
+            [
+              "ontouml_ufo"
+            ],
+            [
+              "osmo"
+            ],
+            [
+              "p_plan"
+            ],
+            [
+              "sed_ml"
+            ],
+            [
+              "uogto_core_uogto-core"
+            ],
+            [
+              "uogto_extensions_algorithmic-solvers-patch"
+            ],
+            [
+              "vimmp_ontologies"
+            ],
+            [
+              "xmile"
+            ]
+          ],
+          "degree": {
+            "bfo": 0,
+            "devs": 0,
+            "dolce": 0,
+            "emmo": 0,
+            "format:turtle": 3,
+            "format:xml": 1,
+            "game_ontology_project": 0,
+            "gdlf_gamelan": 0,
+            "hla_fom": 0,
+            "import:core": 46,
+            "import:sosa": 1,
+            "kaos": 0,
+            "kisao": 0,
+            "miase": 0,
+            "odd_protocol": 0,
+            "ontouml_ufo": 0,
+            "osmo": 0,
+            "owl_time": 1,
+            "p_plan": 0,
+            "prov_o": 1,
+            "schema_org": 1,
+            "sed_ml": 0,
+            "ssn_sosa": 2,
+            "uogto_alignments_mcp-a2a": 1,
+            "uogto_alignments_open-games": 1,
+            "uogto_alignments_prov-o": 1,
+            "uogto_alignments_schema-org": 1,
+            "uogto_alignments_wot-thing-description": 1,
+            "uogto_core_actions": 1,
+            "uogto_core_agents": 1,
+            "uogto_core_dynamics": 1,
+            "uogto_core_equilibria": 1,
+            "uogto_core_games": 1,
+            "uogto_core_information": 1,
+            "uogto_core_outcomes": 1,
+            "uogto_core_payoffs": 1,
+            "uogto_core_rules": 1,
+            "uogto_core_strategies": 1,
+            "uogto_core_uogto-core": 0,
+            "uogto_extensions_algorithmic-game-theory": 1,
+            "uogto_extensions_algorithmic-solvers-patch": 0,
+            "uogto_extensions_auctions": 1,
+            "uogto_extensions_bargaining": 1,
+            "uogto_extensions_behavioural-games": 1,
+            "uogto_extensions_causal-games": 1,
+            "uogto_extensions_compositional-open-games": 1,
+            "uogto_extensions_computational-social-choice": 1,
+            "uogto_extensions_congestion-routing-games": 1,
+            "uogto_extensions_contract-theory": 1,
+            "uogto_extensions_cooperative": 1,
+            "uogto_extensions_deontic-logic": 1,
+            "uogto_extensions_differential-hybrid-games": 1,
+            "uogto_extensions_digital-twin-games": 1,
+            "uogto_extensions_epistemic-games": 1,
+            "uogto_extensions_evolutionary-games": 1,
+            "uogto_extensions_game-description-languages": 1,
+            "uogto_extensions_information-design": 1,
+            "uogto_extensions_institutional-economics": 1,
+            "uogto_extensions_kg-execution-bindings": 1,
+            "uogto_extensions_learning-in-games": 1,
+            "uogto_extensions_llm-agent-games": 1,
+            "uogto_extensions_marl": 1,
+            "uogto_extensions_matching-allocation": 1,
+            "uogto_extensions_mean-field-games": 1,
+            "uogto_extensions_mechanism-design": 1,
+            "uogto_extensions_network-games": 1,
+            "uogto_extensions_petri-net-devs-hla": 1,
+            "uogto_extensions_privacy-disclosure": 1,
+            "uogto_extensions_security-games": 1,
+            "uogto_extensions_trust-reputation-provenance": 1,
+            "uogto_extensions_verification-games": 1,
+            "vimmp_ontologies": 0,
+            "xmile": 0
+          },
+          "edge_count": 51,
+          "node_count": 73,
+          "orphan_nodes": [
+            "bfo",
+            "devs",
+            "dolce",
+            "emmo",
+            "game_ontology_project",
+            "gdlf_gamelan",
+            "hla_fom",
+            "kaos",
+            "kisao",
+            "miase",
+            "odd_protocol",
+            "ontouml_ufo",
+            "osmo",
+            "p_plan",
+            "sed_ml",
+            "uogto_core_uogto-core",
+            "uogto_extensions_algorithmic-solvers-patch",
+            "vimmp_ontologies",
+            "xmile"
+          ]
+        },
+        "nodes": [
+          "bfo",
+          "devs",
+          "dolce",
+          "emmo",
+          "format:turtle",
+          "format:xml",
+          "game_ontology_project",
+          "gdlf_gamelan",
+          "hla_fom",
+          "import:core",
+          "import:sosa",
+          "kaos",
+          "kisao",
+          "miase",
+          "odd_protocol",
+          "ontouml_ufo",
+          "osmo",
+          "owl_time",
+          "p_plan",
+          "prov_o",
+          "schema_org",
+          "sed_ml",
+          "ssn_sosa",
+          "uogto_alignments_mcp-a2a",
+          "uogto_alignments_open-games",
+          "uogto_alignments_prov-o",
+          "uogto_alignments_schema-org",
+          "uogto_alignments_wot-thing-description",
+          "uogto_core_actions",
+          "uogto_core_agents",
+          "uogto_core_dynamics",
+          "uogto_core_equilibria",
+          "uogto_core_games",
+          "uogto_core_information",
+          "uogto_core_outcomes",
+          "uogto_core_payoffs",
+          "uogto_core_rules",
+          "uogto_core_strategies",
+          "uogto_core_uogto-core",
+          "uogto_extensions_algorithmic-game-theory",
+          "uogto_extensions_algorithmic-solvers-patch",
+          "uogto_extensions_auctions",
+          "uogto_extensions_bargaining",
+          "uogto_extensions_behavioural-games",
+          "uogto_extensions_causal-games",
+          "uogto_extensions_compositional-open-games",
+          "uogto_extensions_computational-social-choice",
+          "uogto_extensions_congestion-routing-games",
+          "uogto_extensions_contract-theory",
+          "uogto_extensions_cooperative",
+          "uogto_extensions_deontic-logic",
+          "uogto_extensions_differential-hybrid-games",
+          "uogto_extensions_digital-twin-games",
+          "uogto_extensions_epistemic-games",
+          "uogto_extensions_evolutionary-games",
+          "uogto_extensions_game-description-languages",
+          "uogto_extensions_information-design",
+          "uogto_extensions_institutional-economics",
+          "uogto_extensions_kg-execution-bindings",
+          "uogto_extensions_learning-in-games",
+          "uogto_extensions_llm-agent-games",
+          "uogto_extensions_marl",
+          "uogto_extensions_matching-allocation",
+          "uogto_extensions_mean-field-games",
+          "uogto_extensions_mechanism-design",
+          "uogto_extensions_network-games",
+          "uogto_extensions_petri-net-devs-hla",
+          "uogto_extensions_privacy-disclosure",
+          "uogto_extensions_security-games",
+          "uogto_extensions_trust-reputation-provenance",
+          "uogto_extensions_verification-games",
+          "vimmp_ontologies",
+          "xmile"
+        ]
+      }
+    },
+    "parsed_sources_only__accepted_plus_close_related": {
+      "alignment_graph": {
+        "bridge_terms": [
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
+          },
+          {
+            "degree": 3,
+            "node": "uogto:https://w3id.org/uogto/core#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://ogp.me/ns#description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://purl.org/dc/terms/identifier"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/2002/07/owl#Thing"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Role"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/sosa/observes"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://xmlns.com/foaf/0.1/Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://ref.gs1.org/voc/description"
+          },
+          {
+            "degree": 1,
+            "node": "source:https://schema.org/Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#Role"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#identifier"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/core#observes"
+          },
+          {
+            "degree": 1,
+            "node": "uogto:https://w3id.org/uogto/extensions#Thing"
+          }
+        ],
+        "communities": [
+          [
+            "source:http://ogp.me/ns#description",
+            "source:http://purl.org/dc/terms/description",
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "source:http://www.w3.org/ns/prov#agent",
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ]
+        ],
+        "edges": [
+          [
+            "source:http://ogp.me/ns#description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://purl.org/dc/terms/identifier",
+            "uogto:https://w3id.org/uogto/core#identifier",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://www.w3.org/2002/07/owl#Thing",
+            "uogto:https://w3id.org/uogto/extensions#Thing",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Role",
+            "uogto:https://w3id.org/uogto/core#Role",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "skos:relatedMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/sosa/observes",
+            "uogto:https://w3id.org/uogto/core#observes",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:http://xmlns.com/foaf/0.1/Agent",
+            "uogto:https://w3id.org/uogto/core#Agent",
+            "owl:equivalentClass"
+          ],
+          [
+            "source:https://ref.gs1.org/voc/description",
+            "uogto:https://w3id.org/uogto/core#description",
+            "owl:equivalentProperty"
+          ],
+          [
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "owl:equivalentClass"
+          ]
+        ],
+        "metrics": {
+          "component_count": 7,
+          "connected_components": [
+            [
+              "source:http://ogp.me/ns#description",
+              "source:http://purl.org/dc/terms/description",
+              "source:https://ref.gs1.org/voc/description",
+              "uogto:https://w3id.org/uogto/core#description"
+            ],
+            [
+              "source:http://purl.org/dc/terms/identifier",
+              "uogto:https://w3id.org/uogto/core#identifier"
+            ],
+            [
+              "source:http://www.w3.org/2002/07/owl#Thing",
+              "uogto:https://w3id.org/uogto/extensions#Thing"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Agent",
+              "source:http://www.w3.org/ns/prov#agent",
+              "source:http://xmlns.com/foaf/0.1/Agent",
+              "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Role",
+              "uogto:https://w3id.org/uogto/core#Role"
+            ],
+            [
+              "source:http://www.w3.org/ns/sosa/observes",
+              "uogto:https://w3id.org/uogto/core#observes"
+            ],
+            [
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ]
+          ],
+          "degree": {
+            "source:http://ogp.me/ns#description": 1,
+            "source:http://purl.org/dc/terms/description": 1,
+            "source:http://purl.org/dc/terms/identifier": 1,
+            "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Role": 1,
+            "source:http://www.w3.org/ns/prov#agent": 1,
+            "source:http://www.w3.org/ns/sosa/observes": 1,
+            "source:http://xmlns.com/foaf/0.1/Agent": 1,
+            "source:https://ref.gs1.org/voc/description": 1,
+            "source:https://schema.org/Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Agent": 3,
+            "uogto:https://w3id.org/uogto/core#Role": 1,
+            "uogto:https://w3id.org/uogto/core#description": 3,
+            "uogto:https://w3id.org/uogto/core#identifier": 1,
+            "uogto:https://w3id.org/uogto/core#observes": 1,
+            "uogto:https://w3id.org/uogto/extensions#Thing": 1
+          },
+          "edge_count": 11,
+          "node_count": 18,
+          "orphan_nodes": []
+        },
+        "nodes": [
+          "source:http://ogp.me/ns#description",
+          "source:http://purl.org/dc/terms/description",
+          "source:http://purl.org/dc/terms/identifier",
+          "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Role",
+          "source:http://www.w3.org/ns/prov#agent",
+          "source:http://www.w3.org/ns/sosa/observes",
+          "source:http://xmlns.com/foaf/0.1/Agent",
+          "source:https://ref.gs1.org/voc/description",
+          "source:https://schema.org/Action",
+          "uogto:https://w3id.org/uogto/core#Action",
+          "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Role",
+          "uogto:https://w3id.org/uogto/core#description",
+          "uogto:https://w3id.org/uogto/core#identifier",
+          "uogto:https://w3id.org/uogto/core#observes",
+          "uogto:https://w3id.org/uogto/extensions#Thing"
+        ]
+      },
+      "source_graph": {
+        "bridge_terms": [
+          {
+            "degree": 46,
+            "node": "import:core"
+          },
+          {
+            "degree": 3,
+            "node": "format:turtle"
+          },
+          {
+            "degree": 2,
+            "node": "ssn_sosa"
+          },
+          {
+            "degree": 1,
+            "node": "format:xml"
+          },
+          {
+            "degree": 1,
+            "node": "import:sosa"
+          },
+          {
+            "degree": 1,
+            "node": "owl_time"
+          },
+          {
+            "degree": 1,
+            "node": "prov_o"
+          },
+          {
+            "degree": 1,
+            "node": "schema_org"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_mcp-a2a"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_open-games"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_prov-o"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_schema-org"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_alignments_wot-thing-description"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_actions"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_agents"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_dynamics"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_equilibria"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_games"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_information"
+          },
+          {
+            "degree": 1,
+            "node": "uogto_core_outcomes"
+          }
+        ],
+        "communities": [
+          [
+            "bfo"
+          ],
+          [
+            "devs"
+          ],
+          [
+            "dolce"
+          ],
+          [
+            "emmo"
+          ],
+          [
+            "format:turtle",
+            "import:sosa",
+            "owl_time",
+            "schema_org",
+            "ssn_sosa"
+          ],
+          [
+            "format:xml",
+            "prov_o"
+          ],
+          [
+            "game_ontology_project"
+          ],
+          [
+            "gdlf_gamelan"
+          ],
+          [
+            "hla_fom"
+          ],
+          [
+            "import:core",
+            "uogto_alignments_mcp-a2a",
+            "uogto_alignments_open-games",
+            "uogto_alignments_prov-o",
+            "uogto_alignments_schema-org",
+            "uogto_alignments_wot-thing-description",
+            "uogto_core_actions",
+            "uogto_core_agents",
+            "uogto_core_dynamics",
+            "uogto_core_equilibria",
+            "uogto_core_games",
+            "uogto_core_information",
+            "uogto_core_outcomes",
+            "uogto_core_payoffs",
+            "uogto_core_rules",
+            "uogto_core_strategies",
+            "uogto_extensions_algorithmic-game-theory",
+            "uogto_extensions_auctions",
+            "uogto_extensions_bargaining",
+            "uogto_extensions_behavioural-games",
+            "uogto_extensions_causal-games",
+            "uogto_extensions_compositional-open-games",
+            "uogto_extensions_computational-social-choice",
+            "uogto_extensions_congestion-routing-games",
+            "uogto_extensions_contract-theory",
+            "uogto_extensions_cooperative",
+            "uogto_extensions_deontic-logic",
+            "uogto_extensions_differential-hybrid-games",
+            "uogto_extensions_digital-twin-games",
+            "uogto_extensions_epistemic-games",
+            "uogto_extensions_evolutionary-games",
+            "uogto_extensions_game-description-languages",
+            "uogto_extensions_information-design",
+            "uogto_extensions_institutional-economics",
+            "uogto_extensions_kg-execution-bindings",
+            "uogto_extensions_learning-in-games",
+            "uogto_extensions_llm-agent-games",
+            "uogto_extensions_marl",
+            "uogto_extensions_matching-allocation",
+            "uogto_extensions_mean-field-games",
+            "uogto_extensions_mechanism-design",
+            "uogto_extensions_network-games",
+            "uogto_extensions_petri-net-devs-hla",
+            "uogto_extensions_privacy-disclosure",
+            "uogto_extensions_security-games",
+            "uogto_extensions_trust-reputation-provenance",
+            "uogto_extensions_verification-games"
+          ],
+          [
+            "kaos"
+          ],
+          [
+            "kisao"
+          ],
+          [
+            "miase"
+          ],
+          [
+            "odd_protocol"
+          ],
+          [
+            "ontouml_ufo"
+          ],
+          [
+            "osmo"
+          ],
+          [
+            "p_plan"
+          ],
+          [
+            "sed_ml"
+          ],
+          [
+            "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_extensions_algorithmic-solvers-patch"
+          ],
+          [
+            "vimmp_ontologies"
+          ],
+          [
+            "xmile"
+          ]
+        ],
+        "edges": [
+          [
+            "owl_time",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "prov_o",
+            "format:xml",
+            "format"
+          ],
+          [
+            "schema_org",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "format:turtle",
+            "format"
+          ],
+          [
+            "ssn_sosa",
+            "import:sosa",
+            "imports"
+          ],
+          [
+            "uogto_alignments_mcp-a2a",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_prov-o",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_schema-org",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_alignments_wot-thing-description",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_actions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_agents",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_dynamics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_equilibria",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_information",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_outcomes",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_payoffs",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_rules",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_core_strategies",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_algorithmic-game-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_auctions",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_bargaining",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_behavioural-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_causal-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_compositional-open-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_computational-social-choice",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_congestion-routing-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_contract-theory",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_cooperative",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_deontic-logic",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_differential-hybrid-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_digital-twin-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_epistemic-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_evolutionary-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_game-description-languages",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_information-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_institutional-economics",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_kg-execution-bindings",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_learning-in-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_llm-agent-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_marl",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_matching-allocation",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mean-field-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_mechanism-design",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_network-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_petri-net-devs-hla",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_privacy-disclosure",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_security-games",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_trust-reputation-provenance",
+            "import:core",
+            "imports"
+          ],
+          [
+            "uogto_extensions_verification-games",
+            "import:core",
+            "imports"
+          ]
+        ],
+        "metrics": {
+          "component_count": 22,
+          "connected_components": [
+            [
+              "bfo"
+            ],
+            [
+              "devs"
+            ],
+            [
+              "dolce"
+            ],
+            [
+              "emmo"
+            ],
+            [
+              "format:turtle",
+              "import:sosa",
+              "owl_time",
+              "schema_org",
+              "ssn_sosa"
+            ],
+            [
+              "format:xml",
+              "prov_o"
+            ],
+            [
+              "game_ontology_project"
+            ],
+            [
+              "gdlf_gamelan"
+            ],
+            [
+              "hla_fom"
+            ],
+            [
+              "import:core",
+              "uogto_alignments_mcp-a2a",
+              "uogto_alignments_open-games",
+              "uogto_alignments_prov-o",
+              "uogto_alignments_schema-org",
+              "uogto_alignments_wot-thing-description",
+              "uogto_core_actions",
+              "uogto_core_agents",
+              "uogto_core_dynamics",
+              "uogto_core_equilibria",
+              "uogto_core_games",
+              "uogto_core_information",
+              "uogto_core_outcomes",
+              "uogto_core_payoffs",
+              "uogto_core_rules",
+              "uogto_core_strategies",
+              "uogto_extensions_algorithmic-game-theory",
+              "uogto_extensions_auctions",
+              "uogto_extensions_bargaining",
+              "uogto_extensions_behavioural-games",
+              "uogto_extensions_causal-games",
+              "uogto_extensions_compositional-open-games",
+              "uogto_extensions_computational-social-choice",
+              "uogto_extensions_congestion-routing-games",
+              "uogto_extensions_contract-theory",
+              "uogto_extensions_cooperative",
+              "uogto_extensions_deontic-logic",
+              "uogto_extensions_differential-hybrid-games",
+              "uogto_extensions_digital-twin-games",
+              "uogto_extensions_epistemic-games",
+              "uogto_extensions_evolutionary-games",
+              "uogto_extensions_game-description-languages",
+              "uogto_extensions_information-design",
+              "uogto_extensions_institutional-economics",
+              "uogto_extensions_kg-execution-bindings",
+              "uogto_extensions_learning-in-games",
+              "uogto_extensions_llm-agent-games",
+              "uogto_extensions_marl",
+              "uogto_extensions_matching-allocation",
+              "uogto_extensions_mean-field-games",
+              "uogto_extensions_mechanism-design",
+              "uogto_extensions_network-games",
+              "uogto_extensions_petri-net-devs-hla",
+              "uogto_extensions_privacy-disclosure",
+              "uogto_extensions_security-games",
+              "uogto_extensions_trust-reputation-provenance",
+              "uogto_extensions_verification-games"
+            ],
+            [
+              "kaos"
+            ],
+            [
+              "kisao"
+            ],
+            [
+              "miase"
+            ],
+            [
+              "odd_protocol"
+            ],
+            [
+              "ontouml_ufo"
+            ],
+            [
+              "osmo"
+            ],
+            [
+              "p_plan"
+            ],
+            [
+              "sed_ml"
+            ],
+            [
+              "uogto_core_uogto-core"
+            ],
+            [
+              "uogto_extensions_algorithmic-solvers-patch"
+            ],
+            [
+              "vimmp_ontologies"
+            ],
+            [
+              "xmile"
+            ]
+          ],
+          "degree": {
+            "bfo": 0,
+            "devs": 0,
+            "dolce": 0,
+            "emmo": 0,
+            "format:turtle": 3,
+            "format:xml": 1,
+            "game_ontology_project": 0,
+            "gdlf_gamelan": 0,
+            "hla_fom": 0,
+            "import:core": 46,
+            "import:sosa": 1,
+            "kaos": 0,
+            "kisao": 0,
+            "miase": 0,
+            "odd_protocol": 0,
+            "ontouml_ufo": 0,
+            "osmo": 0,
+            "owl_time": 1,
+            "p_plan": 0,
+            "prov_o": 1,
+            "schema_org": 1,
+            "sed_ml": 0,
+            "ssn_sosa": 2,
+            "uogto_alignments_mcp-a2a": 1,
+            "uogto_alignments_open-games": 1,
+            "uogto_alignments_prov-o": 1,
+            "uogto_alignments_schema-org": 1,
+            "uogto_alignments_wot-thing-description": 1,
+            "uogto_core_actions": 1,
+            "uogto_core_agents": 1,
+            "uogto_core_dynamics": 1,
+            "uogto_core_equilibria": 1,
+            "uogto_core_games": 1,
+            "uogto_core_information": 1,
+            "uogto_core_outcomes": 1,
+            "uogto_core_payoffs": 1,
+            "uogto_core_rules": 1,
+            "uogto_core_strategies": 1,
+            "uogto_core_uogto-core": 0,
+            "uogto_extensions_algorithmic-game-theory": 1,
+            "uogto_extensions_algorithmic-solvers-patch": 0,
+            "uogto_extensions_auctions": 1,
+            "uogto_extensions_bargaining": 1,
+            "uogto_extensions_behavioural-games": 1,
+            "uogto_extensions_causal-games": 1,
+            "uogto_extensions_compositional-open-games": 1,
+            "uogto_extensions_computational-social-choice": 1,
+            "uogto_extensions_congestion-routing-games": 1,
+            "uogto_extensions_contract-theory": 1,
+            "uogto_extensions_cooperative": 1,
+            "uogto_extensions_deontic-logic": 1,
+            "uogto_extensions_differential-hybrid-games": 1,
+            "uogto_extensions_digital-twin-games": 1,
+            "uogto_extensions_epistemic-games": 1,
+            "uogto_extensions_evolutionary-games": 1,
+            "uogto_extensions_game-description-languages": 1,
+            "uogto_extensions_information-design": 1,
+            "uogto_extensions_institutional-economics": 1,
+            "uogto_extensions_kg-execution-bindings": 1,
+            "uogto_extensions_learning-in-games": 1,
+            "uogto_extensions_llm-agent-games": 1,
+            "uogto_extensions_marl": 1,
+            "uogto_extensions_matching-allocation": 1,
+            "uogto_extensions_mean-field-games": 1,
+            "uogto_extensions_mechanism-design": 1,
+            "uogto_extensions_network-games": 1,
+            "uogto_extensions_petri-net-devs-hla": 1,
+            "uogto_extensions_privacy-disclosure": 1,
+            "uogto_extensions_security-games": 1,
+            "uogto_extensions_trust-reputation-provenance": 1,
+            "uogto_extensions_verification-games": 1,
+            "vimmp_ontologies": 0,
+            "xmile": 0
+          },
+          "edge_count": 51,
+          "node_count": 73,
+          "orphan_nodes": [
+            "bfo",
+            "devs",
+            "dolce",
+            "emmo",
+            "game_ontology_project",
+            "gdlf_gamelan",
+            "hla_fom",
+            "kaos",
+            "kisao",
+            "miase",
+            "odd_protocol",
+            "ontouml_ufo",
+            "osmo",
+            "p_plan",
+            "sed_ml",
+            "uogto_core_uogto-core",
+            "uogto_extensions_algorithmic-solvers-patch",
+            "vimmp_ontologies",
+            "xmile"
+          ]
+        },
+        "nodes": [
+          "bfo",
+          "devs",
+          "dolce",
+          "emmo",
+          "format:turtle",
+          "format:xml",
+          "game_ontology_project",
+          "gdlf_gamelan",
+          "hla_fom",
+          "import:core",
+          "import:sosa",
+          "kaos",
+          "kisao",
+          "miase",
+          "odd_protocol",
+          "ontouml_ufo",
+          "osmo",
+          "owl_time",
+          "p_plan",
+          "prov_o",
+          "schema_org",
+          "sed_ml",
+          "ssn_sosa",
+          "uogto_alignments_mcp-a2a",
+          "uogto_alignments_open-games",
+          "uogto_alignments_prov-o",
+          "uogto_alignments_schema-org",
+          "uogto_alignments_wot-thing-description",
+          "uogto_core_actions",
+          "uogto_core_agents",
+          "uogto_core_dynamics",
+          "uogto_core_equilibria",
+          "uogto_core_games",
+          "uogto_core_information",
+          "uogto_core_outcomes",
+          "uogto_core_payoffs",
+          "uogto_core_rules",
+          "uogto_core_strategies",
+          "uogto_core_uogto-core",
+          "uogto_extensions_algorithmic-game-theory",
+          "uogto_extensions_algorithmic-solvers-patch",
+          "uogto_extensions_auctions",
+          "uogto_extensions_bargaining",
+          "uogto_extensions_behavioural-games",
+          "uogto_extensions_causal-games",
+          "uogto_extensions_compositional-open-games",
+          "uogto_extensions_computational-social-choice",
+          "uogto_extensions_congestion-routing-games",
+          "uogto_extensions_contract-theory",
+          "uogto_extensions_cooperative",
+          "uogto_extensions_deontic-logic",
+          "uogto_extensions_differential-hybrid-games",
+          "uogto_extensions_digital-twin-games",
+          "uogto_extensions_epistemic-games",
+          "uogto_extensions_evolutionary-games",
+          "uogto_extensions_game-description-languages",
+          "uogto_extensions_information-design",
+          "uogto_extensions_institutional-economics",
+          "uogto_extensions_kg-execution-bindings",
+          "uogto_extensions_learning-in-games",
+          "uogto_extensions_llm-agent-games",
+          "uogto_extensions_marl",
+          "uogto_extensions_matching-allocation",
+          "uogto_extensions_mean-field-games",
+          "uogto_extensions_mechanism-design",
+          "uogto_extensions_network-games",
+          "uogto_extensions_petri-net-devs-hla",
+          "uogto_extensions_privacy-disclosure",
+          "uogto_extensions_security-games",
+          "uogto_extensions_trust-reputation-provenance",
+          "uogto_extensions_verification-games",
+          "vimmp_ontologies",
+          "xmile"
+        ]
+      }
+    }
+  },
+  "schema": "uogto.ontology-comparison.network-sensitivity.v1",
+  "sensitivity": {
+    "accepted_only_vs_close_related": {
+      "bridge_nodes_added": [
+        "source:http://www.w3.org/ns/prov#agent"
+      ],
+      "bridge_nodes_removed": [
+        "source:http://xmlns.com/foaf/0.1/Agent"
+      ],
+      "community_count_after": 7,
+      "community_count_before": 7,
+      "component_delta": 0,
+      "edge_delta": 1,
+      "node_delta": 1,
+      "nodes_added": [
+        "source:http://www.w3.org/ns/prov#agent"
+      ],
+      "nodes_removed": []
+    },
+    "bridge_overlap": {
+      "alignment_graph": [
+        "source:http://ogp.me/ns#description",
+        "source:http://purl.org/dc/terms/description",
+        "source:http://purl.org/dc/terms/identifier",
+        "uogto:https://w3id.org/uogto/core#Agent",
+        "uogto:https://w3id.org/uogto/core#description"
+      ],
+      "source_graph": [
+        "format:turtle",
+        "import:core",
+        "ssn_sosa"
+      ]
+    },
+    "metadata_only_exclusion": {
+      "bridge_nodes_added": [
+        "import:sosa",
+        "owl_time",
+        "prov_o",
+        "schema_org",
+        "uogto_alignments_mcp-a2a",
+        "uogto_alignments_open-games"
+      ],
+      "bridge_nodes_removed": [
+        "bfo",
+        "devs",
+        "dolce",
+        "emmo",
+        "game_ontology_project",
+        "metadata_only_sources"
+      ],
+      "community_count_after": 22,
+      "community_count_before": 6,
+      "component_delta": 16,
+      "edge_delta": -17,
+      "node_delta": -1,
+      "nodes_added": [],
+      "nodes_removed": [
+        "metadata_only_sources"
+      ]
+    }
+  },
+  "summary": {
+    "provenance_source_count": 21,
+    "review_row_count": 460,
+    "scenario_count": 4,
+    "source_count": 69
+  }
+}

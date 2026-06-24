@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "accepted-alignments.sssom.tsv",
     "overlap-metrics.json",
     "network-analysis.json",
+    "network-sensitivity.json",
     "report.md",
 ]
 REQUIRED_FIGURES = [
@@ -61,6 +62,7 @@ def validate_artifacts(base=BASE):
     review = read_csv(base / "mapping-review.csv")
     overlap = read_json(base / "overlap-metrics.json")
     network = read_json(base / "network-analysis.json")
+    sensitivity = read_json(base / "network-sensitivity.json")
     if len(inventory.get("sources", [])) < 20:
         raise AssertionError("Source inventory must contain the discovered seed source set")
     if len(provenance.get("sources", [])) != len(inventory.get("sources", [])):
@@ -71,6 +73,8 @@ def validate_artifacts(base=BASE):
         raise AssertionError("Unexpected overlap metrics schema")
     if network.get("schema") != "uogto.ontology-comparison.network-analysis.v1":
         raise AssertionError("Unexpected network analysis schema")
+    if sensitivity.get("schema") != "uogto.ontology-comparison.network-sensitivity.v1":
+        raise AssertionError("Unexpected network sensitivity schema")
     accepted = [row for row in review if row.get("review_status") == "accepted"]
     if overlap["summary"].get("accepted_mapping_count") != len(accepted):
         raise AssertionError("Overlap accepted mapping count does not match mapping review")

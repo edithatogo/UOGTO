@@ -459,3 +459,5 @@
 - Remaining action: no upstream PR/issue comments currently require code, metadata, or response changes. Continue to monitor FAIRsharing and Wikidata separately because those remain account-authenticated submission tasks rather than GitHub PR comments.
 
 - Added reviewer calibration artifacts and tests for mapping review agreement/adjudication.
+
+- Added network sensitivity artifacts and validation for community/bridge changes across mapping filters.
