@@ -7,8 +7,8 @@
 - Verified live page health in Chrome for the Wikidata item, Zenodo record, UOGTO documentation site, and GitHub repository.
 - Created FAIRsharing draft record https://fairsharing.org/8382 through the authenticated FAIRsharing/GitHub workflow.
 - Populated FAIRsharing metadata for record name, abbreviation, homepage, year `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub support link, documentation support link, and Zenodo DOI support link.
-- Verified the FAIRsharing public page reports the only required blocker as `data processes and conditions`; recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations.
-- Attempted FAIRsharing data-process entries using `read` / `User interface` and `read` / `Other machine-accessible method`; the form exposed required controls and enabled submit, but no data-process item persisted after submit/reload.
+- Persisted FAIRsharing required `data processes and conditions` metadata using `read` / `User interface`, documentation URL `https://edithatogo.github.io/UOGTO/`, and canonical RDF example URL `https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl`.
+- Verified the public FAIRsharing page now reports `This record is awaiting review by FAIRsharing curators`; recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations.
 
 ## [2026-06-23] - Registry Follow-Up Remote Verification
 - Pushed commit `24b9601` and verified remote `Validate UOGTO` run `28023497374` plus `Build WIDOCO Pages` run `28023497352` passed.

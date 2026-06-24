@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing draft record `8382`. FAIRsharing is not yet sent to curation because its required `data processes and conditions` editor did not persist a valid submitted item. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -29,7 +29,7 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 ## Target Records
 
 ### FAIRsharing
-- Status: `draft_created_required_field_blocked`
+- Status: `submitted_awaiting_curation`
 - Route: <https://fairsharing.org/>
 - Record: <https://fairsharing.org/8382>
 - Guidance: <https://fairsharing.gitbook.io/fairsharing/record-sections-and-fields/general-information/registry-type>
@@ -37,9 +37,9 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Evidence: FAIRsharing describes terminology artefacts as controlled vocabularies or ontologies and requires enough metadata for community-backed standards.
 - Account evidence: draft record created and updated through an authenticated FAIRsharing session on 2026-06-24.
 - Populated metadata: title, abbreviation, homepage, year of creation `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact point `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, user tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub repository support link, documentation support link, and Zenodo DOI support link.
-- Blocker: the public FAIRsharing page reports required field `data processes and conditions`; the edit form exposed the required controls and enabled submit attempts for `read` / `User interface` and `read` / `Other machine-accessible method`, but no data-process item persisted after submit and reload.
-- Recommended remaining fields: organisation links, publications, citations, and record associations.
-- Next action: resolve the FAIRsharing `data processes and conditions` editor through FAIRsharing support or a manual UI/API correction, then submit/send the record to curation and record curation/DOI status.
+- Curation evidence: required `data processes and conditions` metadata persisted on 2026-06-24 with `read` / `User interface` access for the public documentation and canonical RDF artifact; the public page now reports `This record is awaiting review by FAIRsharing curators`.
+- Recommended remaining fields: organisation links, publications, citations, and record associations. These are nonblocking and require curation guidance or defensible FAIRsharing record associations before adding.
+- Next action: monitor FAIRsharing curator review and record the FAIRsharing DOI/status when issued.
 
 ### prefix.cc
 - Status: `submitted`
@@ -97,6 +97,6 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Next action: no routine action; revisit only with a concrete biomedical governance fit.
 
 ## Follow-Up Queue
-- Resolve FAIRsharing record `8382` required `data processes and conditions` persistence, then submit it to curation.
+- Monitor FAIRsharing record `8382` curator review and DOI/status outcome.
 - Track Ontobee issue review feedback and index outcome.
 - Track Bioregistry issue review feedback.

@@ -1,6 +1,6 @@
 # Implementation Plan: Extended Discoverability Registries
 
-This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to FAIRsharing required-field remediation and upstream registry review.
+This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to FAIRsharing curator review and upstream registry review.
 
 ## Phase 1: Shared Submission Packet
 - [x] Task: Create a reusable extended-registry submission packet.
@@ -18,13 +18,13 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [~] Task: Submit UOGTO to FAIRsharing.
     - [x] Confirm the current FAIRsharing submission route and account requirements.
     - [x] Determine the correct registry type and subject classification guidance for UOGTO as an ontology/terminology or standard-like resource.
-    - [~] Submit the record using the shared submission packet.
+    - [x] Submit the record using the shared submission packet.
     - [x] Create FAIRsharing draft record https://fairsharing.org/8382 through the authenticated account workflow.
     - [x] Populate title, abbreviation, homepage, year, country, status, registry type, contact, subject/domain, object type, tags, licence, GitHub, documentation, and Zenodo DOI support links.
-    - [x] Record the remaining required-field blocker and maintainer next action.
+    - [x] Persist required `data processes and conditions` metadata and move the public record to FAIRsharing curator review.
 
 ### Acceptance Criteria
-- [~] FAIRsharing record URL is captured in `docs/registry/`: https://fairsharing.org/8382. Curation submission remains blocked because the required `data processes and conditions` editor enabled valid submit attempts but did not persist a data-process item after submit/reload.
+- [x] FAIRsharing record URL is captured in `docs/registry/`: https://fairsharing.org/8382. The public page reports `This record is awaiting review by FAIRsharing curators`.
 - [x] FAIRsharing status is visible in Conductor status/runlog.
 - [x] Any requested metadata changes will be converted into follow-up tasks after external review feedback exists.
 
@@ -106,7 +106,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] `Publish Release Assets` is dispatched and verified for `extended-registry-handoff.json` after push.
 
 ## Current External Blockers
-- FAIRsharing record https://fairsharing.org/8382 exists, but curation/DOI issuance remains blocked by required `data processes and conditions` metadata not persisting through the FAIRsharing editor after valid submit attempts.
+- No current repo-actionable second-wave account blockers remain. FAIRsharing record https://fairsharing.org/8382 is awaiting curator review; Ontobee and Bioregistry remain maintainer-review pending.
 
 
 ## External Review Pending
@@ -125,16 +125,16 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - prefix.cc uogtox retry succeeded and <http://prefix.cc/uogtox.file.txt> returns https://w3id.org/uogto/extensions#.
 - Ontobee indexing request is open at https://github.com/OntoZoo/ontobee/issues/212.
 - Bioregistry issue body was updated to the requested new-prefix template and recorded in https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
-- FAIRsharing and Wikidata remained account-authenticated external actions at this checkpoint; Wikidata was completed on 2026-06-24 and FAIRsharing now has draft record https://fairsharing.org/8382 with one required-field blocker.
+- FAIRsharing and Wikidata remained account-authenticated external actions at this checkpoint; Wikidata was completed on 2026-06-24 and FAIRsharing record https://fairsharing.org/8382 is now awaiting curator review.
 
 ## Remote Evidence - 2026-06-23 Follow-Up
 - Follow-up implementation commit `24b9601` was pushed to `origin/master`.
 - Remote `Validate UOGTO` run `28023497374` passed for `24b9601`.
 - Remote `Build WIDOCO Pages` run `28023497352` passed and deployed for `24b9601`.
 - `Publish Release Assets` workflow run `28023545152` passed for `v1.0.0` and refreshed `extended-registry-handoff.json`, `w3id-redirect-handoff.json`, and `publication-status.json`.
-- Refreshed `extended-registry-handoff.json` was downloaded and verified with status `external_actions_pending`, blockers `fairsharing,wikidata`, prefix.cc status `submitted`, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212`, Bioregistry template-update comment `https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220`, and digest `sha256:07c9e9e66b69582065b97c01fa61df05ad6da8c04ff39a51069e0b70c9f93081`.
+- Refreshed `extended-registry-handoff.json` was downloaded and verified at this checkpoint with status `external_actions_pending`, blockers `fairsharing,wikidata`, prefix.cc status `submitted`, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212`, Bioregistry template-update comment `https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220`, and digest `sha256:07c9e9e66b69582065b97c01fa61df05ad6da8c04ff39a51069e0b70c9f93081`; the 2026-06-24 refresh supersedes this account-blocker state.
 - Refreshed `w3id-redirect-handoff.json` was downloaded and verified with status `live_redirects_verified`, empty blockers, merged_at `2026-06-22T12:29:07Z`, and digest `sha256:82ea92c3fb8465a6bd97dfdfc51545b4e24e08d56ed2e4e7d1b26bd8a58a48ca`.
-- Refreshed `publication-status.json` was downloaded and verified with status `pending_external_publication_steps`, w3id status `live_redirects_verified`, blockers only for `fairsharing` and `wikidata`, and digest `sha256:f4ad2c38e8af6e9d8659246f2d8714966a9c9dbfdefa0dfb58d14639fb67caa4`.
+- Refreshed `publication-status.json` was downloaded and verified at this checkpoint with status `pending_external_publication_steps`, w3id status `live_redirects_verified`, blockers only for `fairsharing` and `wikidata`, and digest `sha256:f4ad2c38e8af6e9d8659246f2d8714966a9c9dbfdefa0dfb58d14639fb67caa4`; the 2026-06-24 refresh supersedes this account-blocker state.
 
 ## Live Account Evidence - 2026-06-24
 - Wikidata duplicate check for `Universal Open Game Theory Ontology` returned no matching item before creation.
@@ -143,5 +143,5 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - Verified live pages in Chrome: Wikidata item, Zenodo record `https://zenodo.org/records/20796937`, documentation site, and GitHub repository.
 - Created FAIRsharing draft record https://fairsharing.org/8382 through the authenticated FAIRsharing/GitHub workflow.
 - Populated FAIRsharing record metadata: name, abbreviation, homepage, year `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub support link, documentation support link, and Zenodo DOI support link.
-- FAIRsharing public page reports the only required blocker as `data processes and conditions`; recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations.
-- Attempted FAIRsharing data-process entries using `read` / `User interface` and `read` / `Other machine-accessible method`; the form exposed required controls and enabled submit, but no data-process item persisted after submit/reload.
+- FAIRsharing required `data processes and conditions` metadata was persisted on 2026-06-24 with `read` / `User interface` access and the canonical RDF artifact as example URL; the public page now reports that the record is awaiting FAIRsharing curator review.
+- FAIRsharing recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations; these require curation guidance or defensible FAIRsharing record associations before adding.

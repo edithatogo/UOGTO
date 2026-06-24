@@ -77,7 +77,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## [~] Track: uogto_extended_discoverability_registries_20260622
 - **Description**: Implement second-wave discoverability submissions for FAIRsharing, prefix.cc, Wikidata, Ontobee, conditional BioPortal, conditional Bioregistry, and the OBO Foundry non-priority decision.
-- **Status**: External Actions Pending
+- **Status**: External Review Pending
 - **Link**: [./tracks/uogto_extended_discoverability_registries_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_extended_discoverability_registries_20260622/)
 
 ## [x] Track: conductor_state_reconciliation_20260622

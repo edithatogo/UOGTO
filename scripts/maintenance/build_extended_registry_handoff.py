@@ -34,9 +34,17 @@ REQUIRED_DOCUMENT_FRAGMENTS = [
 
 TARGETS = {
     "fairsharing": {
-        "status": "prepared_account_required",
+        "status": "submitted_awaiting_curation",
         "route": "https://fairsharing.org/",
-        "blocker": "Authenticated FAIRsharing account and JavaScript submission workflow required.",
+        "record": "https://fairsharing.org/8382",
+        "review_status": "awaiting_fairsharing_curator_review",
+        "recommended_fields_missing": [
+            "organisation links",
+            "publications",
+            "citations",
+            "record associations",
+        ],
+        "evidence": "Required data processes and conditions metadata persisted on 2026-06-24; public record reports awaiting FAIRsharing curator review.",
     },
     "prefix_cc": {
         "status": "submitted",
@@ -53,9 +61,10 @@ TARGETS = {
         },
     },
     "wikidata": {
-        "status": "prepared_account_required",
-        "route": "https://www.wikidata.org/",
-        "blocker": "Authenticated Wikidata account and edit token required; searches found no existing UOGTO item.",
+        "status": "created_verified",
+        "route": "https://www.wikidata.org/wiki/Q140323510",
+        "item": "https://www.wikidata.org/wiki/Q140323510",
+        "evidence": "Item Q140323510 was created through the authenticated Wikidata session and verified with DOI, documentation, repository, ontology classification, and CC-BY-4.0 license statements.",
     },
     "ontobee": {
         "status": "submitted",
@@ -106,10 +115,17 @@ def build_extended_registry_handoff() -> dict:
             blocker = target.get("blocker") or f"{name} remains pending."
             blockers.append({"target": name, "message": blocker})
 
+    review_pending = [
+        name
+        for name, target in TARGETS.items()
+        if target.get("review_status", "").startswith("awaiting_")
+    ]
+
     return {
         "schema": "uogto.extended-registry-handoff.v1",
-        "status": "external_actions_pending" if blockers else "complete",
+        "status": "external_actions_pending" if blockers else "external_review_pending" if review_pending else "complete",
         "blockers": blockers,
+        "review_pending": review_pending,
         "ontology": {
             "title": "Universal Open Game Theory Ontology (UOGTO)",
             "preferred_prefix": "uogto",

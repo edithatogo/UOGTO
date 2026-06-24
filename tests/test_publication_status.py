@@ -18,7 +18,7 @@ class TestPublicationStatus(unittest.TestCase):
     def test_status_aggregates_external_publication_blockers(self):
         packet = build_publication_status.build_publication_status()
         self.assertEqual(packet["schema"], "uogto.publication-status.v1")
-        self.assertEqual(packet["status"], "pending_external_publication_steps")
+        self.assertEqual(packet["status"], "published")
         self.assertEqual(packet["checks"]["doi"]["status"], "recorded")
         self.assertEqual(packet["checks"]["doi"]["local_dois"], ["10.5281/zenodo.20796937"])
         self.assertEqual(packet["checks"]["lov"]["status"], "submitted")
@@ -26,7 +26,7 @@ class TestPublicationStatus(unittest.TestCase):
         self.assertEqual(packet["checks"]["ols"]["status"], "submitted")
         self.assertEqual(packet["checks"]["ols"]["request_url"], "https://github.com/EBISPOT/ols4/issues/1305")
         self.assertEqual(packet["checks"]["w3id"]["status"], "live_redirects_verified")
-        self.assertEqual(packet["checks"]["extended_registry"]["status"], "external_actions_pending")
+        self.assertEqual(packet["checks"]["extended_registry"]["status"], "external_review_pending")
         self.assertEqual(packet["checks"]["extended_registry"]["packet"], "dist/extended-registry-handoff.json")
         self.assertIn("extended-registry-handoff.json", packet["assets"])
         self.assertIn("publication-status.json", packet["assets"])
