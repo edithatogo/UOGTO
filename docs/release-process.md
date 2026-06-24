@@ -9,3 +9,7 @@
 8. Build `make zenodo-packet` and attach `dist/zenodo-handoff.json` to the release for DOI handoff review.
 9. Record the minted Zenodo DOI in `docs/releases/v1.0.md`, `docs/registry/lov-submission.md`, and `docs/registry/ols-indexing.md`.
 10. Submit registry requests after DOI and GitHub Pages documentation are live.
+
+## arXiv Submission
+- For TeX submissions, run `make arxiv-preflight` and verify the generated PDF before upload.
+- This follows arXiv's April 2025 TeX processing update, which requires submitters to view and confirm the rendered PDF during submission.

@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-preflight release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -117,10 +117,16 @@ release-preflight: release-assets registry-packet extended-registry-packet zenod
 conductor:
 	python scripts/conductor.py
 
-
 manuscript-sourcecheck: manuscript-sources
 	python scripts/maintenance/check_manuscript_citations.py
 	python scripts/maintenance/build_manuscript_pdf.py
+	sourceright validate-csl --json docs/paper/references.csl.json
+	sourceright report .sourceright
+	sourceright citations docs/paper/manuscript-citations.txt .sourceright
+
+arxiv-preflight: manuscript-sources
+	python scripts/maintenance/check_manuscript_citations.py
+	python scripts/maintenance/build_manuscript_pdf.py --require-pdf
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright

@@ -124,6 +124,8 @@ def main() -> None:
         print(result["skipped"])
         print("Manuscript TeX structure check passed.")
     else:
+        if result.get("skipped"):
+            print(result["skipped"])
         print("Manuscript PDF build failed.")
         if result.get("stdout_tail"):
             print(result["stdout_tail"])
