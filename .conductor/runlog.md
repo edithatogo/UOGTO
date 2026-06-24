@@ -461,3 +461,5 @@
 - Added reviewer calibration artifacts and tests for mapping review agreement/adjudication.
 
 - Added network sensitivity artifacts and validation for community/bridge changes across mapping filters.
+- 2026-06-25: Added PRISMA 2020-style source discovery and screening flow diagrams to the article-hardening evidence package.
+

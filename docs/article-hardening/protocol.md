@@ -140,3 +140,11 @@ The protocol is packaged as a scoping-review evidence bundle through the followi
 - `docs/article-hardening/ro-crate-metadata.json`
 
 The checklist maps the 20 essential and 2 optional PRISMA-ScR items to these artifacts, while the artifact map expands the crosswalk for drafting and review. Negative evidence remains recorded as a searched-and-not-found outcome rather than an absence proof.
+
+## PRISMA 2020 Flow Diagrams
+This package also includes PRISMA 2020-style flow diagrams for source discovery and screening:
+
+- `docs/article-hardening/figures/prisma-2020-source-discovery-flow.md`
+- `docs/article-hardening/figures/prisma-2020-screening-flow.md`
+
+The diagrams are derived from the current `search-log.jsonl` and `source-extension-inventory.json` artifacts and should be refreshed whenever those counts change.

@@ -32,3 +32,6 @@ This file maps each PRISMA-ScR reporting item to the repository surfaces that ca
 - The protocol checklist is the concise compliance surface.
 - This map is the inspectable crosswalk used for article drafting and reviewer handoff.
 - Both surfaces should stay aligned whenever new source families, evidence levels, or outputs are added.
+| 23 | Source discovery flow diagram | `docs/article-hardening/figures/prisma-2020-source-discovery-flow.md` | PRISMA 2020-style discovery flow for search routes, records, and negative evidence. |
+| 24 | Screening flow diagram | `docs/article-hardening/figures/prisma-2020-screening-flow.md` | PRISMA 2020-style screening flow for inclusion, exclusion, and retention. |
+

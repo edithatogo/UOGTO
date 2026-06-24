@@ -27,6 +27,7 @@ SOURCE_EXTENSION_INVENTORY = DOCS / "source-extension-inventory.json"
 SOURCE_EXTENSION_SUMMARY = DOCS / "source-extension-inventory.md"
 QUALITY_METRICS = DOCS / "quality-metrics.json"
 REASONER_REPORT = DOCS / "reasoner-report.md"
+FIGURES = DOCS / "figures"
 ROBOT_DIR = DOCS / "robot"
 EVIDENCE_FILES = [
     DOCS / "search-log.jsonl",
@@ -76,6 +77,9 @@ REQUIRED_FILES = [
     DOCS / "structured-summary.md",
     DOCS / "prisma-scr-artifact-map.md",
     DOCS / "search-strategy.md",
+    FIGURES / "README.md",
+    FIGURES / "prisma-2020-source-discovery-flow.md",
+    FIGURES / "prisma-2020-screening-flow.md",
     REVIEW_AGENTS,
     RESEARCH_AGENTS,
     REVIEW_WORKFLOW,
@@ -112,6 +116,7 @@ PROTOCOL_SECTIONS = [
     "## Limitations",
     "## Protocol Amendments",
     "## Funding and Conflicts",
+    "## PRISMA 2020 Flow Diagrams",
 ]
 
 PROTOCOL_TERMS = [
@@ -119,6 +124,7 @@ PROTOCOL_TERMS = [
     "PRISMA-S",
     "RO-Crate 1.1",
     "parsed_rdf_owl",
+    "PRISMA 2020",
     "structured_non_rdf",
     "metadata_only",
     "literature_only",
@@ -150,7 +156,7 @@ SEARCH_FIELDS = [
     "record_hash",
 ]
 
-CHECKLIST_STANDARDS = ["PRISMA-ScR", "PRISMA-S", "RO-Crate 1.1", "UOGTO governance"]
+CHECKLIST_STANDARDS = ["PRISMA-ScR", "PRISMA-S", "RO-Crate 1.1", "UOGTO governance", "PRISMA 2020"]
 
 
 REQUIRED_REVIEWERS = [

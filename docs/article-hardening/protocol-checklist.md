@@ -42,3 +42,10 @@
 | UOGTO governance | Missing-element triage | Record add/align/defer/reject/domain-review decisions. | `docs/article-hardening/uogto-inclusion-decisions.md`; `docs/article-hardening/uogto-inclusion-candidates.csv` | complete |
 | UOGTO governance | Phase review agents | Require peer, editorial, red-team, and devil's-advocate reviewers. | `conductor/agents/article-hardening-review-agents.json`; `conductor/workflows/article-hardening-phase-review.md` | complete |
 | UOGTO governance | Phase research agents | Require discovery, standards, evidence-curation, gap-analysis, and reproducibility researchers. | `conductor/agents/article-hardening-research-agents.json`; `conductor/workflows/article-hardening-research-workflow.md` | complete |- Protocol amendments are recorded in `.conductor/runlog.md`.
+
+## PRISMA 2020 Flow Diagrams
+
+| Standard | Item | Required Reporting Element | Repository Artifact | Status |
+| --- | --- | --- | --- | --- |
+| PRISMA 2020 | Source discovery flow diagram | Present search-route, record-identification, and negative-evidence discovery paths in PRISMA 2020 style. | `docs/article-hardening/figures/prisma-2020-source-discovery-flow.md` | complete |
+| PRISMA 2020 | Screening flow diagram | Present screening, inclusion, exclusion, and negative-evidence disposition in PRISMA 2020 style. | `docs/article-hardening/figures/prisma-2020-screening-flow.md` | complete |
