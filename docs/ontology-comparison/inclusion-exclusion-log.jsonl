@@ -1,0 +1,21 @@
+{"timestamp":"2026-06-24","source_id":"kisao","decision":"seeded","rationale":"Simulation algorithm ontology directly relevant to UOGTO execution and simulation algorithm semantics.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"sed_ml","decision":"seeded","rationale":"Simulation experiment description standard directly overlaps model/simulation/task/output semantics.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"miase","decision":"seeded","rationale":"Minimum-information standard for simulation experiments; useful as reporting coverage comparator.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"osmo","decision":"seeded","rationale":"Ontology for simulation, modelling, and optimization is a high-priority comparator for UOGTO execution semantics.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"emmo","decision":"seeded","rationale":"Modelling-oriented upper/reference ontology likely to affect simulation ontology alignment decisions.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"vimmp_ontologies","decision":"seeded","rationale":"Ontology family around computational modelling marketplace semantics; compare service/model/execution coverage.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"game_ontology_project","decision":"seeded","rationale":"Structured game concept vocabulary relevant to game specification and outcome comparisons.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"gdlf_gamelan","decision":"seeded","rationale":"Formal game description language resources overlap rules, legal moves, state, terminality, and outcomes.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"xmile","decision":"seeded","rationale":"System dynamics schema standard overlaps dynamic models, stocks, flows, feedback, and simulation execution.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"devs","decision":"seeded","rationale":"Discrete-event simulation formalism overlaps event, state transition, coupled model, and simulation-time semantics.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"hla_fom","decision":"needs_review","rationale":"Distributed simulation standard likely relevant, but standard access and redistribution terms need review.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"odd_protocol","decision":"seeded","rationale":"Agent-based modelling reporting protocol overlaps model specification, agents, state, scheduling, and processes.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"kaos","decision":"needs_review","rationale":"Multi-agent policy ontology may overlap deontic/agent modules, but source artifact and licence need review.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"prov_o","decision":"included","rationale":"W3C provenance ontology is already aligned in UOGTO and directly overlaps execution provenance.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"p_plan","decision":"seeded","rationale":"Plan/execution vocabulary overlaps UOGTO executable workflow and simulation-step semantics.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"owl_time","decision":"included","rationale":"W3C time ontology supports temporal semantics for events, traces, sessions, and simulation time.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"ssn_sosa","decision":"included","rationale":"Observation/procedure/result semantics can support simulation output and trace comparisons.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"schema_org","decision":"included","rationale":"Existing UOGTO alignment target and general metadata/action vocabulary relevant to discoverability and actions.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"bfo","decision":"seeded","rationale":"Foundational ontology comparator for process/object/role/time semantics used by many applied ontologies.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"dolce","decision":"seeded","rationale":"Foundational ontology comparator for events, agents, social objects, qualities, and roles.","reviewer":"codex"}
+{"timestamp":"2026-06-24","source_id":"ontouml_ufo","decision":"seeded","rationale":"Conceptual modelling/foundational ontology resources can inform role, relation, event, and social commitment mappings.","reviewer":"codex"}

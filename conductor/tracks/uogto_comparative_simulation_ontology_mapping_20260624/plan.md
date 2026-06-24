@@ -3,19 +3,20 @@
 This track discovers, sources, maps, analyses, and visualises external game-theory and simulation/modelling ontologies against UOGTO. It starts from public registry/literature/repository discovery and ends with reproducible reports, figures, and reviewed alignments.
 
 ## Phase 1: Discovery Protocol and Seed Inventory
-- [ ] Task: Define the discovery protocol.
-    - [ ] Create `docs/ontology-comparison/discovery-protocol.md` with registry, repository, literature, and standards-body search routes.
-    - [ ] Include exact search strings for game theory, discrete-event simulation, agent-based modelling, system dynamics, hybrid simulation, simulation algorithms, modelling-and-simulation interoperability, and executable model semantics.
-    - [ ] Define inclusion/exclusion rules for ontologies, vocabularies, schemas, metamodels, and narrative-only standards.
-    - [ ] Define licence categories: redistributable artifact, metadata-only, transformed summary only, and excluded.
-- [ ] Task: Build the seed candidate list.
-    - [ ] Seed candidates from Game Ontology Project, game description language resources, open-game/compositional-game vocabularies, DEVS/HLA/FOM resources, ODD/ABM resources, XMILE/system-dynamics resources, KiSAO, SED-ML, MIASE, COMBINE-related resources, OSMO, EMMO/VIMMP, Physics-based Simulation Ontology, P-Plan, PROV-O, SSN/SOSA, OWL-Time, schema.org, BFO, DOLCE, UFO/OntoUML, and other discovered adjacent sources.
-    - [ ] Record source URLs, candidate type, expected artifact format, licence hints, and discovery route in `docs/ontology-comparison/source-inventory.json`.
+- [x] Task: Define the discovery protocol.
+    - [x] Create `docs/ontology-comparison/discovery-protocol.md` with registry, repository, literature, and standards-body search routes.
+    - [x] Include exact search strings for game theory, discrete-event simulation, agent-based modelling, system dynamics, hybrid simulation, simulation algorithms, modelling-and-simulation interoperability, and executable model semantics.
+    - [x] Define inclusion/exclusion rules for ontologies, vocabularies, schemas, metamodels, and narrative-only standards.
+    - [x] Define licence categories: redistributable artifact, metadata-only, transformed summary only, and excluded.
+- [x] Task: Build the seed candidate list.
+    - [x] Seed candidates from Game Ontology Project, game description language resources, open-game/compositional-game vocabularies, DEVS/HLA/FOM resources, ODD/ABM resources, XMILE/system-dynamics resources, KiSAO, SED-ML, MIASE, COMBINE-related resources, OSMO, EMMO/VIMMP, Physics-based Simulation Ontology, P-Plan, PROV-O, SSN/SOSA, OWL-Time, schema.org, BFO, DOLCE, UFO/OntoUML, and other discovered adjacent sources.
+    - [x] Record source URLs, candidate type, expected artifact format, licence hints, and discovery route in `docs/ontology-comparison/source-inventory.json`.
+    - [x] Add `scripts/maintenance/build_ontology_comparison_inventory.py`, `make ontology-comparison-inventory`, and pytest coverage for deterministic validation/rendering.
 
 ### Acceptance Criteria
-- [ ] Discovery protocol records all search surfaces and query strings.
-- [ ] Source inventory contains seed candidates with source URLs and initial inclusion rationale.
-- [ ] Inclusion/exclusion log exists and is append-only.
+- [x] Discovery protocol records all search surfaces and query strings.
+- [x] Source inventory contains seed candidates with source URLs and initial inclusion rationale.
+- [x] Inclusion/exclusion log exists and is append-only.
 
 ## Phase 2: Source Harvesting and Provenance
 - [ ] Task: Implement source harvesting.

@@ -24,7 +24,7 @@
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence, merged at `2026-06-22T12:29:07Z`, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
 - Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, Bioregistry template-update submission, Wikidata item `Q140323510`, and FAIRsharing draft record `8382` are complete; external actions remain pending only for FAIRsharing curator review and registry maintainer review.
-- Comparative simulation ontology mapping track `uogto_comparative_simulation_ontology_mapping_20260624` is planned to discover, source, map, analyse, and visualise game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
+- Comparative simulation ontology mapping track `uogto_comparative_simulation_ontology_mapping_20260624` is in progress: Phase 1 discovery protocol and seed inventory are implemented with 21 candidate sources across 17 families, generated inventory documentation, append-only inclusion log, Make/Pixi wiring, and pytest coverage.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -53,7 +53,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Start `uogto_comparative_simulation_ontology_mapping_20260624` Phase 1: build the discovery protocol and seed source inventory, then continue monitoring LOV/OLS, FAIRsharing curator review, Ontobee issue #212, and Bioregistry issue #1999.
+- Continue `uogto_comparative_simulation_ontology_mapping_20260624` Phase 2: source harvesting and provenance, then continue monitoring LOV/OLS, FAIRsharing curator review, Ontobee issue #212, and Bioregistry issue #1999.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.

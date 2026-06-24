@@ -1,5 +1,10 @@
 # Conductor Run Log
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 1
+- Implemented Phase 1 discovery protocol at `docs/ontology-comparison/discovery-protocol.md` with search surfaces, exact query strings, inclusion/exclusion rules, licence dispositions, review states, and evidence requirements.
+- Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
+- Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Track Creation
 - Created Conductor track `uogto_comparative_simulation_ontology_mapping_20260624` for discovery, sourcing, mapping, overlap analysis, network/descriptive analysis, and comprehensive visualisation of game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
 - Added a detailed specification with source provenance, licence handling, mapping confidence, review workflow, overlap metrics, network analysis, and visualisation/reporting requirements.
