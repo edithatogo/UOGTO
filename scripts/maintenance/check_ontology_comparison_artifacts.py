@@ -29,6 +29,8 @@ REQUIRED_FIGURES = [
     "source_sizes_bar.svg",
     "match_classes_bar.svg",
     "source_module_overlap_heatmap.svg",
+    "source_family_evidence_heatmap.svg",
+    "source_family_term_heatmap.svg",
     "uogto_coverage_treemap.svg",
     "source_similarity_network.svg",
     "mapping_flow_sankey.svg",
@@ -97,7 +99,7 @@ def validate_artifacts(base=BASE):
             raise AssertionError("Figure is not SVG: " + name)
         if "figures/" + name not in report:
             raise AssertionError("Report does not link figure: " + name)
-    for section in ["## Inclusion and Exclusion Summary", "## Mapping Methods"]:
+    for section in ["## Inclusion and Exclusion Summary", "## Mapping Methods", "## Evidence-Level Coverage"]:
         if section not in report:
             raise AssertionError("Report missing required section: " + section)
     if "Candidate and rejected rows remain audit records" not in report:

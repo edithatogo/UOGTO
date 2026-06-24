@@ -9,9 +9,9 @@ The workflow uses the discovery protocol, source inventory, source provenance, n
 ## Inclusion and Exclusion Summary
 The discovery protocol records registry, repository, literature, and standards-body routes. Included records are retained when they are ontologies, vocabularies, schemas, metamodels, or formal standards that can inform game-theory or simulation semantics. Narrative-only or non-redistributable resources are not imported as ontology artifacts; they are kept as metadata-only or transformed-summary records where appropriate.
 
-- metadata_only: 8
-- needs_licence_review: 9
-- redistributable_artifact: 4
+- metadata_only
+- needs_licence_review
+- redistributable_artifact
 
 ## Mapping Methods
 Mapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.
@@ -59,10 +59,20 @@ The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate
 | `uogto_extensions_epistemic-games` | 27 |
 | `uogto_extensions_causal-games` | 26 |
 
+## Evidence-Level Coverage
+The new heatmaps stratify source-family coverage by evidence level so metadata-only sources, downloaded RDF artifacts, and future transformed-summary or excluded records are not conflated. Source counts and term counts are shown separately to distinguish breadth from depth.
+
+| Evidence level | Source count | Term count |
+| --- | ---: | ---: |
+| `parsed_rdf` | 4 | 3468 |
+| `metadata_only` | 17 | 17 |
+
 ## Visualisations
 - ![source_sizes_bar.svg](figures/source_sizes_bar.svg)
 - ![match_classes_bar.svg](figures/match_classes_bar.svg)
 - ![source_module_overlap_heatmap.svg](figures/source_module_overlap_heatmap.svg)
+- ![source_family_evidence_heatmap.svg](figures/source_family_evidence_heatmap.svg)
+- ![source_family_term_heatmap.svg](figures/source_family_term_heatmap.svg)
 - ![uogto_coverage_treemap.svg](figures/uogto_coverage_treemap.svg)
 - ![source_similarity_network.svg](figures/source_similarity_network.svg)
 - ![mapping_flow_sankey.svg](figures/mapping_flow_sankey.svg)
