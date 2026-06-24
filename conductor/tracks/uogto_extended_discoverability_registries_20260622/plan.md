@@ -1,6 +1,6 @@
 # Implementation Plan: Extended Discoverability Registries
 
-This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to authenticated external submissions and upstream registry review.
+This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to FAIRsharing required-field remediation and upstream registry review.
 
 ## Phase 1: Shared Submission Packet
 - [x] Task: Create a reusable extended-registry submission packet.
@@ -18,11 +18,13 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [~] Task: Submit UOGTO to FAIRsharing.
     - [x] Confirm the current FAIRsharing submission route and account requirements.
     - [x] Determine the correct registry type and subject classification guidance for UOGTO as an ontology/terminology or standard-like resource.
-    - [ ] Submit the record using the shared submission packet.
-    - [x] Record account-required blocker and maintainer next action.
+    - [~] Submit the record using the shared submission packet.
+    - [x] Create FAIRsharing draft record https://fairsharing.org/8382 through the authenticated account workflow.
+    - [x] Populate title, abbreviation, homepage, year, country, status, registry type, contact, subject/domain, object type, tags, licence, GitHub, documentation, and Zenodo DOI support links.
+    - [x] Record the remaining required-field blocker and maintainer next action.
 
 ### Acceptance Criteria
-- [~] FAIRsharing submission URL or record URL is captured in `docs/registry/`; currently blocked because the live FAIRsharing Chrome workflow did not expose a reliable submission page.
+- [~] FAIRsharing record URL is captured in `docs/registry/`: https://fairsharing.org/8382. Curation submission remains blocked because the required `data processes and conditions` editor enabled valid submit attempts but did not persist a data-process item after submit/reload.
 - [x] FAIRsharing status is visible in Conductor status/runlog.
 - [x] Any requested metadata changes will be converted into follow-up tasks after external review feedback exists.
 
@@ -104,8 +106,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] `Publish Release Assets` is dispatched and verified for `extended-registry-handoff.json` after push.
 
 ## Current External Blockers
-- FAIRsharing record creation requires an authenticated FAIRsharing maintainer account.
-- Wikidata item creation requires an authenticated Wikidata account and edit token.
+- FAIRsharing record https://fairsharing.org/8382 exists, but curation/DOI issuance remains blocked by required `data processes and conditions` metadata not persisting through the FAIRsharing editor after valid submit attempts.
 
 
 ## External Review Pending
@@ -124,7 +125,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - prefix.cc uogtox retry succeeded and <http://prefix.cc/uogtox.file.txt> returns https://w3id.org/uogto/extensions#.
 - Ontobee indexing request is open at https://github.com/OntoZoo/ontobee/issues/212.
 - Bioregistry issue body was updated to the requested new-prefix template and recorded in https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
-- FAIRsharing and Wikidata remain account-authenticated external actions; no repository-safe credentials were found.
+- FAIRsharing and Wikidata remained account-authenticated external actions at this checkpoint; Wikidata was completed on 2026-06-24 and FAIRsharing now has draft record https://fairsharing.org/8382 with one required-field blocker.
 
 ## Remote Evidence - 2026-06-23 Follow-Up
 - Follow-up implementation commit `24b9601` was pushed to `origin/master`.
@@ -140,4 +141,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - Created Wikidata item https://www.wikidata.org/wiki/Q140323510 through the authenticated `Doughnuted` session.
 - Added and verified statements: instance of ontology (`Q324254`), DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International (`Q20007257`).
 - Verified live pages in Chrome: Wikidata item, Zenodo record `https://zenodo.org/records/20796937`, documentation site, and GitHub repository.
-- FAIRsharing root resolved with title `FAIRsharing`, but DOM/screenshot inspection hung and the search route destabilized Chrome control; FAIRsharing remains blocked pending a stable site/account workflow or manual maintainer submission.
+- Created FAIRsharing draft record https://fairsharing.org/8382 through the authenticated FAIRsharing/GitHub workflow.
+- Populated FAIRsharing record metadata: name, abbreviation, homepage, year `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub support link, documentation support link, and Zenodo DOI support link.
+- FAIRsharing public page reports the only required blocker as `data processes and conditions`; recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations.
+- Attempted FAIRsharing data-process entries using `read` / `User interface` and `read` / `Other machine-accessible method`; the form exposed required controls and enabled submit, but no data-process item persisted after submit/reload.

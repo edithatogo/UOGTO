@@ -23,7 +23,7 @@
 - LOV submission is open at https://github.com/pyvandenbussche/lov/issues/83.
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence, merged at `2026-06-22T12:29:07Z`, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
-- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, Bioregistry template-update submission, and Wikidata item `Q140323510` are complete; external actions remain pending for FAIRsharing and registry maintainer review.
+- Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, Bioregistry template-update submission, Wikidata item `Q140323510`, and FAIRsharing draft record `8382` are complete; external actions remain pending for FAIRsharing required-field remediation and registry maintainer review.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -52,7 +52,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Continue LOV/OLS maintainer review gates, then monitor the second-wave external blockers: FAIRsharing authenticated submission, Wikidata authenticated item creation, Ontobee issue #212 review, and Bioregistry issue #1999 review.
+- Continue LOV/OLS maintainer review gates, then monitor the second-wave external blockers: FAIRsharing record `8382` required `data processes and conditions` remediation, Ontobee issue #212 review, and Bioregistry issue #1999 review.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
@@ -76,7 +76,7 @@
 - Live w3id monitor reports PR `6238` merged and `/uogto/core` plus `/uogto/extensions` redirect to the UOGTO documentation site.
 - Zenodo DOI is recorded and resolves publicly; LOV and OLS requests are submitted and awaiting maintainer review.
 - Release-assets workflow dispatch run `27913777454` passed for `v1.0.0` and attached `zenodo-handoff.json`; the release asset URL returned HTTP 302 to the downloadable object.
-- `dist/publication-status.json` is part of local release preflight and the release-assets workflow; current generated status should report DOI recorded, LOV/OLS submitted, w3id live, and FAIRsharing/Wikidata as remaining account-bound blockers.
+- `dist/publication-status.json` is part of local release preflight and the release-assets workflow; current generated status should report DOI recorded, LOV/OLS submitted, w3id live, Wikidata complete, and FAIRsharing record `8382` blocked only on required `data processes and conditions` persistence.
 - The attached `publication-status.json` release asset has digest `sha256:e52e18db755e23c1e2317cdf8483960a55e374ad2f8b929512a7c4b9f52d8ec5`.
 - Live publication status observations are added to scheduled maintenance so public Pages, release assets, and Zenodo DOI search can be inspected from one generated JSON artifact.
 - `dist/publication-status-live.json` includes w3id PR and redirect observations. Current generated output records live w3id redirects while preserving `pending_external_publication_steps` for registry review/account gates.
@@ -96,7 +96,7 @@
 - Stale automated maintenance PR `#1` was closed and its branch deleted; fresh maintenance run `27923789206` created PR `#2`, which was merged as `a10f0d9` after confirming the diff was limited to changelog and remote-status updates.
 - Added `scripts/maintenance/check_zenodo_depositions.py` with Make/Pixi wiring. Parent `.env` token-backed checks were used without printing the token; Zenodo record `20796937` is now published, and w3id PR `6238` is now merged with live redirects verified.
 - LOV issue `https://github.com/pyvandenbussche/lov/issues/83` and OLS issue `https://github.com/EBISPOT/ols4/issues/1305` are open; both reference the public DOI, WIDOCO docs, release, and canonical RDF asset.
-- Extended discoverability repo-side implementation is complete locally: `uogto` and `uogtox` are live at prefix.cc, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212` is open, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999` is template-updated, FAIRsharing/Wikidata are prepared but account-blocked, and BioPortal/OBO Foundry are recorded as conditional/not prioritized.
+- Extended discoverability repo-side implementation is complete locally: `uogto` and `uogtox` are live at prefix.cc, Ontobee issue `https://github.com/OntoZoo/ontobee/issues/212` is open, Bioregistry issue `https://github.com/biopragmatics/bioregistry/issues/1999` is template-updated, Wikidata item `Q140323510` and FAIRsharing draft record `8382` exist, and BioPortal/OBO Foundry are recorded as conditional/not prioritized.
 - Extended discoverability release evidence is recorded: commit `8b52503` passed remote `Validate UOGTO` run `27960976638`, remote `Build WIDOCO Pages` run `27960977018`, and `Publish Release Assets` run `27961110915`; the `extended-registry-handoff.json` release asset is attached with digest `sha256:31e4e76ab2334ce9b92b87fa6e5bb63a0e6f7b5094d242460ae65b37498b0018`.
 - w3id PR `https://github.com/perma-id/w3id.org/pull/6238` is merged; DOI/publication evidence was added in comment `https://github.com/perma-id/w3id.org/pull/6238#issuecomment-4768124045`.
 - Remote verification for commit `da246b9` passed: `Validate UOGTO` run `27947593135` succeeded and `Build WIDOCO Pages` run `27947593119` built and deployed successfully.
@@ -110,7 +110,7 @@
 - prefix.cc uogtox is live at <http://prefix.cc/uogtox.file.txt>; both UOGTO prefixes are submitted.
 - Ontobee indexing request is open at <https://github.com/OntoZoo/ontobee/issues/212>.
 - Bioregistry issue 1999 was updated to the requested new-prefix template and recorded at <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>.
-- FAIRsharing and Wikidata remain blocked by authenticated maintainer-account workflows; no repository-safe credentials were found.
+- FAIRsharing and Wikidata remained blocked by authenticated maintainer-account workflows at this checkpoint; Wikidata was completed on 2026-06-24 and FAIRsharing now has draft record `8382` with one required-field blocker.
 
 ## Remote Verification - 2026-06-23
 - Commit `24b9601` passed remote `Validate UOGTO` run `28023497374` and `Build WIDOCO Pages` run `28023497352`.
@@ -123,4 +123,6 @@
 - Wikidata item created and verified: https://www.wikidata.org/wiki/Q140323510.
 - Wikidata statements verified in Chrome: instance of ontology, DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International.
 - DOI resolved to Zenodo record `https://zenodo.org/records/20796937`; Zenodo record title, UOGTO documentation, and GitHub repository pages loaded successfully.
-- FAIRsharing remains blocked: root title loaded, but page inspection hung and the search/submission route destabilized Chrome control.
+- FAIRsharing draft record created and populated: https://fairsharing.org/8382.
+- FAIRsharing remaining required blocker: public page reports `data processes and conditions`; submit attempts for `read` / `User interface` and `read` / `Other machine-accessible method` exposed enabled controls but did not persist an item after submit/reload.
+- FAIRsharing recommended-but-nonblocking gaps: organisation links, publications, citations, and record associations.

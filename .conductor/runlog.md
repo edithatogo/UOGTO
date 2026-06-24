@@ -5,7 +5,10 @@
 - Created Wikidata item https://www.wikidata.org/wiki/Q140323510.
 - Added and verified statements: instance of ontology (`Q324254`), DOI `10.5281/zenodo.20796937`, official website `https://edithatogo.github.io/UOGTO/`, source code repository URL `https://github.com/edithatogo/UOGTO`, and copyright license Creative Commons Attribution 4.0 International (`Q20007257`).
 - Verified live page health in Chrome for the Wikidata item, Zenodo record, UOGTO documentation site, and GitHub repository.
-- Rechecked FAIRsharing in Chrome; root page title loaded as `FAIRsharing`, but DOM/screenshot inspection hung and the search/submission route destabilized Chrome control, so no reliable submission form was available.
+- Created FAIRsharing draft record https://fairsharing.org/8382 through the authenticated FAIRsharing/GitHub workflow.
+- Populated FAIRsharing metadata for record name, abbreviation, homepage, year `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub support link, documentation support link, and Zenodo DOI support link.
+- Verified the FAIRsharing public page reports the only required blocker as `data processes and conditions`; recommended-but-nonblocking gaps remain organisation links, publications, citations, and record associations.
+- Attempted FAIRsharing data-process entries using `read` / `User interface` and `read` / `Other machine-accessible method`; the form exposed required controls and enabled submit, but no data-process item persisted after submit/reload.
 
 ## [2026-06-23] - Registry Follow-Up Remote Verification
 - Pushed commit `24b9601` and verified remote `Validate UOGTO` run `28023497374` plus `Build WIDOCO Pages` run `28023497352` passed.
