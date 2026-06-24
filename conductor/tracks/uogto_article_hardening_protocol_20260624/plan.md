@@ -61,6 +61,8 @@ Phase 2 note: the living evidence register is implemented with deterministic see
 - [x] Task: Add reasoner and validation checks.
     - [x] Run RDFLib parse checks, OWL profile/consistency checks where feasible, SHACL validation for UOGTO examples, and mapping TTL validation.
     - [x] Produce `docs/article-hardening/quality-metrics.json` and `docs/article-hardening/reasoner-report.md`.
+    - [x] Produce ROBOT-style ontology reports when Java tooling is available, keeping RDFLib/pySHACL as the portable baseline.
+        - [x] Emit `docs/article-hardening/robot/status.json`, `reasoner-check.md`, `report.md`, `merged-ontology.ttl`, `merge-diff.md`, `import-extraction.ttl`, and `import-extraction.md`.
 
 Phase 4 note: quality benchmarking currently covers UOGTO local ontology artifacts, local OOPS-style proxy indicators, SHACL/example/query coverage, and OWL/RDFS status; external comparator metrics will be added after Phase 3 acquisition expands parsed artifacts.
 

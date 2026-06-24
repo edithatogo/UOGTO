@@ -1,0 +1,395 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/uogto/core> a owl:Ontology ;
+    rdfs:label "Universal Open Game Theory Ontology (UOGTO) Core"@en ;
+    dcterms:creator "UOGTO Contributors" ;
+    dcterms:description "The core release ontology for modeling games, strategies, actions, outcomes, payoffs, equilibria, execution traces, and extensible game-theoretic semantics."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Universal Open Game Theory Ontology (UOGTO)"@en ;
+    vann:preferredNamespacePrefix "uogto" ;
+    vann:preferredNamespaceUri "https://w3id.org/uogto/core#" ;
+    owl:versionInfo "1.0.0" ;
+    skos:definition "The core schema for modeling games, strategies, actions, outcomes, and payoffs."@en .
+
+uogto:Action a owl:Class ;
+    rdfs:label "Action"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A single choice or move available to a player at a decision point."@en .
+
+uogto:ActionProfile a owl:Class ;
+    rdfs:label "Action Profile"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A combination of actions chosen simultaneously by all players."@en .
+
+uogto:Agent a owl:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An automated or rational actor operating inside a game."@en .
+
+uogto:Belief a owl:Class ;
+    rdfs:label "Belief"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A probability distribution over states in an information set."@en .
+
+uogto:ChanceNode a owl:Class ;
+    rdfs:label "Chance Node"@en ;
+    rdfs:subClassOf uogto:GameNode ;
+    skos:definition "A game node where transition outcomes are decided stochastically."@en .
+
+uogto:Coalition a owl:Class ;
+    rdfs:label "Coalition"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A group of players cooperating to achieve payoffs."@en .
+
+uogto:Equilibrium a owl:Class ;
+    rdfs:label "Equilibrium"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A strategy profile matching equilibrium conditions (e.g. Nash)."@en .
+
+uogto:EventTrace a owl:Class ;
+    rdfs:label "Event Trace"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A history of state transitions and actions in a session."@en .
+
+uogto:ExecutionModel a owl:Class ;
+    rdfs:label "Execution Model"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A compilation of the game ontology to an executable simulator."@en .
+
+uogto:GameInstance a owl:Class ;
+    rdfs:label "Game Instance"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A concrete realization of a GameSpecification, preparing or binding parameters for play."@en .
+
+uogto:GameSpecification a owl:Class ;
+    rdfs:label "Game Specification"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "The structural rules, players, actions, and utilities defining a game."@en .
+
+uogto:InitialState a owl:Class ;
+    rdfs:label "Initial State"@en ;
+    rdfs:subClassOf uogto:State ;
+    skos:definition "The start state of the game."@en .
+
+uogto:Institution a owl:Class ;
+    rdfs:label "Institution"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An organizational frame or system governing game norms."@en .
+
+uogto:Norm a owl:Class ;
+    rdfs:label "Norm"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A social constraint or expectation in institutional games."@en .
+
+uogto:Outcome a owl:Class ;
+    rdfs:label "Outcome"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "The end consequence of action choices."@en .
+
+uogto:Payoff a owl:Class ;
+    rdfs:label "Payoff"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "The numerical rewards or utilities distributed to players for an outcome."@en .
+
+uogto:PlaySession a owl:Class ;
+    rdfs:label "Play Session"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A session during which a game instance is played or simulated."@en .
+
+uogto:PreferenceRelation a owl:Class ;
+    rdfs:label "Preference Relation"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An ordinal ranking of outcomes by a player."@en .
+
+uogto:Role a owl:Class ;
+    rdfs:label "Role"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A position occupied by a player within a game specification."@en .
+
+uogto:Rule a owl:Class ;
+    rdfs:label "Rule"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A structural constraint governing game play."@en .
+
+uogto:Signal a owl:Class ;
+    rdfs:label "Signal"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An informational cue emitted to players."@en .
+
+uogto:Solver a owl:Class ;
+    rdfs:label "Solver"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An algorithm designed to find game equilibria."@en .
+
+uogto:TerminalNode a owl:Class ;
+    rdfs:label "Terminal Node"@en ;
+    rdfs:subClassOf uogto:GameNode ;
+    skos:definition "A terminal node in a game model mapping to payoffs."@en .
+
+uogto:TerminalState a owl:Class ;
+    rdfs:label "Terminal State"@en ;
+    rdfs:subClassOf uogto:State ;
+    skos:definition "A leaf node representing game completion."@en .
+
+uogto:Transition a owl:Class ;
+    rdfs:label "Transition"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A state change triggered by an action profile."@en .
+
+uogto:TransitionFunction a owl:Class ;
+    rdfs:label "Transition Function"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A function defining the state transitions."@en .
+
+uogto:UtilityFunction a owl:Class ;
+    rdfs:label "Utility Function"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A mapping from outcomes to real numbers for a player."@en .
+
+uogto:assignsPayoff a owl:ObjectProperty ;
+    rdfs:label "assigns payoff"@en ;
+    skos:definition "Links an outcome to the payoffs distributed."@en .
+
+uogto:belongsToInformationSet a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "belongs to information set"@en ;
+    rdfs:domain uogto:DecisionNode ;
+    rdfs:range uogto:InformationSet ;
+    skos:definition "Functional relation linking a decision node to its single containing information set."@en .
+
+uogto:compiledToExecutionModel a owl:ObjectProperty ;
+    rdfs:label "compiled to execution model"@en ;
+    skos:definition "Links a game to its executable representation."@en .
+
+uogto:comprisesStrategy a owl:ObjectProperty ;
+    rdfs:label "comprises strategy"@en ;
+    rdfs:domain uogto:StrategyProfile ;
+    rdfs:range uogto:Strategy ;
+    skos:definition "Links a strategy profile to the specific individual strategies."@en .
+
+uogto:confidence a owl:DatatypeProperty ;
+    rdfs:label "confidence"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Belief confidence score."@en .
+
+uogto:controlsNode a owl:ObjectProperty ;
+    rdfs:label "controls node"@en ;
+    rdfs:domain uogto:Player ;
+    rdfs:range uogto:DecisionNode ;
+    skos:definition "Links a player to the decision node they control."@en .
+
+uogto:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "Human-readable description."@en .
+
+uogto:emitsEventTrace a owl:ObjectProperty ;
+    rdfs:label "emits event trace"@en ;
+    skos:definition "Connects a play session to its event log."@en .
+
+uogto:governedByNorm a owl:ObjectProperty ;
+    rdfs:label "governed by norm"@en ;
+    skos:definition "Norms governing an institution."@en .
+
+uogto:governedByRule a owl:ObjectProperty ;
+    rdfs:label "governed by rule"@en ;
+    skos:definition "Rules governing a specification or instance."@en .
+
+uogto:hasAvailableAction a owl:ObjectProperty ;
+    rdfs:label "has available action"@en ;
+    skos:definition "Lists actions available to a player in a state."@en .
+
+uogto:hasBelief a owl:ObjectProperty ;
+    rdfs:label "has belief"@en ;
+    skos:definition "Links a player's information set to their belief state."@en .
+
+uogto:hasEquilibrium a owl:ObjectProperty ;
+    rdfs:label "has equilibrium"@en ;
+    skos:definition "Connects a game to its computed equilibrium profile."@en .
+
+uogto:hasInformationSet a owl:ObjectProperty ;
+    rdfs:label "has information set"@en ;
+    skos:definition "Relates states to an information set."@en .
+
+uogto:hasInitialState a owl:ObjectProperty ;
+    rdfs:label "has initial state"@en ;
+    skos:definition "Declares the initial state."@en .
+
+uogto:hasPayoff a owl:ObjectProperty ;
+    rdfs:label "has payoff"@en ;
+    rdfs:domain uogto:StrategyProfile ;
+    rdfs:range uogto:PayoffProfile ;
+    skos:definition "Links a strategy profile to its corresponding reified payoff profile."@en .
+
+uogto:hasPayoffForPlayer a owl:ObjectProperty ;
+    rdfs:label "has payoff for player"@en ;
+    rdfs:domain uogto:PayoffProfile ;
+    rdfs:range uogto:PlayerPayoffLink ;
+    skos:definition "Links a payoff profile to individual player-utility mappings."@en .
+
+uogto:hasPlayer a owl:ObjectProperty ;
+    rdfs:label "has player"@en ;
+    skos:definition "Associates a game specification or instance with its players."@en .
+
+uogto:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    skos:definition "Assigns a role to a player."@en .
+
+uogto:hasState a owl:ObjectProperty ;
+    rdfs:label "has state"@en ;
+    skos:definition "Relates a game instance or specification to a state."@en .
+
+uogto:hasStrategy a owl:ObjectProperty ;
+    rdfs:label "has strategy"@en ;
+    skos:definition "Links a player to their selected or available strategy."@en .
+
+uogto:hasStrategyProfile a owl:ObjectProperty ;
+    rdfs:label "has strategy profile"@en ;
+    skos:definition "Links a game equilibrium to its constituent strategy profile."@en .
+
+uogto:hasTerminalState a owl:ObjectProperty ;
+    rdfs:label "has terminal state"@en ;
+    skos:definition "Declares a terminal state."@en .
+
+uogto:hasTransition a owl:ObjectProperty ;
+    rdfs:label "has transition"@en ;
+    skos:definition "Links states or actions to a transition."@en .
+
+uogto:hasUtilityFunction a owl:ObjectProperty ;
+    rdfs:label "has utility function"@en ;
+    skos:definition "Assigns a utility function to a player role."@en .
+
+uogto:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "A unique string identifying a game component."@en .
+
+uogto:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "The name of a game component."@en .
+
+uogto:observes a owl:ObjectProperty ;
+    rdfs:label "observes"@en ;
+    skos:definition "Links an agent to an observed signal or state."@en .
+
+uogto:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    skos:definition "Associates a player with a game session or specification."@en .
+
+uogto:payoffPlayer a owl:ObjectProperty ;
+    rdfs:label "payoff player"@en ;
+    rdfs:domain uogto:PlayerPayoffLink ;
+    rdfs:range uogto:Player ;
+    skos:definition "Associates the player payoff mapping back to the player."@en .
+
+uogto:payoffValue a owl:DatatypeProperty ;
+    rdfs:label "payoff value"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value of a player's payoff."@en .
+
+uogto:probability a owl:DatatypeProperty ;
+    rdfs:label "probability"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Transition or signal probability value (0 to 1)."@en .
+
+uogto:producesOutcome a owl:ObjectProperty ;
+    rdfs:label "produces outcome"@en ;
+    skos:definition "Relates actions or states to an outcome."@en .
+
+uogto:selectsAction a owl:ObjectProperty ;
+    rdfs:label "selects action"@en ;
+    skos:definition "Relates a player or agent to the action they choose."@en .
+
+uogto:solvedBy a owl:ObjectProperty ;
+    rdfs:label "solved by"@en ;
+    skos:definition "Identifies the solver that calculated the equilibrium."@en .
+
+uogto:sourceReference a owl:DatatypeProperty ;
+    rdfs:label "source reference"@en ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "URI to external citations or source data."@en .
+
+uogto:timeIndex a owl:DatatypeProperty ;
+    rdfs:label "time index"@en ;
+    rdfs:range xsd:integer ;
+    skos:definition "Discrete time step identifier."@en .
+
+uogto:timestamp a owl:DatatypeProperty ;
+    rdfs:label "timestamp"@en ;
+    rdfs:range xsd:dateTime ;
+    skos:definition "Real-world time log of an event."@en .
+
+uogto:transitionsFrom a owl:ObjectProperty ;
+    rdfs:label "transitions from"@en ;
+    skos:definition "Starting state of a transition."@en .
+
+uogto:transitionsTo a owl:ObjectProperty ;
+    rdfs:label "transitions to"@en ;
+    skos:definition "Target state of a transition."@en .
+
+uogto:utilityValue a owl:DatatypeProperty ;
+    rdfs:label "utility value"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Calculated utility value of an outcome."@en .
+
+uogto:version a owl:DatatypeProperty ;
+    rdfs:label "version"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "Ontology version metadata."@en .
+
+uogto:InformationSet a owl:Class ;
+    rdfs:label "Information Set"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A set of decision states indistinguishable to a player."@en .
+
+uogto:Strategy a owl:Class ;
+    rdfs:label "Strategy"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A complete plan of action for a player."@en .
+
+uogto:DecisionNode a owl:Class ;
+    rdfs:label "Decision Node"@en ;
+    rdfs:subClassOf uogto:GameNode ;
+    skos:definition "A game node controlled by a specific player."@en .
+
+uogto:PayoffProfile a owl:Class ;
+    rdfs:label "Payoff Profile"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "Represents the aggregated profile of payoffs for all active players."@en .
+
+uogto:Player a owl:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "An entity (human, LLM, robot, group) playing the game."@en .
+
+uogto:PlayerPayoffLink a owl:Class ;
+    rdfs:label "Player Payoff Link"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "Connects a utility value directly to a player instance."@en .
+
+uogto:State a owl:Class ;
+    rdfs:label "State"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A configuration node in extensive-form or dynamic games."@en .
+
+uogto:StrategyProfile a owl:Class ;
+    rdfs:label "Strategy Profile"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A vector of strategies, one for each player."@en .
+
+uogto:GameNode a owl:Class ;
+    rdfs:label "Game Node"@en ;
+    rdfs:subClassOf uogto:GameEntity ;
+    skos:definition "A state configuration node within dynamic/extensive games."@en .
+
+uogto:GameEntity a owl:Class ;
+    rdfs:label "Game Entity"@en ;
+    skos:definition "The base class for all game-theoretic elements."@en .
+

@@ -5,6 +5,11 @@
 - Added `scripts/maintenance/build_article_hardening_quality.py`, Make/Pixi wiring, protocol validation, and pytest coverage so quality metrics are deterministic and article-ready.
 - Recorded the current boundary that comparator-source quality metrics will expand after Phase 3 acquisition adds parsed external artifacts.
 
+## [2026-06-24] - Article Hardening ROBOT-Style Reports
+- Added an optional Java-backed ROBOT-style reporting layer for `uogto_article_hardening_protocol_20260624` while preserving RDFLib/pySHACL as the portable baseline.
+- Generated `docs/article-hardening/robot/status.json`, `reasoner-check.md`, `report.md`, `merged-ontology.ttl`, `merge-diff.md`, `import-extraction.ttl`, and `import-extraction.md` from the current ontology graphs.
+- Wired a new `make article-hardening-robot` target and updated the protocol/checklist/status surfaces so the ROBOT-like outputs are tracked explicitly even when no ROBOT binary or jar is configured.
+
 ## [2026-06-24] - Article Hardening Phase 2 Living Evidence Register
 - Implemented the Phase 2 living evidence register for `uogto_article_hardening_protocol_20260624`: generated `docs/article-hardening/search-log.jsonl`, `source-extension-inventory.json`, and `source-extension-inventory.md` with query strings, result/screening/inclusion counts, evidence levels, inclusion rationales, licence dispositions, reviewer handoffs, hash-chained search records, and immutable source hashes.
 - Preserved the completed comparative ontology source inventory as the baseline and appended 18 new article-hardening candidates, including SSSOM, OAEI, GDL variants, Ludii, GVGAI/VGDL, PNML, BPMN, OWL-S, PDDL, SBML, SBO, CellML, SBGN, Modelica, FMI, and SysML.

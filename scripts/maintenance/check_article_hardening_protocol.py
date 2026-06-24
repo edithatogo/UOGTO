@@ -26,6 +26,16 @@ SOURCE_EXTENSION_INVENTORY = DOCS / "source-extension-inventory.json"
 SOURCE_EXTENSION_SUMMARY = DOCS / "source-extension-inventory.md"
 QUALITY_METRICS = DOCS / "quality-metrics.json"
 REASONER_REPORT = DOCS / "reasoner-report.md"
+ROBOT_DIR = DOCS / "robot"
+ROBOT_REQUIRED_FILES = [
+    ROBOT_DIR / "status.json",
+    ROBOT_DIR / "reasoner-check.md",
+    ROBOT_DIR / "report.md",
+    ROBOT_DIR / "merged-ontology.ttl",
+    ROBOT_DIR / "merge-diff.md",
+    ROBOT_DIR / "import-extraction.ttl",
+    ROBOT_DIR / "import-extraction.md",
+]
 
 REQUIRED_FILES = [
     DOCS / "protocol.md",
@@ -46,6 +56,7 @@ REQUIRED_FILES = [
     SOURCE_EXTENSION_SUMMARY,
     QUALITY_METRICS,
     REASONER_REPORT,
+    *ROBOT_REQUIRED_FILES,
 ]
 
 PROTOCOL_SECTIONS = [

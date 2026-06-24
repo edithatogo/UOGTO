@@ -18,6 +18,7 @@
 | RO-Crate 1.1 | Root dataset | Define the article-hardening evidence package as a research object. | `docs/article-hardening/search-strategy.md` | complete |
 | RO-Crate 1.1 | Data entities | Require protocol, checklist, search logs, inventories, scripts, source artifacts/references, metrics, tables, and figures. | `docs/article-hardening/search-strategy.md` | complete |
 | RO-Crate 1.1 | Contextual entities | Require standards, licences, people/organizations where available, and external source references. | `docs/article-hardening/search-strategy.md` | complete |
+| ROBOT-style ontology reports | Reasoner/report/merge-diff/import extraction | Provide a Java-backed ontology report layer when tooling is available while preserving the portable baseline. | `docs/article-hardening/robot/README.md`; `docs/article-hardening/robot/status.json` | complete |
 | UOGTO governance | Missing-element triage | Require evidence-backed add/align/defer/reject/domain-review decisions for missing game-theory elements. | `docs/article-hardening/protocol.md` | complete |
 | UOGTO governance | Phase review agents | Require peer, editorial, red-team, and devil's-advocate reviewers for each implementation phase. | `conductor/agents/article-hardening-review-agents.json`; `conductor/workflows/article-hardening-phase-review.md` | complete |
 | UOGTO governance | Phase research agents | Require discovery, standards, evidence-curation, gap-analysis, and reproducibility researchers before phase review. | `conductor/agents/article-hardening-research-agents.json`; `conductor/workflows/article-hardening-research-workflow.md` | complete |
@@ -27,4 +28,5 @@
 - Distinguish parsed RDF/OWL evidence from structured non-RDF, metadata-only, literature-only, and excluded sources in every table and figure.
 - Treat source-discovery counts, mapping confidence, ontology-quality metrics, and UOGTO expansion recommendations as separate claim types.
 - Require every proposed UOGTO addition to identify competency-question, interoperability, article-claim, conceptual-clarity, or validation/example impact.
+- Preserve ROBOT-style outputs as optional article-hardening enrichments; never let them replace the portable RDFLib/pySHACL baseline.
 - Keep protocol amendments visible in Conductor state so article methods do not drift from implementation.

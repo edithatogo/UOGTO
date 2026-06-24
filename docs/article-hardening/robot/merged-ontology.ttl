@@ -1,0 +1,2889 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/uogto/alignments/mcp-a2a> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with Model Context Protocol"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/alignments/open-games> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with Open Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/alignments/prov-o> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with PROV-O"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/alignments/schema-org> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with Schema.org"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/alignments/wot-thing-description> a owl:Ontology ;
+    rdfs:label "UOGTO Alignment with W3C Web of Things Thing Description"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+ns1:ActionProfile a owl:Class ;
+    rdfs:label "Action Profile"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A combination of actions chosen simultaneously by all players."@en .
+
+ns1:ArtificialAgent a owl:Class ;
+    rdfs:label "Artificial Agent"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "A software agent participating in a game."@en .
+
+ns1:Belief a owl:Class ;
+    rdfs:label "Belief"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A probability distribution over states in an information set."@en .
+
+ns1:CardinalPayoff a owl:Class ;
+    rdfs:label "Cardinal Payoff"@en ;
+    rdfs:subClassOf ns1:Payoff ;
+    skos:definition "A payoff representing quantitative measurements of utility."@en .
+
+ns1:ChanceNode a owl:Class ;
+    rdfs:label "Chance Node"@en ;
+    rdfs:subClassOf ns1:GameNode ;
+    skos:definition "A game node where transition outcomes are decided stochastically."@en .
+
+ns1:ConstitutiveRule a owl:Class ;
+    rdfs:label "Constitutive Rule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules that create or define new forms of activity."@en .
+
+ns1:ContinuousDynamics a owl:Class ;
+    rdfs:label "Continuous Dynamics"@en ;
+    rdfs:subClassOf ns1:TransitionFunction ;
+    skos:definition "State transitions occurring over continuous time flows."@en .
+
+ns1:DeterministicOutcome a owl:Class ;
+    rdfs:label "Deterministic Outcome"@en ;
+    rdfs:subClassOf ns1:Outcome ;
+    skos:definition "An outcome determined strictly by player actions."@en .
+
+ns1:DiscreteDynamics a owl:Class ;
+    rdfs:label "Discrete Dynamics"@en ;
+    rdfs:subClassOf ns1:TransitionFunction ;
+    skos:definition "State transitions occurring in discrete time steps."@en .
+
+ns1:EventTrace a owl:Class ;
+    rdfs:label "Event Trace"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A history of state transitions and actions in a session."@en .
+
+ns1:ExecutionModel a owl:Class ;
+    rdfs:label "Execution Model"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A compilation of the game ontology to an executable simulator."@en .
+
+ns1:FiniteGame a owl:Class ;
+    rdfs:label "Finite Game"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game with a finite number of players, strategies, and outcomes."@en .
+
+ns1:GameInstance a owl:Class ;
+    rdfs:label "Game Instance"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A concrete realization of a GameSpecification, preparing or binding parameters for play."@en .
+
+ns1:HumanPlayer a owl:Class ;
+    rdfs:label "Human Player"@en ;
+    rdfs:subClassOf ns1:Player ;
+    skos:definition "A human agent participating in a game."@en .
+
+ns1:ImperfectInformation a owl:Class ;
+    rdfs:label "Imperfect Information"@en ;
+    rdfs:subClassOf ns1:InformationSet ;
+    skos:definition "Information configuration where some past actions are hidden."@en .
+
+ns1:InfiniteGame a owl:Class ;
+    rdfs:label "Infinite Game"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game featuring infinite player or strategy spaces."@en .
+
+ns1:InitialState a owl:Class ;
+    rdfs:label "Initial State"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "The start state of the game."@en .
+
+ns1:Institution a owl:Class ;
+    rdfs:label "Institution"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An organizational frame or system governing game norms."@en .
+
+ns1:MixedStrategy a owl:Class ;
+    rdfs:label "Mixed Strategy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "A probability distribution over pure strategies."@en .
+
+ns1:NashEquilibrium a owl:Class ;
+    rdfs:label "Nash Equilibrium"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A strategy profile where no player has a unilateral incentive to deviate."@en .
+
+ns1:Norm a owl:Class ;
+    rdfs:label "Norm"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A social constraint or expectation in institutional games."@en .
+
+ns1:OrdinalPayoff a owl:Class ;
+    rdfs:label "Ordinal Payoff"@en ;
+    rdfs:subClassOf ns1:Payoff ;
+    skos:definition "A payoff representing relative preference rankings."@en .
+
+ns1:PerfectInformation a owl:Class ;
+    rdfs:label "Perfect Information"@en ;
+    rdfs:subClassOf ns1:InformationSet ;
+    skos:definition "Information configuration where all past actions are observed."@en .
+
+ns1:PreferenceRelation a owl:Class ;
+    rdfs:label "Preference Relation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An ordinal ranking of outcomes by a player."@en .
+
+ns1:PureStrategy a owl:Class ;
+    rdfs:label "Pure Strategy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "A strategy that defines a specific choice for all decision points."@en .
+
+ns1:RegulativeRule a owl:Class ;
+    rdfs:label "Regulative Rule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules that regulate pre-existing activities."@en .
+
+ns1:Role a owl:Class ;
+    rdfs:label "Role"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A position occupied by a player within a game specification."@en .
+
+ns1:SequentialAction a owl:Class ;
+    rdfs:label "Sequential Action"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "An action taken in order during the game's sequence."@en .
+
+ns1:Signal a owl:Class ;
+    rdfs:label "Signal"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An informational cue emitted to players."@en .
+
+ns1:SimultaneousAction a owl:Class ;
+    rdfs:label "Simultaneous Action"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "An action taken in synchrony with other players' choices."@en .
+
+ns1:StochasticOutcome a owl:Class ;
+    rdfs:label "Stochastic Outcome"@en ;
+    rdfs:subClassOf ns1:Outcome ;
+    skos:definition "An outcome incorporating environmental randomness."@en .
+
+ns1:SubgamePerfectEquilibrium a owl:Class ;
+    rdfs:label "Subgame Perfect Equilibrium"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "An equilibrium that constitutes a Nash equilibrium in every subgame."@en .
+
+ns1:TerminalNode a owl:Class ;
+    rdfs:label "Terminal Node"@en ;
+    rdfs:subClassOf ns1:GameNode ;
+    skos:definition "A terminal node in a game model mapping to payoffs."@en .
+
+ns1:TerminalState a owl:Class ;
+    rdfs:label "Terminal State"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "A leaf node representing game completion."@en .
+
+ns1:Transition a owl:Class ;
+    rdfs:label "Transition"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A state change triggered by an action profile."@en .
+
+ns1:UtilityFunction a owl:Class ;
+    rdfs:label "Utility Function"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mapping from outcomes to real numbers for a player."@en .
+
+ns1:assignsPayoff a owl:ObjectProperty ;
+    rdfs:label "assigns payoff"@en ;
+    skos:definition "Links an outcome to the payoffs distributed."@en .
+
+ns1:belongsToInformationSet a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "belongs to information set"@en ;
+    rdfs:domain ns1:DecisionNode ;
+    rdfs:range ns1:InformationSet ;
+    skos:definition "Functional relation linking a decision node to its single containing information set."@en .
+
+ns1:competencyQuestionReference a owl:DatatypeProperty ;
+    rdfs:label "competency question reference"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A compact reference to competency questions linked to the governance record."@en .
+
+ns1:compiledToExecutionModel a owl:ObjectProperty ;
+    rdfs:label "compiled to execution model"@en ;
+    skos:definition "Links a game to its executable representation."@en .
+
+ns1:comprisesStrategy a owl:ObjectProperty ;
+    rdfs:label "comprises strategy"@en ;
+    rdfs:domain ns1:StrategyProfile ;
+    rdfs:range ns1:Strategy ;
+    skos:definition "Links a strategy profile to the specific individual strategies."@en .
+
+ns1:confidence a owl:DatatypeProperty ;
+    rdfs:label "confidence"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Belief confidence score."@en .
+
+ns1:controlsNode a owl:ObjectProperty ;
+    rdfs:label "controls node"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range ns1:DecisionNode ;
+    skos:definition "Links a player to the decision node they control."@en .
+
+ns1:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "Human-readable description."@en .
+
+ns1:emitsEventTrace a owl:ObjectProperty ;
+    rdfs:label "emits event trace"@en ;
+    skos:definition "Connects a play session to its event log."@en .
+
+ns1:governanceStatus a owl:DatatypeProperty ;
+    rdfs:label "governance status"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "The current governance state of the ontology, such as active, review, or archived."@en .
+
+ns1:governedByNorm a owl:ObjectProperty ;
+    rdfs:label "governed by norm"@en ;
+    skos:definition "Norms governing an institution."@en .
+
+ns1:governedByRule a owl:ObjectProperty ;
+    rdfs:label "governed by rule"@en ;
+    skos:definition "Rules governing a specification or instance."@en .
+
+ns1:hasAvailableAction a owl:ObjectProperty ;
+    rdfs:label "has available action"@en ;
+    skos:definition "Lists actions available to a player in a state."@en .
+
+ns1:hasBelief a owl:ObjectProperty ;
+    rdfs:label "has belief"@en ;
+    skos:definition "Links a player's information set to their belief state."@en .
+
+ns1:hasEquilibrium a owl:ObjectProperty ;
+    rdfs:label "has equilibrium"@en ;
+    skos:definition "Connects a game to its computed equilibrium profile."@en .
+
+ns1:hasGovernanceRecord a owl:ObjectProperty ;
+    rdfs:label "has governance record"@en ;
+    rdfs:domain owl:Ontology ;
+    rdfs:range ns1:OntologyGovernanceRecord ;
+    skos:definition "Connects an ontology IRI to its governance record."@en .
+
+ns1:hasInformationSet a owl:ObjectProperty ;
+    rdfs:label "has information set"@en ;
+    skos:definition "Relates states to an information set."@en .
+
+ns1:hasInitialState a owl:ObjectProperty ;
+    rdfs:label "has initial state"@en ;
+    skos:definition "Declares the initial state."@en .
+
+ns1:hasPayoff a owl:ObjectProperty ;
+    rdfs:label "has payoff"@en ;
+    rdfs:domain ns1:StrategyProfile ;
+    rdfs:range ns1:PayoffProfile ;
+    skos:definition "Links a strategy profile to its corresponding reified payoff profile."@en .
+
+ns1:hasPayoffForPlayer a owl:ObjectProperty ;
+    rdfs:label "has payoff for player"@en ;
+    rdfs:domain ns1:PayoffProfile ;
+    rdfs:range ns1:PlayerPayoffLink ;
+    skos:definition "Links a payoff profile to individual player-utility mappings."@en .
+
+ns1:hasPlayer a owl:ObjectProperty ;
+    rdfs:label "has player"@en ;
+    skos:definition "Associates a game specification or instance with its players."@en .
+
+ns1:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    skos:definition "Assigns a role to a player."@en .
+
+ns1:hasState a owl:ObjectProperty ;
+    rdfs:label "has state"@en ;
+    skos:definition "Relates a game instance or specification to a state."@en .
+
+ns1:hasStrategy a owl:ObjectProperty ;
+    rdfs:label "has strategy"@en ;
+    skos:definition "Links a player to their selected or available strategy."@en .
+
+ns1:hasStrategyProfile a owl:ObjectProperty ;
+    rdfs:label "has strategy profile"@en ;
+    skos:definition "Links a game equilibrium to its constituent strategy profile."@en .
+
+ns1:hasTerminalState a owl:ObjectProperty ;
+    rdfs:label "has terminal state"@en ;
+    skos:definition "Declares a terminal state."@en .
+
+ns1:hasTransition a owl:ObjectProperty ;
+    rdfs:label "has transition"@en ;
+    skos:definition "Links states or actions to a transition."@en .
+
+ns1:hasUtilityFunction a owl:ObjectProperty ;
+    rdfs:label "has utility function"@en ;
+    skos:definition "Assigns a utility function to a player role."@en .
+
+ns1:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "A unique string identifying a game component."@en .
+
+ns1:maturityLevel a owl:DatatypeProperty ;
+    rdfs:label "maturity level"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "The maturity assessment of the ontology, such as draft, curated, research-grade, or release-ready."@en .
+
+ns1:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "The name of a game component."@en .
+
+ns1:observes a owl:ObjectProperty ;
+    rdfs:label "observes"@en ;
+    skos:definition "Links an agent to an observed signal or state."@en .
+
+ns1:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    skos:definition "Associates a player with a game session or specification."@en .
+
+ns1:payoffPlayer a owl:ObjectProperty ;
+    rdfs:label "payoff player"@en ;
+    rdfs:domain ns1:PlayerPayoffLink ;
+    rdfs:range ns1:Player ;
+    skos:definition "Associates the player payoff mapping back to the player."@en .
+
+ns1:payoffValue a owl:DatatypeProperty ;
+    rdfs:label "payoff value"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value of a player's payoff."@en .
+
+ns1:probability a owl:DatatypeProperty ;
+    rdfs:label "probability"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Transition or signal probability value (0 to 1)."@en .
+
+ns1:producesOutcome a owl:ObjectProperty ;
+    rdfs:label "produces outcome"@en ;
+    skos:definition "Relates actions or states to an outcome."@en .
+
+ns1:reviewDate a owl:DatatypeProperty ;
+    rdfs:label "review date"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:date ;
+    skos:definition "The date on which the governance record was last reviewed."@en .
+
+ns1:selectsAction a owl:ObjectProperty ;
+    rdfs:label "selects action"@en ;
+    skos:definition "Relates a player or agent to the action they choose."@en .
+
+ns1:solvedBy a owl:ObjectProperty ;
+    rdfs:label "solved by"@en ;
+    skos:definition "Identifies the solver that calculated the equilibrium."@en .
+
+ns1:sourceEvidenceReference a owl:DatatypeProperty ;
+    rdfs:label "source evidence reference"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "A compact reference to evidence surfaces supporting the current governance record."@en .
+
+ns1:sourceReference a owl:DatatypeProperty ;
+    rdfs:label "source reference"@en ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "URI to external citations or source data."@en .
+
+ns1:steward a owl:DatatypeProperty ;
+    rdfs:label "steward"@en ;
+    rdfs:domain ns1:OntologyGovernanceRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "The person, team, or role responsible for governance decisions and review."@en .
+
+ns1:timeIndex a owl:DatatypeProperty ;
+    rdfs:label "time index"@en ;
+    rdfs:range xsd:integer ;
+    skos:definition "Discrete time step identifier."@en .
+
+ns1:timestamp a owl:DatatypeProperty ;
+    rdfs:label "timestamp"@en ;
+    rdfs:range xsd:dateTime ;
+    skos:definition "Real-world time log of an event."@en .
+
+ns1:transitionsFrom a owl:ObjectProperty ;
+    rdfs:label "transitions from"@en ;
+    skos:definition "Starting state of a transition."@en .
+
+ns1:transitionsTo a owl:ObjectProperty ;
+    rdfs:label "transitions to"@en ;
+    skos:definition "Target state of a transition."@en .
+
+ns1:utilityValue a owl:DatatypeProperty ;
+    rdfs:label "utility value"@en ;
+    rdfs:range xsd:double ;
+    skos:definition "Calculated utility value of an outcome."@en .
+
+ns1:version a owl:DatatypeProperty ;
+    rdfs:label "version"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "Ontology version metadata."@en .
+
+<https://w3id.org/uogto/core/actions> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Actions Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/agents> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Agents Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/dynamics> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Dynamics Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/equilibria> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Equilibria Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/games> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Games Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/governance> a owl:Ontology ;
+    rdfs:label "UOGTO governance metadata"@en ;
+    dcterms:modified "2026-06-24"^^xsd:date ;
+    owl:versionInfo "2026-06-24" ;
+    skos:definition "Ontology-level governance metadata for status, maturity, stewardship, review timing, source evidence, and competency-question linkage."@en ;
+    prov:wasDerivedFrom <https://w3id.org/uogto/core> ;
+    ns1:hasGovernanceRecord ns1:currentGovernanceRecord .
+
+<https://w3id.org/uogto/core/information> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Information Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/outcomes> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Outcomes Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/payoffs> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Payoffs Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/rules> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Rules Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/core/strategies> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Strategies Module"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions#ActionAffordance> a owl:Class ;
+    rdfs:label "ActionAffordance"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "Writable control capabilities exposed by a Digital Twin."@en .
+
+<https://w3id.org/uogto/extensions#ActionAttribution> a owl:Class ;
+    rdfs:label "ActionAttribution"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "Links an action instance to a signature identity."@en .
+
+<https://w3id.org/uogto/extensions#AgentCapability> a owl:Class ;
+    rdfs:label "AgentCapability"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "Declared functionality of an LLM agent."@en .
+
+<https://w3id.org/uogto/extensions#AgentProtocolSession> a owl:Class ;
+    rdfs:label "AgentProtocolSession"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "A session structured via communication protocols."@en .
+
+<https://w3id.org/uogto/extensions#AlgorithmicSolver> a owl:Class ;
+    rdfs:label "Algorithmic Solver"@en ;
+    rdfs:subClassOf ns1:Solver ;
+    skos:definition "An algorithmic solver resolving game theoretic equilibrium."@en .
+
+<https://w3id.org/uogto/extensions#ApproximationGuarantee> a owl:Class ;
+    rdfs:label "ApproximationGuarantee"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The precision bounds of approximate solvers."@en .
+
+<https://w3id.org/uogto/extensions#AttackVector> a owl:Class ;
+    rdfs:label "AttackVector"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The path selected by the attacker."@en .
+
+<https://w3id.org/uogto/extensions#AuditEvent> a owl:Class ;
+    rdfs:label "AuditEvent"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Log entry reporting compliance violations."@en .
+
+<https://w3id.org/uogto/extensions#CausalPayoffModel> a owl:Class ;
+    rdfs:label "CausalPayoffModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A causal specification of payoff functions."@en .
+
+<https://w3id.org/uogto/extensions#CoalitionGame> a owl:Class ;
+    rdfs:label "Coalition Game"@en ;
+    rdfs:subClassOf <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    skos:definition "A cooperative game focusing on coalition formations."@en .
+
+<https://w3id.org/uogto/extensions#CognitiveHierarchyModel> a owl:Class ;
+    rdfs:label "CognitiveHierarchyModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Model tracking continuous hierarchies of player thinking depth."@en .
+
+<https://w3id.org/uogto/extensions#CollectiveChoiceArena> a owl:Class ;
+    rdfs:label "CollectiveChoiceArena"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An arena where rules are written or amended."@en .
+
+<https://w3id.org/uogto/extensions#CommonKnowledge> a owl:Class ;
+    rdfs:label "CommonKnowledge"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A property defining mutual knowledge of all orders."@en .
+
+<https://w3id.org/uogto/extensions#ComputationalProblem> a owl:Class ;
+    rdfs:label "ComputationalProblem"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A problem computing strategic options."@en .
+
+<https://w3id.org/uogto/extensions#CondorcetWinner> a owl:Class ;
+    rdfs:label "CondorcetWinner"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A candidate winning majority preferences head-to-head."@en .
+
+<https://w3id.org/uogto/extensions#ConstraintViolation> a owl:Class ;
+    rdfs:label "ConstraintViolation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Output logs reporting model schema errors."@en .
+
+<https://w3id.org/uogto/extensions#ContextWindow> a owl:Class ;
+    rdfs:label "ContextWindow"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The input history buffer of a language model."@en .
+
+<https://w3id.org/uogto/extensions#CyberPhysicalState> a owl:Class ;
+    rdfs:label "CyberPhysicalState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "The joint physical and digital state configuration."@en .
+
+<https://w3id.org/uogto/extensions#CyberSecurityGame> a owl:Class ;
+    rdfs:label "CyberSecurityGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A security game mapping digital network threats."@en .
+
+<https://w3id.org/uogto/extensions#DEVSAtomicModel> a owl:Class ;
+    rdfs:label "DEVSAtomicModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Discrete Event System specification atomic block."@en .
+
+<https://w3id.org/uogto/extensions#DEVSCoupledModel> a owl:Class ;
+    rdfs:label "DEVSCoupledModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "DEVS block formed by composition."@en .
+
+<https://w3id.org/uogto/extensions#DeonticLogicSystem> a owl:Class ;
+    rdfs:label "DeonticLogicSystem"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A normative system formalizing modalities of obligation, permission, and prohibition."@en .
+
+<https://w3id.org/uogto/extensions#DeonticModality> a owl:Class ;
+    rdfs:label "DeonticModality"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The structural category of the deontic rule."@en .
+
+<https://w3id.org/uogto/extensions#DifferentialGame> a owl:Class ;
+    rdfs:label "DifferentialGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeled via ordinary differential equations."@en .
+
+<https://w3id.org/uogto/extensions#DiffusionGame> a owl:Class ;
+    rdfs:label "DiffusionGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling information or adoption spread."@en .
+
+<https://w3id.org/uogto/extensions#DirectMechanism> a owl:Class ;
+    rdfs:label "DirectMechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mechanism where agents directly report their private types."@en .
+
+<https://w3id.org/uogto/extensions#DutchAuction> a owl:Class ;
+    rdfs:label "DutchAuction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A descending price auction."@en .
+
+<https://w3id.org/uogto/extensions#EnglishAuction> a owl:Class ;
+    rdfs:label "EnglishAuction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An ascending open-cry auction."@en .
+
+<https://w3id.org/uogto/extensions#EnvyFreeAllocation> a owl:Class ;
+    rdfs:label "EnvyFreeAllocation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An allocation where no agent prefers another's bundle."@en .
+
+<https://w3id.org/uogto/extensions#EventAffordance> a owl:Class ;
+    rdfs:label "EventAffordance"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Unsolicited notification streams emitted by a Digital Twin."@en .
+
+<https://w3id.org/uogto/extensions#ExperimentalProtocol> a owl:Class ;
+    rdfs:label "ExperimentalProtocol"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The laboratory setup instructions testing behavioural choices."@en .
+
+<https://w3id.org/uogto/extensions#ExploitabilityMetric> a owl:Class ;
+    rdfs:label "ExploitabilityMetric"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Metric tracking how close a joint policy is to a Nash equilibrium."@en .
+
+<https://w3id.org/uogto/extensions#FairnessCriterion> a owl:Class ;
+    rdfs:label "FairnessCriterion"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A metric assessing fairness properties of allocations."@en .
+
+<https://w3id.org/uogto/extensions#Federate> a owl:Class ;
+    rdfs:label "Federate"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An HLA distributed simulation execution node."@en .
+
+<https://w3id.org/uogto/extensions#FederationObjectModel> a owl:Class ;
+    rdfs:label "FederationObjectModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "HLA simulation protocol catalog (FOM)."@en .
+
+<https://w3id.org/uogto/extensions#FictitiousPlay> a owl:Class ;
+    rdfs:label "FictitiousPlay"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A learning process where players best-respond to empirical strategy distributions of opponents."@en .
+
+<https://w3id.org/uogto/extensions#FirstPriceAuction> a owl:Class ;
+    rdfs:label "FirstPriceAuction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An auction where the highest bidder wins and pays their bid."@en .
+
+<https://w3id.org/uogto/extensions#GDLGame> a owl:Class ;
+    rdfs:label "GDLGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game defined using GDL syntax."@en .
+
+<https://w3id.org/uogto/extensions#GDLII_Game> a owl:Class ;
+    rdfs:label "GDLII Game"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game defined using GDL-II (imperfect information)."@en .
+
+<https://w3id.org/uogto/extensions#GameDescriptionLanguage> a owl:Class ;
+    rdfs:label "GameDescriptionLanguage"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "The description language vocabulary (GDL)."@en .
+
+<https://w3id.org/uogto/extensions#GovernanceMechanism> a owl:Class ;
+    rdfs:label "GovernanceMechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A system overseeing rule compliance."@en .
+
+<https://w3id.org/uogto/extensions#HiddenAction> a owl:Class ;
+    rdfs:label "HiddenAction"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "An action unobserved by the principal (moral hazard)."@en .
+
+<https://w3id.org/uogto/extensions#HiddenInformation> a owl:Class ;
+    rdfs:label "HiddenInformation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A type unobserved by the principal (adverse selection)."@en .
+
+<https://w3id.org/uogto/extensions#HybridGame> a owl:Class ;
+    rdfs:label "HybridGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game combining continuous dynamics and discrete mode transitions."@en .
+
+<https://w3id.org/uogto/extensions#InfluenceGame> a owl:Class ;
+    rdfs:label "InfluenceGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling strategy pressure from peers."@en .
+
+<https://w3id.org/uogto/extensions#InformationLeakage> a owl:Class ;
+    rdfs:label "InformationLeakage"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Calculated index of disclosure levels."@en .
+
+<https://w3id.org/uogto/extensions#InstitutionalRule> a owl:Class ;
+    rdfs:label "InstitutionalRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "A rule defined by an institution."@en .
+
+<https://w3id.org/uogto/extensions#IsaacsCondition> a owl:Class ;
+    rdfs:label "IsaacsCondition"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Conditions matching saddle point existence in differential play."@en .
+
+<https://w3id.org/uogto/extensions#JointPolicy> a owl:Class ;
+    rdfs:label "JointPolicy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "A combination of policies for all agents in a MARL system."@en .
+
+<https://w3id.org/uogto/extensions#KalaiSmorodinskySolution> a owl:Class ;
+    rdfs:label "KalaiSmorodinskySolution"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A bargaining solution maintaining utility ratios relative to ideal options."@en .
+
+<https://w3id.org/uogto/extensions#LLMInteractionGame> a owl:Class ;
+    rdfs:label "LLMInteractionGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling interactions among language models."@en .
+
+<https://w3id.org/uogto/extensions#LevelKModel> a owl:Class ;
+    rdfs:label "LevelKModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Model tracking hierarchies of step-by-step thinking."@en .
+
+<https://w3id.org/uogto/extensions#LivenessProperty> a owl:Class ;
+    rdfs:label "LivenessProperty"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A property checking that a good state is eventually reached."@en .
+
+<https://w3id.org/uogto/extensions#LudiiGame> a owl:Class ;
+    rdfs:label "LudiiGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game defined using the Ludii system format."@en .
+
+<https://w3id.org/uogto/extensions#ManipulationProblem> a owl:Class ;
+    rdfs:label "ManipulationProblem"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A problem evaluating strategic voter manipulation."@en .
+
+<https://w3id.org/uogto/extensions#MarkovGame> a owl:Class ;
+    rdfs:label "MarkovGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A multi-agent extension of Markov Decision Processes."@en .
+
+<https://w3id.org/uogto/extensions#MonitoringTechnology> a owl:Class ;
+    rdfs:label "MonitoringTechnology"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mechanism observing indicators."@en .
+
+<https://w3id.org/uogto/extensions#NashBargainingSolution> a owl:Class ;
+    rdfs:label "NashBargainingSolution"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A bargaining solution maximizing the product of utilities."@en .
+
+<https://w3id.org/uogto/extensions#NonTransferableUtilityGame> a owl:Class ;
+    rdfs:label "Non-Transferable Utility Game"@en ;
+    rdfs:subClassOf <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    skos:definition "A cooperative game where payoffs cannot be transferred."@en .
+
+<https://w3id.org/uogto/extensions#Norm> a owl:Class ;
+    rdfs:label "Norm"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A norm rule containing deontic modalities."@en .
+
+<https://w3id.org/uogto/extensions#ParticipationConstraint> a owl:Class ;
+    rdfs:label "ParticipationConstraint"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Condition ensuring the agent accepts the contract."@en .
+
+<https://w3id.org/uogto/extensions#PersuasionMechanism> a owl:Class ;
+    rdfs:label "PersuasionMechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mechanism modeling Bayesian persuasion."@en .
+
+<https://w3id.org/uogto/extensions#PopulationPolicy> a owl:Class ;
+    rdfs:label "PopulationPolicy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "The generalized strategy profile of the population."@en .
+
+<https://w3id.org/uogto/extensions#PotentialGame> a owl:Class ;
+    rdfs:label "PotentialGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game possessing a global potential function."@en .
+
+<https://w3id.org/uogto/extensions#PreferenceProfile> a owl:Class ;
+    rdfs:label "PreferenceProfile"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The collected preferences of all voters."@en .
+
+<https://w3id.org/uogto/extensions#PrincipalAgentGame> a owl:Class ;
+    rdfs:label "PrincipalAgentGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game with hidden action or hidden information."@en .
+
+<https://w3id.org/uogto/extensions#PropertyAffordance> a owl:Class ;
+    rdfs:label "PropertyAffordance"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Read-only attributes exposed by a Digital Twin."@en .
+
+<https://w3id.org/uogto/extensions#ProportionalAllocation> a owl:Class ;
+    rdfs:label "ProportionalAllocation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An allocation giving each agent their fair share."@en .
+
+<https://w3id.org/uogto/extensions#QLearning> a owl:Class ;
+    rdfs:label "QLearning"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A reinforcement learning process updating action-value estimates."@en .
+
+<https://w3id.org/uogto/extensions#Rationalizability> a owl:Class ;
+    rdfs:label "Rationalizability"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The set of actions surviving iterated dominance under beliefs."@en .
+
+<https://w3id.org/uogto/extensions#ReachabilityProperty> a owl:Class ;
+    rdfs:label "ReachabilityProperty"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A property checking if a state is reachable."@en .
+
+<https://w3id.org/uogto/extensions#ReceiverBelief> a owl:Class ;
+    rdfs:label "ReceiverBelief"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The belief state of the target audience."@en .
+
+<https://w3id.org/uogto/extensions#RegretMatching> a owl:Class ;
+    rdfs:label "RegretMatching"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A learning process updating actions based on cumulative regrets."@en .
+
+<https://w3id.org/uogto/extensions#ReplicatorLearning> a owl:Class ;
+    rdfs:label "ReplicatorLearning"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An evolutionary learning process modeling relative success."@en .
+
+<https://w3id.org/uogto/extensions#ResourceEdge> a owl:Class ;
+    rdfs:label "ResourceEdge"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A network edge segment acting as a congestion resource."@en .
+
+<https://w3id.org/uogto/extensions#RewardFunction> a owl:Class ;
+    rdfs:label "RewardFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A function returning rewards based on joint actions and states."@en .
+
+<https://w3id.org/uogto/extensions#SafetyProperty> a owl:Class ;
+    rdfs:label "SafetyProperty"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A property checking that a bad state is never reached."@en .
+
+<https://w3id.org/uogto/extensions#SecondPriceAuction> a owl:Class ;
+    rdfs:label "SecondPriceAuction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An auction where the highest bidder wins and pays the second-highest bid."@en .
+
+<https://w3id.org/uogto/extensions#SelfPlay> a owl:Class ;
+    rdfs:label "SelfPlay"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A training protocol where agents learn by playing copies of themselves."@en .
+
+<https://w3id.org/uogto/extensions#StableMatching> a owl:Class ;
+    rdfs:label "StableMatching"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A matching without blocking pairs."@en .
+
+<https://w3id.org/uogto/extensions#StackelbergSecurityGame> a owl:Class ;
+    rdfs:label "StackelbergSecurityGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A security game where defender commits first."@en .
+
+<https://w3id.org/uogto/extensions#StochasticDifferentialGame> a owl:Class ;
+    rdfs:label "StochasticDifferentialGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A differential game incorporating stochastic noise."@en .
+
+<https://w3id.org/uogto/extensions#StrategyLens> a owl:Class ;
+    rdfs:label "StrategyLens"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A lens translating strategy parameters."@en .
+
+<https://w3id.org/uogto/extensions#TemporalProperty> a owl:Class ;
+    rdfs:label "TemporalProperty"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Properties modeling time dimensions (CTL, ATL)."@en .
+
+<https://w3id.org/uogto/extensions#ThreatModel> a owl:Class ;
+    rdfs:label "ThreatModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Specifies adversary capabilities."@en .
+
+<https://w3id.org/uogto/extensions#Token> a owl:Class ;
+    rdfs:label "Token"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Marking entities residing in places."@en .
+
+<https://w3id.org/uogto/extensions#TransferableUtilityGame> a owl:Class ;
+    rdfs:label "Transferable Utility Game"@en ;
+    rdfs:subClassOf <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    skos:definition "A cooperative game where players can freely transfer utility values."@en .
+
+<https://w3id.org/uogto/extensions#TransitionRule> a owl:Class ;
+    rdfs:label "TransitionRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules mapping action configurations to next states."@en .
+
+<https://w3id.org/uogto/extensions#TrustRelation> a owl:Class ;
+    rdfs:label "TrustRelation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Models relative trust parameters among agents."@en .
+
+<https://w3id.org/uogto/extensions#ValidationShape> a owl:Class ;
+    rdfs:label "ValidationShape"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "SHACL validation schema applied at runtime."@en .
+
+<https://w3id.org/uogto/extensions#VerificationGame> a owl:Class ;
+    rdfs:label "VerificationGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling formal specification checks."@en .
+
+<https://w3id.org/uogto/extensions#VickreyAuction> a owl:Class ;
+    rdfs:label "VickreyAuction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A sealed-bid second-price auction."@en .
+
+<https://w3id.org/uogto/extensions#VotingRule> a owl:Class ;
+    rdfs:label "VotingRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "The formal algorithm aggregation of ballots."@en .
+
+<https://w3id.org/uogto/extensions#capacityValue> a owl:DatatypeProperty ;
+    rdfs:label "capacityValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Resource> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric capacity maximum limit."@en .
+
+<https://w3id.org/uogto/extensions#coalitionValueValue> a owl:DatatypeProperty ;
+    rdfs:label "coalition value value"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CharacteristicFunction> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numerical value associated with a coalition."@en .
+
+<https://w3id.org/uogto/extensions#cognitiveLevel> a owl:DatatypeProperty ;
+    rdfs:label "cognitiveLevel"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer level parameter in Level-K models."@en .
+
+<https://w3id.org/uogto/extensions#concessionRate> a owl:DatatypeProperty ;
+    rdfs:label "concessionRate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BargainingGame> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric rate at which players concede during bargaining."@en .
+
+<https://w3id.org/uogto/extensions#costValue> a owl:DatatypeProperty ;
+    rdfs:label "costValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#TransactionCost> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric transaction cost values."@en .
+
+<https://w3id.org/uogto/extensions#degreeValue> a owl:DatatypeProperty ;
+    rdfs:label "degreeValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#GraphPlayer> ;
+    rdfs:range xsd:integer ;
+    skos:definition "Numeric property representing number of graph edges."@en .
+
+<https://w3id.org/uogto/extensions#densityValue> a owl:DatatypeProperty ;
+    rdfs:label "densityValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PopulationState> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric population density value."@en .
+
+<https://w3id.org/uogto/extensions#disagreementPoint> a owl:DatatypeProperty ;
+    rdfs:label "disagreementPoint"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BargainingGame> ;
+    rdfs:range xsd:double ;
+    skos:definition "Assigns a utility value representing the outcome of negotiation failure."@en .
+
+<https://w3id.org/uogto/extensions#discountFactor> a owl:DatatypeProperty ;
+    rdfs:label "discountFactor"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LearningProcess> ;
+    rdfs:range xsd:double ;
+    skos:definition "Temporal discount factor for future rewards."@en .
+
+<https://w3id.org/uogto/extensions#driftRate> a owl:DatatypeProperty ;
+    rdfs:label "driftRate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#StateEquation> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric drift value."@en .
+
+<https://w3id.org/uogto/extensions#entropyValue> a owl:DatatypeProperty ;
+    rdfs:label "entropyValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#SignalStructure> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric information metric value."@en .
+
+<https://w3id.org/uogto/extensions#epsilonValue> a owl:DatatypeProperty ;
+    rdfs:label "epsilonValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PrivacyBudget> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric epsilon privacy parameter value."@en .
+
+<https://w3id.org/uogto/extensions#explorationRate> a owl:DatatypeProperty ;
+    rdfs:label "explorationRate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LearningProcess> ;
+    rdfs:range xsd:double ;
+    skos:definition "Epsilon probability of random exploration."@en .
+
+<https://w3id.org/uogto/extensions#formulaString> a owl:DatatypeProperty ;
+    rdfs:label "formulaString"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#StrategicFormula> ;
+    rdfs:range xsd:string ;
+    skos:definition "Syntax string of the formula."@en .
+
+<https://w3id.org/uogto/extensions#hasActionSpace> a owl:ObjectProperty ;
+    rdfs:label "hasActionSpace"@en ;
+    rdfs:domain ns1:Agent ;
+    rdfs:range <https://w3id.org/uogto/extensions#ActionSpace> ;
+    skos:definition "Links an agent to their action space."@en .
+
+<https://w3id.org/uogto/extensions#hasAffordance> a owl:ObjectProperty ;
+    rdfs:label "hasAffordance"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DigitalTwin> ;
+    rdfs:range <https://w3id.org/uogto/extensions#InteractionAffordance> ;
+    skos:definition "Links a digital twin to affordances."@en .
+
+<https://w3id.org/uogto/extensions#hasAgentRole> a owl:ObjectProperty ;
+    rdfs:label "hasAgentRole"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContractGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#AgentRole> ;
+    skos:definition "Links a game to its agent role."@en .
+
+<https://w3id.org/uogto/extensions#hasAllocation> a owl:ObjectProperty ;
+    rdfs:label "hasAllocation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MatchingMarket> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Allocation> ;
+    skos:definition "Links a market to allocations."@en .
+
+<https://w3id.org/uogto/extensions#hasAllocationRule> a owl:ObjectProperty ;
+    rdfs:label "hasAllocationRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Mechanism> ;
+    rdfs:range <https://w3id.org/uogto/extensions#AllocationRule> ;
+    skos:definition "Links a mechanism to its allocation rule."@en .
+
+<https://w3id.org/uogto/extensions#hasAttacker> a owl:ObjectProperty ;
+    rdfs:label "hasAttacker"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#SecurityGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Attacker> ;
+    skos:definition "Links a security game to its attacker."@en .
+
+<https://w3id.org/uogto/extensions#hasBallot> a owl:ObjectProperty ;
+    rdfs:label "hasBallot"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Voter> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Ballot> ;
+    skos:definition "Links a voter to their ballot."@en .
+
+<https://w3id.org/uogto/extensions#hasBargainingProtocol> a owl:ObjectProperty ;
+    rdfs:label "hasBargainingProtocol"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BargainingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#BargainingProtocol> ;
+    skos:definition "Links a game to its negotiation protocol."@en .
+
+<https://w3id.org/uogto/extensions#hasBargainingSolution> a owl:ObjectProperty ;
+    rdfs:label "hasBargainingSolution"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BargainingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#BargainingSolution> ;
+    skos:definition "Assigns a bargaining solution to a bargaining problem."@en .
+
+<https://w3id.org/uogto/extensions#hasBeliefHierarchy> a owl:ObjectProperty ;
+    rdfs:label "hasBeliefHierarchy"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Type> ;
+    rdfs:range <https://w3id.org/uogto/extensions#BeliefHierarchy> ;
+    skos:definition "Links a type to its belief hierarchy."@en .
+
+<https://w3id.org/uogto/extensions#hasBiddingRule> a owl:ObjectProperty ;
+    rdfs:label "hasBiddingRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Auction> ;
+    rdfs:range ns1:Rule ;
+    skos:definition "Rules defining valid bids."@en .
+
+<https://w3id.org/uogto/extensions#hasBlockingPair> a owl:ObjectProperty ;
+    rdfs:label "hasBlockingPair"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Matching> ;
+    rdfs:range <https://w3id.org/uogto/extensions#BlockingPair> ;
+    skos:definition "Links a matching to its blocking pairs."@en .
+
+<https://w3id.org/uogto/extensions#hasBoundedModel> a owl:ObjectProperty ;
+    rdfs:label "hasBoundedModel"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#BoundedRationalityModel> ;
+    skos:definition "Links a player to bounded models."@en .
+
+<https://w3id.org/uogto/extensions#hasCandidate> a owl:ObjectProperty ;
+    rdfs:label "hasCandidate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#VotingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Candidate> ;
+    skos:definition "Links a voting game to options."@en .
+
+<https://w3id.org/uogto/extensions#hasCausalGraph> a owl:ObjectProperty ;
+    rdfs:label "hasCausalGraph"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CausalModel> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CausalGraph> ;
+    skos:definition "Links a causal model to its DAG graph."@en .
+
+<https://w3id.org/uogto/extensions#hasCausalModel> a owl:ObjectProperty ;
+    rdfs:label "hasCausalModel"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CausalGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CausalModel> ;
+    skos:definition "Links a game to its structural causal model."@en .
+
+<https://w3id.org/uogto/extensions#hasCharacteristicFunction> a owl:ObjectProperty ;
+    rdfs:label "has characteristic function"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CharacteristicFunction> ;
+    skos:definition "Links cooperative game to its characteristic function."@en .
+
+<https://w3id.org/uogto/extensions#hasCoalition> a owl:ObjectProperty ;
+    rdfs:label "has coalition"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    rdfs:range ns1:Coalition ;
+    skos:definition "Links a game to active coalitions."@en .
+
+<https://w3id.org/uogto/extensions#hasComplexityClass> a owl:ObjectProperty ;
+    rdfs:label "hasComplexityClass"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#EquilibriumComputationProblem> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ComplexityClass> ;
+    skos:definition "Links computation to complexity classes."@en .
+
+<https://w3id.org/uogto/extensions#hasComposition> a owl:ObjectProperty ;
+    rdfs:label "hasComposition"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CompositionalGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#MonoidalComposition> ;
+    skos:definition "Links composite games to elements."@en .
+
+<https://w3id.org/uogto/extensions#hasConsentBoundary> a owl:ObjectProperty ;
+    rdfs:label "hasConsentBoundary"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ToolInvocation> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ConsentBoundary> ;
+    skos:definition "Links tool calls to boundaries."@en .
+
+<https://w3id.org/uogto/extensions#hasConsentPolicy> a owl:ObjectProperty ;
+    rdfs:label "hasConsentPolicy"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DisclosureAction> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ConsentPolicy> ;
+    skos:definition "Links disclosure actions to policies."@en .
+
+<https://w3id.org/uogto/extensions#hasContract> a owl:ObjectProperty ;
+    rdfs:label "hasContract"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContractGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Contract> ;
+    skos:definition "Links a principal-agent game to its contract."@en .
+
+<https://w3id.org/uogto/extensions#hasControlVariable> a owl:ObjectProperty ;
+    rdfs:label "hasControlVariable"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#ControlVariable> ;
+    skos:definition "Links a player to their control variables."@en .
+
+<https://w3id.org/uogto/extensions#hasCoplayFunction> a owl:ObjectProperty ;
+    rdfs:label "hasCoplayFunction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#OpenGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CoplayFunction> ;
+    skos:definition "Links an open game to backward functions."@en .
+
+<https://w3id.org/uogto/extensions#hasCoreSolution> a owl:ObjectProperty ;
+    rdfs:label "has core solution"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CoreSolution> ;
+    skos:definition "Links a cooperative game to its core solutions."@en .
+
+<https://w3id.org/uogto/extensions#hasCounterexample> a owl:ObjectProperty ;
+    rdfs:label "hasCounterexample"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ModelCheckingTask> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CounterexampleTrace> ;
+    skos:definition "Links task run to counterexamples."@en .
+
+<https://w3id.org/uogto/extensions#hasCounterfactualOutcome> a owl:ObjectProperty ;
+    rdfs:label "hasCounterfactualOutcome"@en ;
+    rdfs:domain ns1:PlaySession ;
+    rdfs:range <https://w3id.org/uogto/extensions#CounterfactualOutcome> ;
+    skos:definition "Links a session to hypothetical outcomes."@en .
+
+<https://w3id.org/uogto/extensions#hasCoverageSchedule> a owl:ObjectProperty ;
+    rdfs:label "hasCoverageSchedule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Defender> ;
+    rdfs:range <https://w3id.org/uogto/extensions#CoverageSchedule> ;
+    skos:definition "Links defender to a schedule."@en .
+
+<https://w3id.org/uogto/extensions#hasCredential> a owl:ObjectProperty ;
+    rdfs:label "hasCredential"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#Credential> ;
+    skos:definition "Links a player to credentials."@en .
+
+<https://w3id.org/uogto/extensions#hasDPMechanism> a owl:ObjectProperty ;
+    rdfs:label "hasDPMechanism"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DisclosureAction> ;
+    rdfs:range <https://w3id.org/uogto/extensions#DifferentialPrivacyMechanism> ;
+    skos:definition "Links disclosure to DP mechanisms."@en .
+
+<https://w3id.org/uogto/extensions#hasDefender> a owl:ObjectProperty ;
+    rdfs:label "hasDefender"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#SecurityGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Defender> ;
+    skos:definition "Links a security game to its defender."@en .
+
+<https://w3id.org/uogto/extensions#hasDesigner> a owl:ObjectProperty ;
+    rdfs:label "hasDesigner"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#InformationDesignGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#InformationDesigner> ;
+    skos:definition "Links information design to its designer."@en .
+
+<https://w3id.org/uogto/extensions#hasDigitalTwin> a owl:ObjectProperty ;
+    rdfs:label "hasDigitalTwin"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DigitalTwinGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#DigitalTwin> ;
+    skos:definition "Links a game to its digital twins."@en .
+
+<https://w3id.org/uogto/extensions#hasDisclosurePolicy> a owl:ObjectProperty ;
+    rdfs:label "hasDisclosurePolicy"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#InformationDesignGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#DisclosurePolicy> ;
+    skos:definition "Links design to policies."@en .
+
+<https://w3id.org/uogto/extensions#hasDistributionalState> a owl:ObjectProperty ;
+    rdfs:label "hasDistributionalState"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PopulationState> ;
+    rdfs:range <https://w3id.org/uogto/extensions#DistributionalState> ;
+    skos:definition "Links a population state to distributions."@en .
+
+<https://w3id.org/uogto/extensions#hasESS> a owl:ObjectProperty ;
+    rdfs:label "hasESS"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#EvolutionaryGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#EvolutionarilyStableStrategy> ;
+    skos:definition "Links an evolutionary game to its stable strategies."@en .
+
+<https://w3id.org/uogto/extensions#hasEnforcementMechanism> a owl:ObjectProperty ;
+    rdfs:label "hasEnforcementMechanism"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Institution> ;
+    rdfs:range <https://w3id.org/uogto/extensions#EnforcementMechanism> ;
+    skos:definition "Links an institution to enforcement."@en .
+
+<https://w3id.org/uogto/extensions#hasEquilibriumPredicate> a owl:ObjectProperty ;
+    rdfs:label "hasEquilibriumPredicate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#OpenGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#EquilibriumPredicate> ;
+    skos:definition "Links an open game to its local equilibria."@en .
+
+<https://w3id.org/uogto/extensions#hasExecutionBinding> a owl:ObjectProperty ;
+    rdfs:label "hasExecutionBinding"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ExecutableGameGraph> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ExecutionBinding> ;
+    skos:definition "Links an executable graph to execution mappings."@en .
+
+<https://w3id.org/uogto/extensions#hasFitnessFunction> a owl:ObjectProperty ;
+    rdfs:label "hasFitnessFunction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Population> ;
+    rdfs:range <https://w3id.org/uogto/extensions#FitnessFunction> ;
+    skos:definition "Links a population to its fitness model."@en .
+
+<https://w3id.org/uogto/extensions#hasFormula> a owl:ObjectProperty ;
+    rdfs:label "hasFormula"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ModelCheckingTask> ;
+    rdfs:range <https://w3id.org/uogto/extensions#StrategicFormula> ;
+    skos:definition "Links a model checker to formulas."@en .
+
+<https://w3id.org/uogto/extensions#hasGDLDescription> a owl:DatatypeProperty ;
+    rdfs:label "hasGDLDescription"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RuleEncodedGame> ;
+    rdfs:range xsd:string ;
+    skos:definition "Links a game to GDL script content."@en .
+
+<https://w3id.org/uogto/extensions#hasGoalRule> a owl:ObjectProperty ;
+    rdfs:label "hasGoalRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RuleEncodedGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#GoalRule> ;
+    skos:definition "Links a game to goal rules."@en .
+
+<https://w3id.org/uogto/extensions#hasGraphPlayer> a owl:ObjectProperty ;
+    rdfs:label "hasGraphPlayer"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#NetworkGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#GraphPlayer> ;
+    skos:definition "Links a network game to its player nodes."@en .
+
+<https://w3id.org/uogto/extensions#hasHamiltonian> a owl:ObjectProperty ;
+    rdfs:label "hasHamiltonian"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContinuousTimeGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Hamiltonian> ;
+    skos:definition "Links state analysis to its Hamiltonian."@en .
+
+<https://w3id.org/uogto/extensions#hasHighestBidder> a owl:ObjectProperty ;
+    rdfs:label "hasHighestBidder"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Auction> ;
+    rdfs:range ns1:Player ;
+    skos:definition "Identifies the highest bidder in an auction."@en .
+
+<https://w3id.org/uogto/extensions#hasIdentityClaim> a owl:ObjectProperty ;
+    rdfs:label "hasIdentityClaim"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#IdentityClaim> ;
+    skos:definition "Links a player to identity claims."@en .
+
+<https://w3id.org/uogto/extensions#hasIncentiveConstraint> a owl:ObjectProperty ;
+    rdfs:label "hasIncentiveConstraint"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Mechanism> ;
+    rdfs:range <https://w3id.org/uogto/extensions#IncentiveCompatibilityConstraint> ;
+    skos:definition "Links a mechanism to incentive constraints."@en .
+
+<https://w3id.org/uogto/extensions#hasIncentiveScheme> a owl:ObjectProperty ;
+    rdfs:label "hasIncentiveScheme"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Contract> ;
+    rdfs:range <https://w3id.org/uogto/extensions#IncentiveScheme> ;
+    skos:definition "Links a contract to incentives."@en .
+
+<https://w3id.org/uogto/extensions#hasInstitution> a owl:ObjectProperty ;
+    rdfs:label "hasInstitution"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#InstitutionalEconomicsGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Institution> ;
+    skos:definition "Links a game to governing institutions."@en .
+
+<https://w3id.org/uogto/extensions#hasIntervention> a owl:ObjectProperty ;
+    rdfs:label "hasIntervention"@en ;
+    rdfs:domain ns1:PlaySession ;
+    rdfs:range <https://w3id.org/uogto/extensions#Intervention> ;
+    skos:definition "Links a session to an intervention."@en .
+
+<https://w3id.org/uogto/extensions#hasLatencyFunction> a owl:ObjectProperty ;
+    rdfs:label "hasLatencyFunction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Resource> ;
+    rdfs:range <https://w3id.org/uogto/extensions#LatencyFunction> ;
+    skos:definition "Links a resource to latency functions."@en .
+
+<https://w3id.org/uogto/extensions#hasLearningAlgorithm> a owl:ObjectProperty ;
+    rdfs:label "hasLearningAlgorithm"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MultiAgentEnvironment> ;
+    rdfs:range <https://w3id.org/uogto/extensions#LearningAlgorithm> ;
+    skos:definition "Links a training run to its algorithm."@en .
+
+<https://w3id.org/uogto/extensions#hasLearningProcess> a owl:ObjectProperty ;
+    rdfs:label "hasLearningProcess"@en ;
+    rdfs:domain ns1:PlaySession ;
+    rdfs:range <https://w3id.org/uogto/extensions#LearningProcess> ;
+    skos:definition "Links a game session to its learning process."@en .
+
+<https://w3id.org/uogto/extensions#hasLegalMoveRule> a owl:ObjectProperty ;
+    rdfs:label "hasLegalMoveRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RuleEncodedGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#LegalMoveRule> ;
+    skos:definition "Links a game to move rules."@en .
+
+<https://w3id.org/uogto/extensions#hasLens> a owl:ObjectProperty ;
+    rdfs:label "hasLens"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#OpenGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Lens> ;
+    skos:definition "Links an open game to its lens."@en .
+
+<https://w3id.org/uogto/extensions#hasLocalInteraction> a owl:ObjectProperty ;
+    rdfs:label "hasLocalInteraction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#GraphPlayer> ;
+    rdfs:range <https://w3id.org/uogto/extensions#LocalInteraction> ;
+    skos:definition "Links a player node to local games."@en .
+
+<https://w3id.org/uogto/extensions#hasMarking> a owl:ObjectProperty ;
+    rdfs:label "hasMarking"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PetriNet> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Marking> ;
+    skos:definition "Links a net model to its current marking state."@en .
+
+<https://w3id.org/uogto/extensions#hasMatching> a owl:ObjectProperty ;
+    rdfs:label "hasMatching"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MatchingMarket> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Matching> ;
+    skos:definition "Links a market to matching assignments."@en .
+
+<https://w3id.org/uogto/extensions#hasMatchingMarket> a owl:ObjectProperty ;
+    rdfs:label "hasMatchingMarket"@en ;
+    rdfs:domain ns1:PlaySession ;
+    rdfs:range <https://w3id.org/uogto/extensions#MatchingMarket> ;
+    skos:definition "Links a session to a market."@en .
+
+<https://w3id.org/uogto/extensions#hasMeanFieldEquilibrium> a owl:ObjectProperty ;
+    rdfs:label "hasMeanFieldEquilibrium"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MeanFieldGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#MeanFieldEquilibrium> ;
+    skos:definition "Links a game to its equilibria."@en .
+
+<https://w3id.org/uogto/extensions#hasMemoryState> a owl:ObjectProperty ;
+    rdfs:label "hasMemoryState"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LLMAgent> ;
+    rdfs:range <https://w3id.org/uogto/extensions#MemoryState> ;
+    skos:definition "Links an LLM agent to memory."@en .
+
+<https://w3id.org/uogto/extensions#hasMutationOperator> a owl:ObjectProperty ;
+    rdfs:label "hasMutationOperator"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Population> ;
+    rdfs:range <https://w3id.org/uogto/extensions#MutationOperator> ;
+    skos:definition "Links a population to mutation rates."@en .
+
+<https://w3id.org/uogto/extensions#hasNegotiator> a owl:ObjectProperty ;
+    rdfs:label "hasNegotiator"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BargainingGame> ;
+    rdfs:range ns1:Player ;
+    skos:definition "Identifies negotiators involved."@en .
+
+<https://w3id.org/uogto/extensions#hasNeighborSet> a owl:ObjectProperty ;
+    rdfs:label "hasNeighborSet"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#GraphPlayer> ;
+    rdfs:range <https://w3id.org/uogto/extensions#NeighborSet> ;
+    skos:definition "Links a node to neighbors."@en .
+
+<https://w3id.org/uogto/extensions#hasNetworkEdge> a owl:ObjectProperty ;
+    rdfs:label "hasNetworkEdge"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#NetworkGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#NetworkEdge> ;
+    skos:definition "Links a network game to its structural edges."@en .
+
+<https://w3id.org/uogto/extensions#hasNetworkFlow> a owl:ObjectProperty ;
+    rdfs:label "hasNetworkFlow"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RoutingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#NetworkFlow> ;
+    skos:definition "Links a routing game to flows."@en .
+
+<https://w3id.org/uogto/extensions#hasObligation> a owl:ObjectProperty ;
+    rdfs:label "hasObligation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ComplianceState> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Obligation> ;
+    skos:definition "Links a compliance state to obligations."@en .
+
+<https://w3id.org/uogto/extensions#hasObservationSpace> a owl:ObjectProperty ;
+    rdfs:label "hasObservationSpace"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MultiAgentEnvironment> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ObservationSpace> ;
+    skos:definition "Links an environment to its observation space."@en .
+
+<https://w3id.org/uogto/extensions#hasParticipationConstraint> a owl:ObjectProperty ;
+    rdfs:label "hasParticipationConstraint"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Mechanism> ;
+    rdfs:range <https://w3id.org/uogto/extensions#IndividualRationalityConstraint> ;
+    skos:definition "Links a mechanism to participation constraints."@en .
+
+<https://w3id.org/uogto/extensions#hasPaymentRule> a owl:ObjectProperty ;
+    rdfs:label "hasPaymentRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Mechanism> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PaymentRule> ;
+    skos:definition "Links a mechanism to its payment rule."@en .
+
+<https://w3id.org/uogto/extensions#hasPermission> a owl:ObjectProperty ;
+    rdfs:label "hasPermission"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ComplianceState> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Permission> ;
+    skos:definition "Links a compliance state to permissions."@en .
+
+<https://w3id.org/uogto/extensions#hasPetriNet> a owl:ObjectProperty ;
+    rdfs:label "hasPetriNet"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PetriNetGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PetriNet> ;
+    skos:definition "Links a Petri Net game to its net model."@en .
+
+<https://w3id.org/uogto/extensions#hasPhysicalThing> a owl:ObjectProperty ;
+    rdfs:label "hasPhysicalThing"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DigitalTwin> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Thing> ;
+    skos:definition "Links a digital twin to its physical source."@en .
+
+<https://w3id.org/uogto/extensions#hasPlace> a owl:ObjectProperty ;
+    rdfs:label "hasPlace"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PetriNet> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Place> ;
+    skos:definition "Links a net model to places."@en .
+
+<https://w3id.org/uogto/extensions#hasPlayFunction> a owl:ObjectProperty ;
+    rdfs:label "hasPlayFunction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#OpenGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PlayFunction> ;
+    skos:definition "Links an open game to forward play functions."@en .
+
+<https://w3id.org/uogto/extensions#hasPolicy> a owl:ObjectProperty ;
+    rdfs:label "hasPolicy"@en ;
+    rdfs:domain ns1:Agent ;
+    rdfs:range <https://w3id.org/uogto/extensions#Policy> ;
+    skos:definition "Links an agent to their current policy."@en .
+
+<https://w3id.org/uogto/extensions#hasPopulation> a owl:ObjectProperty ;
+    rdfs:label "hasPopulation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#EvolutionaryGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Population> ;
+    skos:definition "Links an evolutionary game to its populations."@en .
+
+<https://w3id.org/uogto/extensions#hasPopulationState> a owl:ObjectProperty ;
+    rdfs:label "hasPopulationState"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MeanFieldGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PopulationState> ;
+    skos:definition "Links a game to population states."@en .
+
+<https://w3id.org/uogto/extensions#hasPosteriorBelief> a owl:ObjectProperty ;
+    rdfs:label "hasPosteriorBelief"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#PosteriorBelief> ;
+    skos:definition "Links a receiver to their posterior belief."@en .
+
+<https://w3id.org/uogto/extensions#hasPriceOfAnarchy> a owl:ObjectProperty ;
+    rdfs:label "hasPriceOfAnarchy"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#AlgorithmicGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PriceOfAnarchy> ;
+    skos:definition "Links a game to its anarchy index."@en .
+
+<https://w3id.org/uogto/extensions#hasPriceOfStability> a owl:ObjectProperty ;
+    rdfs:label "hasPriceOfStability"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#AlgorithmicGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PriceOfStability> ;
+    skos:definition "Links a game to its stability index."@en .
+
+<https://w3id.org/uogto/extensions#hasPrincipal> a owl:ObjectProperty ;
+    rdfs:label "hasPrincipal"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContractGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Principal> ;
+    skos:definition "Links a game to its principal."@en .
+
+<https://w3id.org/uogto/extensions#hasPrivacyBudget> a owl:ObjectProperty ;
+    rdfs:label "hasPrivacyBudget"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#PrivacyBudget> ;
+    skos:definition "Links an agent to their privacy budget."@en .
+
+<https://w3id.org/uogto/extensions#hasPrivateAttribute> a owl:ObjectProperty ;
+    rdfs:label "hasPrivateAttribute"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#PrivateAttribute> ;
+    skos:definition "Links an agent to private attributes."@en .
+
+<https://w3id.org/uogto/extensions#hasPrivateSignal> a owl:ObjectProperty ;
+    rdfs:label "hasPrivateSignal"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Type> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PrivateSignal> ;
+    skos:definition "Links a player type to signals."@en .
+
+<https://w3id.org/uogto/extensions#hasProhibition> a owl:ObjectProperty ;
+    rdfs:label "hasProhibition"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ComplianceState> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Prohibition> ;
+    skos:definition "Links a compliance state to prohibitions."@en .
+
+<https://w3id.org/uogto/extensions#hasPromptState> a owl:ObjectProperty ;
+    rdfs:label "hasPromptState"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LLMAgent> ;
+    rdfs:range <https://w3id.org/uogto/extensions#PromptState> ;
+    skos:definition "Links an LLM agent to prompt states."@en .
+
+<https://w3id.org/uogto/extensions#hasPropertyRight> a owl:ObjectProperty ;
+    rdfs:label "hasPropertyRight"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#PropertyRight> ;
+    skos:definition "Links a player to their assets."@en .
+
+<https://w3id.org/uogto/extensions#hasProtocolBinding> a owl:ObjectProperty ;
+    rdfs:label "hasProtocolBinding"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#InteractionAffordance> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ProtocolBinding> ;
+    skos:definition "Links affordances to protocols."@en .
+
+<https://w3id.org/uogto/extensions#hasProvenanceTrace> a owl:ObjectProperty ;
+    rdfs:label "hasProvenanceTrace"@en ;
+    rdfs:domain ns1:PlaySession ;
+    rdfs:range <https://w3id.org/uogto/extensions#ProvenanceTrace> ;
+    skos:definition "Links a session to lineage logs."@en .
+
+<https://w3id.org/uogto/extensions#hasQRE> a owl:ObjectProperty ;
+    rdfs:label "hasQRE"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BehaviouralGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#QuantalResponseEquilibrium> ;
+    skos:definition "Links a game to QRE profiles."@en .
+
+<https://w3id.org/uogto/extensions#hasQTable> a owl:ObjectProperty ;
+    rdfs:label "hasQTable"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LearningProcess> ;
+    rdfs:range ns1:State ;
+    skos:definition "Identifies value state tables."@en .
+
+<https://w3id.org/uogto/extensions#hasReplicatorDynamic> a owl:ObjectProperty ;
+    rdfs:label "hasReplicatorDynamic"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Population> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ReplicatorDynamic> ;
+    skos:definition "Links a population to its replicator equations."@en .
+
+<https://w3id.org/uogto/extensions#hasRepresentativeAgent> a owl:ObjectProperty ;
+    rdfs:label "hasRepresentativeAgent"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#MeanFieldGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#RepresentativeAgent> ;
+    skos:definition "Links a game to its representative agent."@en .
+
+<https://w3id.org/uogto/extensions#hasReputationScore> a owl:ObjectProperty ;
+    rdfs:label "hasReputationScore"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#ReputationScore> ;
+    skos:definition "Links a player to their score."@en .
+
+<https://w3id.org/uogto/extensions#hasReservePrice> a owl:DatatypeProperty ;
+    rdfs:label "hasReservePrice"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Auction> ;
+    rdfs:range xsd:double ;
+    skos:definition "Declares the reserve price of an auction."@en .
+
+<https://w3id.org/uogto/extensions#hasResource> a owl:ObjectProperty ;
+    rdfs:label "hasResource"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CongestionGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Resource> ;
+    skos:definition "Links a congestion game to its resources."@en .
+
+<https://w3id.org/uogto/extensions#hasRulePredicate> a owl:ObjectProperty ;
+    rdfs:label "hasRulePredicate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RuleEncodedGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#RulePredicate> ;
+    skos:definition "Links rules to GDL predicates."@en .
+
+<https://w3id.org/uogto/extensions#hasRuntimeBinding> a owl:ObjectProperty ;
+    rdfs:label "hasRuntimeBinding"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ExecutionBinding> ;
+    rdfs:range <https://w3id.org/uogto/extensions#RuntimeBinding> ;
+    skos:definition "Links a mapping to runtime bindings."@en .
+
+<https://w3id.org/uogto/extensions#hasSanction> a owl:ObjectProperty ;
+    rdfs:label "hasSanction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Violation> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Sanction> ;
+    skos:definition "Links a violation to sanctions."@en .
+
+<https://w3id.org/uogto/extensions#hasSecondHighestBid> a owl:DatatypeProperty ;
+    rdfs:label "hasSecondHighestBid"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Auction> ;
+    rdfs:range xsd:double ;
+    skos:definition "Identifies the second highest bid amount."@en .
+
+<https://w3id.org/uogto/extensions#hasShapleyValue> a owl:ObjectProperty ;
+    rdfs:label "has Shapley value"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CooperativeGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ShapleyValue> ;
+    skos:definition "Assigns a Shapley value profile."@en .
+
+<https://w3id.org/uogto/extensions#hasSignalStructure> a owl:ObjectProperty ;
+    rdfs:label "hasSignalStructure"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#InformationDesignGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#SignalStructure> ;
+    skos:definition "Links design to signal structures."@en .
+
+<https://w3id.org/uogto/extensions#hasSimulationBinding> a owl:ObjectProperty ;
+    rdfs:label "hasSimulationBinding"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ExecutionBinding> ;
+    rdfs:range <https://w3id.org/uogto/extensions#SimulationBinding> ;
+    skos:definition "Links a mapping to simulators."@en .
+
+<https://w3id.org/uogto/extensions#hasSocialChoiceFunction> a owl:ObjectProperty ;
+    rdfs:label "hasSocialChoiceFunction"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#VotingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#SocialChoiceFunction> ;
+    skos:definition "Links a voting game to aggregation functions."@en .
+
+<https://w3id.org/uogto/extensions#hasSolverBinding> a owl:ObjectProperty ;
+    rdfs:label "hasSolverBinding"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ExecutionBinding> ;
+    rdfs:range <https://w3id.org/uogto/extensions#SolverBinding> ;
+    skos:definition "Links a mapping to optimization bindings."@en .
+
+<https://w3id.org/uogto/extensions#hasStateEquation> a owl:ObjectProperty ;
+    rdfs:label "hasStateEquation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContinuousTimeGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#StateEquation> ;
+    skos:definition "Links a game to its dynamics equations."@en .
+
+<https://w3id.org/uogto/extensions#hasStructuralEquation> a owl:ObjectProperty ;
+    rdfs:label "hasStructuralEquation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#CausalModel> ;
+    rdfs:range <https://w3id.org/uogto/extensions#StructuralEquation> ;
+    skos:definition "Links a model to equations."@en .
+
+<https://w3id.org/uogto/extensions#hasTarget> a owl:ObjectProperty ;
+    rdfs:label "hasTarget"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#SecurityGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Target> ;
+    skos:definition "Links a security game to target nodes."@en .
+
+<https://w3id.org/uogto/extensions#hasTerminalRule> a owl:ObjectProperty ;
+    rdfs:label "hasTerminalRule"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RuleEncodedGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#TerminalRule> ;
+    skos:definition "Links a game to terminal rules."@en .
+
+<https://w3id.org/uogto/extensions#hasToolInvocation> a owl:ObjectProperty ;
+    rdfs:label "hasToolInvocation"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#AgentMessage> ;
+    rdfs:range <https://w3id.org/uogto/extensions#ToolInvocation> ;
+    skos:definition "Links an agent message to tool calls."@en .
+
+<https://w3id.org/uogto/extensions#hasTransactionCost> a owl:ObjectProperty ;
+    rdfs:label "hasTransactionCost"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#GameInstance> ;
+    rdfs:range <https://w3id.org/uogto/extensions#TransactionCost> ;
+    skos:definition "Links a trade to its cost."@en .
+
+<https://w3id.org/uogto/extensions#hasTransitionNode> a owl:ObjectProperty ;
+    rdfs:label "hasTransitionNode"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PetriNet> ;
+    rdfs:range <https://w3id.org/uogto/extensions#TransitionNode> ;
+    skos:definition "Links a net model to transition nodes."@en .
+
+<https://w3id.org/uogto/extensions#hasType> a owl:ObjectProperty ;
+    rdfs:label "hasType"@en ;
+    rdfs:domain ns1:Player ;
+    rdfs:range <https://w3id.org/uogto/extensions#Type> ;
+    skos:definition "Links a player to a type space type."@en .
+
+<https://w3id.org/uogto/extensions#hasTypeSpace> a owl:ObjectProperty ;
+    rdfs:label "hasTypeSpace"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#EpistemicGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#TypeSpace> ;
+    skos:definition "Links an epistemic game to type spaces."@en .
+
+<https://w3id.org/uogto/extensions#hasVoter> a owl:ObjectProperty ;
+    rdfs:label "hasVoter"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#VotingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#Voter> ;
+    skos:definition "Links a voting game to its voters."@en .
+
+<https://w3id.org/uogto/extensions#hasWardropEquilibrium> a owl:ObjectProperty ;
+    rdfs:label "hasWardropEquilibrium"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RoutingGame> ;
+    rdfs:range <https://w3id.org/uogto/extensions#WardropEquilibrium> ;
+    skos:definition "Links a routing game to its equilibria."@en .
+
+<https://w3id.org/uogto/extensions#hasWinningBid> a owl:DatatypeProperty ;
+    rdfs:label "hasWinningBid"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Auction> ;
+    rdfs:range xsd:double ;
+    skos:definition "Identifies the winning bid amount."@en .
+
+<https://w3id.org/uogto/extensions#hasWitnessStrategy> a owl:ObjectProperty ;
+    rdfs:label "hasWitnessStrategy"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ModelCheckingTask> ;
+    rdfs:range <https://w3id.org/uogto/extensions#WitnessStrategy> ;
+    skos:definition "Links task run to witness strategies."@en .
+
+<https://w3id.org/uogto/extensions#inequityAversionAlpha> a owl:DatatypeProperty ;
+    rdfs:label "inequityAversionAlpha"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#FairnessPreference> ;
+    rdfs:range xsd:double ;
+    skos:definition "Alpha parameter representing envy preferences."@en .
+
+<https://w3id.org/uogto/extensions#isCompliant> a owl:DatatypeProperty ;
+    rdfs:label "isCompliant"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ComplianceState> ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Boolean mapping compliance."@en .
+
+<https://w3id.org/uogto/extensions#isVerified> a owl:DatatypeProperty ;
+    rdfs:label "isVerified"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ModelCheckingTask> ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Boolean flag indicating validation success."@en .
+
+<https://w3id.org/uogto/extensions#learningRate> a owl:DatatypeProperty ;
+    rdfs:label "learningRate"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LearningProcess> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric rate parameter for parameter updates."@en .
+
+<https://w3id.org/uogto/extensions#poaValue> a owl:DatatypeProperty ;
+    rdfs:label "poaValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PriceOfAnarchy> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric POA ratio value."@en .
+
+<https://w3id.org/uogto/extensions#posValue> a owl:DatatypeProperty ;
+    rdfs:label "posValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#PriceOfStability> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric POS ratio value."@en .
+
+<https://w3id.org/uogto/extensions#queryText> a owl:DatatypeProperty ;
+    rdfs:label "queryText"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#SPARQLExecutionQuery> ;
+    rdfs:range xsd:string ;
+    skos:definition "Syntax string of the execution query."@en .
+
+<https://w3id.org/uogto/extensions#rationalityParameter> a owl:DatatypeProperty ;
+    rdfs:label "rationalityParameter"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#BoundedRationalityModel> ;
+    rdfs:range xsd:double ;
+    skos:definition "Lambda value representing decision noise scaling."@en .
+
+<https://w3id.org/uogto/extensions#rationalizableActions> a owl:ObjectProperty ;
+    rdfs:label "rationalizableActions"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Type> ;
+    rdfs:range ns1:Action ;
+    skos:definition "Links types to actions."@en .
+
+<https://w3id.org/uogto/extensions#regretValue> a owl:DatatypeProperty ;
+    rdfs:label "regretValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#RegretMetric> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value tracking cumulative regret."@en .
+
+<https://w3id.org/uogto/extensions#revenueValue> a owl:DatatypeProperty ;
+    rdfs:label "revenueValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Mechanism> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric property representing expected mechanism revenue."@en .
+
+<https://w3id.org/uogto/extensions#samplingInterval> a owl:DatatypeProperty ;
+    rdfs:label "samplingInterval"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#DigitalTwin> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric monitoring refresh interval."@en .
+
+<https://w3id.org/uogto/extensions#scoreValue> a owl:DatatypeProperty ;
+    rdfs:label "scoreValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ReputationScore> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric score estimate between 0 and 1."@en .
+
+<https://w3id.org/uogto/extensions#temperatureValue> a owl:DatatypeProperty ;
+    rdfs:label "temperatureValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#LLMAgent> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric temperature configuration."@en .
+
+<https://w3id.org/uogto/extensions#threatScore> a owl:DatatypeProperty ;
+    rdfs:label "threatScore"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Target> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric value estimating target threat."@en .
+
+<https://w3id.org/uogto/extensions#timeHorizon> a owl:DatatypeProperty ;
+    rdfs:label "timeHorizon"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#ContinuousTimeGame> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric maximum continuous time index."@en .
+
+<https://w3id.org/uogto/extensions#tokenCount> a owl:DatatypeProperty ;
+    rdfs:label "tokenCount"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Place> ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer number of tokens in a place."@en .
+
+<https://w3id.org/uogto/extensions#valuationValue> a owl:DatatypeProperty ;
+    rdfs:label "valuationValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Allocation> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric valuation assigned to an allocation."@en .
+
+<https://w3id.org/uogto/extensions#voteCount> a owl:DatatypeProperty ;
+    rdfs:label "voteCount"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#Candidate> ;
+    rdfs:range xsd:integer ;
+    skos:definition "Integer number of votes counted."@en .
+
+<https://w3id.org/uogto/extensions#wageValue> a owl:DatatypeProperty ;
+    rdfs:label "wageValue"@en ;
+    rdfs:domain <https://w3id.org/uogto/extensions#IncentiveScheme> ;
+    rdfs:range xsd:double ;
+    skos:definition "Numeric property representing agent payments."@en .
+
+<https://w3id.org/uogto/extensions/algorithmic-game-theory> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Algorithmic Game Theory"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/auctions> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Auctions"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/bargaining> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Bargaining"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/behavioural-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Behavioural Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/causal-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Causal Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/compositional-open-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Compositional Open Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/computational-social-choice> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Computational Social Choice"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/congestion-routing-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Congestion Routing Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/contract-theory> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Contract Theory"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/cooperative> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Cooperative Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/deontic-logic> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Deontic Logic"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/differential-hybrid-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Differential Hybrid Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/digital-twin-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Digital Twin Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/epistemic-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Epistemic Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/evolutionary-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Evolutionary Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/game-description-languages> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Game Description Languages"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/information-design> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Information Design"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/institutional-economics> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Institutional Economics"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/kg-execution-bindings> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Kg Execution Bindings"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/learning-in-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Learning In Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/llm-agent-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Llm Agent Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/marl> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Marl"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/matching-allocation> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Matching Allocation"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/mean-field-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Mean Field Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/mechanism-design> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Mechanism Design"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/network-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Network Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/petri-net-devs-hla> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Petri Net Devs Hla"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/privacy-disclosure> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Privacy Disclosure"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/security-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Security Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/trust-reputation-provenance> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Trust Reputation Provenance"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+<https://w3id.org/uogto/extensions/verification-games> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Verification Games"@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+ns1:Coalition a owl:Class ;
+    rdfs:label "Coalition"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A group of players cooperating to achieve payoffs."@en .
+
+ns1:Solver a owl:Class ;
+    rdfs:label "Solver"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An algorithm designed to find game equilibria."@en .
+
+ns1:currentGovernanceRecord a ns1:OntologyGovernanceRecord ;
+    ns1:competencyQuestionReference "competency-questions/cq01-list-players.rq; competency-questions/cq02-list-strategies.rq; competency-questions/cq03-find-equilibria.rq; competency-questions/cq04-games-with-incomplete-information.rq; competency-questions/cq05-security-games-with-targets.rq; competency-questions/cq06-mechanisms-with-incentive-constraints.rq; competency-questions/cq07-llm-games-with-tool-invocations.rq; competency-questions/cq08-executable-games-with-event-traces.rq; competency-questions/cq09-games-with-privacy-budget.rq; competency-questions/cq10-modules-and-imports.rq" ;
+    ns1:governanceStatus "active" ;
+    ns1:maturityLevel "research-grade" ;
+    ns1:reviewDate "2026-06-24"^^xsd:date ;
+    ns1:sourceEvidenceReference "docs/article-hardening/search-log.jsonl; docs/article-hardening/source-extension-inventory.json; docs/article-hardening/quality-metrics.json; docs/article-hardening/case-studies.md; docs/article-hardening/term-changelog.md" ;
+    ns1:steward "UOGTO maintainers" .
+
+<https://w3id.org/uogto/extensions#ActionSpace> a owl:Class ;
+    rdfs:label "ActionSpace"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "The set of all possible environment actions."@en .
+
+<https://w3id.org/uogto/extensions#AgentMessage> a owl:Class ;
+    rdfs:label "AgentMessage"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "A structural message emitted by an LLM agent."@en .
+
+<https://w3id.org/uogto/extensions#AgentRole> a owl:Class ;
+    rdfs:label "AgentRole"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "The strategic contractor accepting terms."@en .
+
+<https://w3id.org/uogto/extensions#AllocationRule> a owl:Class ;
+    rdfs:label "AllocationRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "A rule mapping agent reports to an allocation of goods or resources."@en .
+
+<https://w3id.org/uogto/extensions#Attacker> a owl:Class ;
+    rdfs:label "Attacker"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The player attacking resources."@en .
+
+<https://w3id.org/uogto/extensions#Ballot> a owl:Class ;
+    rdfs:label "Ballot"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A profile of voter preferences."@en .
+
+<https://w3id.org/uogto/extensions#BargainingProtocol> a owl:Class ;
+    rdfs:label "BargainingProtocol"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Rules defining sequence of offers and counter-offers."@en .
+
+<https://w3id.org/uogto/extensions#BargainingSolution> a owl:Class ;
+    rdfs:label "Bargaining Solution"@en,
+        "BargainingSolution"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A payoff allocation resolving strategic negotiation."@en,
+        "An equilibrium outcome resolving strategic negotiation."@en .
+
+<https://w3id.org/uogto/extensions#BehaviouralGame> a owl:Class ;
+    rdfs:label "BehaviouralGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling human-like decisions violating classical rationality."@en .
+
+<https://w3id.org/uogto/extensions#BeliefHierarchy> a owl:Class ;
+    rdfs:label "BeliefHierarchy"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An infinite hierarchy of beliefs about beliefs."@en .
+
+<https://w3id.org/uogto/extensions#BlockingPair> a owl:Class ;
+    rdfs:label "BlockingPair"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A pair of agents who prefer each other to their matches."@en .
+
+<https://w3id.org/uogto/extensions#CausalGame> a owl:Class ;
+    rdfs:label "CausalGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game specifying causal dependencies between actions and payoffs."@en .
+
+<https://w3id.org/uogto/extensions#CausalGraph> a owl:Class ;
+    rdfs:label "CausalGraph"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A directed acyclic graph representing causal paths."@en .
+
+<https://w3id.org/uogto/extensions#ComplexityClass> a owl:Class ;
+    rdfs:label "ComplexityClass"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The complexity classification (e.g. PPAD, NP)."@en .
+
+<https://w3id.org/uogto/extensions#CompositionalGame> a owl:Class ;
+    rdfs:label "CompositionalGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A composite game formed by monoidal paths."@en .
+
+<https://w3id.org/uogto/extensions#CongestionGame> a owl:Class ;
+    rdfs:label "CongestionGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game where player payoffs depend on resource load."@en .
+
+<https://w3id.org/uogto/extensions#ConsentBoundary> a owl:Class ;
+    rdfs:label "ConsentBoundary"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Boundaries limiting LLM agent actions."@en .
+
+<https://w3id.org/uogto/extensions#ConsentPolicy> a owl:Class ;
+    rdfs:label "ConsentPolicy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "Rule specifying agent approval for disclosure."@en .
+
+<https://w3id.org/uogto/extensions#ControlVariable> a owl:Class ;
+    rdfs:label "ControlVariable"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A decision variable continuously adjusted over time."@en .
+
+<https://w3id.org/uogto/extensions#CoplayFunction> a owl:Class ;
+    rdfs:label "CoplayFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The function implementing game backward utility transfers."@en .
+
+<https://w3id.org/uogto/extensions#CoreSolution> a owl:Class ;
+    rdfs:label "Core Solution"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A payoff distribution where no coalition has incentive to deviate."@en .
+
+<https://w3id.org/uogto/extensions#CounterexampleTrace> a owl:Class ;
+    rdfs:label "CounterexampleTrace"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A trace refuting a temporal property."@en .
+
+<https://w3id.org/uogto/extensions#CounterfactualOutcome> a owl:Class ;
+    rdfs:label "CounterfactualOutcome"@en ;
+    rdfs:subClassOf ns1:Outcome ;
+    skos:definition "An outcome mapping alternate worlds."@en .
+
+<https://w3id.org/uogto/extensions#CoverageSchedule> a owl:Class ;
+    rdfs:label "CoverageSchedule"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The randomized allocation of defensive resources."@en .
+
+<https://w3id.org/uogto/extensions#Credential> a owl:Class ;
+    rdfs:label "Credential"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Cryptographic authorization ticket."@en .
+
+<https://w3id.org/uogto/extensions#DifferentialPrivacyMechanism> a owl:Class ;
+    rdfs:label "DifferentialPrivacyMechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Noise algorithm (Laplace, Gaussian) shielding attributes."@en .
+
+<https://w3id.org/uogto/extensions#DigitalTwinGame> a owl:Class ;
+    rdfs:label "DigitalTwinGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling physical devices via digital replicas."@en .
+
+<https://w3id.org/uogto/extensions#DisclosurePolicy> a owl:Class ;
+    rdfs:label "DisclosurePolicy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "Rules defining information disclosure bounds."@en .
+
+<https://w3id.org/uogto/extensions#DistributionalState> a owl:Class ;
+    rdfs:label "DistributionalState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "The mathematical distribution of agent characteristics."@en .
+
+<https://w3id.org/uogto/extensions#EnforcementMechanism> a owl:Class ;
+    rdfs:label "EnforcementMechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mechanism applying sanctions to rule violations."@en .
+
+<https://w3id.org/uogto/extensions#EpistemicGame> a owl:Class ;
+    rdfs:label "EpistemicGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game formalizing beliefs and common knowledge."@en .
+
+<https://w3id.org/uogto/extensions#EquilibriumComputationProblem> a owl:Class ;
+    rdfs:label "EquilibriumComputationProblem"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "The specific task of finding game equilibria."@en .
+
+<https://w3id.org/uogto/extensions#EquilibriumPredicate> a owl:Class ;
+    rdfs:label "EquilibriumPredicate"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "Predicate defining local equilibrium conditions."@en .
+
+<https://w3id.org/uogto/extensions#EvolutionarilyStableStrategy> a owl:Class ;
+    rdfs:label "EvolutionarilyStableStrategy"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A strategy resistant to mutation invasion."@en .
+
+<https://w3id.org/uogto/extensions#ExecutableGameGraph> a owl:Class ;
+    rdfs:label "ExecutableGameGraph"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A knowledge graph containing executable semantic rules."@en .
+
+<https://w3id.org/uogto/extensions#FairnessPreference> a owl:Class ;
+    rdfs:label "FairnessPreference"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Preferences incorporating inequity aversion."@en .
+
+<https://w3id.org/uogto/extensions#FitnessFunction> a owl:Class ;
+    rdfs:label "FitnessFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A function mapping strategy outcomes to biological reproductive success."@en .
+
+<https://w3id.org/uogto/extensions#GoalRule> a owl:Class ;
+    rdfs:label "GoalRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules defining player score achievements."@en .
+
+<https://w3id.org/uogto/extensions#Hamiltonian> a owl:Class ;
+    rdfs:label "Hamiltonian"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The mathematical function modeling optimal control paths."@en .
+
+<https://w3id.org/uogto/extensions#IdentityClaim> a owl:Class ;
+    rdfs:label "IdentityClaim"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Declared cryptographic identifier of an agent."@en .
+
+<https://w3id.org/uogto/extensions#IncentiveCompatibilityConstraint> a owl:Class ;
+    rdfs:label "IncentiveCompatibilityConstraint"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A constraint ensuring truthful reporting is a Nash equilibrium."@en .
+
+<https://w3id.org/uogto/extensions#IndividualRationalityConstraint> a owl:Class ;
+    rdfs:label "IndividualRationalityConstraint"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A constraint ensuring voluntary participation yields non-negative utility."@en .
+
+<https://w3id.org/uogto/extensions#InformationDesigner> a owl:Class ;
+    rdfs:label "InformationDesigner"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An agent (sender) committing to a signal structure."@en .
+
+<https://w3id.org/uogto/extensions#InstitutionalEconomicsGame> a owl:Class ;
+    rdfs:label "InstitutionalEconomicsGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling transactions, property rights, and governance."@en .
+
+<https://w3id.org/uogto/extensions#Intervention> a owl:Class ;
+    rdfs:label "Intervention"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An active manipulation of a causal variable (do-calculus)."@en .
+
+<https://w3id.org/uogto/extensions#LatencyFunction> a owl:Class ;
+    rdfs:label "LatencyFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A function mapping resource load to latency costs."@en .
+
+<https://w3id.org/uogto/extensions#LearningAlgorithm> a owl:Class ;
+    rdfs:label "LearningAlgorithm"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An algorithm (e.g. Q-learning, PPO) updating policy parameters."@en .
+
+<https://w3id.org/uogto/extensions#LegalMoveRule> a owl:Class ;
+    rdfs:label "LegalMoveRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules defining valid moves."@en .
+
+<https://w3id.org/uogto/extensions#Lens> a owl:Class ;
+    rdfs:label "Lens"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A bidirectional mapping transferring play and coplay parameters."@en .
+
+<https://w3id.org/uogto/extensions#LocalInteraction> a owl:Class ;
+    rdfs:label "LocalInteraction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A local game specification among neighboring players."@en .
+
+<https://w3id.org/uogto/extensions#Marking> a owl:Class ;
+    rdfs:label "Marking"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The state vector of token locations across places."@en .
+
+<https://w3id.org/uogto/extensions#MeanFieldEquilibrium> a owl:Class ;
+    rdfs:label "MeanFieldEquilibrium"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "The fixed point of population dynamics and agent policies."@en .
+
+<https://w3id.org/uogto/extensions#MemoryState> a owl:Class ;
+    rdfs:label "MemoryState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "Stored variables representing conversational history."@en .
+
+<https://w3id.org/uogto/extensions#MonoidalComposition> a owl:Class ;
+    rdfs:label "MonoidalComposition"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The compositional operator combining games."@en .
+
+<https://w3id.org/uogto/extensions#MutationOperator> a owl:Class ;
+    rdfs:label "MutationOperator"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Rules specifying strategy mutation rates."@en .
+
+<https://w3id.org/uogto/extensions#NeighborSet> a owl:Class ;
+    rdfs:label "NeighborSet"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The set of immediate neighbors of a graph node."@en .
+
+<https://w3id.org/uogto/extensions#NetworkEdge> a owl:Class ;
+    rdfs:label "NetworkEdge"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A connection linking players in the network."@en .
+
+<https://w3id.org/uogto/extensions#NetworkFlow> a owl:Class ;
+    rdfs:label "NetworkFlow"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The distribution of player routes in a network."@en .
+
+<https://w3id.org/uogto/extensions#Obligation> a owl:Class ;
+    rdfs:label "Obligation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A deontic state requiring specific action."@en .
+
+<https://w3id.org/uogto/extensions#ObservationSpace> a owl:Class ;
+    rdfs:label "ObservationSpace"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The set of all possible environment observations."@en .
+
+<https://w3id.org/uogto/extensions#PaymentRule> a owl:Class ;
+    rdfs:label "PaymentRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "A rule mapping agent reports to payments required from agents."@en .
+
+<https://w3id.org/uogto/extensions#Permission> a owl:Class ;
+    rdfs:label "Permission"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A deontic state allowing specific action."@en .
+
+<https://w3id.org/uogto/extensions#PetriNetGame> a owl:Class ;
+    rdfs:label "PetriNetGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeled using Petri Net structures."@en .
+
+<https://w3id.org/uogto/extensions#PlayFunction> a owl:Class ;
+    rdfs:label "PlayFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The function implementing game forward execution."@en .
+
+<https://w3id.org/uogto/extensions#Policy> a owl:Class ;
+    rdfs:label "Policy"@en ;
+    rdfs:subClassOf ns1:Strategy ;
+    skos:definition "A mapping from observations to actions for a single MARL agent."@en .
+
+<https://w3id.org/uogto/extensions#PosteriorBelief> a owl:Class ;
+    rdfs:label "PosteriorBelief"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A receiver belief updating after signals."@en .
+
+<https://w3id.org/uogto/extensions#Principal> a owl:Class ;
+    rdfs:label "Principal"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The contract designer offering terms."@en .
+
+<https://w3id.org/uogto/extensions#PrivateAttribute> a owl:Class ;
+    rdfs:label "PrivateAttribute"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Data field subject to disclosure protection."@en .
+
+<https://w3id.org/uogto/extensions#PrivateSignal> a owl:Class ;
+    rdfs:label "PrivateSignal"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A private information signal."@en .
+
+<https://w3id.org/uogto/extensions#Prohibition> a owl:Class ;
+    rdfs:label "Prohibition"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A deontic state forbidding specific action."@en .
+
+<https://w3id.org/uogto/extensions#PromptState> a owl:Class ;
+    rdfs:label "PromptState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "The context input prompt representing agent context."@en .
+
+<https://w3id.org/uogto/extensions#PropertyRight> a owl:Class ;
+    rdfs:label "PropertyRight"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Rules mapping ownership of game assets."@en .
+
+<https://w3id.org/uogto/extensions#ProtocolBinding> a owl:Class ;
+    rdfs:label "ProtocolBinding"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Network connection settings (HTTP, MQTT)."@en .
+
+<https://w3id.org/uogto/extensions#ProvenanceTrace> a owl:Class ;
+    rdfs:label "ProvenanceTrace"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Lineage records tracking action histories (PROV)."@en .
+
+<https://w3id.org/uogto/extensions#QuantalResponseEquilibrium> a owl:Class ;
+    rdfs:label "QuantalResponseEquilibrium"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "Equilibrium incorporating logit decision noise."@en .
+
+<https://w3id.org/uogto/extensions#RegretMetric> a owl:Class ;
+    rdfs:label "RegretMetric"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Metric tracking the difference between actual and optimal decisions."@en .
+
+<https://w3id.org/uogto/extensions#ReplicatorDynamic> a owl:Class ;
+    rdfs:label "ReplicatorDynamic"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Differential equations mapping strategy population shares over time."@en .
+
+<https://w3id.org/uogto/extensions#RepresentativeAgent> a owl:Class ;
+    rdfs:label "RepresentativeAgent"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "An agent representing average player dynamics."@en .
+
+<https://w3id.org/uogto/extensions#RulePredicate> a owl:Class ;
+    rdfs:label "RulePredicate"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "A logical statement in a rule model."@en .
+
+<https://w3id.org/uogto/extensions#RuntimeBinding> a owl:Class ;
+    rdfs:label "RuntimeBinding"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Bindings linking parameters to live environments."@en .
+
+<https://w3id.org/uogto/extensions#SPARQLExecutionQuery> a owl:Class ;
+    rdfs:label "SPARQLExecutionQuery"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "SPARQL statement executing model updates."@en .
+
+<https://w3id.org/uogto/extensions#Sanction> a owl:Class ;
+    rdfs:label "Sanction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A punishment applied to violations."@en .
+
+<https://w3id.org/uogto/extensions#ShapleyValue> a owl:Class ;
+    rdfs:label "Shapley Value"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "A unique distribution of cooperative surplus based on marginal contributions."@en .
+
+<https://w3id.org/uogto/extensions#SimulationBinding> a owl:Class ;
+    rdfs:label "SimulationBinding"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Bindings linking model nodes to DEVS/HLA simulators."@en .
+
+<https://w3id.org/uogto/extensions#SocialChoiceFunction> a owl:Class ;
+    rdfs:label "SocialChoiceFunction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mapping from voting profiles to selections."@en .
+
+<https://w3id.org/uogto/extensions#SolverBinding> a owl:Class ;
+    rdfs:label "SolverBinding"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Bindings linking model nodes to optimization engines."@en .
+
+<https://w3id.org/uogto/extensions#StructuralEquation> a owl:Class ;
+    rdfs:label "StructuralEquation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An equation mapping endogenous variables to exogenous factors."@en .
+
+<https://w3id.org/uogto/extensions#TerminalRule> a owl:Class ;
+    rdfs:label "TerminalRule"@en ;
+    rdfs:subClassOf ns1:Rule ;
+    skos:definition "Rules defining final states."@en .
+
+<https://w3id.org/uogto/extensions#Thing> a owl:Class ;
+    rdfs:label "Thing"@en ;
+    rdfs:subClassOf ns1:GameEntity,
+        <https://www.w3.org/2019/wot/td#Thing> ;
+    skos:definition "The physical device or asset counterpart."@en .
+
+<https://w3id.org/uogto/extensions#TransitionNode> a owl:Class ;
+    rdfs:label "TransitionNode"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Graph node representing event transitions."@en .
+
+<https://w3id.org/uogto/extensions#TypeSpace> a owl:Class ;
+    rdfs:label "TypeSpace"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A space grouping player types."@en .
+
+<https://w3id.org/uogto/extensions#Violation> a owl:Class ;
+    rdfs:label "Violation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An event trace marking rule breach."@en .
+
+<https://w3id.org/uogto/extensions#WardropEquilibrium> a owl:Class ;
+    rdfs:label "WardropEquilibrium"@en ;
+    rdfs:subClassOf ns1:Equilibrium ;
+    skos:definition "The network equilibrium condition where route costs equalize."@en .
+
+<https://w3id.org/uogto/extensions#WitnessStrategy> a owl:Class ;
+    rdfs:label "WitnessStrategy"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A strategy proving a temporal property."@en .
+
+ns1:DecisionNode a owl:Class ;
+    rdfs:label "Decision Node"@en ;
+    rdfs:subClassOf ns1:GameNode ;
+    skos:definition "A game node controlled by a specific player."@en .
+
+ns1:Payoff a owl:Class ;
+    rdfs:label "Payoff"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The numerical rewards or utilities distributed to players for an outcome."@en .
+
+ns1:PayoffProfile a owl:Class ;
+    rdfs:label "Payoff Profile"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Represents the aggregated profile of payoffs for all active players."@en .
+
+ns1:PlayerPayoffLink a owl:Class ;
+    rdfs:label "Player Payoff Link"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Connects a utility value directly to a player instance."@en .
+
+ns1:StrategyProfile a owl:Class ;
+    rdfs:label "Strategy Profile"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A vector of strategies, one for each player."@en .
+
+ns1:TransitionFunction a owl:Class ;
+    rdfs:label "Transition Function"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A function defining the state transitions."@en .
+
+<https://w3id.org/uogto/extensions#AlgorithmicGame> a owl:Class ;
+    rdfs:label "AlgorithmicGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game evaluated under computational complexity metrics."@en .
+
+<https://w3id.org/uogto/extensions#Allocation> a owl:Class ;
+    rdfs:label "Allocation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An assignment of goods or resources to agents."@en .
+
+<https://w3id.org/uogto/extensions#BoundedRationalityModel> a owl:Class ;
+    rdfs:label "BoundedRationalityModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Models capturing cognitive resource bounds."@en .
+
+<https://w3id.org/uogto/extensions#Candidate> a owl:Class ;
+    rdfs:label "Candidate"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An option or entity being voted on."@en .
+
+<https://w3id.org/uogto/extensions#CharacteristicFunction> a owl:Class ;
+    rdfs:label "Characteristic Function"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mapping from coalitions to their security payoffs."@en .
+
+<https://w3id.org/uogto/extensions#Contract> a owl:Class ;
+    rdfs:label "Contract"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The binding document detailing incentives."@en .
+
+<https://w3id.org/uogto/extensions#Defender> a owl:Class ;
+    rdfs:label "Defender"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The player defending resources."@en .
+
+<https://w3id.org/uogto/extensions#DisclosureAction> a owl:Class ;
+    rdfs:label "DisclosureAction"@en ;
+    rdfs:subClassOf ns1:Action ;
+    skos:definition "Action exposing private attributes."@en .
+
+<https://w3id.org/uogto/extensions#EvolutionaryGame> a owl:Class ;
+    rdfs:label "EvolutionaryGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling biological or social strategy evolution."@en .
+
+<https://w3id.org/uogto/extensions#IncentiveScheme> a owl:Class ;
+    rdfs:label "IncentiveScheme"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A system tying payments to performance indicators."@en .
+
+<https://w3id.org/uogto/extensions#Institution> a owl:Class ;
+    rdfs:label "Institution"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A set of formal or informal rules structure."@en .
+
+<https://w3id.org/uogto/extensions#InteractionAffordance> a owl:Class ;
+    rdfs:label "InteractionAffordance"@en ;
+    rdfs:subClassOf ns1:GameEntity,
+        <https://www.w3.org/2019/wot/td#InteractionAffordance> ;
+    skos:definition "Action capabilities exposed by a Digital Twin."@en .
+
+<https://w3id.org/uogto/extensions#Matching> a owl:Class ;
+    rdfs:label "Matching"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mapping of agents on one side of the market to another."@en .
+
+<https://w3id.org/uogto/extensions#MultiAgentEnvironment> a owl:Class ;
+    rdfs:label "MultiAgentEnvironment"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "The simulator environment containing states and transition dynamics."@en .
+
+<https://w3id.org/uogto/extensions#NetworkGame> a owl:Class ;
+    rdfs:label "NetworkGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game played over a social or physical network graph."@en .
+
+<https://w3id.org/uogto/extensions#Place> a owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Graph node representing local states or resources."@en .
+
+<https://w3id.org/uogto/extensions#PriceOfAnarchy> a owl:Class ;
+    rdfs:label "PriceOfAnarchy"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The ratio of worst-case Nash utility to social optimum."@en .
+
+<https://w3id.org/uogto/extensions#PriceOfStability> a owl:Class ;
+    rdfs:label "PriceOfStability"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The ratio of best-case Nash utility to social optimum."@en .
+
+<https://w3id.org/uogto/extensions#PrivacyBudget> a owl:Class ;
+    rdfs:label "PrivacyBudget"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Numeric index tracking epsilon differential privacy bounds."@en .
+
+<https://w3id.org/uogto/extensions#ReputationScore> a owl:Class ;
+    rdfs:label "ReputationScore"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Models statistical estimation of agent trustworthiness."@en .
+
+<https://w3id.org/uogto/extensions#RoutingGame> a owl:Class ;
+    rdfs:label "RoutingGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A congestion game played over a network flow path."@en .
+
+<https://w3id.org/uogto/extensions#SignalStructure> a owl:Class ;
+    rdfs:label "SignalStructure"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mapping from state of nature to signals."@en .
+
+<https://w3id.org/uogto/extensions#StateEquation> a owl:Class ;
+    rdfs:label "StateEquation"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "A differential equation defining state updates."@en .
+
+<https://w3id.org/uogto/extensions#StrategicFormula> a owl:Class ;
+    rdfs:label "StrategicFormula"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A temporal logic formula mapping strategy requirements."@en .
+
+<https://w3id.org/uogto/extensions#Target> a owl:Class ;
+    rdfs:label "Target"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The target resource with defense payoffs."@en .
+
+<https://w3id.org/uogto/extensions#ToolInvocation> a owl:Class ;
+    rdfs:label "ToolInvocation"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An agent action invoking external APIs."@en .
+
+<https://w3id.org/uogto/extensions#TransactionCost> a owl:Class ;
+    rdfs:label "TransactionCost"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Utility costs associated with trade execution."@en .
+
+<https://w3id.org/uogto/extensions#Voter> a owl:Class ;
+    rdfs:label "Voter"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A player expressing choices over candidates."@en .
+
+ns1:GameNode a owl:Class ;
+    rdfs:label "Game Node"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A state configuration node within dynamic/extensive games."@en .
+
+ns1:InformationSet a owl:Class ;
+    rdfs:label "Information Set"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A set of decision states indistinguishable to a player."@en .
+
+ns1:Outcome a owl:Class ;
+    rdfs:label "Outcome"@en ;
+    rdfs:subClassOf prov:Entity,
+        ns1:GameEntity ;
+    skos:definition "The end consequence of action choices."@en .
+
+<https://w3id.org/uogto/extensions#CausalModel> a owl:Class ;
+    rdfs:label "CausalModel"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A model encapsulating structural causal equations."@en .
+
+<https://w3id.org/uogto/extensions#ContinuousTimeGame> a owl:Class ;
+    rdfs:label "ContinuousTimeGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling continuous state variables and decisions."@en .
+
+<https://w3id.org/uogto/extensions#ContractGame> a owl:Class ;
+    rdfs:label "ContractGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling strategic principal-agent contracts."@en .
+
+<https://w3id.org/uogto/extensions#InformationDesignGame> a owl:Class ;
+    rdfs:label "InformationDesignGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling how information is formatted and disclosed."@en .
+
+<https://w3id.org/uogto/extensions#LLMAgent> a owl:Class ;
+    rdfs:label "LLMAgent"@en ;
+    rdfs:subClassOf ns1:Agent ;
+    skos:definition "A language model agent behaving strategically."@en .
+
+<https://w3id.org/uogto/extensions#MatchingMarket> a owl:Class ;
+    rdfs:label "MatchingMarket"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A market matching demand and supply agents."@en .
+
+<https://w3id.org/uogto/extensions#MeanFieldGame> a owl:Class ;
+    rdfs:label "MeanFieldGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling interactions in infinite agent populations."@en .
+
+<https://w3id.org/uogto/extensions#PopulationState> a owl:Class ;
+    rdfs:label "PopulationState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "A continuous distribution of players across states."@en .
+
+<https://w3id.org/uogto/extensions#Resource> a owl:Class ;
+    rdfs:label "Resource"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An asset consumed or shared by players."@en .
+
+<https://w3id.org/uogto/extensions#SecurityGame> a owl:Class ;
+    rdfs:label "SecurityGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game modeling strategic defense and attacks."@en .
+
+<https://w3id.org/uogto/extensions#VotingGame> a owl:Class ;
+    rdfs:label "VotingGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game representing voting procedures and aggregation."@en .
+
+<https://w3id.org/uogto/extensions#ComplianceState> a owl:Class ;
+    rdfs:label "ComplianceState"@en ;
+    rdfs:subClassOf ns1:State ;
+    skos:definition "A state marking compliance with norms."@en .
+
+<https://w3id.org/uogto/extensions#DigitalTwin> a owl:Class ;
+    rdfs:label "DigitalTwin"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The digital replica mapping physical device parameters."@en .
+
+<https://w3id.org/uogto/extensions#ExecutionBinding> a owl:Class ;
+    rdfs:label "ExecutionBinding"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "Mappers mapping ontology elements to software execution objects."@en .
+
+<https://w3id.org/uogto/extensions#GraphPlayer> a owl:Class ;
+    rdfs:label "GraphPlayer"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A node in a network game."@en .
+
+<https://w3id.org/uogto/extensions#ModelCheckingTask> a owl:Class ;
+    rdfs:label "ModelCheckingTask"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A model verification execution run."@en .
+
+<https://w3id.org/uogto/extensions#OpenGame> a owl:Class ;
+    rdfs:label "OpenGame"@en ;
+    rdfs:subClassOf <https://w3id.org/opengames#OpenGame>,
+        ns1:GameSpecification ;
+    skos:definition "A game block that can compose with other games."@en .
+
+<https://w3id.org/uogto/extensions#PetriNet> a owl:Class ;
+    rdfs:label "PetriNet"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The discrete-event bipartite graph representation."@en .
+
+<https://w3id.org/uogto/extensions#Population> a owl:Class ;
+    rdfs:label "Population"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The group of agents evolving strategies."@en .
+
+<https://w3id.org/uogto/extensions#Type> a owl:Class ;
+    rdfs:label "Type"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An agent type representing beliefs and preferences."@en .
+
+ns1:PlaySession a owl:Class ;
+    rdfs:label "Play Session"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A session during which a game instance is played or simulated."@en .
+
+<https://w3id.org/uogto/extensions#Auction> a owl:Class ;
+    rdfs:label "Auction"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A mechanism for selling or buying goods via bidding."@en .
+
+<https://w3id.org/uogto/extensions#BargainingGame> a owl:Class ;
+    rdfs:label "BargainingGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A cooperative scenario where players negotiate a division of resources."@en .
+
+<https://w3id.org/uogto/extensions#LearningProcess> a owl:Class ;
+    rdfs:label "LearningProcess"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "An iterative process of strategy updates in repeated play."@en .
+
+<https://w3id.org/uogto/extensions#Mechanism> a owl:Class ;
+    rdfs:label "Mechanism"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A system specifying rules for mapping agent messages to allocations and payments."@en .
+
+<https://w3id.org/uogto/extensions#RuleEncodedGame> a owl:Class ;
+    rdfs:label "RuleEncodedGame"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game completely defined by syntax rules."@en .
+
+<https://w3id.org/uogto/extensions#CooperativeGame> a owl:Class ;
+    rdfs:label "Cooperative Game"@en ;
+    rdfs:subClassOf ns1:GameSpecification ;
+    skos:definition "A game where players can negotiate binding agreements."@en .
+
+ns1:Action a owl:Class ;
+    rdfs:label "Action"@en ;
+    rdfs:subClassOf prov:Activity,
+        schema:Action,
+        ns1:GameEntity ;
+    skos:definition "A single choice or move available to a player at a decision point."@en .
+
+ns1:OntologyGovernanceRecord a owl:Class ;
+    rdfs:label "Ontology governance record"@en ;
+    skos:definition "A record that captures repository-level governance metadata for UOGTO."@en .
+
+ns1:Strategy a owl:Class ;
+    rdfs:label "Strategy"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A complete plan of action for a player."@en .
+
+ns1:Agent a owl:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:subClassOf prov:Agent,
+        <https://spec.modelcontextprotocol.io/schema#Client>,
+        ns1:GameEntity ;
+    skos:definition "An automated or rational actor operating inside a game."@en .
+
+ns1:State a owl:Class ;
+    rdfs:label "State"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A configuration node in extensive-form or dynamic games."@en .
+
+ns1:Equilibrium a owl:Class ;
+    rdfs:label "Equilibrium"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A strategy profile matching equilibrium conditions (e.g. Nash)."@en .
+
+ns1:Rule a owl:Class ;
+    rdfs:label "Rule"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "A structural constraint governing game play."@en .
+
+ns1:Player a owl:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:subClassOf schema:Agent,
+        ns1:GameEntity ;
+    skos:definition "An entity (human, LLM, robot, group) playing the game."@en .
+
+ns1:GameSpecification a owl:Class ;
+    rdfs:label "Game Specification"@en ;
+    rdfs:subClassOf ns1:GameEntity ;
+    skos:definition "The structural rules, players, actions, and utilities defining a game."@en .
+
+<https://w3id.org/uogto/core> a owl:Ontology ;
+    rdfs:label "Universal Open Game Theory Ontology (UOGTO) Core"@en ;
+    dcterms:creator "UOGTO Contributors" ;
+    dcterms:description "The core release ontology for modeling games, strategies, actions, outcomes, payoffs, equilibria, execution traces, and extensible game-theoretic semantics."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Universal Open Game Theory Ontology (UOGTO)"@en ;
+    vann:preferredNamespacePrefix "uogto" ;
+    vann:preferredNamespaceUri "https://w3id.org/uogto/core#" ;
+    owl:versionInfo "1.0.0" ;
+    skos:definition "The core schema for modeling games, strategies, actions, outcomes, and payoffs."@en .
+
+ns1:GameEntity a owl:Class ;
+    rdfs:label "Game Entity"@en ;
+    skos:definition "The base class for all game-theoretic elements."@en .
+

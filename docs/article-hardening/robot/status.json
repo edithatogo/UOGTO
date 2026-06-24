@@ -1,0 +1,56 @@
+{
+  "artifacts": {
+    "import_extraction": "docs/article-hardening/robot/import-extraction.ttl",
+    "import_extraction_report": "docs/article-hardening/robot/import-extraction.md",
+    "merge_diff": "docs/article-hardening/robot/merge-diff.md",
+    "merged_ontology": "docs/article-hardening/robot/merged-ontology.ttl",
+    "reasoner_check": "docs/article-hardening/robot/reasoner-check.md",
+    "report": "docs/article-hardening/robot/report.md"
+  },
+  "created": "2026-06-24",
+  "import_extraction": {
+    "declared_import_count": 0,
+    "extracted_triple_count": 307
+  },
+  "inputs": {
+    "merged_triple_count": 2327,
+    "ontology_file_count": 49,
+    "root_ontology": "ontologies/core/uogto-core.ttl",
+    "root_triple_count": 307
+  },
+  "merge": {
+    "added_triples": 2020,
+    "module_count": 49
+  },
+  "mode": "portable-baseline",
+  "notes": [
+    "ROBOT-style outputs are optional and can be regenerated once a robot binary or jar is configured.",
+    "The portable baseline continues to use RDFLib and pySHACL."
+  ],
+  "reasoner": {
+    "owl_profile_screen": {
+      "method": "local syntactic screen for constructs that require manual OWL profile review",
+      "review_construct_counts": {},
+      "status": "owl2_rl_candidate_syntactic_subset"
+    },
+    "pyshacl_examples_rdfs_status": "passed",
+    "pyshacl_results_text": "",
+    "rdf_parse_status": "passed",
+    "reasoner": {
+      "owlrl_available": true,
+      "owlrl_error": null,
+      "owlrl_status": "passed",
+      "owlrl_triples_after": 6574,
+      "owlrl_triples_before": 2327
+    }
+  },
+  "schema": "uogto.article-hardening.robot-style.v1",
+  "toolchain": {
+    "java_available": true,
+    "java_path": "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+    "mode": "portable-baseline",
+    "robot_available": false,
+    "robot_command": null,
+    "robot_jar": null
+  }
+}

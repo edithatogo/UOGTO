@@ -109,7 +109,7 @@ Candidate missing UOGTO elements must be classified as:
 No element should be recommended for addition unless it improves at least one of competency-question coverage, interoperability, article-claim precision, conceptual clarity, or validation/example completeness.
 
 ## Reproducibility Plan
-All generated artifacts must be reproducible from repository scripts where feasible. The RO-Crate metadata must describe protocol documents, inventories, search logs, scripts, generated metrics, article tables, figures, and source artifacts or source references.
+All generated artifacts must be reproducible from repository scripts where feasible. The RO-Crate metadata must describe protocol documents, inventories, search logs, scripts, generated metrics, article tables, figures, and source artifacts or source references. When Java tooling is available, generate ROBOT-style ontology reports for reasoner checking, report summaries, merge/diff views, and import extraction; when it is not, keep the RDFLib/pySHACL baseline authoritative and explicit.
 
 ## Limitations
 Search results may drift over time, registry search interfaces differ, some standards are not redistributable, and metadata-only sources cannot support the same strength of claims as parsed artifacts. The final article must report these limitations explicitly.
