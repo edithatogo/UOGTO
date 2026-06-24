@@ -109,19 +109,20 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Results highlight bridge concepts and isolated modelling paradigms.
 
 ## Phase 8: Visualisation and Report
-- [ ] Task: Generate static figures.
-    - [ ] Add `scripts/maintenance/visualise_ontology_comparison.py`.
-    - [ ] Generate heatmaps for source/module overlap, bar charts for source sizes and match classes, treemaps for UOGTO coverage, network diagrams for source similarity and mappings, Sankey/domain-flow diagrams for mapping categories, and reviewer workload summaries.
-    - [ ] Store figures under `docs/ontology-comparison/figures/`.
-- [ ] Task: Generate comprehensive report.
-    - [ ] Create `docs/ontology-comparison/report.md`.
-    - [ ] Include methodology, source inventory, inclusion/exclusion summary, mapping methods, overlap metrics, network findings, visualisations, and recommended UOGTO follow-up work.
-    - [ ] Optionally create `docs/ontology-comparison/dashboard/` with a static HTML dashboard if dependencies are available and maintainable.
+- [x] Task: Generate static figures.
+    - [x] Add `scripts/maintenance/visualise_ontology_comparison.py`.
+    - [x] Generate heatmaps for source/module overlap, bar charts for source sizes and match classes, treemaps for UOGTO coverage, network diagrams for source similarity and mappings, Sankey/domain-flow diagrams for mapping categories, and reviewer workload summaries.
+    - [x] Store figures under `docs/ontology-comparison/figures/`.
+    - [x] Wire `make ontology-comparison-visuals`, Pixi support, and pytest coverage.
+- [x] Task: Generate comprehensive report.
+    - [x] Create `docs/ontology-comparison/report.md`.
+    - [x] Include methodology, source inventory, inclusion/exclusion summary, mapping methods, overlap metrics, network findings, visualisations, and recommended UOGTO follow-up work.
+    - [x] Defer optional dashboard generation; dependency-free SVG/Markdown outputs are sufficient and maintainable for this track.
 
 ### Acceptance Criteria
-- [ ] Report is reproducible from source inventory and mapping artifacts.
-- [ ] Visualisations are readable in static GitHub rendering and, if generated, in the dashboard.
-- [ ] Report clearly separates evidence-backed mappings from candidate/future work.
+- [x] Report is reproducible from source inventory and mapping artifacts.
+- [x] Visualisations are readable in static GitHub rendering and, if generated, in the dashboard.
+- [x] Report clearly separates evidence-backed mappings from candidate/future work.
 
 ## Phase 9: CI, Release, and Conductor Integration
 - [ ] Task: Add validation and tests.

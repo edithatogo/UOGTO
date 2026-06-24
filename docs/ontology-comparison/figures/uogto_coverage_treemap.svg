@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img">
+<title>UOGTO unique coverage areas</title><style>text{font-family:Arial,sans-serif;fill:#1f2933} .small{font-size:11px} .label{font-size:12px} .title{font-size:18px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="28" y="34">UOGTO unique coverage areas</text>
+<rect x="28" y="72" width="170" height="86" fill="#24536b" opacity="0.88" rx="4"/>
+<text class="label" x="38" y="96" fill="#ffffff">uogto_core_uogto-core</text>
+<text class="small" x="38" y="116" fill="#ffffff">27 terms</text>
+<rect x="206" y="72" width="88" height="110" fill="#4f7c45" opacity="0.88" rx="4"/>
+<text class="label" x="216" y="96" fill="#ffffff">uogto_extensions_deontic</text>
+<text class="small" x="216" y="116" fill="#ffffff">14 terms</text>
+<rect x="302" y="72" width="88" height="134" fill="#a65f2a" opacity="0.88" rx="4"/>
+<text class="label" x="312" y="96" fill="#ffffff">uogto_extensions_game-de</text>
+<text class="small" x="312" y="116" fill="#ffffff">14 terms</text>
+<rect x="398" y="72" width="88" height="86" fill="#7a4f8f" opacity="0.88" rx="4"/>
+<text class="label" x="408" y="96" fill="#ffffff">uogto_extensions_petri-n</text>
+<text class="small" x="408" y="116" fill="#ffffff">14 terms</text>
+<rect x="494" y="72" width="82" height="110" fill="#b44b4b" opacity="0.88" rx="4"/>
+<text class="label" x="504" y="96" fill="#ffffff">uogto_extensions_composi</text>
+<text class="small" x="504" y="116" fill="#ffffff">13 terms</text>
+<rect x="584" y="72" width="82" height="134" fill="#3d6fa8" opacity="0.88" rx="4"/>
+<text class="label" x="594" y="96" fill="#ffffff">uogto_extensions_computa</text>
+<text class="small" x="594" y="116" fill="#ffffff">13 terms</text>
+<rect x="674" y="72" width="82" height="86" fill="#8a6b2e" opacity="0.88" rx="4"/>
+<text class="label" x="684" y="96" fill="#ffffff">uogto_extensions_congest</text>
+<text class="small" x="684" y="116" fill="#ffffff">13 terms</text>
+<rect x="764" y="72" width="82" height="110" fill="#4c6b5f" opacity="0.88" rx="4"/>
+<text class="label" x="774" y="96" fill="#ffffff">uogto_extensions_kg-exec</text>
+<text class="small" x="774" y="116" fill="#ffffff">13 terms</text>
+<rect x="854" y="72" width="82" height="134" fill="#24536b" opacity="0.88" rx="4"/>
+<text class="label" x="864" y="96" fill="#ffffff">uogto_extensions_marl</text>
+<text class="small" x="864" y="116" fill="#ffffff">13 terms</text>
+<rect x="28" y="198" width="75" height="86" fill="#4f7c45" opacity="0.88" rx="4"/>
+<text class="label" x="38" y="222" fill="#ffffff">uogto_extensions_behavio</text>
+<text class="small" x="38" y="242" fill="#ffffff">12 terms</text>
+</svg>
