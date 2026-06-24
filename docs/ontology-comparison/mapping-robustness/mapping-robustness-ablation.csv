@@ -1,0 +1,14 @@
+ablation,precision,recall,f1,accuracy,tp,fp,tn,fn,active_features
+all_features,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, normalized_label, definition_similarity, hierarchy_context, property_signature, embedding_similarity"
+minus_exact_label,1.0,1.0,1.0,1.0,1,0,1,0,"normalized_label, definition_similarity, hierarchy_context, property_signature, embedding_similarity"
+only_exact_label,1.0,1.0,1.0,1.0,1,0,1,0,exact_label
+minus_normalized_label,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, definition_similarity, hierarchy_context, property_signature, embedding_similarity"
+only_normalized_label,1.0,1.0,1.0,1.0,1,0,1,0,normalized_label
+minus_definition_similarity,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, normalized_label, hierarchy_context, property_signature, embedding_similarity"
+only_definition_similarity,1.0,1.0,1.0,1.0,1,0,1,0,definition_similarity
+minus_hierarchy_context,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, normalized_label, definition_similarity, property_signature, embedding_similarity"
+only_hierarchy_context,0.5,1.0,0.6666666666666666,0.5,1,1,0,0,hierarchy_context
+minus_property_signature,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, normalized_label, definition_similarity, hierarchy_context, embedding_similarity"
+only_property_signature,0.5,1.0,0.6666666666666666,0.5,1,1,0,0,property_signature
+minus_embedding_similarity,1.0,1.0,1.0,1.0,1,0,1,0,"exact_label, normalized_label, definition_similarity, hierarchy_context, property_signature"
+only_embedding_similarity,1.0,1.0,1.0,1.0,1,0,1,0,embedding_similarity
