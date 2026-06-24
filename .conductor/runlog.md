@@ -5,6 +5,11 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 3
+- Added `scripts/maintenance/extract_comparison_terms.py` to extract comparable term rows from UOGTO TTL modules, downloaded external RDF artifacts, and metadata-only/non-RDF source records.
+- Generated `docs/ontology-comparison/term-inventory.jsonl` with 4,037 rows across 69 UOGTO/external sources, preserving source id, family, artifact path, term IRI, type, labels, definitions, comments, synonyms, hierarchy context, domains, ranges, imports, tokens, and language.
+- Wired `make ontology-comparison-terms` and Pixi task support, and added focused pytest coverage for RDF extraction, metadata fallback, normalisation, JSONL round-trip, and generated inventory coverage.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 2
 - Added `scripts/maintenance/harvest_comparison_sources.py` with conservative licence-aware harvesting: only `redistributable_artifact` sources are downloaded, while other sources receive metadata-only provenance records with manual review notes.
 - Generated `docs/ontology-comparison/source-provenance.json` with 21 source records, retrieval timestamps, canonical URLs, HTTP/content metadata where available, checksums, byte sizes, parse status, and format classification.

@@ -36,18 +36,19 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Non-RDF standards are not misrepresented as ontologies.
 
 ## Phase 3: Term Extraction and Normalisation
-- [ ] Task: Implement term extraction.
-    - [ ] Add `scripts/maintenance/extract_comparison_terms.py`.
-    - [ ] Extract classes, properties, individuals, SKOS concepts, labels, definitions, comments, synonyms, parent/child context, domains/ranges, imports, and ontology metadata.
-    - [ ] Extract structured terms from XML/JSON schemas and formal documentation where RDF is unavailable.
-- [ ] Task: Normalise term inventories.
-    - [ ] Canonicalise labels, split identifiers, lowercase tokens, remove stopwords, preserve symbols and acronyms, and record source language.
-    - [ ] Emit `docs/ontology-comparison/term-inventory.parquet` or a deterministic JSONL/CSV fallback.
+- [x] Task: Implement term extraction.
+    - [x] Add `scripts/maintenance/extract_comparison_terms.py`.
+    - [x] Extract classes, properties, individuals, SKOS concepts, labels, definitions, comments, synonyms, parent/child context, domains/ranges, imports, and ontology metadata.
+    - [x] Extract structured terms from XML/JSON schemas and formal documentation where RDF is unavailable.
+- [x] Task: Normalise term inventories.
+    - [x] Canonicalise labels, split identifiers, lowercase tokens, remove stopwords, preserve symbols and acronyms, and record source language.
+    - [x] Emit `docs/ontology-comparison/term-inventory.parquet` or a deterministic JSONL/CSV fallback.
+    - [x] Wire `make ontology-comparison-terms`, Pixi support, generated `docs/ontology-comparison/term-inventory.jsonl`, and pytest coverage.
 
 ### Acceptance Criteria
-- [ ] UOGTO and all included external sources have comparable term inventories.
-- [ ] Extraction preserves provenance from source artifact to term row.
-- [ ] Tests cover RDF and non-RDF extraction fixtures.
+- [x] UOGTO and all included external sources have comparable term inventories.
+- [x] Extraction preserves provenance from source artifact to term row.
+- [x] Tests cover RDF and non-RDF extraction fixtures.
 
 ## Phase 4: Mapping Candidate Generation
 - [ ] Task: Generate mapping candidates.
