@@ -66,18 +66,19 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Low-confidence and high-impact mappings are flagged for review.
 
 ## Phase 5: Human-Review Workflow and Accepted Alignments
-- [ ] Task: Create review artifacts.
-    - [ ] Emit `docs/ontology-comparison/mapping-review.csv` with candidate evidence and decision columns.
-    - [ ] Define review statuses: `accepted`, `rejected`, `needs_domain_review`, `out_of_scope`, and `defer_until_source_clarified`.
-- [ ] Task: Build accepted alignment outputs.
-    - [ ] Add `scripts/maintenance/build_comparison_alignments.py`.
-    - [ ] Generate `docs/ontology-comparison/accepted-alignments.ttl` from reviewed mappings.
-    - [ ] Validate alignment TTL with RDFLib and check that mapping predicates are from approved namespaces.
+- [x] Task: Create review artifacts.
+    - [x] Emit `docs/ontology-comparison/mapping-review.csv` with candidate evidence and decision columns.
+    - [x] Define review statuses: `accepted`, `rejected`, `needs_domain_review`, `out_of_scope`, and `defer_until_source_clarified`.
+- [x] Task: Build accepted alignment outputs.
+    - [x] Add `scripts/maintenance/build_comparison_alignments.py`.
+    - [x] Generate `docs/ontology-comparison/accepted-alignments.ttl` from reviewed mappings.
+    - [x] Validate alignment TTL with RDFLib and check that mapping predicates are from approved namespaces.
+    - [x] Wire `make ontology-comparison-alignments`, Pixi support, generated review/alignment artifacts, and pytest coverage.
 
 ### Acceptance Criteria
-- [ ] Accepted mappings are review-backed and machine-readable.
-- [ ] Rejected mappings preserve rationale for auditability.
-- [ ] Alignment TTL parses and uses stable UOGTO IRIs.
+- [x] Accepted mappings are review-backed and machine-readable.
+- [x] Rejected mappings preserve rationale for auditability.
+- [x] Alignment TTL parses and uses stable UOGTO IRIs.
 
 ## Phase 6: Overlap and Descriptive Analysis
 - [ ] Task: Compute overlap metrics.

@@ -5,6 +5,12 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 5
+- Added `scripts/maintenance/build_comparison_alignments.py` to generate a review-ready mapping CSV and accepted alignment TTL from `mapping-candidates.jsonl`.
+- Generated `docs/ontology-comparison/mapping-review.csv` with 460 rows, review statuses, decision predicates, reviewer/rationale fields, review flags, and serialized evidence for auditability.
+- Generated `docs/ontology-comparison/accepted-alignments.ttl` with 10 accepted mapping triples and mapping assertion metadata; RDFLib parsing and approved-predicate validation pass.
+- Wired `make ontology-comparison-alignments` and Pixi task support, and added focused pytest coverage for review prefill, CSV validation, TTL generation, invalid status rejection, and generated repo artifact validation.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 4
 - Added `scripts/maintenance/generate_ontology_mapping_candidates.py` to generate deterministic external-to-UOGTO mapping candidates from `term-inventory.jsonl` using exact IRI, exact label, normalized label, synonym, lexical, definition, hierarchy, property-signature, token-vector, type-compatibility, and source-reliability evidence.
 - Generated `docs/ontology-comparison/mapping-candidates.jsonl` with 460 candidates across 4 downloaded external RDF sources, each carrying candidate predicate, confidence score, evidence features, status, and review flags.

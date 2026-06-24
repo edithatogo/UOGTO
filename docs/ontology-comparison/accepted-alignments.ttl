@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uogtoalign: <https://w3id.org/uogto/alignments/comparison#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+uogtoalign:accepted_alignments a owl:Ontology ;
+    rdfs:label "UOGTO comparative ontology accepted alignments"@en ;
+    dcterms:description "Accepted review-backed alignments generated from docs/ontology-comparison/mapping-review.csv."@en .
+
+uogtoalign:mapping-1f22622e34e682d5 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5333 ;
+    uogtoalign:mappingPredicate owl:equivalentProperty ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm dcterms:identifier ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#identifier> .
+
+uogtoalign:mapping-3f63576818b820e2 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5316 ;
+    uogtoalign:mappingPredicate owl:equivalentClass ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm prov:Role ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Role> .
+
+uogtoalign:mapping-4bb65e3c229e4751 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.55 ;
+    uogtoalign:mappingPredicate owl:equivalentClass ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm foaf:Agent ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Agent> .
+
+uogtoalign:mapping-6dfa0cf78387055e a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5333 ;
+    uogtoalign:mappingPredicate owl:equivalentProperty ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm sosa:observes ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#observes> .
+
+uogtoalign:mapping-9d8ac14d596018b4 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5408 ;
+    uogtoalign:mappingPredicate owl:equivalentProperty ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm <http://ogp.me/ns#description> ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#description> .
+
+uogtoalign:mapping-ab2308c9b3db86c8 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5443 ;
+    uogtoalign:mappingPredicate owl:equivalentClass ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm schema:Action ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Action> .
+
+uogtoalign:mapping-b0f913c399bdc974 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.55 ;
+    uogtoalign:mappingPredicate owl:equivalentClass ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm prov:Agent ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Agent> .
+
+uogtoalign:mapping-b14fae522b7c3ba1 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5408 ;
+    uogtoalign:mappingPredicate owl:equivalentProperty ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm dcterms:description ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#description> .
+
+uogtoalign:mapping-bcd6fbf80d6f66ea a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.55 ;
+    uogtoalign:mappingPredicate owl:equivalentClass ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm owl:Thing ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/extensions#Thing> .
+
+uogtoalign:mapping-ecc6d37eccbf57b0 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5408 ;
+    uogtoalign:mappingPredicate owl:equivalentProperty ;
+    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm <https://ref.gs1.org/voc/description> ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#description> .
+
+<http://ogp.me/ns#description> owl:equivalentProperty <https://w3id.org/uogto/core#description> .
+
+dcterms:description owl:equivalentProperty <https://w3id.org/uogto/core#description> .
+
+dcterms:identifier owl:equivalentProperty <https://w3id.org/uogto/core#identifier> .
+
+owl:Thing owl:equivalentClass <https://w3id.org/uogto/extensions#Thing> .
+
+prov:Agent owl:equivalentClass <https://w3id.org/uogto/core#Agent> .
+
+prov:Role owl:equivalentClass <https://w3id.org/uogto/core#Role> .
+
+sosa:observes owl:equivalentProperty <https://w3id.org/uogto/core#observes> .
+
+foaf:Agent owl:equivalentClass <https://w3id.org/uogto/core#Agent> .
+
+<https://ref.gs1.org/voc/description> owl:equivalentProperty <https://w3id.org/uogto/core#description> .
+
+schema:Action owl:equivalentClass <https://w3id.org/uogto/core#Action> .
+

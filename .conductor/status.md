@@ -24,7 +24,7 @@
 - OLS indexing request is open at https://github.com/EBISPOT/ols4/issues/1305.
 - w3id PR `6238` has been updated with DOI and publication evidence, merged at `2026-06-22T12:29:07Z`, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
 - Extended discoverability track `uogto_extended_discoverability_registries_20260622` is implemented repo-side: the shared packet, generated `extended-registry-handoff.json`, Make/Pixi/release workflow wiring, and publication-status integration are in place; prefix.cc `uogto`/`uogtox`, w3id, Ontobee submission, Bioregistry template-update submission, Wikidata item `Q140323510`, and FAIRsharing draft record `8382` are complete; external actions remain pending only for FAIRsharing curator review and registry maintainer review.
-- Comparative simulation ontology mapping track `uogto_comparative_simulation_ontology_mapping_20260624` is in progress: Phases 1-4 are implemented. The track now records 21 candidate sources across 17 families, 21 provenance records, 4 downloaded redistributable RDF artifacts, 17 metadata-only records, a normalized term inventory with 4,037 rows across 69 UOGTO/external sources, and 460 deterministic mapping candidates across 4 external RDF sources, plus Make/Pixi wiring and pytest coverage.
+- Comparative simulation ontology mapping track `uogto_comparative_simulation_ontology_mapping_20260624` is in progress: Phases 1-5 are implemented. The track now records 21 candidate sources across 17 families, 21 provenance records, 4 downloaded redistributable RDF artifacts, 17 metadata-only records, a normalized term inventory with 4,037 rows across 69 UOGTO/external sources, 460 deterministic mapping candidates across 4 external RDF sources, a 460-row mapping review CSV, and accepted alignment TTL with 10 accepted mapping triples, plus Make/Pixi wiring and pytest coverage.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -53,7 +53,7 @@
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
 
 ## Next Recommended Task
-- Continue `uogto_comparative_simulation_ontology_mapping_20260624` Phase 5: human-review workflow artifacts and accepted alignment outputs, then continue monitoring LOV/OLS, FAIRsharing curator review, Ontobee issue #212, and Bioregistry issue #1999.
+- Continue `uogto_comparative_simulation_ontology_mapping_20260624` Phase 6: overlap metrics and descriptive summaries, then continue monitoring LOV/OLS, FAIRsharing curator review, Ontobee issue #212, and Bioregistry issue #1999.
 
 ## Manuscript Source Verification - 2026-06-22
 - Track: conductor/tracks/manuscript_source_verification_20260622/.
