@@ -36,6 +36,7 @@ ontology-comparison-networks = "python scripts/maintenance/analyse_ontology_netw
 ontology-comparison-visuals = "python scripts/maintenance/visualise_ontology_comparison.py"
 ontology-comparison-check = "python scripts/maintenance/check_ontology_comparison_artifacts.py"
 ontology-comparison-all = "python scripts/maintenance/build_ontology_comparison_inventory.py && python scripts/maintenance/harvest_comparison_sources.py && python scripts/maintenance/extract_comparison_terms.py && python scripts/maintenance/generate_ontology_mapping_candidates.py && python scripts/maintenance/build_comparison_alignments.py && python scripts/maintenance/analyse_ontology_overlap.py && python scripts/maintenance/analyse_ontology_networks.py && python scripts/maintenance/visualise_ontology_comparison.py && python scripts/maintenance/check_ontology_comparison_artifacts.py"
+article-hardening-protocol = "python scripts/maintenance/check_article_hardening_protocol.py"
 zenodo-packet = "python scripts/maintenance/build_zenodo_handoff.py"
 zenodo-depositions = "python scripts/maintenance/check_zenodo_depositions.py"
 w3id-packet = "python scripts/maintenance/build_w3id_redirect_handoff.py"

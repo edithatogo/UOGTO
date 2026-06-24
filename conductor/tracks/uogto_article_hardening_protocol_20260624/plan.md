@@ -3,20 +3,20 @@
 This track turns the completed comparative ontology baseline into a broader publication-grade protocol and evidence package. It is intentionally comprehensive; later phases may narrow individual source families after the protocol and feasibility evidence are in place.
 
 ## Phase 1: Standards-Based Protocol
-- [ ] Task: Create the protocol scaffold.
-    - [ ] Create `docs/article-hardening/protocol.md` as a PRISMA-ScR-aligned scoping-review protocol adapted for ontology and modelling-formalism comparison.
-    - [ ] Create `docs/article-hardening/protocol-checklist.md` mapping PRISMA-ScR items to repo artifacts and implementation status.
-    - [ ] Record PRISMA-S search-reporting fields for each search route.
-    - [ ] Record RO-Crate 1.1 packaging requirements for the track outputs.
-- [ ] Task: Define eligibility and charting rules.
-    - [ ] Define inclusion/exclusion rules for OWL/RDF ontologies, SKOS vocabularies, XML/JSON schemas, formal modelling languages, narrative standards, papers, software repositories, and metadata-only sources.
-    - [ ] Define charting fields for source family, modelling paradigm, source type, licence, provenance, artifact availability, parseability, mapping relevance, and article-use category.
-    - [ ] Define confidence categories for parsed artifact evidence, structured non-RDF evidence, metadata-only evidence, and literature-only evidence.
+- [x] Task: Create the protocol scaffold.
+    - [x] Create `docs/article-hardening/protocol.md` as a PRISMA-ScR-aligned scoping-review protocol adapted for ontology and modelling-formalism comparison.
+    - [x] Create `docs/article-hardening/protocol-checklist.md` mapping PRISMA-ScR items to repo artifacts and implementation status.
+    - [x] Record PRISMA-S search-reporting fields for each search route.
+    - [x] Record RO-Crate 1.1 packaging requirements for the track outputs.
+- [x] Task: Define eligibility and charting rules.
+    - [x] Define inclusion/exclusion rules for OWL/RDF ontologies, SKOS vocabularies, XML/JSON schemas, formal modelling languages, narrative standards, papers, software repositories, and metadata-only sources.
+    - [x] Define charting fields for source family, modelling paradigm, source type, licence, provenance, artifact availability, parseability, mapping relevance, and article-use category.
+    - [x] Define confidence categories for parsed artifact evidence, structured non-RDF evidence, metadata-only evidence, and literature-only evidence.
 
 ### Acceptance Criteria
-- [ ] Protocol includes rationale, objectives, information sources, search strategy, eligibility criteria, charting fields, synthesis plan, limitations, and reproducibility plan.
-- [ ] Protocol checklist has one row per required standard item and points to target artifacts.
-- [ ] Protocol explains how PRISMA-ScR, PRISMA-S, and RO-Crate are being used.
+- [x] Protocol includes rationale, objectives, information sources, search strategy, eligibility criteria, charting fields, synthesis plan, limitations, and reproducibility plan.
+- [x] Protocol checklist has one row per required standard item and points to target artifacts.
+- [x] Protocol explains how PRISMA-ScR, PRISMA-S, and RO-Crate are being used.
 
 ## Phase 2: Broader Source Discovery
 - [ ] Task: Extend the discovery search.
