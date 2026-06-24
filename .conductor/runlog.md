@@ -5,6 +5,12 @@
 - Added `docs/ontology-comparison/source-inventory.json` with 21 seed candidates across 17 families, including KiSAO, SED-ML, MIASE, OSMO, EMMO/VIMMP, Game Ontology Project, GDL resources, XMILE, DEVS, HLA/FOM, ODD, KAoS, PROV-O, P-Plan, OWL-Time, SSN/SOSA, schema.org, BFO, DOLCE, and OntoUML/UFO.
 - Added append-only `docs/ontology-comparison/inclusion-exclusion-log.jsonl`, generated `docs/ontology-comparison/source-inventory.md`, and wired `scripts/maintenance/build_ontology_comparison_inventory.py` into Make/Pixi with pytest coverage.
 
+## [2026-06-24] - Comparative Simulation Ontology Mapping Phase 2
+- Added `scripts/maintenance/harvest_comparison_sources.py` with conservative licence-aware harvesting: only `redistributable_artifact` sources are downloaded, while other sources receive metadata-only provenance records with manual review notes.
+- Generated `docs/ontology-comparison/source-provenance.json` with 21 source records, retrieval timestamps, canonical URLs, HTTP/content metadata where available, checksums, byte sizes, parse status, and format classification.
+- Downloaded and parsed four redistributable RDF artifacts under `docs/ontology-comparison/sources/`: PROV-O, OWL-Time, SSN/SOSA, and schema.org.
+- Wired `make ontology-comparison-harvest` and Pixi task support, and added focused pytest coverage for metadata-only, downloaded RDF, provenance coverage, and JSON output paths.
+
 ## [2026-06-24] - Comparative Simulation Ontology Mapping Track Creation
 - Created Conductor track `uogto_comparative_simulation_ontology_mapping_20260624` for discovery, sourcing, mapping, overlap analysis, network/descriptive analysis, and comprehensive visualisation of game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
 - Added a detailed specification with source provenance, licence handling, mapping confidence, review workflow, overlap metrics, network analysis, and visualisation/reporting requirements.

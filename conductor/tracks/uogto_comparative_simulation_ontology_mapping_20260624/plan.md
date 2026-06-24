@@ -19,20 +19,21 @@ This track discovers, sources, maps, analyses, and visualises external game-theo
 - [x] Inclusion/exclusion log exists and is append-only.
 
 ## Phase 2: Source Harvesting and Provenance
-- [ ] Task: Implement source harvesting.
-    - [ ] Add `scripts/maintenance/harvest_comparison_sources.py`.
-    - [ ] Download redistributable RDF/OWL/SKOS artifacts into `docs/ontology-comparison/sources/` or a clearly named subfolder.
-    - [ ] Store non-redistributable sources as metadata-only records with retrieval URL, licence rationale, and manual review note.
-    - [ ] Record retrieval timestamp, HTTP status, content type, checksum, byte size, and canonical URL.
-- [ ] Task: Validate parseability and source integrity.
-    - [ ] Parse RDF/OWL/SKOS with RDFLib.
-    - [ ] Detect XML schemas, JSON schemas, CSV vocabularies, and documentation-only sources.
-    - [ ] Produce `docs/ontology-comparison/source-inventory.md` from the JSON inventory.
+- [x] Task: Implement source harvesting.
+    - [x] Add `scripts/maintenance/harvest_comparison_sources.py`.
+    - [x] Download redistributable RDF/OWL/SKOS artifacts into `docs/ontology-comparison/sources/` or a clearly named subfolder.
+    - [x] Store non-redistributable sources as metadata-only records with retrieval URL, licence rationale, and manual review note.
+    - [x] Record retrieval timestamp, HTTP status, content type, checksum, byte size, and canonical URL.
+- [x] Task: Validate parseability and source integrity.
+    - [x] Parse RDF/OWL/SKOS with RDFLib.
+    - [x] Detect XML schemas, JSON schemas, CSV vocabularies, and documentation-only sources.
+    - [x] Produce `docs/ontology-comparison/source-inventory.md` from the JSON inventory.
+    - [x] Add `docs/ontology-comparison/source-provenance.json`, `make ontology-comparison-harvest`, Pixi wiring, and pytest coverage for downloaded and metadata-only provenance paths.
 
 ### Acceptance Criteria
-- [ ] Every source has provenance and licence disposition.
-- [ ] Redistributable artifacts have checksums and parse status.
-- [ ] Non-RDF standards are not misrepresented as ontologies.
+- [x] Every source has provenance and licence disposition.
+- [x] Redistributable artifacts have checksums and parse status.
+- [x] Non-RDF standards are not misrepresented as ontologies.
 
 ## Phase 3: Term Extraction and Normalisation
 - [ ] Task: Implement term extraction.
