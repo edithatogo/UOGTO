@@ -1,4 +1,7 @@
 import argparse
+import ctypes
+import os
+import stat
 import json
 import re
 from pathlib import Path
@@ -135,22 +138,26 @@ def should_keep(path: Path, *, package_dir: Path, graphics: set[str], includes: 
 
 
 def remove_file(path: Path) -> None:
-    try:
-        path.chmod(0o666)
-    except OSError:
-        pass
-    completed = subprocess.run(
-        ["C:\\WINDOWS\\system32\\cmd.exe", "/c", "del", "/f", "/q", str(path)],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    if completed.returncode == 0 and not path.exists():
-        return
+    target = str(path)
+    kernel32 = ctypes.windll.kernel32
     try:
         path.unlink()
-    except PermissionError as exc:
-        raise PermissionError(f"Unable to remove {path}: {completed.stderr.strip() or exc}") from exc
+        return
+    except PermissionError:
+        try:
+            path.chmod(0o666)
+        except OSError:
+            pass
+        try:
+            path.unlink()
+            return
+        except PermissionError:
+            try:
+                kernel32.SetFileAttributesW(target, 0x80)
+            except Exception:
+                pass
+            if not kernel32.DeleteFileW(target):
+                raise PermissionError(f'Unable to remove {path}')
 
 def clean_package(package_dir: Path, source_root: Path | None = None, paper_name: str = DEFAULT_PAPER) -> dict:
     source_root = source_root or package_dir

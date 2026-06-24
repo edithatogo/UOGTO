@@ -4,6 +4,7 @@ import os
 import shutil
 import stat
 import sys
+import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -15,21 +16,25 @@ from scripts.maintenance.clean_arxiv_source_package import DEFAULT_OUTPUT_DIR, D
 
 def copy_source_tree(source_root: Path, package_dir: Path) -> None:
     package_dir.mkdir(parents=True, exist_ok=True)
-    for path in sorted(source_root.rglob("*"), key=lambda p: p.as_posix()):
+    for path in sorted(source_root.rglob('*'), key=lambda p: p.as_posix()):
+        if path.is_file() and path.suffix.lower() not in {'.tex', '.ltx', '.cls', '.sty', '.cfg', '.cbx', '.def', '.dtx', '.ins', '.bib', '.bbl', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.eps', '.ps'}:
+            continue
         rel = path.relative_to(source_root)
         destination = package_dir / rel
         if path.is_dir():
             destination.mkdir(parents=True, exist_ok=True)
         else:
             destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(path, destination)
-
+            if os.system(f'copy /y "{path}" "{destination}" >nul') != 0:
+                raise OSError(f'Failed to copy {path} to {destination}')
 
 def build_package(source_root: Path = DEFAULT_SOURCE_ROOT, package_dir: Path = DEFAULT_OUTPUT_DIR) -> dict:
-    copy_source_tree(source_root, package_dir)
-    manifest = clean_package(package_dir, source_root)
+    stage_dir = package_dir.parent / f'{package_dir.name}-{uuid.uuid4().hex[:8]}'
+    if os.system(f'mkdir "{stage_dir}"') != 0:
+        raise OSError(f'Failed to create staging directory: {stage_dir}')
+    copy_source_tree(source_root, stage_dir)
+    manifest = clean_package(stage_dir, source_root)
     return manifest
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build a cleaned arXiv source package for the UOGTO manuscript.")
