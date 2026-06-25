@@ -1,42 +1,31 @@
-# UOGTO Supplement Package Map
+# Supplementary information for UOGTO
 
 Date: 2026-06-25
 
-Purpose: this map turns the existing article-hardening, ontology-comparison, validation, mapping, and submission artifacts into a coherent supplement package. It is designed for peer reviewers, editors, and reproducibility reviewers who need to trace each article claim to the repo evidence surface that supports it.
+This supplement supports the manuscript *Universal Open Game Theory Ontology: Semantics for Games, Simulation, and Executable Multi-Agent Evidence*. It is written for reviewers who need to inspect how the ontology, source discovery, mappings, quality metrics, figures, and submission checks support the article claims. The supplement is not a second narrative paper. It is a structured evidence package, with each section pointing to stable repository artefacts.
 
-Status: mapped for review and upgraded with article-facing tables. The evidence package is substantially assembled, including the privacy audit manifest, generated module/mapping/disposition tables, deck assets, and figure score loop. Final submission still needs edited journal prose, final figure numbering, and journal-specific packaging.
+## Supplementary methods
 
-## Reader Route
+### S1. Review protocol and reporting standards
 
-| Reader need | Start here | Then inspect | Decision use |
-| --- | --- | --- | --- |
-| Editorial novelty and claim boundaries | `docs/paper/paper.tex` | `docs/article-hardening/structured-summary.md`, `docs/article-hardening/uogto-inclusion-decisions.md` | Check whether claims stay within the evidence base. |
-| Scoping-review method | `docs/article-hardening/protocol.md` | `docs/article-hardening/protocol-checklist.md`, `docs/article-hardening/prisma-scr-artifact-map.md`, `docs/article-hardening/search-strategy.md` | Check whether discovery and screening are auditable. |
-| Source evidence | `docs/article-hardening/source-extension-inventory.md` | `docs/article-hardening/search-log.jsonl`, `docs/ontology-comparison/source-inventory.md`, `docs/ontology-comparison/source-provenance.json` | Check what was found, included, excluded, or treated as metadata only. |
-| Ontology implementation | `ontologies/` | `shapes/`, `examples/`, `competency-questions/`, `docs/article-hardening/quality-metrics.json` | Check ontology structure, annotations, validation, and competency coverage. |
-| Ontology mappings | `docs/ontology-comparison/accepted-alignments.sssom.tsv` | `docs/ontology-comparison/accepted-alignments.sssom.yml`, `docs/ontology-comparison/mapping-review.csv`, `docs/ontology-comparison/mapping-candidates.jsonl` | Check accepted, rejected, and domain-review mapping decisions. |
-| Robustness and calibration | `docs/ontology-comparison/mapping-robustness.md` | `docs/ontology-comparison/mapping-calibration.md`, `docs/ontology-comparison/network-sensitivity.md`, `docs/ontology-comparison/overlap-metrics.json` | Check whether results depend on one matching method or source subset. |
-| Reproducibility package | `docs/article-hardening/ro-crate-package.md` | `docs/article-hardening/ro-crate-metadata.json`, `docs/article-hardening/duckdb-artifact-store.md`, `docs/article-hardening/tabular-artifact-storage.md` | Check whether the evidence package can be rerun and reused. |
-| Submission readiness | `docs/paper/sourceright-report.md` | `docs/paper/source-inventory.json`, `scripts/maintenance/arxiv_source_clean.py`, `.github/workflows/arxiv-preflight.yml` | Check citation/source review and arXiv packaging gates. |
+UOGTO's article evidence package follows a scoping-review style protocol. The protocol defines the search scope, source families, inclusion and exclusion criteria, evidence levels, charting fields, reviewer roles, red-team checks, and reproducibility outputs. It also maps PRISMA-ScR style reporting items to repository artefacts so that readers can inspect the evidence behind source discovery and screening.
 
-## Supplement Structure
+Primary artefacts:
 
-### Supplement 1. Protocol and Reporting Standards
-
-Primary artifacts:
 - `docs/article-hardening/protocol.md`
 - `docs/article-hardening/protocol-checklist.md`
 - `docs/article-hardening/prisma-scr-artifact-map.md`
 - `docs/article-hardening/search-strategy.md`
 - `docs/article-hardening/dual-screening.md`
 
-Coverage: scoping-review protocol, PRISMA-ScR artifact linkage, search and screening workflow, reviewer roles, and red-team challenge process.
+Supplementary Table S1 lists the protocol and reporting artefacts used to support the manuscript methods. Supplementary Figure S1 gives the source-discovery flow. Supplementary Figure S2 gives the screening flow.
 
-Open work: convert the protocol checklist into a final journal supplement table after the manuscript claim set is frozen.
+### S2. Source register and evidence levels
 
-### Supplement 2. Source Register and Evidence Levels
+Source discovery is recorded as an evidence register rather than a narrative search summary. The register distinguishes parsed RDF sources, structured non-RDF sources, metadata-only sources, literature-only sources, excluded sources, and negative evidence. Each search or source record includes evidence level, licence or reuse status, inclusion rationale, and reviewer handoff where available. This distinction is important because a parsed ontology file and a metadata-only standards page do not support the same kind of claim.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/article-hardening/search-log.jsonl`
 - `docs/article-hardening/source-extension-inventory.json`
 - `docs/article-hardening/source-extension-inventory.md`
@@ -44,13 +33,14 @@ Primary artifacts:
 - `docs/ontology-comparison/source-provenance.json`
 - `docs/ontology-comparison/inclusion-exclusion-log.jsonl`
 
-Coverage: query log, result counts, inclusion rationales, evidence levels, licences, source-family coverage, metadata-only sources, structured non-RDF sources, parsed RDF sources, literature-only sources, exclusions, and negative evidence.
+Supplementary Table S2 summarises source families, evidence levels, licence dispositions, and inclusion decisions. Supplementary Figure S3 shows source-family coverage by evidence level.
 
-Open work: keep the append-only search log current if further live discovery is performed before submission.
+### S3. Ontology implementation and validation
 
-### Supplement 3. Ontology Implementation and Validation
+UOGTO is implemented as modular RDF/OWL source, SHACL shapes, JSON-LD contexts, examples, competency questions, and documentation. The quality benchmark records annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, SHACL coverage, examples per module, competency-query coverage, OWL profile status, and reasoner status. The portable validation baseline uses RDFLib and pySHACL. Optional ROBOT-style outputs are retained as secondary evidence when Java tooling is available.
 
-Primary artifacts:
+Primary artefacts:
+
 - `ontologies/`
 - `shapes/`
 - `examples/`
@@ -59,14 +49,18 @@ Primary artifacts:
 - `docs/article-hardening/reasoner-report.md`
 - `docs/article-hardening/competency-benchmark.md`
 - `docs/article-hardening/robot/`
+- `docs/article-hardening/article-facing-tables/module-audit-table.csv`
+- `docs/article-hardening/article-facing-tables/module-audit-table.json`
+- `docs/article-hardening/article-facing-tables/module-audit-table.md`
 
-Coverage: module structure, labels and definitions, object/datatype property separation, SHACL validation, example graph coverage, competency-query execution, annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, OWL profile, and reasoner status.
+Supplementary Table S3 is the module audit table. It gives reviewers a compact account of labels, definitions, SHACL links, examples, competency questions, OWL profile status, and reasoner status. This table replaces the need to infer coverage from raw validation logs.
 
-Implemented: compact module audit CSV/JSON/Markdown tables are available under `docs/article-hardening/article-facing-tables/`, so reviewers do not need to infer coverage from raw validation outputs.
+### S4. Mapping and alignment evidence
 
-### Supplement 4. Mapping and Alignment Evidence
+The mapping workflow separates candidate generation from accepted alignment. Candidate mappings are generated from deterministic lexical, definitional, hierarchy, property-signature, type-compatibility, and source-reliability signals. Accepted mappings are exported as both RDF alignment triples and SSSOM tables. Rejected mappings and domain-review rows remain available for audit; they are not silently discarded.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/ontology-comparison/term-inventory.jsonl`
 - `docs/ontology-comparison/mapping-candidates.jsonl`
 - `docs/ontology-comparison/mapping-review.csv`
@@ -74,13 +68,14 @@ Primary artifacts:
 - `docs/ontology-comparison/accepted-alignments.sssom.tsv`
 - `docs/ontology-comparison/accepted-alignments.sssom.yml`
 
-Coverage: source term inventory, candidate mappings, accepted mappings, rejected mappings, domain-review mappings, RDF alignment outputs, and SSSOM tabular metadata for review and publication.
+Supplementary Table S4 reports the mapping decision surface, including accepted, rejected, and domain-review rows. Supplementary Figure S4 shows the mapping flow from candidates to reviewed decisions and accepted alignments.
 
-Current article-safe framing: the mapping evidence supports conservative alignment and bridge analysis. It does not support a claim that every relevant game-theory or simulation ontology has been exhaustively mapped.
+### S5. Robustness, calibration, and network analyses
 
-### Supplement 5. Robustness, Calibration, and Network Analyses
+The mapping evidence is stress-tested rather than treated as a single deterministic output. Robustness analyses ablate exact labels, normalized labels, definition similarity, hierarchy context, property signatures, and embedding similarity. Calibration artefacts record reviewer agreement and adjudication outcomes. Network sensitivity analyses compare accepted-only mappings, accepted plus close/related mappings, and scenarios excluding metadata-only sources.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/ontology-comparison/mapping-robustness.md`
 - `docs/ontology-comparison/mapping-robustness/`
 - `docs/ontology-comparison/mapping-calibration.md`
@@ -89,27 +84,35 @@ Primary artifacts:
 - `docs/ontology-comparison/network-sensitivity.json`
 - `docs/ontology-comparison/network-sensitivity.md`
 - `docs/ontology-comparison/overlap-metrics.json`
+- `docs/article-hardening/article-facing-tables/mapping-robustness-table.csv`
+- `docs/article-hardening/article-facing-tables/mapping-robustness-table.json`
+- `docs/article-hardening/article-facing-tables/mapping-robustness-table.md`
 
-Coverage: ablation over label, normalized label, definition similarity, hierarchy context, property signature, embedding similarity, reviewer calibration, adjudication outcomes, source-family sensitivity, accepted-only networks, close/related mapping networks, and metadata-only source exclusion.
+Supplementary Table S5 is the article-facing mapping robustness table. Supplementary Figure S5 shows the source-module overlap heatmap. Supplementary Figure S6 shows the source similarity or network sensitivity view. These artefacts support the manuscript's cautious claim that UOGTO identifies bridges among modelling traditions, not universal equivalence.
 
-Implemented: `docs/article-hardening/article-facing-tables/mapping-robustness-table.*` distills SSSOM, ablation, network sensitivity, reviewer calibration, and adjudication evidence into article-facing table formats.
+### S6. Case studies and missing-element dispositions
 
-### Supplement 6. Case Studies and Use-Case Coverage
+The case-study package covers auction and mechanism design, voting and social choice, security and Stackelberg games, MARL Markov games, ABM policy simulation, system-dynamics feedback games, LLM-agent tool-use games, and executable trace/provenance cases. Missing game-theory elements are triaged before ontology expansion. The allowed dispositions are: add to UOGTO, align externally only, defer, reject duplicate, reject out of scope, or domain review.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/article-hardening/case-studies.md`
 - `docs/article-hardening/case-studies.json`
 - `docs/article-hardening/use-case-coverage-matrix.csv`
 - `docs/article-hardening/use-case-coverage-matrix.json`
 - `docs/article-hardening/uogto-inclusion-decisions.md`
+- `docs/article-hardening/article-facing-tables/missing-game-theory-element-dispositions.csv`
+- `docs/article-hardening/article-facing-tables/missing-game-theory-element-dispositions.json`
+- `docs/article-hardening/article-facing-tables/missing-game-theory-element-dispositions.md`
 
-Coverage: auction and mechanism design, voting and social choice, security and Stackelberg games, MARL Markov games, ABM policy simulation, system-dynamics feedback games, LLM-agent tool-use games, executable trace and provenance cases, and missing-game-theory-element dispositions.
+Supplementary Table S6 gives the missing-element disposition table. Supplementary Table S7 gives case-study and use-case coverage.
 
-Open work: select two or three cases for the main article and keep the remaining cases in the supplement.
+### S7. Reproducibility and data packaging
 
-### Supplement 7. Reproducibility and Packaging
+The reproducibility package is designed to make the article evidence reusable, not merely readable. RO-Crate metadata identifies the root data entity, contextual entities, source artefacts, workflows, scripts, and provenance. Tabular outputs are stored in human-readable CSV/Markdown and machine-stable JSON or Parquet where appropriate. The dashboard separates parsed RDF, structured non-RDF, metadata-only, literature-only, and excluded sources.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/article-hardening/ro-crate-package.md`
 - `docs/article-hardening/ro-crate-metadata.json`
 - `docs/article-hardening/duckdb-artifact-store.md`
@@ -118,75 +121,133 @@ Primary artifacts:
 - `docs/article-hardening/article-evidence-dashboard.json`
 - `docs/article-hardening/article-evidence-dashboard.html`
 
-Coverage: RO-Crate metadata, root data entity, data entities, contextual entities, workflow/script provenance, DuckDB artifact-store design, CSV/Markdown plus JSON/Parquet table storage, and validated dashboard surfaces.
+Supplementary Table S8 lists the reproducibility and packaging artefacts. Supplementary Figure S7 should show the evidence dashboard or the reproducibility chain from ontology source to validation, mapping, tables, and submission checks.
 
-Open work: ensure the final release archive includes the same files named in this map and that dashboard links are stable.
+### S8. Figures and visual evidence
 
-### Supplement 8. Figures, Tables, and Visual Evidence
+The manuscript and supplement figures have completed the first Nature-readiness score loop. The scorecard records all 11 manuscript/supplement figure rows at 100 out of 100 after typography, caption-alignment, accessibility metadata, colour-safety, network-readability, and PDFLaTeX-compatible PRISMA export improvements. Any change to source data, figure numbering, caption text, or manuscript placement should trigger a re-score.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/article-hardening/figures/`
 - `docs/ontology-comparison/figures/`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.md`
 
-Coverage: PRISMA-style flow diagrams, source-family coverage heatmaps, mapping robustness visualizations, network sensitivity figures, dashboard figures, and per-image Nature-readiness scores.
+Supplementary Table S9 records figure readiness and score history. Supplementary Figures S1 to S7 are the current candidate figure set for manuscript and supplement packaging.
 
-Current status: manuscript and supplement figure rows have completed loop 1 and now score 100 out of 100 in the Nature presubmission image scorecard. PRISMA flows now have SVG and PDF exports for manuscript packaging; re-score if source data, figure numbering, or manuscript usage changes.
+### S9. Manuscript source, citation, and arXiv checks
 
-### Supplement 9. Manuscript Source, Citation, and arXiv Checks
+The manuscript source package is checked through SourceRight and repository-native arXiv gates. SourceRight validates the CSL JSON, generates the reference integrity report, and reconciles manuscript citation exports against the canonical reference set. The arXiv path checks source-package cleaning, filename safety, bibliography completeness, PDFLaTeX-compatible figure requirements, source-leak/privacy audit status, and CI preflight evidence.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/paper/paper.tex`
 - `docs/paper/references.csl.json`
 - `docs/paper/sourceright-report.md`
 - `docs/paper/sourceright-report.json`
 - `docs/paper/source-inventory.json`
 - `docs/paper/source-review-queue.jsonl`
+- `docs/paper/arxiv-source-privacy-audit.json`
+- `docs/paper/arxiv-source-privacy-audit.md`
 - `.github/workflows/arxiv-preflight.yml`
-- `scripts/maintenance/arxiv_source_clean.py`
+- `scripts/maintenance/clean_arxiv_source_package.py`
+- `scripts/maintenance/audit_arxiv_source_privacy.py`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md`
 
-Coverage: citation extraction, SourceRight CSL validation, source-review queue, arXiv cleaner, source package preflight, filename safety, bibliography completeness, PDFLaTeX-compatible figure requirement, and external arXiv toolchain review.
+Supplementary Table S10 records manuscript and arXiv submission gates. The current SourceRight run reports 11 matched citations and 0 citation reconciliation issues. The remaining SourceRight warnings are missing-DOI warnings for references that are standards pages, APIs, or URL-based resources rather than DOI-bearing articles.
 
-Open work: add an explicit source-leak and privacy audit manifest instead of relying only on cleaner and CI inference.
+### S10. Governance, citation, reuse, and change control
 
-### Supplement 10. Governance, Citation, Reuse, and Change Control
+The ontology has governance and reuse documentation for readers who want to cite, extend, or migrate UOGTO. These artefacts record term-level changes, deprecations, replacement IRIs, migration notes, namespace IRIs, preferred prefixes, licence, release assets, and modelling decisions.
 
-Primary artifacts:
+Primary artefacts:
+
 - `docs/article-hardening/term-changelog.md`
 - `docs/article-hardening/deprecation-policy.md`
 - `docs/how-to-cite-and-reuse-uogto.md`
-- `ontologies/uogto-governance.ttl`
+- `ontologies/core/uogto-governance.ttl`
 - `docs/modelling-decisions.md`
 - `docs/glossary.md`
 
-Coverage: term-level changes, deprecation policy, replacement IRIs, migration notes, ontology governance metadata, citation guidance, namespace IRIs, preferred prefixes, release assets, licence, and modelling decisions.
+Supplementary Table S11 records governance, citation, reuse, and change-control artefacts.
 
-Open work: align final DOI and release asset names after the release candidate is cut.
+## Supplementary results
 
-## Claim-to-Supplement Map
+### Source discovery and screening
 
-| Claim ID | Article claim | Primary supplement section | Evidence surface | Support level | Residual risk |
+The evidence register records 39 source-extension records and the ontology-comparison package records 21 candidate source families. The comparison workflow distinguishes parsed RDF from metadata-only and literature-only evidence. This separation limits overclaiming. Source counts are used to describe search coverage, not to imply that every source was parsed or that every metadata record supports term-level mapping.
+
+### Ontology validation
+
+The quality metrics show that UOGTO's article-facing claims are backed by parse checks, annotation checks, SHACL example validation, competency queries, OWL profile screening, and reasoner status. The module audit table is the recommended reviewer entry point because it compresses these checks into a single table while preserving links to the machine-readable metrics.
+
+### Mapping review and robustness
+
+The mapping workflow generated 460 candidates and accepted 10 conservative alignments. One candidate remained marked for domain review and 449 candidates were rejected. The robustness and calibration artefacts show why these numbers should be read as precision-oriented review evidence rather than evidence of low coverage. UOGTO records candidate matches that look plausible but are not asserted.
+
+### Case-study coverage
+
+The case-study package demonstrates UOGTO across mechanism design, voting/social choice, security, MARL, ABM policy simulation, system dynamics, LLM-agent tool use, and executable trace/provenance settings. These cases are intended to test modelling reach. They are not a claim that every construct in each field has been fully formalized.
+
+### Submission readiness
+
+The submission package now contains a polished manuscript draft, this final supplement prose, SourceRight reference checks, Authentext audit reports, arXiv privacy audit manifests, PRISMA SVG/PDF exports, a created PowerPoint deck, and a completed first figure-score loop. Final submission should freeze figure numbering and caption text before rerunning the score loop and arXiv preflight.
+
+## Supplementary tables
+
+| Table | Title | Primary file |
+| --- | --- | --- |
+| Supplementary Table S1 | Protocol and reporting artefacts | `docs/article-hardening/protocol-checklist.md` |
+| Supplementary Table S2 | Source register and evidence levels | `docs/article-hardening/source-extension-inventory.md` |
+| Supplementary Table S3 | Module audit table | `docs/article-hardening/article-facing-tables/module-audit-table.csv` |
+| Supplementary Table S4 | Mapping decision surface | `docs/ontology-comparison/mapping-review.csv` |
+| Supplementary Table S5 | Mapping robustness, SSSOM, sensitivity, calibration, and adjudication | `docs/article-hardening/article-facing-tables/mapping-robustness-table.csv` |
+| Supplementary Table S6 | Missing game-theory element dispositions | `docs/article-hardening/article-facing-tables/missing-game-theory-element-dispositions.csv` |
+| Supplementary Table S7 | Case-study and use-case coverage | `docs/article-hardening/use-case-coverage-matrix.csv` |
+| Supplementary Table S8 | Reproducibility and packaging artefacts | `docs/article-hardening/ro-crate-metadata.json` |
+| Supplementary Table S9 | Figure readiness and score history | `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv` |
+| Supplementary Table S10 | Manuscript, SourceRight, and arXiv gates | `docs/paper/sourceright-report.md`; `docs/paper/arxiv-source-privacy-audit.md` |
+| Supplementary Table S11 | Governance, citation, reuse, and change control | `docs/how-to-cite-and-reuse-uogto.md`; `docs/article-hardening/term-changelog.md` |
+
+## Supplementary figures
+
+| Figure | Title | Primary file |
+| --- | --- | --- |
+| Supplementary Figure S1 | PRISMA-style source discovery flow | `docs/article-hardening/figures/prisma-2020-source-discovery-flow.svg`; `.pdf` |
+| Supplementary Figure S2 | PRISMA-style screening flow | `docs/article-hardening/figures/prisma-2020-screening-flow.svg`; `.pdf` |
+| Supplementary Figure S3 | Source-family evidence-level heatmap | `docs/ontology-comparison/figures/source_family_evidence_heatmap.svg` |
+| Supplementary Figure S4 | Mapping flow from candidates to decisions | `docs/ontology-comparison/figures/mapping_flow_sankey.svg` |
+| Supplementary Figure S5 | Source-module overlap heatmap | `docs/ontology-comparison/figures/source_module_overlap_heatmap.svg` |
+| Supplementary Figure S6 | Source similarity network | `docs/ontology-comparison/figures/source_similarity_network.svg` |
+| Supplementary Figure S7 | Reviewer workload and mapping review distribution | `docs/ontology-comparison/figures/reviewer_workload.svg` |
+
+## Claim-to-supplement map
+
+| Claim ID | Article claim | Supplement section | Evidence surface | Support level | Residual risk |
 | --- | --- | --- | --- | --- | --- |
-| C1 | UOGTO is a modular semantic layer for game-theoretic and executable evidence. | S3, S10 | `ontologies/`, `docs/modelling-decisions.md`, `ontologies/uogto-governance.ttl` | Strong internal evidence | Needs final module audit table. |
-| C2 | The repository validates examples and competency questions against ontology and SHACL expectations. | S3 | `shapes/`, `examples/`, `competency-questions/`, `docs/article-hardening/competency-benchmark.md` | Strong local evidence | CI evidence should remain green on final commit. |
-| C3 | Source discovery is conducted as an evidence-levelled scoping-review workflow. | S1, S2 | `protocol.md`, `search-log.jsonl`, `source-extension-inventory.json`, `prisma-scr-artifact-map.md` | Strong process evidence | Searches should be timestamped again if claims become current-date claims. |
-| C4 | Mapping results are conservative and reviewable, not a blanket equivalence claim. | S4, S5 | `mapping-review.csv`, `accepted-alignments.sssom.tsv`, `mapping-calibration.md` | Strong evidence for conservative mapping | Domain-review candidates need explicit final dispositions. |
-| C5 | Metadata-only sources are separated from parsed RDF and structured non-RDF sources. | S2, S7 | `source-extension-inventory.json`, `article-evidence-dashboard.json`, `ro-crate-metadata.json` | Strong evidence-surface support | Dashboard must stay regenerated from final artifacts. |
-| C6 | Network and overlap analyses identify bridge concepts and sensitivity, not universal ontology coverage. | S5 | `network-analysis.json`, `network-sensitivity.md`, `overlap-metrics.json` | Moderate to strong analysis support | Needs article-facing compact table and figure. |
-| C7 | Quality benchmarking covers annotations, orphan classes, relation richness, hierarchy depth, imports, SHACL coverage, examples, competency questions, profile, and reasoner status. | S3 | `quality-metrics.json`, `reasoner-report.md`, `robot/` | Strong metrics support | Add plain-English interpretation for non-ontology reviewers. |
-| C8 | Reproducibility surfaces include RO-Crate, DuckDB design, tabular artifacts, dashboard outputs, SourceRight, arXiv checks, and WIDOCO/validation CI. | S7, S9 | `ro-crate-metadata.json`, `duckdb-artifact-store.md`, `.github/workflows/`, `docs/paper/sourceright-report.md` | Strong package support | Explicit privacy audit manifest still needed. |
-| C9 | The work is submission-adjacent but not yet final Nature-ready. | S8, S9 | `image_scores.csv`, `presubmission_decision_memo.md`, `powerpoint_asset_inventory.md` | Strong review evidence | Figure loops, deck creation, and privacy audit are implemented; final edited supplement prose and final figure numbering remain. |
+| C1 | UOGTO is a modular semantic layer for game-theoretic and executable evidence. | S3, S10 | `ontologies/`; `docs/modelling-decisions.md`; `ontologies/core/uogto-governance.ttl` | Strong internal evidence | Final copyedit should keep claims tied to validated modules. |
+| C2 | Examples and competency questions validate against ontology and SHACL expectations. | S3 | `shapes/`; `examples/`; `competency-questions/`; `docs/article-hardening/competency-benchmark.md` | Strong local evidence | CI must remain green on the final submission commit. |
+| C3 | Source discovery is evidence-levelled and scoping-review aligned. | S1, S2 | `docs/article-hardening/protocol.md`; `docs/article-hardening/search-log.jsonl`; `docs/article-hardening/source-extension-inventory.json` | Strong process evidence | Refresh live searches only if the manuscript makes current-date claims. |
+| C4 | Ontology mappings are conservative and reviewable rather than blanket equivalence claims. | S4, S5 | `docs/ontology-comparison/mapping-review.csv`; `docs/ontology-comparison/accepted-alignments.sssom.tsv`; `docs/ontology-comparison/mapping-calibration.md` | Strong mapping evidence | Domain-review candidates should remain explicitly labelled. |
+| C5 | Metadata-only sources are separated from parsed RDF and structured non-RDF sources. | S2, S7 | `docs/article-hardening/source-extension-inventory.json`; `docs/article-hardening/article-evidence-dashboard.json`; `docs/article-hardening/ro-crate-metadata.json` | Strong evidence-surface support | Dashboard should be regenerated from final artefacts. |
+| C6 | Network and overlap analyses identify bridge concepts and sensitivity rather than universal coverage. | S5 | `docs/ontology-comparison/network-analysis.json`; `docs/ontology-comparison/network-sensitivity.md`; `docs/ontology-comparison/overlap-metrics.json` | Moderate to strong analysis support | Keep bridge claims conditional on sensitivity results. |
+| C7 | Quality benchmarking covers annotations, orphan classes, relation richness, hierarchy depth, imports, SHACL, examples, competency questions, profile, and reasoner status. | S3 | `docs/article-hardening/quality-metrics.json`; `docs/article-hardening/reasoner-report.md`; `docs/article-hardening/robot/` | Strong metrics support | Preserve plain-English interpretation for non-ontology reviewers. |
+| C8 | Reproducibility surfaces include RO-Crate, DuckDB design, tabular artefacts, dashboard outputs, SourceRight, arXiv checks, and CI. | S7, S9 | `docs/article-hardening/ro-crate-metadata.json`; `docs/article-hardening/duckdb-artifact-store.md`; `docs/paper/sourceright-report.md`; `.github/workflows/` | Strong package support | Re-run SourceRight and arXiv preflight after final citation changes. |
+| C9 | The package is improved but not yet frozen for submission. | S8, S9 | `image_scores.csv`; `presubmission_decision_memo.md`; `docs/presentation/uogto_nature_presubmission_deck.pptx` | Strong review evidence | Freeze supplement prose, figure numbering, captions, and deck claims before submission. |
 
-## Package Completion Criteria
+## Data and code availability
 
-The supplement package is complete when:
-- Every manuscript claim has a row in `docs/paper/supplement-claim-map.csv`.
-- Every row names a primary artifact, support level, and residual risk.
-- Every figure referenced in the manuscript has a supplement caption source and image score.
-- Article-facing module audit, missing-element disposition, and mapping robustness tables are regenerated by `make article-facing-tables`.
-- The final source package contains the same artifact set listed here.
-- The source-leak and privacy audit manifest is present and reviewed.
-- The final release DOI, namespace IRIs, licence, and preferred citation are synchronized across the paper, README, RO-Crate, and citation/reuse page.
+All supplement artefacts are stored in the repository. Human-readable tables are available as Markdown or CSV; machine-readable tables are available as JSON or Parquet where appropriate. The source package, SourceRight reports, Authentext reports, arXiv privacy audit, figure scorecard, and generated article-facing tables are version-controlled so that reviewers can trace article claims to concrete files.
+
+## Supplement completion criteria
+
+The supplement is ready for final submission packaging when:
+
+- the manuscript claim set is frozen;
+- Supplementary Tables S1 to S11 and Supplementary Figures S1 to S7 are the final numbering scheme;
+- `make article-facing-tables`, `make manuscript-sourcecheck`, `make arxiv-privacy-audit`, and `make validate` pass;
+- SourceRight reports 0 citation reconciliation issues;
+- Authentext audit reports 0 high-signal findings for the supplement prose;
+- final release DOI, namespace IRIs, licence, and preferred citation are synchronized across the paper, README, RO-Crate, and citation/reuse page.

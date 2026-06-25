@@ -580,3 +580,18 @@
 - Used SourceRight from `https://github.com/edithatogo/sourceright` via the local `sourceright` CLI and `make manuscript-sourcecheck`; CSL validation and citation reconciliation passed.
 - Applied Authentext Pro academic guidance from `https://github.com/edithatogo/authentext`; recorded `docs/paper/authentext-report.md` and `docs/paper/authentext-report.json`.
 - Local checks passed: `make manuscript-check`, `make manuscript-sourcecheck`, `make manuscript-build`, and `make validate`.
+
+## 2026-06-25T09:34:00+00:00 - Nature supplement final-prose pass
+- Rewrote `docs/paper/supplement-package.md` from an evidence map into final journal-style supplementary information with numbered supplementary tables and figures.
+- Synchronized `docs/paper/supplement-claim-map.csv` with the final-prose sections and removed stale blocker language.
+- Applied Authentext Pro core + academic guidance from `edithatogo/authentext`; `docs/paper/supplement-authentext-report.md` reports pass with 0 findings.
+- Ran SourceRight via `make manuscript-sourcecheck`; CSL validation and citation reconciliation passed with 11 matched citations and 0 citation issues.
+
+## 2026-06-25T10:13:36+00:00 - Nature track status cleanup
+- Reconciled stale active-track notes that still described privacy audit, deck creation, supplement prose, and manuscript/supplement figure loops as incomplete.
+- Updated recommendations and PowerPoint recommendations to distinguish completed evidence artefacts from remaining final-freeze and slide-readability work.
+
+## 2026-06-25T10:16:28+00:00 - Supplement/status cleanup validation
+- Authentext supplement audit passed with 0 findings.
+- SourceRight passed through `make manuscript-sourcecheck`: 11 matched citations and 0 citation reconciliation issues; DOI warnings remain expected for URL/API/standards references.
+- `make arxiv-privacy-audit`, `make manuscript-build`, `make arxiv-source-package`, and `make validate` passed locally. Local PDF generation remains unavailable because no local TeX engine is installed.

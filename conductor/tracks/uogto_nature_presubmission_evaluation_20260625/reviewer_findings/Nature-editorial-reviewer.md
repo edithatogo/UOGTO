@@ -31,4 +31,8 @@ Pending.
 
 ## 2026-06-25 Supplement Package Follow-up
 - Supplement score updated from 62 to 78 after adding docs/paper/supplement-package.md and docs/paper/supplement-claim-map.csv.
-- Remaining editorial requirements: convert the map into final supplement prose, synchronize final figure numbering, add the explicit source-leak/privacy audit manifest, and complete the figure improvement loops.
+- Supplement score updated from 78 to 90 after final journal-style supplement prose, Supplementary Tables S1-S11, Supplementary Figures S1-S7, SourceRight pass, and Authentext pass. Privacy audit and manuscript/supplement figure loop are complete; remaining editorial work is final numbering/caption freeze and manuscript/supplement consistency copyedit.
+
+## 2026-06-25T10:13:36+00:00 Status Reconciliation
+- Decision memo, review matrix, supplement package, and status surfaces now treat privacy audit, deck creation, supplement final prose, and manuscript/supplement figure loop as implemented.
+- Remaining Nature editorial risk is overclaim control during final freeze, not missing evidence-map artefacts.

@@ -12,9 +12,9 @@ Status: created and scored. Scores are first-pass visual/editorial scores, not f
 | 4 | Evidence register and PRISMA discovery | 84 | Insert final PRISMA flow thumbnail |
 | 5 | Mapping and robustness results | 82 | Add accepted/rejected disposition table |
 | 6 | Case studies and executable traces | 80 | Add concrete executable trace figure |
-| 7 | FAIR reproducibility and arXiv readiness | 84 | Add privacy audit pass when created |
-| 8 | Limitations and next validation | 86 | Update after all final gates close |
+| 7 | FAIR reproducibility and arXiv readiness | 88 | Bind privacy audit pass plus SourceRight/Auth evidence visually |
+| 8 | Limitations and next validation | 88 | Update after final freeze-and-verify gates close |
 
-Average score: 83.1/100.
+Average score: 84.0/100 after status reconciliation.
 
-Acceptance path to 100/100: bind final article figures, add final figure numbers, add source/privacy audit evidence, export slide thumbnails, inspect readability at projector and laptop sizes, then rescore.
+Acceptance path to 100/100: bind final article figures, add final figure numbers, surface the existing source/privacy audit evidence, export slide thumbnails, inspect readability at projector and laptop sizes, then rescore.

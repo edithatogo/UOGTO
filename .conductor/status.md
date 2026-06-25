@@ -205,3 +205,9 @@
 - 2026-06-25T08:39:25+00:00: Nature must-fix package order recorded: manuscript scaffold, supplement map, privacy audit manifest, deck creation, and figure loop are all represented by repo artifacts; remaining work is final editorial polish and claim/caption freeze.
 
 - 2026-06-25T09:22:36+00:00: Final manuscript prose pass completed. `docs/paper/paper.tex` now has a tighter article-style structure, SourceRight source checks pass via `make manuscript-sourcecheck`, and Authentext Pro academic audit is recorded in `docs/paper/authentext-report.md` / `.json`.
+
+- 2026-06-25T09:34:00+00:00: Final supplement prose implemented for Nature presubmission. `docs/paper/supplement-package.md` now has journal-style Supplementary Methods/Results, Tables S1-S11, Figures S1-S7, claim-to-supplement map, data/code availability, and completion criteria. SourceRight passed via `make manuscript-sourcecheck`; Authentext Pro supplement audit passed with 0 findings.
+
+- 2026-06-25T10:13:36+00:00: Nature presubmission track memo/status cleanup reconciled active artefacts: decision memo, review matrix, recommendations, PowerPoint recommendations, spec, and reviewer findings now treat privacy audit, deck creation, final supplement prose, and manuscript/supplement figure loop as implemented. Remaining work is final freeze-and-verify plus PowerPoint readability polish.
+
+- 2026-06-25T10:16:28+00:00: Local gates passed after final supplement/status cleanup: supplement Authentext audit pass with 0 findings; `make manuscript-sourcecheck` pass with 11 matched citations and 0 citation issues; `make arxiv-privacy-audit` pass; `make manuscript-build` pass for citation/TeX structure with local TeX engine unavailable; `make arxiv-source-package` pass; `make validate` pass.

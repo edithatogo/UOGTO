@@ -24,7 +24,7 @@ The review covers:
 - `validation_report.html`: rendered validation evidence.
 - `scripts/maintenance/build_manuscript_pdf.py` and `.github/workflows/manuscript-pdf.yml`: manuscript build/reproducibility surfaces.
 - `scripts/maintenance/build_arxiv_source_package.py`, `scripts/maintenance/clean_arxiv_source_package.py`, and `docs/release-process.md`: arXiv package cleaning and preflight surfaces.
-- PowerPoint/deck assets: not yet located; record as blocker until a deck exists or a new slide inventory is created.
+- PowerPoint/deck assets: deck now exists at `docs/presentation/uogto_nature_presubmission_deck.pptx`; remaining checks are thumbnail export, final figure binding, and readability re-score.
 
 ## Out of Scope
 
@@ -42,5 +42,8 @@ This track does not directly rewrite ontology modules, regenerate analysis artef
 - Validation checks are run and any blockers are recorded.
 
 ## 2026-06-25 Asset-Blocker Supersession
-- The earlier PowerPoint/deck asset discovery blocker is superseded by powerpoint_asset_inventory.md. The repository search found no existing deck, and the track now treats the deck as a needs-creation deliverable.
+- The earlier PowerPoint/deck asset discovery blocker is superseded by the created deck at `docs/presentation/uogto_nature_presubmission_deck.pptx` and the slide scorecard under `docs/presentation/`.
 - Missing local arXiv tools are superseded as submission blockers by CI arXiv Preflight evidence; they remain optional advisory benchmark tools only.
+
+## 2026-06-25T10:13:36+00:00 Current Implementation Boundary
+- This track now records completed supplement prose, privacy audit, deck creation, and manuscript/supplement figure loop. Remaining work is final freeze-and-verify plus PowerPoint readability polish, not initial asset creation.

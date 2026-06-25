@@ -30,10 +30,13 @@ Pending.
 ## 2026-06-25 Deck Creation Follow-up
 - Created eight-slide editorial deck in docs/presentation/uogto_nature_presubmission_deck.pptx.
 - Added docs/presentation/uogto_nature_presubmission_deck_scores.md with slide scores ranging from 80 to 86 and average 83.1.
-- Remaining visual requirements: bind final article figures, export slide thumbnails, inspect readability, complete source/privacy audit evidence, and rescore slides to 100 or record blockers.
+- Remaining visual requirements: bind final article figures, export slide thumbnails, inspect readability, surface the completed source/privacy audit evidence on slide 7, and rescore slides to 100 or record blockers.
 
 ## 2026-06-25 Figure Improvement Loop
 - Regenerated all ontology-comparison SVG figures with larger typography, accessibility metadata, colourblind-safe palettes, direct captions, improved heatmap scales, simplified network labels, and clearer mapping-flow emphasis.
 - Added `scripts/maintenance/render_article_hardening_figures.py` plus `make article-hardening-figures` to render PRISMA flow diagrams as SVG and PDF assets.
 - Updated image_scores.csv and image_scores.md so all 11 manuscript/supplement figure rows are rescored to 100/100 after loop 1.
 - Remaining visual work is limited to the separate PowerPoint slide-thumbnail/readability loop, not manuscript/supplement figures.
+
+## 2026-06-25T10:13:36+00:00 Status Reconciliation
+- Source/privacy audit evidence is complete; PowerPoint work is now final visual binding and readability scoring only.

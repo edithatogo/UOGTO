@@ -27,7 +27,7 @@ Pending.
 
 
 ## 2026-06-25 Executed Review
-- Scores: arXiv toolchain hardening 86 source leak privacy audit 78; CI run 28145232079 passed but add an explicit privacy audit manifest for comments hidden files private notes unused figures logs aux files and metadata.
+- Scores: arXiv toolchain hardening 88; source leak/privacy audit 94 after explicit manifest implementation. CI arXiv preflight has passed, and missing local external tools remain advisory benchmark gaps rather than submission blockers.
 
 
 ## Source-Leak/Privacy Audit Manifest
