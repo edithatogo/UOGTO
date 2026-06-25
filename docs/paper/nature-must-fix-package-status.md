@@ -29,3 +29,7 @@ Recorded `2026-06-25T10:21:25+00:00` for commit `170399a`: Validate UOGTO `28163
 ## PowerPoint deck polish
 
 Completed `2026-06-25T10:50:25+00:00`. The deck is rebuilt as a valid PowerPoint-authored `.pptx`, bound to frozen manuscript/supplement evidence callouts, exported to 1920x1080 thumbnails, and rescored to 100/100.
+
+## CI evidence after deck polish
+
+Recorded `2026-06-25T10:55:55+00:00` for commit `22f9996`: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, and arXiv Preflight `28165111193` all completed successfully.

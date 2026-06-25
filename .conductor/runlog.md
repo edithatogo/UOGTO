@@ -609,3 +609,6 @@
 - Exported all 8 thumbnails at 1920x1080 under `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`.
 - Confirmed no `C:\Users` or `OneDrive - Flinders` local path markers remain in slide text.
 - `git diff --check` and `make validate` passed locally.
+
+## 2026-06-25T10:55:55+00:00 - PowerPoint deck polish CI evidence
+- `22f9996` deck polish CI green: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, arXiv Preflight `28165111193`.

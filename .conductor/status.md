@@ -217,3 +217,5 @@
 - 2026-06-25T10:50:25+00:00: PowerPoint deck polish completed. `docs/presentation/uogto_nature_presubmission_deck.pptx` is rebuilt as a valid PowerPoint-authored deck, thumbnails exported to `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`, and slide scorecard updated to 100/100.
 
 - 2026-06-25T10:51:49+00:00: Deck polish local gates passed: PowerPoint-authored deck OpenXML ZIP integrity OK, 8 thumbnails exported at 1920x1080, deck text has no local path markers, `git diff --check` passed, and `make validate` passed.
+
+- 2026-06-25T10:55:55+00:00: PowerPoint deck polish remote CI evidence recorded: `22f9996` deck polish CI green: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, arXiv Preflight `28165111193`.
