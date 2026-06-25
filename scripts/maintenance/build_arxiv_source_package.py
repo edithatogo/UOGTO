@@ -1,6 +1,5 @@
 import argparse
 import json
-import os
 import shutil
 import stat
 import sys
@@ -25,13 +24,11 @@ def copy_source_tree(source_root: Path, package_dir: Path) -> None:
             destination.mkdir(parents=True, exist_ok=True)
         else:
             destination.parent.mkdir(parents=True, exist_ok=True)
-            if os.system(f'copy /y "{path}" "{destination}" >nul') != 0:
-                raise OSError(f'Failed to copy {path} to {destination}')
+            shutil.copy2(path, destination)
 
 def build_package(source_root: Path = DEFAULT_SOURCE_ROOT, package_dir: Path = DEFAULT_OUTPUT_DIR) -> dict:
     stage_dir = package_dir.parent / f'{package_dir.name}-{uuid.uuid4().hex[:8]}'
-    if os.system(f'mkdir "{stage_dir}"') != 0:
-        raise OSError(f'Failed to create staging directory: {stage_dir}')
+    stage_dir.mkdir(parents=True, exist_ok=False)
     copy_source_tree(source_root, stage_dir)
     manifest = clean_package(stage_dir, source_root)
     return manifest

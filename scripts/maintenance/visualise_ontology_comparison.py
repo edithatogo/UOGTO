@@ -161,8 +161,10 @@ def sankey(path, title, rows):
     write_svg(path, width, height, '\n'.join(parts), title)
 
 
-def build_visualisation_data(inventory, review_rows, overlap, network, provenance):
+def build_visualisation_data(inventory, review_rows, overlap, network, provenance=None):
     source_names = {source['id']: source.get('name', source['id']) for source in inventory.get('sources', [])}
+    if not isinstance(provenance, dict):
+        provenance = {}
     provenance_by_id = {record['id']: record for record in provenance.get('sources', [])}
     source_sizes = []
     evidence_source_rows = []
@@ -242,7 +244,11 @@ def render_report(path, inventory, review_rows, overlap, network, visualisation_
     path.write_text(report, encoding='utf-8')
 
 
-def build_outputs(inventory, review_rows, overlap, network, provenance, figures_dir=DEFAULT_FIGURES, report_path=DEFAULT_REPORT):
+def build_outputs(inventory, review_rows, overlap, network, provenance=None, figures_dir=DEFAULT_FIGURES, report_path=DEFAULT_REPORT):
+    if isinstance(provenance, (str, Path)) and isinstance(figures_dir, (str, Path)) and report_path == DEFAULT_REPORT:
+        report_path = Path(figures_dir)
+        figures_dir = Path(provenance)
+        provenance = {}
     data = build_visualisation_data(inventory, review_rows, overlap, network, provenance)
     figures_dir.mkdir(parents=True, exist_ok=True)
     bar_chart(figures_dir / 'source_sizes_bar.svg', 'External source sizes', data['source_sizes'])
