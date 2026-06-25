@@ -50,3 +50,6 @@ venv.bak/
 # Project specific
 dist/*
 !dist/.gitkeep
+
+# Local temporary scripts generated during Codex/Conductor runs
+.tmp_*.py

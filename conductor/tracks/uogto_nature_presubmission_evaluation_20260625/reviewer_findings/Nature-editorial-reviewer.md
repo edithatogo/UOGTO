@@ -28,3 +28,7 @@ Pending.
 ## 2026-06-25 Manuscript Rewrite Follow-up
 - Manuscript score updated from 48 to 72 after docs/paper/paper.tex was rewritten as a full article draft.
 - Remaining editorial requirements: integrate final figures, add claim-boundary and robustness tables, align supplement structure, and tighten the Nature-level narrative.
+
+## 2026-06-25 Supplement Package Follow-up
+- Supplement score updated from 62 to 78 after adding docs/paper/supplement-package.md and docs/paper/supplement-claim-map.csv.
+- Remaining editorial requirements: convert the map into final supplement prose, synchronize final figure numbering, add the explicit source-leak/privacy audit manifest, and complete the figure improvement loops.

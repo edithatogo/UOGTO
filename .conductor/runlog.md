@@ -500,3 +500,13 @@
 - Rewrote docs/paper/paper.tex from a short scaffold into a full article draft with abstract introduction design principles methods results figure plan discussion limitations and conclusion.
 - Updated Nature presubmission review matrix manuscript score from 48 to 72 and status from reviewed to rewritten.
 - Verification passed: make manuscript-check, make manuscript-build, and make manuscript-sourcecheck. SourceRight citation reconciliation reported 11 matched citations and 0 reconciliation issues.
+
+## 2026-06-25 - Supplement Package Mapping
+- Added docs/paper/supplement-package.md and docs/paper/supplement-claim-map.csv to organize the supplement evidence package against article claims.
+- Updated the Nature presubmission review matrix, decision memo, editorial reviewer finding, and track index to record the supplement score increase from 62 to 78 and the remaining finalization work.
+- Pending verification: manuscript/source checks and make validate after these documentation changes.
+
+## 2026-06-25 - PowerPoint Deck Creation
+- Created docs/presentation/uogto_nature_presubmission_deck.pptx from the required eight-slide Nature presubmission skeleton.
+- Added docs/presentation/uogto_nature_presubmission_deck_scores.md and docs/presentation/uogto_nature_presubmission_deck_notes.md.
+- Updated uogto_nature_presubmission_evaluation_20260625 PowerPoint status from needs-creation score 35 to created score 83; final figure binding, thumbnail export, readability inspection, and rescore loop remain open.

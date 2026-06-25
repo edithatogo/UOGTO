@@ -25,4 +25,9 @@ Pending.
 
 
 ## 2026-06-25 Executed Review
-- Score: PowerPoint 20 out of 100 because no deck was located; image_scores.csv now scores 11 existing figure or flow assets and requires improvement loops to 100 or precise blockers.
+- Score: PowerPoint updated to 83 out of 100 after creating docs/presentation/uogto_nature_presubmission_deck.pptx and the slide scorecard. image_scores.csv still scores 11 existing figure or flow assets and requires improvement loops to 100 or precise blockers.
+
+## 2026-06-25 Deck Creation Follow-up
+- Created eight-slide editorial deck in docs/presentation/uogto_nature_presubmission_deck.pptx.
+- Added docs/presentation/uogto_nature_presubmission_deck_scores.md with slide scores ranging from 80 to 86 and average 83.1.
+- Remaining visual requirements: bind final article figures, export slide thumbnails, inspect readability, complete source/privacy audit evidence, and rescore slides to 100 or record blockers.

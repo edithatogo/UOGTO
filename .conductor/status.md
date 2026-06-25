@@ -179,3 +179,12 @@
 - Missing local latexmk pdflatex tectonic and arxiv_latex_cleaner tools are optional advisory benchmark gaps because CI arXiv Preflight run 28145232079 passed. 
 - Next implementation work should create the deck and source-leak privacy manifest rather than continue searching for local arXiv tools.
 
+## 2026-06-25 - Supplement Package Mapping
+- Nature presubmission supplement package mapping is implemented: docs/paper/supplement-package.md now maps article claims to protocol, source register, ontology validation, SHACL, mappings, SSSOM, metrics, figures, RO-Crate, DuckDB, SourceRight, arXiv, governance, and reuse artifacts.
+- docs/paper/supplement-claim-map.csv provides a machine-readable claim-to-artifact table with support level and open-work fields.
+- Track uogto_nature_presubmission_evaluation_20260625 supplement score is updated from 62 to 78 and status from reviewed/must-fix to mapped/should-fix; final journal supplement prose, final figure numbering, privacy audit manifest, figure loops, and deck creation remain open.
+
+## 2026-06-25 - PowerPoint Deck Creation
+- Created docs/presentation/uogto_nature_presubmission_deck.pptx from the required eight-slide Nature presubmission skeleton.
+- Added docs/presentation/uogto_nature_presubmission_deck_scores.md and docs/presentation/uogto_nature_presubmission_deck_notes.md.
+- Updated uogto_nature_presubmission_evaluation_20260625 PowerPoint status from needs-creation score 35 to created score 83; final figure binding, thumbnail export, readability inspection, and rescore loop remain open.

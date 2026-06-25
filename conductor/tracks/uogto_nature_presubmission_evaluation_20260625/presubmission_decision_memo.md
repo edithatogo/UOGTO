@@ -3,18 +3,18 @@
 ## Decision
 - Verdict: major revision before submission.
 - Target: Nature-style research article remains possible but not submission-ready in the current package state.
-- Basis: repository validation CI and the rewritten manuscript draft are materially stronger, but figure integration supplement packaging privacy audit and deck creation remain incomplete.
+- Basis: repository validation CI, the rewritten manuscript draft, and the new supplement package map are materially stronger, but figure integration final supplement prose privacy audit and deck creation remain incomplete.
 
 ## Top Risks
 - Manuscript is now a full structured draft, but it still needs Nature-level editorial compression, final figure callouts, and claim-boundary tables.
-- PowerPoint deck work is a needs-creation task because no repository deck asset was found.
+- PowerPoint deck work is now a created first-pass asset; it still needs final article figure binding, thumbnail export, and readability inspection.
 - Figures are useful but none has reached 100 out of 100 for Nature-readiness.
 - Overclaim risk remains unless missing-game-theory elements and mapping robustness are summarized in article-facing tables.
 
 ## Must-Fix Before Submission
 - Polish the rewritten manuscript into final Nature style with integrated figure callouts and tighter claims.
-- Build a coherent supplement package from the article-hardening and ontology-comparison artifacts.
-- Complete figure improvement loops and create the PowerPoint deck from powerpoint_asset_inventory.md.
+- Convert the new supplement package map into final edited journal supplement prose with final figure numbering and table callouts.
+- Complete figure improvement loops and polish the created PowerPoint deck against final article figures and slide readability checks.
 - Add explicit source-leak privacy audit manifest for the arXiv source package.
 
 ## 2026-06-25 Manuscript Rewrite Update
@@ -22,3 +22,8 @@
 - make manuscript-check passed with 11 citations 11 bibitems and 11 CSL references.
 - make manuscript-build passed the manuscript citation and TeX structure checks; local PDF generation remains unavailable because no local TeX engine is installed.
 - make manuscript-sourcecheck passed SourceRight CSL validation and citation reconciliation with 11 matched citations and 0 reconciliation issues.
+
+## 2026-06-25 Supplement Package Update
+- docs/paper/supplement-package.md now maps article claims to protocol, source register, ontology validation, SHACL, mappings, SSSOM, metrics, figures, RO-Crate, DuckDB, SourceRight, arXiv, governance, and reuse artifacts.
+- docs/paper/supplement-claim-map.csv adds a machine-readable claim-to-artifact table with support level and open-work fields.
+- Supplement score increased from 62 to 78 because the package is now mapped; it is not yet a final typeset supplement.
