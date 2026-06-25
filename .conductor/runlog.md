@@ -478,3 +478,9 @@
 - Added a tool matrix for repo-native cleaner, arxiv-latex-cleaner, latexmk, chktex, lacheck, checkcites, latexpand, texfot, texloganalyser, and tectonic.
 - Added an arXiv acceptance checklist covering package contents, filenames, figures, bibliography, build verification, and privacy/source-leak audit.
 - Updated the protocol, plan, review matrix, recommendations, metadata, and index to include arXiv toolchain hardening.
+
+## 2026-06-25 - CI Hardening Remote Verification
+- Recorded final bookkeeping for commit 018a2a4 after SourceRight CI installation was changed to Cargo package sourceright and pytest repo imports were fixed with repo-local pythonpath configuration.
+- Local gates passed: focused arXiv workflow/source-package and ontology-visual tests passed, affected article-hardening tests passed, make validate passed, and full pytest passed with 189 tests.
+- Remote GitHub Actions passed on 018a2a4: Validate UOGTO run 28145232100, Build WIDOCO Pages run 28145232082, and arXiv Preflight run 28145232079.
+- The next substantive phase is to execute the pending Nature presubmission review matrix for uogto_nature_presubmission_evaluation_20260625; no additional CI fix lane is currently open.

@@ -158,3 +158,9 @@
 - New reviewer lane: `arxiv-toolchain-reviewer`.
 - New artefacts: `arxiv_toolchain_matrix.csv`, `arxiv_toolchain_matrix.md`, `arxiv_acceptance_checklist.md`, and `reviewer_findings/arxiv-toolchain-reviewer.md`.
 - Policy boundary: repo-native arXiv cleaner remains authoritative until external tools are benchmarked in isolated output directories.
+
+## CI Hardening Verification - 2026-06-25
+- Commit 018a2a4 is pushed to origin/master and records the SourceRight CI install fix plus the repo-local pytest import fix.
+- Local validation passed after the fix set: focused arXiv workflow/source-package tests, affected ontology-visual tests, affected article-hardening tests, make validate, and full pytest with 189 tests.
+- Remote GitHub Actions passed on commit 018a2a4: Validate UOGTO run 28145232100, Build WIDOCO Pages run 28145232082, and arXiv Preflight run 28145232079.
+- Next substantive phase: execute the pending Nature presubmission review matrix for uogto_nature_presubmission_evaluation_20260625; no additional CI fix lane is currently open.

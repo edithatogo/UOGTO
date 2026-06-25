@@ -24,3 +24,9 @@
 ## Required Follow-Up
 
 Install a TeX Live/MiKTeX toolchain with `latexmk` or run the strict PDF/arXiv preflight in CI before marking arXiv PDF verification complete. External tools should be benchmarked only in isolated `.tmp` outputs.
+
+## 2026-06-25 CI Verification Update
+- Commit 018a2a4 installs SourceRight in CI with cargo install --git https://github.com/edithatogo/sourceright.git sourceright --locked.
+- Local gates passed after the CI fixes: focused arXiv workflow/source-package tests, affected ontology-visual tests, affected article-hardening tests, make validate, and full pytest with 189 tests.
+- Remote GitHub Actions passed on 018a2a4: Validate UOGTO run 28145232100, Build WIDOCO Pages run 28145232082, and arXiv Preflight run 28145232079.
+- This remote pass supersedes the earlier local-only PDF blocker for the CI submission gate. The local workstation still lacks latexmk, pdflatex, and optional TeX audit tools, so local external-tool benchmarking remains advisory until those tools are installed or run in isolated CI jobs.
