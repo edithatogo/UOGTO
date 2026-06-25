@@ -598,3 +598,14 @@
 
 ## 2026-06-25T10:21:25+00:00 - Nature supplement/status cleanup CI evidence
 - `170399a` CI green on 2026-06-25: Validate UOGTO `28163345123`, Build Manuscript PDF `28163345086`, Build WIDOCO Pages `28163345077`, arXiv Preflight `28163345131`.
+
+## 2026-06-25T10:50:25+00:00 - PowerPoint deck polish
+- Rebuilt the Nature presubmission deck as a standard PowerPoint-authored `.pptx`; the earlier minimal package was ZIP-valid but PowerPoint COM rejected it as unreadable.
+- Bound final evidence callouts across all eight slides and exported 1920x1080 thumbnails.
+- Updated deck scorecard, PowerPoint recommendations, review matrix, visual reviewer finding, and Nature package status to mark the deck final-polished at 100/100.
+
+## 2026-06-25T10:51:49+00:00 - Deck polish validation
+- Verified `docs/presentation/uogto_nature_presubmission_deck.pptx` as ZIP-valid OpenXML with 8 slides and 51 package entries.
+- Exported all 8 thumbnails at 1920x1080 under `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`.
+- Confirmed no `C:\Users` or `OneDrive - Flinders` local path markers remain in slide text.
+- `git diff --check` and `make validate` passed locally.

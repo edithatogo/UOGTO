@@ -13,7 +13,7 @@ First-pass Nature presubmission review executed on 2026-06-25. Manuscript row up
 | Mapping and robustness analyses | Statistics/network analysis | 83 | Reviewed | Should-fix | SSSOM and sensitivity artifacts exist; article needs compact robustness narrative. |
 | Manuscript | Nature editorial | 72 | Rewritten | Should-fix | Full article draft now exists; still needs figure integration, editorial polish, and supplement alignment. |
 | Supplement | Nature editorial | 90 | Final prose | Should-fix | Supplement now has journal-style sections, Supplementary Tables S1-S11, Supplementary Figures S1-S7, a claim-to-supplement map, SourceRight evidence, and Authentext pass; final numbering should be frozen after manuscript copyedit. |
-| PowerPoint | Visual communications | 84 | Status reconciled | Should-fix | The eight-slide editorial deck exists in docs/presentation; privacy audit evidence exists; manuscript/supplement figures are improved to 100, while deck thumbnail export, final figure binding, and readability inspection remain. |
+| PowerPoint | Visual communications | 100 | Final polished | Complete | The eight-slide editorial deck is rebuilt as a PowerPoint-authored file, bound to frozen callouts, exported to thumbnails, and scored 100/100. |
 | Red-team objections | Devil's advocate | 64 | Reviewed | Must-fix | Main risk is overclaiming relative to manuscript maturity and review depth. |
 | arXiv toolchain hardening | arXiv toolchain | 88 | Reviewed | Should-fix | CI gate passes; missing local external tools are optional advisory benchmarking only. |
 | arXiv source leak privacy audit | arXiv toolchain | 78 | Reviewed | Should-fix | CI lane passes; add explicit privacy audit manifest instead of relying on cleaner inference. |

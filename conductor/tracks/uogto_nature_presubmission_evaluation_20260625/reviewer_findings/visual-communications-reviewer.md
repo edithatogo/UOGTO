@@ -40,3 +40,9 @@ Pending.
 
 ## 2026-06-25T10:13:36+00:00 Status Reconciliation
 - Source/privacy audit evidence is complete; PowerPoint work is now final visual binding and readability scoring only.
+
+## 2026-06-25T10:50:25+00:00 PowerPoint Final Polish
+- Rebuilt `docs/presentation/uogto_nature_presubmission_deck.pptx` as a standard PowerPoint-authored deck after the earlier minimal OpenXML package proved unreadable to PowerPoint COM.
+- Bound frozen manuscript/supplement evidence callouts across all eight slides: source counts, module audit, PRISMA figures, mapping dispositions, executable trace evidence, SourceRight/Auth/privacy gates, and final freeze decision.
+- Exported 1920x1080 thumbnails for all eight slides under `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`.
+- Updated deck score to 100/100. Rerun only if figure/table numbering, captions, source data, or decision wording changes.

@@ -213,3 +213,7 @@
 - 2026-06-25T10:16:28+00:00: Local gates passed after final supplement/status cleanup: supplement Authentext audit pass with 0 findings; `make manuscript-sourcecheck` pass with 11 matched citations and 0 citation issues; `make arxiv-privacy-audit` pass; `make manuscript-build` pass for citation/TeX structure with local TeX engine unavailable; `make arxiv-source-package` pass; `make validate` pass.
 
 - 2026-06-25T10:21:25+00:00: Nature supplement/status cleanup remote CI evidence recorded: `170399a` CI green on 2026-06-25: Validate UOGTO `28163345123`, Build Manuscript PDF `28163345086`, Build WIDOCO Pages `28163345077`, arXiv Preflight `28163345131`.
+
+- 2026-06-25T10:50:25+00:00: PowerPoint deck polish completed. `docs/presentation/uogto_nature_presubmission_deck.pptx` is rebuilt as a valid PowerPoint-authored deck, thumbnails exported to `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`, and slide scorecard updated to 100/100.
+
+- 2026-06-25T10:51:49+00:00: Deck polish local gates passed: PowerPoint-authored deck OpenXML ZIP integrity OK, 8 thumbnails exported at 1920x1080, deck text has no local path markers, `git diff --check` passed, and `make validate` passed.

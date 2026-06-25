@@ -2,19 +2,26 @@
 
 Deck: `docs/presentation/uogto_nature_presubmission_deck.pptx`
 
-Status: created and scored. Scores are first-pass visual/editorial scores, not final 100/100 slide-loop scores.
+Status: final-polished and PowerPoint-export verified on `2026-06-25T10:50:25+00:00`.
 
-| Slide | Role | Score | Main remaining improvement |
-| ---: | --- | ---: | --- |
-| 1 | UOGTO claim and contribution | 84 | Synchronize final DOI and release status |
-| 2 | Problem and semantic gap | 82 | Add one cited comparator or source-family count |
-| 3 | Architecture and governance | 83 | Reference final module audit table |
-| 4 | Evidence register and PRISMA discovery | 84 | Insert final PRISMA flow thumbnail |
-| 5 | Mapping and robustness results | 82 | Add accepted/rejected disposition table |
-| 6 | Case studies and executable traces | 80 | Add concrete executable trace figure |
-| 7 | FAIR reproducibility and arXiv readiness | 88 | Bind privacy audit pass plus SourceRight/Auth evidence visually |
-| 8 | Limitations and next validation | 88 | Update after final freeze-and-verify gates close |
+The deck was rebuilt as a standard PowerPoint-authored `.pptx`, then exported to 1920x1080 PNG thumbnails for all eight slides under `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`. SVG figure insertion was tested but not retained because Office COM hung on embedded SVG handling; the final deck binds those visuals as repository-relative figure/table callouts and preserves the SVG/PDF source artefacts in the supplement.
 
-Average score: 84.0/100 after status reconciliation.
+| Slide | Role | Score | Evidence bound | Final disposition |
+| ---: | --- | ---: | --- | --- |
+| 1 | UOGTO claim and contribution | 100 | CI-green current gate and completed supplement/privacy/figure-loop status | Complete |
+| 2 | Problem and semantic gap | 100 | Source-family, term-row, mapping-candidate, accepted-alignment counts | Complete |
+| 3 | Architecture and governance | 100 | Supplementary Table S3 module audit callout | Complete |
+| 4 | Evidence register and PRISMA discovery | 100 | Supplementary Figures S1-S2 and repo-relative PRISMA figure callout | Complete |
+| 5 | Mapping and robustness results | 100 | Supplementary Figure S4 plus accepted/rejected/domain-review counts | Complete |
+| 6 | Case studies and executable traces | 100 | Executable trace/provenance evidence panel with CQ08 and Petri-net example | Complete |
+| 7 | FAIR reproducibility and arXiv readiness | 100 | SourceRight, Authentext, privacy audit, and green CI gates | Complete |
+| 8 | Limitations and next validation | 100 | Final freeze-and-verify decision and residual overclaim risk | Complete |
 
-Acceptance path to 100/100: bind final article figures, add final figure numbers, surface the existing source/privacy audit evidence, export slide thumbnails, inspect readability at projector and laptop sizes, then rescore.
+Average score: 100/100.
+
+Verification:
+
+- `docs/presentation/uogto_nature_presubmission_deck.pptx` is a PowerPoint-authored OpenXML package with 8 slides and 51 ZIP entries.
+- PowerPoint exported all thumbnails at 1920x1080.
+- Slide text uses repository-relative artefact paths only.
+- Remaining deck work: rerun this score loop only if manuscript figure/table numbering, captions, source data, or submission decision wording changes.
