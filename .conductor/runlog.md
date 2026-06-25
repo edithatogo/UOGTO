@@ -528,3 +528,10 @@
 - make article-hardening-figures passed and regenerated PRISMA SVG/PDF pairs. 
 - make ontology-comparison-check and make article-hardening-protocol passed. 
 - make validate passed after figure loop updates.
+ 
+## 2026-06-25 - Remote CI After Figure Improvement Loop 
+- Commit ada921e presubmission-figure-improvement-loop passed remote CI. 
+- Validate UOGTO run 28153770685 passed. 
+- Build WIDOCO Pages run 28153770714 passed. 
+- Build Manuscript PDF run 28153770717 passed. 
+- arXiv Preflight run 28153770684 passed.
