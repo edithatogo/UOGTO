@@ -93,14 +93,34 @@ VALIDATED_TABLES = [
 
 VALIDATED_FIGURES = [
     {
-        "name": "PRISMA 2020 source discovery flow",
+        "name": "PRISMA 2020 source discovery flow source",
         "path": DOCS / "figures" / "prisma-2020-source-discovery-flow.md",
-        "purpose": "Source discovery count and route summary.",
+        "purpose": "Source discovery count and route summary in editable Mermaid Markdown.",
     },
     {
-        "name": "PRISMA 2020 screening flow",
+        "name": "PRISMA 2020 source discovery flow SVG",
+        "path": DOCS / "figures" / "prisma-2020-source-discovery-flow.svg",
+        "purpose": "Journal-scale rendered source discovery flow with accessible SVG metadata.",
+    },
+    {
+        "name": "PRISMA 2020 source discovery flow PDF",
+        "path": DOCS / "figures" / "prisma-2020-source-discovery-flow.pdf",
+        "purpose": "PDFLaTeX-compatible rendered source discovery flow.",
+    },
+    {
+        "name": "PRISMA 2020 screening flow source",
         "path": DOCS / "figures" / "prisma-2020-screening-flow.md",
-        "purpose": "Screening, inclusion, and exclusion flow for the article-hardening register.",
+        "purpose": "Screening, inclusion, and exclusion flow in editable Mermaid Markdown.",
+    },
+    {
+        "name": "PRISMA 2020 screening flow SVG",
+        "path": DOCS / "figures" / "prisma-2020-screening-flow.svg",
+        "purpose": "Journal-scale rendered screening flow with accessible SVG metadata.",
+    },
+    {
+        "name": "PRISMA 2020 screening flow PDF",
+        "path": DOCS / "figures" / "prisma-2020-screening-flow.pdf",
+        "purpose": "PDFLaTeX-compatible rendered screening flow.",
     },
 ]
 

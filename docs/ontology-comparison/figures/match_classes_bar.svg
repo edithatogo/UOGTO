@@ -1,16 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="980" height="226" viewBox="0 0 980 226" role="img">
-<title>Mapping predicate classes</title><style>text{font-family:Arial,sans-serif;fill:#1f2933} .small{font-size:11px} .label{font-size:12px} .title{font-size:18px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
-<text class="title" x="28" y="34">Mapping predicate classes</text>
-<text class="label" x="28" y="78">no_match</text>
-<rect x="260" y="62" width="660" height="24" fill="#24536b" rx="2"/>
-<text class="small" x="928" y="78">449</text>
-<text class="label" x="28" y="112">owl:equivalentClass</text>
-<rect x="260" y="96" width="7" height="24" fill="#4f7c45" rx="2"/>
-<text class="small" x="275" y="112">5</text>
-<text class="label" x="28" y="146">owl:equivalentProperty</text>
-<rect x="260" y="130" width="7" height="24" fill="#a65f2a" rx="2"/>
-<text class="small" x="275" y="146">5</text>
-<text class="label" x="28" y="180">skos:relatedMatch</text>
-<rect x="260" y="164" width="1" height="24" fill="#7a4f8f" rx="2"/>
-<text class="small" x="269" y="180">1</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="306" viewBox="0 0 1200 306" role="img" aria-labelledby="title desc">
+<title id="title">Mapping predicate classes</title><desc id="desc">Mapping predicate classes</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="36" y="42">Mapping predicate classes</text>
+<line class="axis" x1="340" y1="88" x2="1130" y2="88"/>
+<text class="label" x="36" y="125">no_match</text>
+<rect x="340" y="104" width="740" height="28" fill="#0072B2" rx="3"/>
+<text class="small" x="1092" y="124">449</text>
+<text class="label" x="36" y="169">owl:equivalentClass</text>
+<rect x="340" y="148" width="8" height="28" fill="#009E73" rx="3"/>
+<text class="small" x="360" y="168">5</text>
+<text class="label" x="36" y="213">owl:equivalentProperty</text>
+<rect x="340" y="192" width="8" height="28" fill="#D55E00" rx="3"/>
+<text class="small" x="360" y="212">5</text>
+<text class="label" x="36" y="257">skos:relatedMatch</text>
+<rect x="340" y="236" width="1" height="28" fill="#CC79A7" rx="3"/>
+<text class="small" x="353" y="256">1</text>
 </svg>

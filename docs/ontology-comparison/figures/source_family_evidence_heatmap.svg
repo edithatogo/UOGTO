@@ -1,74 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="596" viewBox="0 0 460 596" role="img">
-<title>Source-family coverage by evidence level (source count)</title><style>text{font-family:Arial,sans-serif;fill:#1f2933} .small{font-size:11px} .label{font-size:12px} .title{font-size:18px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
-<text class="title" x="28" y="34">Source-family coverage by evidence level (source count)</text>
-<text class="small" x="230" y="88" transform="rotate(-45 230 88)">parsed_rdf</text>
-<text class="small" x="340" y="88" transform="rotate(-45 340 88)">metadata_only</text>
-<text class="small" x="28" y="112">upper_ontology</text>
-<text class="small" x="28" y="140">modelling_simulation_interop</text>
-<text class="small" x="28" y="168">simulation_experiment</text>
-<text class="small" x="28" y="196">agent_based_modelling</text>
-<text class="small" x="28" y="224">agent_policy</text>
-<text class="small" x="28" y="252">discrete_event_simulation</text>
-<text class="small" x="28" y="280">distributed_simulation</text>
-<text class="small" x="28" y="308">game_description_language</text>
-<text class="small" x="28" y="336">game_studies</text>
-<text class="small" x="28" y="364">general_web_schema</text>
-<text class="small" x="28" y="392">observation_sensor</text>
-<text class="small" x="28" y="420">provenance</text>
-<text class="small" x="28" y="448">simulation_algorithm</text>
-<text class="small" x="28" y="476">system_dynamics</text>
-<text class="small" x="28" y="504">time</text>
-<text class="small" x="28" y="532">upper_modelling_reference</text>
-<text class="small" x="28" y="560">workflow_plan</text>
-<rect x="220" y="94" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="122" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="150" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="178" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="206" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="234" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="262" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="290" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="318" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="346" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="238" y="364">1</text>
-<rect x="220" y="374" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="238" y="392">1</text>
-<rect x="220" y="402" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="238" y="420">1</text>
-<rect x="220" y="430" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="458" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="486" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="238" y="504">1</text>
-<rect x="220" y="514" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="220" y="542" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="330" y="94" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="112">1</text>
-<rect x="330" y="122" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="140">1</text>
-<rect x="330" y="150" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="168">1</text>
-<rect x="330" y="178" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="196">1</text>
-<rect x="330" y="206" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="224">1</text>
-<rect x="330" y="234" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="252">1</text>
-<rect x="330" y="262" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="280">1</text>
-<rect x="330" y="290" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="308">1</text>
-<rect x="330" y="318" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="336">1</text>
-<rect x="330" y="346" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="330" y="374" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="330" y="402" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="330" y="430" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="448">1</text>
-<rect x="330" y="458" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="476">1</text>
-<rect x="330" y="486" width="108" height="26" fill="rgb(245,245,245)" stroke="#d9e2ec"/>
-<rect x="330" y="514" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="532">1</text>
-<rect x="330" y="542" width="108" height="26" fill="rgb(100,163,230)" stroke="#d9e2ec"/>
-<text class="small" x="348" y="560">1</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="586" height="738" viewBox="0 0 586 738" role="img" aria-labelledby="title desc">
+<title id="title">Source-family coverage by evidence level (source count)</title><desc id="desc">Source-family coverage by evidence level (source count)</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="36" y="42">Source-family coverage by evidence level (source count)</text>
+<text class="caption" x="36" y="72">Evidence levels are separated so metadata-only coverage is not conflated with parsed RDF evidence.</text>
+<text class="tiny" x="294" y="116" transform="rotate(-45 294 116)">parsed_rdf</text>
+<text class="tiny" x="432" y="116" transform="rotate(-45 432 116)">metadata_only</text>
+<text class="small" x="36" y="150">upper_ontology</text>
+<text class="small" x="36" y="184">modelling_simulation_interoper</text>
+<text class="small" x="36" y="218">simulation_experiment</text>
+<text class="small" x="36" y="252">agent_based_modelling</text>
+<text class="small" x="36" y="286">agent_policy</text>
+<text class="small" x="36" y="320">discrete_event_simulation</text>
+<text class="small" x="36" y="354">distributed_simulation</text>
+<text class="small" x="36" y="388">game_description_language</text>
+<text class="small" x="36" y="422">game_studies</text>
+<text class="small" x="36" y="456">general_web_schema</text>
+<text class="small" x="36" y="490">observation_sensor</text>
+<text class="small" x="36" y="524">provenance</text>
+<text class="small" x="36" y="558">simulation_algorithm</text>
+<text class="small" x="36" y="592">system_dynamics</text>
+<text class="small" x="36" y="626">time</text>
+<text class="small" x="36" y="660">upper_modelling_reference</text>
+<text class="small" x="36" y="694">workflow_plan</text>
+<rect x="276" y="126" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="160" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="194" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="228" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="262" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="296" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="330" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="364" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="398" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="432" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="296" y="454">1</text>
+<rect x="276" y="466" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="296" y="488">1</text>
+<rect x="276" y="500" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="296" y="522">1</text>
+<rect x="276" y="534" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="568" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="602" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="296" y="624">1</text>
+<rect x="276" y="636" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="276" y="670" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="414" y="126" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="148">1</text>
+<rect x="414" y="160" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="182">1</text>
+<rect x="414" y="194" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="216">1</text>
+<rect x="414" y="228" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="250">1</text>
+<rect x="414" y="262" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="284">1</text>
+<rect x="414" y="296" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="318">1</text>
+<rect x="414" y="330" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="352">1</text>
+<rect x="414" y="364" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="386">1</text>
+<rect x="414" y="398" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="420">1</text>
+<rect x="414" y="432" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="414" y="466" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="414" y="500" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="414" y="534" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="556">1</text>
+<rect x="414" y="568" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="590">1</text>
+<rect x="414" y="602" width="135" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<rect x="414" y="636" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="658">1</text>
+<rect x="414" y="670" width="135" height="31" fill="#08519C" stroke="#E2E8F0"/>
+<text class="tiny" x="434" y="692">1</text>
+<text class="caption" x="36" y="714">Colour scale: white to blue; numbers are source or term counts.</text>
 </svg>

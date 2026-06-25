@@ -1,34 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img">
-<title>UOGTO unique coverage areas</title><style>text{font-family:Arial,sans-serif;fill:#1f2933} .small{font-size:11px} .label{font-size:12px} .title{font-size:18px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
-<text class="title" x="28" y="34">UOGTO unique coverage areas</text>
-<rect x="28" y="72" width="170" height="86" fill="#24536b" opacity="0.88" rx="4"/>
-<text class="label" x="38" y="96" fill="#ffffff">uogto_core_uogto-core</text>
-<text class="small" x="38" y="116" fill="#ffffff">27 terms</text>
-<rect x="206" y="72" width="88" height="110" fill="#4f7c45" opacity="0.88" rx="4"/>
-<text class="label" x="216" y="96" fill="#ffffff">uogto_extensions_deontic</text>
-<text class="small" x="216" y="116" fill="#ffffff">14 terms</text>
-<rect x="302" y="72" width="88" height="134" fill="#a65f2a" opacity="0.88" rx="4"/>
-<text class="label" x="312" y="96" fill="#ffffff">uogto_extensions_game-de</text>
-<text class="small" x="312" y="116" fill="#ffffff">14 terms</text>
-<rect x="398" y="72" width="88" height="86" fill="#7a4f8f" opacity="0.88" rx="4"/>
-<text class="label" x="408" y="96" fill="#ffffff">uogto_extensions_petri-n</text>
-<text class="small" x="408" y="116" fill="#ffffff">14 terms</text>
-<rect x="494" y="72" width="82" height="110" fill="#b44b4b" opacity="0.88" rx="4"/>
-<text class="label" x="504" y="96" fill="#ffffff">uogto_extensions_composi</text>
-<text class="small" x="504" y="116" fill="#ffffff">13 terms</text>
-<rect x="584" y="72" width="82" height="134" fill="#3d6fa8" opacity="0.88" rx="4"/>
-<text class="label" x="594" y="96" fill="#ffffff">uogto_extensions_computa</text>
-<text class="small" x="594" y="116" fill="#ffffff">13 terms</text>
-<rect x="674" y="72" width="82" height="86" fill="#8a6b2e" opacity="0.88" rx="4"/>
-<text class="label" x="684" y="96" fill="#ffffff">uogto_extensions_congest</text>
-<text class="small" x="684" y="116" fill="#ffffff">13 terms</text>
-<rect x="764" y="72" width="82" height="110" fill="#4c6b5f" opacity="0.88" rx="4"/>
-<text class="label" x="774" y="96" fill="#ffffff">uogto_extensions_kg-exec</text>
-<text class="small" x="774" y="116" fill="#ffffff">13 terms</text>
-<rect x="854" y="72" width="82" height="134" fill="#24536b" opacity="0.88" rx="4"/>
-<text class="label" x="864" y="96" fill="#ffffff">uogto_extensions_marl</text>
-<text class="small" x="864" y="116" fill="#ffffff">13 terms</text>
-<rect x="28" y="198" width="75" height="86" fill="#4f7c45" opacity="0.88" rx="4"/>
-<text class="label" x="38" y="222" fill="#ffffff">uogto_extensions_behavio</text>
-<text class="small" x="38" y="242" fill="#ffffff">12 terms</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="510" viewBox="0 0 1180 510" role="img" aria-labelledby="title desc">
+<title id="title">UOGTO unique coverage areas</title><desc id="desc">UOGTO unique coverage areas</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="36" y="42">UOGTO unique coverage areas</text>
+<text class="caption" x="36" y="72">Ranked bar view replaces the old treemap so small modules and exact values remain legible.</text>
+<text class="label" x="36" y="118">uogto_core_uogto-core</text>
+<rect x="340" y="98" width="720" height="24" fill="#0072B2" rx="3"/>
+<text class="small" x="990" y="116">27 unique terms</text>
+<text class="label" x="36" y="156">uogto_extensions_deontic-logic</text>
+<rect x="340" y="136" width="373" height="24" fill="#009E73" rx="3"/>
+<text class="small" x="725" y="154">14 unique terms</text>
+<text class="label" x="36" y="194">uogto_extensions_game-description-lang</text>
+<rect x="340" y="174" width="373" height="24" fill="#D55E00" rx="3"/>
+<text class="small" x="725" y="192">14 unique terms</text>
+<text class="label" x="36" y="232">uogto_extensions_petri-net-devs-hla</text>
+<rect x="340" y="212" width="373" height="24" fill="#CC79A7" rx="3"/>
+<text class="small" x="725" y="230">14 unique terms</text>
+<text class="label" x="36" y="270">uogto_extensions_compositional-open-ga</text>
+<rect x="340" y="250" width="346" height="24" fill="#E69F00" rx="3"/>
+<text class="small" x="698" y="268">13 unique terms</text>
+<text class="label" x="36" y="308">uogto_extensions_computational-social-</text>
+<rect x="340" y="288" width="346" height="24" fill="#56B4E9" rx="3"/>
+<text class="small" x="698" y="306">13 unique terms</text>
+<text class="label" x="36" y="346">uogto_extensions_congestion-routing-ga</text>
+<rect x="340" y="326" width="346" height="24" fill="#000000" rx="3"/>
+<text class="small" x="698" y="344">13 unique terms</text>
+<text class="label" x="36" y="384">uogto_extensions_kg-execution-bindings</text>
+<rect x="340" y="364" width="346" height="24" fill="#999999" rx="3"/>
+<text class="small" x="698" y="382">13 unique terms</text>
+<text class="label" x="36" y="422">uogto_extensions_marl</text>
+<rect x="340" y="402" width="346" height="24" fill="#0072B2" rx="3"/>
+<text class="small" x="698" y="420">13 unique terms</text>
+<text class="label" x="36" y="460">uogto_extensions_behavioural-games</text>
+<rect x="340" y="440" width="320" height="24" fill="#009E73" rx="3"/>
+<text class="small" x="672" y="458">12 unique terms</text>
 </svg>

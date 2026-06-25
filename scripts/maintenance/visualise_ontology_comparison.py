@@ -11,7 +11,6 @@ DEFAULT_PROVENANCE = ROOT / 'docs' / 'ontology-comparison' / 'source-provenance.
 DEFAULT_FIGURES = ROOT / 'docs' / 'ontology-comparison' / 'figures'
 DEFAULT_REPORT = ROOT / 'docs' / 'ontology-comparison' / 'report.md'
 REQUIRED_FIGURES = ['source_sizes_bar.svg','match_classes_bar.svg','source_module_overlap_heatmap.svg','source_family_evidence_heatmap.svg','source_family_term_heatmap.svg','uogto_coverage_treemap.svg','source_similarity_network.svg','mapping_flow_sankey.svg','reviewer_workload.svg']
-PALETTE = ['#24536b', '#4f7c45', '#a65f2a', '#7a4f8f', '#b44b4b', '#3d6fa8', '#8a6b2e', '#4c6b5f']
 
 
 def load_json(path):
@@ -27,28 +26,44 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
-def write_svg(path, width, height, body, title):
+PALETTE = ['#0072B2', '#009E73', '#D55E00', '#CC79A7', '#E69F00', '#56B4E9', '#000000', '#999999']
+SEQUENTIAL = ['#F7FBFF', '#DEEBF7', '#C6DBEF', '#9ECAE1', '#6BAED6', '#3182BD', '#08519C']
+
+
+def scale_colour(value, max_value):
+    if not value or not max_value:
+        return SEQUENTIAL[0]
+    idx = min(len(SEQUENTIAL) - 1, max(0, int(round((len(SEQUENTIAL) - 1) * value / max_value))))
+    return SEQUENTIAL[idx]
+
+
+def write_svg(path, width, height, body, title, caption=None):
     path.parent.mkdir(parents=True, exist_ok=True)
-    svg = '<svg xmlns="http://www.w3.org/2000/svg" width="{}" height="{}" viewBox="0 0 {} {}" role="img">\n'.format(width, height, width, height)
-    svg += '<title>{}</title><style>text{{font-family:Arial,sans-serif;fill:#1f2933}} .small{{font-size:11px}} .label{{font-size:12px}} .title{{font-size:18px;font-weight:700}}</style><rect width="100%" height="100%" fill="#ffffff"/>\n'.format(esc(title))
+    caption = caption or title
+    svg = '<svg xmlns="http://www.w3.org/2000/svg" width="{}" height="{}" viewBox="0 0 {} {}" role="img" aria-labelledby="title desc">\n'.format(width, height, width, height)
+    svg += '<title id="title">{}</title><desc id="desc">{}</desc>'.format(esc(title), esc(caption))
+    svg += '<style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>\n'
     svg += body + '\n</svg>\n'
     path.write_text(svg, encoding='utf-8')
 
 
-def bar_chart(path, title, rows, width=980):
+def bar_chart(path, title, rows, width=1200, caption=None):
     rows = rows[:20]
-    height = 90 + max(1, len(rows)) * 34
+    height = 130 + max(1, len(rows)) * 44
     max_value = max([row['value'] for row in rows] or [1])
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title))]
+    if caption:
+        parts.append('<text class="caption" x="36" y="70">{}</text>'.format(esc(caption)))
+    parts.append('<line class="axis" x1="340" y1="88" x2="{}" y2="88"/>'.format(width - 70))
     for idx, row in enumerate(rows):
-        y = 62 + idx * 34
-        value = row['value']
-        w = 1 if max_value == 0 else int((width - 320) * value / max_value)
+        y = 104 + idx * 44
+        value = int(row['value'])
+        w = 2 if max_value == 0 else int((width - 460) * value / max_value)
         colour = PALETTE[idx % len(PALETTE)]
-        parts.append('<text class="label" x="28" y="{}">{}</text>'.format(y + 16, esc(row['label'][:34])))
-        parts.append('<rect x="260" y="{}" width="{}" height="24" fill="{}" rx="2"/>'.format(y, w, colour))
-        parts.append('<text class="small" x="{}" y="{}">{}</text>'.format(268 + w, y + 16, esc(value)))
-    write_svg(path, width, height, '\n'.join(parts), title)
+        parts.append('<text class="label" x="36" y="{}">{}</text>'.format(y + 21, esc(row['label'][:38])))
+        parts.append('<rect x="340" y="{}" width="{}" height="28" fill="{}" rx="3"/>'.format(y, w, colour))
+        parts.append('<text class="small" x="{}" y="{}">{}</text>'.format(min(width - 70, 352 + w), y + 20, esc(value)))
+    write_svg(path, width, height, '\n'.join(parts), title, caption)
 
 
 def heatmap(path, title, rows):
@@ -56,110 +71,115 @@ def heatmap(path, title, rows):
     ys = sorted({row['source_id'] for row in rows})[:18]
     values = {(row['uogto_source_id'], row['source_id']): int(row['candidate_count']) for row in rows if row['uogto_source_id'] in xs and row['source_id'] in ys}
     max_value = max(values.values() or [1])
-    cell_w, cell_h = 54, 28
-    width, height = 220 + len(xs) * cell_w, 120 + len(ys) * cell_h
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
+    cell_w, cell_h = 68, 34
+    width, height = 300 + len(xs) * cell_w, 160 + len(ys) * cell_h
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title)), '<text class="caption" x="36" y="72">Darker cells indicate more candidate mappings between a source and a UOGTO module.</text>']
     for i, x in enumerate(xs):
-        parts.append('<text class="small" x="{}" y="88" transform="rotate(-45 {} 88)">{}</text>'.format(210+i*cell_w, 210+i*cell_w, esc(x[:18])))
+        anchor = 285 + i * cell_w
+        parts.append('<text class="tiny" x="{}" y="116" transform="rotate(-45 {} 116)">{}</text>'.format(anchor, anchor, esc(x[:18])))
     for j, y in enumerate(ys):
-        parts.append('<text class="small" x="28" y="{}">{}</text>'.format(112+j*cell_h, esc(y[:26])))
+        parts.append('<text class="small" x="36" y="{}">{}</text>'.format(150+j*cell_h, esc(y[:28])))
     for i, x in enumerate(xs):
         for j, y in enumerate(ys):
             value = values.get((x, y), 0)
-            intensity = 0 if max_value == 0 else value / max_value
-            colour = 'rgb({},{},{})'.format(245 - int(145 * intensity), 245 - int(82 * intensity), 245 - int(15 * intensity))
-            parts.append('<rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="#d9e2ec"/>'.format(190+i*cell_w, 94+j*cell_h, cell_w-2, cell_h-2, colour))
+            colour = scale_colour(value, max_value)
+            parts.append('<rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="#E2E8F0"/>'.format(260+i*cell_w, 126+j*cell_h, cell_w-3, cell_h-3, colour))
             if value:
-                parts.append('<text class="small" x="{}" y="{}">{}</text>'.format(208+i*cell_w, 112+j*cell_h, value))
+                parts.append('<text class="tiny" x="{}" y="{}">{}</text>'.format(282+i*cell_w, 148+j*cell_h, value))
+    parts.append('<text class="caption" x="36" y="{}">Scale: white to blue; labels show non-zero candidate counts.</text>'.format(height - 24))
     write_svg(path, width, height, '\n'.join(parts), title)
 
 
 def evidence_heatmap(path, title, rows, x_order, y_order):
     values = {(row['evidence_level'], row['family']): int(row['value']) for row in rows}
     max_value = max(values.values() or [1])
-    cell_w, cell_h = 110, 28
-    width, height = 240 + len(x_order) * cell_w, 120 + len(y_order) * cell_h
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
+    cell_w, cell_h = 138, 34
+    width, height = 310 + len(x_order) * cell_w, 160 + len(y_order) * cell_h
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title)), '<text class="caption" x="36" y="72">Evidence levels are separated so metadata-only coverage is not conflated with parsed RDF evidence.</text>']
     for i, x in enumerate(x_order):
-        parts.append('<text class="small" x="{}" y="88" transform="rotate(-45 {} 88)">{}</text>'.format(230+i*cell_w, 230+i*cell_w, esc(x[:22])))
+        anchor = 294 + i * cell_w
+        parts.append('<text class="tiny" x="{}" y="116" transform="rotate(-45 {} 116)">{}</text>'.format(anchor, anchor, esc(x[:24])))
     for j, y in enumerate(y_order):
-        parts.append('<text class="small" x="28" y="{}">{}</text>'.format(112+j*cell_h, esc(y[:28])))
+        parts.append('<text class="small" x="36" y="{}">{}</text>'.format(150+j*cell_h, esc(y[:30])))
     for i, x in enumerate(x_order):
         for j, y in enumerate(y_order):
             value = values.get((x, y), 0)
-            intensity = 0 if max_value == 0 else value / max_value
-            colour = 'rgb({},{},{})'.format(245 - int(145 * intensity), 245 - int(82 * intensity), 245 - int(15 * intensity))
-            parts.append('<rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="#d9e2ec"/>'.format(220+i*cell_w, 94+j*cell_h, cell_w-2, cell_h-2, colour))
+            colour = scale_colour(value, max_value)
+            parts.append('<rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="#E2E8F0"/>'.format(276+i*cell_w, 126+j*cell_h, cell_w-3, cell_h-3, colour))
             if value:
-                parts.append('<text class="small" x="{}" y="{}">{}</text>'.format(238+i*cell_w, 112+j*cell_h, value))
+                parts.append('<text class="tiny" x="{}" y="{}">{}</text>'.format(296+i*cell_w, 148+j*cell_h, value))
+    parts.append('<text class="caption" x="36" y="{}">Colour scale: white to blue; numbers are source or term counts.</text>'.format(height - 24))
     write_svg(path, width, height, '\n'.join(parts), title)
 
 
 def treemap(path, title, rows):
-    rows = rows[:12]
-    total = sum(row['value'] for row in rows) or 1
-    width, height, x, y = 980, 520, 28, 72
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
+    rows = sorted(rows[:14], key=lambda row: (-row['value'], row['label']))
+    width, height = 1180, 130 + max(1, len(rows)) * 38
+    max_value = max([row['value'] for row in rows] or [1])
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title)), '<text class="caption" x="36" y="72">Ranked bar view replaces the old treemap so small modules and exact values remain legible.</text>']
     for idx, row in enumerate(rows):
-        w = max(60, int((width - 56) * row['value'] / total))
-        h = 86 + (idx % 3) * 24
-        if x + w > width - 28:
-            x, y = 28, y + 126
-        colour = PALETTE[idx % len(PALETTE)]
-        parts.append('<rect x="{}" y="{}" width="{}" height="{}" fill="{}" opacity="0.88" rx="4"/>'.format(x, y, w, h, colour))
-        parts.append('<text class="label" x="{}" y="{}" fill="#ffffff">{}</text>'.format(x+10, y+24, esc(row['label'][:24])))
-        parts.append('<text class="small" x="{}" y="{}" fill="#ffffff">{} terms</text>'.format(x+10, y+44, esc(row['value'])))
-        x += w + 8
+        y = 98 + idx * 38
+        value = int(row['value'])
+        w = int((width - 460) * value / max_value)
+        parts.append('<text class="label" x="36" y="{}">{}</text>'.format(y + 20, esc(row['label'][:38])))
+        parts.append('<rect x="340" y="{}" width="{}" height="24" fill="{}" rx="3"/>'.format(y, max(2, w), PALETTE[idx % len(PALETTE)]))
+        parts.append('<text class="small" x="{}" y="{}">{} unique terms</text>'.format(min(width - 190, 352 + w), y + 18, value))
     write_svg(path, width, height, '\n'.join(parts), title)
 
 
 def network_svg(path, title, graph):
-    nodes = [node for node, _ in list(graph.get('metrics', {}).get('degree', {}).items())[:18]] or graph.get('nodes', [])[:18]
+    degree_map = graph.get('metrics', {}).get('degree', {})
+    nodes = [node for node, _ in sorted(degree_map.items(), key=lambda item: (-item[1], item[0]))[:16]] or graph.get('nodes', [])[:16]
+    label_nodes = set(nodes[:8])
     positions = {}
-    width, height, cx, cy, radius = 980, 680, 490, 350, 250
+    width, height, cx, cy, radius = 1200, 820, 600, 430, 300
     for idx, node in enumerate(nodes):
         angle = 2 * math.pi * idx / max(1, len(nodes))
         positions[node] = (cx + radius * math.cos(angle), cy + radius * math.sin(angle))
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
-    for left, right, value in graph.get('edges', [])[:80]:
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title)), '<text class="caption" x="36" y="72">Only the highest-degree bridge sources are labelled; unlabelled nodes remain in the network for context.</text>']
+    for left, right, value in graph.get('edges', [])[:120]:
         if left in positions and right in positions:
             x1, y1 = positions[left]; x2, y2 = positions[right]
-            parts.append('<line x1="{:.1f}" y1="{:.1f}" x2="{:.1f}" y2="{:.1f}" stroke="#bcccdc" stroke-width="1.2"/>'.format(x1,y1,x2,y2))
+            width_line = 0.8 + min(3.0, float(value) if isinstance(value, (int, float)) else 1.0)
+            parts.append('<line x1="{:.1f}" y1="{:.1f}" x2="{:.1f}" y2="{:.1f}" stroke="#94A3B8" stroke-width="{:.1f}" opacity="0.42"/>'.format(x1,y1,x2,y2,width_line))
     for idx, node in enumerate(nodes):
         x, y = positions[node]
-        degree = graph.get('metrics', {}).get('degree', {}).get(node, 1)
-        r = 7 + min(18, degree * 1.5)
-        parts.append('<circle cx="{:.1f}" cy="{:.1f}" r="{}" fill="{}" opacity="0.92"/>'.format(x, y, r, PALETTE[idx % len(PALETTE)]))
-        parts.append('<text class="small" x="{:.1f}" y="{:.1f}">{}</text>'.format(x+r+4, y+4, esc(node[:34])))
+        degree = degree_map.get(node, 1)
+        r = 10 + min(22, degree * 1.4)
+        parts.append('<circle cx="{:.1f}" cy="{:.1f}" r="{}" fill="{}" opacity="0.94" stroke="#ffffff" stroke-width="2"/>'.format(x, y, r, PALETTE[idx % len(PALETTE)]))
+        if node in label_nodes:
+            lx = x + r + 8 if x < cx else x - r - 210
+            parts.append('<text class="small" x="{:.1f}" y="{:.1f}">{}</text>'.format(lx, y + 5, esc(node[:30])))
+    parts.append('<text class="caption" x="36" y="{}">Node size encodes degree. Labels show the top bridge sources only to preserve print readability.</text>'.format(height - 28))
     write_svg(path, width, height, '\n'.join(parts), title)
 
 
 def sankey(path, title, rows):
-    width, height = 980, 560
+    width, height = 1220, 660
     left = Counter(row['source_id'] for row in rows).most_common(8)
     mid = Counter(row['review_status'] for row in rows).most_common()
     right = Counter(row['uogto_source_id'] for row in rows).most_common(8)
-    parts = ['<text class="title" x="28" y="34">{}</text>'.format(esc(title))]
+    parts = ['<text class="title" x="36" y="42">{}</text>'.format(esc(title)), '<text class="caption" x="36" y="72">Denominators are mapping-candidate rows; accepted mappings are the asserted alignment subset.</text>']
     def column(items, x, label):
-        parts.append('<text class="label" x="{}" y="64">{}</text>'.format(x, esc(label)))
-        y, centers = 86, {}
+        parts.append('<text class="label" x="{}" y="102">{}</text>'.format(x, esc(label)))
+        y, centers = 124, {}
         for idx, (name, count) in enumerate(items):
-            h = 18 + count * 2
-            parts.append('<rect x="{}" y="{}" width="150" height="{}" fill="{}" opacity="0.88" rx="3"/>'.format(x, y, h, PALETTE[idx % len(PALETTE)]))
-            parts.append('<text class="small" x="{}" y="{}">{} ({})</text>'.format(x+8, y+16, esc(name[:18]), count))
-            centers[name] = (x + 150, y + h / 2)
-            y += h + 14
+            h = 26 + min(120, count * 2)
+            colour = '#009E73' if name == 'accepted' else ('#D55E00' if name == 'rejected' else PALETTE[idx % len(PALETTE)])
+            parts.append('<rect x="{}" y="{}" width="190" height="{}" fill="{}" opacity="0.9" rx="4"/>'.format(x, y, h, colour))
+            parts.append('<text class="small" x="{}" y="{}">{} ({})</text>'.format(x+10, y+20, esc(name[:22]), count))
+            centers[name] = (x + 190, y + h / 2)
+            y += h + 16
         return centers
-    lc, mc, rc = column(left, 40, 'Source'), column(mid, 410, 'Review status'), column(right, 760, 'UOGTO module')
-    for row in rows[:220]:
+    lc, mc, rc = column(left, 46, 'Source'), column(mid, 510, 'Review status'), column(right, 950, 'UOGTO module')
+    for row in rows[:260]:
         if row['source_id'] in lc and row['review_status'] in mc:
             x1,y1=lc[row['source_id']]; x2,y2=mc[row['review_status']]
-            parts.append('<path d="M{},{} C{},{} {},{} {},{}" fill="none" stroke="#9fb3c8" stroke-width="0.8" opacity="0.35"/>'.format(x1,y1,x1+90,y1,x2-90,y2,x2,y2))
+            parts.append('<path d="M{},{} C{},{} {},{} {},{}" fill="none" stroke="#64748B" stroke-width="0.7" opacity="0.28"/>'.format(x1,y1,x1+120,y1,x2-120,y2,x2,y2))
         if row['review_status'] in mc and row['uogto_source_id'] in rc:
             x1,y1=mc[row['review_status']]; x2,y2=rc[row['uogto_source_id']]
-            parts.append('<path d="M{},{} C{},{} {},{} {},{}" fill="none" stroke="#bcccdc" stroke-width="0.8" opacity="0.3"/>'.format(x1,y1,x1+80,y1,x2-90,y2,x2-150,y2))
+            parts.append('<path d="M{},{} C{},{} {},{} {},{}" fill="none" stroke="#94A3B8" stroke-width="0.7" opacity="0.24"/>'.format(x1,y1,x1+110,y1,x2-120,y2,x2-190,y2))
     write_svg(path, width, height, '\n'.join(parts), title)
-
 
 def build_visualisation_data(inventory, review_rows, overlap, network, provenance=None):
     source_names = {source['id']: source.get('name', source['id']) for source in inventory.get('sources', [])}

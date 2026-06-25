@@ -1,0 +1,64 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1040 560] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1669 >>
+stream
+BT
+0.2 0.25 0.32 rg /F1 20 Tf 42 520 Td (PRISMA 2020-style screening flow) Tj
+/F1 10 Tf 42 492 Td (Screening, inclusion, exclusion, and negative-evidence disposition for the UOGTO article-hardening source register.) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 414 Td (Candidate sources in) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 398 Td (source-extension-inventory.json) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 382 Td (n=39) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 414 Td (Screened against) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 398 Td (inclusion criteria) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 382 Td (n=39) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 414 Td (Included in evidence) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 398 Td (package) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 382 Td (n=39) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 229 Td (Excluded after) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 213 Td (screening) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 197 Td (n=0) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 229 Td (Negative-evidence search) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 213 Td (route recorded separately) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 197 Td (n=1) Tj
+ET
+1 1 1 rg 0 0 1040 560 re f
+0.95 0.97 0.99 rg 70 358 230 82 re f
+0.0 0.45 0.70 RG 70 358 230 82 re S
+0.95 0.97 0.99 rg 405 358 230 82 re f
+0.0 0.45 0.70 RG 405 358 230 82 re S
+0.95 0.97 0.99 rg 740 358 230 82 re f
+0.0 0.45 0.70 RG 740 358 230 82 re S
+0.95 0.97 0.99 rg 740 173 230 82 re f
+0.0 0.45 0.70 RG 740 173 230 82 re S
+0.95 0.97 0.99 rg 405 173 230 82 re f
+0.0 0.45 0.70 RG 405 173 230 82 re S
+0.3 0.36 0.44 RG 2 w 185.0 399.0 m 520.0 399.0 l S
+0.3 0.36 0.44 RG 2 w 520.0 399.0 m 855.0 399.0 l S
+0.3 0.36 0.44 RG 2 w 520.0 399.0 m 855.0 214.0 l S
+0.3 0.36 0.44 RG 2 w 185.0 399.0 m 520.0 214.0 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000242 00000 n 
+0000001963 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2033
+%%EOF

@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -71,6 +71,9 @@ article-hardening-quality:
 
 article-hardening-robot:
 	python scripts/maintenance/build_article_hardening_robot_reports.py
+
+article-hardening-figures:
+	python scripts/maintenance/render_article_hardening_figures.py
 
 zenodo-packet:
 	python scripts/maintenance/build_zenodo_handoff.py

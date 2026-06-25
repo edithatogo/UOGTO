@@ -1,54 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="980" height="680" viewBox="0 0 980 680" role="img">
-<title>Source similarity network</title><style>text{font-family:Arial,sans-serif;fill:#1f2933} .small{font-size:11px} .label{font-size:12px} .title{font-size:18px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
-<text class="title" x="28" y="34">Source similarity network</text>
-<line x1="740.0" y1="350.0" x2="681.5" y2="510.7" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="740.0" y1="350.0" x2="615.0" y2="566.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="740.0" y1="350.0" x2="298.5" y2="189.3" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="681.5" y1="510.7" x2="615.0" y2="566.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="681.5" y1="510.7" x2="298.5" y2="510.7" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="681.5" y1="510.7" x2="298.5" y2="189.3" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="681.5" y1="510.7" x2="533.4" y2="103.8" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="615.0" y1="566.5" x2="298.5" y2="189.3" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="615.0" y1="566.5" x2="365.0" y2="133.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="446.6" y1="596.2" x2="724.9" y2="264.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="365.0" y1="566.5" x2="724.9" y2="264.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="298.5" y1="510.7" x2="255.1" y2="264.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="255.1" y1="435.5" x2="365.0" y2="133.5" stroke="#bcccdc" stroke-width="1.2"/>
-<line x1="240.0" y1="350.0" x2="724.9" y2="264.5" stroke="#bcccdc" stroke-width="1.2"/>
-<circle cx="740.0" cy="350.0" r="11.5" fill="#24536b" opacity="0.92"/>
-<text class="small" x="755.5" y="354.0">bfo</text>
-<circle cx="724.9" cy="435.5" r="7.0" fill="#4f7c45" opacity="0.92"/>
-<text class="small" x="735.9" y="439.5">devs</text>
-<circle cx="681.5" cy="510.7" r="14.5" fill="#a65f2a" opacity="0.92"/>
-<text class="small" x="700.0" y="514.7">dolce</text>
-<circle cx="615.0" cy="566.5" r="14.5" fill="#7a4f8f" opacity="0.92"/>
-<text class="small" x="633.5" y="570.5">emmo</text>
-<circle cx="533.4" cy="596.2" r="7.0" fill="#b44b4b" opacity="0.92"/>
-<text class="small" x="544.4" y="600.2">game_ontology_project</text>
-<circle cx="446.6" cy="596.2" r="10.0" fill="#3d6fa8" opacity="0.92"/>
-<text class="small" x="460.6" y="600.2">gdlf_gamelan</text>
-<circle cx="365.0" cy="566.5" r="8.5" fill="#8a6b2e" opacity="0.92"/>
-<text class="small" x="377.5" y="570.5">hla_fom</text>
-<circle cx="298.5" cy="510.7" r="10.0" fill="#4c6b5f" opacity="0.92"/>
-<text class="small" x="312.5" y="514.7">kaos</text>
-<circle cx="255.1" cy="435.5" r="10.0" fill="#24536b" opacity="0.92"/>
-<text class="small" x="269.1" y="439.5">kisao</text>
-<circle cx="240.0" cy="350.0" r="8.5" fill="#4f7c45" opacity="0.92"/>
-<text class="small" x="252.5" y="354.0">miase</text>
-<circle cx="255.1" cy="264.5" r="10.0" fill="#a65f2a" opacity="0.92"/>
-<text class="small" x="269.1" y="268.5">odd_protocol</text>
-<circle cx="298.5" cy="189.3" r="11.5" fill="#7a4f8f" opacity="0.92"/>
-<text class="small" x="314.0" y="193.3">ontouml_ufo</text>
-<circle cx="365.0" cy="133.5" r="11.5" fill="#b44b4b" opacity="0.92"/>
-<text class="small" x="380.5" y="137.5">osmo</text>
-<circle cx="446.6" cy="103.8" r="7.0" fill="#3d6fa8" opacity="0.92"/>
-<text class="small" x="457.6" y="107.8">owl_time</text>
-<circle cx="533.4" cy="103.8" r="8.5" fill="#8a6b2e" opacity="0.92"/>
-<text class="small" x="545.9" y="107.8">p_plan</text>
-<circle cx="615.0" cy="133.5" r="7.0" fill="#4c6b5f" opacity="0.92"/>
-<text class="small" x="626.0" y="137.5">prov_o</text>
-<circle cx="681.5" cy="189.3" r="7.0" fill="#24536b" opacity="0.92"/>
-<text class="small" x="692.5" y="193.3">schema_org</text>
-<circle cx="724.9" cy="264.5" r="13.0" fill="#4f7c45" opacity="0.92"/>
-<text class="small" x="741.9" y="268.5">sed_ml</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Source similarity network</title><desc id="desc">Source similarity network</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="36" y="42">Source similarity network</text>
+<text class="caption" x="36" y="72">Only the highest-degree bridge sources are labelled; unlabelled nodes remain in the network for context.</text>
+<line x1="600.0" y1="130.0" x2="322.8" y2="544.8" stroke="#94A3B8" stroke-width="1.0" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="485.2" y2="707.2" stroke="#94A3B8" stroke-width="1.0" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="714.8" y2="707.2" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="877.2" y2="544.8" stroke="#94A3B8" stroke-width="1.0" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="300.0" y2="430.0" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="387.9" y2="642.1" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="600.0" y2="730.0" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="900.0" y2="430.0" stroke="#94A3B8" stroke-width="1.0" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="812.1" y2="642.1" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<line x1="600.0" y1="130.0" x2="485.2" y2="152.8" stroke="#94A3B8" stroke-width="0.9" opacity="0.42"/>
+<circle cx="900.0" cy="430.0" r="32" fill="#0072B2" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="658.0" y="435.0">uogto_extensions_mean-field-ga</text>
+<circle cx="877.2" cy="544.8" r="32" fill="#009E73" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="635.2" y="549.8">uogto_extensions_cooperative</text>
+<circle cx="812.1" cy="642.1" r="32" fill="#D55E00" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="570.1" y="647.1">uogto_extensions_network-games</text>
+<circle cx="714.8" cy="707.2" r="32" fill="#CC79A7" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="472.8" y="712.2">uogto_extensions_congestion-ro</text>
+<circle cx="600.0" cy="730.0" r="32" fill="#E69F00" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="358.0" y="735.0">uogto_extensions_evolutionary-</text>
+<circle cx="485.2" cy="707.2" r="32" fill="#56B4E9" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="525.2" y="712.2">uogto_extensions_compositional</text>
+<circle cx="387.9" cy="642.1" r="32" fill="#000000" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="427.9" y="647.1">uogto_extensions_epistemic-gam</text>
+<circle cx="322.8" cy="544.8" r="32" fill="#999999" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="small" x="362.8" y="549.8">uogto_extensions_causal-games</text>
+<circle cx="300.0" cy="430.0" r="32" fill="#0072B2" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="322.8" cy="315.2" r="32" fill="#009E73" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="387.9" cy="217.9" r="32" fill="#D55E00" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="485.2" cy="152.8" r="32" fill="#CC79A7" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="600.0" cy="130.0" r="32" fill="#E69F00" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="714.8" cy="152.8" r="32" fill="#56B4E9" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="812.1" cy="217.9" r="32" fill="#000000" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<circle cx="877.2" cy="315.2" r="32" fill="#999999" opacity="0.94" stroke="#ffffff" stroke-width="2"/>
+<text class="caption" x="36" y="792">Node size encodes degree. Labels show the top bridge sources only to preserve print readability.</text>
 </svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc">
+<title id="title">PRISMA 2020-style source discovery flow</title>
+<desc id="desc">Search routes, identified records, normalization, inventory capture, inclusion, and negative-evidence recording for UOGTO source discovery.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#334155">PRISMA 2020-style source discovery flow</text>
+<text x="42" y="72" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#475569">Search routes, identified records, normalization, inventory capture, inclusion, and negative-evidence recording for UOGTO source discovery.</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect x="70" y="95" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="122" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Search routes recorded</tspan><tspan x="86" dy="18">in search-log.jsonl</tspan><tspan x="86" dy="18">n=7</tspan></text>
+<rect x="70" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Records identified</tspan><tspan x="86" dy="18">across all routes</tspan><tspan x="86" dy="18">n=39</tspan></text>
+<rect x="70" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Records normalized</tspan><tspan x="86" dy="18">for screening</tspan><tspan x="86" dy="18">n=39</tspan></text>
+<rect x="405" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="421" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Source candidates in</tspan><tspan x="421" dy="18">source-extension-inventory.json</tspan><tspan x="421" dy="18">n=39</tspan></text>
+<rect x="740" y="335" width="230" height="82" rx="8" fill="#009E73" stroke="#009E73" stroke-width="2"/>
+<text x="756" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#ffffff"><tspan x="756" dy="0">Included source-family</tspan><tspan x="756" dy="18">entries</tspan><tspan x="756" dy="18">n=39</tspan></text>
+<rect x="405" y="95" width="230" height="82" rx="8" fill="#E69F00" stroke="#E69F00" stroke-width="2"/>
+<text x="421" y="122" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#ffffff"><tspan x="421" dy="0">Negative-evidence route</tspan><tspan x="421" dy="18">recorded separately</tspan><tspan x="421" dy="18">n=1</tspan></text>
+<line x1="185.0" y1="136.0" x2="185.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="256.0" x2="185.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="376.0" x2="520.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="520.0" y1="376.0" x2="855.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="136.0" x2="520.0" y2="136.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
+<text x="42" y="520" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#64748B">PDF export is generated from the same structured figure specification for PDFLaTeX-safe manuscript packaging.</text>
+</svg>

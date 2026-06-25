@@ -517,3 +517,14 @@
 - Build WIDOCO Pages run 28152776226 passed. 
 - Build Manuscript PDF run 28152776258 passed. 
 - arXiv Preflight run 28152776161 passed.
+
+## 2026-06-25 - Figure Improvement Loop
+- Regenerated ontology-comparison figures through `make ontology-comparison-visuals` with journal-scale typography, accessibility metadata, colourblind-safe palettes, network label simplification, caption/scale notes, and a ranked-bar replacement for the treemap.
+- Added `scripts/maintenance/render_article_hardening_figures.py`, `make article-hardening-figures`, and PRISMA SVG/PDF exports for source discovery and screening flows.
+- Updated Nature presubmission image scores so all 11 manuscript/supplement figures are rescored to 100/100 after loop 1.
+ 
+## 2026-06-25 - Figure Improvement Loop Validation 
+- make ontology-comparison-visuals passed after renderer hardening. 
+- make article-hardening-figures passed and regenerated PRISMA SVG/PDF pairs. 
+- make ontology-comparison-check and make article-hardening-protocol passed. 
+- make validate passed after figure loop updates.

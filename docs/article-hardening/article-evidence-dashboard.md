@@ -27,8 +27,12 @@ The source lists are separated by evidence level: parsed RDF, structured non-RDF
 
 | Figure | Path | Purpose |
 | --- | --- | --- |
-| PRISMA 2020 source discovery flow | `figures/prisma-2020-source-discovery-flow.md` | Source discovery count and route summary. |
-| PRISMA 2020 screening flow | `figures/prisma-2020-screening-flow.md` | Screening, inclusion, and exclusion flow for the article-hardening register. |
+| PRISMA 2020 source discovery flow source | `figures/prisma-2020-source-discovery-flow.md` | Source discovery count and route summary in editable Mermaid Markdown. |
+| PRISMA 2020 source discovery flow SVG | `figures/prisma-2020-source-discovery-flow.svg` | Journal-scale rendered source discovery flow with accessible SVG metadata. |
+| PRISMA 2020 source discovery flow PDF | `figures/prisma-2020-source-discovery-flow.pdf` | PDFLaTeX-compatible rendered source discovery flow. |
+| PRISMA 2020 screening flow source | `figures/prisma-2020-screening-flow.md` | Screening, inclusion, and exclusion flow in editable Mermaid Markdown. |
+| PRISMA 2020 screening flow SVG | `figures/prisma-2020-screening-flow.svg` | Journal-scale rendered screening flow with accessible SVG metadata. |
+| PRISMA 2020 screening flow PDF | `figures/prisma-2020-screening-flow.pdf` | PDFLaTeX-compatible rendered screening flow. |
 
 ## Source Evidence Categories
 

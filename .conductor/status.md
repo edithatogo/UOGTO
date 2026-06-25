@@ -188,3 +188,8 @@
 - Created docs/presentation/uogto_nature_presubmission_deck.pptx from the required eight-slide Nature presubmission skeleton.
 - Added docs/presentation/uogto_nature_presubmission_deck_scores.md and docs/presentation/uogto_nature_presubmission_deck_notes.md.
 - Updated uogto_nature_presubmission_evaluation_20260625 PowerPoint status from needs-creation score 35 to created score 83; final figure binding, thumbnail export, readability inspection, and rescore loop remain open.
+
+## 2026-06-25 - Figure Improvement Loop
+- Regenerated ontology-comparison figures through `make ontology-comparison-visuals` with journal-scale typography, accessibility metadata, colourblind-safe palettes, network label simplification, caption/scale notes, and a ranked-bar replacement for the treemap.
+- Added `scripts/maintenance/render_article_hardening_figures.py`, `make article-hardening-figures`, and PRISMA SVG/PDF exports for source discovery and screening flows.
+- Updated Nature presubmission image scores so all 11 manuscript/supplement figures are rescored to 100/100 after loop 1.

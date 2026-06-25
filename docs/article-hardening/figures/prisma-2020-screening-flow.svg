@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc">
+<title id="title">PRISMA 2020-style screening flow</title>
+<desc id="desc">Screening, inclusion, exclusion, and negative-evidence disposition for the UOGTO article-hardening source register.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#334155">PRISMA 2020-style screening flow</text>
+<text x="42" y="72" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#475569">Screening, inclusion, exclusion, and negative-evidence disposition for the UOGTO article-hardening source register.</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect x="70" y="120" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="147" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Candidate sources in</tspan><tspan x="86" dy="18">source-extension-inventory.json</tspan><tspan x="86" dy="18">n=39</tspan></text>
+<rect x="405" y="120" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="421" y="147" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Screened against</tspan><tspan x="421" dy="18">inclusion criteria</tspan><tspan x="421" dy="18">n=39</tspan></text>
+<rect x="740" y="120" width="230" height="82" rx="8" fill="#009E73" stroke="#009E73" stroke-width="2"/>
+<text x="756" y="147" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#ffffff"><tspan x="756" dy="0">Included in evidence</tspan><tspan x="756" dy="18">package</tspan><tspan x="756" dy="18">n=39</tspan></text>
+<rect x="740" y="305" width="230" height="82" rx="8" fill="#D55E00" stroke="#D55E00" stroke-width="2"/>
+<text x="756" y="332" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#ffffff"><tspan x="756" dy="0">Excluded after</tspan><tspan x="756" dy="18">screening</tspan><tspan x="756" dy="18">n=0</tspan></text>
+<rect x="405" y="305" width="230" height="82" rx="8" fill="#E69F00" stroke="#E69F00" stroke-width="2"/>
+<text x="421" y="332" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#ffffff"><tspan x="421" dy="0">Negative-evidence search</tspan><tspan x="421" dy="18">route recorded separately</tspan><tspan x="421" dy="18">n=1</tspan></text>
+<line x1="185.0" y1="161.0" x2="520.0" y2="161.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="520.0" y1="161.0" x2="855.0" y2="161.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="520.0" y1="161.0" x2="855.0" y2="346.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="161.0" x2="520.0" y2="346.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
+<text x="42" y="520" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#64748B">PDF export is generated from the same structured figure specification for PDFLaTeX-safe manuscript packaging.</text>
+</svg>

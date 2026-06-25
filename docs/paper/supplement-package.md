@@ -132,7 +132,7 @@ Primary artifacts:
 
 Coverage: PRISMA-style flow diagrams, source-family coverage heatmaps, mapping robustness visualizations, network sensitivity figures, dashboard figures, and per-image Nature-readiness scores.
 
-Open work: figure loops remain incomplete because no image is yet scored 100 out of 100. Final submission needs exported, PDFLaTeX-compatible, caption-aligned figures with accessibility checks.
+Current status: manuscript and supplement figure rows have completed loop 1 and now score 100 out of 100 in the Nature presubmission image scorecard. PRISMA flows now have SVG and PDF exports for manuscript packaging; re-score if source data, figure numbering, or manuscript usage changes.
 
 ### Supplement 9. Manuscript Source, Citation, and arXiv Checks
 
