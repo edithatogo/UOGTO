@@ -551,3 +551,10 @@
 - Commit `a2ee99d` pushed to `master`.
 - Green workflow runs: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116.
 - This confirms the repo-native privacy audit wiring did not regress Validate, WIDOCO, Manuscript PDF, or arXiv Preflight in CI.
+
+
+## 2026-06-25T07:53:14+00:00 - Article-facing ontology/evidence tables
+
+- Added reproducible generator `scripts/maintenance/build_article_evidence_tables.py`.
+- Generated CSV/JSON/Markdown tables under `docs/article-hardening/article-facing-tables`.
+- Tables cover module audit, missing game-theory element dispositions, and mapping robustness with SSSOM, ablations, network sensitivity, calibration, and adjudication evidence.

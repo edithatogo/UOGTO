@@ -1,4 +1,4 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -142,6 +142,9 @@ arxiv-preflight: manuscript-sources
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright
+article-facing-tables:
+	python scripts/maintenance/build_article_evidence_tables.py
+
 .PHONY: arxiv-privacy-audit
 arxiv-privacy-audit: arxiv-source-package
 	python scripts/maintenance/audit_arxiv_source_privacy.py

@@ -123,3 +123,12 @@ These search records found no relevant ontology to include and are preserved in 
 - Example files: 17
 - Competency queries: 10
 
+
+
+## Article-Facing Ontology and Evidence Tables
+
+Generated table package: `docs/article-hardening/article-facing-tables/README.md`.
+
+- Module audit table: labels, definitions, SHACL links, examples, competency queries, OWL profile, and reasoner status.
+- Missing game-theory element disposition table: add to UOGTO, align externally only, defer, reject duplicate, reject out of scope, or domain review.
+- Mapping robustness table: SSSOM publication surface, feature ablations, network sensitivity, reviewer calibration, and adjudication evidence.

@@ -21,3 +21,12 @@ When a table is used for screening, review, or synthesis, keep a CSV source for 
 ## Reproducibility note
 
 The generated files are produced from `scripts/maintenance/export_tabular_artifacts.py` and should be regenerated whenever the CSV source changes.
+
+
+## Article-Facing Ontology and Evidence Tables
+
+Generated table package: `docs/article-hardening/article-facing-tables/README.md`.
+
+- Module audit table: labels, definitions, SHACL links, examples, competency queries, OWL profile, and reasoner status.
+- Missing game-theory element disposition table: add to UOGTO, align externally only, defer, reject duplicate, reject out of scope, or domain review.
+- Mapping robustness table: SSSOM publication surface, feature ablations, network sensitivity, reviewer calibration, and adjudication evidence.

@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-06-25T07:53:22+00:00",
+  "row_count": 5,
+  "rows": [
+    {
+      "candidate_id": "cand-001",
+      "candidate_label": "",
+      "disposition": "domain review",
+      "evidence_level": "parsed_rdf_owl",
+      "external_alignment": "core ontology namespace",
+      "rationale": "Strong fit for strategic interaction vocabulary",
+      "reviewer_handoff": "peer_review",
+      "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
+      "source_family": "game-theory-ontology",
+      "uogto_target": ""
+    },
+    {
+      "candidate_id": "cand-002",
+      "candidate_label": "",
+      "disposition": "domain review",
+      "evidence_level": "structured_non_rdf",
+      "external_alignment": "external mapping only",
+      "rationale": "Useful as an alignment target but too domain-specific for direct inclusion",
+      "reviewer_handoff": "peer_review",
+      "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
+      "source_family": "discrete_event_simulation",
+      "uogto_target": ""
+    },
+    {
+      "candidate_id": "cand-003",
+      "candidate_label": "",
+      "disposition": "domain review",
+      "evidence_level": "parsed_rdf_owl",
+      "external_alignment": "execution binding module",
+      "rationale": "Captures traces, runs, and agent state transitions",
+      "reviewer_handoff": "editorial_review",
+      "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
+      "source_family": "agent_based_modelling",
+      "uogto_target": ""
+    },
+    {
+      "candidate_id": "cand-004",
+      "candidate_label": "",
+      "disposition": "domain review",
+      "evidence_level": "metadata_only",
+      "external_alignment": "feedback-loop module",
+      "rationale": "Potential fit but needs tighter scope and examples",
+      "reviewer_handoff": "devil_advocate",
+      "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
+      "source_family": "system_dynamics",
+      "uogto_target": ""
+    },
+    {
+      "candidate_id": "cand-005",
+      "candidate_label": "",
+      "disposition": "domain review",
+      "evidence_level": "literature_only",
+      "external_alignment": "none",
+      "rationale": "Search documented but no robust ontology candidate was found",
+      "reviewer_handoff": "peer_review",
+      "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
+      "source_family": "negative_evidence_no_relevant_ontology_found",
+      "uogto_target": ""
+    }
+  ],
+  "schema": "uogto.article.missing-game-theory-element-dispositions.v1",
+  "sources": [
+    "docs\\article-hardening\\uogto-inclusion-candidates.json",
+    "docs\\article-hardening\\uogto-inclusion-candidates.csv"
+  ]
+}

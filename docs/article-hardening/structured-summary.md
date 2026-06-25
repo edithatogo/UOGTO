@@ -36,3 +36,11 @@ The package synthesises source discovery, evidence levels, mapping overlap, onto
 
 ## Negative Evidence
 Searches that return no relevant ontology or formalism are recorded as negative evidence rather than treated as proof of universal absence. This preserves transparency about what was searched and what was not found.
+
+## Article-Facing Ontology and Evidence Tables
+
+Generated table package: `docs/article-hardening/article-facing-tables/README.md`.
+
+- Module audit table: labels, definitions, SHACL links, examples, competency queries, OWL profile, and reasoner status.
+- Missing game-theory element disposition table: add to UOGTO, align externally only, defer, reject duplicate, reject out of scope, or domain review.
+- Mapping robustness table: SSSOM publication surface, feature ablations, network sensitivity, reviewer calibration, and adjudication evidence.
