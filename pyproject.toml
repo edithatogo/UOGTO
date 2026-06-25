@@ -34,5 +34,6 @@ line-length = 100
 target-version = "py310"
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
