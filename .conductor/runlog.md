@@ -565,3 +565,10 @@
 - Commit `c7443e6` pushed to `master`.
 - Green workflow runs: Validate UOGTO 28155549125; Build WIDOCO Pages 28155549095.
 - This confirms the generated article-facing tables did not regress validation or WIDOCO documentation builds.
+
+
+## 2026-06-25T08:39:25+00:00 - Nature must-fix submission package order
+
+- Updated manuscript scaffold wording to reference implemented supplement/privacy/deck/figure/table surfaces.
+- Updated supplement package and claim map to remove stale open-work entries for module table, mapping robustness table, privacy audit, deck creation, and figure loop.
+- Added `docs/paper/nature-must-fix-package-status.md` as the ordered package status surface.

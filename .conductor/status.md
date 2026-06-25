@@ -201,3 +201,5 @@
 - 2026-06-25T07:53:14+00:00: Added article-facing ontology/evidence tables under `docs/article-hardening/article-facing-tables` for module audit, missing-game-theory dispositions, and mapping robustness/SSSOM/sensitivity/calibration evidence.
 
 - 2026-06-25T07:58:34+00:00: CI evidence for article-facing ontology/evidence tables commit `c7443e6` is green: Validate UOGTO 28155549125; Build WIDOCO Pages 28155549095.
+
+- 2026-06-25T08:39:25+00:00: Nature must-fix package order recorded: manuscript scaffold, supplement map, privacy audit manifest, deck creation, and figure loop are all represented by repo artifacts; remaining work is final editorial polish and claim/caption freeze.
