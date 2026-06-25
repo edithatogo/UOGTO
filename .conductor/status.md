@@ -142,3 +142,13 @@
 - Added reviewer calibration sampling with balanced accepted/rejected mapping review, agreement scoring, and adjudication-ready outputs.
 
 - Added network-analysis sensitivity scenarios for metadata-only exclusion, accepted-only mappings, and close/related mapping inclusion.
+
+## 2026-06-25 - uogto_nature_presubmission_evaluation_20260625
+
+- Status: active
+- Track: `conductor/tracks/uogto_nature_presubmission_evaluation_20260625`
+- Purpose: Nature-ready professor-level presubmission evaluation of the UOGTO repository, ontology, evidence package, manuscript, supplement, images, and PowerPoint.
+- Current state: track scaffold created with specification, protocol, rubrics, review matrices, image scoring workflow, reviewer lanes, recommendations backlog, and decision memo scaffold.
+- Known blocker: no PowerPoint deck was found during initial inspection; implementation should locate it or create a new slide inventory.
+- Next gate: populate review matrices and image inventory during `$conductor-implement`.
+

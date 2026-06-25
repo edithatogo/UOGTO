@@ -465,3 +465,11 @@
 
 - 2026-06-25: Added tabular-artifact storage policy plus CSV/Markdown/JSON/Parquet exports for article-hardening analysis tables.
 
+## 2026-06-25 - uogto_nature_presubmission_evaluation_20260625
+
+- Created presubmission evaluation track targeting a Nature-style article standard.
+- Added specification, protocol, and scoring rubrics for repository setup, ontology quality, evidence and analysis artefacts, manuscript/supplement, PowerPoint, and images.
+- Added specialist reviewer lanes for game theory, ontology engineering, simulation methods, FAIR/reproducibility, Nature editorial review, statistics/network analysis, visual communication, and red-team review.
+- Added image improvement loop requirements: inventory, score out of 100, fix, re-render, and re-score until 100/100 or explicit blocker.
+- Added pending review matrices, recommendations backlog, PowerPoint review template, and presubmission decision memo scaffold.
+

@@ -124,3 +124,9 @@ These tracks are retained for audit history but are no longer active work items.
 - **Description**: Retired executable-simulation visualizer planning track.
 - **Status**: Archived.
 - **Link**: [./archive/executable_simulation_visualizer_20260621/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/executable_simulation_visualizer_20260621/)
+
+## [~] Track: uogto_nature_presubmission_evaluation_20260625
+- **Description**: Nature-ready professor-level presubmission evaluation of UOGTO covering GitHub setup, ontology quality, evaluation protocol, analysis artefacts, manuscript, supplement, figures, and PowerPoint.
+- **Status**: Active
+- **Link**: [./tracks/uogto_nature_presubmission_evaluation_20260625/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_nature_presubmission_evaluation_20260625/)
+
