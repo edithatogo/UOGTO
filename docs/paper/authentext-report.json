@@ -1,0 +1,14 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "generated_at_utc": "2026-06-25T09:22:43+00:00",
+  "manuscript": "docs/paper/paper.tex",
+  "notes": [
+    "Preserved citation keys, file paths, technical identifiers, and quantitative claims.",
+    "Applied light academic-prose humanization rather than casual voice injection."
+  ],
+  "profile": "authentext-pro academic: core-patterns + academic modules",
+  "schema": "uogto.authentext.manuscript_report.v1",
+  "status": "pass",
+  "tooling_source": "https://github.com/edithatogo/authentext"
+}

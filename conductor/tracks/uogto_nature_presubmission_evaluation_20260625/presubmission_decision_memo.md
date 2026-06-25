@@ -6,13 +6,13 @@
 - Basis: repository validation CI, the rewritten manuscript draft, and the new supplement package map are materially stronger, but figure integration final supplement prose privacy audit and deck creation remain incomplete.
 
 ## Top Risks
-- Manuscript is now a full structured draft, but it still needs Nature-level editorial compression, final figure callouts, and claim-boundary tables.
+- Manuscript is now a tighter polished draft with integrated table/figure callouts; remaining manuscript work is final journal copyediting after figure numbering and supplement prose are frozen.
 - PowerPoint deck work is now a created first-pass asset; it still needs final article figure binding, thumbnail export, and readability inspection.
 - Figures are useful but none has reached 100 out of 100 for Nature-readiness.
 - Overclaim risk remains unless missing-game-theory elements and mapping robustness are summarized in article-facing tables.
 
 ## Must-Fix Before Submission
-- Polish the rewritten manuscript into final Nature style with integrated figure callouts and tighter claims.
+- Final copyedit the polished manuscript after figure numbering, captions, and supplement prose are frozen.
 - Convert the new supplement package map into final edited journal supplement prose with final figure numbering and table callouts.
 - Complete figure improvement loops and polish the created PowerPoint deck against final article figures and slide readability checks.
 - Add explicit source-leak privacy audit manifest for the arXiv source package.
@@ -33,3 +33,10 @@
 ### arXiv Source-Leak/Privacy Audit Update
 
 Implemented `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-source-privacy-audit.md` as explicit audit evidence for comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, and private URLs/local paths. The audit is wired into `arxiv-privacy-audit` and `arxiv-preflight`; missing local external tools remain advisory, not blockers, because CI arXiv preflight is green.
+
+
+## 2026-06-25 Final Manuscript Prose Update
+- `docs/paper/paper.tex` was rewritten from a process-heavy scaffold into a tighter article draft with clearer problem framing, results-first structure, integrated table/figure callouts, and a more restrained limitations section.
+- SourceRight was run through `make manuscript-sourcecheck`: CSL validation passed, reference report was generated, and citation reconciliation reported 11 matched citations with 0 citation issues.
+- Authentext Pro academic guidance from `https://github.com/edithatogo/authentext` was applied and recorded in `docs/paper/authentext-report.md` / `.json`; the high-signal pattern audit now passes.
+- Local PDF generation remains TeX-engine unavailable, but manuscript structure checks pass locally and CI remains the strict PDF gate.

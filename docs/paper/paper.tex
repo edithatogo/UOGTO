@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \usepackage{longtable}
 
-\title{Universal Open Game Theory Ontology: A Reproducible Semantic Layer for Games, Simulation, and Executable Multi-Agent Evidence}
+\title{Universal Open Game Theory Ontology: Semantics for Games, Simulation, and Executable Multi-Agent Evidence}
 \author{UOGTO Scoping Review Contributors}
 \date{June 2026}
 
@@ -13,81 +13,70 @@
 \maketitle
 
 \begin{abstract}
-Game-theoretic models are now used across mechanism design, multi-agent reinforcement learning, simulation, institutional analysis, security, voting, and agent-tool interaction, yet their data structures remain difficult to compare, validate, cite, and reuse across systems. We present the Universal Open Game Theory Ontology (UOGTO), a modular RDF/OWL ontology and evidence package that represents game specifications, players, actions, strategies, payoffs, outcomes, sessions, traces, mechanisms, and execution bindings using interoperable Semantic Web standards. UOGTO is designed as both a modelling artefact and a reproducible research object: terms are annotated with labels and definitions, example graphs are validated with SHACL, competency questions are expressed in SPARQL, JSON-LD contexts support web use, and manuscript sources are checked through SourceRight and repository-native citation gates. A comparative ontology-mapping workflow reviewed 21 candidate source families, extracted 4,037 term rows across UOGTO and external sources, generated 460 deterministic mapping candidates, accepted 10 conservative alignments, and preserved rejected or domain-review candidates as audit evidence rather than asserted equivalences. We also package a PRISMA-ScR-style article-hardening protocol, source inventory, quality metrics, SSSOM mappings, network analyses, figure inventory, and arXiv preflight evidence. The result is not a claim that every formal game-theory construct has been exhausted; it is a transparent, extensible semantic layer for making game-theoretic and simulation claims inspectable, executable, and reusable.
+Game-theoretic models increasingly move between mathematical analysis, multi-agent reinforcement learning, mechanism design, security, simulation, and tool-using AI systems. Yet the objects that make those models interpretable, including players, actions, strategies, information states, payoffs, mechanisms, outcomes, sessions, and traces, are still usually exchanged as prose, code, diagrams, or project-specific tables. That makes it difficult to compare models, validate examples, cite assumptions, or reuse evidence across domains. We present the Universal Open Game Theory Ontology (UOGTO), a modular RDF/OWL ontology for representing game-theoretic and simulation-facing semantics as inspectable knowledge graphs. UOGTO separates abstract game specifications from executed sessions and provenance traces; validates examples with SHACL; exposes competency questions in SPARQL; publishes accepted mappings in both Turtle and SSSOM; and packages source discovery, mapping review, quality metrics, figure data, SourceRight citation checks, and arXiv preflight evidence as version-controlled artefacts. In a comparative workflow spanning 21 source families, UOGTO normalized 4,037 term rows, generated 460 mapping candidates, and accepted 10 conservative alignments while preserving rejected and domain-review rows as negative evidence. UOGTO is therefore not presented as a final catalogue of all game theory. Its contribution is a reproducible semantic layer that makes strategic-interaction claims more explicit, testable, and reusable.
 \end{abstract}
 
 \section{Introduction}
-Game theory provides a language for strategic interaction, from canonical social dilemmas such as the Prisoner's Dilemma \cite{rapoport-chammah-1965} to modern computational environments for learning in games \cite{open-spiel-2019,arxiv-2006-06580v3}. Its concepts also appear in security games, auctions, voting systems, mechanism design, agent-based simulations, digital twins, and tool-using AI systems. In practice, however, game-theoretic claims are often encoded as prose, equations, domain-specific code, diagrams, or ad hoc tables. This makes it hard to ask simple cross-cutting questions: which agents participate, which actions are legal, which strategies are represented, what payoff or outcome is asserted, what trace produced that outcome, and which external vocabulary justifies an alignment.
+Game theory supplies a compact language for strategic interaction, from the Prisoner's Dilemma \cite{rapoport-chammah-1965} to modern reinforcement-learning environments for games \cite{open-spiel-2019,arxiv-2006-06580v3}. The same conceptual vocabulary now appears in auctions, voting and social choice, security games, bargaining, mechanism design, agent-based simulation, digital twins, institutional analysis, and tool-using AI agents. The modelling media, however, have not converged. A payoff matrix, a simulation trace, a Python environment, a standards document, and a provenance graph may all describe games, but they rarely expose their assumptions in a shared form.
 
-UOGTO addresses this problem by providing an open semantic core for game-theoretic and executable multi-agent evidence. It uses RDF graphs as the substrate \cite{w3c-rdf11-concepts}, OWL 2 for ontology structure \cite{w3c-owl2-overview}, SHACL for closed-world validation of examples \cite{w3c-shacl}, JSON-LD for web-oriented serialization \cite{w3c-json-ld11}, and SPARQL for competency questions \cite{w3c-sparql11-query}. The design goal is not to replace mathematical game theory. Instead, it provides a machine-actionable layer around game-theoretic objects so that models, examples, traces, mappings, and evidence claims can be checked and reused.
+The practical consequence is not only inconvenience. Without a shared semantic layer, readers cannot easily ask which agents participated, which actions were legal, which strategy was observed, which payoff was asserted, which mechanism produced an outcome, or which trace supports a claim. The problem becomes sharper when game-theoretic claims are used as evidence in computational experiments, policy simulations, or AI-agent evaluations. A model may be executable, but its commitments may still be hard to inspect.
 
-The contribution is threefold. First, UOGTO separates game specification, game instance, session, trace, strategy, action, payoff, outcome, mechanism, and execution binding, reducing ambiguity between abstract game forms and observed or simulated runs. Second, the repository treats ontology construction as an auditable evidence workflow: sources, mappings, quality reports, figure data, and reviewer decisions are stored in version-controlled artefacts. Third, the manuscript and release pipeline are hardened with citation checking, SourceRight source verification, arXiv packaging checks, GitHub Actions validation, DOI and registry metadata, and public documentation.
+UOGTO addresses this gap by representing game-theoretic objects as linked data. It uses RDF as the graph substrate \cite{w3c-rdf11-concepts}, OWL 2 for reusable ontology structure \cite{w3c-owl2-overview}, SHACL for closed-world validation of examples \cite{w3c-shacl}, JSON-LD for web serialization \cite{w3c-json-ld11}, and SPARQL for competency questions \cite{w3c-sparql11-query}. The aim is not to replace formal game theory. The aim is to make the objects around formal and executable games explicit enough to validate, align, cite, and reuse.
 
-\section{Design Principles}
-UOGTO follows five modelling principles. The first is separation of concerns. A normal-form specification, an executed session, and a provenance trace are related but not identical objects. The ontology therefore represents specifications, instances, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, and execution bindings as separable modelling surfaces.
-
-The second principle is open-world reuse with closed-world examples. OWL and RDF allow external vocabularies and incomplete knowledge, while SHACL shapes validate concrete examples where stricter invariants are required. This keeps the ontology reusable without turning every modelling convention into a global logical constraint.
-
-The third principle is evidence traceability. Mappings to other vocabularies are generated as candidates, reviewed, and then emitted as accepted Turtle and SSSOM alignment artefacts only when the evidence supports a conservative assertion. Rejected and domain-review mappings remain in the review data so that non-asserted alternatives are visible.
-
-The fourth principle is publication-grade reproducibility. UOGTO includes build, validation, source-check, release, arXiv, WIDOCO, and article-hardening gates. These gates distinguish local checks, CI checks, public release checks, and account-bound registry review.
-
-The fifth principle is claims discipline. The ontology is broad, but broad coverage is not the same as exhaustive coverage. The article-hardening package records missing-element triage, negative evidence, and source-family evidence levels so that the manuscript can state what is supported, what is deferred, and what remains a domain-review task.
-
-\section{Ontology Scope and Repository Artefacts}
-The repository contains core modules, extension modules, alignments, SHACL shapes, JSON-LD contexts, examples, competency questions, documentation, and maintenance scripts. The core namespace is designed around reusable game semantics. Extension modules cover areas including classical games, cooperative games, auctions, bargaining, mechanism design, social choice, MARL, network games, evolutionary games, security games, privacy-disclosure games, Petri-net and discrete-event simulation links, digital-twin games, institutional economics, verification games, and knowledge-graph execution bindings.
-
-Each term is expected to carry human-readable labels and definitions. The validation pipeline parses ontology files, validates examples against SHACL shapes, and executes competency queries. A governance module, term changelog, deprecation policy, modelling-decisions guide, ontology design-pattern guide, and reuse/citation documentation support long-term maintainability.
-
-Table~\ref{tab:repo-surfaces} summarises the principal evidence surfaces used by this manuscript. Article-facing CSV, JSON, and Markdown tables now expose module audit results, missing game-theory element dispositions, and mapping robustness evidence in `docs/article-hardening/article-facing-tables/`, so the paper and supplement can cite stable rows rather than raw maintenance logs.
+This paper evaluates UOGTO by its modelling choices and by the evidence package that surrounds them. UOGTO therefore couples the ontology with source discovery records, mapping review data, SSSOM tables, SHACL examples, quality metrics, figure sources, SourceRight reference checks, and arXiv packaging gates. Table~\ref{tab:evidence-surfaces} summarises the evidence surfaces used for the article and supplement.
 
 \begin{table}[ht]
 \centering
-\caption{Repository surfaces supporting UOGTO claims.}
-\label{tab:repo-surfaces}
-\begin{tabular}{p{0.28\linewidth}p{0.62\linewidth}}
+\caption{Evidence surfaces supporting the UOGTO manuscript claims.}
+\label{tab:evidence-surfaces}
+\begin{tabular}{p{0.30\linewidth}p{0.58\linewidth}}
 \toprule
-Surface & Function \\
+Surface & Role in the claim set \\
 \midrule
-Ontology modules & RDF/OWL source modules for core and extension semantics. \\
-SHACL shapes and examples & Closed-world validation of concrete game and execution examples. \\
-Competency questions & SPARQL checks for common retrieval and audit questions. \\
-Ontology comparison package & Source inventory, provenance, term inventory, mapping candidates, reviewed mappings, accepted alignments, metrics, and figures. \\
-Article-hardening package & PRISMA-ScR-style protocol, search logs, source-extension inventory, quality metrics, case studies, RO-Crate metadata, and dashboard outputs. \\
-Publishing and arXiv gates & DOI, citation, registry, SourceRight, WIDOCO, release, and source-package validation. \\
+Ontology modules & RDF/OWL source for core and extension game semantics. \\
+SHACL examples and competency questions & Executable checks for modelled examples and retrieval claims. \\
+Article-facing tables & Module audit, missing-element dispositions, and mapping robustness summaries for reviewers. \\
+Ontology comparison package & Source inventory, provenance, term extraction, candidate mappings, accepted alignments, sensitivity analyses, and figures. \\
+Article-hardening package & PRISMA-ScR-style protocol, source logs, quality metrics, RO-Crate metadata, dashboard outputs, and tabular artefacts. \\
+Submission gates & SourceRight citation verification, arXiv source-leak audit, WIDOCO pages, DOI/release metadata, and CI validation. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Methods}
-\subsection{Standards and representation}
-UOGTO is expressed in RDF and OWL 2, with JSON-LD contexts for web serialization and SHACL shapes for example validation \cite{w3c-rdf11-concepts,w3c-owl2-overview,w3c-json-ld11,w3c-shacl}. Competency questions are expressed in SPARQL \cite{w3c-sparql11-query}. This combination allows the same repository to support ontology engineering, validation of example graphs, web publication, and reproducible query-based checks.
-
-\subsection{Source discovery and article-hardening protocol}
-The article-hardening protocol structures source discovery as a scoping-review-style evidence package. Search routes include scholarly metadata services and public registries, including OpenAlex, arXiv, and Crossref \cite{openalex,arxiv-api,crossref}. Search events are stored in an append-only JSONL surface with query, result count, evidence level, inclusion rationale, licence, reviewer handoff, and screening decision. The package records parsed RDF sources, structured non-RDF sources, metadata-only sources, literature-only sources, excluded sources, and negative evidence searches.
-
-\subsection{Ontology comparison and mapping}
-The comparative workflow began with 21 candidate source families relevant to game theory, simulation, agent-based modelling, system dynamics, provenance, time, schema metadata, and adjacent modelling standards. Sources were classified by evidence level and licence disposition. Redistributable RDF artefacts were parsed directly, while non-redistributable or standards-document sources were represented as metadata-only or transformed-summary evidence to avoid overclaiming access.
-
-The mapping pipeline extracted a normalized term inventory, generated deterministic mapping candidates from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability, and then separated accepted assertions from rejected and domain-review candidates. Accepted alignments are emitted as both Turtle and SSSOM tables for inspectability.
-
-\subsection{Quality, validation, and reproducibility}
-Quality benchmarking records annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, SHACL coverage, examples per module, competency-query coverage, local pitfall indicators, and OWL profile or reasoner status. The portable baseline uses RDFLib and pySHACL. Optional ROBOT-style reports are retained when Java tooling is available, but they do not replace the portable validation surface.
-
-Manuscript sources are stored in CSL JSON and checked against LaTeX citations. The manuscript source pipeline also generates SourceRight reports, citation reconciliation output, and arXiv source-package checks. Remote GitHub Actions have passed validation, WIDOCO Pages generation, and arXiv preflight on the current hardening branch. Missing local TeX tools such as \texttt{latexmk} are therefore treated as optional local benchmarking gaps rather than submission-gate blockers.
-
 \section{Results}
-\subsection{UOGTO provides a modular semantic core for game-theoretic evidence}
-The repository currently validates a broad set of game-theoretic and simulation-facing modules. Examples include normal-form, extensive-form, cooperative, auction, matching-market, voting/social-choice, stochastic Markov, security Stackelberg, privacy-budget, LLM tool-use, Petri-net execution, and digital-twin security games. These examples make the ontology concrete: a reader can inspect both the vocabulary and instance data that test the modelling pattern.
+\subsection{A semantic core separates games, executions, and evidence}
+UOGTO models a game specification separately from a game instance, session, or trace. This distinction is the ontology's main design decision. A specification describes structural possibilities; a session records an occurrence; a trace records the evidence produced by execution. Strategies, actions, payoffs, outcomes, mechanisms, information states, and execution bindings are also represented as distinct modelling surfaces. The separation avoids a common ambiguity in computational game descriptions: the same word ``game'' can refer to an abstract form, a configured environment, or a particular run.
 
-The core modelling separation is central to the result. A game specification defines structural possibilities; a session or trace records an execution; strategies and actions are distinct from payoffs and outcomes; mechanisms and execution bindings add additional semantics without collapsing the model into a single undifferentiated graph.
+The current examples cover normal-form and extensive-form games, cooperative games, auctions, matching markets, voting and social choice, stochastic Markov games, security Stackelberg games, privacy-budget games, LLM tool-use games, Petri-net execution games, and digital-twin security games. These examples do real work. They are validation artefacts: each tests whether the vocabulary can support concrete game descriptions without collapsing specification, execution, and evidence into one object. Figure~\ref{fig:architecture} should present this separation as the opening visual.
 
-\subsection{The comparison workflow separates evidence breadth from asserted alignment}
-The comparative mapping package records 21 candidate sources, 3,485 external terms, 552 UOGTO terms, 460 review candidates, 10 accepted mappings, 1 domain-review candidate, and 449 rejected mappings. These numbers matter because they show that UOGTO does not simply assert equivalence to external sources. Most candidates are rejected or retained for review, and only conservative mappings become accepted alignments.
+\subsection{The evidence package makes ontology quality inspectable}
+The ontology is accompanied by a module audit table covering labels, definitions, SHACL links, examples, competency questions, OWL profile status, and reasoner status. This table is generated in CSV, JSON, and Markdown under \texttt{docs/article-hardening/article-facing-tables/}. It gives reviewers a compact way to inspect whether UOGTO's coverage claims are supported by validation artefacts rather than by prose alone.
+
+The quality metrics report complete label and definition coverage across the audited ontology entities, RDF parsing status, SHACL example validation, OWL-RL reasoner status, orphan-class checks, relation-richness measures, hierarchy depth, import depth, example coverage, and competency-query linkage. Table~\ref{tab:module-audit} should draw from the generated module audit rather than duplicating raw validation logs.
 
 \begin{table}[ht]
 \centering
-\caption{Ontology comparison summary.}
+\caption{Article-facing tables generated for manuscript and supplement review.}
+\label{tab:module-audit}
+\begin{tabular}{p{0.34\linewidth}p{0.52\linewidth}}
+\toprule
+Table & Reviewer question answered \\
+\midrule
+Module audit & Do ontology modules have labels, definitions, SHACL/example/CQ support, and reasoner status? \\
+Missing-element dispositions & Which external game-theory concepts should be added, aligned externally, deferred, rejected, or sent to domain review? \\
+Mapping robustness & Are accepted mappings robust to ablations, SSSOM publication rules, sensitivity scenarios, reviewer calibration, and adjudication? \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Comparative mapping favours precision over broad equivalence}
+The comparative workflow reviewed 21 source families relevant to game theory, simulation, provenance, time, web schemas, workflow modelling, and adjacent formalisms. It extracted 4,037 term rows across UOGTO and external sources, generated 460 deterministic mapping candidates, accepted 10 alignments, marked one candidate for domain review, and rejected 449 candidates. The low acceptance rate is deliberate. It prevents lexical similarity from becoming asserted equivalence.
+
+Accepted alignments are emitted as Turtle and SSSOM. Rejected and domain-review rows remain visible in the review data. This makes the mapping package auditable: a reader can see not only what UOGTO aligns to, but also what it chose not to assert. Figure~\ref{fig:mapping-flow} should show the candidate-to-review-to-alignment flow. Figure~\ref{fig:evidence-heatmap} should show source-family evidence levels so that parsed RDF sources are not conflated with metadata-only or literature-only evidence.
+
+\begin{table}[ht]
+\centering
+\caption{Ontology comparison summary used for the main mapping claim.}
 \label{tab:mapping-summary}
 \begin{tabular}{lr}
 \toprule
@@ -104,32 +93,43 @@ Rejected mappings & 449 \\
 \end{tabular}
 \end{table}
 
-The source inventory also distinguishes four parsed RDF sources from 17 metadata-only records. This distinction prevents source-count breadth from being mistaken for parsed ontology depth. The evidence-level heatmaps and source-family tables are therefore manuscript-relevant figures rather than decorative graphics: they show where the strongest comparison evidence exists and where future work remains primarily documentary.
+\subsection{Network analyses show bridges, not a universal merger}
+The network analysis identified 74 source graph nodes, 10 term-alignment bipartite edges, 391 source-similarity edges, and 11 UOGTO module-coverage edges. Central UOGTO modules included mean-field games, cooperative games, network games, congestion-routing games, evolutionary games, compositional open games, epistemic games, and causal games. These results support a restrained interpretation: UOGTO connects several modelling traditions, but it does not erase their differences.
 
-\subsection{Network and overlap analyses identify bridges rather than universal equivalence}
-Network analysis recorded 74 source graph nodes, 10 term-alignment bipartite edges, 391 source-similarity edges, and 11 UOGTO module-coverage edges. Central UOGTO modules included mean-field games, cooperative games, network games, congestion-routing games, evolutionary games, compositional open games, epistemic games, and causal games. These findings support a cautious interpretation: UOGTO acts as a bridge among several modelling families, but accepted equivalence claims remain intentionally sparse.
+Sensitivity analyses compare accepted-only mappings, accepted plus close/related mappings, and scenarios with metadata-only sources excluded. These analyses are important for claim discipline. If a bridge disappears when metadata-only sources are removed, it should be described as documentary evidence rather than structural alignment. Figure~\ref{fig:network-sensitivity} should therefore focus on robust bridges and clearly mark evidence limits.
 
-\subsection{Article-hardening artefacts make evidence auditable}
-The PRISMA-ScR-style evidence package extends the ontology comparison into a broader article-support workflow. It records search strategy, search logs, source-extension inventory, PRISMA-style flow diagrams, quality metrics, RO-Crate metadata, structured summaries, case studies, dual-screening samples, reviewer calibration samples, and tabular artefacts in CSV, Markdown, JSON, and Parquet where appropriate. This makes the article claims auditable at multiple levels: source discovery, source classification, mapping decision, quality metric, figure, and reproducibility package.
+\subsection{Publication hardening turns the ontology into a reusable research object}
+UOGTO is packaged as more than a vocabulary file. The release includes citation metadata, DOI and registry surfaces, WIDOCO documentation, SourceRight reference checks, arXiv source-package cleaning, a source-leak/privacy audit manifest, RO-Crate metadata, DuckDB/tabular artefact design, and CI validation. The article-hardening protocol records source discovery, negative evidence, dual-screening samples, reviewer calibration, case studies, and structured outputs. Figure~\ref{fig:reproducibility} should show this chain from ontology source to validated examples, reviewed mappings, article tables, and submission gates.
 
-\subsection{Presubmission evaluation identifies manuscript maturity as the limiting factor}
-A Nature-style presubmission review scored the repository and evidence base higher than the manuscript. Repository setup scored 88 out of 100, ontology core 86, source discovery evidence 87, arXiv toolchain hardening 88, and mapping robustness 83. The manuscript scored 48 and the supplement 62 because the previous paper was a short scaffold rather than a full article. This rewrite addresses that gap by turning repository evidence into a structured manuscript narrative. The must-fix submission package now has a manuscript scaffold, supplement map, source-leak/privacy manifest, editorial deck, and completed first-pass figure loop; remaining work is final journal editing, caption integration, and reviewer-facing condensation rather than missing evidence surfaces.
-
-\section{Figure Plan}
-The current article should use figures as evidence rather than illustration. The primary figure set should include: (1) ontology architecture and modelling separation; (2) PRISMA-style source discovery and screening flow; (3) source-family evidence-level heatmap; (4) mapping flow from candidates to accepted, rejected, and domain-review decisions; (5) source-module overlap heatmap; and (6) a reproducibility schematic linking ontology modules, examples, SHACL, competency questions, SSSOM mappings, RO-Crate metadata, SourceRight checks, and arXiv preflight. The first journal-readiness loop has been completed for manuscript and supplement figures: the Nature presubmission scorecard now records all 11 rows at 100 out of 100 after typography, accessibility metadata, caption alignment, colour-safety, and PDFLaTeX-compatible PRISMA export improvements. Figures should be re-scored only if source data, numbering, captions, or manuscript placement changes.
+This packaging changes the nature of the contribution. UOGTO is not only a semantic proposal; it is a testable research object. Readers can inspect the terms, rerun validation, review mapping decisions, and trace manuscript claims to artefacts.
 
 \section{Discussion}
-UOGTO contributes an interoperable semantic layer for game theory at a time when strategic-interaction models increasingly cross the boundary between mathematical abstraction, simulation, reinforcement learning, institutional analysis, and executable agent systems. A common ontology cannot settle substantive debates in game theory, but it can make modelling commitments explicit. It can also improve reproducibility by linking claims to graphs, shapes, examples, queries, mappings, source evidence, and release metadata.
+UOGTO responds to a practical problem in contemporary game-theoretic work: strategic-interaction models now travel across disciplines faster than their assumptions can be inspected. A common ontology cannot decide which equilibrium concept is appropriate, whether a mechanism is normatively justified, or whether a simulation is realistic. It can, however, expose the entities and relations that make those questions answerable.
 
-The most important methodological choice is conservative alignment. In ontology mapping, high recall can be misleading if candidate matches are treated as accepted equivalences. UOGTO's workflow records candidates, evidence features, reviewer decisions, accepted assertions, rejected rows, and domain-review queues separately. That separation is essential for publication-grade claims.
+The design choice that matters most is restraint. UOGTO keeps specifications separate from executions, and candidate mappings separate from accepted alignments. That is less dramatic than claiming comprehensive coverage, but it is more useful for reproducible research. It allows a paper, simulation, or agent evaluation to state exactly what was modelled and what evidence supports the statement.
 
-The project also demonstrates that ontology papers can be packaged as reproducible evidence objects. The repository includes protocol, source logs, inventories, mappings, quality metrics, figure sources, validation scripts, and publication checks. This is closer to a computational research object than a static vocabulary release.
+The second contribution is methodological rather than taxonomic. Ontology papers often describe vocabularies as if the hierarchy alone were the object of review. UOGTO instead treats the hierarchy, examples, shapes, competency questions, mappings, source records, quality metrics, figures, and submission checks as one evidence package. That package can be used by game theorists, simulation researchers, ontology engineers, and AI researchers without asking each group to adopt the same software stack.
+
+The next step is selective expansion rather than indiscriminate growth. The missing-element disposition table is designed for this purpose. Concepts should be added to UOGTO only when they improve reusable semantics; otherwise they should be aligned externally, deferred, rejected as duplicates, rejected as out of scope, or sent to domain review.
+
+\section{Methods}
+\subsection{Ontology representation and validation}
+UOGTO is expressed in RDF and OWL 2, with JSON-LD contexts for web serialization and SHACL shapes for example validation \cite{w3c-rdf11-concepts,w3c-owl2-overview,w3c-json-ld11,w3c-shacl}. Competency questions are expressed in SPARQL \cite{w3c-sparql11-query}. Validation parses ontology modules, validates examples against SHACL, and executes competency queries. The portable baseline uses RDFLib and pySHACL; optional ROBOT-style reports are retained as an additional evidence layer when Java tooling is available.
+
+\subsection{Source discovery and screening}
+Source discovery follows a PRISMA-ScR-style article-hardening protocol. Search routes include public scholarly and metadata services such as OpenAlex, arXiv, and Crossref \cite{openalex,arxiv-api,crossref}, public ontology registries, standards documentation, and repository searches. Search events are recorded with query text, result count, evidence level, inclusion rationale, licence disposition, and reviewer handoff. Sources are classified as parsed RDF, structured non-RDF, metadata-only, literature-only, or excluded. Negative evidence searches are retained so that absence claims are visible.
+
+\subsection{Mapping review and robustness}
+The mapping pipeline normalizes terms, generates deterministic candidates from lexical, definitional, hierarchical, property-signature, type-compatibility, and source-reliability signals, and separates candidates from accepted assertions. Accepted mappings are exported in Turtle and SSSOM. Robustness analyses ablate exact labels, normalized labels, definition similarity, hierarchy context, property signatures, and embedding similarity. Reviewer calibration and adjudication summaries are stored beside the mapping outputs.
+
+\subsection{Manuscript source integrity}
+References are stored in CSL JSON and reconciled with LaTeX citation keys. SourceRight is used to validate the CSL file, generate reference-integrity reports, and check numeric citation exports against the manuscript citation surface. The arXiv source package is also audited for hidden files, private notes, auxiliary files, unused figures, embedded metadata, credentials, and private URLs. These checks support source integrity; they are not evidence that every cited source endorses UOGTO.
 
 \section{Limitations}
-Several limitations remain. First, metadata-only sources cannot support the same claims as parsed RDF artefacts. The manuscript therefore distinguishes parsed evidence from documentary or transformed-summary evidence. Second, accepted mappings are intentionally conservative and sparse; this supports precision but leaves many potentially useful relationships for future domain review. Third, figure readiness is conditional on freezing the current data, captions, and numbering; any late figure change must repeat the score loop. Fourth, the editorial PowerPoint deck now exists, but it should be re-scored if the manuscript claim hierarchy changes. Fifth, local TeX tooling is incomplete on the Windows workstation, although CI arXiv preflight has passed. Finally, UOGTO is broad but not exhaustive: missing-game-theory elements must continue to be triaged as add, align externally, defer, reject duplicate, reject out of scope, or domain review.
+UOGTO has four main limitations. First, metadata-only sources cannot support the same claims as parsed RDF artefacts. The manuscript and supplement therefore distinguish parsed evidence from documentary evidence. Second, accepted mappings are intentionally sparse. This favours precision, but it leaves many plausible relationships for future review. Third, figure and deck readiness depend on a frozen manuscript. If figure numbering, captions, data, or slide claims change, the scoring loop should be repeated. Fourth, UOGTO is broad but incomplete. New game-theory concepts should pass through the explicit disposition workflow before they are added.
 
 \section{Conclusion}
-UOGTO provides a version-controlled, validated, and evidence-backed semantic layer for game-theoretic and simulation-facing research. Its strongest current contribution is not a claim of final conceptual completeness; it is a reproducible framework for representing, testing, aligning, and reviewing game-theoretic semantics across classical games, multi-agent learning, simulation execution, mechanisms, traces, and provenance. The remaining submission work is editorial and integrative: turn the scaffold into final journal prose, keep supplement claims tied to the stable table package, and avoid expanding claims beyond the evidence surfaces.
+UOGTO provides a semantic layer for game-theoretic and simulation-facing research that is both machine-actionable and reviewable. Its value is not final completeness. Its value is that games, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, mappings, and evidence can be represented, validated, aligned, and cited in a shared form. That makes strategic-interaction claims easier to inspect and easier to reuse.
 
 \begin{thebibliography}{99}
 

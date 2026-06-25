@@ -203,3 +203,5 @@
 - 2026-06-25T07:58:34+00:00: CI evidence for article-facing ontology/evidence tables commit `c7443e6` is green: Validate UOGTO 28155549125; Build WIDOCO Pages 28155549095.
 
 - 2026-06-25T08:39:25+00:00: Nature must-fix package order recorded: manuscript scaffold, supplement map, privacy audit manifest, deck creation, and figure loop are all represented by repo artifacts; remaining work is final editorial polish and claim/caption freeze.
+
+- 2026-06-25T09:22:36+00:00: Final manuscript prose pass completed. `docs/paper/paper.tex` now has a tighter article-style structure, SourceRight source checks pass via `make manuscript-sourcecheck`, and Authentext Pro academic audit is recorded in `docs/paper/authentext-report.md` / `.json`.

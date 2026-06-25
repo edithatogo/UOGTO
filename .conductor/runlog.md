@@ -572,3 +572,11 @@
 - Updated manuscript scaffold wording to reference implemented supplement/privacy/deck/figure/table surfaces.
 - Updated supplement package and claim map to remove stale open-work entries for module table, mapping robustness table, privacy audit, deck creation, and figure loop.
 - Added `docs/paper/nature-must-fix-package-status.md` as the ordered package status surface.
+
+
+## 2026-06-25T09:22:36+00:00 - Final manuscript prose pass
+
+- Rewrote `docs/paper/paper.tex` for sharper problem framing, results-first structure, table/figure callouts, and reduced repo-process narration.
+- Used SourceRight from `https://github.com/edithatogo/sourceright` via the local `sourceright` CLI and `make manuscript-sourcecheck`; CSL validation and citation reconciliation passed.
+- Applied Authentext Pro academic guidance from `https://github.com/edithatogo/authentext`; recorded `docs/paper/authentext-report.md` and `docs/paper/authentext-report.json`.
+- Local checks passed: `make manuscript-check`, `make manuscript-sourcecheck`, `make manuscript-build`, and `make validate`.
