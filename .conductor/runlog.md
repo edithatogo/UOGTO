@@ -595,3 +595,6 @@
 - Authentext supplement audit passed with 0 findings.
 - SourceRight passed through `make manuscript-sourcecheck`: 11 matched citations and 0 citation reconciliation issues; DOI warnings remain expected for URL/API/standards references.
 - `make arxiv-privacy-audit`, `make manuscript-build`, `make arxiv-source-package`, and `make validate` passed locally. Local PDF generation remains unavailable because no local TeX engine is installed.
+
+## 2026-06-25T10:21:25+00:00 - Nature supplement/status cleanup CI evidence
+- `170399a` CI green on 2026-06-25: Validate UOGTO `28163345123`, Build Manuscript PDF `28163345086`, Build WIDOCO Pages `28163345077`, arXiv Preflight `28163345131`.

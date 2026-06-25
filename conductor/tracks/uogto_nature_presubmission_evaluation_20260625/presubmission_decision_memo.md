@@ -48,3 +48,6 @@ Implemented `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-s
 ## 2026-06-25T10:13:36+00:00 Track Memo Cleanup
 - Reconciled the decision memo with implemented privacy audit, deck creation, figure loop, and final supplement prose.
 - Remaining Nature-facing work is now final freeze-and-verify: freeze table/figure numbering, polish deck readability, rerun gates after any figure/citation changes, and record CI evidence.
+
+## 2026-06-25T10:21:25+00:00 CI Evidence Update
+- Commit `170399a` passed Validate UOGTO (`28163345123`), Build Manuscript PDF (`28163345086`), Build WIDOCO Pages (`28163345077`), and arXiv Preflight (`28163345131`).

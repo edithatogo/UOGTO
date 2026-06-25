@@ -211,3 +211,5 @@
 - 2026-06-25T10:13:36+00:00: Nature presubmission track memo/status cleanup reconciled active artefacts: decision memo, review matrix, recommendations, PowerPoint recommendations, spec, and reviewer findings now treat privacy audit, deck creation, final supplement prose, and manuscript/supplement figure loop as implemented. Remaining work is final freeze-and-verify plus PowerPoint readability polish.
 
 - 2026-06-25T10:16:28+00:00: Local gates passed after final supplement/status cleanup: supplement Authentext audit pass with 0 findings; `make manuscript-sourcecheck` pass with 11 matched citations and 0 citation issues; `make arxiv-privacy-audit` pass; `make manuscript-build` pass for citation/TeX structure with local TeX engine unavailable; `make arxiv-source-package` pass; `make validate` pass.
+
+- 2026-06-25T10:21:25+00:00: Nature supplement/status cleanup remote CI evidence recorded: `170399a` CI green on 2026-06-25: Validate UOGTO `28163345123`, Build Manuscript PDF `28163345086`, Build WIDOCO Pages `28163345077`, arXiv Preflight `28163345131`.

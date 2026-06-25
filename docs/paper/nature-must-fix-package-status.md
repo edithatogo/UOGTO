@@ -21,3 +21,7 @@ Completed `2026-06-25T09:22:36+00:00`. The manuscript was rewritten for a tighte
 ## Supplement editorial pass
 
 Completed `2026-06-25T09:34:00+00:00`. `docs/paper/supplement-package.md` was converted from an evidence map into journal-style supplementary information with Supplementary Methods, Supplementary Results, Tables S1-S11, Figures S1-S7, a claim-to-supplement map, data/code availability, and completion criteria. SourceRight passed via `make manuscript-sourcecheck` with 11 matched citations and 0 citation reconciliation issues. Authentext Pro academic audit passed with 0 findings in `docs/paper/supplement-authentext-report.md` / `.json`.
+
+## CI evidence after supplement/status cleanup
+
+Recorded `2026-06-25T10:21:25+00:00` for commit `170399a`: Validate UOGTO `28163345123`, Build Manuscript PDF `28163345086`, Build WIDOCO Pages `28163345077`, and arXiv Preflight `28163345131` all completed successfully.
