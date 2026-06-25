@@ -171,3 +171,10 @@
 - review_matrix.csv and review_matrix.md now score all major surfaces including ontology core game-theory coverage manuscript supplement PowerPoint arXiv toolchain and arXiv source-leak privacy audit.
 - Decision memo verdict is major revision before submission because the repo evidence base is strong but manuscript supplement figure-loop and deck readiness remain incomplete.
 - Next substantive phase: implement the must-fix recommendations from the executed review rather than opening more CI hardening work.
+
+ 
+## Blocker Reclassification - 2026-06-25 
+- Supersedes earlier Nature presubmission notes that described missing PowerPoint and local arXiv tools as blockers. 
+- PowerPoint deck absence is now a needs-creation task documented in conductor/tracks/uogto_nature_presubmission_evaluation_20260625/powerpoint_asset_inventory.md. 
+- Missing local latexmk pdflatex tectonic and arxiv_latex_cleaner tools are optional advisory benchmark gaps because CI arXiv Preflight run 28145232079 passed. 
+- Next implementation work should create the deck and source-leak privacy manifest rather than continue searching for local arXiv tools.

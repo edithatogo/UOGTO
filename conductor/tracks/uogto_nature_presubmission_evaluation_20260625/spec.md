@@ -40,3 +40,7 @@ This track does not directly rewrite ontology modules, regenerate analysis artef
 - arXiv toolchain review compares candidate tools against the repo-native cleaner and does not replace the authoritative gate unless the benchmark shows stricter behaviour without destructive side effects.
 - `.conductor/status.md` and `.conductor/runlog.md` record the track creation.
 - Validation checks are run and any blockers are recorded.
+
+## 2026-06-25 Asset-Blocker Supersession
+- The earlier PowerPoint/deck asset discovery blocker is superseded by powerpoint_asset_inventory.md. The repository search found no existing deck, and the track now treats the deck as a needs-creation deliverable.
+- Missing local arXiv tools are superseded as submission blockers by CI arXiv Preflight evidence; they remain optional advisory benchmark tools only.

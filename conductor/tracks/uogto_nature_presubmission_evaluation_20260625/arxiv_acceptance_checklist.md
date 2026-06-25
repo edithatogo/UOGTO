@@ -44,3 +44,9 @@ This checklist is aligned to current arXiv TeX submission constraints and the re
 - [ ] No credentials, tokens, private URLs, local paths, account identifiers, or internal correspondence are present.
 - [ ] PDF/image metadata is checked for private authoring or location data.
 - [ ] External cleaner output is compared with the repo-native cleaner before changing policy.
+
+
+## 2026-06-25 Tool Blocker Reclassification
+- Remote arXiv Preflight run 28145232079 passed on commit 018a2a4, so missing local TeX and arxiv_latex_cleaner tools are no longer submission-gate blockers.
+- Local latexmk and arxiv_latex_cleaner checks remain optional advisory benchmarks for developer convenience and additional assurance only.
+- The authoritative gate remains the repo-native cleaner plus CI arXiv Preflight unless a future isolated benchmark proves stricter behavior without destructive side effects.

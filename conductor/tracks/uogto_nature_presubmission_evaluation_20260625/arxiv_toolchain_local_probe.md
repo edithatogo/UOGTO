@@ -30,3 +30,9 @@ Install a TeX Live/MiKTeX toolchain with `latexmk` or run the strict PDF/arXiv p
 - Local gates passed after the CI fixes: focused arXiv workflow/source-package tests, affected ontology-visual tests, affected article-hardening tests, make validate, and full pytest with 189 tests.
 - Remote GitHub Actions passed on 018a2a4: Validate UOGTO run 28145232100, Build WIDOCO Pages run 28145232082, and arXiv Preflight run 28145232079.
 - This remote pass supersedes the earlier local-only PDF blocker for the CI submission gate. The local workstation still lacks latexmk, pdflatex, and optional TeX audit tools, so local external-tool benchmarking remains advisory until those tools are installed or run in isolated CI jobs.
+
+ 
+## 2026-06-25 Blocker Reclassification 
+- Supersedes earlier local-tool blocker notes in this track. Remote arXiv Preflight run 28145232079 passed on commit 018a2a4, so missing local TeX and arxiv_latex_cleaner tools are optional advisory benchmarking gaps only. 
+- Disposition: CI-proven arXiv gate is complete; local external-tool benchmarking remains useful but is not a submission blocker. 
+- Next local hardening step: install TeX Live or MiKTeX plus arxiv-latex-cleaner in an isolated environment and compare manifests without replacing the repo-native cleaner.

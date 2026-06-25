@@ -29,3 +29,8 @@ Assess whether the presentation can brief an editor, reviewer, or senior interdi
 - Prefer one major idea per slide.
 - Avoid unsupported novelty or superiority claims.
 - End with a clear decision and next-actions slide.
+
+## 2026-06-25 Asset Inventory Disposition
+- No existing PowerPoint or presentation deck was found in the repository search.
+- The track now treats this as a deck creation task, not an unresolved discovery blocker.
+- Use powerpoint_asset_inventory.md as the initial eight-slide editorial skeleton for the next implementation pass.
