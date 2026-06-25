@@ -1,6 +1,6 @@
 # Figure and Caption Freeze Manifest
 
-Generated: `2026-06-25T11:53:28+00:00`
+Generated: `2026-06-25T12:41:02+00:00`
 Status: `frozen`
 
 This manifest freezes manuscript and supplement figure numbering, caption intent, placement callouts, rendered/source file hashes, and image score-loop status. If any frozen surface changes, rerun the image scoring loop before submission.

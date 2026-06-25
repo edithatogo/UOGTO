@@ -219,3 +219,17 @@
 - 2026-06-25T10:51:49+00:00: Deck polish local gates passed: PowerPoint-authored deck OpenXML ZIP integrity OK, 8 thumbnails exported at 1920x1080, deck text has no local path markers, `git diff --check` passed, and `make validate` passed.
 
 - 2026-06-25T10:55:55+00:00: PowerPoint deck polish remote CI evidence recorded: `22f9996` deck polish CI green: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, arXiv Preflight `28165111193`.
+
+## 2026-06-25T12:45:00Z - Figure/caption freeze CI evidence (1574b09)
+
+Status: complete and remotely verified.
+
+- Implemented `make figure-caption-freeze` and generated `docs/paper/figure-caption-freeze-manifest.md` / `.json`.
+- The freeze manifest records manuscript figure callouts, Supplementary Figures S1-S7, source/rendered figure hashes, caption/title intent, and the requirement to rerun image scoring if placement, numbering, captions, paths, hashes, or deck placement changes.
+- Local gates passed before commit: `make figure-caption-freeze`, `git diff --check`, and `make validate`.
+- Commit: `1574b09783d46761178c1a0798b7f87da514f14b`.
+- CI evidence:
+- Validate UOGTO: success, run 28170678354
+- Build Manuscript PDF: success, run 28170678355
+- Build WIDOCO Pages: success, run 28170678491
+- arXiv Preflight: success, run 28170678436

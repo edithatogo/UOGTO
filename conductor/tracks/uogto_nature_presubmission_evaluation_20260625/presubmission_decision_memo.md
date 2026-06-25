@@ -51,3 +51,7 @@ Implemented `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-s
 
 ## 2026-06-25T10:21:25+00:00 CI Evidence Update
 - Commit `170399a` passed Validate UOGTO (`28163345123`), Build Manuscript PDF (`28163345086`), Build WIDOCO Pages (`28163345077`), and arXiv Preflight (`28163345131`).
+
+## 2026-06-25T12:45:00Z Figure/caption freeze evidence (1574b09)
+
+The figure/caption freeze gate is implemented and verified. `make figure-caption-freeze` passed locally and CI passed on commit `1574b09783d46761178c1a0798b7f87da514f14b`. Any manuscript, supplement, deck, caption, numbering, source-data, path, or rendered-hash change now requires rerunning the image score loop before final submission packaging.

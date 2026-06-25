@@ -612,3 +612,25 @@
 
 ## 2026-06-25T10:55:55+00:00 - PowerPoint deck polish CI evidence
 - `22f9996` deck polish CI green: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, arXiv Preflight `28165111193`.
+
+## 2026-06-25T12:45:00Z - Figure/caption freeze implementation and CI (1574b09)
+
+Completed the Nature presubmission figure/caption freeze slice.
+
+Actions:
+- Added `scripts/maintenance/build_figure_caption_freeze.py`.
+- Added the `figure-caption-freeze` Make target.
+- Generated `docs/paper/figure-caption-freeze-manifest.md` and `docs/paper/figure-caption-freeze-manifest.json`.
+- Confirmed the manifest freezes main manuscript figure labels, Supplementary Figures S1-S7, figure source/rendered hashes, and 100/100 image score status.
+
+Local validation:
+- `make figure-caption-freeze`: passed.
+- `git diff --check`: passed.
+- `make validate`: passed.
+- Pre-commit validation during `git commit`: passed.
+
+Remote validation for commit `1574b09783d46761178c1a0798b7f87da514f14b`:
+- Validate UOGTO: success, run 28170678354
+- Build Manuscript PDF: success, run 28170678355
+- Build WIDOCO Pages: success, run 28170678491
+- arXiv Preflight: success, run 28170678436

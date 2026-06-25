@@ -33,3 +33,15 @@ Completed `2026-06-25T10:50:25+00:00`. The deck is rebuilt as a valid PowerPoint
 ## CI evidence after deck polish
 
 Recorded `2026-06-25T10:55:55+00:00` for commit `22f9996`: Validate UOGTO `28165111146`, Build Manuscript PDF `28165111152`, Build WIDOCO Pages `28165111115`, and arXiv Preflight `28165111193` all completed successfully.
+
+## Figure/caption freeze evidence (1574b09)
+
+Completed `2026-06-25T12:45:00Z` and remotely verified on commit `1574b09783d46761178c1a0798b7f87da514f14b`.
+
+`make figure-caption-freeze` now generates `docs/paper/figure-caption-freeze-manifest.md` and `docs/paper/figure-caption-freeze-manifest.json`. The manifest freezes manuscript figure callouts, Supplementary Figures S1-S7, source/rendered file hashes, caption/title intent, and image-score-loop status. The submission package must rerun the image score loop if any frozen callout, caption, numbering, placement, path, hash, or deck placement changes before submission.
+
+CI evidence:
+- Validate UOGTO: success, run 28170678354
+- Build Manuscript PDF: success, run 28170678355
+- Build WIDOCO Pages: success, run 28170678491
+- arXiv Preflight: success, run 28170678436

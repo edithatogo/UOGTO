@@ -16,3 +16,10 @@ All manuscript/supplement figure rows in `image_scores.csv` now score 100/100 af
 - PRISMA PDF outputs are `docs/article-hardening/figures/prisma-2020-source-discovery-flow.pdf` and `docs/article-hardening/figures/prisma-2020-screening-flow.pdf`.
 - Network readability was improved by labelling only top bridge sources and preserving context nodes without labels.
 - Colour safety was improved by using an Okabe-Ito-style categorical palette and a white-to-blue sequential scale for heatmaps.
+
+## 2026-06-25T12:45:00Z Figure/caption freeze evidence (1574b09)
+
+- Added `make figure-caption-freeze` and generated `docs/paper/figure-caption-freeze-manifest.md` / `.json`.
+- The gate confirms all frozen image rows remain 100/100 and that manuscript callouts and Supplementary Figures S1-S7 stay synchronized with the score ledger.
+- Rerun the image score loop before submission if any frozen callout, caption, numbering, placement, figure path, figure hash, source data, or deck placement changes.
+- CI passed for commit `1574b09783d46761178c1a0798b7f87da514f14b`: Validate UOGTO `28170678354`, Build Manuscript PDF `28170678355`, Build WIDOCO Pages `28170678491`, arXiv Preflight `28170678436`.

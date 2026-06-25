@@ -23,13 +23,15 @@
     "manuscript_review_complete": false,
     "supplement_review_complete": true,
     "powerpoint_review_complete": true,
-    "image_loop_complete": false,
+    "image_loop_complete": true,
     "decision_memo_complete": false,
-    "arxiv_toolchain_review_complete": false
+    "arxiv_toolchain_review_complete": false,
+    "figure_caption_freeze_complete": true
   },
-  "last_updated": "2026-06-25T10:50:25+00:00",
+  "last_updated": "2026-06-25T12:45:00Z",
   "notes": [
     "Final supplement prose completed with SourceRight and Authentext evidence on 2026-06-25T09:34:00+00:00",
-    "PowerPoint deck final polish completed with 100/100 score and exported thumbnails on 2026-06-25T10:50:25+00:00"
+    "PowerPoint deck final polish completed with 100/100 score and exported thumbnails on 2026-06-25T10:50:25+00:00",
+    "Figure/caption freeze implemented and CI passed for 1574b09783d46761178c1a0798b7f87da514f14b: Validate 28170678354, Manuscript 28170678355, WIDOCO 28170678491, arXiv 28170678436."
   ]
 }
