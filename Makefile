@@ -138,6 +138,10 @@ arxiv-preflight: manuscript-sources
 	python scripts/maintenance/build_manuscript_pdf.py --require-pdf
 	python scripts/maintenance/build_arxiv_source_package.py
 	python scripts/maintenance/clean_arxiv_source_package.py
+	python scripts/maintenance/audit_arxiv_source_privacy.py
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright
+.PHONY: arxiv-privacy-audit
+arxiv-privacy-audit: arxiv-source-package
+	python scripts/maintenance/audit_arxiv_source_privacy.py

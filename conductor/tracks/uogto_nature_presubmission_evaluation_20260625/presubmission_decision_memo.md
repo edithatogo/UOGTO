@@ -27,3 +27,9 @@
 - docs/paper/supplement-package.md now maps article claims to protocol, source register, ontology validation, SHACL, mappings, SSSOM, metrics, figures, RO-Crate, DuckDB, SourceRight, arXiv, governance, and reuse artifacts.
 - docs/paper/supplement-claim-map.csv adds a machine-readable claim-to-artifact table with support level and open-work fields.
 - Supplement score increased from 62 to 78 because the package is now mapped; it is not yet a final typeset supplement.
+
+<!-- arxiv-privacy-audit-update -->
+
+### arXiv Source-Leak/Privacy Audit Update
+
+Implemented `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-source-privacy-audit.md` as explicit audit evidence for comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, and private URLs/local paths. The audit is wired into `arxiv-privacy-audit` and `arxiv-preflight`; missing local external tools remain advisory, not blockers, because CI arXiv preflight is green.

@@ -193,3 +193,5 @@
 - Regenerated ontology-comparison figures through `make ontology-comparison-visuals` with journal-scale typography, accessibility metadata, colourblind-safe palettes, network label simplification, caption/scale notes, and a ranked-bar replacement for the treemap.
 - Added `scripts/maintenance/render_article_hardening_figures.py`, `make article-hardening-figures`, and PRISMA SVG/PDF exports for source discovery and screening flows.
 - Updated Nature presubmission image scores so all 11 manuscript/supplement figures are rescored to 100/100 after loop 1.
+
+- 2026-06-25T07:36:31+00:00: Added arXiv source-leak/privacy audit manifest (`docs/paper/arxiv-source-privacy-audit.json`, `docs/paper/arxiv-source-privacy-audit.md`) and wired `arxiv-privacy-audit` into preflight. Local package and audit targets passed; local full arXiv preflight remains LaTeX-engine blocked, with CI arXiv preflight green.

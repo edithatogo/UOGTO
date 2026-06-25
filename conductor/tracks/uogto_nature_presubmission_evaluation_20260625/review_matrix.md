@@ -17,3 +17,9 @@ First-pass Nature presubmission review executed on 2026-06-25. Manuscript row up
 | Red-team objections | Devil's advocate | 64 | Reviewed | Must-fix | Main risk is overclaiming relative to manuscript maturity and review depth. |
 | arXiv toolchain hardening | arXiv toolchain | 88 | Reviewed | Should-fix | CI gate passes; missing local external tools are optional advisory benchmarking only. |
 | arXiv source leak privacy audit | arXiv toolchain | 78 | Reviewed | Should-fix | CI lane passes; add explicit privacy audit manifest instead of relying on cleaner inference. |
+
+<!-- arxiv-privacy-audit-update -->
+
+### arXiv Source-Leak/Privacy Audit Update
+
+Implemented `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-source-privacy-audit.md` as explicit audit evidence for comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, and private URLs/local paths. The audit is wired into `arxiv-privacy-audit` and `arxiv-preflight`; missing local external tools remain advisory, not blockers, because CI arXiv preflight is green.

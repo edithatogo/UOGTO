@@ -535,3 +535,12 @@
 - Build WIDOCO Pages run 28153770714 passed. 
 - Build Manuscript PDF run 28153770717 passed. 
 - arXiv Preflight run 28153770684 passed.
+
+
+## 2026-06-25T07:36:31+00:00 - arXiv source-leak/privacy manifest implementation
+
+- Added `scripts/maintenance/audit_arxiv_source_privacy.py` and `tests/test_arxiv_privacy_audit.py`.
+- Generated `docs/paper/arxiv-source-privacy-audit.json` and `docs/paper/arxiv-source-privacy-audit.md` from the cleaned arXiv source package.
+- Wired `arxiv-privacy-audit` into `Makefile` and invoked it from `arxiv-preflight`.
+- Scope: comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, private URLs/local paths.
+- Local validation: `make arxiv-source-package`, `make arxiv-privacy-audit`, focused arXiv/privacy tests with workspace-local `--basetemp`, and `make validate` passed. Local full `make arxiv-preflight` remains blocked by missing LaTeX engine; CI arXiv preflight was already green.

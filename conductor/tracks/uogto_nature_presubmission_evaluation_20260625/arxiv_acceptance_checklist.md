@@ -50,3 +50,14 @@ This checklist is aligned to current arXiv TeX submission constraints and the re
 - Remote arXiv Preflight run 28145232079 passed on commit 018a2a4, so missing local TeX and arxiv_latex_cleaner tools are no longer submission-gate blockers.
 - Local latexmk and arxiv_latex_cleaner checks remain optional advisory benchmarks for developer convenience and additional assurance only.
 - The authoritative gate remains the repo-native cleaner plus CI arXiv Preflight unless a future isolated benchmark proves stricter behavior without destructive side effects.
+
+
+## Source-Leak/Privacy Audit Manifest
+
+Status: complete as of `2026-06-25T07:36:31+00:00`.
+
+Evidence surfaces:
+- `docs/paper/arxiv-source-privacy-audit.json`: machine-readable manifest covering comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, and private URLs/local paths.
+- `docs/paper/arxiv-source-privacy-audit.md`: reviewer-readable summary of the same audit.
+
+Policy: the repository-native arXiv source cleaner remains authoritative; external arXiv tooling is advisory unless benchmarked in an isolated output directory. The privacy audit is now part of the local `arxiv-privacy-audit` target and is invoked by `arxiv-preflight` after source package generation/cleaning.

@@ -28,3 +28,17 @@ Pending.
 
 ## 2026-06-25 Executed Review
 - Scores: arXiv toolchain hardening 86 source leak privacy audit 78; CI run 28145232079 passed but add an explicit privacy audit manifest for comments hidden files private notes unused figures logs aux files and metadata.
+
+
+## Source-Leak/Privacy Audit Manifest
+
+Status: implemented and locally passing as of `2026-06-25T07:36:31+00:00`.
+
+Evidence:
+- `docs/paper/arxiv-source-privacy-audit.json`
+- `docs/paper/arxiv-source-privacy-audit.md`
+- `scripts/maintenance/audit_arxiv_source_privacy.py`
+- `tests/test_arxiv_privacy_audit.py`
+- `Makefile` target `arxiv-privacy-audit`
+
+The audit covers comments and disabled/draft blocks, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded PDF/image metadata, credentials, and private URLs/local paths. Local missing optional tools remain advisory; this manifest is repo-native and can run in CI.
