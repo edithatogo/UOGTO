@@ -195,3 +195,5 @@
 - Updated Nature presubmission image scores so all 11 manuscript/supplement figures are rescored to 100/100 after loop 1.
 
 - 2026-06-25T07:36:31+00:00: Added arXiv source-leak/privacy audit manifest (`docs/paper/arxiv-source-privacy-audit.json`, `docs/paper/arxiv-source-privacy-audit.md`) and wired `arxiv-privacy-audit` into preflight. Local package and audit targets passed; local full arXiv preflight remains LaTeX-engine blocked, with CI arXiv preflight green.
+
+- 2026-06-25T07:46:06+00:00: CI evidence for arXiv source-leak/privacy manifest commit `a2ee99d` is green: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116.

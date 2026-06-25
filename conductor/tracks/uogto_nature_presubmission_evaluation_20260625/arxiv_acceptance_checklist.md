@@ -61,3 +61,8 @@ Evidence surfaces:
 - `docs/paper/arxiv-source-privacy-audit.md`: reviewer-readable summary of the same audit.
 
 Policy: the repository-native arXiv source cleaner remains authoritative; external arXiv tooling is advisory unless benchmarked in an isolated output directory. The privacy audit is now part of the local `arxiv-privacy-audit` target and is invoked by `arxiv-preflight` after source package generation/cleaning.
+
+
+### CI Evidence for Privacy Audit Manifest
+
+Commit `a2ee99d` passed the relevant GitHub Actions on 2026-06-25 UTC: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116. The privacy audit manifest is therefore both locally generated and remotely preflighted.

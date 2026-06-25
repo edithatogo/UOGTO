@@ -544,3 +544,10 @@
 - Wired `arxiv-privacy-audit` into `Makefile` and invoked it from `arxiv-preflight`.
 - Scope: comments, hidden files, private notes/referee material, unused figures, aux/log/output files, embedded metadata, credentials, private URLs/local paths.
 - Local validation: `make arxiv-source-package`, `make arxiv-privacy-audit`, focused arXiv/privacy tests with workspace-local `--basetemp`, and `make validate` passed. Local full `make arxiv-preflight` remains blocked by missing LaTeX engine; CI arXiv preflight was already green.
+
+
+## 2026-06-25T07:46:06+00:00 - CI evidence - arXiv source-leak/privacy manifest
+
+- Commit `a2ee99d` pushed to `master`.
+- Green workflow runs: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116.
+- This confirms the repo-native privacy audit wiring did not regress Validate, WIDOCO, Manuscript PDF, or arXiv Preflight in CI.
