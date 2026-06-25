@@ -1,0 +1,28 @@
+{
+  "id": "uogto_nature_presubmission_evaluation_20260625",
+  "title": "Nature-ready presubmission evaluation and improvement",
+  "status": "active",
+  "created": "2026-06-25",
+  "target": "Nature article",
+  "track_type": "presubmission_evaluation",
+  "owner_roles": [
+    "game-theory-professor",
+    "ontology-engineering-reviewer",
+    "simulation-methods-reviewer",
+    "FAIR-reproducibility-reviewer",
+    "Nature-editorial-reviewer",
+    "statistics-and-network-analysis-reviewer",
+    "visual-communications-reviewer",
+    "red-team-devils-advocate-reviewer"
+  ],
+  "acceptance": {
+    "repo_review_complete": false,
+    "ontology_review_complete": false,
+    "evidence_review_complete": false,
+    "manuscript_review_complete": false,
+    "supplement_review_complete": false,
+    "powerpoint_review_complete": false,
+    "image_loop_complete": false,
+    "decision_memo_complete": false
+  }
+}

@@ -1,0 +1,2 @@
+image_id,source_path,rendered_path,usage,caption_or_slide,scientific_accuracy,interpretability,visual_design,reproducibility,accessibility,caption_alignment,nature_readiness,total_score,status,defects,fix_plan,rescore_history,blocker
+image-inventory-pending,,,,,,,,,,,,,pending,Inventory all manuscript supplement dashboard and PowerPoint images before scoring,Populate this row into one row per image and score each criterion,,,

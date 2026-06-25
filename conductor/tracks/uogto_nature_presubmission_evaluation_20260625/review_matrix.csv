@@ -1,0 +1,12 @@
+surface,category,reviewer_lane,score,status,evidence,target_artifact,priority,rationale,acceptance_criterion
+GitHub documentation,repository,FAIR-reproducibility-reviewer,,pending,,README and docs,must-review,Assess whether external reviewers can install validate cite and reuse the ontology,Score and recommendations recorded with direct file evidence
+Repository setup,repository,FAIR-reproducibility-reviewer,,pending,,environment and validation files,must-review,Assess reproducibility from a clean checkout,Validation and setup gaps documented with acceptance criteria
+Ontology core,ontology,ontology-engineering-reviewer,,pending,,ontology modules,must-review,Assess modelling quality annotations SHACL and CQ coverage,All major ontology modules scored with evidence
+Game theory coverage,ontology,game-theory-professor,,pending,,ontology modules and mappings,must-review,Assess whether game theory constructs are correct complete and article-defensible,Missing or misframed constructs triaged
+Simulation and executable semantics,ontology,simulation-methods-reviewer,,pending,,simulation modules examples traces,must-review,Assess ABM DES SD MARL trace and execution-binding claims,Claims matched to artefacts or blockers
+Source discovery evidence,evidence,FAIR-reproducibility-reviewer,,pending,,search logs source inventory RO-Crate DuckDB,must-review,Assess whether evidence register supports strong article claims,Every evidence surface scored and gaps recorded
+Mapping and robustness analyses,evidence,statistics-and-network-analysis-reviewer,,pending,,SSSOM TTL metrics network analysis,must-review,Assess mapping inspectability and robustness,Mapping quality and sensitivity gaps documented
+Manuscript,manuscript,Nature-editorial-reviewer,,pending,,manuscript,must-review,Assess Nature-level novelty framing methods results limitations and claims discipline,Submission decision backed by line-level findings where possible
+Supplement,supplement,Nature-editorial-reviewer,,pending,,supplement,must-review,Assess whether supplement supports rather than hides core methods,Supplement gaps and fixes recorded
+PowerPoint,slides,visual-communications-reviewer,,pending,,presentation files,must-review,Assess editorial narrative visual hierarchy and slide evidence,Slide-by-slide recommendations recorded
+Red-team objections,cross-cutting,red-team-devils-advocate-reviewer,,pending,,all artefacts,must-review,Identify likely rejection points and required rebuttal evidence,Top objections and rebuttal plan recorded
