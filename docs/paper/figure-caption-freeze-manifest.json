@@ -1,0 +1,219 @@
+{
+  "generated_at_utc": "2026-06-25T11:53:28+00:00",
+  "status": "frozen",
+  "freeze_scope": "manuscript and supplement figure numbering, captions, placement callouts, source/rendered file hashes, and image score loop status",
+  "rerun_required_when": [
+    "manuscript Figure~\\ref callouts change",
+    "supplementary figure numbering S1-S7 changes",
+    "caption/title text changes",
+    "source_path or rendered_path changes in image_scores.csv",
+    "any source or rendered figure file hash changes",
+    "any image score drops below 100/100",
+    "manuscript, supplement, or deck placement changes"
+  ],
+  "main_manuscript_callouts": [
+    {
+      "label": "fig:architecture",
+      "frozen_caption_intent": "Semantic separation among game specifications, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, and execution bindings."
+    },
+    {
+      "label": "fig:evidence-heatmap",
+      "frozen_caption_intent": "Source-family evidence levels separating parsed RDF from structured non-RDF, metadata-only, and literature-only evidence."
+    },
+    {
+      "label": "fig:mapping-flow",
+      "frozen_caption_intent": "Candidate-to-review-to-alignment flow for conservative ontology mappings."
+    },
+    {
+      "label": "fig:network-sensitivity",
+      "frozen_caption_intent": "Network-sensitivity view showing bridge concepts and evidence limits."
+    },
+    {
+      "label": "fig:reproducibility",
+      "frozen_caption_intent": "Reproducibility chain from ontology source to validation, mapping, tables, and submission gates."
+    }
+  ],
+  "supplementary_figures": [
+    {
+      "number": "Supplementary Figure S1",
+      "title": "PRISMA-style source discovery flow",
+      "primary_file": "docs/article-hardening/figures/prisma-2020-source-discovery-flow.svg"
+    },
+    {
+      "number": "Supplementary Figure S2",
+      "title": "PRISMA-style screening flow",
+      "primary_file": "docs/article-hardening/figures/prisma-2020-screening-flow.svg"
+    },
+    {
+      "number": "Supplementary Figure S3",
+      "title": "Source-family evidence-level heatmap",
+      "primary_file": "docs/ontology-comparison/figures/source_family_evidence_heatmap.svg"
+    },
+    {
+      "number": "Supplementary Figure S4",
+      "title": "Mapping flow from candidates to decisions",
+      "primary_file": "docs/ontology-comparison/figures/mapping_flow_sankey.svg"
+    },
+    {
+      "number": "Supplementary Figure S5",
+      "title": "Source-module overlap heatmap",
+      "primary_file": "docs/ontology-comparison/figures/source_module_overlap_heatmap.svg"
+    },
+    {
+      "number": "Supplementary Figure S6",
+      "title": "Source similarity network",
+      "primary_file": "docs/ontology-comparison/figures/source_similarity_network.svg"
+    },
+    {
+      "number": "Supplementary Figure S7",
+      "title": "Reviewer workload and mapping review distribution",
+      "primary_file": "docs/ontology-comparison/figures/reviewer_workload.svg"
+    }
+  ],
+  "image_score_rows": [
+    {
+      "image_id": "ontology-source-sizes",
+      "source_path": "docs/ontology-comparison/figures/source_sizes_bar.svg",
+      "rendered_path": "docs/ontology-comparison/figures/source_sizes_bar.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Source sizes by source",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "3c94ed9eb40db3889917d46ad52c7229f41396031e60b77065df0b7fce5f70d1",
+      "rendered_sha256": "3c94ed9eb40db3889917d46ad52c7229f41396031e60b77065df0b7fce5f70d1",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "match-classes",
+      "source_path": "docs/ontology-comparison/figures/match_classes_bar.svg",
+      "rendered_path": "docs/ontology-comparison/figures/match_classes_bar.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Mapping match classes",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "0da194e3a998d736ff923778b69d69042136f8361c26bcfb3d74e219bd06e154",
+      "rendered_sha256": "0da194e3a998d736ff923778b69d69042136f8361c26bcfb3d74e219bd06e154",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "reviewer-workload",
+      "source_path": "docs/ontology-comparison/figures/reviewer_workload.svg",
+      "rendered_path": "docs/ontology-comparison/figures/reviewer_workload.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Reviewer workload",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "bad498f6214a40d0e5dafcb4792ac7f863fb134933774803329ef9538b322bde",
+      "rendered_sha256": "bad498f6214a40d0e5dafcb4792ac7f863fb134933774803329ef9538b322bde",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "source-family-evidence",
+      "source_path": "docs/ontology-comparison/figures/source_family_evidence_heatmap.svg",
+      "rendered_path": "docs/ontology-comparison/figures/source_family_evidence_heatmap.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Evidence-level coverage heatmap",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "3b90c8600d37440dd03244949e573df326f2c880edf415e8b91dcbd887c462af",
+      "rendered_sha256": "3b90c8600d37440dd03244949e573df326f2c880edf415e8b91dcbd887c462af",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "source-family-terms",
+      "source_path": "docs/ontology-comparison/figures/source_family_term_heatmap.svg",
+      "rendered_path": "docs/ontology-comparison/figures/source_family_term_heatmap.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Term-count heatmap",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "36a6c9a1bc1537d8af436ab4467ca95fd0d7b0b4d311076ec54e9d15a47da9a1",
+      "rendered_sha256": "36a6c9a1bc1537d8af436ab4467ca95fd0d7b0b4d311076ec54e9d15a47da9a1",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "source-module-overlap",
+      "source_path": "docs/ontology-comparison/figures/source_module_overlap_heatmap.svg",
+      "rendered_path": "docs/ontology-comparison/figures/source_module_overlap_heatmap.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Source module overlap",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "1712592363b27f2741c9e80353e41d7983ddae4d925cb0bf4bf49c69b6f2f864",
+      "rendered_sha256": "1712592363b27f2741c9e80353e41d7983ddae4d925cb0bf4bf49c69b6f2f864",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "source-similarity-network",
+      "source_path": "docs/ontology-comparison/figures/source_similarity_network.svg",
+      "rendered_path": "docs/ontology-comparison/figures/source_similarity_network.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Source similarity network",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "c38e579bea50a33044790b9d7755ea21f5404ab5605a33e6fb8514fc2972cc81",
+      "rendered_sha256": "c38e579bea50a33044790b9d7755ea21f5404ab5605a33e6fb8514fc2972cc81",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "mapping-flow",
+      "source_path": "docs/ontology-comparison/figures/mapping_flow_sankey.svg",
+      "rendered_path": "docs/ontology-comparison/figures/mapping_flow_sankey.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "Mapping flow",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "24e77caf87fb7c2f7e39e43961c87072c08488b3561a795c9b96f95402f773b3",
+      "rendered_sha256": "24e77caf87fb7c2f7e39e43961c87072c08488b3561a795c9b96f95402f773b3",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "uogto-coverage",
+      "source_path": "docs/ontology-comparison/figures/uogto_coverage_treemap.svg",
+      "rendered_path": "docs/ontology-comparison/figures/uogto_coverage_treemap.svg",
+      "usage": "ontology comparison report",
+      "caption_or_slide": "UOGTO coverage treemap",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "795d7d6fea38050d69046eca3542ae68c3274a5cd15a10f716ac3ab01e334362",
+      "rendered_sha256": "795d7d6fea38050d69046eca3542ae68c3274a5cd15a10f716ac3ab01e334362",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "prisma-source-discovery",
+      "source_path": "docs/article-hardening/figures/prisma-2020-source-discovery-flow.md",
+      "rendered_path": "docs/article-hardening/figures/prisma-2020-source-discovery-flow.pdf",
+      "usage": "article hardening protocol",
+      "caption_or_slide": "PRISMA source discovery flow",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "d27bdea0aebf3f75da2c257539405294bb64ba7486179791210eb0f0e3f918c5",
+      "rendered_sha256": "cded4402de29dfa824efcac723c2b82165edab51e3131887a6295dc37525e4dd",
+      "source_exists": true,
+      "rendered_exists": true
+    },
+    {
+      "image_id": "prisma-screening",
+      "source_path": "docs/article-hardening/figures/prisma-2020-screening-flow.md",
+      "rendered_path": "docs/article-hardening/figures/prisma-2020-screening-flow.pdf",
+      "usage": "article hardening protocol",
+      "caption_or_slide": "PRISMA screening flow",
+      "total_score": 100,
+      "status": "improved-100",
+      "source_sha256": "a5b3d23a331f223681bc6b1a1f784438438556f3fc5f5d91cdac4778c6f38b11",
+      "rendered_sha256": "30adba3a5ed393bf9793a2a713727f378d112915c977846dc113137ecc1622fe",
+      "source_exists": true,
+      "rendered_exists": true
+    }
+  ],
+  "validation_errors": []
+}
