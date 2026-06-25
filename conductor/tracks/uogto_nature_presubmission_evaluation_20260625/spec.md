@@ -14,6 +14,7 @@ The review covers:
 - Manuscript, supplement, bibliography, arXiv readiness, claim discipline, and venue fit.
 - PowerPoint narrative, slide-level evidence, and presentation design.
 - All manuscript, supplement, dashboard, and slide images.
+- arXiv submission hardening tools, package cleaning, source-leak/privacy checks, TeX Live compatibility, and generated-PDF verification.
 
 ## Known Initial Review Targets
 
@@ -22,6 +23,7 @@ The review covers:
 - `docs/ontology-comparison`: ontology mapping report and comparison figures.
 - `validation_report.html`: rendered validation evidence.
 - `scripts/maintenance/build_manuscript_pdf.py` and `.github/workflows/manuscript-pdf.yml`: manuscript build/reproducibility surfaces.
+- `scripts/maintenance/build_arxiv_source_package.py`, `scripts/maintenance/clean_arxiv_source_package.py`, and `docs/release-process.md`: arXiv package cleaning and preflight surfaces.
 - PowerPoint/deck assets: not yet located; record as blocker until a deck exists or a new slide inventory is created.
 
 ## Out of Scope
@@ -35,5 +37,6 @@ This track does not directly rewrite ontology modules, regenerate analysis artef
 - Rubrics are explicit enough for a reviewer to score each surface out of 100.
 - Image improvement loop requires inventory, scoring, concrete fixes, and re-scoring until 100/100 or blocker.
 - Every reviewer lane has a role definition, required checks, and required output.
+- arXiv toolchain review compares candidate tools against the repo-native cleaner and does not replace the authoritative gate unless the benchmark shows stricter behaviour without destructive side effects.
 - `.conductor/status.md` and `.conductor/runlog.md` record the track creation.
 - Validation checks are run and any blockers are recorded.

@@ -81,6 +81,20 @@ Each score must include evidence, a rationale, and an acceptance criterion for i
 | Figures are accessible, high contrast, and projection-safe | 10 |
 | Ends with a clear submission-readiness and next-actions slide | 10 |
 
+
+## arXiv Toolchain Hardening Rubric
+
+| Criterion | Weight |
+| --- | ---: |
+| Repo-native source package cleaner remains deterministic and conservative | 15 |
+| External cleaner benchmark covers arxiv-latex-cleaner without destructive side effects | 10 |
+| Build verification uses latexmk with an arXiv-compatible processor where available | 15 |
+| LaTeX linting covers chktex and lacheck findings with false-positive triage | 10 |
+| Citation checks cover undefined, unused, missing, and extraction-sensitive references | 10 |
+| Source package excludes auxiliary files, output files, referee material, private notes, hidden files, and unused figures | 15 |
+| Filename, case-sensitivity, figure-format, and bibliography checks match current arXiv requirements | 15 |
+| Privacy/source-leak audit checks comments, embedded metadata, credentials, private URLs, and unnecessary source content | 10 |
+
 ## Image Scoring Rubric
 
 Each image is scored out of 100:

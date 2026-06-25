@@ -151,4 +151,10 @@
 - Current state: track scaffold created with specification, protocol, rubrics, review matrices, image scoring workflow, reviewer lanes, recommendations backlog, and decision memo scaffold.
 - Known blocker: no PowerPoint deck was found during initial inspection; implementation should locate it or create a new slide inventory.
 - Next gate: populate review matrices and image inventory during `$conductor-implement`.
+## 2026-06-25 - uogto_nature_presubmission_evaluation_20260625 arXiv Toolchain Hardening
 
+- Status: active
+- Added arXiv toolchain hardening to the Nature presubmission evaluation track.
+- New reviewer lane: `arxiv-toolchain-reviewer`.
+- New artefacts: `arxiv_toolchain_matrix.csv`, `arxiv_toolchain_matrix.md`, `arxiv_acceptance_checklist.md`, and `reviewer_findings/arxiv-toolchain-reviewer.md`.
+- Policy boundary: repo-native arXiv cleaner remains authoritative until external tools are benchmarked in isolated output directories.

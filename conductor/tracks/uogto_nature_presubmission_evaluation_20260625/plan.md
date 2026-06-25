@@ -11,6 +11,7 @@ Create a professor-level, Nature-standard presubmission evaluation of UOGTO cove
 - Every image below 100/100 has a concrete improvement loop and re-score plan.
 - Every recommendation has a priority, rationale, owner role, target artefact, and acceptance criterion.
 - Reviewer findings exist for all specialist lanes.
+- arXiv hardening tools are evaluated against the repo-native source package cleaner and classified as required, optional, advisory, or rejected.
 - The final decision memo gives one of: `ready`, `ready after minor fixes`, `major revision before submission`, or `not yet submission-ready`.
 - Repo validation gates are recorded before and after the review work.
 
@@ -28,7 +29,7 @@ Create a professor-level, Nature-standard presubmission evaluation of UOGTO cove
 
 ## Phase 2: Specialist Reviews
 
-Run eight independent review lanes and write one report per lane under `reviewer_findings/`.
+Run nine independent review lanes and write one report per lane under `reviewer_findings/`.
 
 | Lane | Primary Question | Required Output |
 | --- | --- | --- |
@@ -40,6 +41,17 @@ Run eight independent review lanes and write one report per lane under `reviewer
 | `statistics-and-network-analysis-reviewer` | Are quantitative analyses valid, sensitive, and interpretable? | Metrics, robustness checks, sensitivity analyses, uncertainty, and reporting findings. |
 | `visual-communications-reviewer` | Are figures and slides publication-grade? | Per-image visual defects, redesign instructions, accessibility checks. |
 | `red-team-devils-advocate-reviewer` | What would a hostile reviewer reject? | Likely objections, missing controls, inflated claims, and rebuttal requirements. |
+| `arxiv-toolchain-reviewer` | Which external tools can safely harden arXiv submission packaging? | Tool matrix, acceptance checklist, privacy audit, and conservative gate recommendation. |
+
+
+## Phase 2A: arXiv Toolchain Hardening Review
+
+1. Treat `scripts/maintenance/build_arxiv_source_package.py`, `scripts/maintenance/clean_arxiv_source_package.py`, `make arxiv-source-package`, `make arxiv-source-clean`, and `make arxiv-preflight` as the repo-native baseline.
+2. Evaluate `arxiv-latex-cleaner`, `latexmk`, `chktex`, `lacheck`, `checkcites`, `latexpand`, `texfot`, `texloganalyser`, and optional `tectonic`.
+3. Record each tool in `arxiv_toolchain_matrix.csv` and `arxiv_toolchain_matrix.md` with purpose, install path, licence, maintenance status, Windows/CI viability, false-positive risk, and recommended disposition.
+4. Populate `arxiv_acceptance_checklist.md` against current arXiv constraints: no extraneous files, safe filenames, case-sensitive references, PDFLaTeX-compatible figures, bibliography completeness, generated-PDF verification, TeX Live 2023/2025 compatibility, and source-leak/privacy review.
+5. Run candidate tools only in dry-run mode or isolated `.tmp` output directories during implementation.
+6. Keep the repo-native cleaner authoritative unless an external tool proves stricter without destructive side effects.
 
 ## Phase 3: Scoring and Recommendation Synthesis
 
@@ -79,6 +91,7 @@ Run and record:
 - `git status --short`
 - `make validate`
 - arXiv/source package preflight where available
-- placeholder sweep for `TODO`, `FIXME`, `TBD`, `stub`, `placeholder`, and `NotImplementedError`
+- arXiv toolchain matrix and acceptance checklist completeness
+- unfinished-marker sweep using the repo standard marker list
 
 The track is complete only when every planned artefact exists, every matrix has been populated, and every blocker is explicit.

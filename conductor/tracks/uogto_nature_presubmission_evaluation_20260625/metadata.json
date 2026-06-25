@@ -13,7 +13,8 @@
     "Nature-editorial-reviewer",
     "statistics-and-network-analysis-reviewer",
     "visual-communications-reviewer",
-    "red-team-devils-advocate-reviewer"
+    "red-team-devils-advocate-reviewer",
+    "arxiv-toolchain-reviewer"
   ],
   "acceptance": {
     "repo_review_complete": false,
@@ -23,6 +24,7 @@
     "supplement_review_complete": false,
     "powerpoint_review_complete": false,
     "image_loop_complete": false,
-    "decision_memo_complete": false
+    "decision_memo_complete": false,
+    "arxiv_toolchain_review_complete": false
   }
 }

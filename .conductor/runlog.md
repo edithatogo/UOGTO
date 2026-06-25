@@ -472,4 +472,9 @@
 - Added specialist reviewer lanes for game theory, ontology engineering, simulation methods, FAIR/reproducibility, Nature editorial review, statistics/network analysis, visual communication, and red-team review.
 - Added image improvement loop requirements: inventory, score out of 100, fix, re-render, and re-score until 100/100 or explicit blocker.
 - Added pending review matrices, recommendations backlog, PowerPoint review template, and presubmission decision memo scaffold.
+## 2026-06-25 - uogto_nature_presubmission_evaluation_20260625 arXiv Toolchain Hardening
 
+- Extended the Nature presubmission evaluation track with an arXiv submission-tool review lane.
+- Added a tool matrix for repo-native cleaner, arxiv-latex-cleaner, latexmk, chktex, lacheck, checkcites, latexpand, texfot, texloganalyser, and tectonic.
+- Added an arXiv acceptance checklist covering package contents, filenames, figures, bibliography, build verification, and privacy/source-leak audit.
+- Updated the protocol, plan, review matrix, recommendations, metadata, and index to include arXiv toolchain hardening.

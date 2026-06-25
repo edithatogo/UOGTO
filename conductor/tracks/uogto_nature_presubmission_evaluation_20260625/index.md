@@ -12,6 +12,10 @@
 - [Image Scores Markdown](image_scores.md)
 - [Recommendations](recommendations.md)
 - [PowerPoint Recommendations](powerpoint_recommendations.md)
+- [arXiv Toolchain Matrix CSV](arxiv_toolchain_matrix.csv)
+- [arXiv Toolchain Matrix Markdown](arxiv_toolchain_matrix.md)
+- [arXiv Acceptance Checklist](arxiv_acceptance_checklist.md)
+- [arXiv Toolchain Local Probe](arxiv_toolchain_local_probe.md)
 - [Presubmission Decision Memo](presubmission_decision_memo.md)
 - [Reviewer Findings](reviewer_findings/)
 

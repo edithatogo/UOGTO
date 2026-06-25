@@ -15,3 +15,5 @@
 | Red-team objections | Cross-cutting | Red-team/devil's-advocate reviewer |  | Pending | Must-review | Top objections and rebuttal plan recorded. |
 
 Scores are populated during implementation after each reviewer lane inspects the underlying artefacts.
+| arXiv toolchain hardening | Submission | arXiv-toolchain reviewer |  | Pending | Must-review | Tool matrix, acceptance checklist, and conservative gate recommendation recorded. |
+| arXiv source leak privacy audit | Submission | arXiv-toolchain reviewer |  | Pending | Must-review | Privacy audit findings and required remediations recorded. |

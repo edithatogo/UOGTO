@@ -198,6 +198,26 @@ def clean_package(package_dir: Path, source_root: Path | None = None, paper_name
     return manifest
 
 
+def resolve_default_package_dir(package_dir: Path) -> Path:
+    """Resolve the latest generated package when the default path is requested."""
+    if package_dir != DEFAULT_OUTPUT_DIR:
+        return package_dir
+    manifests = sorted(
+        package_dir.parent.glob(f"{package_dir.name}-*.manifest.json"),
+        key=lambda path: path.stat().st_mtime,
+        reverse=True,
+    )
+    for manifest_path in manifests:
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        candidate = Path(manifest.get("package_dir", ""))
+        if candidate.exists() and (candidate / DEFAULT_PAPER).exists():
+            return candidate
+    return package_dir
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Clean an arXiv source package by removing extraneous files.")
     parser.add_argument("--package-dir", default=str(DEFAULT_OUTPUT_DIR), help="Path to the source package tree to clean.")
@@ -205,7 +225,7 @@ def main() -> None:
     parser.add_argument("--paper", default=DEFAULT_PAPER, help="Main TeX file name inside the package.")
     parser.add_argument("--json", action="store_true", help="Print the cleaning manifest as JSON.")
     args = parser.parse_args()
-    manifest = clean_package(Path(args.package_dir), Path(args.source_root), args.paper)
+    manifest = clean_package(resolve_default_package_dir(Path(args.package_dir)), Path(args.source_root), args.paper)
     if args.json:
         print(json.dumps(manifest, indent=2))
     else:
