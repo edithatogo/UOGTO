@@ -199,3 +199,5 @@
 - 2026-06-25T07:46:06+00:00: CI evidence for arXiv source-leak/privacy manifest commit `a2ee99d` is green: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116.
 
 - 2026-06-25T07:53:14+00:00: Added article-facing ontology/evidence tables under `docs/article-hardening/article-facing-tables` for module audit, missing-game-theory dispositions, and mapping robustness/SSSOM/sensitivity/calibration evidence.
+
+- 2026-06-25T07:58:34+00:00: CI evidence for article-facing ontology/evidence tables commit `c7443e6` is green: Validate UOGTO 28155549125; Build WIDOCO Pages 28155549095.

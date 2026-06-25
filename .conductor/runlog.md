@@ -558,3 +558,10 @@
 - Added reproducible generator `scripts/maintenance/build_article_evidence_tables.py`.
 - Generated CSV/JSON/Markdown tables under `docs/article-hardening/article-facing-tables`.
 - Tables cover module audit, missing game-theory element dispositions, and mapping robustness with SSSOM, ablations, network sensitivity, calibration, and adjudication evidence.
+
+
+## 2026-06-25T07:58:34+00:00 - CI evidence - article-facing ontology/evidence tables
+
+- Commit `c7443e6` pushed to `master`.
+- Green workflow runs: Validate UOGTO 28155549125; Build WIDOCO Pages 28155549095.
+- This confirms the generated article-facing tables did not regress validation or WIDOCO documentation builds.
