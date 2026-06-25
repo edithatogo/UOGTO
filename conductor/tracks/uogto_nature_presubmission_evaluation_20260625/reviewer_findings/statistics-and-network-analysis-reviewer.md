@@ -22,3 +22,7 @@ Pending.
 - Sensitivity and robustness gaps.
 - Figure/table improvement recommendations.
 - Claims that require stronger statistical support.
+
+
+## 2026-06-25 Executed Review
+- Score: 83 out of 100; mapping candidates SSSOM TTL overlap metrics network sensitivity and reviewer calibration artifacts are present but need a compact article robustness table.

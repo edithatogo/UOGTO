@@ -23,3 +23,8 @@ Pending.
 - Must-fix modelling issues.
 - Validation and reasoner risks.
 - Mapping and governance recommendations.
+
+
+## 2026-06-25 Executed Review
+- Score: 86 out of 100. Core ontology modules parse and examples validate under SHACL through make validate.
+- Must improve before Nature submission: add a compact module audit table covering labels definitions SHACL coverage examples competency-question links OWL profile and reasoner status.

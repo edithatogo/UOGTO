@@ -484,3 +484,9 @@
 - Local gates passed: focused arXiv workflow/source-package and ontology-visual tests passed, affected article-hardening tests passed, make validate passed, and full pytest passed with 189 tests.
 - Remote GitHub Actions passed on 018a2a4: Validate UOGTO run 28145232100, Build WIDOCO Pages run 28145232082, and arXiv Preflight run 28145232079.
 - The next substantive phase is to execute the pending Nature presubmission review matrix for uogto_nature_presubmission_evaluation_20260625; no additional CI fix lane is currently open.
+
+## 2026-06-25 - Nature Presubmission Review Execution
+- Executed the pending review matrix for uogto_nature_presubmission_evaluation_20260625 and replaced pending rows with scored reviewed or blocked statuses.
+- Recorded ontology core score 86 arXiv toolchain score 86 and arXiv source-leak privacy audit score 78 with concrete acceptance criteria.
+- Scored 11 figure or flow assets in image_scores.csv and recorded that PowerPoint remains blocked because no deck was located.
+- Updated reviewer findings recommendations and presubmission decision memo with a major revision before submission verdict.

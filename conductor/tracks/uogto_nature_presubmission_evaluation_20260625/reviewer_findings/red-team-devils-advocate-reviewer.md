@@ -22,3 +22,5 @@ Pending.
 - Top likely objections.
 - Required rebuttal evidence.
 - Claims to narrow, remove, or reframe.
+## 2026-06-25 Executed Review
+- Score: 64 out of 100; main rejection risks are overclaiming Nature readiness weak manuscript maturity insufficient manual adjudication depth and missing slide evidence.

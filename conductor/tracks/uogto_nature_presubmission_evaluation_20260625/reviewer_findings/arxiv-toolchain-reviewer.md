@@ -24,3 +24,7 @@ Pending.
 - Completed `arxiv_acceptance_checklist.md`.
 - Recommendation on whether any external tool should become required, optional, advisory, or rejected.
 - Exact blockers for missing local tools or CI support.
+
+
+## 2026-06-25 Executed Review
+- Scores: arXiv toolchain hardening 86 source leak privacy audit 78; CI run 28145232079 passed but add an explicit privacy audit manifest for comments hidden files private notes unused figures logs aux files and metadata.

@@ -22,3 +22,7 @@ Pending.
 - Image-level defects and fixes.
 - Slide-level recommendations in `powerpoint_recommendations.md`.
 - Re-score history until 100/100 or blocker.
+
+
+## 2026-06-25 Executed Review
+- Score: PowerPoint 20 out of 100 because no deck was located; image_scores.csv now scores 11 existing figure or flow assets and requires improvement loops to 100 or precise blockers.

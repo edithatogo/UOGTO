@@ -22,3 +22,7 @@ Pending.
 - Release and citation blockers.
 - Evidence-package completeness findings.
 - Reproducibility acceptance tests.
+
+
+## 2026-06-25 Executed Review
+- Scores: GitHub documentation 82 repository setup 88 source discovery evidence 87; add reviewer quickstart with expected command outputs release asset map and live evidence-refresh checklist.
