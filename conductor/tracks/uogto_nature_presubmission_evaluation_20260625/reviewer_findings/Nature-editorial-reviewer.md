@@ -24,3 +24,7 @@ Pending.
 - Venue-fit recommendation.
 ## 2026-06-25 Executed Review
 - Scores: manuscript 48 supplement 62; manuscript is a short scaffold and must be rewritten as a full article with novelty claim methods results figures limitations and disciplined claims.
+
+## 2026-06-25 Manuscript Rewrite Follow-up
+- Manuscript score updated from 48 to 72 after docs/paper/paper.tex was rewritten as a full article draft.
+- Remaining editorial requirements: integrate final figures, add claim-boundary and robustness tables, align supplement structure, and tighten the Nature-level narrative.

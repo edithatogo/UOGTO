@@ -178,3 +178,4 @@
 - PowerPoint deck absence is now a needs-creation task documented in conductor/tracks/uogto_nature_presubmission_evaluation_20260625/powerpoint_asset_inventory.md. 
 - Missing local latexmk pdflatex tectonic and arxiv_latex_cleaner tools are optional advisory benchmark gaps because CI arXiv Preflight run 28145232079 passed. 
 - Next implementation work should create the deck and source-leak privacy manifest rather than continue searching for local arXiv tools.
+

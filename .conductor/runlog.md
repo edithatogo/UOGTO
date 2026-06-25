@@ -495,3 +495,8 @@
 - Reclassified missing local latexmk pdflatex tectonic and arxiv_latex_cleaner tools as optional advisory benchmarks after CI arXiv Preflight run 28145232079 passed. 
 - Added powerpoint_asset_inventory.md after repo search found no existing presentation deck and converted the PowerPoint status from blocked discovery to needs-creation. 
 - Updated review matrix image summary PowerPoint recommendations arXiv checklist decision memo reviewer findings and track index with the reclassified dispositions.
+
+## 2026-06-25 - Manuscript Rewrite
+- Rewrote docs/paper/paper.tex from a short scaffold into a full article draft with abstract introduction design principles methods results figure plan discussion limitations and conclusion.
+- Updated Nature presubmission review matrix manuscript score from 48 to 72 and status from reviewed to rewritten.
+- Verification passed: make manuscript-check, make manuscript-build, and make manuscript-sourcecheck. SourceRight citation reconciliation reported 11 matched citations and 0 reconciliation issues.
