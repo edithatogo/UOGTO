@@ -1,0 +1,4 @@
+sample_id,sampled_decision,source_label,target_label,source_id,target_id,source_definition,target_definition,reviewer_a_decision,reviewer_b_decision,adjudicated_decision,adjudication_status
+cal-001,accepted,Action,Move,uogto:Action,ext:Move,A discrete choice.,A discrete move.,accepted,accepted,accepted,adjudicated
+cal-002,accepted,Strategy,Strategy,uogto:Strategy,ext:Strategy,A plan of action.,A plan of action.,accepted,accepted,accepted,adjudicated
+cal-003,rejected,Payoff,Outcome,uogto:Payoff,ext:Outcome,Reward assigned to an action.,Result of a game.,rejected,accepted,rejected,adjudicated
