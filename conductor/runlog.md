@@ -216,7 +216,7 @@
   - `docs/paper/arxiv-strict-review-report.md`;
   - `docs/paper/arxiv-strict-review-iterations.jsonl`.
 - Updated arXiv submission metadata, category rationale, author/license steps, replacement notes, arXiv contract, documentation index, RI-HERO status, and Conductor status.
-- Updated GitHub labels and main branch protection; `main` now requires `Validate UOGTO` and `Required Gate`.
+- Updated GitHub labels. Temporarily tested adding `Required Gate` to branch protection, then restored branch protection to `Validate UOGTO` only because GitHub cannot satisfy a newly added required workflow until that workflow exists on `main`.
 - Verification:
   - focused tests passed: `12 passed`;
   - `make validate` passed;
@@ -226,4 +226,5 @@
   - `make manuscript-pdf` passed;
   - `make arxiv-upload-ready` passed; regenerated upload tarball SHA-256 `37aa1e6e3b9148fbdea56ebc9bfcc71695687e5809c030cb3c71b9115613d046`;
   - `make arxiv-strict-review` passed with normalized score `998.18/1000`, no blockers, and minimum category score `98.0%`.
+- Opened PR #20 from the existing hardening branch, confirmed GitHub reported it as conflicting against current `main`, and closed it with an explanatory comment. The implementation commit remains pushed on `codex/arxiv-submittable-hardening`.
 - Remaining external steps are manual arXiv upload, arXiv-rendered PDF inspection, and arXiv identifier recording.

@@ -48,4 +48,4 @@ Updated: `2026-07-02`
   - `docs/paper/arxiv-strict-review-rubric.md`
   - `docs/paper/arxiv-strict-review-report.md`
   - `docs/paper/arxiv-strict-review-iterations.jsonl`
-- Remaining repo-side follow-up: run the new GitHub `Required Gate` on the pushed branch, then update `main` branch protection to require it.
+- Remaining repo-side follow-up: introduce the new GitHub `Required Gate` through a mergeable branch, run it on GitHub, then update `main` branch protection to require it.
