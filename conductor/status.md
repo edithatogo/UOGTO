@@ -48,4 +48,4 @@ Updated: `2026-07-02`
   - `docs/paper/arxiv-strict-review-rubric.md`
   - `docs/paper/arxiv-strict-review-report.md`
   - `docs/paper/arxiv-strict-review-iterations.jsonl`
-- Remaining repo-side follow-up: introduce the new GitHub `Required Gate` through a mergeable branch, run it on GitHub, then update `main` branch protection to require it.
+- Repo-side rollout status: replacement PR #21 (`codex/repo-arxiv-hardening-clean-20260703`) is mergeable and has passing `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight` checks on commit `4e7bb47`; `main` branch protection now requires both `Validate UOGTO` and `Required Gate`. Merge remains blocked only by the configured required review.
