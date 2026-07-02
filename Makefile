@@ -1,4 +1,4 @@
-PYTHON ?= $(if $(wildcard .pixi/envs/default/python.exe),.pixi/envs/default/python.exe,python)
+PYTHON ?= $(firstword $(wildcard .pixi/envs/default/python.exe .pixi/envs/default/bin/python) python)
 ARXIV_PDF_FLAGS ?= --require-pdf
 ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
 

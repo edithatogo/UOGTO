@@ -3,6 +3,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 from collections.abc import Iterable
 from pathlib import Path
 
@@ -29,11 +30,13 @@ BLOCKING_WARNING_PATTERNS = (
 
 
 def bundled_tectonic_candidates() -> Iterable[Path]:
-    yield ROOT / ".pixi" / "envs" / "default" / "Library" / "bin" / "tectonic.exe"
-    yield ROOT / ".pixi" / "envs" / "default" / "Scripts" / "tectonic.exe"
+    suffix = ".exe" if sys.platform == "win32" else ""
+    yield ROOT / ".pixi" / "envs" / "default" / "Library" / "bin" / f"tectonic{suffix}"
+    yield ROOT / ".pixi" / "envs" / "default" / "Scripts" / f"tectonic{suffix}"
+    yield ROOT / ".pixi" / "envs" / "default" / "bin" / f"tectonic{suffix}"
     plugin_root = Path.home() / ".codex" / "plugins" / "cache" / "openai-bundled" / "latex"
     if plugin_root.exists():
-        yield from sorted(plugin_root.glob("*/bin/tectonic.exe"))
+        yield from sorted(plugin_root.glob(f"*/bin/tectonic{suffix}"))
 
 
 def check_tex_structure(paper_path: Path) -> list[str]:

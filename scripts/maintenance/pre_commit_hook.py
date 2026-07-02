@@ -43,8 +43,10 @@ def main():
     # 3. Run Makefile validations
     pixi_path = shutil.which("pixi")
     if not pixi_path:
+        suffix = ".exe" if sys.platform == "win32" else ""
         for candidate in [
-            os.path.expanduser(r"~\.pixi\bin\pixi.exe"),
+            os.path.expanduser(f"~/.pixi/bin/pixi{suffix}"),
+            os.path.expanduser(f"~/.local/bin/pixi{suffix}"),
             os.path.expanduser(r"~\AppData\Local\pixi\bin\pixi.exe"),
         ]:
             if os.path.exists(candidate):

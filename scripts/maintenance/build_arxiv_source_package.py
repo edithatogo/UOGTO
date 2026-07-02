@@ -31,7 +31,8 @@ def build_package(source_root: Path = DEFAULT_SOURCE_ROOT, package_dir: Path = D
     manifest_path = stage_dir.parent / f"{stage_dir.name}.manifest.json"
     if manifest_path.exists():
         manifest_path.unlink()
-    stage_dir.mkdir(parents=True, exist_ok=False)
+    # Recreate the staging directory after cleanup without failing on a concurrent reappearance.
+    stage_dir.mkdir(parents=True, exist_ok=True)
     copy_source_tree(source_root, stage_dir)
     manifest = clean_package(stage_dir, source_root)
     return manifest

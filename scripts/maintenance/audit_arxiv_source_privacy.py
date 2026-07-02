@@ -54,7 +54,7 @@ CREDENTIAL_RE = re.compile(
 PRIVATE_URL_RE = re.compile(
     r"(https?://(?:localhost|127\.0\.0\.1|10\.|192\.168\.|172\.(?:1[6-9]|2[0-9]|3[01])\.)[^\s{}<>]*|"
     r"file://[^\s{}<>]*|[A-Za-z]:[\\/](?:Users|tmp|Temp|Windows|Program Files)[^\s{}<>]*|"
-    r"/(?:Users|home|tmp|var/tmp)/[^\s{}<>]*|(?<![A-Za-z0-9])\\\\[A-Za-z0-9_.-]+\\[^\s{}<>]+)",
+    r"(?<![A-Za-z0-9_.-])/(?:Users|home|tmp|var/tmp)/[^\s{}<>]*|(?<![A-Za-z0-9])\\\\[A-Za-z0-9_.-]+\\[^\s{}<>]+)",
     re.I,
 )
 PDF_METADATA_RE = re.compile(
