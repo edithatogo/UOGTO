@@ -1,0 +1,24 @@
+- name: bug
+  color: d73a4a
+  description: Reproducible defect in ontology assets, scripts, workflows, or generated outputs.
+- name: documentation
+  color: 0075ca
+  description: Documentation, examples, glossary, or explanatory material.
+- name: ontology-change
+  color: 5319e7
+  description: Classes, properties, modules, alignments, deprecations, or modelling decisions.
+- name: validation
+  color: c2e0c6
+  description: RDF, SHACL, competency-query, packaging, or CI validation work.
+- name: question
+  color: d876e3
+  description: Contributor or modelling question that may need discussion before implementation.
+- name: good first issue
+  color: 7057ff
+  description: Scoped issue suitable for a first contribution.
+- name: needs-discussion
+  color: fbca04
+  description: Needs maintainer or community discussion before implementation.
+- name: breaking-change
+  color: b60205
+  description: Potentially incompatible ontology, API, artifact, or workflow change.

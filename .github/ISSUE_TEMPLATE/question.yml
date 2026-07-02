@@ -1,0 +1,17 @@
+name: Question
+about: Ask a modelling, reuse, contribution, or publication-process question
+title: "[Question]: "
+labels: question
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like clarified?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add links, terms, examples, or papers that help frame the question.

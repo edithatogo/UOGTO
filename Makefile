@@ -2,7 +2,7 @@ PYTHON ?= $(firstword $(wildcard .pixi/envs/default/python.exe .pixi/envs/defaul
 ARXIV_PDF_FLAGS ?= --require-pdf
 ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
 
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables ontology-snapshot-supplement figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight arxiv-preflight-strict arxiv-upload-ready arxiv-upload-ready-strict release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables ontology-snapshot-supplement figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight arxiv-preflight-strict arxiv-upload-ready arxiv-upload-ready-strict arxiv-strict-review required-gate release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -155,6 +155,11 @@ arxiv-preflight-strict:
 
 arxiv-upload-ready-strict:
 	$(MAKE) arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
+
+arxiv-strict-review:
+	$(PYTHON) scripts/maintenance/score_arxiv_submission.py --threshold 995
+
+required-gate: validate test publishing-metadata registry-links manuscript-pdf arxiv-upload-ready arxiv-strict-review
 article-facing-tables:
 	$(PYTHON) scripts/maintenance/build_article_evidence_tables.py
 

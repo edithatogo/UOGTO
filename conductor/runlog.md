@@ -199,3 +199,31 @@
 - Generated `docs/article-hardening/candidate-decision-ledger.md`, `.csv`, and `.json`.
 - The ledger covers 511 rows: 7 search routes, 39 source candidates, 460 mapping candidates, and 5 ontology-inclusion candidates.
 - Each ledger row records candidate scope, candidate identifier, decision status/class, rationale, assumptions or heuristics, source artefact, and evidence detail.
+
+## 2026-07-02 Repo and arXiv Submission Hardening Track
+
+- Created Conductor track `repo_arxiv_submission_hardening_20260702`.
+- Added public contribution polish:
+  - expanded `CONTRIBUTING.md`;
+  - ontology, validation, documentation, bug, and question issue templates;
+  - stronger pull request template;
+  - `.github/labels.yml`;
+  - `.reuse/dep5` dual-license metadata.
+- Cleaned active workflow triggers to target `main` instead of `master` and added `.github/workflows/required-gate.yml`.
+- Added strict arXiv reviewer simulation:
+  - `scripts/maintenance/score_arxiv_submission.py`;
+  - `docs/paper/arxiv-strict-review-rubric.md`;
+  - `docs/paper/arxiv-strict-review-report.md`;
+  - `docs/paper/arxiv-strict-review-iterations.jsonl`.
+- Updated arXiv submission metadata, category rationale, author/license steps, replacement notes, arXiv contract, documentation index, RI-HERO status, and Conductor status.
+- Updated GitHub labels and main branch protection; `main` now requires `Validate UOGTO` and `Required Gate`.
+- Verification:
+  - focused tests passed: `12 passed`;
+  - `make validate` passed;
+  - `make test` passed: `220 passed, 21 warnings`;
+  - `make publishing-metadata` passed;
+  - `make registry-links` passed;
+  - `make manuscript-pdf` passed;
+  - `make arxiv-upload-ready` passed; regenerated upload tarball SHA-256 `37aa1e6e3b9148fbdea56ebc9bfcc71695687e5809c030cb3c71b9115613d046`;
+  - `make arxiv-strict-review` passed with normalized score `998.18/1000`, no blockers, and minimum category score `98.0%`.
+- Remaining external steps are manual arXiv upload, arXiv-rendered PDF inspection, and arXiv identifier recording.

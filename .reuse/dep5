@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: UOGTO
+Upstream-Contact: UOGTO Contributors
+Source: https://github.com/edithatogo/UOGTO
+
+Files: ontologies/* shapes/* jsonld/* examples/* competency-questions/* docs/* conductor/* .zenodo.json CITATION.cff README.md CHANGELOG.md CONDUCTOR.md CODE_OF_CONDUCT.md CONTRIBUTING.md SECURITY.md
+Copyright: 2026 UOGTO Contributors
+License: CC-BY-4.0
+
+Files: scripts/* tests/* pyproject.toml pixi.toml pixi.lock Makefile .github/* .gitignore .gitattributes
+Copyright: 2026 UOGTO Contributors
+License: MIT
+
+Files: LICENSE
+Copyright: Creative Commons
+License: CC-BY-4.0
+
+Files: LICENSE-CODE
+Copyright: 2026 UOGTO Contributors
+License: MIT

@@ -88,6 +88,15 @@ Publisher artifact evidence:
 | Citation reconciliation | pass | SourceRight citation reconciliation reports 19 matched citations and 0 issues. |
 | Upload artifact determinism | pass | CI artifact manifest must report `dirty: false`, `dirty_file_count: 0`, and `dirty_entries: []`; tarball SHA-256 must match `SHA256SUMS`. |
 | GitHub provenance attestation | pass | `.github/workflows/arxiv-preflight.yml` uses `actions/attest@v4` with `subject-checksums: dist/arxiv/SHA256SUMS`; the downloaded artifact must pass `gh attestation verify <tarball> --repo edithatogo/UOGTO`. |
+| Strict arXiv reviewer simulation | pass | `docs/paper/arxiv-strict-review-report.md` records `998.18/1000`, no blockers, and a minimum category score of `98.0%`; the only warning is the expected local pre-commit dirty-manifest provenance deduction. |
+
+## Strict arXiv Review Simulation
+
+The strict local review loop now uses `scripts/maintenance/score_arxiv_submission.py`, `docs/paper/arxiv-strict-review-rubric.md`, `docs/paper/arxiv-strict-review-report.md`, and `docs/paper/arxiv-strict-review-iterations.jsonl`.
+
+The simulated reviewer roles are: arXiv compliance moderator, TeX/source processor reviewer, metadata/category reviewer, copyright/license reviewer through the metadata-policy checks, source-integrity reviewer, source-leak/privacy reviewer through the privacy-audit checks, manuscript readability reviewer, PDF visual reviewer, and publisher/provenance reviewer.
+
+The score is normalized to `1000` from the raw category weights. Current status is `pass`: `998.18/1000`, no blockers, no category below `98%`. Final clean-tree evidence must still come from the committed GitHub `Required Gate` or arXiv Preflight run before upload.
 
 ## Remaining External Steps
 

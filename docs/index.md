@@ -14,6 +14,8 @@
 ## Registry and Publication
 - [arXiv submission process](paper/arxiv-submission-process.md)
 - [arXiv submission contract](paper/arxiv-submission-contract.md)
+- [arXiv strict review rubric](paper/arxiv-strict-review-rubric.md)
+- [arXiv strict review report](paper/arxiv-strict-review-report.md)
 - [arXiv post-submission provenance record template](paper/arxiv-post-submission-record-template.md)
 - [LaTeX visual presentation scorecard](paper/latex-visual-presentation-scorecard.md)
 - [LOV submission](registry/lov-submission.md)

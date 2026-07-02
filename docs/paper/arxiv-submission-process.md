@@ -37,6 +37,38 @@ Local builds may use bundled Tectonic when `latexmk` or `pdflatex` is unavailabl
 8. In the arXiv UI, verify the selected processor and TeX Live version, then inspect the rendered PDF before final submission.
 9. After arXiv assigns an identifier, complete `docs/paper/arxiv-post-submission-record-template.md` and record the identifier in release notes, citation metadata, and registry/publication status documents.
 
+## Submission Metadata
+
+The arXiv web form remains the authoritative submission surface. Use ASCII-only metadata and verify every field before final submission.
+
+| Field | Current value or instruction |
+| --- | --- |
+| Title | `Universal Open Game Theory Ontology (UOGTO): An extensible semantic resource for strategic-interaction evidence` |
+| Authors | `Dylan A Mordaunt` |
+| Abstract | Use the manuscript abstract from `docs/paper/paper.tex`, converted to arXiv-safe plain text if needed. |
+| Primary category | Proposed primary category: `cs.AI`, subject to arXiv endorsement and final author confirmation in the UI. |
+| Cross-list candidates | Consider `cs.MA` and `econ.TH` only if arXiv permits the cross-list and the final author agrees. |
+| Comments | Suggested: `Preprint; includes ontology-engineering methods, source-discovery evidence, and repository artefacts.` |
+| Report number | Leave blank unless an institution supplies one. |
+| Journal reference | Leave blank before journal publication. |
+| DOI | Leave blank before journal DOI assignment. |
+
+### Category rationale
+
+The paper presents a machine-readable ontology and validation/repository workflow for strategic-interaction evidence. The proposed `cs.AI` primary category is appropriate because the work supports AI, multi-agent, simulation, and knowledge-graph uses. `cs.MA` and `econ.TH` may be relevant as cross-lists because game-theoretic and multi-agent content is central, but the final category choice must be made by the registered submitting author in the arXiv UI.
+
+### Author and License Steps
+
+- The paper must be submitted by Dylan A Mordaunt or another eligible registered arXiv author acting under arXiv's third-party submission rules.
+- The intended path is author self-submit by a registered arXiv author.
+- The submitting author must confirm any required endorsement before upload.
+- The submitting author must agree to the arXiv submittal agreement, code of conduct, privacy policy, moderation policy, and irrevocable license to distribute the submitted work.
+- Metadata should avoid non-ASCII punctuation copied from the PDF because arXiv metadata fields reject some Unicode characters.
+
+## Replacement and Rollback Notes
+
+If arXiv processing fails or the rendered PDF shows a material problem, do not approve the submission. Correct the source package, rebuild the upload-ready artifact, rerun the strict review gate, and upload a corrected source package. If a problem is discovered after announcement, prepare a replacement version and record the reason, arXiv identifier, source manifest, commit, and rendered-PDF inspection in the post-submission record.
+
 ## Implemented Controls
 
 - Cleaned source package that excludes unused figures, auxiliary outputs, hidden files, private notes, journal templates, and unreferenced source files.

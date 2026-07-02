@@ -1,0 +1,40 @@
+name: Ontology Change Proposal
+about: Propose a class, property, module, alignment, deprecation, or modelling change
+title: "[Ontology]: "
+labels: ontology-change, needs-discussion
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What ontology change are you proposing?
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: What modelling gap, competency question, or reuse case motivates this?
+    validations:
+      required: true
+  - type: textarea
+    id: affected_terms
+    attributes:
+      label: Affected terms or modules
+      description: List existing or proposed classes, properties, modules, examples, or alignments.
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution_contract
+    attributes:
+      label: Expected contribution contract
+      options:
+        - label: New or changed classes/properties will include `rdfs:label` and `skos:definition`.
+        - label: SHACL shapes will be updated if validation invariants change.
+        - label: Examples and competency queries will be updated if retrieval behavior changes.
+        - label: Documentation, glossary, release, registry, or manuscript impacts will be noted.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add papers, standards, related ontologies, issues, or examples.
