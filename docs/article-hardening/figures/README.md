@@ -8,5 +8,8 @@ This directory holds article-hardening figures, including PRISMA 2020-style flow
 - `prisma-2020-screening-flow.md`
 - `prisma-2020-screening-flow.svg`
 - `prisma-2020-screening-flow.pdf`
+- `systematic-search-prisma-flow.md`
+- `systematic-search-prisma-flow.svg`
+- `systematic-search-prisma-flow.pdf`
 
 The SVG and PDF exports are generated from `scripts/maintenance/render_article_hardening_figures.py`. The PDF files are intended as PDFLaTeX-compatible manuscript assets.

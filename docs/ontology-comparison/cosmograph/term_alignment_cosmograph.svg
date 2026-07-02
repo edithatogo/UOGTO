@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+<title id="title">Term Alignment Cosmograph view</title><desc id="desc">Term Alignment Cosmograph view</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<defs><radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#E2E8F0"/></radialGradient></defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<text class="title" x="42" y="52">Term Alignment Cosmograph view</text>
+<text class="caption" x="42" y="82">Static Cosmograph-style rendering from the generated node/edge CSVs; node size encodes degree and edge opacity encodes weight.</text>
+<line x1="260.0" y1="170.0" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="241.1" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="312.2" x2="1140.0" y2="596.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="383.3" x2="1140.0" y2="810.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="454.4" x2="1140.0" y2="276.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="525.6" x2="1140.0" y2="490.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="596.7" x2="1140.0" y2="703.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="667.8" x2="1140.0" y2="276.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="738.9" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="810.0" x2="1140.0" y2="383.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<circle cx="1140.0" cy="170.0" r="27.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="276.7" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="170.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="241.1" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="312.2" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="383.3" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="454.4" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="525.6" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="596.7" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="667.8" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="738.9" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="810.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="383.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="490.0" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="596.7" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="703.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="810.0" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<text class="tiny" text-anchor="end" x="1105.0" y="174.0">UOGTO: Description</text>
+<text class="tiny" text-anchor="end" x="1111.7" y="280.7">UOGTO: Agent</text>
+<text class="tiny" text-anchor="start" x="281.7" y="174.0">Description</text>
+<text class="tiny" text-anchor="start" x="281.7" y="245.1">Description</text>
+<text class="tiny" text-anchor="start" x="281.7" y="316.2">Identifier</text>
+<text class="tiny" text-anchor="start" x="281.7" y="387.3">Thing</text>
+<text class="tiny" text-anchor="start" x="281.7" y="458.4">Agent</text>
+<text class="tiny" text-anchor="start" x="281.7" y="529.6">Role</text>
+<text class="tiny" text-anchor="start" x="281.7" y="600.7">Observes</text>
+<text class="tiny" text-anchor="start" x="281.7" y="671.8">Agent</text>
+<text class="tiny" text-anchor="start" x="281.7" y="742.9">Description</text>
+<text class="tiny" text-anchor="start" x="281.7" y="814.0">Action</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="387.3">UOGTO: Action</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="494.0">UOGTO: Role</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="600.7">UOGTO: Identifier</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="707.3">UOGTO: Observes</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="814.0">UOGTO: Thing</text>
+<rect x="30" y="842" width="520" height="70" fill="#FFFFFF" opacity="0.82" rx="8"/>
+<circle cx="42" cy="868" r="7" fill="#D97706"/>
+<text class="tiny" x="55" y="872">source</text>
+<circle cx="168" cy="868" r="7" fill="#2563EB"/>
+<text class="tiny" x="181" y="872">external term</text>
+<circle cx="294" cy="868" r="7" fill="#0F766E"/>
+<text class="tiny" x="307" y="872">UOGTO term/module</text>
+<circle cx="420" cy="868" r="7" fill="#9333EA"/>
+<text class="tiny" x="433" y="872">format/import/evidence</text>
+<text class="caption" x="42" y="958">Rendered nodes: 17 of 17; rendered edges: 10 of 10.</text>
+</svg>

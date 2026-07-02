@@ -1,0 +1,50 @@
+name: RI-HERO Meta-Program Intake
+about: Intake for RI-HERO cross-cutting program work and synthesis
+labels: ri-hero, ri-hero-epic
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What RI-HERO work is being proposed or updated?
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why this belongs in RI-HERO
+      description: Describe the health-economics outcomes or synthesis framing.
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Suggested layer
+      options:
+        - Epic
+        - Workstream
+        - Deliverable
+        - External dependency
+        - Monitoring
+    validations:
+      required: true
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Workstream
+      options:
+        - RI-HERO synthesis
+        - Conductor
+        - Ontology
+        - Validation
+        - Publishing
+        - Registry
+        - Research
+        - Maintenance
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Supporting links
+      description: Issue, PR, project, or external references.

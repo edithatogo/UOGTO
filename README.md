@@ -36,8 +36,24 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - Release and DOI workflow notes are maintained in [docs/releases/v1.0.md](docs/releases/v1.0.md).
 - Citation metadata is provided in [CITATION.cff](CITATION.cff).
 - Zenodo archive metadata is provided in [.zenodo.json](.zenodo.json).
+- Documentation index is available at [docs/index.md](docs/index.md).
 - Registry preparation materials for LOV and OLS are under [docs/registry/](docs/registry/).
 - Comparative ontology mapping outputs, figures, and report are under [docs/ontology-comparison/](docs/ontology-comparison/), with the main report at [docs/ontology-comparison/report.md](docs/ontology-comparison/report.md).
+
+## RI-HERO
+The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as part of a broader health economics research on outcomes framing.
+
+- RI-HERO project: `RI-HERO Meta-Program`
+- RI-HERO project board: [RI-HERO Meta-Program](https://github.com/users/edithatogo/projects/9)
+- Intake form: `.github/ISSUE_TEMPLATE/ri-hero-meta-program.yml`
+- Publication intake form: `.github/ISSUE_TEMPLATE/ri-hero-publication-registry.yml`
+- Implementation intake form: `.github/ISSUE_TEMPLATE/ri-hero-implementation-validation.yml`
+- Program structure: synthesis, implementation, publication/registry, monitoring
+- Synthesis epics: program governance, operating model, and outcomes evidence mapping
+- RI-HERO status page: [docs/ri-hero-status.md](docs/ri-hero-status.md)
+- Discussions:
+  - [Welcome to UOGTO Discussions](https://github.com/edithatogo/UOGTO/discussions/17)
+  - [RI-HERO Meta-Program](https://github.com/edithatogo/UOGTO/discussions/18)
 
 ## Licensing
 This project is dual-licensed:

@@ -1,0 +1,87 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1040 560] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2846 >>
+stream
+BT
+0.2 0.25 0.32 rg /F1 20 Tf 42 520 Td (PRISMA-style systematic search and ontology enrichment flow) Tj
+/F1 10 Tf 42 492 Td (Broad source discovery, source-family screening, feature extraction, candidate mapping review, and conservative alignment outcomes) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 439 Td (Search records/routes) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 423 Td (6 inclusion + 1 negative) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 407 Td (n=7) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 319 Td (Article-hardening records) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 303 Td (identified and normalized) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 287 Td (n=39) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 199 Td (Evidence sources retained) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 183 Td (for synthesis) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 84 167 Td (n=39) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 319 Td (Comparative source) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 303 Td (families reviewed) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 287 Td (n=21 sources / 17 families) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 199 Td (Terms normalized) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 183 Td (from UOGTO + sources) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 167 Td (n=4,037) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 319 Td (Mapping candidates) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 303 Td (reviewed) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 287 Td (n=460) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 199 Td (Accepted conservative) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 183 Td (alignments) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 167 Td (n=10) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 79 Td (Needs domain review) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 754 63 Td (n=1) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 79 Td (Rejected / non-asserted) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 63 Td (negative evidence) Tj
+0.1 0.15 0.2 rg /F1 11 Tf 419 47 Td (n=449) Tj
+ET
+1 1 1 rg 0 0 1040 560 re f
+0.95 0.97 0.99 rg 70 383 230 82 re f
+0.0 0.45 0.70 RG 70 383 230 82 re S
+0.95 0.97 0.99 rg 70 263 230 82 re f
+0.0 0.45 0.70 RG 70 263 230 82 re S
+0.95 0.97 0.99 rg 70 143 230 82 re f
+0.0 0.45 0.70 RG 70 143 230 82 re S
+0.95 0.97 0.99 rg 405 263 230 82 re f
+0.0 0.45 0.70 RG 405 263 230 82 re S
+0.95 0.97 0.99 rg 405 143 230 82 re f
+0.0 0.45 0.70 RG 405 143 230 82 re S
+0.95 0.97 0.99 rg 740 263 230 82 re f
+0.0 0.45 0.70 RG 740 263 230 82 re S
+0.95 0.97 0.99 rg 740 143 230 82 re f
+0.0 0.45 0.70 RG 740 143 230 82 re S
+0.95 0.97 0.99 rg 740 23 230 82 re f
+0.0 0.45 0.70 RG 740 23 230 82 re S
+0.95 0.97 0.99 rg 405 23 230 82 re f
+0.0 0.45 0.70 RG 405 23 230 82 re S
+0.3 0.36 0.44 RG 2 w 185.0 424.0 m 185.0 304.0 l S
+0.3 0.36 0.44 RG 2 w 185.0 304.0 m 185.0 184.0 l S
+0.3 0.36 0.44 RG 2 w 185.0 184.0 m 520.0 304.0 l S
+0.3 0.36 0.44 RG 2 w 520.0 304.0 m 520.0 184.0 l S
+0.3 0.36 0.44 RG 2 w 520.0 184.0 m 855.0 304.0 l S
+0.3 0.36 0.44 RG 2 w 855.0 304.0 m 855.0 184.0 l S
+0.3 0.36 0.44 RG 2 w 855.0 304.0 m 855.0 64.0 l S
+0.3 0.36 0.44 RG 2 w 855.0 304.0 m 520.0 64.0 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000242 00000 n 
+0000003140 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+3210
+%%EOF

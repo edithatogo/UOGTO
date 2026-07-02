@@ -8,7 +8,7 @@ def build():
     
     # 1. Merge Ontologies
     merged_ontology = Graph()
-    ttl_files = glob.glob("ontologies/**/*.ttl", recursive=True)
+    ttl_files = sorted(glob.glob("ontologies/**/*.ttl", recursive=True))
     for ttl in ttl_files:
         print(f"Parsing and merging {ttl}...")
         merged_ontology.parse(ttl, format="turtle")
@@ -28,7 +28,7 @@ def build():
 
     # 2. Merge SHACL shapes
     merged_shapes = Graph()
-    shacl_files = glob.glob("shapes/*.ttl")
+    shacl_files = sorted(glob.glob("shapes/*.ttl"))
     for shacl in shacl_files:
          print(f"Parsing and merging SHACL shape {shacl}...")
          merged_shapes.parse(shacl, format="turtle")
@@ -36,7 +36,7 @@ def build():
     print(f"Merged SHACL shapes saved to dist/uogto-shapes.ttl. Total triples: {len(merged_shapes)}")
 
     # 3. Copy JSON-LD Contexts
-    contexts = glob.glob("jsonld/*.jsonld")
+    contexts = sorted(glob.glob("jsonld/*.jsonld"))
     for ctx in contexts:
         dest = os.path.join("dist", os.path.basename(ctx))
         with open(ctx, "r", encoding="utf-8") as src_f:

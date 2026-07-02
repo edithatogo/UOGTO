@@ -14,7 +14,8 @@
       "status": "pass"
     },
     "embedded_metadata": {
-      "metadata_bearing_files": 0,
+      "metadata_bearing_files": 1,
+      "metadata_files_reviewed": 3,
       "private_metadata_hits": 0,
       "status": "pass"
     },
@@ -35,12 +36,25 @@
       "status": "pass"
     }
   },
-  "cleaner_manifest": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/.tmp/arxiv-source-package-a22457ff.manifest.json",
+  "cleaner_manifest": ".tmp/arxiv-source-package.manifest.json",
   "cleaner_summary": null,
   "findings": [],
-  "generated_at_utc": "2026-06-25T10:15:22+00:00",
-  "metadata_records": [],
-  "package_dir": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/.tmp/arxiv-source-package-a22457ff",
+  "generated_at_utc": "deterministic-local-preflight",
+  "metadata_records": [
+    {
+      "metadata_keys": [
+        "Author",
+        "CreationDate",
+        "Creator",
+        "ModDate",
+        "Producer",
+        "Title"
+      ],
+      "path": "figures/term-alignment-cosmograph.pdf",
+      "private_hits": []
+    }
+  ],
+  "package_dir": ".tmp/arxiv-source-package",
   "policy": {
     "embedded_metadata_rule": "Metadata keys are recorded; only private-looking embedded values fail the audit.",
     "failure_categories": [
@@ -60,10 +74,10 @@
   "summary": {
     "comment_lines_reviewed": 0,
     "failures": 0,
-    "files_reviewed": 1,
+    "files_reviewed": 4,
     "findings": 0,
-    "metadata_bearing_files": 0,
-    "metadata_files_reviewed": 0,
+    "metadata_bearing_files": 1,
+    "metadata_files_reviewed": 3,
     "text_files_reviewed": 1
   }
 }

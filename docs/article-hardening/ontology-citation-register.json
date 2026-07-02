@@ -1,0 +1,241 @@
+{
+  "schema": "uogto.ontology-citation-register.v1",
+  "citations": [
+    {
+      "id": "arxiv-2006-06580v3",
+      "type": "article",
+      "title": "Online Learning in Iterated Prisoner's Dilemma to Mimic Human Behavior",
+      "authors": [
+        "Baihan Lin",
+        "Djallel Bouneffouf",
+        "Guillermo Cecchi"
+      ],
+      "year": 2020,
+      "doi": null,
+      "url": "http://arxiv.org/abs/2006.06580v3",
+      "source_note": "Imported from arxiv."
+    },
+    {
+      "id": "arxiv-api",
+      "type": "webpage",
+      "title": "arXiv API User Manual",
+      "authors": [
+        "arXiv"
+      ],
+      "year": null,
+      "doi": null,
+      "url": "https://info.arxiv.org/help/api/index.html",
+      "source_note": "Literature search metadata source cited by the manuscript."
+    },
+    {
+      "id": "crossref",
+      "type": "webpage",
+      "title": "Crossref",
+      "authors": [
+        "Crossref"
+      ],
+      "year": null,
+      "doi": null,
+      "url": "https://www.crossref.org/",
+      "source_note": "DOI and publication metadata source cited by the manuscript."
+    },
+    {
+      "id": "gale-shapley-1962",
+      "type": "article-journal",
+      "title": "College Admissions and the Stability of Marriage",
+      "authors": [
+        "David Gale",
+        "Lloyd S. Shapley"
+      ],
+      "year": 1962,
+      "doi": "10.1080/00029890.1962.11989827",
+      "url": "https://doi.org/10.1080/00029890.1962.11989827",
+      "source_note": "Foundational matching-market reference cited by the manuscript."
+    },
+    {
+      "id": "gruber-1995",
+      "type": "article-journal",
+      "title": "Toward Principles for the Design of Ontologies Used for Knowledge Sharing",
+      "authors": [
+        "Thomas R. Gruber"
+      ],
+      "year": 1995,
+      "doi": "10.1006/ijhc.1995.1081",
+      "url": "https://doi.org/10.1006/ijhc.1995.1081",
+      "source_note": "Ontology-engineering design reference cited by the manuscript."
+    },
+    {
+      "id": "harsanyi-1967",
+      "type": "article-journal",
+      "title": "Games with Incomplete Information Played by Bayesian Players, I-III. Part I. The Basic Model",
+      "authors": [
+        "John C. Harsanyi"
+      ],
+      "year": 1967,
+      "doi": "10.1287/mnsc.14.3.159",
+      "url": "https://doi.org/10.1287/mnsc.14.3.159",
+      "source_note": "Foundational incomplete-information game reference cited by the manuscript."
+    },
+    {
+      "id": "myerson-1981",
+      "type": "article-journal",
+      "title": "Optimal Auction Design",
+      "authors": [
+        "Roger B. Myerson"
+      ],
+      "year": 1981,
+      "doi": "10.1287/moor.6.1.58",
+      "url": "https://doi.org/10.1287/moor.6.1.58",
+      "source_note": "Foundational mechanism-design and auction reference cited by the manuscript."
+    },
+    {
+      "id": "nash-1950",
+      "type": "article-journal",
+      "title": "Equilibrium Points in n-Person Games",
+      "authors": [
+        "John F. Nash"
+      ],
+      "year": 1950,
+      "doi": "10.1073/pnas.36.1.48",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.36.1.48",
+      "source_note": "Foundational non-cooperative equilibrium reference cited by the manuscript."
+    },
+    {
+      "id": "nisan-2007",
+      "type": "book",
+      "title": "Algorithmic Game Theory",
+      "authors": [
+        "Noam Nisan",
+        "Tim Roughgarden",
+        "Eva Tardos",
+        "Vijay V. Vazirani"
+      ],
+      "year": 2007,
+      "doi": null,
+      "url": "https://www.cambridge.org/core/books/algorithmic-game-theory/0092C07CA8B724E1B1BE2238DDD66B38",
+      "source_note": "Algorithmic game theory reference cited by the manuscript."
+    },
+    {
+      "id": "open-spiel-2019",
+      "type": "article",
+      "title": "OpenSpiel: A Framework for Reinforcement Learning in Games",
+      "authors": [
+        "Marc Lanctot",
+        "OpenSpiel Contributors"
+      ],
+      "year": 2019,
+      "doi": "10.48550/arxiv.1908.09453",
+      "url": "https://arxiv.org/abs/1908.09453",
+      "source_note": "Reference implementation and game-learning toolkit cited by the manuscript."
+    },
+    {
+      "id": "openalex",
+      "type": "webpage",
+      "title": "OpenAlex: The Open Catalog to the Global Research System",
+      "authors": [
+        "OpenAlex"
+      ],
+      "year": null,
+      "doi": null,
+      "url": "https://openalex.org/",
+      "source_note": "Literature search metadata source cited by the manuscript."
+    },
+    {
+      "id": "rapoport-chammah-1965",
+      "type": "book",
+      "title": "Prisoner's Dilemma",
+      "authors": [
+        "Anatol Rapoport",
+        "Albert M. Chammah"
+      ],
+      "year": 1965,
+      "doi": "10.3998/mpub.20269",
+      "url": "https://doi.org/10.3998/mpub.20269",
+      "source_note": "Imported from openalex."
+    },
+    {
+      "id": "shapley-1953",
+      "type": "chapter",
+      "title": "A Value for n-Person Games",
+      "authors": [
+        "Lloyd S. Shapley"
+      ],
+      "year": 1953,
+      "doi": "10.1515/9781400881970-018",
+      "url": "https://doi.org/10.1515/9781400881970-018",
+      "source_note": "Foundational cooperative-game reference cited by the manuscript."
+    },
+    {
+      "id": "vickrey-1961",
+      "type": "article-journal",
+      "title": "Counterspeculation, Auctions, and Competitive Sealed Tenders",
+      "authors": [
+        "William Vickrey"
+      ],
+      "year": 1961,
+      "doi": "10.1111/j.1540-6261.1961.tb02789.x",
+      "url": "https://doi.org/10.1111/j.1540-6261.1961.tb02789.x",
+      "source_note": "Foundational auction-theory reference cited by the manuscript."
+    },
+    {
+      "id": "w3c-json-ld11",
+      "type": "webpage",
+      "title": "JSON-LD 1.1",
+      "authors": [
+        "W3C JSON-LD Working Group"
+      ],
+      "year": 2020,
+      "doi": null,
+      "url": "https://www.w3.org/TR/json-ld11/",
+      "source_note": "Linked data serialization standard relevant to UOGTO contexts."
+    },
+    {
+      "id": "w3c-owl2-overview",
+      "type": "webpage",
+      "title": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
+      "authors": [
+        "W3C OWL Working Group"
+      ],
+      "year": 2012,
+      "doi": null,
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "source_note": "Core ontology language standard cited by the manuscript."
+    },
+    {
+      "id": "w3c-rdf11-concepts",
+      "type": "webpage",
+      "title": "RDF 1.1 Concepts and Abstract Syntax",
+      "authors": [
+        "W3C RDF Working Group"
+      ],
+      "year": 2014,
+      "doi": null,
+      "url": "https://www.w3.org/TR/rdf11-concepts/",
+      "source_note": "RDF graph model standard cited by the manuscript."
+    },
+    {
+      "id": "w3c-shacl",
+      "type": "webpage",
+      "title": "Shapes Constraint Language (SHACL)",
+      "authors": [
+        "W3C Data Shapes Working Group"
+      ],
+      "year": 2017,
+      "doi": null,
+      "url": "https://www.w3.org/TR/shacl/",
+      "source_note": "Validation language standard cited by the manuscript."
+    },
+    {
+      "id": "w3c-sparql11-query",
+      "type": "webpage",
+      "title": "SPARQL 1.1 Query Language",
+      "authors": [
+        "W3C SPARQL Working Group"
+      ],
+      "year": 2013,
+      "doi": null,
+      "url": "https://www.w3.org/TR/sparql11-query/",
+      "source_note": "Competency-query language standard cited by the manuscript."
+    }
+  ]
+}

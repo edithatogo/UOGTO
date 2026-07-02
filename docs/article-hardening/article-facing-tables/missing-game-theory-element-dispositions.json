@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-06-25T08:39:44+00:00",
+  "generated_at_utc": "deterministic-local-preflight",
   "row_count": 5,
   "rows": [
     {
       "candidate_id": "cand-001",
-      "candidate_label": "",
+      "candidate_label": "strategic-interaction ontology core term",
       "disposition": "domain review",
       "evidence_level": "parsed_rdf_owl",
       "external_alignment": "core ontology namespace",
@@ -12,11 +12,11 @@
       "reviewer_handoff": "peer_review",
       "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
       "source_family": "game-theory-ontology",
-      "uogto_target": ""
+      "uogto_target": "uogto core ontology namespace"
     },
     {
       "candidate_id": "cand-002",
-      "candidate_label": "",
+      "candidate_label": "discrete-event simulation transition semantics",
       "disposition": "domain review",
       "evidence_level": "structured_non_rdf",
       "external_alignment": "external mapping only",
@@ -24,11 +24,11 @@
       "reviewer_handoff": "peer_review",
       "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
       "source_family": "discrete_event_simulation",
-      "uogto_target": ""
+      "uogto_target": "execution or simulation extension"
     },
     {
       "candidate_id": "cand-003",
-      "candidate_label": "",
+      "candidate_label": "agent-based run and state-transition trace",
       "disposition": "domain review",
       "evidence_level": "parsed_rdf_owl",
       "external_alignment": "execution binding module",
@@ -36,11 +36,11 @@
       "reviewer_handoff": "editorial_review",
       "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
       "source_family": "agent_based_modelling",
-      "uogto_target": ""
+      "uogto_target": "execution binding module"
     },
     {
       "candidate_id": "cand-004",
-      "candidate_label": "",
+      "candidate_label": "system-dynamics feedback-loop game feature",
       "disposition": "domain review",
       "evidence_level": "metadata_only",
       "external_alignment": "feedback-loop module",
@@ -48,11 +48,11 @@
       "reviewer_handoff": "devil_advocate",
       "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
       "source_family": "system_dynamics",
-      "uogto_target": ""
+      "uogto_target": "feedback-loop extension candidate"
     },
     {
       "candidate_id": "cand-005",
-      "candidate_label": "",
+      "candidate_label": "no robust general health-economics game ontology found",
       "disposition": "domain review",
       "evidence_level": "literature_only",
       "external_alignment": "none",
@@ -60,7 +60,7 @@
       "reviewer_handoff": "peer_review",
       "source_artifact": "docs/article-hardening/uogto-inclusion-candidates.json",
       "source_family": "negative_evidence_no_relevant_ontology_found",
-      "uogto_target": ""
+      "uogto_target": "none"
     }
   ],
   "schema": "uogto.article.missing-game-theory-element-dispositions.v1",

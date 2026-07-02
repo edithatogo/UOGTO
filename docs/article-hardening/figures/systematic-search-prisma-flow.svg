@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc">
+<title id="title">PRISMA-style systematic search and ontology enrichment flow</title>
+<desc id="desc">Broad source discovery, source-family screening, feature extraction, candidate mapping review, and conservative alignment outcomes for UOGTO.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42" y="42" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#334155">PRISMA-style systematic search and ontology enrichment flow</text>
+<text x="42" y="72" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#475569">Broad source discovery, source-family screening, feature extraction, candidate mapping review, and conservative alignment outcomes for UOGTO.</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect x="70" y="95" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="122" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Search records/routes</tspan><tspan x="86" dy="18">6 inclusion + 1 negative</tspan><tspan x="86" dy="18">n=7</tspan></text>
+<rect x="70" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Article-hardening records</tspan><tspan x="86" dy="18">identified and normalized</tspan><tspan x="86" dy="18">n=39</tspan></text>
+<rect x="70" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="86" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="86" dy="0">Evidence sources retained</tspan><tspan x="86" dy="18">for synthesis</tspan><tspan x="86" dy="18">n=39</tspan></text>
+<rect x="405" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="421" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Comparative source</tspan><tspan x="421" dy="18">families reviewed</tspan><tspan x="421" dy="18">n=21 sources / 17 families</tspan></text>
+<rect x="405" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="421" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Terms normalized</tspan><tspan x="421" dy="18">from UOGTO + sources</tspan><tspan x="421" dy="18">n=4,037</tspan></text>
+<rect x="740" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="756" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Mapping candidates</tspan><tspan x="756" dy="18">reviewed</tspan><tspan x="756" dy="18">n=460</tspan></text>
+<rect x="740" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="756" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Accepted conservative</tspan><tspan x="756" dy="18">alignments</tspan><tspan x="756" dy="18">n=10</tspan></text>
+<rect x="740" y="455" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="756" y="482" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Needs domain review</tspan><tspan x="756" dy="18">n=1</tspan></text>
+<rect x="405" y="455" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
+<text x="421" y="482" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Rejected / non-asserted</tspan><tspan x="421" dy="18">negative evidence</tspan><tspan x="421" dy="18">n=449</tspan></text>
+<line x1="185.0" y1="136.0" x2="185.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="256.0" x2="185.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="185.0" y1="376.0" x2="520.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="520.0" y1="256.0" x2="520.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="520.0" y1="376.0" x2="855.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="855.0" y1="256.0" x2="855.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="855.0" y1="256.0" x2="855.0" y2="496.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
+<line x1="855.0" y1="256.0" x2="520.0" y2="496.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
+<text x="42" y="520" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#64748B">PDF export is generated from the same structured figure specification for PDFLaTeX-safe manuscript packaging.</text>
+</svg>

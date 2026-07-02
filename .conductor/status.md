@@ -35,6 +35,7 @@
 - Article-hardening Phase 2 evidence register is implemented: `docs/article-hardening/search-log.jsonl`, `source-extension-inventory.json`, and `source-extension-inventory.md` provide hash-chained append-only search events, source hashes, evidence levels, inclusion rationales, licence dispositions, and reviewer handoffs for 39 sources.
 - Ontology-comparison mappings now include SSSOM outputs alongside Turtle: `docs/ontology-comparison/accepted-alignments.sssom.tsv` and `accepted-alignments.sssom.yml` are generated from the accepted review rows while keeping `accepted-alignments.ttl` unchanged as RDF alignment output.
 - Article-hardening research governance is implemented: `conductor/agents/article-hardening-research-agents.json`, `conductor/workflows/article-hardening-research-workflow.md`, `.agents/skills/article-hardening-research/SKILL.md`, and `docs/article-hardening/research/phase-research-log.jsonl` define source-discovery, standards-landscape, game-theory-gap, evidence-curation, and reproducibility research handoffs before phase review.
+- arXiv manuscript readability and graph-label polish is implemented: main manuscript prose now passes the textstat 14-year-old-reader target with Flesch-Kincaid grade 8.87, Cosmograph/source-network labels are publication-facing rather than raw IDs, refreshed graph PDFs are copied into `docs/paper/figures/`, and the arXiv upload-ready archive SHA256 is `dd88669d6ddded3baffb9331711837a8c4ffdc0ac1416200a62ed468ea44b1f4`.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.

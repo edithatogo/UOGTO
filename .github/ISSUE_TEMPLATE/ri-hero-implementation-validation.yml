@@ -1,0 +1,46 @@
+name: RI-HERO Implementation and Validation Intake
+about: Intake for RI-HERO implementation, validation, and release-readiness work
+labels: ri-hero, ri-hero-validation
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What implementation or validation work is being proposed or updated?
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Suggested layer
+      options:
+        - Workstream
+        - Deliverable
+        - External dependency
+        - Monitoring
+    validations:
+      required: true
+  - type: dropdown
+    id: focus
+    attributes:
+      label: Focus
+      options:
+        - Conductor
+        - Ontology
+        - Validation
+        - Maintenance
+        - Release readiness
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Exit criteria
+      description: How will this work be considered complete?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Include URLs, test output, issue numbers, or release references.

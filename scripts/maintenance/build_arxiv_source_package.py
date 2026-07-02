@@ -1,9 +1,7 @@
 import argparse
 import json
 import shutil
-import stat
 import sys
-import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,8 +25,14 @@ def copy_source_tree(source_root: Path, package_dir: Path) -> None:
             shutil.copy2(path, destination)
 
 def build_package(source_root: Path = DEFAULT_SOURCE_ROOT, package_dir: Path = DEFAULT_OUTPUT_DIR) -> dict:
-    stage_dir = package_dir.parent / f'{package_dir.name}-{uuid.uuid4().hex[:8]}'
-    stage_dir.mkdir(parents=True, exist_ok=False)
+    stage_dir = package_dir
+    if stage_dir.exists():
+        shutil.rmtree(stage_dir)
+    manifest_path = stage_dir.parent / f"{stage_dir.name}.manifest.json"
+    if manifest_path.exists():
+        manifest_path.unlink()
+    # Recreate the staging directory after cleanup without failing on a concurrent reappearance.
+    stage_dir.mkdir(parents=True, exist_ok=True)
     copy_source_tree(source_root, stage_dir)
     manifest = clean_package(stage_dir, source_root)
     return manifest

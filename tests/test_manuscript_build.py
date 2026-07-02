@@ -68,6 +68,64 @@ class TestManuscriptBuild(unittest.TestCase):
             )
         self.assertFalse(result["ok"])
 
+    def test_find_latex_engine_uses_bundled_tectonic_fallback(self):
+        bundled = self.temp_dir / "tectonic.exe"
+        bundled.write_text("", encoding="utf-8")
+        with mock.patch("scripts.maintenance.build_manuscript_pdf.shutil.which", return_value=None):
+            with mock.patch(
+                "scripts.maintenance.build_manuscript_pdf.bundled_tectonic_candidates",
+                return_value=[bundled],
+            ):
+                self.assertEqual(build_manuscript_pdf.find_latex_engine(), str(bundled))
+
+    def test_build_check_rejects_tectonic_for_strict_arxiv_engine(self):
+        self.write_valid_paper()
+        with mock.patch(
+            "scripts.maintenance.build_manuscript_pdf.find_latex_engine",
+            return_value=r"C:\tools\tectonic.exe",
+        ):
+            result = build_manuscript_pdf.build_manuscript(
+                self.paper,
+                self.temp_dir / "out",
+                require_pdf=True,
+                require_arxiv_engine=True,
+            )
+        self.assertFalse(result["ok"])
+        self.assertIn("arXiv-compatible PDF engine required", result["skipped"])
+
+    def test_blocking_build_warnings_detect_unresolved_references(self):
+        warnings = build_manuscript_pdf.blocking_build_warnings(
+            "LaTeX Warning: Reference `fig:architecture' on page 2 undefined on input line 50.\n"
+            "LaTeX Warning: There were undefined references.\n"
+        )
+        self.assertTrue(any("fig:architecture" in warning for warning in warnings))
+        self.assertTrue(any("undefined references" in warning for warning in warnings))
+
+    def test_build_prefers_final_log_for_blocking_warnings(self):
+        self.write_valid_paper()
+        output_dir = self.temp_dir / "out"
+
+        completed = mock.Mock()
+        completed.returncode = 0
+        completed.stdout = (
+            "LaTeX Warning: Reference `tab:module-audit' on page 7 undefined\n"
+            "There were undefined references\n"
+        )
+        completed.stderr = ""
+
+        def fake_run(*_args, **_kwargs):
+            output_dir.mkdir(parents=True, exist_ok=True)
+            (output_dir / "paper.pdf").write_bytes(b"%PDF-1.4\n")
+            (output_dir / "paper.log").write_text("Final resolved LaTeX log\n", encoding="utf-8")
+            return completed
+
+        with mock.patch("scripts.maintenance.build_manuscript_pdf.find_latex_engine", return_value="latexmk"):
+            with mock.patch("scripts.maintenance.build_manuscript_pdf.subprocess.run", side_effect=fake_run):
+                result = build_manuscript_pdf.build_manuscript(self.paper, output_dir, require_pdf=True)
+
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["blocking_warnings"], [])
+
 
 if __name__ == "__main__":
     unittest.main()

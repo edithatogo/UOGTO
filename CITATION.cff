@@ -1,7 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this ontology, please cite it as below."
 authors:
-  - name: "UOGTO Contributors"
+  - family-names: "Mordaunt"
+    given-names: "Dylan A"
+    affiliation: "Flinders University; NSW Health"
 title: "Universal Open Game Theory Ontology (UOGTO)"
 doi: 10.5281/zenodo.20796937
 version: 1.0.0

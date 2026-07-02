@@ -2,31 +2,52 @@ name: arXiv Preflight
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
     paths:
       - "docs/paper/**"
+      - "docs/release-process.md"
+      - "conductor/agents/arxiv-submission-agents.json"
+      - "conductor/workflows/arxiv-submission-contract-workflow.md"
+      - "Makefile"
+      - "scripts/maintenance/audit_arxiv_source_privacy.py"
       - "scripts/maintenance/build_arxiv_source_package.py"
+      - "scripts/maintenance/build_arxiv_upload_ready.py"
       - "scripts/maintenance/clean_arxiv_source_package.py"
       - "scripts/maintenance/build_manuscript_pdf.py"
       - "scripts/maintenance/check_manuscript_citations.py"
       - "scripts/maintenance/build_manuscript_sources.py"
       - "tests/test_arxiv_source_package.py"
+      - "tests/test_arxiv_upload_ready.py"
+      - "tests/test_arxiv_submission_contract.py"
+      - "tests/test_manuscript_build.py"
       - ".github/workflows/arxiv-preflight.yml"
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
     paths:
       - "docs/paper/**"
+      - "docs/release-process.md"
+      - "conductor/agents/arxiv-submission-agents.json"
+      - "conductor/workflows/arxiv-submission-contract-workflow.md"
+      - "Makefile"
+      - "scripts/maintenance/audit_arxiv_source_privacy.py"
       - "scripts/maintenance/build_arxiv_source_package.py"
+      - "scripts/maintenance/build_arxiv_upload_ready.py"
       - "scripts/maintenance/clean_arxiv_source_package.py"
       - "scripts/maintenance/build_manuscript_pdf.py"
       - "scripts/maintenance/check_manuscript_citations.py"
       - "scripts/maintenance/build_manuscript_sources.py"
       - "tests/test_arxiv_source_package.py"
+      - "tests/test_arxiv_upload_ready.py"
+      - "tests/test_arxiv_submission_contract.py"
+      - "tests/test_manuscript_build.py"
       - ".github/workflows/arxiv-preflight.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
+  attestations: write
+  artifact-metadata: write
+  id-token: write
 
 jobs:
   arxiv-preflight:
@@ -49,10 +70,28 @@ jobs:
       - name: Install LaTeX toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-base texlive-latex-recommended
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-base texlive-latex-recommended texlive-pictures
 
       - name: Run arXiv source package tests
-        run: pytest tests/test_arxiv_source_package.py
+        run: pytest tests/test_arxiv_source_package.py tests/test_arxiv_upload_ready.py
 
       - name: Run arXiv preflight
-        run: make arxiv-preflight
+        run: make arxiv-preflight ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
+
+      - name: Build upload-ready arXiv artifact set
+        run: make arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
+
+      - name: Upload arXiv artifact set
+        uses: actions/upload-artifact@v4
+        with:
+          name: uogto-arxiv-upload-ready
+          path: dist/arxiv/*
+          retention-days: 90
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Attest arXiv source tarball provenance
+        if: github.event_name != 'pull_request'
+        uses: actions/attest@v4
+        with:
+          subject-checksums: dist/arxiv/SHA256SUMS

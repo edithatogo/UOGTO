@@ -1,4 +1,8 @@
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight release-assets release-preflight conductor all
+PYTHON ?= $(firstword $(wildcard .pixi/envs/default/python.exe .pixi/envs/default/bin/python) python)
+ARXIV_PDF_FLAGS ?= --require-pdf
+ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
+
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables ontology-snapshot-supplement figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight arxiv-preflight-strict arxiv-upload-ready arxiv-upload-ready-strict release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -6,148 +10,163 @@ install:
 	pip install -e .
 
 build:
-	python scripts/build.py
+	$(PYTHON) scripts/build.py
 
 validate:
-	python scripts/validate.py
+	$(PYTHON) scripts/validate.py
 
 test:
-	pytest
+	$(PYTHON) -m pytest $(PYTEST_ARGS)
 
 coverage:
-	python scripts/report_coverage.py
+	$(PYTHON) scripts/report_coverage.py
 
 publishing-metadata:
-	python scripts/maintenance/check_publishing_metadata.py
+	$(PYTHON) scripts/maintenance/check_publishing_metadata.py
 
 registry-links:
-	python scripts/maintenance/check_registry_links.py
+	$(PYTHON) scripts/maintenance/check_registry_links.py
 
 registry-packet:
-	python scripts/maintenance/build_registry_handoff.py
+	$(PYTHON) scripts/maintenance/build_registry_handoff.py
 
 extended-registry-packet:
-	python scripts/maintenance/build_extended_registry_handoff.py
+	$(PYTHON) scripts/maintenance/build_extended_registry_handoff.py
 
 ontology-comparison-inventory:
-	python scripts/maintenance/build_ontology_comparison_inventory.py
+	$(PYTHON) scripts/maintenance/build_ontology_comparison_inventory.py
 
 ontology-comparison-harvest:
-	python scripts/maintenance/harvest_comparison_sources.py
+	$(PYTHON) scripts/maintenance/harvest_comparison_sources.py
 
 ontology-comparison-terms:
-	python scripts/maintenance/extract_comparison_terms.py
+	$(PYTHON) scripts/maintenance/extract_comparison_terms.py
 
 ontology-comparison-mappings:
-	python scripts/maintenance/generate_ontology_mapping_candidates.py
+	$(PYTHON) scripts/maintenance/generate_ontology_mapping_candidates.py
 
 ontology-comparison-alignments:
-	python scripts/maintenance/build_comparison_alignments.py
+	$(PYTHON) scripts/maintenance/build_comparison_alignments.py
 
 ontology-comparison-sssom: ontology-comparison-alignments
 
 ontology-comparison-overlap:
-	python scripts/maintenance/analyse_ontology_overlap.py
+	$(PYTHON) scripts/maintenance/analyse_ontology_overlap.py
 
 ontology-comparison-networks:
-	python scripts/maintenance/analyse_ontology_networks.py
+	$(PYTHON) scripts/maintenance/analyse_ontology_networks.py
 
 ontology-comparison-visuals:
-	python scripts/maintenance/visualise_ontology_comparison.py
+	$(PYTHON) scripts/maintenance/visualise_ontology_comparison.py
 
 ontology-comparison-check:
-	python scripts/maintenance/check_ontology_comparison_artifacts.py
+	$(PYTHON) scripts/maintenance/check_ontology_comparison_artifacts.py
 
 ontology-comparison-all: ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check
 
 article-hardening-protocol:
-	python scripts/maintenance/check_article_hardening_protocol.py
+	$(PYTHON) scripts/maintenance/check_article_hardening_protocol.py
 
 article-hardening-inventory:
-	python scripts/maintenance/build_article_hardening_inventory.py
+	$(PYTHON) scripts/maintenance/build_article_hardening_inventory.py
 
 article-hardening-quality:
-	python scripts/maintenance/build_article_hardening_quality.py
+	$(PYTHON) scripts/maintenance/build_article_hardening_quality.py
 
 article-hardening-robot:
-	python scripts/maintenance/build_article_hardening_robot_reports.py
+	$(PYTHON) scripts/maintenance/build_article_hardening_robot_reports.py
 
 article-hardening-figures:
-	python scripts/maintenance/render_article_hardening_figures.py
+	$(PYTHON) scripts/maintenance/render_article_hardening_figures.py
 
 zenodo-packet:
-	python scripts/maintenance/build_zenodo_handoff.py
+	$(PYTHON) scripts/maintenance/build_zenodo_handoff.py
 
 zenodo-depositions:
-	python scripts/maintenance/check_zenodo_depositions.py
+	$(PYTHON) scripts/maintenance/check_zenodo_depositions.py
 
 w3id-packet:
-	python scripts/maintenance/build_w3id_redirect_handoff.py
+	$(PYTHON) scripts/maintenance/build_w3id_redirect_handoff.py
 
 publication-status:
-	python scripts/maintenance/build_publication_status.py
+	$(PYTHON) scripts/maintenance/build_publication_status.py
 
 publication-status-live:
-	python scripts/maintenance/build_publication_status.py --live --output dist/publication-status-live.json
+	$(PYTHON) scripts/maintenance/build_publication_status.py --live --output dist/publication-status-live.json
 
 w3id-status:
-	python scripts/maintenance/check_w3id_status.py
+	$(PYTHON) scripts/maintenance/check_w3id_status.py
 
 doi-status:
-	python scripts/maintenance/check_doi_status.py
+	$(PYTHON) scripts/maintenance/check_doi_status.py
 
 record-doi:
-	python scripts/maintenance/record_zenodo_doi.py "$(DOI)"
+	$(PYTHON) scripts/maintenance/record_zenodo_doi.py "$(DOI)"
 
 manuscript-sources:
-	python scripts/maintenance/build_manuscript_sources.py
+	$(PYTHON) scripts/maintenance/build_manuscript_sources.py
 
 manuscript-check:
-	python scripts/maintenance/check_manuscript_citations.py
+	$(PYTHON) scripts/maintenance/check_manuscript_citations.py
 
 manuscript-build: manuscript-check
-	python scripts/maintenance/build_manuscript_pdf.py
+	$(PYTHON) scripts/maintenance/build_manuscript_pdf.py
 
 manuscript-pdf: manuscript-check
-	python scripts/maintenance/build_manuscript_pdf.py --require-pdf
+	$(PYTHON) scripts/maintenance/build_manuscript_pdf.py --require-pdf
 
 release-assets: build
-	python scripts/maintenance/package_release_assets.py
+	$(PYTHON) scripts/maintenance/package_release_assets.py
 
 release-preflight: release-assets registry-packet extended-registry-packet zenodo-packet w3id-packet publication-status
-	python scripts/maintenance/check_release_readiness.py
+	$(PYTHON) scripts/maintenance/check_release_readiness.py
 
 conductor:
-	python scripts/conductor.py
+	$(PYTHON) scripts/conductor.py
 
 manuscript-sourcecheck: manuscript-sources
-	python scripts/maintenance/check_manuscript_citations.py
-	python scripts/maintenance/build_manuscript_pdf.py
+	$(PYTHON) scripts/maintenance/check_manuscript_citations.py
+	$(PYTHON) scripts/maintenance/build_manuscript_pdf.py
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright
 
 arxiv-source-package: manuscript-sources
-	python scripts/maintenance/build_arxiv_source_package.py
+	$(PYTHON) scripts/maintenance/build_arxiv_source_package.py
 
 arxiv-source-clean: arxiv-source-package
-	python scripts/maintenance/clean_arxiv_source_package.py
+	$(PYTHON) scripts/maintenance/clean_arxiv_source_package.py
 
 arxiv-preflight: manuscript-sources
-	python scripts/maintenance/check_manuscript_citations.py
-	python scripts/maintenance/build_manuscript_pdf.py --require-pdf
-	python scripts/maintenance/build_arxiv_source_package.py
-	python scripts/maintenance/clean_arxiv_source_package.py
-	python scripts/maintenance/audit_arxiv_source_privacy.py
+	$(PYTHON) scripts/maintenance/check_manuscript_citations.py
+	$(PYTHON) scripts/maintenance/build_manuscript_pdf.py --output-dir $(ARXIV_PDF_OUTPUT_DIR) $(ARXIV_PDF_FLAGS)
+	$(PYTHON) scripts/maintenance/build_arxiv_source_package.py
+	$(PYTHON) scripts/maintenance/clean_arxiv_source_package.py
+	$(PYTHON) scripts/maintenance/audit_arxiv_source_privacy.py
 	sourceright validate-csl --json docs/paper/references.csl.json
 	sourceright report .sourceright
 	sourceright citations docs/paper/manuscript-citations.txt .sourceright
+
+arxiv-upload-ready: arxiv-preflight
+	$(PYTHON) scripts/maintenance/build_arxiv_upload_ready.py --require-privacy-audit
+
+arxiv-preflight-strict:
+	$(MAKE) arxiv-preflight ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
+
+arxiv-upload-ready-strict:
+	$(MAKE) arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
 article-facing-tables:
-	python scripts/maintenance/build_article_evidence_tables.py
+	$(PYTHON) scripts/maintenance/build_article_evidence_tables.py
+
+candidate-decision-ledger:
+	$(PYTHON) scripts/maintenance/build_candidate_decision_ledger.py
+
+ontology-snapshot-supplement: release-assets
+	$(PYTHON) scripts/maintenance/build_ontology_snapshot_supplement.py
 
 figure-caption-freeze:
-	python scripts/maintenance/build_figure_caption_freeze.py
+	$(PYTHON) scripts/maintenance/build_figure_caption_freeze.py
 
 .PHONY: arxiv-privacy-audit
 arxiv-privacy-audit: arxiv-source-package
-	python scripts/maintenance/audit_arxiv_source_privacy.py
+	$(PYTHON) scripts/maintenance/audit_arxiv_source_privacy.py

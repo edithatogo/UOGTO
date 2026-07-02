@@ -1,0 +1,47 @@
+name: RI-HERO Publication and Registry Intake
+about: Intake for RI-HERO publication, discoverability, and registry work
+labels: ri-hero, ri-hero-publishing
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What publication or registry work is being requested?
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Target surface
+      description: Which registry, publication channel, or external surface is this for?
+    validations:
+      required: true
+  - type: dropdown
+    id: exposure
+    attributes:
+      label: Exposure
+      options:
+        - Internal
+        - Repo
+        - External
+        - Published
+        - Monitoring
+    validations:
+      required: true
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Workstream
+      options:
+        - Publishing
+        - Registry
+        - Maintenance
+        - Research
+        - Conductor
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Include URLs, issues, releases, DOIs, or logs.

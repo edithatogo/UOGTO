@@ -8,6 +8,7 @@ This checklist is aligned to current arXiv TeX submission constraints and the re
 - [ ] No referee letters, journal templates, private notes, hidden files, backup files, or unrelated source files are included.
 - [ ] Every retained image or asset is referenced by the manuscript or explicitly justified.
 - [ ] The source package manifest records kept and removed files with reasons.
+- [ ] `make arxiv-upload-ready` emits `dist/arxiv/uogto-arxiv-source.tar.gz`, `dist/arxiv/arxiv-submission-manifest.json`, `dist/arxiv/00README.json`, and `dist/arxiv/SHA256SUMS`.
 
 ## Filenames and References
 
@@ -34,7 +35,8 @@ This checklist is aligned to current arXiv TeX submission constraints and the re
 - [ ] `make arxiv-source-package` succeeds.
 - [ ] `make arxiv-source-clean` succeeds.
 - [ ] `make arxiv-preflight` succeeds or records an exact missing-tool blocker.
-- [ ] `latexmk` compiles the cleaned package with an arXiv-compatible processor where available.
+- [ ] `make arxiv-upload-ready` succeeds and the tarball checksum is recorded in `dist/arxiv/SHA256SUMS`.
+- [ ] `make arxiv-preflight-strict` or the GitHub arXiv Preflight workflow compiles with `latexmk`/`pdflatex`; local Tectonic is secondary-only evidence.
 - [ ] TeX Live 2023/2025 compatibility risks are recorded, including package-version risks.
 - [ ] Generated PDF is visually checked before submission.
 
@@ -66,3 +68,19 @@ Policy: the repository-native arXiv source cleaner remains authoritative; extern
 ### CI Evidence for Privacy Audit Manifest
 
 Commit `a2ee99d` passed the relevant GitHub Actions on 2026-06-25 UTC: Validate UOGTO 28154901094; arXiv Preflight 28154901098; Build WIDOCO Pages 28154901113; Build Manuscript PDF 28154901116. The privacy audit manifest is therefore both locally generated and remotely preflighted.
+
+## Upload-Ready Gate
+
+Implemented `2026-07-02`.
+
+Evidence surfaces:
+- `scripts/maintenance/build_arxiv_upload_ready.py`: builds a deterministic upload tarball, validates arXiv-safe filenames, writes `00README.json` as a review preview, and records SHA-256 hashes plus git state in a manifest.
+- `make arxiv-upload-ready`: runs `arxiv-preflight` and then builds the upload-ready artifact set with `--require-privacy-audit`.
+- `make arxiv-upload-ready-strict`: runs the same gate with `ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"` for publisher sign-off.
+- `pixi run arxiv-upload-ready`: mirrors the Make target, including privacy audit enforcement.
+- `.github/workflows/arxiv-preflight.yml`: uploads `dist/arxiv/*` as the `uogto-arxiv-upload-ready` artifact for 90 days and generates a GitHub artifact attestation from `dist/arxiv/SHA256SUMS` on push/manual runs.
+- `docs/paper/arxiv-submission-process.md`: records the operator process, artifact map, `00README.json` policy, and next-wave hardening recommendations.
+
+Policy update: `dist/arxiv/00README.json` is generated as a review/provenance file but is not placed in the default tarball because arXiv's current submission UI normally generates `00README` during upload. Use `--include-00readme` only for programmatic/custom submission paths after confirming the intended arXiv processing behavior.
+
+Strict-engine update: local `make arxiv-upload-ready` may use bundled Tectonic for development. Final publisher sign-off requires a clean GitHub arXiv Preflight run or local `make arxiv-upload-ready-strict` using `latexmk`/`pdflatex`.

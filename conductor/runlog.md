@@ -1,0 +1,201 @@
+# Conductor Run Log
+
+## 2026-07-02 arXiv Upload-Ready Hardening
+
+- Added `scripts/maintenance/build_arxiv_upload_ready.py` to generate a deterministic arXiv upload tarball, upload manifest, `00README.json` preview, and `SHA256SUMS`.
+- Added `make arxiv-upload-ready` and `pixi run arxiv-upload-ready`.
+- Aligned Pixi `arxiv-preflight` with Make by adding the privacy audit step.
+- Updated `.github/workflows/arxiv-preflight.yml` to run the upload-ready target, retain `dist/arxiv/*`, and attest tarball provenance on push/manual runs.
+- Added regression tests for the upload-ready builder, workflow behavior, and Make/Pixi command alignment.
+- Updated release and Conductor arXiv documentation with the new upload-ready process and remaining manual submission steps.
+- Verified targeted arXiv tests: `10 passed`.
+- Verified repository validation with `.pixi/envs/default/python.exe scripts/validate.py`: passed.
+- Verified full test suite with `.pixi/envs/default/python.exe -m pytest`: `198 passed, 21 warnings`.
+- Verified local source package, privacy audit, and upload-ready artifact generation. Upload tarball SHA-256: `fa1704f9a087fa0b2fe76e2bc55074b5a8b3c7e02db37accf41ed7a298570473`.
+
+## 2026-07-02 arXiv Blocker Resolution
+
+- Added bundled/Pixi Tectonic discovery to `scripts/maintenance/build_manuscript_pdf.py`, preserving `latexmk` as first preference.
+- Added Makefile `PYTHON` auto-detection so raw `make` uses `.pixi/envs/default/python.exe` on this workstation instead of the Windows Store `python` alias.
+- Installed SourceRight locally with `cargo +stable-x86_64-pc-windows-gnu install sourceright --locked`; the MSVC toolchain path failed because it picked up an incompatible `link.exe`.
+- Verified `sourceright --version`: `sourceright 0.1.20`.
+- Verified full raw `make arxiv-upload-ready`: passed.
+- The full gate built `.tmp/manuscript-build/paper.pdf`, passed CSL validation, reported 11 matched citations and 0 citation reconciliation issues, passed arXiv privacy audit, and generated `dist/arxiv/uogto-arxiv-source.tar.gz`.
+- Upload tarball SHA-256 remained `fa1704f9a087fa0b2fe76e2bc55074b5a8b3c7e02db37accf41ed7a298570473`.
+- Verified raw `make test`: `201 passed, 21 warnings`.
+- Verified raw `make validate`: passed all ontology, SHACL, example, and competency-query checks.
+
+## 2026-07-02 arXiv Agent Contract Layer
+
+- Added `conductor/agents/arxiv-submission-agents.json` with editor, reviewer, and publisher agent groups.
+- Added `conductor/workflows/arxiv-submission-contract-workflow.md` to bind sign-off to strict arXiv upload-ready gates.
+- Added `docs/paper/arxiv-submission-contract.md` with current editor/reviewer/publisher outcomes, warning dispositions, artifact evidence, and remaining external steps.
+- Linked the contract from `docs/paper/arxiv-submission-process.md` and `docs/index.md`.
+
+## 2026-07-02 Live Agent Review Integration
+
+- Ran live Codex subagents against the arXiv manuscript/process:
+  - Hooke `019f20ab-621a-70a3-9436-75b2744190bd` as manuscript editor.
+  - Locke `019f20ab-9dd4-7e02-8556-03e3665876b7` as technical/red-team reviewer.
+  - Franklin `019f20ab-cbc4-7961-86f5-25c1753acaaf` as publisher/provenance reviewer.
+- Applied manuscript-editor findings by removing unresolved `fig:*` references and draft figure instructions from `docs/paper/paper.tex`.
+- Applied red-team findings by redacting local paths from arXiv privacy audit outputs, adding strict arXiv-engine gating, and blocking unresolved reference/citation compiler warnings.
+- Applied publisher findings by widening arXiv workflow triggers, adding `artifact-metadata: write`, attesting from `dist/arxiv/SHA256SUMS`, increasing artifact retention to 90 days, and adding a post-submission provenance record template.
+- Verified `make arxiv-upload-ready`: passed locally with bundled Tectonic and SourceRight `0.1.20`; upload tarball SHA-256 `2acc17390d7b5609a7359a08a88f75ba749eb13f53033e537ee11c15bb5bd8c1`.
+- Verified `make arxiv-preflight-strict`: failed locally as designed because this workstation resolves bundled Tectonic instead of `latexmk`/`pdflatex`; final publisher sign-off requires GitHub Actions strict-engine proof or local TeX Live installation.
+- Verified `make validate`: passed.
+- Verified `make test`: `205 passed, 21 warnings`.
+- Verified targeted lint via `.pixi/envs/default/python.exe -m ruff check ...`: passed.
+
+## 2026-07-02 Corresponding Red-Team and Devil's Advocate Agents
+
+- Added `devils_advocate_reviewer` as a first-class arXiv submission reviewer in `conductor/agents/arxiv-submission-agents.json`.
+- Updated `conductor/workflows/arxiv-submission-contract-workflow.md` so unresolved devil's advocate `fix_now` findings block submission.
+- Ran devil's advocate agent Faraday `019f20c7-9208-7702-af6b-36d441a50041`.
+- Archived the devil's advocate review at `docs/paper/reviews/arxiv-devils-advocate-review-2026-07-02.md`.
+- Ran focused red-team agent Wegener `019f20ca-bbe7-7e93-831b-b906d7c50f63`.
+- Archived the red-team review at `docs/paper/reviews/arxiv-red-team-review-2026-07-02.md`.
+- Applied devil's advocate findings by narrowing manuscript claims about examples, mapping calibration, and network sensitivity, and by changing supplement readiness wording to pre-submission under final gate.
+- Applied red-team findings by adding `Makefile` to arXiv Preflight path filters and extending privacy scanning to catch forward-slash local paths such as `C:/Users/...`, `/Users/...`, `/home/...`, and `/tmp/...`.
+- Current reviewer decision: `do-not-submit-yet` until clean strict-engine CI, remote attestation, clean-tree manifest, and arXiv-rendered PDF inspection are complete.
+
+## 2026-07-02 Preprint Glossary and Abbreviations
+
+- Added end-of-paper Glossary and Abbreviations sections to `docs/paper/paper.tex`.
+- Added lightweight `hyperref`-based link macros and linked key manuscript terms/abbreviations to the end sections.
+- Verified `make arxiv-upload-ready`: passed; upload tarball SHA-256 `8fcb4919ffa79c47f2854c08cfa9b590d0370ca71c227c718a287681d03c4217`.
+- Added manuscript construction rationale: broad game discovery, feature extraction, enrichment of domain-specific ontologies, and disciplinary selection-bias mitigation.
+- Added a PRISMA-style systematic-search and ontology-enrichment flow figure to the manuscript and arXiv source package.
+- Added manuscript network-analysis results and Cosmograph-ready node/edge exports for source-similarity, term-alignment, and import/evidence-use graphs.
+- Strengthened the manuscript discussion and conclusion to synthesize systematic search, ontology construction, mapping/network analyses, restraint, and future work.
+- Ran expert-panel manuscript reviews across economics/game theory, ontology/semantic-web, systematic methods, preprint publishing, and health economics/outcomes; archived the review summary and applied consensus fix-now findings.
+- Added target-journal overlap framing for Nature-family genetics/genomics, safety systems, and Medical Decision Making audiences while avoiding journal-specific overclaiming.
+- Corrected the Nature target to Nature Human Behaviour, added NHB Resource-style framing, behavioural/policy utility content, and draft declarations.
+- Verified focused tests: `17 passed`.
+- Verified `make validate`: passed.
+
+## 2026-07-02 Authentext and arXiv Figure Hardening
+
+- Installed `edithatogo/authentext` globally under `C:\Users\60217257\.codex\skills\authentext`; a Codex restart is required before future sessions list it as an available global skill.
+- Applied an Authentext-style academic cleanup to manuscript and supplement prose, including replacing process-heavy internal labels with "source-discovery register" or "preprint evidence protocol" wording where appropriate.
+- Replaced the placeholder manuscript author with Dylan A Mordaunt, added conservative institutional affiliations without email, and synchronized citation metadata to sole authorship.
+- Reviewed and tightened the manuscript title, section headings, table captions, figure captions, supplement title references, and citation page title.
+- Replaced the PDF-embedded PRISMA manuscript figure with native TikZ so figure text is rendered directly by LaTeX.
+- Added a boxed first-price sealed-bid auction scenario to make the worked example readable for non-economist reviewers.
+- Added a roadmap figure for economics-facing extension modules and appendix figures for comparative mapping and network-analysis summaries.
+- Tightened arXiv privacy-audit UNC-path detection so valid LaTeX `\\` line breaks inside TikZ labels are not misclassified as private paths.
+- Reflowed section 6 (`Data and code availability`) to remove text overflow from long inline paths and `make` commands.
+- Verified `make arxiv-upload-ready`: passed; upload tarball SHA-256 `8fcb4919ffa79c47f2854c08cfa9b590d0370ca71c227c718a287681d03c4217`.
+
+## 2026-07-02 SourceRight Workflow Verification
+
+- Verified upstream SourceRight HEAD for `edithatogo/sourceright`: `f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17`.
+- Installed SourceRight from the upstream Git repository with `cargo +stable-x86_64-pc-windows-gnu install --git https://github.com/edithatogo/sourceright.git sourceright --locked --force`; the MSVC install path failed on this workstation because of linker/toolchain resolution.
+- Verified installed CLI: `sourceright 0.1.20`.
+- Rebuilt manuscript source inputs with `scripts/maintenance/build_manuscript_sources.py`: 36 source inventory references, 11 manuscript references, and 0 SourceRight review-queue entries.
+- Ran SourceRight CSL validation, reference reporting, citation reconciliation, export preview, citation-sync preview, and upstream deterministic benchmarks.
+- SourceRight citation reconciliation found 11 citation occurrences, 11 matched citations, and 0 issues.
+- SourceRight reference reporting found 11 verified references, 0 unresolved reviews, 0 provider conflicts, 0 errors, and 10 missing-DOI warnings for web/spec/API/arXiv-style references.
+- SourceRight workspace initialization confirmed the existing `.\.sourceright` directory.
+- SourceRight conflict reporting found 0 provider conflicts or merge decisions.
+- SourceRight MCP status reported 14 available tools, 8 resources, and 5 prompts; the stdio server is available via `sourceright mcp`.
+- SourceRight plugin validation is not configured for this repository because `plugins/registry.toml` is absent.
+- SourceRight upstream benchmark verification passed: 13/13 deterministic tasks.
+- Verified repository wrapper `make manuscript-sourcecheck`: passed.
+
+## 2026-07-02 Cosmograph Network Image Completion
+
+- Added static Cosmograph-style graph rendering to `scripts/maintenance/visualise_ontology_comparison.py` for source similarity, accepted term alignment, and import/evidence-use graphs.
+- Generated `source_similarity_cosmograph`, `term_alignment_cosmograph`, and `import_uses_cosmograph` images under `docs/ontology-comparison/cosmograph/` as SVG, PNG, and compressed PDF derivatives.
+- Preserved the existing Cosmograph-ready node/edge CSV exports for interactive review and linked the rendered images from `docs/ontology-comparison/report.md`.
+- Updated `docs/paper/supplement-package.md` so Supplementary Figures S11 to S13 explicitly refer to the Cosmograph graph images.
+- Hardened `scripts/maintenance/check_ontology_comparison_artifacts.py` and `tests/test_ontology_visuals.py` so missing Cosmograph images fail validation.
+- Verified focused visual/network tests: `15 passed`.
+- Verified `make ontology-comparison-check`: passed with 21 sources, 4,037 terms, 460 candidates, 10 accepted mappings, 9 standard figures, and 3 Cosmograph images.
+
+## 2026-07-02 Academic Research Skills arXiv Hardening
+
+- Cloned and inspected `edithatogo/academic-research-skills` at commit `734dd23e03e7261db9204702be9221119a30d7d2`.
+- Installed global skills from that repository: `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`, and `deep-research`; future Codex sessions need restart before they appear in the global skill list automatically.
+- Applied local UOGTO `article-hardening-research` and `article-hardening-review` workflows alongside the installed academic-research-skills review protocols.
+- Ran Academic Research Skills-style agents:
+  - Bernoulli `019f216a-c005-7dd0-b102-cb8663db4724` as integrity verifier.
+  - Godel `019f216a-f974-7720-9349-fdc3d97955e8` as methods reviewer.
+  - Ampere `019f2170-08bf-7641-9560-8a2900e66d1c` as ontology/game-theory domain reviewer.
+  - Raman `019f2170-3dc4-79e2-a458-014e2949fdee` as devil's advocate/perspective reviewer.
+- Archived the synthesis at `docs/paper/reviews/academic-research-skills-arxiv-review-2026-07-02.md`.
+- Applied reviewer-driven manuscript fixes:
+  - Reframed UOGTO as a general-purpose extensible ontology resource rather than evidence of completed universal coverage or cross-domain adoption.
+  - Changed SHACL language to selected structural checks where constraint depth is limited.
+  - Changed disciplinary-bias language from "guards against" to "makes inspectable and partially mitigates."
+  - Added a claim-strength table that separates internal validation, parsed RDF/OWL comparison, metadata-only evidence, accepted mappings, illustrative examples, and internal agent/workflow reviews.
+  - Added foundational anchors for Nash equilibrium, incomplete-information games, cooperative values, auctions, mechanism design, matching, algorithmic game theory, and ontology-engineering design.
+  - Softened graph/network centrality interpretation to review-priority and sensitivity-dependent wording.
+  - Added explicit manuscript disclosure that AI/agent reviews are internal process checks, not independent peer review.
+- Applied data/package fixes:
+  - Enriched `examples/first-price-auction.jsonld` with two bidders, bid actions, allocation/payment rules, play session, outcome, payoffs, and event trace.
+  - Added concrete candidate labels and local/external target fields to the missing-element disposition source CSV/JSON and regenerated article-facing tables.
+  - Updated `scripts/maintenance/build_manuscript_sources.py` so OpenSpiel metadata includes canonical DOI `10.48550/arxiv.1908.09453` and named author metadata.
+- Verification:
+  - Initial `python scripts/maintenance/build_article_evidence_tables.py` failed because system Python is not installed on this workstation.
+  - Reran successfully with `.pixi/envs/default/python.exe scripts/maintenance/build_article_evidence_tables.py`.
+  - `make manuscript-sourcecheck` passed: 19 manuscript citations, 19 bibitems, 19 CSL references, SourceRight CSL validation OK, 19 matched citations, 0 citation reconciliation issues.
+  - SourceRight report retained 10 non-blocking missing-DOI warnings for web/spec/API/book/arXiv-style references.
+  - `make validate` passed, including JSON-LD parse and SHACL validation for the enriched first-price auction example.
+  - `make ontology-comparison-check` passed with 21 sources, 4,037 terms, 460 candidates, 10 accepted mappings, 9 figures, and 3 Cosmograph images.
+  - `make arxiv-upload-ready` passed; regenerated upload tarball SHA-256 `23aad9174f75b2408071bca8b22e516941aa8760c7e481bb0463368f7cddd4c2`.
+  - Focused rerun of the three initially failing tests passed: `4 passed`.
+  - Full `make test` rerun passed: `205 passed, 21 warnings`.
+
+## 2026-07-02 Final arXiv CI Gate Closure
+
+- Hardened the arXiv source/package pipeline for strict CI reproducibility:
+  - Added TeX picture package installation to manuscript/arXiv GitHub workflows.
+  - Made arXiv source package and privacy/source evidence outputs deterministic where CI needed stable tracked files.
+  - Made manuscript PDF warning checks prefer the final LaTeX log rather than transient first-pass warnings.
+  - Made `clean_arxiv_source_package.py` portable across Windows and Linux.
+  - Added upload-ready manifest diagnostics for tracked-tree dirtiness.
+  - Normalized manuscript source-inventory path notes to POSIX-style paths so Windows and Linux produce the same tracked JSON.
+- Verified focused source/package tests after the final determinism fix: `11 passed`.
+- Verified local `make arxiv-upload-ready` after the final determinism fix; local tarball SHA-256 `23aad9174f75b2408071bca8b22e516941aa8760c7e481bb0463368f7cddd4c2`.
+- Amended and pushed the arXiv-submittable hardening branch `codex/arxiv-submittable-hardening`.
+- Verified GitHub Actions PR checks for PR #19 passed on the then-current branch head:
+  - `arxiv-preflight`.
+  - `manuscript-pdf`.
+  - `validate`.
+- Verified manual GitHub arXiv Preflight passed on the then-current branch head:
+  - Strict arXiv source package tests passed.
+  - Strict preflight passed with the CI LaTeX toolchain.
+  - Upload-ready arXiv artifact set was built and uploaded.
+  - Provenance attestation completed.
+- Downloaded the CI upload artifact to a run-specific `.tmp/` directory.
+- Verified the CI artifact manifest:
+  - Commit matched the workflow run head.
+  - Tarball SHA-256 matched `SHA256SUMS`.
+  - Tracked-tree state: `dirty: false`, `dirty_file_count: 0`, `dirty_entries: []`.
+- Verified local GitHub attestation check against the downloaded CI tarball; `gh attestation verify` exited successfully.
+- Verified final focused contract/source/upload tests: `8 passed`.
+- Verified final full `make test`: `207 passed, 21 warnings`.
+- Remaining external steps are manual arXiv upload of the CI artifact, inspection/approval of the arXiv-rendered PDF, and recording the assigned arXiv identifier.
+
+## 2026-07-02 Actual Network Graph Visualisation Inclusion
+
+- Added actual source-similarity, accepted term-alignment, and import/evidence-use graph renders to the arXiv appendix as Figures A3 to A5 by staging PDF copies under `docs/paper/figures/`.
+- Added `docs/article-hardening/network-graph-visualisation-supplement.md` as the repository-only graph inspection surface linking SVG/PNG/PDF renders and Cosmograph-ready node/edge CSVs.
+- Updated the supplement package, documentation index, raw-search supplement, and research log to route reviewers to the actual graph visualisations.
+- Verified `make ontology-comparison-check`, `make article-hardening-protocol`, `make arxiv-upload-ready`, `make validate`, and focused manuscript/arXiv/visual tests; regenerated upload tarball SHA-256 `688951e793fb58dbbeb4a607bf0006838b69a94177c2127e01bd71b8a5ac6ad5`.
+- Interpretation remains deliberately constrained: graph structure supports bridge inspection and review prioritisation, not proof of universal semantic equivalence.
+
+## 2026-07-02 LaTeX Visual Presentation Hardening
+
+- Added arXiv-safe visual hardening to `docs/paper/paper.tex`: 11pt layout, one-inch margins, microtypography, portable URL line breaking, restrained colour links, PDF metadata, native section hierarchy styling, and a redesigned title/abstract block.
+- Added `docs/paper/latex-visual-presentation-scorecard.md` and `.json` with per-section scores out of 100 and a weighted total presentation score.
+- Current scorecard target state: every major section is at least 95/100; weighted total presentation score is 96.5/100.
+- Verified `make arxiv-upload-ready`; regenerated upload tarball SHA-256 `21d82a1da3f1b78d71433fd9ee316602e4962d18d4b5ab511d57cd84f34fa385`.
+
+## 2026-07-02 Candidate Decision Ledger
+
+- Added `scripts/maintenance/build_candidate_decision_ledger.py` and `make candidate-decision-ledger`.
+- Generated `docs/article-hardening/candidate-decision-ledger.md`, `.csv`, and `.json`.
+- The ledger covers 511 rows: 7 search routes, 39 source candidates, 460 mapping candidates, and 5 ontology-inclusion candidates.
+- Each ledger row records candidate scope, candidate identifier, decision status/class, rationale, assumptions or heuristics, source artefact, and evidence detail.

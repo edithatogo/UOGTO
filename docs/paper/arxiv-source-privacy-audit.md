@@ -1,9 +1,9 @@
 # arXiv Source-Leak and Privacy Audit
 
-Generated: `2026-06-25T10:15:22+00:00`
+Generated: `deterministic-local-preflight`
 Status: `pass`
-Package: `C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/.tmp/arxiv-source-package-a22457ff`
-Cleaner manifest: `C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/.tmp/arxiv-source-package-a22457ff.manifest.json`
+Package: `.tmp/arxiv-source-package`
+Cleaner manifest: `.tmp/arxiv-source-package.manifest.json`
 
 ## Summary
 
@@ -14,7 +14,7 @@ Cleaner manifest: `C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/.t
 | Private notes, referee material, journal templates | pass | count=0 |
 | Unused figures | pass | count=0 |
 | Auxiliary, log, and output files | pass | count=0 |
-| Embedded PDF/image metadata | pass | metadata_bearing_files=0, private_metadata_hits=0 |
+| Embedded PDF/image metadata | pass | metadata_files_reviewed=3, metadata_bearing_files=1, private_metadata_hits=0 |
 | Credentials, private keys, and tokens | pass | count=0 |
 | Private URLs, local paths, and UNC paths | pass | count=0 |
 
@@ -24,7 +24,7 @@ No failing source-leak or privacy findings were detected.
 
 ## Embedded Metadata Review
 
-No embedded metadata markers were detected in package figures/PDFs.
+- `figures/term-alignment-cosmograph.pdf`: Author, CreationDate, Creator, ModDate, Producer, Title; private hits=0
 
 ## Scope and Policy
 

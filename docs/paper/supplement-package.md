@@ -2,13 +2,13 @@
 
 Date: 2026-06-25
 
-This supplement supports the manuscript *Universal Open Game Theory Ontology: Semantics for Games, Simulation, and Executable Multi-Agent Evidence*. It is written for reviewers who need to inspect how the ontology, source discovery, mappings, quality metrics, figures, and submission checks support the article claims. The supplement is not a second narrative paper. It is a structured evidence package, with each section pointing to stable repository artefacts.
+This supplement supports the manuscript *Universal Open Game Theory Ontology: A semantic resource for strategic-interaction evidence*. It is written for reviewers who need to inspect how the ontology, source discovery, mappings, quality metrics, figures, and submission checks support the article claims. The supplement is not a second narrative paper. Each section points to stable repository artefacts.
 
 ## Supplementary methods
 
 ### S1. Review protocol and reporting standards
 
-UOGTO's article evidence package follows a scoping-review style protocol. The protocol defines the search scope, source families, inclusion and exclusion criteria, evidence levels, charting fields, reviewer roles, red-team checks, and reproducibility outputs. It also maps PRISMA-ScR style reporting items to repository artefacts so that readers can inspect the evidence behind source discovery and screening.
+UOGTO's source-discovery work follows a scoping-review style protocol. The protocol defines the search scope, source families, inclusion and exclusion criteria, evidence levels, charting fields, reviewer roles, red-team checks, and reproducibility outputs. It also maps PRISMA-ScR style reporting items to repository artefacts so that readers can inspect the evidence behind source discovery and screening.
 
 Primary artefacts:
 
@@ -26,14 +26,17 @@ Source discovery is recorded as an evidence register rather than a narrative sea
 
 Primary artefacts:
 
+- `docs/article-hardening/raw-search-output-supplement.md`
 - `docs/article-hardening/search-log.jsonl`
 - `docs/article-hardening/source-extension-inventory.json`
 - `docs/article-hardening/source-extension-inventory.md`
 - `docs/ontology-comparison/source-inventory.json`
 - `docs/ontology-comparison/source-provenance.json`
 - `docs/ontology-comparison/inclusion-exclusion-log.jsonl`
+- `docs/article-hardening/candidate-decision-ledger.md`
+- `docs/article-hardening/candidate-decision-ledger.csv`
 
-Supplementary Table S2 summarises source families, evidence levels, licence dispositions, and inclusion decisions. Supplementary Figure S3 shows source-family coverage by evidence level.
+Supplementary Table S2 summarises source families, evidence levels, licence dispositions, and inclusion decisions. The repository-only raw search output supplement preserves the route-level raw search outputs and the narrowing ledger from 39 retained source rows to 21 comparative sources, 4,037 normalized term rows, 460 mapping candidates, and 10 accepted alignments. The repository-only candidate decision ledger joins route, source, mapping, and ontology-inclusion candidates into one 511-row audit table with recorded inclusion/exclusion rationales and heuristics. Supplementary Figure S3 shows source-family coverage by evidence level.
 
 ### S3. Ontology implementation and validation
 
@@ -42,6 +45,10 @@ UOGTO is implemented as modular RDF/OWL source, SHACL shapes, JSON-LD contexts, 
 Primary artefacts:
 
 - `ontologies/`
+- `dist/uogto.ttl`
+- `dist/uogto-shapes.ttl`
+- `docs/article-hardening/ontology-snapshot-supplement.md`
+- `docs/article-hardening/ontology-citation-register.md`
 - `shapes/`
 - `examples/`
 - `competency-questions/`
@@ -53,7 +60,7 @@ Primary artefacts:
 - `docs/article-hardening/article-facing-tables/module-audit-table.json`
 - `docs/article-hardening/article-facing-tables/module-audit-table.md`
 
-Supplementary Table S3 is the module audit table. It gives reviewers a compact account of labels, definitions, SHACL links, examples, competency questions, OWL profile status, and reasoner status. This table replaces the need to infer coverage from raw validation logs.
+Supplementary Table S3 is the module audit table. It gives reviewers a compact account of labels, definitions, SHACL links, examples, competency questions, OWL profile status, and reasoner status. The repository-only ontology snapshot supplement identifies the compact ontology copy in `dist/uogto.ttl`, the merged shapes copy in `dist/uogto-shapes.ttl`, the modular source files, checksums, and the final corresponding citation register. This table replaces the need to infer coverage from raw validation logs.
 
 ### S4. Mapping and alignment evidence
 
@@ -72,7 +79,7 @@ Supplementary Table S4 reports the mapping decision surface, including accepted,
 
 ### S5. Robustness, calibration, and network analyses
 
-The mapping evidence is stress-tested rather than treated as a single deterministic output. Robustness analyses ablate exact labels, normalized labels, definition similarity, hierarchy context, property signatures, and embedding similarity. Calibration artefacts record reviewer agreement and adjudication outcomes. Network sensitivity analyses compare accepted-only mappings, accepted plus close/related mappings, and scenarios excluding metadata-only sources.
+The mapping evidence is stress-tested rather than treated as a single deterministic output. Robustness analyses ablate exact labels, normalized labels, definition similarity, hierarchy context, property signatures, and embedding similarity. Calibration artefacts record reviewer-agreement and adjudication surfaces where populated; empty or sample-only fields are evidence gaps rather than agreement evidence. Network sensitivity analyses compare accepted-only mappings, accepted plus close/related mappings, and scenarios excluding metadata-only sources.
 
 Primary artefacts:
 
@@ -84,11 +91,12 @@ Primary artefacts:
 - `docs/ontology-comparison/network-sensitivity.json`
 - `docs/ontology-comparison/network-sensitivity.md`
 - `docs/ontology-comparison/overlap-metrics.json`
+- `docs/ontology-comparison/cosmograph/`
 - `docs/article-hardening/article-facing-tables/mapping-robustness-table.csv`
 - `docs/article-hardening/article-facing-tables/mapping-robustness-table.json`
 - `docs/article-hardening/article-facing-tables/mapping-robustness-table.md`
 
-Supplementary Table S5 is the article-facing mapping robustness table. Supplementary Figure S5 shows the source-module overlap heatmap. Supplementary Figure S6 shows the source similarity or network sensitivity view. These artefacts support the manuscript's cautious claim that UOGTO identifies bridges among modelling traditions, not universal equivalence.
+Supplementary Table S5 is the article-facing mapping robustness table. Supplementary Figure S5 shows the source-module overlap heatmap. Supplementary Figure S6 shows the source similarity or network sensitivity view. Supplementary Figures S8 to S10 provide arXiv-safe summaries of the mapping flow, network analysis, and economics-module roadmap. Supplementary Figures S11 to S13 provide static Cosmograph-style graph images for the source-similarity, accepted term-alignment, and import/evidence-use networks, with matching CSV files for interactive Cosmograph review. The arXiv appendix also includes PDF copies of these three graph renders as Figures A3 to A5, and `docs/article-hardening/network-graph-visualisation-supplement.md` links the SVG/PNG/PDF renders and node/edge CSVs in one review surface. These artefacts support the manuscript's cautious claim that UOGTO identifies bridges among modelling traditions, not universal equivalence.
 
 ### S6. Case studies and missing-element dispositions
 
@@ -109,7 +117,7 @@ Supplementary Table S6 gives the missing-element disposition table. Supplementar
 
 ### S7. Reproducibility and data packaging
 
-The reproducibility package is designed to make the article evidence reusable, not merely readable. RO-Crate metadata identifies the root data entity, contextual entities, source artefacts, workflows, scripts, and provenance. Tabular outputs are stored in human-readable CSV/Markdown and machine-stable JSON or Parquet where appropriate. The dashboard separates parsed RDF, structured non-RDF, metadata-only, literature-only, and excluded sources.
+The reproducibility materials are designed to make the article evidence reusable, not merely readable. RO-Crate metadata identifies the root data entity, contextual entities, source artefacts, workflows, scripts, and provenance. Tabular outputs are stored in human-readable CSV/Markdown and machine-stable JSON or Parquet where appropriate. The dashboard separates parsed RDF, structured non-RDF, metadata-only, literature-only, and excluded sources.
 
 Primary artefacts:
 
@@ -121,7 +129,7 @@ Primary artefacts:
 - `docs/article-hardening/article-evidence-dashboard.json`
 - `docs/article-hardening/article-evidence-dashboard.html`
 
-Supplementary Table S8 lists the reproducibility and packaging artefacts. Supplementary Figure S7 should show the evidence dashboard or the reproducibility chain from ontology source to validation, mapping, tables, and submission checks.
+Supplementary Table S8 lists the reproducibility and packaging artefacts. Supplementary Figure S7 shows reviewer workload and mapping-review distribution; Supplementary Figures S8 to S10 add arXiv-safe summaries for the manuscript appendix and roadmap.
 
 ### S8. Figures and visual evidence
 
@@ -131,10 +139,11 @@ Primary artefacts:
 
 - `docs/article-hardening/figures/`
 - `docs/ontology-comparison/figures/`
+- `docs/ontology-comparison/cosmograph/`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv`
 - `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.md`
 
-Supplementary Table S9 records figure readiness and score history. Supplementary Figures S1 to S7 are the current candidate figure set for manuscript and supplement packaging.
+Supplementary Table S9 records figure readiness and score history. Supplementary Figures S1 to S13 are the current candidate figure set for manuscript and supplement packaging.
 
 ### S9. Manuscript source, citation, and arXiv checks
 
@@ -193,7 +202,7 @@ The case-study package demonstrates UOGTO across mechanism design, voting/social
 
 ### Submission readiness
 
-The submission package now contains a polished manuscript draft, this final supplement prose, SourceRight reference checks, Authentext audit reports, arXiv privacy audit manifests, PRISMA SVG/PDF exports, a created PowerPoint deck, and a completed first figure-score loop. Final submission should freeze figure numbering and caption text before rerunning the score loop and arXiv preflight.
+The pre-submission package now contains a polished manuscript draft, supplement prose, SourceRight reference checks, Authentext audit reports, arXiv privacy audit manifests, PRISMA SVG/PDF exports, a created PowerPoint deck, and a completed first figure-score loop. It is not yet a final submission package: final submission still requires frozen figure numbering and caption text, a rerun score loop, a clean strict arXiv-engine preflight, and clean-tree provenance.
 
 ## Supplementary tables
 
@@ -201,6 +210,10 @@ The submission package now contains a polished manuscript draft, this final supp
 | --- | --- | --- |
 | Supplementary Table S1 | Protocol and reporting artefacts | `docs/article-hardening/protocol-checklist.md` |
 | Supplementary Table S2 | Source register and evidence levels | `docs/article-hardening/source-extension-inventory.md` |
+| Repository-only Supplement R1 | Raw search outputs and narrowing ledger | `docs/article-hardening/raw-search-output-supplement.md` |
+| Repository-only Supplement R2 | Candidate decision ledger with inclusion/exclusion rationales and heuristics | `docs/article-hardening/candidate-decision-ledger.md`; `.csv`; `.json` |
+| Repository-only Supplement R3 | Ontology copy snapshot and checksums | `docs/article-hardening/ontology-snapshot-supplement.md` |
+| Repository-only Supplement R4 | Ontology citation register | `docs/article-hardening/ontology-citation-register.md` |
 | Supplementary Table S3 | Module audit table | `docs/article-hardening/article-facing-tables/module-audit-table.csv` |
 | Supplementary Table S4 | Mapping decision surface | `docs/ontology-comparison/mapping-review.csv` |
 | Supplementary Table S5 | Mapping robustness, SSSOM, sensitivity, calibration, and adjudication | `docs/article-hardening/article-facing-tables/mapping-robustness-table.csv` |
@@ -210,6 +223,7 @@ The submission package now contains a polished manuscript draft, this final supp
 | Supplementary Table S9 | Figure readiness and score history | `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv` |
 | Supplementary Table S10 | Manuscript, SourceRight, and arXiv gates | `docs/paper/sourceright-report.md`; `docs/paper/arxiv-source-privacy-audit.md` |
 | Supplementary Table S11 | Governance, citation, reuse, and change control | `docs/how-to-cite-and-reuse-uogto.md`; `docs/article-hardening/term-changelog.md` |
+| Supplementary Table S12 | LaTeX visual presentation scorecard | `docs/paper/latex-visual-presentation-scorecard.md`; `.json` |
 
 ## Supplementary figures
 
@@ -222,6 +236,15 @@ The submission package now contains a polished manuscript draft, this final supp
 | Supplementary Figure S5 | Source-module overlap heatmap | `docs/ontology-comparison/figures/source_module_overlap_heatmap.svg` |
 | Supplementary Figure S6 | Source similarity network | `docs/ontology-comparison/figures/source_similarity_network.svg` |
 | Supplementary Figure S7 | Reviewer workload and mapping review distribution | `docs/ontology-comparison/figures/reviewer_workload.svg` |
+| Supplementary Figure S8 | ArXiv-safe mapping flow summary | `docs/paper/paper.tex`, Appendix Figure A1 |
+| Supplementary Figure S9 | ArXiv-safe network-analysis summary | `docs/paper/paper.tex`, Appendix Figure A2 |
+| Supplementary Figure S10 | Economics-facing module roadmap | `docs/paper/paper.tex`, Figure 2 |
+| Supplementary Figure S11 | Cosmograph source-similarity graph image | `docs/ontology-comparison/cosmograph/source_similarity_cosmograph.svg`; `.png`; `.pdf` |
+| Supplementary Figure S12 | Cosmograph accepted term-alignment graph image | `docs/ontology-comparison/cosmograph/term_alignment_cosmograph.svg`; `.png`; `.pdf` |
+| Supplementary Figure S13 | Cosmograph import and evidence-use graph image | `docs/ontology-comparison/cosmograph/import_uses_cosmograph.svg`; `.png`; `.pdf` |
+| Manuscript Appendix Figure A3 | PDF copy of source-similarity graph render for arXiv | `docs/paper/figures/source-similarity-cosmograph.pdf` |
+| Manuscript Appendix Figure A4 | PDF copy of accepted term-alignment graph render for arXiv | `docs/paper/figures/term-alignment-cosmograph.pdf` |
+| Manuscript Appendix Figure A5 | PDF copy of import and evidence-use graph render for arXiv | `docs/paper/figures/import-evidence-use-cosmograph.pdf` |
 
 ## Claim-to-supplement map
 
@@ -246,7 +269,7 @@ All supplement artefacts are stored in the repository. Human-readable tables are
 The supplement is ready for final submission packaging when:
 
 - the manuscript claim set is frozen;
-- Supplementary Tables S1 to S11 and Supplementary Figures S1 to S7 are the final numbering scheme;
+- Supplementary Tables S1 to S11 and Supplementary Figures S1 to S13 are the final numbering scheme;
 - `make article-facing-tables`, `make manuscript-sourcecheck`, `make arxiv-privacy-audit`, and `make validate` pass;
 - SourceRight reports 0 citation reconciliation issues;
 - Authentext audit reports 0 high-signal findings for the supplement prose;

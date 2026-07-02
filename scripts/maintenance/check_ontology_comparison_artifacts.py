@@ -36,6 +36,19 @@ REQUIRED_FIGURES = [
     "mapping_flow_sankey.svg",
     "reviewer_workload.svg",
 ]
+REQUIRED_COSMOGRAPH_IMAGES = [
+    "source_similarity_cosmograph.svg",
+    "term_alignment_cosmograph.svg",
+    "import_uses_cosmograph.svg",
+]
+REQUIRED_COSMOGRAPH_CSVS = [
+    "source_similarity_nodes.csv",
+    "source_similarity_edges.csv",
+    "term_alignment_nodes.csv",
+    "term_alignment_edges.csv",
+    "import_uses_nodes.csv",
+    "import_uses_edges.csv",
+]
 
 
 def read_json(path):
@@ -99,6 +112,20 @@ def validate_artifacts(base=BASE):
             raise AssertionError("Figure is not SVG: " + name)
         if "figures/" + name not in report:
             raise AssertionError("Report does not link figure: " + name)
+    cosmograph_dir = base / "cosmograph"
+    for name in REQUIRED_COSMOGRAPH_CSVS:
+        csv_file = cosmograph_dir / name
+        if not csv_file.exists():
+            raise AssertionError("Missing Cosmograph CSV export: " + name)
+    for name in REQUIRED_COSMOGRAPH_IMAGES:
+        image = cosmograph_dir / name
+        if not image.exists():
+            raise AssertionError("Missing Cosmograph image: " + name)
+        text = image.read_text(encoding="utf-8")
+        if "<svg" not in text or "</svg>" not in text:
+            raise AssertionError("Cosmograph image is not SVG: " + name)
+        if "cosmograph/" + name not in report:
+            raise AssertionError("Report does not link Cosmograph image: " + name)
     for section in ["## Inclusion and Exclusion Summary", "## Mapping Methods", "## Evidence-Level Coverage"]:
         if section not in report:
             raise AssertionError("Report missing required section: " + section)
@@ -110,6 +137,7 @@ def validate_artifacts(base=BASE):
         "candidates": len(candidates),
         "accepted_mappings": len(accepted),
         "figures": len(REQUIRED_FIGURES),
+        "cosmograph_images": len(REQUIRED_COSMOGRAPH_IMAGES),
         "sssom_rows": sssom_summary["row_count"],
     }
 
@@ -119,7 +147,7 @@ def main():
     parser.add_argument("--base", type=Path, default=BASE)
     args = parser.parse_args()
     summary = validate_artifacts(args.base)
-    print("Ontology comparison artifacts valid: {sources} sources, {terms} terms, {candidates} candidates, {accepted_mappings} accepted mappings, {figures} figures.".format(**summary))
+    print("Ontology comparison artifacts valid: {sources} sources, {terms} terms, {candidates} candidates, {accepted_mappings} accepted mappings, {figures} figures, {cosmograph_images} Cosmograph images.".format(**summary))
 
 
 if __name__ == "__main__":
