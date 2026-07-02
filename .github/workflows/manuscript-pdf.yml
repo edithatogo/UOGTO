@@ -2,7 +2,7 @@ name: Build Manuscript PDF
  
 on: 
   push: 
-    branches: [ main, master ] 
+    branches: [ main ]
     paths: 
       - "docs/paper/**" 
       - "scripts/maintenance/build_manuscript_pdf.py" 
@@ -10,7 +10,7 @@ on:
       - "tests/test_manuscript_build.py" 
       - ".github/workflows/manuscript-pdf.yml" 
   pull_request: 
-    branches: [ main, master ] 
+    branches: [ main ]
     paths: 
       - "docs/paper/**" 
       - "scripts/maintenance/build_manuscript_pdf.py" 

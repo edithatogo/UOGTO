@@ -5,6 +5,7 @@ Updated: `2026-07-02`
 ## Active Work
 
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
+- `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 
 ## Current arXiv Submission State
 
@@ -37,3 +38,14 @@ Updated: `2026-07-02`
 - LaTeX visual presentation scoring is tracked at `docs/paper/latex-visual-presentation-scorecard.md` and `.json`; current target state is all major sections at least 95/100 with a weighted total score of 96.5/100.
 - Candidate decision audit is tracked at `docs/article-hardening/candidate-decision-ledger.md`, `.csv`, and `.json`; the current ledger covers 511 route, source, mapping, and ontology-inclusion candidate decisions with rationales and heuristics.
 - Manual arXiv upload using the CI artifact, rendered-PDF inspection, and arXiv identifier recording remain external submission steps.
+
+## Repo and arXiv Hardening Track
+
+- Conductor track: `conductor/tracks/repo_arxiv_submission_hardening_20260702/`.
+- New aggregate CI gate: `.github/workflows/required-gate.yml`.
+- Strict review script: `scripts/maintenance/score_arxiv_submission.py`.
+- Strict review artifacts:
+  - `docs/paper/arxiv-strict-review-rubric.md`
+  - `docs/paper/arxiv-strict-review-report.md`
+  - `docs/paper/arxiv-strict-review-iterations.jsonl`
+- Remaining repo-side follow-up: run the new GitHub `Required Gate` on the pushed branch, then update `main` branch protection to require it.
