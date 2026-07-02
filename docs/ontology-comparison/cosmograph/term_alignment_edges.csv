@@ -1,0 +1,11 @@
+source,target,weight,graph
+source:http://ogp.me/ns#description,uogto:https://w3id.org/uogto/core#description,owl:equivalentProperty,term_alignment
+source:http://purl.org/dc/terms/description,uogto:https://w3id.org/uogto/core#description,owl:equivalentProperty,term_alignment
+source:http://purl.org/dc/terms/identifier,uogto:https://w3id.org/uogto/core#identifier,owl:equivalentProperty,term_alignment
+source:http://www.w3.org/2002/07/owl#Thing,uogto:https://w3id.org/uogto/extensions#Thing,owl:equivalentClass,term_alignment
+source:http://www.w3.org/ns/prov#Agent,uogto:https://w3id.org/uogto/core#Agent,owl:equivalentClass,term_alignment
+source:http://www.w3.org/ns/prov#Role,uogto:https://w3id.org/uogto/core#Role,owl:equivalentClass,term_alignment
+source:http://www.w3.org/ns/sosa/observes,uogto:https://w3id.org/uogto/core#observes,owl:equivalentProperty,term_alignment
+source:http://xmlns.com/foaf/0.1/Agent,uogto:https://w3id.org/uogto/core#Agent,owl:equivalentClass,term_alignment
+source:https://ref.gs1.org/voc/description,uogto:https://w3id.org/uogto/core#description,owl:equivalentProperty,term_alignment
+source:https://schema.org/Action,uogto:https://w3id.org/uogto/core#Action,owl:equivalentClass,term_alignment

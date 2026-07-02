@@ -5,8 +5,9 @@ This matrix records candidate tools for preparing, hardening, and evaluating arX
 | Tool | Purpose | Disposition | Acceptance Criterion |
 | --- | --- | --- | --- |
 | repo-native-cleaner | Authoritative UOGTO source-package cleaner | Required | Manifest proves only required TeX, bibliography, style, and figure files are retained. |
+| repo-native-upload-ready-bundler | Deterministic arXiv upload tarball, manifest, checksums, `00README.json` preview, and provenance handoff | Required | `make arxiv-upload-ready` emits `dist/arxiv/*`, records SHA-256 hashes, and CI retains the artifact set for 90 days plus attests `dist/arxiv/SHA256SUMS`. |
 | arxiv-latex-cleaner | External cleaner for unused TeX/images, comments, and size reduction | Advisory benchmark | Run in isolated output and compare removed/kept manifest with repo-native cleaner. |
-| latexmk | Automated LaTeX/BibTeX build verifier | Required when available | Cleaned package compiles with an arXiv-compatible processor or records missing-engine blocker. |
+| latexmk / pdflatex | Automated LaTeX/BibTeX build verifier | Required for final publisher sign-off | `make arxiv-upload-ready-strict` or GitHub arXiv Preflight compiles with an arXiv-compatible processor; missing local engine is recorded as a local-toolchain blocker. |
 | chktex | LaTeX linting | Optional with triage | Warnings are reviewed and fixed or marked false positive. |
 | lacheck | Common LaTeX mistake checker | Optional with triage | Warnings are reviewed and fixed or marked false positive. |
 | checkcites | Undefined and unused citation checker | Optional | Citation issues are fixed or explicitly justified. |

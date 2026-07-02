@@ -634,3 +634,14 @@ Remote validation for commit `1574b09783d46761178c1a0798b7f87da514f14b`:
 - Build Manuscript PDF: success, run 28170678355
 - Build WIDOCO Pages: success, run 28170678491
 - arXiv Preflight: success, run 28170678436
+
+## 2026-07-02T00:00:00Z - arXiv readability and graph-label polish
+
+- Added `scripts/maintenance/score_latex_readability.py` and generated `docs/paper/readability-report.md` / `.json`.
+- Rewrote dense manuscript passages with shorter explanations for a 14-year-old target reader while preserving ontology, search, mapping, graph-analysis, limitations, and declaration claims.
+- Main manuscript prose now passes the textstat target: Flesch-Kincaid grade 8.87, Flesch reading ease 50.76, 3,613 words, and target status `pass`.
+- Updated ontology comparison graph rendering to use publication-facing labels such as `Basic Formal Ontology`, `UOGTO Core`, and human-readable local names instead of raw IDs in Cosmograph CSV exports and static graph labels.
+- Regenerated ontology-comparison visuals and refreshed the arXiv graph PDFs under `docs/paper/figures/`.
+- Added visual-label regression coverage in `tests/test_ontology_visuals.py`.
+- Local validation passed: `make ontology-comparison-visuals`, `make ontology-comparison-check`, focused ontology visual pytest, `make arxiv-upload-ready`, `make validate`, and `make test`.
+- arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `dd88669d6ddded3baffb9331711837a8c4ffdc0ac1416200a62ed468ea44b1f4`.

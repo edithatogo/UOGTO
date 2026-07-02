@@ -49,6 +49,102 @@
       ],
       "review_status": "not_required"
     },
+    "gale-shapley-1962": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "gale-shapley-1962",
+            "title": "College Admissions and the Stability of Marriage",
+            "URL": "https://doi.org/10.1080/00029890.1962.11989827",
+            "DOI": "10.1080/00029890.1962.11989827"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "gruber-1995": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "gruber-1995",
+            "title": "Toward Principles for the Design of Ontologies Used for Knowledge Sharing",
+            "URL": "https://doi.org/10.1006/ijhc.1995.1081",
+            "DOI": "10.1006/ijhc.1995.1081"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "harsanyi-1967": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "harsanyi-1967",
+            "title": "Games with Incomplete Information Played by Bayesian Players, I-III. Part I. The Basic Model",
+            "URL": "https://doi.org/10.1287/mnsc.14.3.159",
+            "DOI": "10.1287/mnsc.14.3.159"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "myerson-1981": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "myerson-1981",
+            "title": "Optimal Auction Design",
+            "URL": "https://doi.org/10.1287/moor.6.1.58",
+            "DOI": "10.1287/moor.6.1.58"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "nash-1950": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "nash-1950",
+            "title": "Equilibrium Points in n-Person Games",
+            "URL": "https://www.pnas.org/doi/10.1073/pnas.36.1.48",
+            "DOI": "10.1073/pnas.36.1.48"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "nisan-2007": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "nisan-2007",
+            "title": "Algorithmic Game Theory",
+            "URL": "https://www.cambridge.org/core/books/algorithmic-game-theory/0092C07CA8B724E1B1BE2238DDD66B38",
+            "DOI": null
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
     "open-spiel-2019": {
       "provider_candidates": [
         {
@@ -59,7 +155,7 @@
             "id": "open-spiel-2019",
             "title": "OpenSpiel: A Framework for Reinforcement Learning in Games",
             "URL": "https://arxiv.org/abs/1908.09453",
-            "DOI": null
+            "DOI": "10.48550/arxiv.1908.09453"
           }
         }
       ],
@@ -92,6 +188,38 @@
             "title": "Prisoner's Dilemma",
             "URL": "https://doi.org/10.3998/mpub.20269",
             "DOI": "10.3998/mpub.20269"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "shapley-1953": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "shapley-1953",
+            "title": "A Value for n-Person Games",
+            "URL": "https://doi.org/10.1515/9781400881970-018",
+            "DOI": "10.1515/9781400881970-018"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "vickrey-1961": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "vickrey-1961",
+            "title": "Counterspeculation, Auctions, and Competitive Sealed Tenders",
+            "URL": "https://doi.org/10.1111/j.1540-6261.1961.tb02789.x",
+            "DOI": "10.1111/j.1540-6261.1961.tb02789.x"
           }
         }
       ],

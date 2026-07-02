@@ -1,13 +1,16 @@
 import argparse
 import json
+import re
 import shutil
 import subprocess
+from collections.abc import Iterable
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_PAPER = ROOT / "docs" / "paper" / "paper.tex"
 DEFAULT_OUTDIR = ROOT / ".tmp" / "manuscript-build"
+ARXIV_COMPATIBLE_ENGINES = {"latexmk", "pdflatex"}
 
 REQUIRED_TOKENS = (
     r"\documentclass",
@@ -17,6 +20,20 @@ REQUIRED_TOKENS = (
     r"\begin{thebibliography}",
     r"\end{thebibliography}",
 )
+BLOCKING_WARNING_PATTERNS = (
+    re.compile(r"LaTeX Warning:.*Reference `[^`]+'.*undefined", re.IGNORECASE),
+    re.compile(r"LaTeX Warning:.*Citation `[^`]+'.*undefined", re.IGNORECASE),
+    re.compile(r"There were undefined references", re.IGNORECASE),
+    re.compile(r"There were undefined citations", re.IGNORECASE),
+)
+
+
+def bundled_tectonic_candidates() -> Iterable[Path]:
+    yield ROOT / ".pixi" / "envs" / "default" / "Library" / "bin" / "tectonic.exe"
+    yield ROOT / ".pixi" / "envs" / "default" / "Scripts" / "tectonic.exe"
+    plugin_root = Path.home() / ".codex" / "plugins" / "cache" / "openai-bundled" / "latex"
+    if plugin_root.exists():
+        yield from sorted(plugin_root.glob("*/bin/tectonic.exe"))
 
 
 def check_tex_structure(paper_path: Path) -> list[str]:
@@ -29,28 +46,50 @@ def check_tex_structure(paper_path: Path) -> list[str]:
     return issues
 
 
+def blocking_build_warnings(log_text: str) -> list[str]:
+    warnings: list[str] = []
+    for pattern in BLOCKING_WARNING_PATTERNS:
+        warnings.extend(match.group(0) for match in pattern.finditer(log_text))
+    return sorted(set(warnings))
+
+
 def find_latex_engine() -> str | None:
     for engine in ("latexmk", "tectonic", "pdflatex"):
-        if shutil.which(engine):
-            return engine
+        found = shutil.which(engine)
+        if found:
+            return found
+    for candidate in bundled_tectonic_candidates():
+        if candidate.exists():
+            return str(candidate)
     return None
 
 
+def engine_basename(engine: str) -> str:
+    name = re.split(r"[\\/]", engine)[-1].lower()
+    return name[:-4] if name.endswith(".exe") else name
+
+
+def is_arxiv_compatible_engine(engine: str) -> bool:
+    return engine_basename(engine) in ARXIV_COMPATIBLE_ENGINES
+
+
 def command_for_engine(engine: str, paper_path: Path, output_dir: Path) -> list[str]:
-    if engine == "latexmk":
+    executable = str(engine)
+    engine_name = engine_basename(engine)
+    if engine_name == "latexmk":
         return [
-            engine,
+            executable,
             "-pdf",
             "-interaction=nonstopmode",
             "-halt-on-error",
             f"-outdir={output_dir}",
             str(paper_path),
         ]
-    if engine == "tectonic":
-        return [engine, "--outdir", str(output_dir), str(paper_path)]
-    if engine == "pdflatex":
+    if engine_name == "tectonic":
+        return [executable, "--outdir", str(output_dir), str(paper_path)]
+    if engine_name == "pdflatex":
         return [
-            engine,
+            executable,
             "-interaction=nonstopmode",
             "-halt-on-error",
             f"-output-directory={output_dir}",
@@ -63,7 +102,10 @@ def build_manuscript(
     paper_path: Path = DEFAULT_PAPER,
     output_dir: Path = DEFAULT_OUTDIR,
     require_pdf: bool = False,
+    require_arxiv_engine: bool = False,
 ) -> dict:
+    paper_path = paper_path.resolve()
+    output_dir = output_dir.resolve()
     structure_issues = check_tex_structure(paper_path)
     result = {
         "paper": str(paper_path),
@@ -85,6 +127,14 @@ def build_manuscript(
         result["skipped"] = "No LaTeX engine found; install latexmk, tectonic, or pdflatex for PDF output."
         return result
 
+    if require_arxiv_engine and not is_arxiv_compatible_engine(engine):
+        result["ok"] = False
+        result["skipped"] = (
+            "arXiv-compatible PDF engine required; found "
+            f"{engine_basename(engine)}. Install latexmk or pdflatex for strict arXiv preflight."
+        )
+        return result
+
     output_dir.mkdir(parents=True, exist_ok=True)
     completed = subprocess.run(
         command_for_engine(engine, paper_path, output_dir),
@@ -94,12 +144,15 @@ def build_manuscript(
         text=True,
     )
     pdf_path = output_dir / f"{paper_path.stem}.pdf"
+    log_path = output_dir / f"{paper_path.stem}.log"
+    warning_text = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else completed.stdout + "\n" + completed.stderr
     result["returncode"] = completed.returncode
     result["stdout_tail"] = completed.stdout[-2000:]
     result["stderr_tail"] = completed.stderr[-2000:]
+    result["blocking_warnings"] = blocking_build_warnings(warning_text)
     result["compiled"] = completed.returncode == 0
     result["pdf"] = str(pdf_path)
-    result["ok"] = completed.returncode == 0 and pdf_path.exists()
+    result["ok"] = completed.returncode == 0 and pdf_path.exists() and not result["blocking_warnings"]
     return result
 
 
@@ -108,10 +161,16 @@ def main() -> None:
     parser.add_argument("--paper", default=str(DEFAULT_PAPER))
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTDIR))
     parser.add_argument("--require-pdf", action="store_true")
+    parser.add_argument("--require-arxiv-engine", action="store_true")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
-    result = build_manuscript(Path(args.paper), Path(args.output_dir), args.require_pdf)
+    result = build_manuscript(
+        Path(args.paper),
+        Path(args.output_dir),
+        require_pdf=args.require_pdf,
+        require_arxiv_engine=args.require_arxiv_engine,
+    )
     if args.json:
         print(json.dumps(result, indent=2))
     elif result["structure_issues"]:
@@ -120,6 +179,10 @@ def main() -> None:
             print(f"- {issue}")
     elif result["compiled"]:
         print(f"Manuscript PDF built with {result['engine']}: {result['pdf']}")
+        if result.get("blocking_warnings"):
+            print("Blocking LaTeX warnings detected:")
+            for warning in result["blocking_warnings"]:
+                print(f"- {warning}")
     elif result["ok"]:
         print(result["skipped"])
         print("Manuscript TeX structure check passed.")

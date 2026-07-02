@@ -1,0 +1,70 @@
+id,label,kind,degree,graph
+bfo,Basic Formal Ontology,source,3,source_similarity
+devs,DEVS simulation,source,0,source_similarity
+dolce,DOLCE ontology,source,5,source_similarity
+emmo,EMMO,source,5,source_similarity
+game_ontology_project,Game Ontology Project,source,0,source_similarity
+gdlf_gamelan,Game Description Language,source,2,source_similarity
+hla_fom,HLA Federation Object Model,source,1,source_similarity
+kaos,KAoS policy ontology,source,2,source_similarity
+kisao,KiSAO algorithms,source,2,source_similarity
+miase,MIASE,source,1,source_similarity
+odd_protocol,ODD protocol,source,2,source_similarity
+ontouml_ufo,OntoUML / UFO,source,3,source_similarity
+osmo,OSMO,source,3,source_similarity
+owl_time,OWL-Time,source,0,source_similarity
+p_plan,P-Plan,source,1,source_similarity
+prov_o,PROV-O,source,0,source_similarity
+schema_org,schema.org,source,0,source_similarity
+sed_ml,SED-ML,source,4,source_similarity
+ssn_sosa,SSN/SOSA,source,0,source_similarity
+uogto_alignments_mcp-a2a,UOGTO Alignments Mcp A2a,uogto_module,6,source_similarity
+uogto_alignments_open-games,UOGTO Alignments Open Games,uogto_module,17,source_similarity
+uogto_alignments_prov-o,UOGTO Alignments Prov O,uogto_module,8,source_similarity
+uogto_alignments_schema-org,UOGTO Alignments Schema Org,uogto_module,6,source_similarity
+uogto_alignments_wot-thing-description,UOGTO Alignments Wot Thing Description,uogto_module,4,source_similarity
+uogto_core_actions,UOGTO Actions,uogto_module,11,source_similarity
+uogto_core_agents,UOGTO Agents,uogto_module,12,source_similarity
+uogto_core_dynamics,UOGTO Dynamics,uogto_module,9,source_similarity
+uogto_core_equilibria,UOGTO Equilibria,uogto_module,9,source_similarity
+uogto_core_games,UOGTO Games,uogto_module,21,source_similarity
+uogto_core_information,UOGTO Information,uogto_module,9,source_similarity
+uogto_core_outcomes,UOGTO Outcomes,uogto_module,10,source_similarity
+uogto_core_payoffs,UOGTO Payoffs,uogto_module,9,source_similarity
+uogto_core_rules,UOGTO Rules,uogto_module,9,source_similarity
+uogto_core_strategies,UOGTO Strategies,uogto_module,9,source_similarity
+uogto_core_uogto-core,UOGTO Uogto Core,uogto_module,0,source_similarity
+uogto_extensions_algorithmic-game-theory,UOGTO Algorithmic Game Theory,uogto_module,19,source_similarity
+uogto_extensions_algorithmic-solvers-patch,UOGTO Algorithmic Solvers Patch,uogto_module,0,source_similarity
+uogto_extensions_auctions,UOGTO Auctions,uogto_module,3,source_similarity
+uogto_extensions_bargaining,UOGTO Bargaining,uogto_module,23,source_similarity
+uogto_extensions_behavioural-games,UOGTO Behavioural Games,uogto_module,17,source_similarity
+uogto_extensions_causal-games,UOGTO Causal Games,uogto_module,25,source_similarity
+uogto_extensions_compositional-open-games,UOGTO Compositional Open Games,uogto_module,26,source_similarity
+uogto_extensions_computational-social-choice,UOGTO Computational Social Choice,uogto_module,13,source_similarity
+uogto_extensions_congestion-routing-games,UOGTO Congestion Routing Games,uogto_module,28,source_similarity
+uogto_extensions_contract-theory,UOGTO Contract Theory,uogto_module,21,source_similarity
+uogto_extensions_cooperative,UOGTO Cooperative,uogto_module,30,source_similarity
+uogto_extensions_deontic-logic,UOGTO Deontic Logic,uogto_module,4,source_similarity
+uogto_extensions_differential-hybrid-games,UOGTO Differential Hybrid Games,uogto_module,18,source_similarity
+uogto_extensions_digital-twin-games,UOGTO Digital Twin Games,uogto_module,24,source_similarity
+uogto_extensions_epistemic-games,UOGTO Epistemic Games,uogto_module,26,source_similarity
+uogto_extensions_evolutionary-games,UOGTO Evolutionary Games,uogto_module,27,source_similarity
+uogto_extensions_game-description-languages,UOGTO Game Description Languages,uogto_module,17,source_similarity
+uogto_extensions_information-design,UOGTO Information Design,uogto_module,20,source_similarity
+uogto_extensions_institutional-economics,UOGTO Institutional Economics,uogto_module,24,source_similarity
+uogto_extensions_kg-execution-bindings,UOGTO Kg Execution Bindings,uogto_module,12,source_similarity
+uogto_extensions_learning-in-games,UOGTO Learning In Games,uogto_module,14,source_similarity
+uogto_extensions_llm-agent-games,UOGTO LLM Agent Games,uogto_module,21,source_similarity
+uogto_extensions_marl,UOGTO MARL,uogto_module,17,source_similarity
+uogto_extensions_matching-allocation,UOGTO Matching Allocation,uogto_module,13,source_similarity
+uogto_extensions_mean-field-games,UOGTO Mean Field Games,uogto_module,31,source_similarity
+uogto_extensions_mechanism-design,UOGTO Mechanism Design,uogto_module,14,source_similarity
+uogto_extensions_network-games,UOGTO Network Games,uogto_module,29,source_similarity
+uogto_extensions_petri-net-devs-hla,UOGTO Petri Net Devs Hla,uogto_module,13,source_similarity
+uogto_extensions_privacy-disclosure,UOGTO Privacy Disclosure,uogto_module,13,source_similarity
+uogto_extensions_security-games,UOGTO Security Games,uogto_module,22,source_similarity
+uogto_extensions_trust-reputation-provenance,UOGTO Trust Reputation Provenance,uogto_module,14,source_similarity
+uogto_extensions_verification-games,UOGTO Verification Games,uogto_module,17,source_similarity
+vimmp_ontologies,VIMMP ontologies,source,3,source_similarity
+xmile,XMILE system dynamics,source,1,source_similarity

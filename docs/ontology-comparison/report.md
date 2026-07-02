@@ -43,10 +43,13 @@ The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate
 | `emmo` | 1 | 0.0 |
 
 ## Network Findings
-- Source graph nodes: 74
+- Import/evidence source graph nodes: 74
+- Source-similarity graph nodes: 69
 - Term-alignment bipartite edges: 10
 - Source-similarity edges: 391
 - UOGTO module coverage edges: 11
+
+The import/evidence graph and source-similarity graph are separate views; their node counts are not expected to match.
 
 | Central source or module | Centrality score |
 | --- | ---: |
@@ -77,6 +80,15 @@ The new heatmaps stratify source-family coverage by evidence level so metadata-o
 - ![source_similarity_network.svg](figures/source_similarity_network.svg)
 - ![mapping_flow_sankey.svg](figures/mapping_flow_sankey.svg)
 - ![reviewer_workload.svg](figures/reviewer_workload.svg)
+
+## Cosmograph Network Images and Interactive Exports
+Cosmograph-ready node and edge CSV files are generated under `docs/ontology-comparison/cosmograph/`, alongside static SVG renderings for arXiv-safe review:
+
+- ![source_similarity_cosmograph.svg](cosmograph/source_similarity_cosmograph.svg)
+- ![term_alignment_cosmograph.svg](cosmograph/term_alignment_cosmograph.svg)
+- ![import_uses_cosmograph.svg](cosmograph/import_uses_cosmograph.svg)
+
+Use the `source` and `target` columns from each `*_edges.csv` file as links, join the matching `*_nodes.csv` file on `id`, and use `weight`, `kind`, and `degree` for link strength, colour, and size.
 
 ## Recommended UOGTO Follow-Up Work
 1. Treat accepted mappings as stable crosswalk evidence and keep `accepted-alignments.ttl` in sync with any future review edits.

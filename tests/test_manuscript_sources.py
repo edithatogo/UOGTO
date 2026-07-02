@@ -58,6 +58,10 @@ class TestManuscriptSources(unittest.TestCase):
         self.assertTrue((self.paper_dir / "references.csl.json").exists())
         self.assertTrue((self.paper_dir / "source-review-queue.jsonl").exists())
         self.assertTrue((self.sourceright_dir / "references.verification.json").exists())
+        self.assertFalse(
+            any("\\" in ref.get("source_note", "") for ref in inventory["references"]),
+            "Generated source notes must use POSIX-style paths for cross-platform determinism.",
+        )
 
         refs = json.loads((self.paper_dir / "references.csl.json").read_text(encoding="utf-8"))
         self.assertEqual(refs, json.loads((self.sourceright_dir / "references.csl.json").read_text(encoding="utf-8")))

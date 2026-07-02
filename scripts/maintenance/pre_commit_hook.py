@@ -2,6 +2,7 @@
 import sys
 import subprocess
 import os
+import shutil
 
 # Insert workspace root in python path to resolve modules correctly when executed inside git hook context
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
@@ -40,7 +41,18 @@ def main():
         sys.exit(1)
         
     # 3. Run Makefile validations
-    pixi_path = r"C:\Users\60217257\AppData\Local\pixi\bin\pixi.exe"
+    pixi_path = shutil.which("pixi")
+    if not pixi_path:
+        for candidate in [
+            os.path.expanduser(r"~\.pixi\bin\pixi.exe"),
+            os.path.expanduser(r"~\AppData\Local\pixi\bin\pixi.exe"),
+        ]:
+            if os.path.exists(candidate):
+                pixi_path = candidate
+                break
+    if not pixi_path:
+        print("ERROR: Pixi executable not found on PATH or in known user install locations.")
+        sys.exit(1)
     ok, output = run_cmd([pixi_path, "run", "python", "scripts/validate.py"])
     print(output)
     if not ok:

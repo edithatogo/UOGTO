@@ -1,17 +1,18 @@
-# PRISMA 2020 Source Discovery Flow
+# PRISMA 2020-style source discovery flow
 
-This figure adapts the PRISMA 2020 flow-diagram template for the UOGTO article-hardening evidence package. Counts reflect the current repository snapshot on 2026-06-25 and are derived from `docs/article-hardening/search-log.jsonl`.
+Search routes, identified records, normalization, inventory capture, inclusion, and negative-evidence recording for UOGTO source discovery.
 
 ```mermaid
 flowchart TD
-    A["Search routes recorded in search-log.jsonl (n=7)"] --> B["Records identified across all routes (n=39)"]
-    B --> C["Records normalised and carried forward for screening (n=39)"]
-    C --> D["Source candidates captured in source-extension-inventory.json (n=39)"]
-    D --> E["Included source-family entries (n=39)"]
-    A -.-> F["Negative-evidence routes recorded separately (n=1)"]
+    N0["Search routes recorded<br/>in search-log.jsonl<br/>n=7"]
+    N1["Records identified<br/>across all routes<br/>n=39"]
+    N2["Records normalized<br/>for screening<br/>n=39"]
+    N3["Source candidates in<br/>source-extension-inventory.json<br/>n=39"]
+    N4["Included source-family<br/>entries<br/>n=39"]
+    N5["Negative-evidence route<br/>recorded separately<br/>n=1"]
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N0 -.-> N5
 ```
-
-Notes:
-- The flow is PRISMA 2020-style, adapted for ontology source discovery rather than trial retrieval.
-- The negative-evidence route is recorded as searched-and-not-found evidence, not as an exclusion claim.
-- PRISMA 2020 checklist and flow-diagram resources are published by the PRISMA statement team.

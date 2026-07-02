@@ -138,8 +138,6 @@ def should_keep(path: Path, *, package_dir: Path, graphics: set[str], includes: 
 
 
 def remove_file(path: Path) -> None:
-    target = str(path)
-    kernel32 = ctypes.windll.kernel32
     try:
         path.unlink()
         return
@@ -152,6 +150,10 @@ def remove_file(path: Path) -> None:
             path.unlink()
             return
         except PermissionError:
+            if os.name != "nt":
+                raise
+            target = str(path)
+            kernel32 = ctypes.windll.kernel32
             try:
                 kernel32.SetFileAttributesW(target, 0x80)
             except Exception:
@@ -201,6 +203,8 @@ def clean_package(package_dir: Path, source_root: Path | None = None, paper_name
 def resolve_default_package_dir(package_dir: Path) -> Path:
     """Resolve the latest generated package when the default path is requested."""
     if package_dir != DEFAULT_OUTPUT_DIR:
+        return package_dir
+    if package_dir.exists() and (package_dir / DEFAULT_PAPER).exists():
         return package_dir
     manifests = sorted(
         package_dir.parent.glob(f"{package_dir.name}-*.manifest.json"),

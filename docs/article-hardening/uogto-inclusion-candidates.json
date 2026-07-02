@@ -1,64 +1,76 @@
 {
   "source_csv": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/docs/article-hardening/uogto-inclusion-candidates.csv",
   "row_count": 5,
-  "columns": [
-    "candidate_id",
-    "source_title",
-    "source_family",
-    "disposition",
-    "evidence_level",
-    "reviewer_handoff",
-    "mapped_to",
-    "rationale"
+    "columns": [
+        "candidate_id",
+        "candidate_label",
+        "source_title",
+        "source_family",
+        "disposition",
+        "evidence_level",
+        "reviewer_handoff",
+        "uogto_target",
+        "mapped_to",
+        "rationale"
   ],
   "rows": [
     {
       "candidate_id": "cand-001",
+      "candidate_label": "strategic-interaction ontology core term",
       "source_title": "Game theory ontology survey source",
       "source_family": "game-theory-ontology",
       "disposition": "add_to_uogto",
       "evidence_level": "parsed_rdf_owl",
       "reviewer_handoff": "peer_review",
+      "uogto_target": "uogto core ontology namespace",
       "mapped_to": "core ontology namespace",
       "rationale": "Strong fit for strategic interaction vocabulary"
     },
     {
       "candidate_id": "cand-002",
+      "candidate_label": "discrete-event simulation transition semantics",
       "source_title": "Discrete-event simulation schema",
       "source_family": "discrete_event_simulation",
       "disposition": "align_external_only",
       "evidence_level": "structured_non_rdf",
       "reviewer_handoff": "peer_review",
+      "uogto_target": "execution or simulation extension",
       "mapped_to": "external mapping only",
       "rationale": "Useful as an alignment target but too domain-specific for direct inclusion"
     },
     {
       "candidate_id": "cand-003",
+      "candidate_label": "agent-based run and state-transition trace",
       "source_title": "ABM execution ontology",
       "source_family": "agent_based_modelling",
       "disposition": "add_to_uogto",
       "evidence_level": "parsed_rdf_owl",
       "reviewer_handoff": "editorial_review",
+      "uogto_target": "execution binding module",
       "mapped_to": "execution binding module",
       "rationale": "Captures traces, runs, and agent state transitions"
     },
     {
       "candidate_id": "cand-004",
+      "candidate_label": "system-dynamics feedback-loop game feature",
       "source_title": "System-dynamics vocab",
       "source_family": "system_dynamics",
       "disposition": "requires_domain_review",
       "evidence_level": "metadata_only",
       "reviewer_handoff": "devil_advocate",
+      "uogto_target": "feedback-loop extension candidate",
       "mapped_to": "feedback-loop module",
       "rationale": "Potential fit but needs tighter scope and examples"
     },
     {
       "candidate_id": "cand-005",
+      "candidate_label": "no robust general health-economics game ontology found",
       "source_title": "Negative evidence search",
       "source_family": "negative_evidence_no_relevant_ontology_found",
       "disposition": "reject_out_of_scope",
       "evidence_level": "literature_only",
       "reviewer_handoff": "peer_review",
+      "uogto_target": "none",
       "mapped_to": "none",
       "rationale": "Search documented but no robust ontology candidate was found"
     }

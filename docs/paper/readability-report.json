@@ -1,0 +1,20 @@
+{
+  "generated_at_utc": "deterministic-local-preflight",
+  "paper": "docs\\paper\\paper.tex",
+  "plain_text_excerpt": "Game theory studies choices between people, groups, or computer agents when each choice can affect the others. These models are now used in economics, public policy, safety, medicine, and artificial intelligence (AI). But the parts of a game are often described in different ways. One paper may use prose. Another may use code. Another may use a diagram. That makes it hard to compare the work. We present the Universal Open Game Theory Ontology (UOGTO) . An ontology is a shared dictionary that computers and people can inspect. UOGTO gives names to players, actions, strategies , information, payoffs , mechanisms , outcomes , sessions , and traces . It separates the plan for a game from one actual run of that game. It also records where each claim came from. We compared 21 source families. We normalised 4,037 term rows, reviewed 460 possible mappings, and accepted 10 careful alignments. We kept rejected and review-needed rows as negative evidence . UOGTO is not a complete list of all game t",
+  "schema": "uogto.paper-readability-report.v1",
+  "scope": "main manuscript prose before appendix, bibliography, glossary, and abbreviations",
+  "scores": {
+    "character_count": 23821,
+    "dale_chall": 11.72,
+    "flesch_kincaid_grade": 8.87,
+    "flesch_reading_ease": 50.76,
+    "gunning_fog": 11.33,
+    "sentence_count": 333,
+    "smog_index": 11.23,
+    "target_reader": "14-year-old reader, roughly US grade 8-9",
+    "target_status": "pass",
+    "word_count": 3613
+  },
+  "scoring_tool": "textstat"
+}

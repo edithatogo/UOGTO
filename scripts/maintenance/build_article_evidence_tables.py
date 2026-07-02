@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import csv
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -46,7 +45,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None
 def write_json(path: Path, rows: list[dict[str, Any]], schema: str, sources: list[str]) -> None:
     payload = {
         "schema": schema,
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at_utc": "deterministic-local-preflight",
         "row_count": len(rows),
         "sources": sources,
         "rows": rows,

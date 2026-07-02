@@ -1,25 +1,133 @@
 {
   "@context": "../jsonld/context.jsonld",
-  "@id": "http://example.org/first-price-auction",
-  "@type": [
-    "GameSpecification",
-    "Auction",
-    "Mechanism"
-  ],
-  "identifier": "first-price-auction",
-  "hasPlayer": [
+  "@graph": [
+    {
+      "@id": "http://example.org/first-price-auction",
+      "@type": [
+        "GameSpecification",
+        "FirstPriceAuction",
+        "Mechanism"
+      ],
+      "identifier": "first-price-auction",
+      "description": "A sealed-bid first-price auction in which the highest bidder receives the item and pays their own bid.",
+      "hasPlayer": [
+        {
+          "@id": "http://example.org/players/bidder-1"
+        },
+        {
+          "@id": "http://example.org/players/bidder-2"
+        }
+      ],
+      "hasAvailableAction": [
+        {
+          "@id": "http://example.org/actions/bid-80"
+        },
+        {
+          "@id": "http://example.org/actions/bid-65"
+        }
+      ],
+      "hasAllocationRule": {
+        "@id": "http://example.org/rules/highest-bidder-wins"
+      },
+      "hasPaymentRule": {
+        "@id": "http://example.org/rules/winner-pays-own-bid"
+      },
+      "hasReservePrice": 50.0
+    },
     {
       "@id": "http://example.org/players/bidder-1",
       "@type": "Player",
-      "identifier": "bidder-1"
+      "identifier": "bidder-1",
+      "description": "Illustrative bidder with private value 100."
+    },
+    {
+      "@id": "http://example.org/players/bidder-2",
+      "@type": "Player",
+      "identifier": "bidder-2",
+      "description": "Illustrative bidder with private value 70."
+    },
+    {
+      "@id": "http://example.org/actions/bid-80",
+      "@type": "Action",
+      "identifier": "bid-80",
+      "description": "Bidder 1 submits a sealed bid of 80."
+    },
+    {
+      "@id": "http://example.org/actions/bid-65",
+      "@type": "Action",
+      "identifier": "bid-65",
+      "description": "Bidder 2 submits a sealed bid of 65."
+    },
+    {
+      "@id": "http://example.org/rules/highest-bidder-wins",
+      "@type": "AllocationRule",
+      "identifier": "highest-bidder-wins",
+      "description": "Allocate the item to the bidder with the highest submitted bid."
+    },
+    {
+      "@id": "http://example.org/rules/winner-pays-own-bid",
+      "@type": "PaymentRule",
+      "identifier": "winner-pays-own-bid",
+      "description": "Charge the winning bidder their submitted bid."
+    },
+    {
+      "@id": "http://example.org/auction-session-1",
+      "@type": "PlaySession",
+      "identifier": "auction-session-1",
+      "hasState": {
+        "@id": "http://example.org/states/sealed-bids-submitted"
+      },
+      "producesOutcome": {
+        "@id": "http://example.org/outcomes/bidder-1-wins"
+      },
+      "emitsEventTrace": {
+        "@id": "http://example.org/traces/auction-trace-1"
+      }
+    },
+    {
+      "@id": "http://example.org/states/sealed-bids-submitted",
+      "@type": "State",
+      "identifier": "sealed-bids-submitted",
+      "description": "Bidder 1 submitted 80 and bidder 2 submitted 65 before bids were opened."
+    },
+    {
+      "@id": "http://example.org/outcomes/bidder-1-wins",
+      "@type": "Outcome",
+      "identifier": "bidder-1-wins",
+      "description": "Bidder 1 wins the item and pays 80.",
+      "hasHighestBidder": {
+        "@id": "http://example.org/players/bidder-1"
+      },
+      "hasWinningBid": 80.0,
+      "hasSecondHighestBid": 65.0,
+      "assignsPayoff": [
+        {
+          "@id": "http://example.org/payoffs/bidder-1-surplus"
+        },
+        {
+          "@id": "http://example.org/payoffs/bidder-2-surplus"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/payoffs/bidder-1-surplus",
+      "@type": "Payoff",
+      "identifier": "bidder-1-surplus",
+      "description": "Winner's illustrative surplus: value 100 minus first-price payment 80.",
+      "payoffValue": 20.0
+    },
+    {
+      "@id": "http://example.org/payoffs/bidder-2-surplus",
+      "@type": "Payoff",
+      "identifier": "bidder-2-surplus",
+      "description": "Non-winning bidder's illustrative surplus.",
+      "payoffValue": 0.0
+    },
+    {
+      "@id": "http://example.org/traces/auction-trace-1",
+      "@type": "EventTrace",
+      "identifier": "auction-trace-1",
+      "description": "Trace recording bid submission, bid opening, allocation to bidder 1, and first-price payment."
     }
-  ],
-  "hasAllocationRule": {
-    "@id": "http://example.org/alloc-rule",
-    "@type": "AllocationRule"
-  },
-  "hasPaymentRule": {
-    "@id": "http://example.org/payment-rule",
-    "@type": "PaymentRule"
-  }
+  ]
 }

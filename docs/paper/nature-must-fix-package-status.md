@@ -9,6 +9,7 @@ Generated: `2026-06-25T08:39:25+00:00`
 | 3 | Privacy audit manifest | implemented-pass | `docs/paper/arxiv-source-privacy-audit.json`; `docs/paper/arxiv-source-privacy-audit.md`; CI arXiv Preflight run `28154901098` |
 | 4 | Deck polish | implemented-final-polished | `docs/presentation/uogto_nature_presubmission_deck.pptx`; `docs/presentation/uogto_nature_presubmission_deck_scores.md`; `docs/presentation/uogto_nature_presubmission_deck_thumbnails/`; `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/powerpoint_recommendations.md` |
 | 5 | Figure loops | implemented-loop-1 | `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv`; `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.md`; `docs/article-hardening/figures/`; `docs/ontology-comparison/figures/` |
+| 6 | arXiv upload-ready package | implemented-local-provisional-ci-strict-pending | `make arxiv-upload-ready`; `scripts/maintenance/build_arxiv_upload_ready.py`; `docs/paper/arxiv-submission-process.md`; `docs/paper/arxiv-submission-contract.md`; `dist/arxiv/*` generated artifact set |
 
 Remaining Nature-facing work is now limited to final submission freeze: keep manuscript and supplement claims synchronized, freeze figure numbering and captions, polish the PowerPoint deck against final figures, and rerun SourceRight, Authentext, arXiv, and validation gates after any citation or figure change.
 
@@ -45,3 +46,15 @@ CI evidence:
 - Build Manuscript PDF: success, run 28170678355
 - Build WIDOCO Pages: success, run 28170678491
 - arXiv Preflight: success, run 28170678436
+
+## arXiv upload-ready gate
+
+Implemented `2026-07-02`. `make arxiv-upload-ready` now runs the local arXiv preflight, requires the privacy audit manifest to pass, and generates an upload candidate plus provenance artifacts under `dist/arxiv/`: `uogto-arxiv-source.tar.gz`, `arxiv-submission-manifest.json`, `00README.json`, and `SHA256SUMS`.
+
+Local source-package, privacy-audit, and upload-ready generation passed on 2026-07-02. The generated upload tarball SHA-256 is `23aad9174f75b2408071bca8b22e516941aa8760c7e481bb0463368f7cddd4c2`. The previous local PDF-compilation blocker is resolved for development: raw `make arxiv-upload-ready` now passes using `.pixi/envs/default/python.exe`, bundled Tectonic, and locally installed SourceRight `0.1.20`.
+
+The strict arXiv-engine gate is deliberately stronger than the local fallback. `make arxiv-preflight-strict` currently fails locally because this workstation resolves bundled Tectonic rather than `latexmk` or `pdflatex`; the GitHub arXiv Preflight workflow is configured to install `latexmk`/TeX Live and run `make arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"`.
+
+The CI arXiv Preflight workflow now runs the upload-ready target, retains `dist/arxiv/*` as the `uogto-arxiv-upload-ready` artifact for 90 days, and signs checksum-bound artifact provenance with GitHub artifact attestations on push/manual runs. The final remaining arXiv actions are: confirm a clean CI attestation, upload the tarball, inspect the arXiv-rendered PDF, complete `docs/paper/arxiv-post-submission-record-template.md`, and record the assigned arXiv identifier after acceptance.
+
+Devil's advocate review update `2026-07-02`: final submission status is `do-not-submit-yet` until clean strict-engine CI, remote attestation, clean-tree manifest, and arXiv-rendered PDF inspection are complete. Red-team and devil's advocate review notes are archived under `docs/paper/reviews/`.

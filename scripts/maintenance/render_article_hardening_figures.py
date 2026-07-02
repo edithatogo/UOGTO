@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 FIGURES = ROOT / "docs" / "article-hardening" / "figures"
+PAPER_FIGURES = ROOT / "docs" / "paper" / "figures"
 
 FIGURE_SPECS = [
     {
@@ -35,6 +36,24 @@ FIGURE_SPECS = [
         ],
         "arrows": [(0, 1), (1, 2), (1, 3), (0, 4)],
         "dashed": {(0, 4)},
+    },
+    {
+        "stem": "systematic-search-prisma-flow",
+        "title": "PRISMA-style systematic search and ontology enrichment flow",
+        "caption": "Broad source discovery, source-family screening, feature extraction, candidate mapping review, and conservative alignment outcomes for UOGTO.",
+        "boxes": [
+            ("Search records/routes\n6 inclusion + 1 negative\nn=7", 70, 95),
+            ("Article-hardening records\nidentified and normalized\nn=39", 70, 215),
+            ("Evidence sources retained\nfor synthesis\nn=39", 70, 335),
+            ("Comparative source\nfamilies reviewed\nn=21 sources / 17 families", 405, 215),
+            ("Terms normalized\nfrom UOGTO + sources\nn=4,037", 405, 335),
+            ("Mapping candidates\nreviewed\nn=460", 740, 215),
+            ("Accepted conservative\nalignments\nn=10", 740, 335),
+            ("Needs domain review\nn=1", 740, 455),
+            ("Rejected / non-asserted\nnegative evidence\nn=449", 405, 455),
+        ],
+        "arrows": [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (5, 7), (5, 8)],
+        "dashed": {(5, 7), (5, 8)},
     },
 ]
 
@@ -132,11 +151,33 @@ def write_pdf(path: Path, spec: dict) -> None:
 
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
+    PAPER_FIGURES.mkdir(parents=True, exist_ok=True)
     for spec in FIGURE_SPECS:
         svg_path = FIGURES / f"{spec['stem']}.svg"
         pdf_path = FIGURES / f"{spec['stem']}.pdf"
+        md_path = FIGURES / f"{spec['stem']}.md"
         svg_path.write_text(render_svg(spec), encoding="utf-8")
         write_pdf(pdf_path, spec)
+        md_path.write_text(
+            f"# {spec['title']}\n\n"
+            f"{spec['caption']}\n\n"
+            "```mermaid\n"
+            "flowchart TD\n"
+            + "\n".join(
+                f'    N{idx}["{label.replace(chr(10), "<br/>")}"]'
+                for idx, (label, _x, _y) in enumerate(spec["boxes"])
+            )
+            + "\n"
+            + "\n".join(
+                f"    N{left} {'-.->' if (left, right) in spec['dashed'] else '-->'} N{right}"
+                for left, right in spec["arrows"]
+            )
+            + "\n```\n",
+            encoding="utf-8",
+        )
+        if spec["stem"] == "systematic-search-prisma-flow":
+            (PAPER_FIGURES / svg_path.name).write_text(svg_path.read_text(encoding="utf-8"), encoding="utf-8")
+            write_pdf(PAPER_FIGURES / pdf_path.name, spec)
     readme = FIGURES / "README.md"
     readme.write_text(
         "# Figures\n\n"
@@ -146,11 +187,14 @@ def main() -> None:
         "- `prisma-2020-source-discovery-flow.pdf`\n"
         "- `prisma-2020-screening-flow.md`\n"
         "- `prisma-2020-screening-flow.svg`\n"
-        "- `prisma-2020-screening-flow.pdf`\n\n"
+        "- `prisma-2020-screening-flow.pdf`\n"
+        "- `systematic-search-prisma-flow.md`\n"
+        "- `systematic-search-prisma-flow.svg`\n"
+        "- `systematic-search-prisma-flow.pdf`\n\n"
         "The SVG and PDF exports are generated from `scripts/maintenance/render_article_hardening_figures.py`. The PDF files are intended as PDFLaTeX-compatible manuscript assets.\n",
         encoding="utf-8",
     )
-    print("Rendered 2 PRISMA figure SVG/PDF pairs.")
+    print("Rendered 3 PRISMA figure SVG/PDF pairs.")
 
 
 if __name__ == "__main__":

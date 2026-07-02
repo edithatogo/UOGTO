@@ -4,7 +4,7 @@ UOGTO is the Universal Open Game Theory Ontology. Use the citation below when re
 
 ## Preferred Citation
 
-> UOGTO Contributors. *Universal Open Game Theory Ontology (UOGTO)*. Version 1.0.0. Zenodo. DOI: [10.5281/zenodo.20796937](https://doi.org/10.5281/zenodo.20796937).
+> Dylan A Mordaunt. *Universal Open Game Theory Ontology: A semantic resource for strategic-interaction evidence*. Version 1.0.0. Zenodo. DOI: [10.5281/zenodo.20796937](https://doi.org/10.5281/zenodo.20796937).
 
 If you need a machine-readable citation record, use [CITATION.cff](../CITATION.cff).
 
@@ -93,7 +93,7 @@ If you redistribute or adapt the ontology content, preserve attribution and lice
 Use the DOI and version together when you need a stable reference to the release:
 
 ```text
-UOGTO Contributors (2026). Universal Open Game Theory Ontology (UOGTO), version 1.0.0. Zenodo. https://doi.org/10.5281/zenodo.20796937
+Dylan A Mordaunt (2026). Universal Open Game Theory Ontology: A semantic resource for strategic-interaction evidence, version 1.0.0. Zenodo. https://doi.org/10.5281/zenodo.20796937
 ```
 
 ## Reuse Notes

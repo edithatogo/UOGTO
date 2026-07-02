@@ -1,0 +1,170 @@
+{
+  "schema": "uogto.arxiv-submission-agents.v1",
+  "scope": "UOGTO arXiv manuscript submission",
+  "strict_contract": "docs/paper/arxiv-submission-contract.md",
+  "workflow": "conductor/workflows/arxiv-submission-contract-workflow.md",
+  "editor_agents": [
+    {
+      "id": "manuscript_editor",
+      "label": "Manuscript Editor",
+      "skills": [
+        "article-hardening-review",
+        "article-hardening-research"
+      ],
+      "review_focus": [
+        "claim discipline",
+        "source-to-claim traceability",
+        "citation reconciliation",
+        "figure and caption freeze"
+      ],
+      "required_inputs": [
+        "docs/paper/paper.tex",
+        "docs/paper/source-inventory.json",
+        "docs/paper/sourceright-report.md",
+        "docs/paper/figure-caption-freeze-manifest.json"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#editorial-contract"
+    },
+    {
+      "id": "methods_and_evidence_editor",
+      "label": "Methods and Evidence Editor",
+      "skills": [
+        "article-hardening-review",
+        "repo-maintenance"
+      ],
+      "review_focus": [
+        "methods wording",
+        "evidence limitations",
+        "SourceRight/AuthentiText status",
+        "non-overclaiming release notes"
+      ],
+      "required_inputs": [
+        "docs/paper/authentext-report.json",
+        "docs/paper/sourceright-report.json",
+        "docs/paper/nature-must-fix-package-status.md"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#editorial-contract"
+    }
+  ],
+  "reviewer_agents": [
+    {
+      "id": "arxiv_toolchain_reviewer",
+      "label": "arXiv Toolchain Reviewer",
+      "skills": [
+        "latex-compile",
+        "latex-doctor",
+        "repo-maintenance"
+      ],
+      "review_focus": [
+        "TeX engine compatibility",
+        "cleaned source package",
+        "privacy audit",
+        "upload-ready artifact determinism"
+      ],
+      "required_inputs": [
+        "conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md",
+        "conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md",
+        "docs/paper/arxiv-source-privacy-audit.json"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#review-contract"
+    },
+    {
+      "id": "red_team_reviewer",
+      "label": "Evidence and Source-Leak Red Team Reviewer",
+      "skills": [
+        "article-hardening-review",
+        "repo-maintenance"
+      ],
+      "review_focus": [
+        "source-leak risks",
+        "credential and local-path disclosure",
+        "unsupported claims",
+        "warnings requiring explicit disposition"
+      ],
+      "required_inputs": [
+        "docs/paper/arxiv-source-privacy-audit.md",
+        "docs/paper/source-review-queue.jsonl",
+        "docs/paper/sourceright-citations.md"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#review-contract"
+    },
+    {
+      "id": "devils_advocate_reviewer",
+      "label": "Devil's Advocate Submission Reviewer",
+      "skills": [
+        "article-hardening-review",
+        "article-hardening-research",
+        "repo-maintenance"
+      ],
+      "review_focus": [
+        "submission-readiness challenge",
+        "overclaim and contribution-framing risks",
+        "local-versus-remote evidence gaps",
+        "external blocker honesty"
+      ],
+      "required_inputs": [
+        "docs/paper/paper.tex",
+        "docs/paper/arxiv-submission-contract.md",
+        "docs/paper/arxiv-submission-process.md",
+        "docs/paper/nature-must-fix-package-status.md",
+        "conductor/runlog.md",
+        "conductor/status.md"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#devils-advocate-contract"
+    }
+  ],
+  "publisher_agents": [
+    {
+      "id": "publisher_submission_manager",
+      "label": "Publisher Submission Manager",
+      "skills": [
+        "repo-maintenance",
+        "latex-compile"
+      ],
+      "review_focus": [
+        "submission package completeness",
+        "checksum and manifest handoff",
+        "CI artifact retention",
+        "manual arXiv upload checklist"
+      ],
+      "required_inputs": [
+        "dist/arxiv/uogto-arxiv-source.tar.gz",
+        "dist/arxiv/arxiv-submission-manifest.json",
+        "dist/arxiv/SHA256SUMS",
+        "docs/paper/arxiv-submission-process.md"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#publisher-contract"
+    },
+    {
+      "id": "provenance_publisher",
+      "label": "Provenance Publisher",
+      "skills": [
+        "repo-maintenance"
+      ],
+      "review_focus": [
+        "tarball checksum",
+        "GitHub artifact attestation",
+        "post-submission arXiv ID and release metadata update",
+        "Zenodo/release linkage after arXiv acceptance"
+      ],
+      "required_inputs": [
+        ".github/workflows/arxiv-preflight.yml",
+        "docs/release-process.md",
+        "conductor/runlog.md"
+      ],
+      "required_output": "docs/paper/arxiv-submission-contract.md#publisher-contract"
+    }
+  ],
+  "blocking_gate": {
+    "local_command": "make arxiv-upload-ready",
+    "required_validation": [
+      "make validate",
+      "make test"
+    ],
+    "manual_external_steps": [
+      "upload tarball to arXiv",
+      "inspect arXiv-rendered PDF",
+      "record assigned arXiv identifier"
+    ]
+  }
+}
