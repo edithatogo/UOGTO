@@ -1,0 +1,262 @@
+{
+  "ablations": {
+    "all_features": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "normalized_label",
+        "definition_similarity",
+        "hierarchy_context",
+        "property_signature",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_definition_similarity": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "normalized_label",
+        "hierarchy_context",
+        "property_signature",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_embedding_similarity": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "normalized_label",
+        "definition_similarity",
+        "hierarchy_context",
+        "property_signature"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_exact_label": {
+      "accuracy": 1.0,
+      "active_features": [
+        "normalized_label",
+        "definition_similarity",
+        "hierarchy_context",
+        "property_signature",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_hierarchy_context": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "normalized_label",
+        "definition_similarity",
+        "property_signature",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_normalized_label": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "definition_similarity",
+        "hierarchy_context",
+        "property_signature",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "minus_property_signature": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label",
+        "normalized_label",
+        "definition_similarity",
+        "hierarchy_context",
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "only_definition_similarity": {
+      "accuracy": 1.0,
+      "active_features": [
+        "definition_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "only_embedding_similarity": {
+      "accuracy": 1.0,
+      "active_features": [
+        "embedding_similarity"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "only_exact_label": {
+      "accuracy": 1.0,
+      "active_features": [
+        "exact_label"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "only_hierarchy_context": {
+      "accuracy": 0.5,
+      "active_features": [
+        "hierarchy_context"
+      ],
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tn": 0,
+      "tp": 1
+    },
+    "only_normalized_label": {
+      "accuracy": 1.0,
+      "active_features": [
+        "normalized_label"
+      ],
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 1,
+      "tp": 1
+    },
+    "only_property_signature": {
+      "accuracy": 0.5,
+      "active_features": [
+        "property_signature"
+      ],
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tn": 0,
+      "tp": 1
+    }
+  },
+  "dataset": {
+    "negative_rows": 1,
+    "positive_rows": 1,
+    "reviewed_rows": 2,
+    "scored_rows": 2,
+    "skipped_rows": 0
+  },
+  "features": {
+    "definition_similarity": {
+      "mean_negative_score": 0.0,
+      "mean_positive_score": 1.0,
+      "mean_score": 0.5,
+      "negative_support_rate": 0.0,
+      "positive_support_rate": 1.0
+    },
+    "embedding_similarity": {
+      "mean_negative_score": 0.0,
+      "mean_positive_score": 1.0000000000000002,
+      "mean_score": 0.5000000000000001,
+      "negative_support_rate": 0.0,
+      "positive_support_rate": 1.0
+    },
+    "exact_label": {
+      "mean_negative_score": 0.0,
+      "mean_positive_score": 1.0,
+      "mean_score": 0.5,
+      "negative_support_rate": 0.0,
+      "positive_support_rate": 1.0
+    },
+    "hierarchy_context": {
+      "mean_negative_score": 0.5,
+      "mean_positive_score": 1.0,
+      "mean_score": 0.75,
+      "negative_support_rate": 1.0,
+      "positive_support_rate": 1.0
+    },
+    "normalized_label": {
+      "mean_negative_score": 0.0,
+      "mean_positive_score": 1.0,
+      "mean_score": 0.5,
+      "negative_support_rate": 0.0,
+      "positive_support_rate": 1.0
+    },
+    "property_signature": {
+      "mean_negative_score": 1.0,
+      "mean_positive_score": 1.0,
+      "mean_score": 1.0,
+      "negative_support_rate": 1.0,
+      "positive_support_rate": 1.0
+    }
+  },
+  "methods": {
+    "aggregation": "mean feature score",
+    "embedding_similarity": "character-trigram-cosine-proxy",
+    "threshold": 0.5
+  },
+  "source": {
+    "candidate_jsonl": null,
+    "review_csv": "/home/runner/work/UOGTO/UOGTO/.tmp_mapping_robustness_test/mapping-review.csv"
+  }
+}

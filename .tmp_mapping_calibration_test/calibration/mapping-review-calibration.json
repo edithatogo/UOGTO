@@ -1,0 +1,61 @@
+{
+  "agreement": {
+    "agreement_rate": 0.6666666666666666,
+    "kappa": 0.0,
+    "pair_count": 3
+  },
+  "dataset": {
+    "accepted_rows": 2,
+    "adjudicated_rows": 3,
+    "rejected_rows": 1,
+    "reviewed_rows": 3,
+    "sample_size": 3
+  },
+  "sample": [
+    {
+      "adjudicated_decision": "accepted",
+      "adjudication_status": "adjudicated",
+      "reviewer_a_decision": "accepted",
+      "reviewer_b_decision": "accepted",
+      "sample_id": "cal-001",
+      "sampled_decision": "accepted",
+      "source_definition": "A discrete choice.",
+      "source_id": "uogto:Action",
+      "source_label": "Action",
+      "target_definition": "A discrete move.",
+      "target_id": "ext:Move",
+      "target_label": "Move"
+    },
+    {
+      "adjudicated_decision": "accepted",
+      "adjudication_status": "adjudicated",
+      "reviewer_a_decision": "accepted",
+      "reviewer_b_decision": "accepted",
+      "sample_id": "cal-002",
+      "sampled_decision": "accepted",
+      "source_definition": "A plan of action.",
+      "source_id": "uogto:Strategy",
+      "source_label": "Strategy",
+      "target_definition": "A plan of action.",
+      "target_id": "ext:Strategy",
+      "target_label": "Strategy"
+    },
+    {
+      "adjudicated_decision": "rejected",
+      "adjudication_status": "adjudicated",
+      "reviewer_a_decision": "rejected",
+      "reviewer_b_decision": "accepted",
+      "sample_id": "cal-003",
+      "sampled_decision": "rejected",
+      "source_definition": "Reward assigned to an action.",
+      "source_id": "uogto:Payoff",
+      "source_label": "Payoff",
+      "target_definition": "Result of a game.",
+      "target_id": "ext:Outcome",
+      "target_label": "Outcome"
+    }
+  ],
+  "source": {
+    "review_csv": "/home/runner/work/UOGTO/UOGTO/.tmp_mapping_calibration_test/mapping-review.csv"
+  }
+}

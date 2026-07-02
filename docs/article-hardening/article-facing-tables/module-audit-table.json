@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-25T08:39:44+00:00",
+  "generated_at_utc": "2026-06-28T04:19:44+00:00",
   "row_count": 49,
   "rows": [
     {
@@ -985,6 +985,6 @@
   ],
   "schema": "uogto.article.module-audit-table.v1",
   "sources": [
-    "docs\\article-hardening\\quality-metrics.json"
+    "docs/article-hardening/quality-metrics.json"
   ]
 }

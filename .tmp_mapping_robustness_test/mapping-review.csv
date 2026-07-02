@@ -1,0 +1,3 @@
+source_label,target_label,source_definition,target_definition,source_hierarchy,target_hierarchy,source_properties,target_properties,decision
+Strategy,Strategy,A plan of action.,A plan of action.,Game theory>Strategy,Game theory>Strategy,hasPlayer hasAction,hasPlayer hasAction,accepted
+Payoff,Outcome,Reward assigned to an action.,Result of a game.,Game theory>Payoff,Game theory>Outcome,hasValue hasUnit,hasValue hasUnit,rejected
