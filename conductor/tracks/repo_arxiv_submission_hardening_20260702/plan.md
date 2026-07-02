@@ -19,7 +19,7 @@
 
 - [x] Task: Add an always-running `Required Gate` workflow for validation, tests, publishing metadata, registry links, manuscript build, arXiv upload-ready packaging, and strict scoring.
 - [x] Task: Add or update tests that assert `Required Gate` remains present and complete.
-- [x] Task: After workflow validation, update `main` branch protection to require `Required Gate` while retaining review and safety settings.
+- [x] Task: Prepare `Required Gate` for branch protection; keep `main` protection on `Validate UOGTO` until the workflow exists on `main` and can run as a real required check.
 
 ## Phase 4: Strict arXiv Review Simulation
 
