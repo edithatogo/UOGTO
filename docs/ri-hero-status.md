@@ -12,13 +12,13 @@ Snapshot of the RI-HERO meta-program as tracked in GitHub Projects and the repo 
 
 ## Current structure
 - `#4` RI-HERO meta-program: health economics outcomes roadmap
-  - synthesis umbrella and governance anchor
+  - closed umbrella issue and governance anchor
 - `#9` RI-HERO: outcomes framing and synthesis
-  - synthesis workstream under the umbrella
+  - closed synthesis workstream under the umbrella
 - `#15` RI-HERO: program governance and operating model
-  - synthesis epic for intake, prioritisation, and operating rules
+  - closed synthesis epic for intake, prioritisation, and operating rules
 - `#16` RI-HERO: health economics outcomes evidence map
-  - synthesis epic for outcomes concepts and evidence pathways
+  - closed synthesis epic for outcomes concepts and evidence pathways
 
 ## Implementation lane
 - `#5` Conductor system and repo scaffold
@@ -44,4 +44,4 @@ Snapshot of the RI-HERO meta-program as tracked in GitHub Projects and the repo 
 ## Notes
 - Implementation work is complete and mostly closed.
 - Publication and registry work is still monitored externally.
-- Synthesis remains open for operating-model and evidence-map refinement.
+- Synthesis issues are closed in GitHub; keep the status page as a historical snapshot of the RI-HERO framing.

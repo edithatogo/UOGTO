@@ -23,7 +23,7 @@ RI-HERO provides a higher-level program structure for:
 ## Current framing
 - UOGTO implementation work is complete and tracked as done.
 - Publication and registry work remains in monitoring and external review.
-- The synthesis lane remains open for governance and outcomes mapping.
+- The synthesis lane has been closed in the issue tracker after the governance and outcomes mapping work was documented.
 
 ## Synthesis epics
 - Program governance and operating model
