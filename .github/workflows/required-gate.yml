@@ -36,6 +36,7 @@ jobs:
 
       - name: Run ontology and repository validation
         run: |
+          make build
           make validate
           make test
           make publishing-metadata
