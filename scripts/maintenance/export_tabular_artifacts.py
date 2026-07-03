@@ -58,7 +58,7 @@ def _row_count(table) -> int:
 
 
 def _records(table) -> list[dict]:
-    if pd is not None:
+    if HAS_PANDAS:
         return table.to_dict(orient="records")
     return list(table)
 
