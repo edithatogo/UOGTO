@@ -8,8 +8,10 @@ from pathlib import Path
 
 try:
     import pandas as pd
+    HAS_PANDAS = True
 except ModuleNotFoundError:  # pragma: no cover - exercised in minimal Pixi environments
     pd = None
+    HAS_PANDAS = False
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -22,7 +24,7 @@ TABLES = [
 ]
 
 
-def _tolerant_read_csv(path: Path) -> pd.DataFrame:
+def _tolerant_read_csv(path: Path):
     with path.open(encoding="utf-8", newline="") as fh:
         reader = csv.reader(fh)
         rows = list(reader)
