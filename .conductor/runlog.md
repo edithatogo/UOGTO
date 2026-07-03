@@ -635,6 +635,15 @@ Remote validation for commit `1574b09783d46761178c1a0798b7f87da514f14b`:
 - Build WIDOCO Pages: success, run 28170678491
 - arXiv Preflight: success, run 28170678436
 
+## 2026-07-02 Repo Cleanup and Required Gate Rollout
+
+- Reapplied the repo/arXiv hardening work onto current `origin/main` as clean branch `codex/repo-arxiv-hardening-clean-20260703` and opened PR #21 after closing conflicting PR #20.
+- Fixed `Required Gate` fresh-checkout ordering by adding `make build` before `make test`.
+- Verified locally: `make build validate test publishing-metadata registry-links` passed with `219 passed, 1 skipped, 21 warnings`, plus publishing metadata and registry link checks passing.
+- Verified remotely on PR #21 commit `4e7bb47`: `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight` all passed.
+- Updated `main` branch protection to require both `Validate UOGTO` and `Required Gate` while preserving strict review and history protections.
+- Removed regenerated ignored build/cache outputs from the main workspace, preserving local environment folders and the active clean PR worktree.
+
 ## 2026-07-02T00:00:00Z - arXiv readability and graph-label polish
 
 - Added `scripts/maintenance/score_latex_readability.py` and generated `docs/paper/readability-report.md` / `.json`.

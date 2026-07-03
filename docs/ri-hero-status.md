@@ -35,6 +35,7 @@ Snapshot of the RI-HERO meta-program as tracked in GitHub Projects and the repo 
 
 ## Maintenance lane
 - `#6` Maintenance automation and release readiness
+- `repo_arxiv_submission_hardening_20260702` adds public contribution templates, main-branch workflow cleanup, aggregate `Required Gate` CI, machine-readable dual-license metadata, and strict arXiv reviewer simulation.
 
 ## Intake forms
 - `.github/ISSUE_TEMPLATE/ri-hero-meta-program.yml`
@@ -45,3 +46,4 @@ Snapshot of the RI-HERO meta-program as tracked in GitHub Projects and the repo 
 - Implementation work is complete and mostly closed.
 - Publication and registry work is still monitored externally.
 - Synthesis issues are closed in GitHub; keep the status page as a historical snapshot of the RI-HERO framing.
+- Current arXiv strict-review simulation status: `998.18/1000`, no blockers, minimum category score `98.0%`; final arXiv upload, rendered-PDF inspection, and identifier recording remain external author steps.

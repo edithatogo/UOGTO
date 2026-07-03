@@ -1,0 +1,66 @@
+name: Required Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  required-gate:
+    name: Required Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+          cargo install --git https://github.com/edithatogo/sourceright.git sourceright --locked
+
+      - name: Install LaTeX toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-base texlive-latex-recommended texlive-pictures
+
+      - name: Run ontology and repository validation
+        run: |
+          make build
+          make validate
+          make test
+          make publishing-metadata
+          make registry-links
+
+      - name: Build manuscript and arXiv package
+        run: |
+          make manuscript-pdf
+          make arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"
+
+      - name: Run strict arXiv score gate
+        run: |
+          python scripts/maintenance/score_arxiv_submission.py \
+            --threshold 995 \
+            --output .tmp/arxiv-strict-review-report.md \
+            --iterations .tmp/arxiv-strict-review-iterations.jsonl \
+            --rubric .tmp/arxiv-strict-review-rubric.md
+
+      - name: Upload strict review report
+        uses: actions/upload-artifact@v4
+        with:
+          name: arxiv-strict-review
+          path: |
+            .tmp/arxiv-strict-review-report.md
+            .tmp/arxiv-strict-review-iterations.jsonl
+            .tmp/arxiv-strict-review-rubric.md
+          if-no-files-found: error

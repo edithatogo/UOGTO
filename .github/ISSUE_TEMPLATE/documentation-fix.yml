@@ -1,0 +1,24 @@
+name: Documentation Fix
+about: Suggest a correction or clarification to docs, examples, glossary, or paper-supporting artifacts
+title: "[Docs]: "
+labels: documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which page, section, table, figure, or example needs attention?
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: What is unclear, stale, incorrect, or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix
+      description: If you have proposed wording or a reference, include it here.

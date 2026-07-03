@@ -1,0 +1,30 @@
+name: Validation Failure
+about: Report RDF, SHACL, competency-query, packaging, or CI validation failures
+title: "[Validation]: "
+labels: bug, validation
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or check
+      description: Which command, workflow, or validator failed?
+      placeholder: make validate
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Paste the shortest useful error output, log link, or CI check URL.
+    validations:
+      required: true
+  - type: textarea
+    id: changed_files
+    attributes:
+      label: Related files
+      description: List ontology, SHACL, example, query, documentation, or workflow files involved.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have passed or what result did you expect?

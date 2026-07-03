@@ -130,3 +130,8 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: Active
 - **Link**: [./tracks/uogto_nature_presubmission_evaluation_20260625/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_nature_presubmission_evaluation_20260625/)
 
+## [x] Track: repo_arxiv_submission_hardening_20260702
+- **Description**: Finish repository contribution polish, formalize strict arXiv submission-review simulation, and loop until the manuscript/package scores above 995/1000.
+- **Status**: Completed repo-side implementation; final arXiv UI upload remains external.
+- **Link**: [./tracks/repo_arxiv_submission_hardening_20260702/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/repo_arxiv_submission_hardening_20260702/)
+

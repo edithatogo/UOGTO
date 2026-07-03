@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: UOGTO Discussions
+    url: https://github.com/edithatogo/UOGTO/discussions/17
+    about: Use discussions for broad modelling questions or early ideas.
+  - name: RI-HERO Meta-Program Discussion
+    url: https://github.com/edithatogo/UOGTO/discussions/18
+    about: Use this for RI-HERO cross-cutting program questions.

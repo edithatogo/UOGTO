@@ -199,3 +199,41 @@
 - Generated `docs/article-hardening/candidate-decision-ledger.md`, `.csv`, and `.json`.
 - The ledger covers 511 rows: 7 search routes, 39 source candidates, 460 mapping candidates, and 5 ontology-inclusion candidates.
 - Each ledger row records candidate scope, candidate identifier, decision status/class, rationale, assumptions or heuristics, source artefact, and evidence detail.
+
+## 2026-07-02 Repo and arXiv Submission Hardening Track
+
+- Created Conductor track `repo_arxiv_submission_hardening_20260702`.
+- Added public contribution polish:
+  - expanded `CONTRIBUTING.md`;
+  - ontology, validation, documentation, bug, and question issue templates;
+  - stronger pull request template;
+  - `.github/labels.yml`;
+  - `.reuse/dep5` dual-license metadata.
+- Cleaned active workflow triggers to target `main` instead of `master` and added `.github/workflows/required-gate.yml`.
+- Added strict arXiv reviewer simulation:
+  - `scripts/maintenance/score_arxiv_submission.py`;
+  - `docs/paper/arxiv-strict-review-rubric.md`;
+  - `docs/paper/arxiv-strict-review-report.md`;
+  - `docs/paper/arxiv-strict-review-iterations.jsonl`.
+- Updated arXiv submission metadata, category rationale, author/license steps, replacement notes, arXiv contract, documentation index, RI-HERO status, and Conductor status.
+- Updated GitHub labels. Temporarily tested adding `Required Gate` to branch protection, then restored branch protection to `Validate UOGTO` only because GitHub cannot satisfy a newly added required workflow until that workflow exists on `main`.
+- Verification:
+  - focused tests passed: `12 passed`;
+  - `make validate` passed;
+  - `make test` passed: `220 passed, 21 warnings`;
+  - `make publishing-metadata` passed;
+  - `make registry-links` passed;
+  - `make manuscript-pdf` passed;
+  - `make arxiv-upload-ready` passed; regenerated upload tarball SHA-256 `37aa1e6e3b9148fbdea56ebc9bfcc71695687e5809c030cb3c71b9115613d046`;
+  - `make arxiv-strict-review` passed with normalized score `998.18/1000`, no blockers, and minimum category score `98.0%`.
+- Opened PR #20 from the existing hardening branch, confirmed GitHub reported it as conflicting against current `main`, and closed it with an explanatory comment. The implementation commit remains pushed on `codex/arxiv-submittable-hardening`.
+- Remaining external steps are manual arXiv upload, arXiv-rendered PDF inspection, and arXiv identifier recording.
+
+## 2026-07-02 Repo Cleanup and Required Gate Rollout
+
+- Reapplied the repo/arXiv hardening commits onto current `origin/main` as clean branch `codex/repo-arxiv-hardening-clean-20260703` and opened PR #21.
+- Fixed the fresh-checkout aggregate gate ordering by running `make build` before `make test`, so tests that inspect generated ontology snapshot assets see `dist/context.jsonld` and related release-copy files.
+- Local validation for the corrected aggregate sequence passed: `make build validate test publishing-metadata registry-links` with `219 passed, 1 skipped, 21 warnings`, plus publishing metadata and registry link checks passing.
+- GitHub PR #21 checks passed on commit `4e7bb47`: `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight`.
+- Updated `main` branch protection to require both `Validate UOGTO` and `Required Gate`, preserving strict status checks, one required approving review, code-owner review, conversation resolution, linear history, no force-pushes, and no branch deletion.
+- Cleaned generated local build/cache outputs from the main workspace while preserving `.pixi/`, `.codex/`, and the active clean PR worktree.

@@ -78,6 +78,11 @@
 - Recorded `Validate UOGTO` GitHub Actions run `27911982989` passed for commit `c752125`.
 - GitHub Pages is enabled and `ENABLE_PAGES_DEPLOY=true` is set. WIDOCO Pages run `27911982986` built and deployed successfully for commit `c752125`; `https://edithatogo.github.io/UOGTO/` returned HTTP 200 after deployment.
 - GitHub release `v1.0.0` is published. Release-assets workflow run `27910615774` passed and attached all expected assets. WIDOCO Pages tag workflow run `27910615818` passed after rerun.
+
+## Repo Cleanup and Required Gate Rollout - 2026-07-02
+- Clean replacement PR #21 is open from `codex/repo-arxiv-hardening-clean-20260703` to `main`, is mergeable, and has passing `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight` checks on commit `4e7bb47`.
+- `main` branch protection now requires both `Validate UOGTO` and `Required Gate`, with strict status checks, one required approving review, code-owner review, conversation resolution, linear history, no force-pushes, and no branch deletion preserved.
+- Main workspace cleanup removed regenerated build/cache outputs; only the intentional `docs/paper/paper.tex` manuscript affiliation edit remains tracked locally.
 - GitHub release `v1.0.0` was refreshed by workflow run `27912459022`, which uploaded `registry-handoff.json`.
 - Recorded post-manuscript-CI verification for commit `8118694`: `Validate UOGTO` run `27911901129` passed, `Build Manuscript PDF` run `27911901120` passed, `Build WIDOCO Pages` run `27911901116` passed and deployed, and the Pages root returned HTTP 200.
 - Live DOI check records DOI `10.5281/zenodo.20796937`; registry handoff is no longer DOI-blocked.
