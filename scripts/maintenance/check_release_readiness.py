@@ -136,11 +136,7 @@ def check_release_workflow() -> None:
     required_fragments = [
         "types: [published]",
         "workflow_dispatch",
-        "make validate",
-        "make test",
-        "audit_semantics.py",
-        "make publishing-metadata",
-        "make registry-links",
+        "make release-preflight",
         "make release-assets",
         "make registry-packet",
         "make extended-registry-packet",

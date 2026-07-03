@@ -7,6 +7,19 @@ Updated: `2026-07-02`
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 
+## Repository Validation And Runtime Hardening - 2026-07-03
+
+- Archived track: `conductor/archive/repo_validation_runtime_hardening_20260703/`.
+- Added `validation/competency-query-expectations.json` and validator/test enforcement so representative competency queries prove expected bindings or minimum row counts against example graphs.
+- Added representative negative SHACL tests for core, game-type, execution, examples, and governance shapes.
+- Extended semantic audit to check namespace policy, object/datatype property separation, JSON-LD term coverage, and example instance naming.
+- Made `make test` build `dist/` first and pinned Pixi's default Python to `3.10.*`.
+- Packaged `uogto`, `uogto.runner`, and `uogto.playground`; added optional extras and console entry points.
+- Hardened runner payoff lookup for multi-game scoping, duplicate action labels, asymmetric payoffs, and the current `PayoffProfile` / `PlayerPayoffLink` ontology pattern while retaining legacy `PayoffMapping` support.
+- Pinned SourceRight CI installs by commit and WIDOCO by URL plus SHA-256; documented update policy in `docs/ci-supply-chain-policy.md`.
+- Verification passed locally: `make build`; `make validate`; `make test` (`223 passed, 1 skipped, 26 warnings`); `make publishing-metadata`; `make registry-links`; `git diff --check`.
+- Conductor review found no blocking findings; the track is archived.
+
 ## Current arXiv Submission State
 
 - Pre-submission automation is in place.

@@ -28,15 +28,11 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install .
+          python -m pip install ".[dev]"
 
       - name: Run release gates
         run: |
-          make validate
-          make test
-          python scripts/maintenance/audit_semantics.py
-          make publishing-metadata
-          make registry-links
+          make release-preflight
 
       - name: Build release assets
         run: make release-assets

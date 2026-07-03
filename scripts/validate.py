@@ -1,8 +1,14 @@
-import os
 import sys
 import glob
+import json
+from pathlib import Path
+
 from rdflib import Graph
 from pyshacl import validate as shacl_validate
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
 
 def main():
     print("Validating UOGTO Repository...")
@@ -69,7 +75,54 @@ def main():
             print(f"FAIL: Competency query {cq} failed to execute: {e}")
             sys.exit(1)
 
+    validate_competency_query_expectations(g)
+
     print("All validations completed successfully!")
+
+
+def validate_competency_query_expectations(ontology_graph):
+    manifest_path = ROOT / "validation" / "competency-query-expectations.json"
+    if not manifest_path.exists():
+        print(f"FAIL: Missing competency-query expectation manifest {manifest_path}")
+        sys.exit(1)
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    for entry in manifest.get("queries", []):
+        query_path = ROOT / "competency-questions" / entry["query"]
+        if not query_path.exists():
+            print(f"FAIL: Expected competency query is missing: {query_path}")
+            sys.exit(1)
+        query_graph = Graph()
+        for triple in ontology_graph:
+            query_graph.add(triple)
+        for example in entry.get("example_graphs", []):
+            example_path = ROOT / example
+            fmt = "json-ld" if example_path.suffix == ".jsonld" else "turtle"
+            query_graph.parse(example_path, format=fmt)
+        rows = list(query_graph.query(query_path.read_text(encoding="utf-8")))
+        min_count = int(entry.get("min_count", 0))
+        if len(rows) < min_count:
+            print(
+                f"FAIL: Competency query {entry['query']} returned {len(rows)} "
+                f"rows; expected at least {min_count}."
+            )
+            sys.exit(1)
+        binding_names = [str(var) for var in rows[0].labels] if rows else []
+        row_bindings = [
+            {binding_names[index]: str(value) for index, value in enumerate(row)}
+            for row in rows
+        ]
+        for required in entry.get("required_bindings", []):
+            if required not in row_bindings:
+                print(
+                    f"FAIL: Competency query {entry['query']} did not return "
+                    f"required binding {required}."
+                )
+                sys.exit(1)
+        print(
+            f"OK: Competency query {entry['query']} satisfied expected "
+            f"results ({len(rows)} rows)."
+        )
+
 
 if __name__ == "__main__":
     main()

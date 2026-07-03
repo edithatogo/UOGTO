@@ -9,3 +9,4 @@ These tracks are retained for audit history but are not active implementation wo
 | `maintenance_improvements_20260621` | archived | Consolidated into `repo_maintenance_20260621` and later publishing/registry maintenance gates. |
 | `executable_simulation_visualizer_20260621` | archived | Retired planning track retained for audit history. |
 | `uogto_comparative_simulation_ontology_mapping_20260624` | completed | Comparative ontology sourcing, mapping, analysis, visualisation, report, and artifact-validation track completed and retained for audit history. |
+| `repo_validation_runtime_hardening_20260703` | completed | Repository validation semantics, runtime packaging, runner behavior, Make/Pixi parity, CI source pinning, WIDOCO checksum verification, and scratch behavior completed and archived. |

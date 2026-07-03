@@ -1,5 +1,18 @@
 # Conductor Run Log
 
+## 2026-07-03 - Repository Validation And Runtime Hardening
+
+- Created and implemented `repo_validation_runtime_hardening_20260703`.
+- Added CQ expected-result manifest validation in `scripts/validate.py` plus pytest coverage.
+- Added negative SHACL fixture coverage and broadened semantic audit checks for namespace policy, property separation, JSON-LD coverage, and instance naming.
+- Made `make test` fresh-checkout safe by depending on `build`; aligned Pixi `test` and `required-gate`; pinned Pixi Python to `3.10.*`.
+- Packaged runtime modules with optional `runner` and `playground` extras, import-safe playground entry point, and isolated install/import smoke coverage.
+- Updated `RDFGameRunner` to scope payoff resolution by game and player-specific actions, support asymmetric reified payoff profiles, and retain legacy payoff mappings.
+- Pinned SourceRight by commit in CI, verified WIDOCO by SHA-256, replaced bare CI `pip install .` with `python -m pip install ".[dev]"`, and documented the supply-chain update policy.
+- Converted fixed repo-root mapping test scratch directories to pytest-managed temporary paths.
+- Local evidence: `make build` passed; `make validate` passed; `make test` passed with `223 passed, 1 skipped, 26 warnings`; `make publishing-metadata` passed; `make registry-links` passed; `git diff --check` passed.
+- Conductor review found no blocking findings; archived the track under `conductor/archive/repo_validation_runtime_hardening_20260703/`.
+
 ## 2026-07-02 arXiv Upload-Ready Hardening
 
 - Added `scripts/maintenance/build_arxiv_upload_ready.py` to generate a deterministic arXiv upload tarball, upload manifest, `00README.json` preview, and `SHA256SUMS`.

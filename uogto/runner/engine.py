@@ -1,7 +1,12 @@
+from __future__ import annotations
+
+import argparse
+
 import rdflib
 from rdflib.namespace import RDF, RDFS
 
 UOGTO = rdflib.Namespace("https://w3id.org/uogto/core#")
+
 
 class RDFGameRunner:
     def __init__(self, ttl_path):
@@ -64,49 +69,95 @@ class RDFGameRunner:
         return actions
 
     def query_payoff(self, spec_uri, action_profile_dict):
-        # action_profile_dict maps player_uri -> action_uri
-        # Query for payoff value mapping to this specific action profile
-        # We search for a payoff mapped to the spec, containing payoff values for players
-        q = """
-        SELECT ?player ?value WHERE {
-            ?spec_uri uogto:hasPayoffMapping ?mapping .
-            ?mapping uogto:hasActionProfile ?profile .
-            ?profile uogto:hasAction ?action .
-            ?action uogto:belongsToPlayer ?player .
-            ?mapping uogto:hasPayoffValue ?payoff .
-            ?payoff uogto:belongsToPlayer ?player .
-            ?payoff uogto:payoffValue ?value .
-        }
+        """Return payoffs for an exact player->action profile in a single game.
+
+        The current ontology pattern is StrategyProfile -> PayoffProfile ->
+        PlayerPayoffLink. Older examples used PayoffMapping directly. The runner
+        supports both, but always scopes candidates through the requested game.
         """
-        # Let's run a custom filter or query based on the active graph structure
-        # Since different games use custom profiles, we can fetch all mappings and filter in Python
-        q_all_mappings = """
-        SELECT ?mapping ?profile ?player ?val WHERE {
-            ?mapping uogto:hasActionProfile ?profile .
-            ?mapping uogto:payoffValue ?val .
-            ?mapping uogto:belongsToPlayer ?player .
-        }
-        """
-        # Let's query all payoffs matching the action list
-        res = self.graph.query(q_all_mappings, initNs={"uogto": UOGTO})
-        payoffs = {}
-        
-        # Action profiles in ontology are often collections or nodes with actions linked
-        # Let's find matches where the action profile contains all the matching actions
-        for row in res:
-            mapping_node, profile_node, player, value = row
-            # Query actions linked to this profile
-            q_actions = """
-            SELECT ?action WHERE {
-                ?profile_node uogto:hasAction ?action .
-            }
+
+        expected = {str(player): str(action) for player, action in action_profile_dict.items()}
+        payoffs = self._query_reified_payoffs(spec_uri, expected)
+        if payoffs:
+            return payoffs
+        return self._query_legacy_payoff_mappings(spec_uri, expected)
+
+    def _query_reified_payoffs(self, spec_uri, expected):
+        rows = self.graph.query(
             """
-            actions_res = self.graph.query(q_actions, initNs={"uogto": UOGTO}, initBindings={"profile_node": profile_node})
-            profile_actions = {str(r[0]) for r in actions_res}
-            
-            # Match if profile actions are exactly the actions chosen
-            chosen_actions = {str(a) for a in action_profile_dict.values()}
-            if profile_actions == chosen_actions:
-                payoffs[str(player)] = float(value)
-                
-        return payoffs
+            SELECT ?profile ?payoffProfile ?link ?player ?value WHERE {
+                ?spec_uri uogto:hasStrategyProfile ?profile .
+                ?profile uogto:hasPayoff ?payoffProfile .
+                ?payoffProfile uogto:hasPayoffForPlayer ?link .
+                ?link uogto:payoffPlayer ?player ;
+                      uogto:payoffValue ?value .
+            }
+            """,
+            initNs={"uogto": UOGTO},
+            initBindings={"spec_uri": rdflib.URIRef(spec_uri)},
+        )
+        by_profile = {}
+        for profile, _payoff_profile, _link, player, value in rows:
+            by_profile.setdefault(profile, {})[str(player)] = float(value)
+
+        for profile, payoffs in by_profile.items():
+            if self._profile_matches(profile, expected):
+                return payoffs
+        return {}
+
+    def _query_legacy_payoff_mappings(self, spec_uri, expected):
+        rows = self.graph.query(
+            """
+            SELECT ?mapping ?profile ?player ?value WHERE {
+                ?spec_uri uogto:hasPayoffMapping ?mapping .
+                ?mapping uogto:hasActionProfile ?profile ;
+                         uogto:belongsToPlayer ?player ;
+                         uogto:payoffValue ?value .
+            }
+            """,
+            initNs={"uogto": UOGTO},
+            initBindings={"spec_uri": rdflib.URIRef(spec_uri)},
+        )
+        by_mapping = {}
+        for _mapping, profile, player, value in rows:
+            bucket = by_mapping.setdefault(profile, {})
+            bucket[str(player)] = float(value)
+        for profile, payoffs in by_mapping.items():
+            if self._profile_matches(profile, expected):
+                return payoffs
+        return {}
+
+    def _profile_matches(self, profile, expected):
+        rows = self.graph.query(
+            """
+            SELECT ?player ?action WHERE {
+                ?profile uogto:hasAction ?action .
+                OPTIONAL { ?action uogto:belongsToPlayer ?player . }
+            }
+            """,
+            initNs={"uogto": UOGTO},
+            initBindings={"profile": profile},
+        )
+        actual = {}
+        unscoped_actions = set()
+        for player, action in rows:
+            if player is None:
+                unscoped_actions.add(str(action))
+            else:
+                actual[str(player)] = str(action)
+        if actual:
+            return actual == expected
+        return unscoped_actions == set(expected.values())
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Inspect UOGTO game specifications in a Turtle graph.")
+    parser.add_argument("ttl_path", help="Path to a Turtle graph containing UOGTO game data.")
+    args = parser.parse_args()
+    runner = RDFGameRunner(args.ttl_path)
+    for spec in runner.get_game_specification():
+        print(f"{spec['uri']}\t{spec.get('label') or ''}")
+
+
+if __name__ == "__main__":
+    main()

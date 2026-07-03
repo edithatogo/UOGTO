@@ -19,14 +19,28 @@ classifiers = [
 dependencies = [
     "rdflib>=7.0.0",
     "pyshacl>=0.25.0",
-    "pytest>=8.0.0",
     "pyyaml>=6.0.1",
     "jsonschema>=4.0.0",
-    "ruff>=0.3.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+]
+runner = []
+playground = [
+    "streamlit>=1.36.0",
+    "networkx>=3.2.0",
+    "matplotlib>=3.8.0",
+]
+
+[project.scripts]
+uogto-runner = "uogto.runner.engine:main"
+uogto-playground = "uogto.playground.app:main"
+
 [tool.setuptools]
-packages = []
+packages = ["uogto", "uogto.runner", "uogto.playground"]
 
 
 [tool.ruff]

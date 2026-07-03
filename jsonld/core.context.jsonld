@@ -7,7 +7,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "prov": "http://www.w3.org/ns/prov#",
-
     "GameSpecification": "uogto:GameSpecification",
     "GameInstance": "uogto:GameInstance",
     "PlaySession": "uogto:PlaySession",
@@ -38,43 +37,223 @@
     "Solver": "uogto:Solver",
     "ExecutionModel": "uogto:ExecutionModel",
     "EventTrace": "uogto:EventTrace",
-
-    "hasPlayer": { "@id": "uogto:hasPlayer", "@type": "@id" },
-    "participatesIn": { "@id": "uogto:participatesIn", "@type": "@id" },
-    "hasRole": { "@id": "uogto:hasRole", "@type": "@id" },
-    "hasStrategy": { "@id": "uogto:hasStrategy", "@type": "@id" },
-    "hasAvailableAction": { "@id": "uogto:hasAvailableAction", "@type": "@id" },
-    "selectsAction": { "@id": "uogto:selectsAction", "@type": "@id" },
-    "hasStrategyProfile": { "@id": "uogto:hasStrategyProfile", "@type": "@id" },
-    "producesOutcome": { "@id": "uogto:producesOutcome", "@type": "@id" },
-    "assignsPayoff": { "@id": "uogto:assignsPayoff", "@type": "@id" },
-    "hasUtilityFunction": { "@id": "uogto:hasUtilityFunction", "@type": "@id" },
-    "hasState": { "@id": "uogto:hasState", "@type": "@id" },
-    "hasInitialState": { "@id": "uogto:hasInitialState", "@type": "@id" },
-    "hasTerminalState": { "@id": "uogto:hasTerminalState", "@type": "@id" },
-    "hasTransition": { "@id": "uogto:hasTransition", "@type": "@id" },
-    "transitionsFrom": { "@id": "uogto:transitionsFrom", "@type": "@id" },
-    "transitionsTo": { "@id": "uogto:transitionsTo", "@type": "@id" },
-    "observes": { "@id": "uogto:observes", "@type": "@id" },
-    "hasInformationSet": { "@id": "uogto:hasInformationSet", "@type": "@id" },
-    "hasBelief": { "@id": "uogto:hasBelief", "@type": "@id" },
-    "governedByRule": { "@id": "uogto:governedByRule", "@type": "@id" },
-    "governedByNorm": { "@id": "uogto:governedByNorm", "@type": "@id" },
-    "hasEquilibrium": { "@id": "uogto:hasEquilibrium", "@type": "@id" },
-    "solvedBy": { "@id": "uogto:solvedBy", "@type": "@id" },
-    "compiledToExecutionModel": { "@id": "uogto:compiledToExecutionModel", "@type": "@id" },
-    "emitsEventTrace": { "@id": "uogto:emitsEventTrace", "@type": "@id" },
-
-    "identifier": { "@id": "uogto:identifier", "@type": "xsd:string" },
-    "name": { "@id": "uogto:name", "@type": "xsd:string" },
-    "description": { "@id": "uogto:description", "@type": "xsd:string" },
-    "version": { "@id": "uogto:version", "@type": "xsd:string" },
-    "probability": { "@id": "uogto:probability", "@type": "xsd:double" },
-    "payoffValue": { "@id": "uogto:payoffValue", "@type": "xsd:double" },
-    "utilityValue": { "@id": "uogto:utilityValue", "@type": "xsd:double" },
-    "timeIndex": { "@id": "uogto:timeIndex", "@type": "xsd:integer" },
-    "timestamp": { "@id": "uogto:timestamp", "@type": "xsd:dateTime" },
-    "confidence": { "@id": "uogto:confidence", "@type": "xsd:double" },
-    "sourceReference": { "@id": "uogto:sourceReference", "@type": "xsd:anyURI" }
+    "hasPlayer": {
+      "@id": "uogto:hasPlayer",
+      "@type": "@id"
+    },
+    "participatesIn": {
+      "@id": "uogto:participatesIn",
+      "@type": "@id"
+    },
+    "hasRole": {
+      "@id": "uogto:hasRole",
+      "@type": "@id"
+    },
+    "hasStrategy": {
+      "@id": "uogto:hasStrategy",
+      "@type": "@id"
+    },
+    "hasAvailableAction": {
+      "@id": "uogto:hasAvailableAction",
+      "@type": "@id"
+    },
+    "selectsAction": {
+      "@id": "uogto:selectsAction",
+      "@type": "@id"
+    },
+    "hasStrategyProfile": {
+      "@id": "uogto:hasStrategyProfile",
+      "@type": "@id"
+    },
+    "producesOutcome": {
+      "@id": "uogto:producesOutcome",
+      "@type": "@id"
+    },
+    "assignsPayoff": {
+      "@id": "uogto:assignsPayoff",
+      "@type": "@id"
+    },
+    "hasUtilityFunction": {
+      "@id": "uogto:hasUtilityFunction",
+      "@type": "@id"
+    },
+    "hasState": {
+      "@id": "uogto:hasState",
+      "@type": "@id"
+    },
+    "hasInitialState": {
+      "@id": "uogto:hasInitialState",
+      "@type": "@id"
+    },
+    "hasTerminalState": {
+      "@id": "uogto:hasTerminalState",
+      "@type": "@id"
+    },
+    "hasTransition": {
+      "@id": "uogto:hasTransition",
+      "@type": "@id"
+    },
+    "transitionsFrom": {
+      "@id": "uogto:transitionsFrom",
+      "@type": "@id"
+    },
+    "transitionsTo": {
+      "@id": "uogto:transitionsTo",
+      "@type": "@id"
+    },
+    "observes": {
+      "@id": "uogto:observes",
+      "@type": "@id"
+    },
+    "hasInformationSet": {
+      "@id": "uogto:hasInformationSet",
+      "@type": "@id"
+    },
+    "hasBelief": {
+      "@id": "uogto:hasBelief",
+      "@type": "@id"
+    },
+    "governedByRule": {
+      "@id": "uogto:governedByRule",
+      "@type": "@id"
+    },
+    "governedByNorm": {
+      "@id": "uogto:governedByNorm",
+      "@type": "@id"
+    },
+    "hasEquilibrium": {
+      "@id": "uogto:hasEquilibrium",
+      "@type": "@id"
+    },
+    "solvedBy": {
+      "@id": "uogto:solvedBy",
+      "@type": "@id"
+    },
+    "compiledToExecutionModel": {
+      "@id": "uogto:compiledToExecutionModel",
+      "@type": "@id"
+    },
+    "emitsEventTrace": {
+      "@id": "uogto:emitsEventTrace",
+      "@type": "@id"
+    },
+    "identifier": {
+      "@id": "uogto:identifier",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "uogto:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "uogto:description",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "uogto:version",
+      "@type": "xsd:string"
+    },
+    "probability": {
+      "@id": "uogto:probability",
+      "@type": "xsd:double"
+    },
+    "payoffValue": {
+      "@id": "uogto:payoffValue",
+      "@type": "xsd:double"
+    },
+    "utilityValue": {
+      "@id": "uogto:utilityValue",
+      "@type": "xsd:double"
+    },
+    "timeIndex": {
+      "@id": "uogto:timeIndex",
+      "@type": "xsd:integer"
+    },
+    "timestamp": {
+      "@id": "uogto:timestamp",
+      "@type": "xsd:dateTime"
+    },
+    "confidence": {
+      "@id": "uogto:confidence",
+      "@type": "xsd:double"
+    },
+    "sourceReference": {
+      "@id": "uogto:sourceReference",
+      "@type": "xsd:anyURI"
+    },
+    "ArtificialAgent": "uogto:ArtificialAgent",
+    "CardinalPayoff": "uogto:CardinalPayoff",
+    "ChanceNode": "uogto:ChanceNode",
+    "ConstitutiveRule": "uogto:ConstitutiveRule",
+    "ContinuousDynamics": "uogto:ContinuousDynamics",
+    "DecisionNode": "uogto:DecisionNode",
+    "DeterministicOutcome": "uogto:DeterministicOutcome",
+    "DiscreteDynamics": "uogto:DiscreteDynamics",
+    "FiniteGame": "uogto:FiniteGame",
+    "GameEntity": "uogto:GameEntity",
+    "GameNode": "uogto:GameNode",
+    "HumanPlayer": "uogto:HumanPlayer",
+    "ImperfectInformation": "uogto:ImperfectInformation",
+    "InfiniteGame": "uogto:InfiniteGame",
+    "MixedStrategy": "uogto:MixedStrategy",
+    "NashEquilibrium": "uogto:NashEquilibrium",
+    "OntologyGovernanceRecord": "uogto:OntologyGovernanceRecord",
+    "OrdinalPayoff": "uogto:OrdinalPayoff",
+    "PayoffProfile": "uogto:PayoffProfile",
+    "PerfectInformation": "uogto:PerfectInformation",
+    "PlayerPayoffLink": "uogto:PlayerPayoffLink",
+    "PureStrategy": "uogto:PureStrategy",
+    "RegulativeRule": "uogto:RegulativeRule",
+    "SequentialAction": "uogto:SequentialAction",
+    "SimultaneousAction": "uogto:SimultaneousAction",
+    "StochasticOutcome": "uogto:StochasticOutcome",
+    "SubgamePerfectEquilibrium": "uogto:SubgamePerfectEquilibrium",
+    "TerminalNode": "uogto:TerminalNode",
+    "belongsToInformationSet": {
+      "@id": "uogto:belongsToInformationSet",
+      "@type": "@id"
+    },
+    "comprisesStrategy": {
+      "@id": "uogto:comprisesStrategy",
+      "@type": "@id"
+    },
+    "controlsNode": {
+      "@id": "uogto:controlsNode",
+      "@type": "@id"
+    },
+    "hasGovernanceRecord": {
+      "@id": "uogto:hasGovernanceRecord",
+      "@type": "@id"
+    },
+    "hasPayoff": {
+      "@id": "uogto:hasPayoff",
+      "@type": "@id"
+    },
+    "hasPayoffForPlayer": {
+      "@id": "uogto:hasPayoffForPlayer",
+      "@type": "@id"
+    },
+    "payoffPlayer": {
+      "@id": "uogto:payoffPlayer",
+      "@type": "@id"
+    },
+    "competencyQuestionReference": {
+      "@id": "uogto:competencyQuestionReference"
+    },
+    "governanceStatus": {
+      "@id": "uogto:governanceStatus"
+    },
+    "maturityLevel": {
+      "@id": "uogto:maturityLevel"
+    },
+    "reviewDate": {
+      "@id": "uogto:reviewDate"
+    },
+    "sourceEvidenceReference": {
+      "@id": "uogto:sourceEvidenceReference"
+    },
+    "steward": {
+      "@id": "uogto:steward"
+    }
   }
 }

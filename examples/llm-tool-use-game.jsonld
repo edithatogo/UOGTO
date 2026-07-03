@@ -14,6 +14,16 @@
       "hasPromptState": {
         "@id": "http://example.org/prompts/state-1",
         "@type": "PromptState"
+      },
+      "hasToolInvocation": {
+        "@id": "http://example.org/tool-invocations/search-1",
+        "@type": "ToolInvocation",
+        "identifier": "search-1",
+        "hasConsentBoundary": {
+          "@id": "http://example.org/consent-boundaries/session-1",
+          "@type": "ConsentBoundary",
+          "identifier": "session-1"
+        }
       }
     }
   ]

@@ -2,7 +2,6 @@
   "@context": {
     "uogtox": "https://w3id.org/uogto/extensions#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-
     "CooperativeGame": "uogtox:CooperativeGame",
     "CoalitionGame": "uogtox:CoalitionGame",
     "TransferableUtilityGame": "uogtox:TransferableUtilityGame",
@@ -229,150 +228,638 @@
     "SPARQLExecutionQuery": "uogtox:SPARQLExecutionQuery",
     "ValidationShape": "uogtox:ValidationShape",
     "ConstraintViolation": "uogtox:ConstraintViolation",
-
-    "hasAllocationRule": { "@id": "uogtox:hasAllocationRule", "@type": "@id" },
-    "hasPaymentRule": { "@id": "uogtox:hasPaymentRule", "@type": "@id" },
-    "hasIncentiveConstraint": { "@id": "uogtox:hasIncentiveConstraint", "@type": "@id" },
-    "hasParticipationConstraint": { "@id": "uogtox:hasParticipationConstraint", "@type": "@id" },
-    "hasReservePrice": { "@id": "uogtox:hasReservePrice", "@type": "xsd:double" },
-    "hasHighestBidder": { "@id": "uogtox:hasHighestBidder", "@type": "@id" },
-    "hasWinningBid": { "@id": "uogtox:hasWinningBid", "@type": "xsd:double" },
-    "hasSecondHighestBid": { "@id": "uogtox:hasSecondHighestBid", "@type": "xsd:double" },
-    "hasBiddingRule": { "@id": "uogtox:hasBiddingRule", "@type": "@id" },
-    "hasBargainingSolution": { "@id": "uogtox:hasBargainingSolution", "@type": "@id" },
-    "hasBargainingProtocol": { "@id": "uogtox:hasBargainingProtocol", "@type": "@id" },
-    "disagreementPoint": { "@id": "uogtox:disagreementPoint", "@type": "xsd:double" },
-    "hasNegotiator": { "@id": "uogtox:hasNegotiator", "@type": "@id" },
-    "concessionRate": { "@id": "uogtox:concessionRate", "@type": "xsd:double" },
-    "hasPolicy": { "@id": "uogtox:hasPolicy", "@type": "@id" },
-    "hasObservationSpace": { "@id": "uogtox:hasObservationSpace", "@type": "@id" },
-    "hasActionSpace": { "@id": "uogtox:hasActionSpace", "@type": "@id" },
-    "hasLearningAlgorithm": { "@id": "uogtox:hasLearningAlgorithm", "@type": "@id" },
-    "regretValue": { "@id": "uogtox:regretValue", "@type": "xsd:double" },
-    "hasLearningProcess": { "@id": "uogtox:hasLearningProcess", "@type": "@id" },
-    "learningRate": { "@id": "uogtox:learningRate", "@type": "xsd:double" },
-    "discountFactor": { "@id": "uogtox:discountFactor", "@type": "xsd:double" },
-    "hasQTable": { "@id": "uogtox:hasQTable", "@type": "@id" },
-    "explorationRate": { "@id": "uogtox:explorationRate", "@type": "xsd:double" },
-    "hasCausalModel": { "@id": "uogtox:hasCausalModel", "@type": "@id" },
-    "hasCausalGraph": { "@id": "uogtox:hasCausalGraph", "@type": "@id" },
-    "hasIntervention": { "@id": "uogtox:hasIntervention", "@type": "@id" },
-    "hasStructuralEquation": { "@id": "uogtox:hasStructuralEquation", "@type": "@id" },
-    "hasCounterfactualOutcome": { "@id": "uogtox:hasCounterfactualOutcome", "@type": "@id" },
-    "hasGraphPlayer": { "@id": "uogtox:hasGraphPlayer", "@type": "@id" },
-    "hasNetworkEdge": { "@id": "uogtox:hasNetworkEdge", "@type": "@id" },
-    "hasLocalInteraction": { "@id": "uogtox:hasLocalInteraction", "@type": "@id" },
-    "hasNeighborSet": { "@id": "uogtox:hasNeighborSet", "@type": "@id" },
-    "degreeValue": { "@id": "uogtox:degreeValue", "@type": "xsd:integer" },
-    "hasPopulationState": { "@id": "uogtox:hasPopulationState", "@type": "@id" },
-    "hasRepresentativeAgent": { "@id": "uogtox:hasRepresentativeAgent", "@type": "@id" },
-    "hasDistributionalState": { "@id": "uogtox:hasDistributionalState", "@type": "@id" },
-    "hasMeanFieldEquilibrium": { "@id": "uogtox:hasMeanFieldEquilibrium", "@type": "@id" },
-    "densityValue": { "@id": "uogtox:densityValue", "@type": "xsd:double" },
-    "hasPopulation": { "@id": "uogtox:hasPopulation", "@type": "@id" },
-    "hasReplicatorDynamic": { "@id": "uogtox:hasReplicatorDynamic", "@type": "@id" },
-    "hasESS": { "@id": "uogtox:hasESS", "@type": "@id" },
-    "hasMutationOperator": { "@id": "uogtox:hasMutationOperator", "@type": "@id" },
-    "hasFitnessFunction": { "@id": "uogtox:hasFitnessFunction", "@type": "@id" },
-    "hasInstitution": { "@id": "uogtox:hasInstitution", "@type": "@id" },
-    "hasPropertyRight": { "@id": "uogtox:hasPropertyRight", "@type": "@id" },
-    "hasTransactionCost": { "@id": "uogtox:hasTransactionCost", "@type": "@id" },
-    "hasEnforcementMechanism": { "@id": "uogtox:hasEnforcementMechanism", "@type": "@id" },
-    "costValue": { "@id": "uogtox:costValue", "@type": "xsd:double" },
-    "hasObligation": { "@id": "uogtox:hasObligation", "@type": "@id" },
-    "hasPermission": { "@id": "uogtox:hasPermission", "@type": "@id" },
-    "hasProhibition": { "@id": "uogtox:hasProhibition", "@type": "@id" },
-    "hasSanction": { "@id": "uogtox:hasSanction", "@type": "@id" },
-    "isCompliant": { "@id": "uogtox:isCompliant", "@type": "xsd:boolean" },
-    "hasVoter": { "@id": "uogtox:hasVoter", "@type": "@id" },
-    "hasCandidate": { "@id": "uogtox:hasCandidate", "@type": "@id" },
-    "hasBallot": { "@id": "uogtox:hasBallot", "@type": "@id" },
-    "hasSocialChoiceFunction": { "@id": "uogtox:hasSocialChoiceFunction", "@type": "@id" },
-    "voteCount": { "@id": "uogtox:voteCount", "@type": "xsd:integer" },
-    "hasMatchingMarket": { "@id": "uogtox:hasMatchingMarket", "@type": "@id" },
-    "hasMatching": { "@id": "uogtox:hasMatching", "@type": "@id" },
-    "hasAllocation": { "@id": "uogtox:hasAllocation", "@type": "@id" },
-    "hasBlockingPair": { "@id": "uogtox:hasBlockingPair", "@type": "@id" },
-    "valuationValue": { "@id": "uogtox:valuationValue", "@type": "xsd:double" },
-    "hasContract": { "@id": "uogtox:hasContract", "@type": "@id" },
-    "hasPrincipal": { "@id": "uogtox:hasPrincipal", "@type": "@id" },
-    "hasAgentRole": { "@id": "uogtox:hasAgentRole", "@type": "@id" },
-    "hasIncentiveScheme": { "@id": "uogtox:hasIncentiveScheme", "@type": "@id" },
-    "wageValue": { "@id": "uogtox:wageValue", "@type": "xsd:double" },
-    "hasDesigner": { "@id": "uogtox:hasDesigner", "@type": "@id" },
-    "hasSignalStructure": { "@id": "uogtox:hasSignalStructure", "@type": "@id" },
-    "hasDisclosurePolicy": { "@id": "uogtox:hasDisclosurePolicy", "@type": "@id" },
-    "hasPosteriorBelief": { "@id": "uogtox:hasPosteriorBelief", "@type": "@id" },
-    "entropyValue": { "@id": "uogtox:entropyValue", "@type": "xsd:double" },
-    "hasBoundedModel": { "@id": "uogtox:hasBoundedModel", "@type": "@id" },
-    "hasQRE": { "@id": "uogtox:hasQRE", "@type": "@id" },
-    "rationalityParameter": { "@id": "uogtox:rationalityParameter", "@type": "xsd:double" },
-    "cognitiveLevel": { "@id": "uogtox:cognitiveLevel", "@type": "xsd:integer" },
-    "inequityAversionAlpha": { "@id": "uogtox:inequityAversionAlpha", "@type": "xsd:double" },
-    "hasComplexityClass": { "@id": "uogtox:hasComplexityClass", "@type": "@id" },
-    "hasPriceOfAnarchy": { "@id": "uogtox:hasPriceOfAnarchy", "@type": "@id" },
-    "hasPriceOfStability": { "@id": "uogtox:hasPriceOfStability", "@type": "@id" },
-    "poaValue": { "@id": "uogtox:poaValue", "@type": "xsd:double" },
-    "posValue": { "@id": "uogtox:posValue", "@type": "xsd:double" },
-    "hasFormula": { "@id": "uogtox:hasFormula", "@type": "@id" },
-    "hasCounterexample": { "@id": "uogtox:hasCounterexample", "@type": "@id" },
-    "hasWitnessStrategy": { "@id": "uogtox:hasWitnessStrategy", "@type": "@id" },
-    "isVerified": { "@id": "uogtox:isVerified", "@type": "xsd:boolean" },
-    "formulaString": { "@id": "uogtox:formulaString", "@type": "xsd:string" },
-    "hasDefender": { "@id": "uogtox:hasDefender", "@type": "@id" },
-    "hasAttacker": { "@id": "uogtox:hasAttacker", "@type": "@id" },
-    "hasTarget": { "@id": "uogtox:hasTarget", "@type": "@id" },
-    "hasCoverageSchedule": { "@id": "uogtox:hasCoverageSchedule", "@type": "@id" },
-    "threatScore": { "@id": "uogtox:threatScore", "@type": "xsd:double" },
-    "hasControlVariable": { "@id": "uogtox:hasControlVariable", "@type": "@id" },
-    "hasStateEquation": { "@id": "uogtox:hasStateEquation", "@type": "@id" },
-    "hasHamiltonian": { "@id": "uogtox:hasHamiltonian", "@type": "@id" },
-    "timeHorizon": { "@id": "uogtox:timeHorizon", "@type": "xsd:double" },
-    "driftRate": { "@id": "uogtox:driftRate", "@type": "xsd:double" },
-    "hasResource": { "@id": "uogtox:hasResource", "@type": "@id" },
-    "hasLatencyFunction": { "@id": "uogtox:hasLatencyFunction", "@type": "@id" },
-    "hasNetworkFlow": { "@id": "uogtox:hasNetworkFlow", "@type": "@id" },
-    "hasWardropEquilibrium": { "@id": "uogtox:hasWardropEquilibrium", "@type": "@id" },
-    "capacityValue": { "@id": "uogtox:capacityValue", "@type": "xsd:double" },
-    "hasGDLDescription": { "@id": "uogtox:hasGDLDescription", "@type": "xsd:string" },
-    "hasRulePredicate": { "@id": "uogtox:hasRulePredicate", "@type": "@id" },
-    "hasLegalMoveRule": { "@id": "uogtox:hasLegalMoveRule", "@type": "@id" },
-    "hasTerminalRule": { "@id": "uogtox:hasTerminalRule", "@type": "@id" },
-    "hasGoalRule": { "@id": "uogtox:hasGoalRule", "@type": "@id" },
-    "hasPromptState": { "@id": "uogtox:hasPromptState", "@type": "@id" },
-    "hasMemoryState": { "@id": "uogtox:hasMemoryState", "@type": "@id" },
-    "hasToolInvocation": { "@id": "uogtox:hasToolInvocation", "@type": "@id" },
-    "hasConsentBoundary": { "@id": "uogtox:hasConsentBoundary", "@type": "@id" },
-    "temperatureValue": { "@id": "uogtox:temperatureValue", "@type": "xsd:double" },
-    "hasDigitalTwin": { "@id": "uogtox:hasDigitalTwin", "@type": "@id" },
-    "hasPhysicalThing": { "@id": "uogtox:hasPhysicalThing", "@type": "@id" },
-    "hasAffordance": { "@id": "uogtox:hasAffordance", "@type": "@id" },
-    "hasProtocolBinding": { "@id": "uogtox:hasProtocolBinding", "@type": "@id" },
-    "samplingInterval": { "@id": "uogtox:samplingInterval", "@type": "xsd:double" },
-    "hasLens": { "@id": "uogtox:hasLens", "@type": "@id" },
-    "hasPlayFunction": { "@id": "uogtox:hasPlayFunction", "@type": "@id" },
-    "hasCoplayFunction": { "@id": "uogtox:hasCoplayFunction", "@type": "@id" },
-    "hasEquilibriumPredicate": { "@id": "uogtox:hasEquilibriumPredicate", "@type": "@id" },
-    "hasComposition": { "@id": "uogtox:hasComposition", "@type": "@id" },
-    "hasPetriNet": { "@id": "uogtox:hasPetriNet", "@type": "@id" },
-    "hasPlace": { "@id": "uogtox:hasPlace", "@type": "@id" },
-    "hasTransitionNode": { "@id": "uogtox:hasTransitionNode", "@type": "@id" },
-    "hasMarking": { "@id": "uogtox:hasMarking", "@type": "@id" },
-    "tokenCount": { "@id": "uogtox:tokenCount", "@type": "xsd:integer" },
-    "hasReputationScore": { "@id": "uogtox:hasReputationScore", "@type": "@id" },
-    "hasIdentityClaim": { "@id": "uogtox:hasIdentityClaim", "@type": "@id" },
-    "hasCredential": { "@id": "uogtox:hasCredential", "@type": "@id" },
-    "hasProvenanceTrace": { "@id": "uogtox:hasProvenanceTrace", "@type": "@id" },
-    "scoreValue": { "@id": "uogtox:scoreValue", "@type": "xsd:double" },
-    "hasPrivacyBudget": { "@id": "uogtox:hasPrivacyBudget", "@type": "@id" },
-    "hasPrivateAttribute": { "@id": "uogtox:hasPrivateAttribute", "@type": "@id" },
-    "hasConsentPolicy": { "@id": "uogtox:hasConsentPolicy", "@type": "@id" },
-    "hasDPMechanism": { "@id": "uogtox:hasDPMechanism", "@type": "@id" },
-    "epsilonValue": { "@id": "uogtox:epsilonValue", "@type": "xsd:double" },
-    "hasExecutionBinding": { "@id": "uogtox:hasExecutionBinding", "@type": "@id" },
-    "hasRuntimeBinding": { "@id": "uogtox:hasRuntimeBinding", "@type": "@id" },
-    "hasSolverBinding": { "@id": "uogtox:hasSolverBinding", "@type": "@id" },
-    "hasSimulationBinding": { "@id": "uogtox:hasSimulationBinding", "@type": "@id" },
-    "queryText": { "@id": "uogtox:queryText", "@type": "xsd:string" }
+    "hasAllocationRule": {
+      "@id": "uogtox:hasAllocationRule",
+      "@type": "@id"
+    },
+    "hasPaymentRule": {
+      "@id": "uogtox:hasPaymentRule",
+      "@type": "@id"
+    },
+    "hasIncentiveConstraint": {
+      "@id": "uogtox:hasIncentiveConstraint",
+      "@type": "@id"
+    },
+    "hasParticipationConstraint": {
+      "@id": "uogtox:hasParticipationConstraint",
+      "@type": "@id"
+    },
+    "hasReservePrice": {
+      "@id": "uogtox:hasReservePrice",
+      "@type": "xsd:double"
+    },
+    "hasHighestBidder": {
+      "@id": "uogtox:hasHighestBidder",
+      "@type": "@id"
+    },
+    "hasWinningBid": {
+      "@id": "uogtox:hasWinningBid",
+      "@type": "xsd:double"
+    },
+    "hasSecondHighestBid": {
+      "@id": "uogtox:hasSecondHighestBid",
+      "@type": "xsd:double"
+    },
+    "hasBiddingRule": {
+      "@id": "uogtox:hasBiddingRule",
+      "@type": "@id"
+    },
+    "hasBargainingSolution": {
+      "@id": "uogtox:hasBargainingSolution",
+      "@type": "@id"
+    },
+    "hasBargainingProtocol": {
+      "@id": "uogtox:hasBargainingProtocol",
+      "@type": "@id"
+    },
+    "disagreementPoint": {
+      "@id": "uogtox:disagreementPoint",
+      "@type": "xsd:double"
+    },
+    "hasNegotiator": {
+      "@id": "uogtox:hasNegotiator",
+      "@type": "@id"
+    },
+    "concessionRate": {
+      "@id": "uogtox:concessionRate",
+      "@type": "xsd:double"
+    },
+    "hasPolicy": {
+      "@id": "uogtox:hasPolicy",
+      "@type": "@id"
+    },
+    "hasObservationSpace": {
+      "@id": "uogtox:hasObservationSpace",
+      "@type": "@id"
+    },
+    "hasActionSpace": {
+      "@id": "uogtox:hasActionSpace",
+      "@type": "@id"
+    },
+    "hasLearningAlgorithm": {
+      "@id": "uogtox:hasLearningAlgorithm",
+      "@type": "@id"
+    },
+    "regretValue": {
+      "@id": "uogtox:regretValue",
+      "@type": "xsd:double"
+    },
+    "hasLearningProcess": {
+      "@id": "uogtox:hasLearningProcess",
+      "@type": "@id"
+    },
+    "learningRate": {
+      "@id": "uogtox:learningRate",
+      "@type": "xsd:double"
+    },
+    "discountFactor": {
+      "@id": "uogtox:discountFactor",
+      "@type": "xsd:double"
+    },
+    "hasQTable": {
+      "@id": "uogtox:hasQTable",
+      "@type": "@id"
+    },
+    "explorationRate": {
+      "@id": "uogtox:explorationRate",
+      "@type": "xsd:double"
+    },
+    "hasCausalModel": {
+      "@id": "uogtox:hasCausalModel",
+      "@type": "@id"
+    },
+    "hasCausalGraph": {
+      "@id": "uogtox:hasCausalGraph",
+      "@type": "@id"
+    },
+    "hasIntervention": {
+      "@id": "uogtox:hasIntervention",
+      "@type": "@id"
+    },
+    "hasStructuralEquation": {
+      "@id": "uogtox:hasStructuralEquation",
+      "@type": "@id"
+    },
+    "hasCounterfactualOutcome": {
+      "@id": "uogtox:hasCounterfactualOutcome",
+      "@type": "@id"
+    },
+    "hasGraphPlayer": {
+      "@id": "uogtox:hasGraphPlayer",
+      "@type": "@id"
+    },
+    "hasNetworkEdge": {
+      "@id": "uogtox:hasNetworkEdge",
+      "@type": "@id"
+    },
+    "hasLocalInteraction": {
+      "@id": "uogtox:hasLocalInteraction",
+      "@type": "@id"
+    },
+    "hasNeighborSet": {
+      "@id": "uogtox:hasNeighborSet",
+      "@type": "@id"
+    },
+    "degreeValue": {
+      "@id": "uogtox:degreeValue",
+      "@type": "xsd:integer"
+    },
+    "hasPopulationState": {
+      "@id": "uogtox:hasPopulationState",
+      "@type": "@id"
+    },
+    "hasRepresentativeAgent": {
+      "@id": "uogtox:hasRepresentativeAgent",
+      "@type": "@id"
+    },
+    "hasDistributionalState": {
+      "@id": "uogtox:hasDistributionalState",
+      "@type": "@id"
+    },
+    "hasMeanFieldEquilibrium": {
+      "@id": "uogtox:hasMeanFieldEquilibrium",
+      "@type": "@id"
+    },
+    "densityValue": {
+      "@id": "uogtox:densityValue",
+      "@type": "xsd:double"
+    },
+    "hasPopulation": {
+      "@id": "uogtox:hasPopulation",
+      "@type": "@id"
+    },
+    "hasReplicatorDynamic": {
+      "@id": "uogtox:hasReplicatorDynamic",
+      "@type": "@id"
+    },
+    "hasESS": {
+      "@id": "uogtox:hasESS",
+      "@type": "@id"
+    },
+    "hasMutationOperator": {
+      "@id": "uogtox:hasMutationOperator",
+      "@type": "@id"
+    },
+    "hasFitnessFunction": {
+      "@id": "uogtox:hasFitnessFunction",
+      "@type": "@id"
+    },
+    "hasInstitution": {
+      "@id": "uogtox:hasInstitution",
+      "@type": "@id"
+    },
+    "hasPropertyRight": {
+      "@id": "uogtox:hasPropertyRight",
+      "@type": "@id"
+    },
+    "hasTransactionCost": {
+      "@id": "uogtox:hasTransactionCost",
+      "@type": "@id"
+    },
+    "hasEnforcementMechanism": {
+      "@id": "uogtox:hasEnforcementMechanism",
+      "@type": "@id"
+    },
+    "costValue": {
+      "@id": "uogtox:costValue",
+      "@type": "xsd:double"
+    },
+    "hasObligation": {
+      "@id": "uogtox:hasObligation",
+      "@type": "@id"
+    },
+    "hasPermission": {
+      "@id": "uogtox:hasPermission",
+      "@type": "@id"
+    },
+    "hasProhibition": {
+      "@id": "uogtox:hasProhibition",
+      "@type": "@id"
+    },
+    "hasSanction": {
+      "@id": "uogtox:hasSanction",
+      "@type": "@id"
+    },
+    "isCompliant": {
+      "@id": "uogtox:isCompliant",
+      "@type": "xsd:boolean"
+    },
+    "hasVoter": {
+      "@id": "uogtox:hasVoter",
+      "@type": "@id"
+    },
+    "hasCandidate": {
+      "@id": "uogtox:hasCandidate",
+      "@type": "@id"
+    },
+    "hasBallot": {
+      "@id": "uogtox:hasBallot",
+      "@type": "@id"
+    },
+    "hasSocialChoiceFunction": {
+      "@id": "uogtox:hasSocialChoiceFunction",
+      "@type": "@id"
+    },
+    "voteCount": {
+      "@id": "uogtox:voteCount",
+      "@type": "xsd:integer"
+    },
+    "hasMatchingMarket": {
+      "@id": "uogtox:hasMatchingMarket",
+      "@type": "@id"
+    },
+    "hasMatching": {
+      "@id": "uogtox:hasMatching",
+      "@type": "@id"
+    },
+    "hasAllocation": {
+      "@id": "uogtox:hasAllocation",
+      "@type": "@id"
+    },
+    "hasBlockingPair": {
+      "@id": "uogtox:hasBlockingPair",
+      "@type": "@id"
+    },
+    "valuationValue": {
+      "@id": "uogtox:valuationValue",
+      "@type": "xsd:double"
+    },
+    "hasContract": {
+      "@id": "uogtox:hasContract",
+      "@type": "@id"
+    },
+    "hasPrincipal": {
+      "@id": "uogtox:hasPrincipal",
+      "@type": "@id"
+    },
+    "hasAgentRole": {
+      "@id": "uogtox:hasAgentRole",
+      "@type": "@id"
+    },
+    "hasIncentiveScheme": {
+      "@id": "uogtox:hasIncentiveScheme",
+      "@type": "@id"
+    },
+    "wageValue": {
+      "@id": "uogtox:wageValue",
+      "@type": "xsd:double"
+    },
+    "hasDesigner": {
+      "@id": "uogtox:hasDesigner",
+      "@type": "@id"
+    },
+    "hasSignalStructure": {
+      "@id": "uogtox:hasSignalStructure",
+      "@type": "@id"
+    },
+    "hasDisclosurePolicy": {
+      "@id": "uogtox:hasDisclosurePolicy",
+      "@type": "@id"
+    },
+    "hasPosteriorBelief": {
+      "@id": "uogtox:hasPosteriorBelief",
+      "@type": "@id"
+    },
+    "entropyValue": {
+      "@id": "uogtox:entropyValue",
+      "@type": "xsd:double"
+    },
+    "hasBoundedModel": {
+      "@id": "uogtox:hasBoundedModel",
+      "@type": "@id"
+    },
+    "hasQRE": {
+      "@id": "uogtox:hasQRE",
+      "@type": "@id"
+    },
+    "rationalityParameter": {
+      "@id": "uogtox:rationalityParameter",
+      "@type": "xsd:double"
+    },
+    "cognitiveLevel": {
+      "@id": "uogtox:cognitiveLevel",
+      "@type": "xsd:integer"
+    },
+    "inequityAversionAlpha": {
+      "@id": "uogtox:inequityAversionAlpha",
+      "@type": "xsd:double"
+    },
+    "hasComplexityClass": {
+      "@id": "uogtox:hasComplexityClass",
+      "@type": "@id"
+    },
+    "hasPriceOfAnarchy": {
+      "@id": "uogtox:hasPriceOfAnarchy",
+      "@type": "@id"
+    },
+    "hasPriceOfStability": {
+      "@id": "uogtox:hasPriceOfStability",
+      "@type": "@id"
+    },
+    "poaValue": {
+      "@id": "uogtox:poaValue",
+      "@type": "xsd:double"
+    },
+    "posValue": {
+      "@id": "uogtox:posValue",
+      "@type": "xsd:double"
+    },
+    "hasFormula": {
+      "@id": "uogtox:hasFormula",
+      "@type": "@id"
+    },
+    "hasCounterexample": {
+      "@id": "uogtox:hasCounterexample",
+      "@type": "@id"
+    },
+    "hasWitnessStrategy": {
+      "@id": "uogtox:hasWitnessStrategy",
+      "@type": "@id"
+    },
+    "isVerified": {
+      "@id": "uogtox:isVerified",
+      "@type": "xsd:boolean"
+    },
+    "formulaString": {
+      "@id": "uogtox:formulaString",
+      "@type": "xsd:string"
+    },
+    "hasDefender": {
+      "@id": "uogtox:hasDefender",
+      "@type": "@id"
+    },
+    "hasAttacker": {
+      "@id": "uogtox:hasAttacker",
+      "@type": "@id"
+    },
+    "hasTarget": {
+      "@id": "uogtox:hasTarget",
+      "@type": "@id"
+    },
+    "hasCoverageSchedule": {
+      "@id": "uogtox:hasCoverageSchedule",
+      "@type": "@id"
+    },
+    "threatScore": {
+      "@id": "uogtox:threatScore",
+      "@type": "xsd:double"
+    },
+    "hasControlVariable": {
+      "@id": "uogtox:hasControlVariable",
+      "@type": "@id"
+    },
+    "hasStateEquation": {
+      "@id": "uogtox:hasStateEquation",
+      "@type": "@id"
+    },
+    "hasHamiltonian": {
+      "@id": "uogtox:hasHamiltonian",
+      "@type": "@id"
+    },
+    "timeHorizon": {
+      "@id": "uogtox:timeHorizon",
+      "@type": "xsd:double"
+    },
+    "driftRate": {
+      "@id": "uogtox:driftRate",
+      "@type": "xsd:double"
+    },
+    "hasResource": {
+      "@id": "uogtox:hasResource",
+      "@type": "@id"
+    },
+    "hasLatencyFunction": {
+      "@id": "uogtox:hasLatencyFunction",
+      "@type": "@id"
+    },
+    "hasNetworkFlow": {
+      "@id": "uogtox:hasNetworkFlow",
+      "@type": "@id"
+    },
+    "hasWardropEquilibrium": {
+      "@id": "uogtox:hasWardropEquilibrium",
+      "@type": "@id"
+    },
+    "capacityValue": {
+      "@id": "uogtox:capacityValue",
+      "@type": "xsd:double"
+    },
+    "hasGDLDescription": {
+      "@id": "uogtox:hasGDLDescription",
+      "@type": "xsd:string"
+    },
+    "hasRulePredicate": {
+      "@id": "uogtox:hasRulePredicate",
+      "@type": "@id"
+    },
+    "hasLegalMoveRule": {
+      "@id": "uogtox:hasLegalMoveRule",
+      "@type": "@id"
+    },
+    "hasTerminalRule": {
+      "@id": "uogtox:hasTerminalRule",
+      "@type": "@id"
+    },
+    "hasGoalRule": {
+      "@id": "uogtox:hasGoalRule",
+      "@type": "@id"
+    },
+    "hasPromptState": {
+      "@id": "uogtox:hasPromptState",
+      "@type": "@id"
+    },
+    "hasMemoryState": {
+      "@id": "uogtox:hasMemoryState",
+      "@type": "@id"
+    },
+    "hasToolInvocation": {
+      "@id": "uogtox:hasToolInvocation",
+      "@type": "@id"
+    },
+    "hasConsentBoundary": {
+      "@id": "uogtox:hasConsentBoundary",
+      "@type": "@id"
+    },
+    "temperatureValue": {
+      "@id": "uogtox:temperatureValue",
+      "@type": "xsd:double"
+    },
+    "hasDigitalTwin": {
+      "@id": "uogtox:hasDigitalTwin",
+      "@type": "@id"
+    },
+    "hasPhysicalThing": {
+      "@id": "uogtox:hasPhysicalThing",
+      "@type": "@id"
+    },
+    "hasAffordance": {
+      "@id": "uogtox:hasAffordance",
+      "@type": "@id"
+    },
+    "hasProtocolBinding": {
+      "@id": "uogtox:hasProtocolBinding",
+      "@type": "@id"
+    },
+    "samplingInterval": {
+      "@id": "uogtox:samplingInterval",
+      "@type": "xsd:double"
+    },
+    "hasLens": {
+      "@id": "uogtox:hasLens",
+      "@type": "@id"
+    },
+    "hasPlayFunction": {
+      "@id": "uogtox:hasPlayFunction",
+      "@type": "@id"
+    },
+    "hasCoplayFunction": {
+      "@id": "uogtox:hasCoplayFunction",
+      "@type": "@id"
+    },
+    "hasEquilibriumPredicate": {
+      "@id": "uogtox:hasEquilibriumPredicate",
+      "@type": "@id"
+    },
+    "hasComposition": {
+      "@id": "uogtox:hasComposition",
+      "@type": "@id"
+    },
+    "hasPetriNet": {
+      "@id": "uogtox:hasPetriNet",
+      "@type": "@id"
+    },
+    "hasPlace": {
+      "@id": "uogtox:hasPlace",
+      "@type": "@id"
+    },
+    "hasTransitionNode": {
+      "@id": "uogtox:hasTransitionNode",
+      "@type": "@id"
+    },
+    "hasMarking": {
+      "@id": "uogtox:hasMarking",
+      "@type": "@id"
+    },
+    "tokenCount": {
+      "@id": "uogtox:tokenCount",
+      "@type": "xsd:integer"
+    },
+    "hasReputationScore": {
+      "@id": "uogtox:hasReputationScore",
+      "@type": "@id"
+    },
+    "hasIdentityClaim": {
+      "@id": "uogtox:hasIdentityClaim",
+      "@type": "@id"
+    },
+    "hasCredential": {
+      "@id": "uogtox:hasCredential",
+      "@type": "@id"
+    },
+    "hasProvenanceTrace": {
+      "@id": "uogtox:hasProvenanceTrace",
+      "@type": "@id"
+    },
+    "scoreValue": {
+      "@id": "uogtox:scoreValue",
+      "@type": "xsd:double"
+    },
+    "hasPrivacyBudget": {
+      "@id": "uogtox:hasPrivacyBudget",
+      "@type": "@id"
+    },
+    "hasPrivateAttribute": {
+      "@id": "uogtox:hasPrivateAttribute",
+      "@type": "@id"
+    },
+    "hasConsentPolicy": {
+      "@id": "uogtox:hasConsentPolicy",
+      "@type": "@id"
+    },
+    "hasDPMechanism": {
+      "@id": "uogtox:hasDPMechanism",
+      "@type": "@id"
+    },
+    "epsilonValue": {
+      "@id": "uogtox:epsilonValue",
+      "@type": "xsd:double"
+    },
+    "hasExecutionBinding": {
+      "@id": "uogtox:hasExecutionBinding",
+      "@type": "@id"
+    },
+    "hasRuntimeBinding": {
+      "@id": "uogtox:hasRuntimeBinding",
+      "@type": "@id"
+    },
+    "hasSolverBinding": {
+      "@id": "uogtox:hasSolverBinding",
+      "@type": "@id"
+    },
+    "hasSimulationBinding": {
+      "@id": "uogtox:hasSimulationBinding",
+      "@type": "@id"
+    },
+    "queryText": {
+      "@id": "uogtox:queryText",
+      "@type": "xsd:string"
+    },
+    "AlgorithmicSolver": "uogtox:AlgorithmicSolver",
+    "BargainingGame": "uogtox:BargainingGame",
+    "BargainingProtocol": "uogtox:BargainingProtocol",
+    "DeonticLogicSystem": "uogtox:DeonticLogicSystem",
+    "DutchAuction": "uogtox:DutchAuction",
+    "EnglishAuction": "uogtox:EnglishAuction",
+    "FictitiousPlay": "uogtox:FictitiousPlay",
+    "InformationDesignGame": "uogtox:InformationDesignGame",
+    "InstitutionalEconomicsGame": "uogtox:InstitutionalEconomicsGame",
+    "KalaiSmorodinskySolution": "uogtox:KalaiSmorodinskySolution",
+    "LearningProcess": "uogtox:LearningProcess",
+    "NashBargainingSolution": "uogtox:NashBargainingSolution",
+    "QLearning": "uogtox:QLearning",
+    "RegretMatching": "uogtox:RegretMatching",
+    "ReplicatorLearning": "uogtox:ReplicatorLearning",
+    "hasBeliefHierarchy": {
+      "@id": "uogtox:hasBeliefHierarchy",
+      "@type": "@id"
+    },
+    "hasCharacteristicFunction": {
+      "@id": "uogtox:hasCharacteristicFunction",
+      "@type": "@id"
+    },
+    "hasCoalition": {
+      "@id": "uogtox:hasCoalition",
+      "@type": "@id"
+    },
+    "hasCoreSolution": {
+      "@id": "uogtox:hasCoreSolution",
+      "@type": "@id"
+    },
+    "hasPrivateSignal": {
+      "@id": "uogtox:hasPrivateSignal",
+      "@type": "@id"
+    },
+    "hasShapleyValue": {
+      "@id": "uogtox:hasShapleyValue",
+      "@type": "@id"
+    },
+    "hasType": {
+      "@id": "uogtox:hasType",
+      "@type": "@id"
+    },
+    "hasTypeSpace": {
+      "@id": "uogtox:hasTypeSpace",
+      "@type": "@id"
+    },
+    "rationalizableActions": {
+      "@id": "uogtox:rationalizableActions",
+      "@type": "@id"
+    },
+    "coalitionValueValue": {
+      "@id": "uogtox:coalitionValueValue"
+    },
+    "revenueValue": {
+      "@id": "uogtox:revenueValue"
+    }
   }
 }

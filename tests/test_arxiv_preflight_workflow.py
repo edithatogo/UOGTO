@@ -7,7 +7,7 @@ def test_arxiv_preflight_workflow_runs_strict_gate() -> None:
         "name: arXiv Preflight",
         "actions/checkout@v7",
         "actions/setup-python@v6",
-        "cargo install --git https://github.com/edithatogo/sourceright.git sourceright --locked",
+        "cargo install --git https://github.com/edithatogo/sourceright.git --rev f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17 sourceright --locked",
         "latexmk",
         "texlive-latex-base",
         "pytest tests/test_arxiv_source_package.py tests/test_arxiv_upload_ready.py",

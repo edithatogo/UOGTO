@@ -39,12 +39,9 @@ def test_required_gate_runs_validation_and_strict_arxiv_score() -> None:
     workflow = Path(".github/workflows/required-gate.yml").read_text(encoding="utf-8")
     for expected in [
         "name: Required Gate",
-        "make validate",
-        "make test",
+        "make required-gate",
         "make publishing-metadata",
         "make registry-links",
-        "make manuscript-pdf",
-        'make arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"',
         "scripts/maintenance/score_arxiv_submission.py",
         "--threshold 995",
         "actions/upload-artifact@v4",
