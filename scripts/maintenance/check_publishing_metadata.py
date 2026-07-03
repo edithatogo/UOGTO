@@ -205,7 +205,9 @@ def check_workflow():
         "audit_semantics.py",
         "make publishing-metadata",
         "make build",
-        "releases/tags/{version}",
+        "WIDOCO_JAR_URL",
+        "WIDOCO_JAR_SHA256",
+        "hashlib.sha256",
         "actions/deploy-pages@v5",
         "dist/uogto.ttl",
     ]:

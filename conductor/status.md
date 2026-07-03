@@ -6,7 +6,20 @@ Updated: `2026-07-02`
 
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
-- `repo_validation_runtime_hardening_20260703`: Completed. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
+- `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
+
+## Repository Validation And Runtime Hardening - 2026-07-03
+
+- Archived track: `conductor/archive/repo_validation_runtime_hardening_20260703/`.
+- Added `validation/competency-query-expectations.json` and validator/test enforcement so representative competency queries prove expected bindings or minimum row counts against example graphs.
+- Added representative negative SHACL tests for core, game-type, execution, examples, and governance shapes.
+- Extended semantic audit to check namespace policy, object/datatype property separation, JSON-LD term coverage, and example instance naming.
+- Made `make test` build `dist/` first and pinned Pixi's default Python to `3.10.*`.
+- Packaged `uogto`, `uogto.runner`, and `uogto.playground`; added optional extras and console entry points.
+- Hardened runner payoff lookup for multi-game scoping, duplicate action labels, asymmetric payoffs, and the current `PayoffProfile` / `PlayerPayoffLink` ontology pattern while retaining legacy `PayoffMapping` support.
+- Pinned SourceRight CI installs by commit and WIDOCO by URL plus SHA-256; documented update policy in `docs/ci-supply-chain-policy.md`.
+- Verification passed locally: `make build`; `make validate`; `make test` (`223 passed, 1 skipped, 26 warnings`); `make publishing-metadata`; `make registry-links`; `git diff --check`.
+- Conductor review found no blocking findings; the track is archived.
 
 ## Current arXiv Submission State
 
@@ -60,18 +73,6 @@ Updated: `2026-07-02`
 - Optional pandas and DuckDB dependencies now degrade to checked-in Parquet preservation and JSON/CSV dashboard fallback in the default Pixi environment.
 - Conductor review found and fixed one generated Markdown EOF formatting issue.
 - Verification passed: `pixi run article-hardening-all`; focused article-hardening pytest suite; `git diff --check`.
-
-## Repository Validation and Runtime Hardening - 2026-07-03
-
-- Conductor track: `conductor/tracks/repo_validation_runtime_hardening_20260703/`.
-- Added CQ expected-result manifest at `competency-questions/expected-results.json`; `make validate` now validates ontology plus examples and enforces required CQ bindings.
-- Added negative SHACL tests for core, game-type, execution, example, and governance shapes.
-- `make test` is fresh-checkout safe because the target now builds generated `dist/` assets before pytest.
-- Pixi default Python is pinned to 3.10 for CI parity and `pixi.lock` was refreshed; local verification used Python `3.10.20`.
-- `uogto` runtime modules are packaged via setuptools package discovery, with optional playground dependencies and `uogto-runner-bench` entry point.
-- Runner payoff lookup now supports the current `PayoffProfile` / `PlayerPayoffLink` pattern and scoped multi-game asymmetric payoff tests.
-- SourceRight CI installs are pinned to commit `f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17`; WIDOCO `v1.4.25` jar download verifies SHA-256 `ce3071a90fe73c0860829569e79050f74c9623d6add8be3925cbdf87bedde5a5`.
-- Verification passed: `make build`; `make validate`; `make test` (`228 passed, 2 skipped, 30 warnings`); `make publishing-metadata`; `make registry-links`; semantic audit.
 
 ## Archived Extended Discoverability Registry Track - 2026-07-03
 

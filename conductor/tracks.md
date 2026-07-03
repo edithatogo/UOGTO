@@ -128,5 +128,5 @@ These tracks are retained for audit history but are no longer active work items.
 ## [x] Track: repo_validation_runtime_hardening_20260703
 - **Description**: Strengthen UOGTO validation semantics, fresh-checkout gates, runtime packaging, Conductor state, and CI supply-chain determinism.
 - **Status**: Completed
-- **Link**: [./tracks/repo_validation_runtime_hardening_20260703/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/repo_validation_runtime_hardening_20260703/)
+- **Link**: [./archive/repo_validation_runtime_hardening_20260703/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/repo_validation_runtime_hardening_20260703/)
 

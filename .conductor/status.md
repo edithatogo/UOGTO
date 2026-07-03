@@ -1,5 +1,12 @@
 # UOGTO Project Status
 
+## 2026-07-03 Repository Validation And Runtime Hardening
+
+- `repo_validation_runtime_hardening_20260703` is completed repo-side and archived.
+- Implemented CQ expected-result validation, negative SHACL fixtures, semantic-audit hardening, fresh-checkout test ordering, Make/Pixi gate parity, packaging/import smokes, runner payoff scoping, Python 3.10 Pixi parity, CI source pinning, WIDOCO checksum verification, and clean scratch behavior.
+- Verification passed: `make build`; `make validate`; `make test` (`223 passed, 1 skipped, 26 warnings`); `make publishing-metadata`; `make registry-links`; `git diff --check`.
+- Conductor review found no blocking findings.
+
 ## 2026-07-03 Article Hardening Protocol
 
 - `uogto_article_hardening_protocol_20260624` is completed repo-side.

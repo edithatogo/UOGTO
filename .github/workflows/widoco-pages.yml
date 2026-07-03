@@ -17,7 +17,8 @@ concurrency:
 
 env:
   WIDOCO_VERSION: v1.4.25
-  WIDOCO_SHA256: ce3071a90fe73c0860829569e79050f74c9623d6add8be3925cbdf87bedde5a5
+  WIDOCO_JAR_URL: https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+  WIDOCO_JAR_SHA256: be57a270fffb91e55810fa308717e704a44e2e7c027a3d68125a49da6c8b4e2b
 
 jobs:
   build:
@@ -40,7 +41,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install .
+          python -m pip install ".[dev]"
 
       - name: Run publishing release gates
         run: |
@@ -53,35 +54,18 @@ jobs:
       - name: Download pinned WIDOCO release
         run: |
           python - <<'PY'
-          import json
           import hashlib
           import os
           import urllib.request
 
-          version = os.environ["WIDOCO_VERSION"]
-          expected_sha256 = os.environ["WIDOCO_SHA256"]
-          release_url = f"https://api.github.com/repos/dgarijo/Widoco/releases/tags/{version}"
-          with urllib.request.urlopen(release_url) as response:
-              release = json.load(response)
-
-          if release.get("tag_name") != version:
-              raise SystemExit(f"Expected WIDOCO {version}, got {release.get('tag_name')}")
-
-          jar_url = None
-          for asset in release.get("assets", []):
-              name = asset.get("name", "")
-              if name.endswith(".jar") and "dependencies" in name.lower():
-                  jar_url = asset["browser_download_url"]
-                  break
-
-          if not jar_url:
-              raise SystemExit("Could not find a WIDOCO dependencies JAR in the latest release assets")
-
+          jar_url = os.environ["WIDOCO_JAR_URL"]
+          expected = os.environ["WIDOCO_JAR_SHA256"]
           print(jar_url)
           urllib.request.urlretrieve(jar_url, "widoco.jar")
-          actual_sha256 = hashlib.sha256(open("widoco.jar", "rb").read()).hexdigest()
-          if actual_sha256 != expected_sha256:
-              raise SystemExit(f"WIDOCO checksum mismatch: expected {expected_sha256}, got {actual_sha256}")
+          with open("widoco.jar", "rb") as handle:
+              actual_sha256 = hashlib.sha256(handle.read()).hexdigest()
+          if actual_sha256 != expected:
+              raise SystemExit(f"WIDOCO checksum mismatch: expected {expected}, got {actual_sha256}")
           PY
 
       - name: Generate WIDOCO HTML

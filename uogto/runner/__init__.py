@@ -1,5 +1,5 @@
-"""Runtime helpers for UOGTO game graphs."""
+"""Runtime helpers for executing simple UOGTO game graphs."""
 
-from .engine import RDFGameRunner, UOGTO
+from .engine import RDFGameRunner
 
-__all__ = ["RDFGameRunner", "UOGTO"]
+__all__ = ["RDFGameRunner"]

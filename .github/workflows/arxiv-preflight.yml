@@ -64,7 +64,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install .
+          python -m pip install ".[dev]"
           cargo install --git https://github.com/edithatogo/sourceright.git --rev f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17 sourceright --locked
 
       - name: Install LaTeX toolchain

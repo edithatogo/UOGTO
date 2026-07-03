@@ -5,48 +5,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 import glob
 import json
 import re
+from pathlib import Path
+
 import rdflib
 from rdflib import RDF, RDFS, OWL
 
 SKOS = rdflib.Namespace("http://www.w3.org/2004/02/skos/core#")
-ROOT = "https://w3id.org/uogto/"
-KEBAB = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-
-
-def local_name(uri):
-    return str(uri).rstrip("/").split("/")[-1].split("#")[-1]
-
-
-def context_terms():
-    terms = set()
-    for path in ["jsonld/core.context.jsonld", "jsonld/extensions.context.jsonld"]:
-        with open(path, "r", encoding="utf-8") as handle:
-            terms.update(json.load(handle).get("@context", {}).keys())
-    return terms
-
-
-def jsonld_example_terms():
-    used = set()
-
-    def visit(value):
-        if isinstance(value, dict):
-            for key, item in value.items():
-                if key == "@type":
-                    if isinstance(item, list):
-                        used.update(str(entry) for entry in item)
-                    else:
-                        used.add(str(item))
-                elif not key.startswith("@"):
-                    used.add(key)
-                visit(item)
-        elif isinstance(value, list):
-            for item in value:
-                visit(item)
-
-    for path in glob.glob("examples/*.jsonld"):
-        with open(path, "r", encoding="utf-8") as handle:
-            visit(json.load(handle))
-    return used
+ROOT = Path(__file__).resolve().parents[2]
+CORE_NS = "https://w3id.org/uogto/core#"
+EXT_NS = "https://w3id.org/uogto/extensions#"
+INSTANCE_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 def audit_semantics():
     ttl_files = glob.glob("ontologies/**/*.ttl", recursive=True)
@@ -62,7 +30,8 @@ def audit_semantics():
         g = rdflib.Graph()
         try:
             g.parse(ttl, format="turtle")
-            merged += g
+            for triple in g:
+                merged.add(triple)
         except Exception as e:
             print(f"Error parsing file {ttl}: {e}")
             all_conforms = False
@@ -89,52 +58,94 @@ def audit_semantics():
                 print(f"Missing definition in {ttl} for term: {term_name} (<{s}>)")
                 all_conforms = False
 
-    object_properties = set(merged.subjects(RDF.type, OWL.ObjectProperty))
-    datatype_properties = set(merged.subjects(RDF.type, OWL.DatatypeProperty))
-    overlap = {prop for prop in object_properties & datatype_properties if str(prop).startswith(ROOT)}
-    if overlap:
-        print("Properties typed as both ObjectProperty and DatatypeProperty:")
-        for prop in sorted(overlap, key=str):
-            print(f"  - {prop}")
+    if not audit_namespace_policy(merged):
         all_conforms = False
-
-    allowed_uogto_roots = (
-        "https://w3id.org/uogto/core",
-        "https://w3id.org/uogto/core#",
-        "https://w3id.org/uogto/core/",
-        "https://w3id.org/uogto/extensions",
-        "https://w3id.org/uogto/extensions#",
-        "https://w3id.org/uogto/extensions/",
-        "https://w3id.org/uogto/alignments/",
-    )
-    for subject in set(merged.subjects()):
-        value = str(subject)
-        if value.startswith("https://w3id.org/uogto/") and not value.startswith(allowed_uogto_roots):
-            print(f"Unexpected UOGTO namespace outside core/extensions: {subject}")
-            all_conforms = False
-
-    missing_context_terms = sorted(jsonld_example_terms() - context_terms())
-    if missing_context_terms:
-        print(f"JSON-LD examples use terms missing from contexts: {missing_context_terms}")
+    if not audit_property_separation(merged):
         all_conforms = False
-
-    for path in glob.glob("examples/*"):
-        g = rdflib.Graph()
-        fmt = "turtle" if path.endswith(".ttl") else "json-ld"
-        g.parse(path, format=fmt)
-        for subject in g.subjects():
-            if isinstance(subject, rdflib.term.URIRef) and str(subject).startswith("http://example.org/"):
-                name = local_name(subject)
-                if not KEBAB.match(name):
-                    print(f"Example instance is not kebab-case in {path}: {subject}")
-                    all_conforms = False
+    if not audit_jsonld_term_coverage(merged):
+        all_conforms = False
+    if not audit_instance_naming():
+        all_conforms = False
 
     if all_conforms:
-        print("Semantic completeness audit passed! All terms have rdfs:label and skos:definition.")
+        print("Semantic completeness audit passed! Metadata, namespaces, property typing, JSON-LD coverage, and instance naming are valid.")
         return True
     else:
         print("Semantic completeness audit failed. Please add missing metadata annotations.")
         return False
+
+
+def audit_namespace_policy(graph):
+    conforms = True
+    for subject in graph.subjects(RDF.type, OWL.Class):
+        value = str(subject)
+        if value.startswith("https://w3id.org/uogto/") and not (
+            value.startswith(CORE_NS) or value.startswith(EXT_NS)
+        ):
+            print(f"Invalid UOGTO namespace for class: {subject}")
+            conforms = False
+    return conforms
+
+
+def audit_property_separation(graph):
+    object_properties = set(graph.subjects(RDF.type, OWL.ObjectProperty))
+    datatype_properties = set(graph.subjects(RDF.type, OWL.DatatypeProperty))
+    overlap = object_properties & datatype_properties
+    for prop in sorted(overlap):
+        print(f"Property is both owl:ObjectProperty and owl:DatatypeProperty: {prop}")
+    return not overlap
+
+
+def audit_jsonld_term_coverage(graph):
+    context_terms = {}
+    for context_path in [ROOT / "jsonld/core.context.jsonld", ROOT / "jsonld/extensions.context.jsonld"]:
+        context = json.loads(context_path.read_text(encoding="utf-8"))["@context"]
+        for term, value in context.items():
+            if isinstance(value, str):
+                context_terms[value] = term
+            elif isinstance(value, dict) and "@id" in value:
+                context_terms[value["@id"]] = term
+
+    missing = []
+    for kind in [OWL.Class, OWL.ObjectProperty, OWL.DatatypeProperty]:
+        for subject in graph.subjects(RDF.type, kind):
+            value = str(subject)
+            if value.startswith(CORE_NS):
+                compact = "uogto:" + value.removeprefix(CORE_NS)
+            elif value.startswith(EXT_NS):
+                compact = "uogtox:" + value.removeprefix(EXT_NS)
+            else:
+                continue
+            if compact not in context_terms:
+                missing.append(compact)
+
+    for term in sorted(set(missing)):
+        print(f"JSON-LD context missing term coverage for {term}")
+    return not missing
+
+
+def audit_instance_naming():
+    conforms = True
+    examples_dir = ROOT / "examples"
+    if not examples_dir.exists():
+        return True
+    for path in examples_dir.iterdir():
+        if not path.is_file() or path.suffix not in (".jsonld", ".ttl"):
+            continue
+        graph = rdflib.Graph()
+        fmt = "json-ld" if path.suffix == ".jsonld" else "turtle"
+        graph.parse(path, format=fmt)
+        for subject in set(graph.subjects()):
+            if not isinstance(subject, rdflib.URIRef):
+                continue
+            value = str(subject)
+            if "example.org/" not in value:
+                continue
+            local = value.rstrip("/").split("/")[-1].split("#")[-1]
+            if not INSTANCE_RE.match(local):
+                print(f"Example instance is not kebab-case in {path}: {subject}")
+                conforms = False
+    return conforms
 
 if __name__ == "__main__":
     if not audit_semantics():

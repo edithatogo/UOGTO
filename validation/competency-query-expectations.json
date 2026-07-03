@@ -1,0 +1,41 @@
+{
+  "schema": "uogto.competency-query-expectations.v1",
+  "queries": [
+    {
+      "query": "cq01-list-players.rq",
+      "example_graphs": ["examples/first-price-auction.jsonld"],
+      "min_count": 2,
+      "required_bindings": [
+        {
+          "game": "http://example.org/first-price-auction",
+          "player": "http://example.org/players/bidder-1"
+        }
+      ]
+    },
+    {
+      "query": "cq05-security-games-with-targets.rq",
+      "example_graphs": ["examples/security-stackelberg-game.jsonld"],
+      "min_count": 1
+    },
+    {
+      "query": "cq07-llm-games-with-tool-invocations.rq",
+      "example_graphs": ["examples/llm-tool-use-game.jsonld"],
+      "min_count": 1
+    },
+    {
+      "query": "cq08-executable-games-with-event-traces.rq",
+      "example_graphs": ["examples/first-price-auction.jsonld"],
+      "min_count": 1
+    },
+    {
+      "query": "cq09-games-with-privacy-budget.rq",
+      "example_graphs": ["examples/privacy-budget-game.jsonld"],
+      "min_count": 1
+    },
+    {
+      "query": "cq10-modules-and-imports.rq",
+      "example_graphs": [],
+      "min_count": 1
+    }
+  ]
+}

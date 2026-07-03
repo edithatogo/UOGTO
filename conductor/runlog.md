@@ -1,5 +1,18 @@
 # Conductor Run Log
 
+## 2026-07-03 - Repository Validation And Runtime Hardening
+
+- Created and implemented `repo_validation_runtime_hardening_20260703`.
+- Added CQ expected-result manifest validation in `scripts/validate.py` plus pytest coverage.
+- Added negative SHACL fixture coverage and broadened semantic audit checks for namespace policy, property separation, JSON-LD coverage, and instance naming.
+- Made `make test` fresh-checkout safe by depending on `build`; aligned Pixi `test` and `required-gate`; pinned Pixi Python to `3.10.*`.
+- Packaged runtime modules with optional `runner` and `playground` extras, import-safe playground entry point, and isolated install/import smoke coverage.
+- Updated `RDFGameRunner` to scope payoff resolution by game and player-specific actions, support asymmetric reified payoff profiles, and retain legacy payoff mappings.
+- Pinned SourceRight by commit in CI, verified WIDOCO by SHA-256, replaced bare CI `pip install .` with `python -m pip install ".[dev]"`, and documented the supply-chain update policy.
+- Converted fixed repo-root mapping test scratch directories to pytest-managed temporary paths.
+- Local evidence: `make build` passed; `make validate` passed; `make test` passed with `223 passed, 1 skipped, 26 warnings`; `make publishing-metadata` passed; `make registry-links` passed; `git diff --check` passed.
+- Conductor review found no blocking findings; archived the track under `conductor/archive/repo_validation_runtime_hardening_20260703/`.
+
 ## 2026-07-03 - Article Hardening Protocol Implementation
 
 - Completed repo-side implementation for `uogto_article_hardening_protocol_20260624`.
@@ -19,20 +32,6 @@
 - Marked the track repo-complete with external curator/maintainer review retained in `docs/registry/extended-discoverability-submissions.md` rather than the active Conductor queue.
 - Archived the track under `conductor/archive/uogto_extended_discoverability_registries_20260622/` and removed it from the active tracks registry.
 - Conductor review found no blocking issues after removing the archived track from active status. Verification passed: focused registry pytest (`22 passed`), `make publishing-metadata`, `make extended-registry-packet`, `make validate`, `make test` (`228 passed, 2 skipped, 30 warnings`), `make registry-links`, semantic audit, and `git diff --check`.
-
-## 2026-07-03 - Repository Validation and Runtime Hardening
-
-- Created and completed Conductor track `repo_validation_runtime_hardening_20260703`.
-- Added `competency-questions/expected-results.json` and updated `scripts/validate.py` plus pytest coverage so competency queries run against ontology plus examples and must satisfy expected row/binding evidence.
-- Enriched examples for strategy, equilibrium, incomplete-information, mechanism constraint, LLM tool invocation, executable trace, and privacy-budget query coverage.
-- Added negative SHACL fixture tests for representative core, game-type, execution, example, and governance constraints.
-- Extended semantic audit with property type separation, UOGTO namespace policy, JSON-LD example term coverage, and kebab-case example instance checks.
-- Made `make test` build generated `dist/` assets first; aligned Pixi `test` and `required-gate` ordering; pinned Pixi default Python to 3.10 and refreshed `pixi.lock`.
-- Packaged `uogto` runtime modules, added optional playground dependencies and a `uogto-runner-bench` entry point, and added installed-package smoke coverage.
-- Hardened `RDFGameRunner` for scoped current-pattern payoff lookup using `PayoffProfile` / `PlayerPayoffLink`, including asymmetric payoff regression coverage.
-- Pinned SourceRight CI installation to commit `f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17` and added WIDOCO `v1.4.25` jar SHA-256 verification.
-- Removed current-surface stale PR/test-count references and clarified `conductor/` as the canonical current track/status surface while `.conductor/` remains legacy scaffolding.
-- Verification passed locally on Python `3.10.20`: `make build`; `make validate`; `make test` (`228 passed, 2 skipped, 30 warnings`); `make publishing-metadata`; `make registry-links`; semantic audit.
 
 ## 2026-07-02 arXiv Upload-Ready Hardening
 

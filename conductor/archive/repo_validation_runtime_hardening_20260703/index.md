@@ -1,4 +1,4 @@
-# Track repo_validation_runtime_hardening_20260703 Context
+# Repository Validation And Runtime Hardening
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)

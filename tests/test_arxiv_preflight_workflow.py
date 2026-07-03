@@ -38,7 +38,7 @@ def test_required_gate_pins_sourceright_and_builds_before_tests() -> None:
 def test_widoco_pages_verifies_pinned_jar_checksum() -> None:
     workflow = Path(".github/workflows/widoco-pages.yml").read_text(encoding="utf-8")
     assert "WIDOCO_VERSION: v1.4.25" in workflow
-    assert "WIDOCO_SHA256: ce3071a90fe73c0860829569e79050f74c9623d6add8be3925cbdf87bedde5a5" in workflow
+    assert "WIDOCO_JAR_SHA256: be57a270fffb91e55810fa308717e704a44e2e7c027a3d68125a49da6c8b4e2b" in workflow
     assert "actual_sha256 = hashlib.sha256" in workflow
     assert "WIDOCO checksum mismatch" in workflow
 

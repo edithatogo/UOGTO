@@ -1,2 +1,1 @@
-"""Streamlit playground package for UOGTO."""
-
+"""Interactive playground entry points for UOGTO graphs."""
