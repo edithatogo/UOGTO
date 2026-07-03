@@ -1,6 +1,6 @@
 # Implementation Plan: Extended Discoverability Registries
 
-This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented; remaining work is limited to FAIRsharing curator review and upstream registry review.
+This plan captures the second-wave discoverability targets for UOGTO after Zenodo DOI publication, LOV submission, OLS submission, and live w3id redirects. Repo-side packet integration is implemented and complete; remaining FAIRsharing, Ontobee, and Bioregistry work is external curator/maintainer review tracked in the registry follow-up queue, not active repository implementation.
 
 ## Phase 1: Shared Submission Packet
 - [x] Task: Create a reusable extended-registry submission packet.
@@ -15,7 +15,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] `make release-preflight`, `make validate`, and `make test` pass locally.
 
 ## Phase 2: FAIRsharing Submission
-- [~] Task: Submit UOGTO to FAIRsharing.
+- [x] Task: Submit UOGTO to FAIRsharing.
     - [x] Confirm the current FAIRsharing submission route and account requirements.
     - [x] Determine the correct registry type and subject classification guidance for UOGTO as an ontology/terminology or standard-like resource.
     - [x] Submit the record using the shared submission packet.
@@ -70,7 +70,7 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 
 ### Acceptance Criteria
 - [x] BioPortal decision is recorded with rationale.
-- [ ] If submitted later, BioPortal record/request URL is captured.
+- [x] No BioPortal record/request URL is required for this track because the recorded decision is `not_submitted_conditional`; capture a URL only if a future biomedical positioning note reopens BioPortal.
 - [x] If not submitted, the rationale prevents repeated re-evaluation without new domain evidence.
 
 ## Phase 7: Conditional Bioregistry Alignment
@@ -106,12 +106,19 @@ This plan captures the second-wave discoverability targets for UOGTO after Zenod
 - [x] `Publish Release Assets` is dispatched and verified for `extended-registry-handoff.json` after push.
 
 ## Current External Blockers
-- No current repo-actionable second-wave account blockers remain. FAIRsharing record https://fairsharing.org/8382 is awaiting curator review; Ontobee and Bioregistry remain maintainer-review pending.
+- No current repo-actionable second-wave account blockers remain. FAIRsharing record https://fairsharing.org/8382 is awaiting curator review; Ontobee and Bioregistry remain maintainer-review pending. These are external follow-up items tracked in `docs/registry/extended-discoverability-submissions.md` and the generated handoff packet.
 
 
 ## External Review Pending
 - Ontobee indexing request https://github.com/OntoZoo/ontobee/issues/212 is pending maintainer review.
 - Bioregistry request https://github.com/biopragmatics/bioregistry/issues/1999 is pending maintainer review after the new-prefix template update comment https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220.
+- FAIRsharing record https://fairsharing.org/8382 is pending FAIRsharing curator review.
+
+## Closeout Evidence - 2026-07-03
+- Live prefix.cc TXT endpoints still return the expected mappings: `uogto` -> `https://w3id.org/uogto/core#`; `uogtox` -> `https://w3id.org/uogto/extensions#`.
+- Wikidata entity data for `Q140323510` still reports label `Universal Open Game Theory Ontology` and DOI `10.5281/ZENODO.20796937`.
+- GitHub API checks confirm Ontobee issue `212` and Bioregistry issue `1999` are still open, so no acceptance is claimed.
+- The release `extended-registry-handoff.json` remains the external-review handoff surface for curator/maintainer follow-up.
 
 ## Remote Evidence
 - Implementation commit `8b52503` was pushed to `origin/master`.

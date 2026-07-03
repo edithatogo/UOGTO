@@ -7,7 +7,7 @@ channels = ["conda-forge"]
 platforms = ["win-64", "linux-64"]
 
 [dependencies]
-python = ">=3.10"
+python = ">=3.10,<3.11"
 rdflib = ">=7.0.0"
 pyshacl = ">=0.25.0"
 pytest = ">=8.0.0"
@@ -17,7 +17,7 @@ ruff = ">=0.3.0"
 
 [tasks]
 build = "python scripts/build.py"
-test = "pytest"
+test = "python scripts/build.py && pytest"
 validate = "make validate"
 audit-semantics = "python scripts/maintenance/audit_semantics.py"
 html-report = "python scripts/maintenance/generate_html_report.py"
@@ -63,7 +63,7 @@ arxiv-preflight-strict = "python scripts/maintenance/build_manuscript_sources.py
 arxiv-upload-ready = "python scripts/maintenance/build_manuscript_sources.py && python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py --output-dir .tmp/manuscript-build-arxiv --require-pdf && python scripts/maintenance/build_arxiv_source_package.py && python scripts/maintenance/clean_arxiv_source_package.py && python scripts/maintenance/audit_arxiv_source_privacy.py && sourceright validate-csl --json docs/paper/references.csl.json && sourceright report .sourceright && sourceright citations docs/paper/manuscript-citations.txt .sourceright && python scripts/maintenance/build_arxiv_upload_ready.py --require-privacy-audit"
 arxiv-upload-ready-strict = "python scripts/maintenance/build_manuscript_sources.py && python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py --output-dir .tmp/manuscript-build-arxiv --require-pdf --require-arxiv-engine && python scripts/maintenance/build_arxiv_source_package.py && python scripts/maintenance/clean_arxiv_source_package.py && python scripts/maintenance/audit_arxiv_source_privacy.py && sourceright validate-csl --json docs/paper/references.csl.json && sourceright report .sourceright && sourceright citations docs/paper/manuscript-citations.txt .sourceright && python scripts/maintenance/build_arxiv_upload_ready.py --require-privacy-audit"
 arxiv-strict-review = "python scripts/maintenance/score_arxiv_submission.py --threshold 995"
-required-gate = "python scripts/validate.py && pytest && python scripts/maintenance/check_publishing_metadata.py && python scripts/maintenance/check_registry_links.py && python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py --require-pdf && pixi run arxiv-upload-ready && python scripts/maintenance/score_arxiv_submission.py --threshold 995"
+required-gate = "python scripts/build.py && python scripts/validate.py && pytest && python scripts/maintenance/check_publishing_metadata.py && python scripts/maintenance/check_registry_links.py && python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py --require-pdf && pixi run arxiv-upload-ready && python scripts/maintenance/score_arxiv_submission.py --threshold 995"
 manuscript-check = "python scripts/maintenance/check_manuscript_citations.py"
 manuscript-build = "python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py"
 manuscript-pdf = "python scripts/maintenance/check_manuscript_citations.py && python scripts/maintenance/build_manuscript_pdf.py --require-pdf"

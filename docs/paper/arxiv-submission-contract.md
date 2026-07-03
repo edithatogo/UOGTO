@@ -83,7 +83,7 @@ Publisher artifact evidence:
 | PR manuscript PDF | pass-ci | Current pull-request check must pass on the current branch head. |
 | PR validate | pass-ci | Current pull-request check must pass on the current branch head. |
 | `make validate` | pass-local | Parsed ontology modules, SHACL shapes, examples, and competency queries successfully on 2026-07-02. |
-| `make test` | pass-local | `207 passed, 21 warnings` on 2026-07-02 after the final deterministic-source fix; focused source/package rerun passed `8 passed` and full-suite rerun passed. |
+| `make test` | pass-local | `219 passed, 1 skipped, 21 warnings` on 2026-07-03 after `make build`; focused source/package reruns and full-suite rerun passed. |
 | Privacy/source-leak audit | pass | `docs/paper/arxiv-source-privacy-audit.json`; `docs/paper/arxiv-source-privacy-audit.md`; no `C:/Users` or OneDrive path disclosure in published audit artifacts. |
 | Citation reconciliation | pass | SourceRight citation reconciliation reports 19 matched citations and 0 issues. |
 | Upload artifact determinism | pass | CI artifact manifest must report `dirty: false`, `dirty_file_count: 0`, and `dirty_entries: []`; tarball SHA-256 must match `SHA256SUMS`. |

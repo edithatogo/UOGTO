@@ -26,10 +26,10 @@ Run these commands from the repository root:
 - Check task status: `make conductor`
 
 ## Adding a New Module
-1. Check `.conductor/module-template.md`.
+1. Check `.conductor/module-template.md` for the legacy module template; current track status and implementation plans live under `conductor/`.
 2. Create the ontology file under `ontologies/`.
 3. Create corresponding SHACL shapes under `shapes/`.
 4. Create context mappings under `jsonld/`.
 5. Add an example in `examples/`.
 6. Document in `docs/` and add competency queries in `competency-questions/`.
-7. Update task status in `.conductor/tasks.yaml`.
+7. Update the relevant track under `conductor/tracks/` and summarize current status in `conductor/status.md`; `.conductor/tasks.yaml` is retained as legacy phase scaffolding.

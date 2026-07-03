@@ -4,7 +4,8 @@
 ex:stag-hunt a uogto:GameSpecification ;
     uogto:identifier "stag-hunt" ;
     uogto:name "Stag Hunt" ;
-    uogto:hasPlayer ex:hunter-1, ex:hunter-2 .
+    uogto:hasPlayer ex:hunter-1, ex:hunter-2 ;
+    uogto:hasEquilibrium ex:stag-stag .
 
 ex:hunter-1 a uogto:Player ;
     uogto:identifier "hunter-1" ;
@@ -13,3 +14,7 @@ ex:hunter-1 a uogto:Player ;
 ex:hunter-2 a uogto:Player ;
     uogto:identifier "hunter-2" ;
     uogto:name "Hunter 2" .
+
+ex:stag-stag a uogto:NashEquilibrium ;
+    uogto:identifier "stag-stag" ;
+    uogto:name "Both hunters choose stag" .
