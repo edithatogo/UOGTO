@@ -27,7 +27,7 @@ def _tolerant_read_csv(path: Path) -> pd.DataFrame:
         reader = csv.reader(fh)
         rows = list(reader)
     if not rows:
-        return pd.DataFrame() if pd is not None else []
+        return pd.DataFrame() if HAS_PANDAS else []
     header = rows[0]
     width = len(header)
     normalized = []
