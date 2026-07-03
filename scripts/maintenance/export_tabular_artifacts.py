@@ -105,7 +105,7 @@ def export_table(csv_path: Path) -> None:
     )
 
     parquet_path = base.with_suffix(".parquet")
-    if pd is not None:
+    if HAS_PANDAS:
         table.to_parquet(parquet_path, index=False)
     elif not parquet_path.exists():
         raise SystemExit(
