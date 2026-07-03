@@ -48,7 +48,7 @@ def _escape_markdown(value: object) -> str:
 
 
 def _columns(table) -> list[str]:
-    if pd is not None:
+    if HAS_PANDAS:
         return list(table.columns)
     return list(table[0]) if table else []
 
