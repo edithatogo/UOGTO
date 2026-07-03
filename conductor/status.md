@@ -49,3 +49,13 @@ Updated: `2026-07-02`
   - `docs/paper/arxiv-strict-review-report.md`
   - `docs/paper/arxiv-strict-review-iterations.jsonl`
 - Repo-side rollout status: replacement PR #21 (`codex/repo-arxiv-hardening-clean-20260703`) is mergeable and has passing `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight` checks on commit `4e7bb47`; `main` branch protection now requires both `Validate UOGTO` and `Required Gate`. Merge remains blocked only by the configured required review.
+
+## Archived Article Hardening Protocol Track - 2026-07-03
+
+- Archived Conductor track: `conductor/archive/uogto_article_hardening_protocol_20260624/`.
+- Added source-acquisition manifest generation and validation at `docs/article-hardening/source-acquisition-manifest.json` / `.md`.
+- Added Make/Pixi targets for source acquisition, tabular exports, optional DuckDB dashboard support, dashboard generation, and aggregate `article-hardening-all`.
+- Article table generation now writes both `article-facing-tables/` and compatibility `article-tables/` outputs.
+- Optional pandas and DuckDB dependencies now degrade to checked-in Parquet preservation and JSON/CSV dashboard fallback in the default Pixi environment.
+- Conductor review found and fixed one generated Markdown EOF formatting issue.
+- Verification passed: `pixi run article-hardening-all`; focused article-hardening pytest suite; `git diff --check`.

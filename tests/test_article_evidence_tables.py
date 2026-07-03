@@ -22,11 +22,14 @@ def test_article_evidence_tables_have_required_rows_and_columns() -> None:
 def test_article_evidence_tables_main_writes_csv_json_markdown() -> None:
     assert tables.main() == 0
     out = Path("docs/article-hardening/article-facing-tables")
+    compatibility_out = Path("docs/article-hardening/article-tables")
     for stem in ["module-audit-table", "missing-game-theory-element-dispositions", "mapping-robustness-table"]:
         assert (out / f"{stem}.csv").exists()
+        assert (compatibility_out / f"{stem}.csv").exists()
         json_path = out / f"{stem}.json"
         assert json_path.exists()
         payload = json.loads(json_path.read_text(encoding="utf-8"))
         assert payload["row_count"] == len(payload["rows"])
         assert (out / f"{stem}.md").exists()
     assert (out / "README.md").exists()
+    assert (compatibility_out / "README.md").exists()

@@ -39,6 +39,7 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - Documentation index is available at [docs/index.md](docs/index.md).
 - Registry preparation materials for LOV and OLS are under [docs/registry/](docs/registry/).
 - Comparative ontology mapping outputs, figures, and report are under [docs/ontology-comparison/](docs/ontology-comparison/), with the main report at [docs/ontology-comparison/report.md](docs/ontology-comparison/report.md).
+- Article-hardening protocol, evidence package, source-acquisition manifest, tables, figures, and review logs are under [docs/article-hardening/](docs/article-hardening/).
 
 ## RI-HERO
 The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as part of a broader health economics research on outcomes framing.

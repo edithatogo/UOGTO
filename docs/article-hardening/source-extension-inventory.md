@@ -11,7 +11,7 @@ This generated summary mirrors `source-extension-inventory.json` and `search-log
 ## Summary Counts
 
 - Sources: 39
-- Search records: 6
+- Search records: 7
 - Baseline-preserved sources: 21
 - New candidates: 18
 
@@ -85,11 +85,8 @@ SSSOM is included as the mapping-standard source for ontology alignment TSV/YAML
 | `phase2-simulation-standards` | `standards_body` | 4 | `structured_non_rdf` | `sha256:fb250dc79abd98cdce41a0c8903b299b74601adaa0a42ead47e7343cbb36a8fb` |
 | `phase2-systems-biology` | `standards_body` | 4 | `structured_non_rdf` | `sha256:3e041eb5df803ff1a26f3b03af0e5a9a239839a3ef22fdb0648237122be96746` |
 | `phase2-physical-modelling` | `standards_body` | 3 | `structured_non_rdf` | `sha256:c8934bb1c4b62c97e71cf8475b4ce2aa544ec85248802a3b82c5e44d1aa32cb9` |
+| `phase2-negative-evidence` | `web_search` | 0 | `excluded` | `sha256:4d90661bb788d0c92a6fd610f3e7b64778dbdca8e3cfd6897e55ede0a2354a64` |
 
 ## Reviewer Handoff
 
 Phase 2 records are ready for evidence-curation, reproducibility, standards-landscape, game-theory-gap, peer-review, methods-editorial, red-team, and devil's-advocate review before Phase 3 acquisition.
-
-## Negative Evidence
-
-- `phase2-negative-evidence`: searched targeted game-theory ontology registry and repository routes and found no additional relevant ontology to include. This route is preserved as negative evidence, not as a source. 

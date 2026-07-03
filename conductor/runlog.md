@@ -1,5 +1,16 @@
 # Conductor Run Log
 
+## 2026-07-03 - Article Hardening Protocol Implementation
+
+- Completed repo-side implementation for `uogto_article_hardening_protocol_20260624`.
+- Added deterministic source-acquisition manifest generation for checked-in RDF/OWL comparator artifacts and reference-only/licence-constrained sources.
+- Added Make/Pixi article-hardening targets for source acquisition, tabular exports, optional DuckDB, dashboard generation, and aggregate validation.
+- Mirrored generated article evidence tables to `docs/article-hardening/article-tables/` while retaining `article-facing-tables/`.
+- Hardened tabular and dashboard scripts so the default Pixi environment can validate outputs without optional pandas or DuckDB.
+- Conductor review found and fixed one generated Markdown EOF formatting issue.
+- Archived the track under `conductor/archive/uogto_article_hardening_protocol_20260624/` and removed it from the active tracks registry.
+- Verification passed: `pixi run article-hardening-all`; focused article-hardening pytest suite; `git diff --check`.
+
 ## 2026-07-02 arXiv Upload-Ready Hardening
 
 - Added `scripts/maintenance/build_arxiv_upload_ready.py` to generate a deterministic arXiv upload tarball, upload manifest, `00README.json` preview, and `SHA256SUMS`.

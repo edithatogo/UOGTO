@@ -1,0 +1,224 @@
+{
+  "generated_at_utc": "deterministic-local-preflight",
+  "row_count": 19,
+  "rows": [
+    {
+      "analysis_component": "SSSOM publication surface",
+      "article_use": "Inspectable mapping evidence and reusable supplement table",
+      "artifact": "docs/ontology-comparison/accepted-alignments.sssom.tsv",
+      "calibration_or_adjudication": "reviewed mappings only",
+      "method": "Accepted TTL alignments exported to SSSOM TSV plus YAML metadata",
+      "primary_metric": "mapping_count",
+      "primary_value": 10,
+      "sensitivity_or_ablation": "n/a",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: all_features",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "all_features",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_definition_similarity",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_definition_similarity",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_embedding_similarity",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_embedding_similarity",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_exact_label",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_exact_label",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_hierarchy_context",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_hierarchy_context",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_normalized_label",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_normalized_label",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: minus_property_signature",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "minus_property_signature",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_definition_similarity",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_definition_similarity",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_embedding_similarity",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_embedding_similarity",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_exact_label",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_exact_label",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_hierarchy_context",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 0.6666666666666666, \"precision\": 0.5, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_hierarchy_context",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_normalized_label",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 1.0, \"precision\": 1.0, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_normalized_label",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "mapping robustness ablation: only_property_signature",
+      "article_use": "Shows dependence of accepted/rejected mapping calls on lexical, semantic, hierarchy, property-signature, and embedding signals",
+      "artifact": "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "mean feature score",
+      "primary_metric": "performance",
+      "primary_value": "{\"f1\": 0.6666666666666666, \"precision\": 0.5, \"recall\": 1.0}",
+      "sensitivity_or_ablation": "only_property_signature",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "reviewer calibration",
+      "article_use": "Reviewer agreement and adjudication evidence for mapping claims",
+      "artifact": "docs/ontology-comparison/mapping-calibration/mapping-review-calibration.json",
+      "calibration_or_adjudication": "accepted=0; rejected=0; adjudicated=0",
+      "method": "Accepted/rejected/adjudicated mapping sample agreement",
+      "primary_metric": "agreement_rate/kappa/pair_count",
+      "primary_value": "{\"agreement_rate\": 0.0, \"kappa\": 0.0, \"pair_count\": 0}",
+      "sensitivity_or_ablation": "n/a",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "network sensitivity: all_sources__accepted_mappings",
+      "article_use": "Tests whether community and bridge claims survive metadata-only exclusion and accepted-vs-related mapping choices",
+      "artifact": "docs/ontology-comparison/network-sensitivity.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "Community/bridge analysis under source and mapping-inclusion scenarios",
+      "primary_metric": "nodes/edges/communities/bridges",
+      "primary_value": "{}",
+      "sensitivity_or_ablation": "all_sources__accepted_mappings",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "network sensitivity: all_sources__accepted_plus_close_related",
+      "article_use": "Tests whether community and bridge claims survive metadata-only exclusion and accepted-vs-related mapping choices",
+      "artifact": "docs/ontology-comparison/network-sensitivity.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "Community/bridge analysis under source and mapping-inclusion scenarios",
+      "primary_metric": "nodes/edges/communities/bridges",
+      "primary_value": "{}",
+      "sensitivity_or_ablation": "all_sources__accepted_plus_close_related",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "network sensitivity: parsed_sources_only__accepted_mappings",
+      "article_use": "Tests whether community and bridge claims survive metadata-only exclusion and accepted-vs-related mapping choices",
+      "artifact": "docs/ontology-comparison/network-sensitivity.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "Community/bridge analysis under source and mapping-inclusion scenarios",
+      "primary_metric": "nodes/edges/communities/bridges",
+      "primary_value": "{}",
+      "sensitivity_or_ablation": "parsed_sources_only__accepted_mappings",
+      "status": "complete"
+    },
+    {
+      "analysis_component": "network sensitivity: parsed_sources_only__accepted_plus_close_related",
+      "article_use": "Tests whether community and bridge claims survive metadata-only exclusion and accepted-vs-related mapping choices",
+      "artifact": "docs/ontology-comparison/network-sensitivity.json",
+      "calibration_or_adjudication": "n/a",
+      "method": "Community/bridge analysis under source and mapping-inclusion scenarios",
+      "primary_metric": "nodes/edges/communities/bridges",
+      "primary_value": "{}",
+      "sensitivity_or_ablation": "parsed_sources_only__accepted_plus_close_related",
+      "status": "complete"
+    }
+  ],
+  "schema": "uogto.article.mapping-robustness-table.v1",
+  "sources": [
+    "docs\\ontology-comparison\\mapping-robustness\\mapping-robustness-ablation.json",
+    "docs\\ontology-comparison\\mapping-calibration\\mapping-review-calibration.json",
+    "docs\\ontology-comparison\\network-sensitivity.json",
+    "docs\\ontology-comparison\\accepted-alignments.sssom.tsv",
+    "docs\\ontology-comparison\\accepted-alignments.sssom.yml",
+    "docs\\ontology-comparison\\mapping-review.csv"
+  ]
+}

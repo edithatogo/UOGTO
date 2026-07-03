@@ -1,17 +1,17 @@
 {
   "source_csv": "C:/Users/60217257/OneDrive - Flinders/repos/legal-nz/UOGTO/docs/article-hardening/uogto-inclusion-candidates.csv",
   "row_count": 5,
-    "columns": [
-        "candidate_id",
-        "candidate_label",
-        "source_title",
-        "source_family",
-        "disposition",
-        "evidence_level",
-        "reviewer_handoff",
-        "uogto_target",
-        "mapped_to",
-        "rationale"
+  "columns": [
+    "candidate_id",
+    "candidate_label",
+    "source_title",
+    "source_family",
+    "disposition",
+    "evidence_level",
+    "reviewer_handoff",
+    "uogto_target",
+    "mapped_to",
+    "rationale"
   ],
   "rows": [
     {

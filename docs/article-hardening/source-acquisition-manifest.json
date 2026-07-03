@@ -1,0 +1,592 @@
+{
+  "artifact_count": 4,
+  "artifact_directory": "docs/ontology-comparison/sources",
+  "artifacts": [
+    {
+      "canonical_url": "https://www.w3.org/TR/owl-time/",
+      "checksum": "sha256:251bd6970b0d7a5efa97ff681afe81a297df85deab3d860fa4f8eeba72d8f16c",
+      "content_type": "text/turtle",
+      "evidence_level": "parsed_rdf_owl",
+      "licence": {
+        "disposition": "redistributable_artifact",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "path": "docs/ontology-comparison/sources/owl_time.ttl",
+      "retrieved_at": "preserved_from_comparative_baseline",
+      "source_id": "owl_time",
+      "source_name": "OWL-Time",
+      "status": "checked_in_artifact"
+    },
+    {
+      "canonical_url": "https://www.w3.org/TR/prov-o/",
+      "checksum": "sha256:02a4d7409ee3e1f697a04e4980d8d208a847cc7fa5180ca0d187540abb66919f",
+      "content_type": "application/rdf+xml",
+      "evidence_level": "parsed_rdf_owl",
+      "licence": {
+        "disposition": "redistributable_artifact",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "path": "docs/ontology-comparison/sources/prov_o.owl",
+      "retrieved_at": "preserved_from_comparative_baseline",
+      "source_id": "prov_o",
+      "source_name": "PROV-O",
+      "status": "checked_in_artifact"
+    },
+    {
+      "canonical_url": "https://schema.org/",
+      "checksum": "sha256:320938f0945d717fc317f822c707f10944e7a7a0097018665a3b95dcf475b39d",
+      "content_type": "text/turtle",
+      "evidence_level": "parsed_rdf_owl",
+      "licence": {
+        "disposition": "redistributable_artifact",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "path": "docs/ontology-comparison/sources/schema_org.ttl",
+      "retrieved_at": "preserved_from_comparative_baseline",
+      "source_id": "schema_org",
+      "source_name": "schema.org",
+      "status": "checked_in_artifact"
+    },
+    {
+      "canonical_url": "https://www.w3.org/TR/vocab-ssn/",
+      "checksum": "sha256:184d86189191146e314cc52b1bceb96fca11e70aacbc160d71588102a5153eb9",
+      "content_type": "text/turtle",
+      "evidence_level": "parsed_rdf_owl",
+      "licence": {
+        "disposition": "redistributable_artifact",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "path": "docs/ontology-comparison/sources/ssn_sosa.ttl",
+      "retrieved_at": "preserved_from_comparative_baseline",
+      "source_id": "ssn_sosa",
+      "source_name": "SSN/SOSA",
+      "status": "checked_in_artifact"
+    }
+  ],
+  "generated_at_utc": "deterministic-local-preflight",
+  "policy": "Only redistributable or already checked-in comparator artifacts are represented as local files. Licence-constrained, metadata-only, literature-only, and structured non-RDF sources remain as source references with canonical URLs and licence dispositions.",
+  "reference_only_count": 35,
+  "reference_only_sources": [
+    {
+      "canonical_url": "https://github.com/BFO-ontology/BFO-2020",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "bfo",
+      "source_name": "Basic Formal Ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.omg.org/spec/BPMN/2.0.2/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "OMG terms",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Standards licensing may prevent local redistribution.",
+      "source_id": "bpmn_2",
+      "source_name": "Business Process Model and Notation 2.0",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.cellml.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Domain-specific standard; avoid treating it as game-theory evidence.",
+      "source_id": "cellml",
+      "source_name": "CellML",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://acims.asu.edu/devs/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "devs",
+      "source_name": "DEVS formalism and DEVS metamodel resources",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.loa.istc.cnr.it/dolce/overview.html",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "dolce",
+      "source_name": "DOLCE",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://github.com/emmo-repo/EMMO",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "emmo",
+      "source_name": "European Materials and Modelling Ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://fmi-standard.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Interface standard, not a standalone ontology source.",
+      "source_id": "fmi",
+      "source_name": "Functional Mock-up Interface",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.gameontology.com/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "game_ontology_project",
+      "source_name": "Game Ontology Project",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://doi.org/10.1007/978-3-319-71649-7_15",
+      "evidence_level": "literature_only",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "publisher_restricted",
+        "url": null
+      },
+      "parseability": "literature_or_documentation",
+      "reason": "Likely literature-only until a stable public specification artifact is acquired.",
+      "source_id": "gdl_ii_iii_gdlz",
+      "source_name": "GDL-II, GDL-III, and GDLZ variants",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://en.wikipedia.org/wiki/Game_Description_Language",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "gdlf_gamelan",
+      "source_name": "Game Description Language and GDL resources",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.gvgai.net/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Benchmark artifacts vary by version and repository; record exact release before acquisition.",
+      "source_id": "gvgai_vgdl",
+      "source_name": "General Video Game AI and VGDL resources",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.sisostds.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "high",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "hla_fom",
+      "source_name": "High Level Architecture Federation Object Model resources",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://ontology.ihmc.us/kaos.html",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "kaos",
+      "source_name": "KAoS ontology and policy services",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://github.com/SED-ML/KiSAO",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "kisao",
+      "source_name": "Kinetic Simulation Algorithm Ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://ludii.games/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Licence and corpus redistribution need review before source acquisition.",
+      "source_id": "ludii",
+      "source_name": "Ludii general game system",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://co.mbine.org/standards/miase",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "low",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "miase",
+      "source_name": "Minimum Information About a Simulation Experiment",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://modelica.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Language/library evidence should be charted separately from ontology evidence.",
+      "source_id": "modelica",
+      "source_name": "Modelica language and Modelica Standard Library",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://oaei.ontologymatching.org/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "varies_by_track",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Benchmark tracks are heterogeneous and not a single ontology source.",
+      "source_id": "oaei",
+      "source_name": "Ontology Alignment Evaluation Initiative",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.jasss.org/23/2/7.html",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "odd_protocol",
+      "source_name": "ODD protocol for agent-based models",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://ontouml.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "ontouml_ufo",
+      "source_name": "OntoUML / Unified Foundational Ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://github.com/virtual-materials-marketplace/osmo",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "osmo",
+      "source_name": "Ontology for Simulation, Modelling, and Optimization",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.w3.org/Submission/OWL-S/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "W3C document terms",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "reason": "Recorded as metadata-only until a specific OWL file, checksum, and licence are captured.",
+      "source_id": "owl_s",
+      "source_name": "OWL-S Semantic Markup for Web Services",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://vocab.linkeddata.es/p-plan/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "p_plan",
+      "source_name": "P-Plan ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://planning.wiki/ref/pddl",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Not a game ontology; relevance should be limited to action/execution semantics.",
+      "source_id": "pddl",
+      "source_name": "Planning Domain Definition Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.pnml.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Use metadata until standard/schema licence and exact version are captured.",
+      "source_id": "pnml",
+      "source_name": "Petri Net Markup Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://robot.obolibrary.org/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "unspecified",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Method/tool source rather than a comparator ontology; use for methods, not overlap counts.",
+      "source_id": "robot",
+      "source_name": "ROBOT ontology tool",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://sbgn.github.io/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Notation standard, not a direct ontology-alignment target at this phase.",
+      "source_id": "sbgn",
+      "source_name": "Systems Biology Graphical Notation",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://sbml.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Systems-biology standard; article claims should distinguish biological modelling context from general game-theory scope.",
+      "source_id": "sbml",
+      "source_name": "Systems Biology Markup Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.ebi.ac.uk/sbo/",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "needs_review",
+        "url": null
+      },
+      "parseability": "parsed_rdf_owl_candidate",
+      "reason": "Recorded as metadata-only until artifact URL and licence are pinned.",
+      "source_id": "sbo",
+      "source_name": "Systems Biology Ontology",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://sed-ml.org/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "sed_ml",
+      "source_name": "Simulation Experiment Description Markup Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://mapping-commons.github.io/sssom/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "unspecified",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Specification fields can evolve; TSV outputs should keep a documented SSSOM version and local validation.",
+      "source_id": "sssom",
+      "source_name": "Simple Standard for Sharing Ontological Mappings (SSSOM)",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "http://games.stanford.edu/gdl.html",
+      "evidence_level": "literature_only",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "unspecified",
+        "url": null
+      },
+      "parseability": "literature_or_documentation",
+      "reason": "Use metadata/literature unless a redistributable grammar or corpus is explicitly acquired later.",
+      "source_id": "stanford_gdl",
+      "source_name": "Stanford Game Description Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.omg.org/spec/SysML/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "OMG terms",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Likely too broad for term-level mapping without a narrow use case.",
+      "source_id": "sysml",
+      "source_name": "Systems Modeling Language",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://github.com/virtual-materials-marketplace",
+      "evidence_level": "metadata_only",
+      "licence": {
+        "disposition": "needs_licence_review",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "metadata_only",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "vimmp_ontologies",
+      "source_name": "Virtual Materials Marketplace Ontologies",
+      "status": "reference_only_no_redistribution"
+    },
+    {
+      "canonical_url": "https://www.oasis-open.org/standard/xmile-v1-0/",
+      "evidence_level": "structured_non_rdf",
+      "licence": {
+        "disposition": "metadata_only",
+        "name": "not_recorded",
+        "redistribution_risk": "medium",
+        "url": null
+      },
+      "parseability": "structured_non_rdf",
+      "reason": "Imported from completed ontology-comparison baseline; licence and acquisition status remain as recorded there.",
+      "source_id": "xmile",
+      "source_name": "XMILE System Dynamics Standard",
+      "status": "reference_only_no_redistribution"
+    }
+  ],
+  "schema": "uogto.article-hardening.source-acquisition-manifest.v1",
+  "source_inventory": "docs/article-hardening/source-extension-inventory.json"
+}

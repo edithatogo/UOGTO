@@ -41,6 +41,20 @@ def test_protocol_check_script_passes_for_repo_artifacts(capsys):
     assert "Article-hardening protocol valid" in captured.out
 
 
+def test_article_hardening_make_and_pixi_tasks_cover_late_phase_outputs():
+    makefile = (ROOT / "Makefile").read_text(encoding="utf-8")
+    pixi = (ROOT / "pixi.toml").read_text(encoding="utf-8")
+    for task in [
+        "article-hardening-source-acquisition",
+        "article-hardening-tabular",
+        "article-hardening-duckdb",
+        "article-hardening-dashboard",
+        "article-hardening-all",
+    ]:
+        assert task in makefile
+        assert task in pixi
+
+
 def test_protocol_check_fails_when_required_file_is_missing(monkeypatch):
     monkeypatch.setattr(checker, "DOCS", ROOT / "__missing_article_hardening__")
     with pytest.raises(SystemExit, match="Missing required article-hardening artifact"):

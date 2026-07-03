@@ -7,12 +7,16 @@ from collections.abc import Iterable
 from datetime import datetime, timezone
 from pathlib import Path
 
-import duckdb
+try:
+    import duckdb
+except ModuleNotFoundError:  # pragma: no cover - depends on optional local environment
+    duckdb = None
 
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs" / "article-hardening"
 DB_PATH = DOCS / "article-hardening.duckdb"
+STATUS_PATH = DOCS / "article-hardening-duckdb-status.json"
 
 SEARCH_LOG = DOCS / "search-log.jsonl"
 SOURCE_EXTENSION_INVENTORY = DOCS / "source-extension-inventory.json"
@@ -197,6 +201,24 @@ def ingest_figures() -> list[dict]:
 
 def main() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
+    if duckdb is None:
+        STATUS_PATH.write_text(
+            json.dumps(
+                {
+                    "schema": "uogto.article-hardening.duckdb-status.v1",
+                    "status": "optional_dependency_unavailable",
+                    "database": str(DB_PATH.relative_to(ROOT)),
+                    "dependency": "duckdb",
+                    "fallback": "article evidence dashboard reads JSON/CSV artifacts directly when the DuckDB store is absent",
+                },
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print("DuckDB optional dependency is unavailable; recorded portable fallback status.")
+        return
     if DB_PATH.exists():
         DB_PATH.unlink()
 
@@ -239,6 +261,19 @@ def main() -> None:
         """
     )
     con.close()
+    STATUS_PATH.write_text(
+        json.dumps(
+            {
+                "schema": "uogto.article-hardening.duckdb-status.v1",
+                "status": "built",
+                "database": str(DB_PATH.relative_to(ROOT)),
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":

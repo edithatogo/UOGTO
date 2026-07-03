@@ -86,11 +86,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Link**: [./archive/uogto_comparative_simulation_ontology_mapping_20260624/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/uogto_comparative_simulation_ontology_mapping_20260624/)
 
 
-## [ ] Track: uogto_article_hardening_protocol_20260624
-- **Description**: Create a PRISMA-ScR/PRISMA-S and RO-Crate based article-hardening protocol for broader ontology/formalism discovery, quality evaluation, competency benchmarking, mapping robustness, and article-ready evidence outputs.
-- **Status**: Planned
-- **Link**: [./tracks/uogto_article_hardening_protocol_20260624/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_article_hardening_protocol_20260624/)
-
 ## [x] Track: conductor_state_reconciliation_20260622
 - **Description**: Record and normalize Conductor state for archive moves, status updates, CI/Pixi hardening, registry link checks, and SourceRight follow-up planning.
 - **Status**: Completed
