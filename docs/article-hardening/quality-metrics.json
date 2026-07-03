@@ -597,7 +597,7 @@
         "modules": [
           "core/uogto-core"
         ],
-        "ontology_plus_examples_result_count": 14,
+        "ontology_plus_examples_result_count": 15,
         "ontology_result_count": 0,
         "query": "competency-questions/cq01-list-players.rq",
         "status": "executable",
@@ -811,16 +811,33 @@
         "https://w3id.org/uogto/core#identifier"
       ],
       "examples/first-price-auction.jsonld": [
+        "https://w3id.org/uogto/core#Action",
+        "https://w3id.org/uogto/core#EventTrace",
         "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Outcome",
+        "https://w3id.org/uogto/core#Payoff",
+        "https://w3id.org/uogto/core#PlaySession",
         "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#State",
+        "https://w3id.org/uogto/core#assignsPayoff",
+        "https://w3id.org/uogto/core#description",
+        "https://w3id.org/uogto/core#emitsEventTrace",
+        "https://w3id.org/uogto/core#hasAvailableAction",
         "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#hasState",
         "https://w3id.org/uogto/core#identifier",
+        "https://w3id.org/uogto/core#payoffValue",
+        "https://w3id.org/uogto/core#producesOutcome",
         "https://w3id.org/uogto/extensions#AllocationRule",
-        "https://w3id.org/uogto/extensions#Auction",
+        "https://w3id.org/uogto/extensions#FirstPriceAuction",
         "https://w3id.org/uogto/extensions#Mechanism",
         "https://w3id.org/uogto/extensions#PaymentRule",
         "https://w3id.org/uogto/extensions#hasAllocationRule",
-        "https://w3id.org/uogto/extensions#hasPaymentRule"
+        "https://w3id.org/uogto/extensions#hasHighestBidder",
+        "https://w3id.org/uogto/extensions#hasPaymentRule",
+        "https://w3id.org/uogto/extensions#hasReservePrice",
+        "https://w3id.org/uogto/extensions#hasSecondHighestBid",
+        "https://w3id.org/uogto/extensions#hasWinningBid"
       ],
       "examples/llm-tool-use-game.jsonld": [
         "https://w3id.org/uogto/core#GameSpecification",
@@ -1586,8 +1603,12 @@
       ],
       "examples/first-price-auction.jsonld": [
         "https://w3id.org/uogto/core#GameSpecification",
+        "https://w3id.org/uogto/core#Outcome",
+        "https://w3id.org/uogto/core#PlaySession",
         "https://w3id.org/uogto/core#Player",
+        "https://w3id.org/uogto/core#assignsPayoff",
         "https://w3id.org/uogto/core#hasPlayer",
+        "https://w3id.org/uogto/core#hasState",
         "https://w3id.org/uogto/core#identifier",
         "https://w3id.org/uogto/extensions#Mechanism",
         "https://w3id.org/uogto/extensions#hasAllocationRule",

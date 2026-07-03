@@ -6,7 +6,10 @@ from collections import Counter, defaultdict
 from html import escape
 from pathlib import Path
 
-import duckdb
+try:
+    import duckdb
+except ModuleNotFoundError:  # pragma: no cover - optional local dashboard acceleration
+    duckdb = None
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -134,7 +137,7 @@ SOURCE_LEVEL_LABELS = {
 
 
 def load_sources() -> list[dict]:
-    if DB_PATH.exists():
+    if duckdb is not None and DB_PATH.exists():
         con = duckdb.connect(str(DB_PATH), read_only=True)
         try:
             payloads = [row[0] for row in con.execute("SELECT payload_json FROM sources ORDER BY source_path, payload_json").fetchall()]
@@ -363,7 +366,9 @@ def render_markdown(manifest: dict) -> str:
             "",
         ]
     )
-    return "\n".join(lines) + "\n"
+    while lines and lines[-1] == "":
+        lines.pop()
+    return "\n".join(lines)
 
 
 def markdown_table(rows: list[list[str]]) -> str:

@@ -10,3 +10,4 @@ These tracks are retained for audit history but are not active implementation wo
 | `executable_simulation_visualizer_20260621` | archived | Retired planning track retained for audit history. |
 | `uogto_extended_discoverability_registries_20260622` | completed | Second-wave discoverability submissions are repo-complete; FAIRsharing, Ontobee, and Bioregistry external review remains tracked in registry follow-up documentation. |
 | `uogto_comparative_simulation_ontology_mapping_20260624` | completed | Comparative ontology sourcing, mapping, analysis, visualisation, report, and artifact-validation track completed and retained for audit history. |
+| `uogto_article_hardening_protocol_20260624` | completed | Article-hardening protocol, source acquisition, RO-Crate, quality, competency, mapping, inclusion, table, figure, dashboard, research/review, and validation package completed and archived. |

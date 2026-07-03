@@ -34,6 +34,10 @@ EXPORT_TABULAR_ARTIFACTS = ROOT / "scripts" / "maintenance" / "export_tabular_ar
 DUAL_SCREENING = DOCS / "dual-screening.md"
 DUAL_SCREENING_SAMPLE = DOCS / "dual-screening-sample.csv"
 ROBOT_DIR = DOCS / "robot"
+SOURCE_ACQUISITION_MANIFEST = DOCS / "source-acquisition-manifest.json"
+SOURCE_ACQUISITION_SUMMARY = DOCS / "source-acquisition-manifest.md"
+ARTICLE_TABLES = DOCS / "article-tables"
+ARTICLE_FACING_TABLES = DOCS / "article-facing-tables"
 EVIDENCE_FILES = [
     DOCS / "search-log.jsonl",
     DOCS / "source-extension-inventory.json",
@@ -48,6 +52,8 @@ EVIDENCE_FILES = [
     DOCS / "competency-benchmark.md",
     DOCS / "use-case-coverage-matrix.csv",
     DOCS / "ro-crate-metadata.json",
+    SOURCE_ACQUISITION_MANIFEST,
+    SOURCE_ACQUISITION_SUMMARY,
     DOCS / "protocol-checklist.md",
     DOCS / "structured-summary.md",
     DOCS / "prisma-scr-artifact-map.md",
@@ -63,6 +69,14 @@ EVIDENCE_FILES = [
     DOCS / "use-case-coverage-matrix.md",
     DOCS / "use-case-coverage-matrix.json",
     DOCS / "use-case-coverage-matrix.parquet",
+    ARTICLE_TABLES / "README.md",
+    ARTICLE_TABLES / "module-audit-table.csv",
+    ARTICLE_TABLES / "missing-game-theory-element-dispositions.csv",
+    ARTICLE_TABLES / "mapping-robustness-table.csv",
+    ARTICLE_FACING_TABLES / "README.md",
+    ARTICLE_FACING_TABLES / "module-audit-table.csv",
+    ARTICLE_FACING_TABLES / "missing-game-theory-element-dispositions.csv",
+    ARTICLE_FACING_TABLES / "mapping-robustness-table.csv",
 ]
 REVIEW_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-review-agents.json"
 RESEARCH_AGENTS = ROOT / "conductor" / "agents" / "article-hardening-research-agents.json"
@@ -373,6 +387,21 @@ def validate_quality_benchmark() -> None:
         raise SystemExit("Quality metrics have unexpectedly low ontology term counts")
 
 
+def validate_source_acquisition_manifest() -> None:
+    manifest = json.loads(_read(SOURCE_ACQUISITION_MANIFEST))
+    if manifest.get("schema") != "uogto.article-hardening.source-acquisition-manifest.v1":
+        raise SystemExit("Source acquisition manifest has the wrong schema")
+    if manifest.get("artifact_count", 0) < 4:
+        raise SystemExit("Source acquisition manifest should include checked-in comparator artifacts")
+    if manifest.get("artifact_count", 0) + manifest.get("reference_only_count", 0) < 39:
+        raise SystemExit("Source acquisition manifest does not cover the full source inventory")
+    for artifact in manifest.get("artifacts", []):
+        if not artifact.get("checksum", "").startswith("sha256:"):
+            raise SystemExit(f"Source artifact missing checksum: {artifact.get('source_id')}")
+        if not artifact.get("content_type"):
+            raise SystemExit(f"Source artifact missing content type: {artifact.get('source_id')}")
+
+
 def main() -> None:
     for path in REQUIRED_FILES:
         if path.suffix == ".parquet":
@@ -387,6 +416,7 @@ def main() -> None:
     validate_research_agents()
     validate_source_extension_register()
     validate_quality_benchmark()
+    validate_source_acquisition_manifest()
     print(
         "Article-hardening protocol valid: "
         "PRISMA-ScR scaffold, PRISMA-S fields, RO-Crate requirements, "

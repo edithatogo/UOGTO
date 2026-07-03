@@ -1,5 +1,12 @@
 # Conductor Run Log
 
+## [2026-07-03] - Article Hardening Protocol Implementation
+
+- Completed repo-side implementation for `uogto_article_hardening_protocol_20260624`.
+- Added deterministic source acquisition manifest, article table compatibility outputs, aggregate Make/Pixi gates, optional pandas/DuckDB fallbacks, and validation tests.
+- Conductor review fixed generated Markdown EOF formatting, then archived the track under `conductor/archive/uogto_article_hardening_protocol_20260624/`.
+- Verification: `pixi run article-hardening-all`, focused article-hardening pytest suite, and `git diff --check` passed.
+
 ## [2026-06-24] - Article Hardening Quality Benchmark
 - Added ontology-quality benchmarking for `uogto_article_hardening_protocol_20260624`: generated `docs/article-hardening/quality-metrics.json` and `reasoner-report.md` with annotation completeness, orphan classes, relation richness, hierarchy depth, import depth, SHACL coverage, examples per module, competency-query coverage, local OOPS-style pitfall indicators, and OWL profile/reasoner status.
 - Added `scripts/maintenance/build_article_hardening_quality.py`, Make/Pixi wiring, protocol validation, and pytest coverage so quality metrics are deterministic and article-ready.

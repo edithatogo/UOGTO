@@ -1,0 +1,7 @@
+{
+  "database": "docs\\article-hardening\\article-hardening.duckdb",
+  "dependency": "duckdb",
+  "fallback": "article evidence dashboard reads JSON/CSV artifacts directly when the DuckDB store is absent",
+  "schema": "uogto.article-hardening.duckdb-status.v1",
+  "status": "optional_dependency_unavailable"
+}

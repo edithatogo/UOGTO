@@ -2,7 +2,7 @@ PYTHON ?= $(firstword $(wildcard .pixi/envs/default/python.exe .pixi/envs/defaul
 ARXIV_PDF_FLAGS ?= --require-pdf
 ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
 
-.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-quality article-hardening-robot article-hardening-figures article-facing-tables ontology-snapshot-supplement figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight arxiv-preflight-strict arxiv-upload-ready arxiv-upload-ready-strict arxiv-strict-review required-gate release-assets release-preflight conductor all
+.PHONY: install build validate test coverage publishing-metadata registry-links registry-packet extended-registry-packet ontology-comparison-inventory ontology-comparison-harvest ontology-comparison-terms ontology-comparison-mappings ontology-comparison-alignments ontology-comparison-sssom ontology-comparison-overlap ontology-comparison-networks ontology-comparison-visuals ontology-comparison-check ontology-comparison-all article-hardening-protocol article-hardening-inventory article-hardening-source-acquisition article-hardening-quality article-hardening-robot article-hardening-figures article-hardening-tabular article-hardening-duckdb article-hardening-dashboard article-hardening-all article-facing-tables candidate-decision-ledger ontology-snapshot-supplement figure-caption-freeze zenodo-packet zenodo-depositions w3id-packet publication-status w3id-status doi-status record-doi manuscript-sources manuscript-check manuscript-build manuscript-pdf manuscript-sourcecheck arxiv-source-package arxiv-source-clean arxiv-preflight arxiv-preflight-strict arxiv-upload-ready arxiv-upload-ready-strict arxiv-strict-review required-gate release-assets release-preflight conductor all
 
 all: build validate test coverage
 
@@ -70,6 +70,9 @@ article-hardening-protocol:
 article-hardening-inventory:
 	$(PYTHON) scripts/maintenance/build_article_hardening_inventory.py
 
+article-hardening-source-acquisition:
+	$(PYTHON) scripts/maintenance/build_article_source_acquisition_manifest.py
+
 article-hardening-quality:
 	$(PYTHON) scripts/maintenance/build_article_hardening_quality.py
 
@@ -78,6 +81,19 @@ article-hardening-robot:
 
 article-hardening-figures:
 	$(PYTHON) scripts/maintenance/render_article_hardening_figures.py
+
+article-hardening-tabular:
+	$(PYTHON) scripts/maintenance/export_tabular_artifacts.py
+	$(PYTHON) scripts/maintenance/build_article_evidence_tables.py
+	$(PYTHON) scripts/maintenance/build_candidate_decision_ledger.py
+
+article-hardening-duckdb:
+	$(PYTHON) scripts/maintenance/build_article_hardening_duckdb.py
+
+article-hardening-dashboard: article-hardening-duckdb article-hardening-tabular article-hardening-figures
+	$(PYTHON) scripts/maintenance/build_article_evidence_dashboard.py
+
+article-hardening-all: article-hardening-inventory article-hardening-source-acquisition article-hardening-quality article-hardening-robot article-hardening-tabular article-hardening-figures article-hardening-dashboard article-hardening-protocol
 
 zenodo-packet:
 	$(PYTHON) scripts/maintenance/build_zenodo_handoff.py

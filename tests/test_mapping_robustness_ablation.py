@@ -2,12 +2,11 @@ from __future__ import annotations
 
 import csv
 import json
-from pathlib import Path
 
 from scripts.maintenance.build_mapping_robustness_ablation import generate_report
 
 
-def test_mapping_robustness_ablation_generates_feature_family_outputs(tmp_path: Path) -> None:
+def test_mapping_robustness_ablation_generates_feature_family_outputs(tmp_path) -> None:
     review_csv = tmp_path / "mapping-review.csv"
     with review_csv.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(

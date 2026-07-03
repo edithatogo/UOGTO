@@ -8,7 +8,7 @@ This file maps each PRISMA-ScR reporting item to the repository surfaces that ca
 | 2 | Structured summary | `docs/article-hardening/structured-summary.md` | Provides the package-level abstracted summary. |
 | 3 | Rationale | `docs/article-hardening/protocol.md` | States why article hardening is needed after the comparative mapping baseline. |
 | 4 | Objectives | `docs/article-hardening/protocol.md` | Enumerates discovery, mapping, quality, competency, and article-evidence goals. |
-| 5 | Protocol and registration | `docs/article-hardening/protocol.md`; `conductor/tracks/uogto_article_hardening_protocol_20260624/protocol-standard.md`; `docs/article-hardening/ro-crate-metadata.json` | Shows protocol standard, governance context, and packaged registration surface. |
+| 5 | Protocol and registration | `docs/article-hardening/protocol.md`; `conductor/archive/uogto_article_hardening_protocol_20260624/protocol-standard.md`; `docs/article-hardening/ro-crate-metadata.json` | Shows protocol standard, governance context, and packaged registration surface. |
 | 6 | Eligibility criteria | `docs/article-hardening/protocol.md`; `docs/article-hardening/source-extension-inventory.json`; `docs/article-hardening/uogto-inclusion-decisions.md` | Carries the inclusion and exclusion rules used in screening. |
 | 7 | Information sources | `docs/article-hardening/protocol.md`; `docs/article-hardening/search-strategy.md`; `docs/article-hardening/search-log.jsonl`; `docs/article-hardening/source-extension-inventory.md` | Lists the source families and discovery channels. |
 | 8 | Search | `docs/article-hardening/search-strategy.md`; `docs/article-hardening/search-log.jsonl` | Records search routes, query families, and per-route evidence outcomes. |
@@ -37,4 +37,3 @@ This file maps each PRISMA-ScR reporting item to the repository surfaces that ca
 | 25 | Dual screening and adjudication | `docs/article-hardening/dual-screening.md`; `docs/article-hardening/dual-screening-sample.csv` | Simulated researcher-to-peer-to-red-team review chain for screening and disposition. |
 | 26 | RO-Crate package output | `docs/article-hardening/ro-crate-package.md`; `docs/article-hardening/ro-crate-metadata.json` | Early RO-Crate package narrative and metadata surface. |
 | 26 | Tabular analysis storage | `docs/article-hardening/tabular-artifact-storage.md`; `scripts/maintenance/export_tabular_artifacts.py` | Human-readable CSV/Markdown plus machine-stable JSON/Parquet table exports. |
-
