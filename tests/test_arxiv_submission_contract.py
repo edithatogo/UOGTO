@@ -54,7 +54,7 @@ def test_arxiv_submission_contract_workflow_enforces_strict_gates() -> None:
         "docs/paper/reviews/arxiv-red-team-review-2026-07-02.md",
         "docs/paper/reviews/arxiv-devils-advocate-review-2026-07-02.md",
         "make arxiv-upload-ready",
-        "207 passed, 21 warnings",
+        "219 passed, 1 skipped, 21 warnings",
         "latest successful current-branch",
         "pass-attested",
         "pass-ci-strict",

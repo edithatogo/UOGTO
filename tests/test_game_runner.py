@@ -113,5 +113,77 @@ class TestRDFGameRunner(unittest.TestCase):
         self.assertIn("payoffs", res)
         self.assertEqual(res["payoffs"].get("http://example.org/alice"), 3.0)
 
+    def test_current_payoff_profile_pattern_is_scoped_to_requested_game(self):
+        ttl_path = self.temp_dir / "current_pattern.ttl"
+        ttl_path.write_text(
+            """
+            @prefix uogto: <https://w3id.org/uogto/core#> .
+            @prefix ex: <http://example.org/current/> .
+            @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+            ex:game-a a uogto:GameSpecification ;
+                rdfs:label "Game A" ;
+                uogto:hasPlayer ex:alice, ex:bob ;
+                uogto:hasActionSpace ex:alice-space, ex:bob-space ;
+                uogto:hasStrategyProfile ex:profile-a .
+
+            ex:game-b a uogto:GameSpecification ;
+                rdfs:label "Game B" ;
+                uogto:hasPlayer ex:alice, ex:bob ;
+                uogto:hasActionSpace ex:alice-space, ex:bob-space ;
+                uogto:hasStrategyProfile ex:profile-b .
+
+            ex:alice a uogto:Player ; rdfs:label "Alice" .
+            ex:bob a uogto:Player ; rdfs:label "Bob" .
+
+            ex:alice-space a uogto:ActionSpace ;
+                uogto:belongsToPlayer ex:alice ;
+                uogto:hasAction ex:alice-cooperate, ex:alice-defect .
+            ex:bob-space a uogto:ActionSpace ;
+                uogto:belongsToPlayer ex:bob ;
+                uogto:hasAction ex:bob-cooperate, ex:bob-defect .
+
+            ex:alice-cooperate a uogto:Action ; rdfs:label "Cooperate" .
+            ex:bob-cooperate a uogto:Action ; rdfs:label "Cooperate" .
+            ex:alice-defect a uogto:Action ; rdfs:label "Defect" .
+            ex:bob-defect a uogto:Action ; rdfs:label "Defect" .
+
+            ex:profile-a a uogto:StrategyProfile ;
+                uogto:hasAction ex:alice-cooperate, ex:bob-defect ;
+                uogto:hasPayoff ex:payoff-profile-a .
+            ex:payoff-profile-a a uogto:PayoffProfile ;
+                uogto:hasPayoffForPlayer ex:alice-payoff-a, ex:bob-payoff-a .
+            ex:alice-payoff-a a uogto:PlayerPayoffLink ;
+                uogto:payoffPlayer ex:alice ;
+                uogto:payoffValue 7.0 .
+            ex:bob-payoff-a a uogto:PlayerPayoffLink ;
+                uogto:payoffPlayer ex:bob ;
+                uogto:payoffValue -2.0 .
+
+            ex:profile-b a uogto:StrategyProfile ;
+                uogto:hasAction ex:alice-cooperate, ex:bob-defect ;
+                uogto:hasPayoff ex:payoff-profile-b .
+            ex:payoff-profile-b a uogto:PayoffProfile ;
+                uogto:hasPayoffForPlayer ex:alice-payoff-b, ex:bob-payoff-b .
+            ex:alice-payoff-b a uogto:PlayerPayoffLink ;
+                uogto:payoffPlayer ex:alice ;
+                uogto:payoffValue 100.0 .
+            ex:bob-payoff-b a uogto:PlayerPayoffLink ;
+                uogto:payoffPlayer ex:bob ;
+                uogto:payoffValue 100.0 .
+            """,
+            encoding="utf-8",
+        )
+        runner = RDFGameRunner(ttl_path)
+        payoffs = runner.query_payoff(
+            "http://example.org/current/game-a",
+            {
+                "http://example.org/current/alice": "http://example.org/current/alice-cooperate",
+                "http://example.org/current/bob": "http://example.org/current/bob-defect",
+            },
+        )
+        self.assertEqual(payoffs["http://example.org/current/alice"], 7.0)
+        self.assertEqual(payoffs["http://example.org/current/bob"], -2.0)
+
 if __name__ == "__main__":
     unittest.main()
