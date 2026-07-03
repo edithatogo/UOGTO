@@ -37,7 +37,7 @@ def _tolerant_read_csv(path: Path) -> pd.DataFrame:
         elif len(row) > width:
             row = row[: width - 1] + [",".join(row[width - 1 :])]
         normalized.append(row)
-    if pd is not None:
+    if HAS_PANDAS:
         return pd.DataFrame(normalized, columns=header)
     return [dict(zip(header, row, strict=False)) for row in normalized]
 
