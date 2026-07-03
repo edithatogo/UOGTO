@@ -134,7 +134,7 @@ def write_manifest(payload: dict) -> None:
         )
     lines.extend(["", "## Reference-Only Sources", "", "| Source | Evidence level | Reason |", "| --- | --- | --- |"])
     for source in payload["reference_only_sources"]:
-        reason = str(source["reason"]).replace("|", "-")
+        reason = str(source["reason"]).replace("|", "-").replace("\n", "<br>")
         lines.append(f"| `{source['source_id']}` | `{source['evidence_level']}` | {reason} |")
     lines.append("")
     MANIFEST_MD.write_text("\n".join(lines), encoding="utf-8")
