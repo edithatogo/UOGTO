@@ -1,7 +1,3 @@
-import os
-import json
-import urllib.request
-import urllib.error
 from uogto.runner.engine import RDFGameRunner
 
 class LLMPlayer:
@@ -12,10 +8,6 @@ class LLMPlayer:
     def make_choice(self, game_description, available_actions):
         # We query a generic Ollama/remote endpoint or fallback to a heuristic if not authenticated.
         # Standard fallback if no API key or endpoint is specified.
-        prompt = f"You are player {self.name} in a game of: {game_description}. Your choices are: {available_actions}. What is your choice? Output only the action name."
-        
-        # Let's perform a mock fallback selection
-        # Choose first action as default heuristic
         if available_actions:
             return available_actions[0]
         return None
@@ -45,3 +37,15 @@ class LLMPlayerBench:
             "choices": choices,
             "payoffs": payoffs
         }
+
+
+def main():
+    import argparse
+    import json
+
+    parser = argparse.ArgumentParser(description="Run a deterministic UOGTO LLM-player benchmark.")
+    parser.add_argument("ttl_path", help="Turtle file containing a UOGTO game graph.")
+    parser.add_argument("spec_uri", help="Game specification URI to run.")
+    args = parser.parse_args()
+    result = LLMPlayerBench(args.ttl_path).run_session(args.spec_uri)
+    print(json.dumps(result, indent=2, sort_keys=True))

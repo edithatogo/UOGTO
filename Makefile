@@ -7,7 +7,7 @@ ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
 all: build validate test coverage
 
 install:
-	pip install -e .
+	$(PYTHON) -m pip install -e .
 
 build:
 	$(PYTHON) scripts/build.py
@@ -15,7 +15,7 @@ build:
 validate:
 	$(PYTHON) scripts/validate.py
 
-test:
+test: build
 	$(PYTHON) -m pytest $(PYTEST_ARGS)
 
 coverage:

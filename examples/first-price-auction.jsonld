@@ -32,6 +32,12 @@
       "hasPaymentRule": {
         "@id": "http://example.org/rules/winner-pays-own-bid"
       },
+      "hasIncentiveConstraint": {
+        "@id": "http://example.org/constraints/bid-truthfulness-risk"
+      },
+      "emitsEventTrace": {
+        "@id": "http://example.org/traces/auction-trace-1"
+      },
       "hasReservePrice": 50.0
     },
     {
@@ -69,6 +75,12 @@
       "@type": "PaymentRule",
       "identifier": "winner-pays-own-bid",
       "description": "Charge the winning bidder their submitted bid."
+    },
+    {
+      "@id": "http://example.org/constraints/bid-truthfulness-risk",
+      "@type": "IncentiveCompatibilityConstraint",
+      "identifier": "bid-truthfulness-risk",
+      "description": "Illustrative incentive constraint for checking whether truthful bidding is strategically supported."
     },
     {
       "@id": "http://example.org/auction-session-1",

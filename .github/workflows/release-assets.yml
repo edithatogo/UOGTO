@@ -28,10 +28,11 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install .
+          python -m pip install .
 
       - name: Run release gates
         run: |
+          make build
           make validate
           make test
           python scripts/maintenance/audit_semantics.py

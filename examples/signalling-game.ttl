@@ -2,7 +2,7 @@
 @prefix uogtox: <https://w3id.org/uogto/extensions#> .
 @prefix ex:     <http://example.org/> .
 
-ex:signalling-game a uogtox:EpistemicGame ;
+ex:signalling-game a uogto:GameSpecification, uogtox:EpistemicGame ;
     uogto:identifier "signalling" ;
     uogto:hasPlayer ex:sender, ex:receiver ;
     uogto:hasInformationSet ex:sender-info-set .

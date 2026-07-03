@@ -7,9 +7,7 @@ from pathlib import Path
 from scripts.maintenance.build_mapping_robustness_ablation import generate_report
 
 
-def test_mapping_robustness_ablation_generates_feature_family_outputs() -> None:
-    tmp_path = Path(__file__).resolve().parents[1] / ".tmp_mapping_robustness_test"
-    tmp_path.mkdir(parents=True, exist_ok=True)
+def test_mapping_robustness_ablation_generates_feature_family_outputs(tmp_path: Path) -> None:
     review_csv = tmp_path / "mapping-review.csv"
     with review_csv.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
