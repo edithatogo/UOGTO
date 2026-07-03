@@ -1,0 +1,55 @@
+# Module Audit Table
+
+Article-facing module quality table derived from the ontology quality metrics artifact.
+
+| module | classes | properties | label_completeness | definition_completeness | missing_labels | missing_definitions | shacl_shape_links | examples | competency_queries | import_depth | hierarchy_max_depth_global | rdf_parse_status | pyshacl_examples_status | owl_profile_status | reasoner_status | evidence_level | source_artifact |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| alignments/mcp-a2a | 0 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| alignments/open-games | 0 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| alignments/prov-o | 0 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| alignments/schema-org | 0 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| alignments/wot-thing-description | 0 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/actions | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/agents | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/dynamics | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/equilibria | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/games | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/information | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/outcomes | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/payoffs | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/rules | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/strategies | 2 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/uogto-core | 37 | 42 | 1.0 | 1.0 | 0 | 0 | 17 | 2 | 5 | 0 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| core/uogto-governance | 1 | 7 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 0 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/algorithmic-game-theory | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/algorithmic-solvers-patch | 1 | 0 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 0 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/auctions | 6 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/bargaining | 5 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/behavioural-games | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/causal-games | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/compositional-open-games | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/computational-social-choice | 9 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/congestion-routing-games | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/contract-theory | 10 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/cooperative | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/deontic-logic | 9 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/differential-hybrid-games | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/digital-twin-games | 9 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/epistemic-games | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/evolutionary-games | 6 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/game-description-languages | 10 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/information-design | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/institutional-economics | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/kg-execution-bindings | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/learning-in-games | 5 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/llm-agent-games | 10 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 1 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/marl | 11 | 5 | 1.0 | 1.0 | 0 | 0 | 2 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/matching-allocation | 8 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/mean-field-games | 6 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/mechanism-design | 6 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 1 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/network-games | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/petri-net-devs-hla | 10 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/privacy-disclosure | 6 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 1 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/security-games | 9 | 5 | 1.0 | 1.0 | 0 | 0 | 1 | 2 | 1 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/trust-reputation-provenance | 7 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |
+| extensions/verification-games | 9 | 5 | 1.0 | 1.0 | 0 | 0 | 0 | 2 | 0 | 1 | 3 | passed | passed | owl2_rl_candidate_syntactic_subset | passed | repo-derived | docs/article-hardening/quality-metrics.json |

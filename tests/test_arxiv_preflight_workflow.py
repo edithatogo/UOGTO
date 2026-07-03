@@ -29,6 +29,20 @@ def test_arxiv_preflight_workflow_runs_strict_gate() -> None:
         assert expected in workflow
 
 
+def test_required_gate_pins_sourceright_and_builds_before_tests() -> None:
+    workflow = Path(".github/workflows/required-gate.yml").read_text(encoding="utf-8")
+    assert "cargo install --git https://github.com/edithatogo/sourceright.git --rev f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17 sourceright --locked" in workflow
+    assert "make build\n          make validate\n          make test" in workflow
+
+
+def test_widoco_pages_verifies_pinned_jar_checksum() -> None:
+    workflow = Path(".github/workflows/widoco-pages.yml").read_text(encoding="utf-8")
+    assert "WIDOCO_VERSION: v1.4.25" in workflow
+    assert "WIDOCO_JAR_SHA256: be57a270fffb91e55810fa308717e704a44e2e7c027a3d68125a49da6c8b4e2b" in workflow
+    assert "actual_sha256 = hashlib.sha256" in workflow
+    assert "WIDOCO checksum mismatch" in workflow
+
+
 def test_makefile_and_pixi_arxiv_tasks_include_upload_ready_gate() -> None:
     makefile = Path("Makefile").read_text(encoding="utf-8")
     pixi = Path("pixi.toml").read_text(encoding="utf-8")

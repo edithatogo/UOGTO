@@ -19,8 +19,7 @@ def test_competency_query_expectation_manifest_is_satisfied() -> None:
 
     for entry in manifest["queries"]:
         graph = Graph()
-        for triple in ontology:
-            graph.add(triple)
+        graph += ontology
         for example in entry.get("example_graphs", []):
             path = ROOT / example
             graph.parse(path, format="json-ld" if path.suffix == ".jsonld" else "turtle")

@@ -92,10 +92,12 @@ def validate_competency_query_expectations(ontology_graph):
             print(f"FAIL: Expected competency query is missing: {query_path}")
             sys.exit(1)
         query_graph = Graph()
-        for triple in ontology_graph:
-            query_graph.add(triple)
+        query_graph += ontology_graph
         for example in entry.get("example_graphs", []):
             example_path = ROOT / example
+            if not example_path.exists():
+                print(f"FAIL: Example graph is missing: {example_path}")
+                sys.exit(1)
             fmt = "json-ld" if example_path.suffix == ".jsonld" else "turtle"
             query_graph.parse(example_path, format=fmt)
         rows = list(query_graph.query(query_path.read_text(encoding="utf-8")))
@@ -122,6 +124,10 @@ def validate_competency_query_expectations(ontology_graph):
             f"OK: Competency query {entry['query']} satisfied expected "
             f"results ({len(rows)} rows)."
         )
+
+
+def validate_competency_expectations(ontology_graph):
+    validate_competency_query_expectations(ontology_graph)
 
 
 if __name__ == "__main__":

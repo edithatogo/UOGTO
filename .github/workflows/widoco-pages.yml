@@ -62,9 +62,10 @@ jobs:
           expected = os.environ["WIDOCO_JAR_SHA256"]
           print(jar_url)
           urllib.request.urlretrieve(jar_url, "widoco.jar")
-          actual = hashlib.sha256(open("widoco.jar", "rb").read()).hexdigest()
-          if actual != expected:
-              raise SystemExit(f"WIDOCO checksum mismatch: expected {expected}, got {actual}")
+          with open("widoco.jar", "rb") as handle:
+              actual_sha256 = hashlib.sha256(handle.read()).hexdigest()
+          if actual_sha256 != expected:
+              raise SystemExit(f"WIDOCO checksum mismatch: expected {expected}, got {actual_sha256}")
           PY
 
       - name: Generate WIDOCO HTML

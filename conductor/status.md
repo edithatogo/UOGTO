@@ -6,6 +6,7 @@ Updated: `2026-07-02`
 
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
+- `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03
 
@@ -29,7 +30,7 @@ Updated: `2026-07-02`
 - The CI upload artifact tarball SHA-256 must match the `SHA256SUMS` and `arxiv-submission-manifest.json` entries from the latest successful current-branch run.
 - The CI upload manifest reports `dirty: false`, `dirty_file_count: 0`, `dirty_entries: []`, and `dirty_mode: tracked-files-only`.
 - Local attestation verification against the downloaded CI tarball must exit successfully before upload.
-- Pull request checks for PR #19 must pass on the current branch head: `arxiv-preflight`, `manuscript-pdf`, and `validate`.
+- Current branch checks must pass before any arXiv upload candidate is treated as current: `arxiv-preflight`, `manuscript-pdf`, `validate`, and `Required Gate` where applicable.
 - Full local `make arxiv-upload-ready` passed on 2026-07-02 using `.pixi/envs/default/python.exe`, bundled Tectonic, and locally installed SourceRight `0.1.20`.
 - Strict local `make arxiv-preflight-strict` failed as designed because this workstation resolves bundled Tectonic, not `latexmk`/`pdflatex`; GitHub Actions is configured to run the strict arXiv-engine path.
 - Live Codex subagents reviewed the manuscript/process: Hooke (`019f20ab-621a-70a3-9436-75b2744190bd`), Locke (`019f20ab-9dd4-7e02-8556-03e3665876b7`), and Franklin (`019f20ab-cbc4-7961-86f5-25c1753acaaf`).
@@ -38,7 +39,7 @@ Updated: `2026-07-02`
   - Devil's advocate: Faraday (`019f20c7-9208-7702-af6b-36d441a50041`), archived at `docs/paper/reviews/arxiv-devils-advocate-review-2026-07-02.md`.
 - Current devil's advocate recommendation: `pass-for-arxiv-upload`; clean strict-engine CI, remote attestation, and clean-tree manifest are complete. ArXiv-rendered PDF inspection remains a post-upload external submission step.
 - `make validate` passed on 2026-07-02.
-- `make test` passed on 2026-07-02: `207 passed, 21 warnings`.
+- `make test` passed on 2026-07-03 after `make build`: `219 passed, 1 skipped, 21 warnings`.
 - Preprint glossary and abbreviations were added at the end of `docs/paper/paper.tex`, with in-text hyperlinks to glossary/abbreviation anchors.
 - Authentext-style prose cleanup has been applied to the manuscript/supplement, and `edithatogo/authentext` is installed globally at `C:\Users\60217257\.codex\skills\authentext` pending Codex restart.
 - SourceRight is installed from `edithatogo/sourceright` at upstream commit `f0c2c7c5dc9c2a25724e11985eb2b906d34c7c17`; `make manuscript-sourcecheck` passes with matched manuscript citations and 0 citation reconciliation issues.
@@ -62,3 +63,21 @@ Updated: `2026-07-02`
   - `docs/paper/arxiv-strict-review-report.md`
   - `docs/paper/arxiv-strict-review-iterations.jsonl`
 - Repo-side rollout status: replacement PR #21 (`codex/repo-arxiv-hardening-clean-20260703`) is mergeable and has passing `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight` checks on commit `4e7bb47`; `main` branch protection now requires both `Validate UOGTO` and `Required Gate`. Merge remains blocked only by the configured required review.
+
+## Archived Article Hardening Protocol Track - 2026-07-03
+
+- Archived Conductor track: `conductor/archive/uogto_article_hardening_protocol_20260624/`.
+- Added source-acquisition manifest generation and validation at `docs/article-hardening/source-acquisition-manifest.json` / `.md`.
+- Added Make/Pixi targets for source acquisition, tabular exports, optional DuckDB dashboard support, dashboard generation, and aggregate `article-hardening-all`.
+- Article table generation now writes both `article-facing-tables/` and compatibility `article-tables/` outputs.
+- Optional pandas and DuckDB dependencies now degrade to checked-in Parquet preservation and JSON/CSV dashboard fallback in the default Pixi environment.
+- Conductor review found and fixed one generated Markdown EOF formatting issue.
+- Verification passed: `pixi run article-hardening-all`; focused article-hardening pytest suite; `git diff --check`.
+
+## Archived Extended Discoverability Registry Track - 2026-07-03
+
+- Archived Conductor track: `conductor/archive/uogto_extended_discoverability_registries_20260622/`.
+- Repo-side implementation is complete: shared registry documentation, generated `extended-registry-handoff.json`, prefix.cc evidence, Wikidata item, FAIRsharing record, Ontobee request, Bioregistry request, BioPortal conditional decision, and OBO Foundry negative decision are all recorded.
+- Live closeout checks confirmed `uogto` and `uogtox` prefix.cc TXT mappings, Wikidata entity data for `Q140323510`, and open external-review state for Ontobee issue `212` and Bioregistry issue `1999`.
+- External review is not treated as active repo implementation: FAIRsharing curator review, Ontobee maintainer review, and Bioregistry maintainer review remain in the registry follow-up queue.
+- Conductor review found no blocking issues after archive cleanup. Verification passed: focused registry pytest (`22 passed`); `make publishing-metadata`; `make extended-registry-packet`; `make validate`; `make test` (`228 passed, 2 skipped, 30 warnings`); `make registry-links`; semantic audit; `git diff --check`.

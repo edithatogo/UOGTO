@@ -36,7 +36,9 @@ jobs:
 
       - name: Run ontology and repository validation
         run: |
-          make required-gate
+          make build
+          make validate
+          make test
           make publishing-metadata
           make registry-links
 

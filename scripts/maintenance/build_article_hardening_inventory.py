@@ -802,6 +802,54 @@ def build_search_records(sources: list[dict]) -> list[dict]:
             "Primarily adjacent modelling-language evidence; term-level mappings require later acquisition and review.",
             ["standards_landscape_researcher", "game_theory_gap_researcher"],
         ),
+        {
+            "record_id": "phase2-negative-evidence",
+            "searched_at": REGISTER_DATE,
+            "surface": "Game-theory ontology registry and repository sweep",
+            "surface_type": "web_search",
+            "query": "game theory ontology OR game theory OWL OR game theory RDF registry repository",
+            "filters": {
+                "language": "English",
+                "date_range": "not_limited",
+                "artifact_type": "ontology/schema/formalism/standard",
+            },
+            "result_count": 0,
+            "screened_count": 0,
+            "included_count": 0,
+            "evidence_level": "excluded",
+            "screening_decision": "negative_evidence_no_relevant_ontology_found",
+            "inclusion_rationale": (
+                "Targeted searches across registries, repositories, and documentation surfaces found "
+                "no additional relevant ontology or formalism to include for this route."
+            ),
+            "licence": {
+                "disposition": "mixed",
+                "note": "Negative evidence does not correspond to a redistributable source artifact.",
+            },
+            "reviewer_handoff": {
+                "assigned_roles": [
+                    "evidence_curation_researcher",
+                    "game_theory_gap_researcher",
+                    "standards_landscape_researcher",
+                ],
+                "next_action": (
+                    "Preserve the searched-but-not-found outcome so article claims can distinguish "
+                    "absence from unsearched scope."
+                ),
+                "status": "negative_evidence_recorded",
+            },
+            "route_limitations": (
+                "The route was intentionally broad and did not surface a releasable ontology artifact "
+                "for the queried scope."
+            ),
+            "operator_notes": (
+                "Negative evidence must remain in the register and be appended to rather than rewritten "
+                "into a positive inclusion record."
+            ),
+            "source_ids_added": [],
+            "previous_record_hash": None,
+            "record_hash": None,
+        },
     ]
     return add_record_hashes(ordered)
 

@@ -9,6 +9,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "docs" / "article-hardening" / "article-facing-tables"
+LEGACY_OUT = ROOT / "docs" / "article-hardening" / "article-tables"
 QUALITY = ROOT / "docs" / "article-hardening" / "quality-metrics.json"
 INCLUSION_JSON = ROOT / "docs" / "article-hardening" / "uogto-inclusion-candidates.json"
 INCLUSION_CSV = ROOT / "docs" / "article-hardening" / "uogto-inclusion-candidates.csv"
@@ -223,6 +224,7 @@ def emit_table(stem: str, title: str, rows: list[dict[str, Any]], fields: list[s
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
+    LEGACY_OUT.mkdir(parents=True, exist_ok=True)
     module_fields = ["module", "classes", "properties", "label_completeness", "definition_completeness", "missing_labels", "missing_definitions", "shacl_shape_links", "examples", "competency_queries", "import_depth", "hierarchy_max_depth_global", "rdf_parse_status", "pyshacl_examples_status", "owl_profile_status", "reasoner_status", "evidence_level", "source_artifact"]
     disposition_fields = ["candidate_id", "candidate_label", "source_family", "source_artifact", "evidence_level", "disposition", "rationale", "uogto_target", "external_alignment", "reviewer_handoff"]
     mapping_fields = ["analysis_component", "artifact", "method", "primary_metric", "primary_value", "sensitivity_or_ablation", "calibration_or_adjudication", "article_use", "status"]
@@ -237,7 +239,11 @@ def main() -> int:
         index.append(f"| {label} | `{stem}.csv` | `{stem}.json` | `{stem}.md` |")
     index.append("")
     (OUT / "README.md").write_text("\n".join(index), encoding="utf-8")
+    for path in OUT.iterdir():
+        if path.is_file():
+            (LEGACY_OUT / path.name).write_bytes(path.read_bytes())
     print(f"Wrote article-facing tables to {OUT.relative_to(ROOT)}")
+    print(f"Mirrored article table compatibility outputs to {LEGACY_OUT.relative_to(ROOT)}")
     print(f"module_rows={len(module_rows)} disposition_rows={len(disposition_rows)} mapping_rows={len(mapping_rows)}")
     return 0
 

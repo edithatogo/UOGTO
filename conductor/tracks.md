@@ -75,21 +75,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - **Status**: In Progress
 - **Link**: [./tracks/uogto_publishing_discoverability_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_publishing_discoverability_20260622/)
 
-## [~] Track: uogto_extended_discoverability_registries_20260622
-- **Description**: Implement second-wave discoverability submissions for FAIRsharing, prefix.cc, Wikidata, Ontobee, conditional BioPortal, conditional Bioregistry, and the OBO Foundry non-priority decision.
-- **Status**: External Review Pending
-- **Link**: [./tracks/uogto_extended_discoverability_registries_20260622/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_extended_discoverability_registries_20260622/)
-
 ## [x] Track: uogto_comparative_simulation_ontology_mapping_20260624
 - **Description**: Discover, source, map, analyse, and visualise game-theory, simulation, agent-based modelling, system-dynamics, and adjacent modelling ontologies against UOGTO.
 - **Status**: Completed and archived.
 - **Link**: [./archive/uogto_comparative_simulation_ontology_mapping_20260624/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/uogto_comparative_simulation_ontology_mapping_20260624/)
 
-
-## [ ] Track: uogto_article_hardening_protocol_20260624
-- **Description**: Create a PRISMA-ScR/PRISMA-S and RO-Crate based article-hardening protocol for broader ontology/formalism discovery, quality evaluation, competency benchmarking, mapping robustness, and article-ready evidence outputs.
-- **Status**: Planned
-- **Link**: [./tracks/uogto_article_hardening_protocol_20260624/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_article_hardening_protocol_20260624/)
 
 ## [x] Track: conductor_state_reconciliation_20260622
 - **Description**: Record and normalize Conductor state for archive moves, status updates, CI/Pixi hardening, registry link checks, and SourceRight follow-up planning.
@@ -134,4 +124,9 @@ These tracks are retained for audit history but are no longer active work items.
 - **Description**: Finish repository contribution polish, formalize strict arXiv submission-review simulation, and loop until the manuscript/package scores above 995/1000.
 - **Status**: Completed repo-side implementation; final arXiv UI upload remains external.
 - **Link**: [./tracks/repo_arxiv_submission_hardening_20260702/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/repo_arxiv_submission_hardening_20260702/)
+
+## [x] Track: repo_validation_runtime_hardening_20260703
+- **Description**: Strengthen UOGTO validation semantics, fresh-checkout gates, runtime packaging, Conductor state, and CI supply-chain determinism.
+- **Status**: Completed
+- **Link**: [./archive/repo_validation_runtime_hardening_20260703/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/archive/repo_validation_runtime_hardening_20260703/)
 

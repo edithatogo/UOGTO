@@ -138,15 +138,18 @@ class RDFGameRunner:
             initNs={"uogto": UOGTO},
             initBindings={"profile": profile},
         )
-        actual = {}
+        actual_pairs = set()
         unscoped_actions = set()
+        has_scoped_actions = False
         for player, action in rows:
             if player is None:
                 unscoped_actions.add(str(action))
             else:
-                actual[str(player)] = str(action)
-        if actual:
-            return actual == expected
+                actual_pairs.add((str(player), str(action)))
+                has_scoped_actions = True
+        if has_scoped_actions:
+            expected_pairs = {(player, action) for player, action in expected.items()}
+            return actual_pairs == expected_pairs
         return unscoped_actions == set(expected.values())
 
 

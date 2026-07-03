@@ -126,7 +126,12 @@ def audit_jsonld_term_coverage(graph):
 
 def audit_instance_naming():
     conforms = True
-    for path in Path("examples").iterdir():
+    examples_dir = ROOT / "examples"
+    if not examples_dir.exists():
+        return True
+    for path in examples_dir.iterdir():
+        if not path.is_file() or path.suffix not in (".jsonld", ".ttl"):
+            continue
         graph = rdflib.Graph()
         fmt = "json-ld" if path.suffix == ".jsonld" else "turtle"
         graph.parse(path, format=fmt)

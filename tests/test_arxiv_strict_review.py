@@ -39,7 +39,7 @@ def test_required_gate_runs_validation_and_strict_arxiv_score() -> None:
     workflow = Path(".github/workflows/required-gate.yml").read_text(encoding="utf-8")
     for expected in [
         "name: Required Gate",
-        "make required-gate",
+        "make build\n          make validate\n          make test",
         "make publishing-metadata",
         "make registry-links",
         "scripts/maintenance/score_arxiv_submission.py",

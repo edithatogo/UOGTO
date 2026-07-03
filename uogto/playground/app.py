@@ -30,11 +30,12 @@ def main() -> None:
     if uploaded_file is None:
         return
 
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".ttl") as tmp:
-        tmp.write(uploaded_file.getvalue())
-        tmp_path = tmp.name
-
+    tmp_path = None
     try:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".ttl") as tmp:
+            tmp.write(uploaded_file.getvalue())
+            tmp_path = tmp.name
+
         user_graph = rdflib.Graph()
         user_graph.parse(tmp_path, format="turtle")
         st.success(f"Successfully parsed graph with {len(user_graph)} triples.")
@@ -101,7 +102,7 @@ def main() -> None:
     except Exception as exc:  # pragma: no cover - displayed in Streamlit UI
         st.error(f"Error parsing/validating graph: {exc}")
     finally:
-        if os.path.exists(tmp_path):
+        if tmp_path and os.path.exists(tmp_path):
             os.remove(tmp_path)
 
 

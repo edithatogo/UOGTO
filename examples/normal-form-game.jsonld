@@ -8,7 +8,15 @@
     {
       "@id": "http://example.org/players/p1",
       "@type": "Player",
-      "identifier": "p1"
+      "identifier": "p1",
+      "hasStrategy": {
+        "@id": "http://example.org/strategies/cooperate"
+      }
+    },
+    {
+      "@id": "http://example.org/strategies/cooperate",
+      "@type": "Strategy",
+      "identifier": "cooperate"
     }
   ]
 }

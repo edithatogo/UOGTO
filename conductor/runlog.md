@@ -13,6 +13,26 @@
 - Local evidence: `make build` passed; `make validate` passed; `make test` passed with `223 passed, 1 skipped, 26 warnings`; `make publishing-metadata` passed; `make registry-links` passed; `git diff --check` passed.
 - Conductor review found no blocking findings; archived the track under `conductor/archive/repo_validation_runtime_hardening_20260703/`.
 
+## 2026-07-03 - Article Hardening Protocol Implementation
+
+- Completed repo-side implementation for `uogto_article_hardening_protocol_20260624`.
+- Added deterministic source-acquisition manifest generation for checked-in RDF/OWL comparator artifacts and reference-only/licence-constrained sources.
+- Added Make/Pixi article-hardening targets for source acquisition, tabular exports, optional DuckDB, dashboard generation, and aggregate validation.
+- Mirrored generated article evidence tables to `docs/article-hardening/article-tables/` while retaining `article-facing-tables/`.
+- Hardened tabular and dashboard scripts so the default Pixi environment can validate outputs without optional pandas or DuckDB.
+- Conductor review found and fixed one generated Markdown EOF formatting issue.
+- Archived the track under `conductor/archive/uogto_article_hardening_protocol_20260624/` and removed it from the active tracks registry.
+- Verification passed: `pixi run article-hardening-all`; focused article-hardening pytest suite; `git diff --check`.
+
+## 2026-07-03 - Extended Discoverability Registry Closeout
+
+- Rechecked track `uogto_extended_discoverability_registries_20260622` for remaining repo-actionable work.
+- Confirmed the second-wave registry packet and tests already record live prefix.cc mappings, Wikidata item `Q140323510`, FAIRsharing record `8382`, Ontobee issue `212`, Bioregistry issue `1999`, the BioPortal conditional no-submit decision, and the OBO Foundry non-priority decision.
+- Verified live public evidence: prefix.cc TXT endpoints return the expected `uogto` and `uogtox` namespace mappings; Wikidata entity data includes the UOGTO label and DOI; Ontobee and Bioregistry issues remain open external maintainer-review items.
+- Marked the track repo-complete with external curator/maintainer review retained in `docs/registry/extended-discoverability-submissions.md` rather than the active Conductor queue.
+- Archived the track under `conductor/archive/uogto_extended_discoverability_registries_20260622/` and removed it from the active tracks registry.
+- Conductor review found no blocking issues after removing the archived track from active status. Verification passed: focused registry pytest (`22 passed`), `make publishing-metadata`, `make extended-registry-packet`, `make validate`, `make test` (`228 passed, 2 skipped, 30 warnings`), `make registry-links`, semantic audit, and `git diff --check`.
+
 ## 2026-07-02 arXiv Upload-Ready Hardening
 
 - Added `scripts/maintenance/build_arxiv_upload_ready.py` to generate a deterministic arXiv upload tarball, upload manifest, `00README.json` preview, and `SHA256SUMS`.

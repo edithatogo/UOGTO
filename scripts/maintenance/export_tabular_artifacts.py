@@ -6,7 +6,12 @@ import csv
 import json
 from pathlib import Path
 
-import pandas as pd
+try:
+    import pandas as pd
+    HAS_PANDAS = True
+except ModuleNotFoundError:  # pragma: no cover - exercised in minimal Pixi environments
+    pd = None
+    HAS_PANDAS = False
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -19,12 +24,12 @@ TABLES = [
 ]
 
 
-def _tolerant_read_csv(path: Path) -> pd.DataFrame:
+def _tolerant_read_csv(path: Path):
     with path.open(encoding="utf-8", newline="") as fh:
         reader = csv.reader(fh)
         rows = list(reader)
     if not rows:
-        return pd.DataFrame()
+        return pd.DataFrame() if HAS_PANDAS else []
     header = rows[0]
     width = len(header)
     normalized = []
@@ -34,7 +39,9 @@ def _tolerant_read_csv(path: Path) -> pd.DataFrame:
         elif len(row) > width:
             row = row[: width - 1] + [",".join(row[width - 1 :])]
         normalized.append(row)
-    return pd.DataFrame(normalized, columns=header)
+    if HAS_PANDAS:
+        return pd.DataFrame(normalized, columns=header)
+    return [dict(zip(header, row, strict=False)) for row in normalized]
 
 
 def _escape_markdown(value: object) -> str:
@@ -42,19 +49,36 @@ def _escape_markdown(value: object) -> str:
     return text.replace("|", r"\|").replace("\n", "<br>")
 
 
-def _to_markdown(df: pd.DataFrame) -> str:
-    headers = list(df.columns)
+def _columns(table) -> list[str]:
+    if HAS_PANDAS:
+        return list(table.columns)
+    return list(table[0]) if table else []
+
+
+def _row_count(table) -> int:
+    return int(len(table))
+
+
+def _records(table) -> list[dict]:
+    if HAS_PANDAS:
+        return table.to_dict(orient="records")
+    return list(table)
+
+
+def _to_markdown(table) -> str:
+    headers = _columns(table)
     lines = [
         "| " + " | ".join(_escape_markdown(col) for col in headers) + " |",
         "| " + " | ".join(["---"] * len(headers)) + " |",
     ]
-    for _, row in df.iterrows():
+    rows = _records(table)
+    for row in rows:
         lines.append("| " + " | ".join(_escape_markdown(row[col]) for col in headers) + " |")
     return "\n".join(lines) + "\n"
 
 
 def export_table(csv_path: Path) -> None:
-    df = _tolerant_read_csv(csv_path)
+    table = _tolerant_read_csv(csv_path)
     base = csv_path.with_suffix("")
 
     md_path = base.with_suffix(".md")
@@ -62,8 +86,8 @@ def export_table(csv_path: Path) -> None:
         (
             f"# {csv_path.stem.replace('-', ' ').title()}\n\n"
             f"Source CSV: `{csv_path.as_posix()}`\n"
-            f"Rows: {len(df)}\n\n"
-            + _to_markdown(df)
+            f"Rows: {_row_count(table)}\n\n"
+            + _to_markdown(table)
         ),
         encoding="utf-8",
         newline="\n",
@@ -72,9 +96,9 @@ def export_table(csv_path: Path) -> None:
     json_path = base.with_suffix(".json")
     json_payload = {
         "source_csv": csv_path.as_posix(),
-        "row_count": int(len(df)),
-        "columns": list(df.columns),
-        "rows": df.to_dict(orient="records"),
+        "row_count": _row_count(table),
+        "columns": _columns(table),
+        "rows": _records(table),
     }
     json_path.write_text(
         json.dumps(json_payload, indent=2, ensure_ascii=False) + "\n",
@@ -83,7 +107,12 @@ def export_table(csv_path: Path) -> None:
     )
 
     parquet_path = base.with_suffix(".parquet")
-    df.to_parquet(parquet_path, index=False)
+    if HAS_PANDAS:
+        table.to_parquet(parquet_path, index=False)
+    elif not parquet_path.exists():
+        raise SystemExit(
+            f"Cannot write {parquet_path} because pandas is not installed and no checked-in parquet exists"
+        )
 
 
 def main() -> None:
