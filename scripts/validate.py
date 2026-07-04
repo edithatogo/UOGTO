@@ -101,7 +101,7 @@ def validate_competency_query_expectations(ontology_graph):
             fmt = "json-ld" if example_path.suffix == ".jsonld" else "turtle"
             query_graph.parse(example_path, format=fmt)
         rows = list(query_graph.query(query_path.read_text(encoding="utf-8")))
-        min_count = int(entry.get("min_count", 0))
+        min_count = int(entry.get("min_count", entry.get("min_results", 0)))
         if len(rows) < min_count:
             print(
                 f"FAIL: Competency query {entry['query']} returned {len(rows)} "
@@ -114,7 +114,10 @@ def validate_competency_query_expectations(ontology_graph):
             for row in rows
         ]
         for required in entry.get("required_bindings", []):
-            if required not in row_bindings:
+            if not any(
+                all(row.get(binding) == value for binding, value in required.items())
+                for row in row_bindings
+            ):
                 print(
                     f"FAIL: Competency query {entry['query']} did not return "
                     f"required binding {required}."

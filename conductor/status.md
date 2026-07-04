@@ -1,12 +1,27 @@
 # Conductor Status
 
-Updated: `2026-07-02`
+Updated: `2026-07-05`
 
 ## Active Work
 
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
+- `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
+- `uogto_registry_publication_followthrough_20260705`: New roadmap track for external registry and publication monitoring after v1.0.0.
+- `uogto_interoperability_benchmarks_20260705`: New roadmap track for executable interoperability fixtures and benchmark examples.
+- `uogto_alignment_evidence_expansion_20260705`: New roadmap track for evidence-backed alignment expansion and comparison artifact synchronization.
+- `uogto_manuscript_submission_revision_20260705`: New roadmap track for arXiv closeout, manuscript revision, and venue strategy.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 - `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
+
+## Validation Contract And Roadmap Tracks - 2026-07-05
+
+- Added active track `uogto_validation_contract_coherence_20260705` for the current-version fixes recommended by repository review.
+- Added future roadmap tracks for registry/publication follow-through, executable interoperability benchmarks, alignment evidence expansion, and manuscript submission revision.
+- Created matching GitHub issues: `#27`, `#28`, `#29`, `#30`, and `#31`.
+- Consolidated competency-query expected results into `validation/competency-query-expectations.json`, removed the stale duplicate manifest, and added coverage for all ten `.rq` files.
+- Added first-price-auction incentive-constraint example coverage so `cq06` proves a real mechanism-design result.
+- Aligned package/workspace version metadata with the v1.0.0 ontology release.
+- Verification passed: `make validate`; `pytest tests/test_competency_query_expectations.py tests/test_competency_queries.py tests/test_parse_jsonld.py`; `make test` (`235 passed, 1 skipped, 42 warnings`); `make publishing-metadata`; `git diff --check`.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03
 

@@ -3,39 +3,112 @@
   "queries": [
     {
       "query": "cq01-list-players.rq",
-      "example_graphs": ["examples/first-price-auction.jsonld"],
+      "example_graphs": ["examples/stag-hunt.ttl"],
       "min_count": 2,
       "required_bindings": [
         {
-          "game": "http://example.org/first-price-auction",
-          "player": "http://example.org/players/bidder-1"
+          "game": "http://example.org/stag-hunt",
+          "player": "http://example.org/hunter-1"
+        }
+      ]
+    },
+    {
+      "query": "cq02-list-strategies.rq",
+      "example_graphs": ["examples/normal-form-game.jsonld"],
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "player": "http://example.org/players/p1",
+          "strategy": "http://example.org/strategies/cooperate"
+        }
+      ]
+    },
+    {
+      "query": "cq03-find-equilibria.rq",
+      "example_graphs": ["examples/stag-hunt.ttl"],
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "game": "http://example.org/stag-hunt",
+          "equilibrium": "http://example.org/stag-stag"
+        }
+      ]
+    },
+    {
+      "query": "cq04-games-with-incomplete-information.rq",
+      "example_graphs": ["examples/signalling-game.ttl"],
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "game": "http://example.org/signalling-game",
+          "infoSet": "http://example.org/sender-info-set"
         }
       ]
     },
     {
       "query": "cq05-security-games-with-targets.rq",
       "example_graphs": ["examples/security-stackelberg-game.jsonld"],
-      "min_count": 1
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "game": "http://example.org/stackelberg-security",
+          "target": "http://example.org/targets/t1"
+        }
+      ]
+    },
+    {
+      "query": "cq06-mechanisms-with-incentive-constraints.rq",
+      "example_graphs": ["examples/first-price-auction.jsonld"],
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "mechanism": "http://example.org/first-price-auction",
+          "constraint": "http://example.org/constraints/bid-truthfulness-risk"
+        }
+      ]
     },
     {
       "query": "cq07-llm-games-with-tool-invocations.rq",
       "example_graphs": ["examples/llm-tool-use-game.jsonld"],
-      "min_count": 1
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "agent": "http://example.org/players/llm-agent-1",
+          "toolCall": "http://example.org/tool-invocations/search-1"
+        }
+      ]
     },
     {
       "query": "cq08-executable-games-with-event-traces.rq",
       "example_graphs": ["examples/first-price-auction.jsonld"],
-      "min_count": 1
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "game": "http://example.org/first-price-auction",
+          "trace": "http://example.org/traces/auction-trace-1"
+        }
+      ]
     },
     {
       "query": "cq09-games-with-privacy-budget.rq",
       "example_graphs": ["examples/privacy-budget-game.jsonld"],
-      "min_count": 1
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "player": "http://example.org/players/privacy-agent-1",
+          "budget": "http://example.org/privacy/budget-1"
+        }
+      ]
     },
     {
       "query": "cq10-modules-and-imports.rq",
       "example_graphs": [],
-      "min_count": 1
+      "min_count": 1,
+      "required_bindings": [
+        {
+          "importedOntology": "https://w3id.org/uogto/core"
+        }
+      ]
     }
   ]
 }
