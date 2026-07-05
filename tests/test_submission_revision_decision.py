@@ -28,7 +28,8 @@ def test_submission_revision_memo_records_target_path_and_external_limits() -> N
 
 
 def test_submission_revision_backlog_has_acceptance_criteria() -> None:
-    rows = list(csv.DictReader((ROOT / "docs/paper/submission-revision-backlog.csv").open(encoding="utf-8")))
+    csv_content = (ROOT / "docs/paper/submission-revision-backlog.csv").read_text(encoding="utf-8")
+    rows = list(csv.DictReader(csv_content.splitlines()))
 
     assert rows
     assert {row["priority"] for row in rows} >= {"must-fix", "should-fix", "stretch", "watch"}
