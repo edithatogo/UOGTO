@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T08:17:32+00:00",
+  "generated_at_utc": "2026-07-05T08:54:49+00:00",
   "status": "frozen",
   "freeze_scope": "manuscript and supplement figure numbering, captions, placement callouts, source/rendered file hashes, and image score loop status",
   "rerun_required_when": [
@@ -106,8 +106,8 @@
       "caption_or_slide": "Mapping match classes",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "fca3467fa48f38f4eded4dfa818969327a8f417dd89b48b227901a90a7579d87",
-      "rendered_sha256": "fca3467fa48f38f4eded4dfa818969327a8f417dd89b48b227901a90a7579d87",
+      "source_sha256": "ef3108abec1fd1878aa3369730c070dd7b47936c8c3d6d56777d3a36e6e3e808",
+      "rendered_sha256": "ef3108abec1fd1878aa3369730c070dd7b47936c8c3d6d56777d3a36e6e3e808",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -119,8 +119,8 @@
       "caption_or_slide": "Reviewer workload",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "0e837219c9b564f962b182976d8823d277e5c97949b3fea23baa6d7731491a31",
-      "rendered_sha256": "0e837219c9b564f962b182976d8823d277e5c97949b3fea23baa6d7731491a31",
+      "source_sha256": "d593050ee803d1a6530688f03556ce544deff9fc06d14e19025ec3e42acc59f5",
+      "rendered_sha256": "d593050ee803d1a6530688f03556ce544deff9fc06d14e19025ec3e42acc59f5",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -158,8 +158,8 @@
       "caption_or_slide": "Source module overlap",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "b8b5e2b8f8bdd2d9aee6efc6f1786823540d42c49f7fd791ae793f1c7d92baae",
-      "rendered_sha256": "b8b5e2b8f8bdd2d9aee6efc6f1786823540d42c49f7fd791ae793f1c7d92baae",
+      "source_sha256": "2523d587d6e6534d4494c7fd0dec9a371c2f0fdc585061dff5c1682bc3ff2f6c",
+      "rendered_sha256": "2523d587d6e6534d4494c7fd0dec9a371c2f0fdc585061dff5c1682bc3ff2f6c",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -184,8 +184,8 @@
       "caption_or_slide": "Mapping flow",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "ff55bf66514912336adb522d023112d9ad8d4396b1da8f93d3d0ecfc8559990d",
-      "rendered_sha256": "ff55bf66514912336adb522d023112d9ad8d4396b1da8f93d3d0ecfc8559990d",
+      "source_sha256": "771cf6d73812cb0c6494030876207c8e1dee2bf01592a71127cb167bf627965a",
+      "rendered_sha256": "771cf6d73812cb0c6494030876207c8e1dee2bf01592a71127cb167bf627965a",
       "source_exists": true,
       "rendered_exists": true
     },

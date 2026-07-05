@@ -4,6 +4,11 @@ This process turns the manuscript source into a conservative arXiv upload candid
 
 Editor, reviewer, and publisher sign-off is recorded in `docs/paper/arxiv-submission-contract.md` and governed by `conductor/agents/arxiv-submission-agents.json`.
 
+The current external arXiv state is recorded in
+`docs/paper/arxiv-submission-state.md`. That file is authoritative for whether
+an arXiv identifier has been assigned, whether the arXiv-rendered PDF has been
+inspected, and which clean CI artifact was uploaded.
+
 ## Current Gate
 
 Run:
@@ -25,6 +30,15 @@ The tarball is deterministic for a stable cleaned package. The `00README.json` p
 
 Local builds may use bundled Tectonic when `latexmk` or `pdflatex` is unavailable. That is a development fallback only. Final publisher sign-off requires the GitHub arXiv Preflight workflow to run `make arxiv-upload-ready ARXIV_PDF_FLAGS="--require-pdf --require-arxiv-engine"` on a clean commit, so the PDF gate uses an arXiv-compatible `latexmk` or `pdflatex` path. A dirty-tree manifest, pending attestation, or unresolved red-team/devil's-advocate `fix_now` finding blocks submission.
 
+## Current External State
+
+The repository-local package is upload-capable only after the current branch has
+a clean strict arXiv-engine CI artifact and matching attestation. The external
+arXiv state is currently `not_submitted`: no arXiv identifier is assigned, no
+version is assigned, and no arXiv-rendered PDF has been inspected. Do not fill
+the final manifest or tarball hashes from a local dirty-tree run; use the
+successful clean CI artifact selected for upload.
+
 ## Operator Checklist
 
 1. Freeze manuscript, supplement, figure numbering, and captions with `make figure-caption-freeze`.
@@ -33,9 +47,10 @@ Local builds may use bundled Tectonic when `latexmk` or `pdflatex` is unavailabl
 4. Review `docs/paper/arxiv-source-privacy-audit.md` and confirm status is `pass`.
 5. Review `dist/arxiv/arxiv-submission-manifest.json` and `dist/arxiv/SHA256SUMS`.
 6. Review `docs/paper/arxiv-submission-contract.md` and confirm editor, reviewer, devil's advocate, and publisher sign-off is current.
-7. Upload `dist/arxiv/uogto-arxiv-source.tar.gz` to arXiv.
-8. In the arXiv UI, verify the selected processor and TeX Live version, then inspect the rendered PDF before final submission.
-9. After arXiv assigns an identifier, complete `docs/paper/arxiv-post-submission-record-template.md` and record the identifier in release notes, citation metadata, and registry/publication status documents.
+7. Confirm `docs/paper/arxiv-submission-state.md` still lists no unresolved repo-side blocker except the external upload/rendered-PDF step.
+8. Upload `dist/arxiv/uogto-arxiv-source.tar.gz` from the selected clean CI artifact to arXiv.
+9. In the arXiv UI, verify the selected processor and TeX Live version, then inspect the rendered PDF before final submission.
+10. After arXiv assigns an identifier, complete `docs/paper/arxiv-post-submission-record-template.md`, update `docs/paper/arxiv-submission-state.md`, and record the identifier in release notes, citation metadata, and registry/publication status documents.
 
 ## Submission Metadata
 

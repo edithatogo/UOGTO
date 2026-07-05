@@ -103,7 +103,7 @@ The project started with a broad search. We did not begin with one field's favou
 
 This paper evaluates UOGTO by its design choices and by the evidence records behind those choices. The repository stores source records, mapping review data, \abblink{sssom}{SSSOM} mapping tables, \abblink{shacl}{SHACL} examples, quality metrics, and decision ledgers. The paper limits its claims when the evidence is only documentary or metadata-only. Table~\ref{tab:evidence-surfaces} summarises the main evidence surfaces.
 
-For a behavioural-science audience, UOGTO is best understood as a resource. It is not a primary empirical result. It does not test a theory of human behaviour. It gives shared terms for asking simple questions about a study. Who acted? What choices were available? What incentives operated? What outcome was observed? What evidence supports that claim?
+For a behavioural-science audience, UOGTO is best understood as a resource. It is not a primary empirical result. It does not test a theory of human behaviour. It gives shared terms for asking simple questions about a study. Who acted? What choices were available? What incentives operated? What outcome was observed? What evidence supports that claim? This resource framing is also the right publication frame: the manuscript should be judged as an inspectable ontology and evidence package, not as proof of a behavioural mechanism.
 
 \begin{table}[ht]
 \centering
@@ -328,7 +328,7 @@ References are stored in \abblink{csl}{CSL} \abblink{json}{JSON} and matched to 
 \section{Conclusion}
 UOGTO provides a shared layer for game-theory research. It was built from a broad search, feature extraction, careful mapping review, validation, and graph analysis. It is not a final catalogue of all game theory. It is also not a theory of behaviour. It is a repeatable way to describe games, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, mappings, and evidence.
 
-The main contribution is that claims can be checked. Domain-specific vocabularies and familiar examples remain useful. They should not set the limits of a general ontology. UOGTO keeps accepted, rejected, deferred, metadata-only, and domain-review evidence visible. This makes future extension work easier to check. It also makes computational game-theory evidence easier to validate, compare, cite, and reuse in fields where decisions, incentives, risks, and outcomes are linked.
+The main contribution is that claims can be checked. Domain-specific vocabularies and familiar examples remain useful. They should not set the limits of a general ontology. UOGTO keeps accepted, rejected, deferred, metadata-only, and domain-review evidence visible. This makes future extension work easier to check. It also makes computational game-theory evidence easier to validate, compare, cite, and reuse in fields where decisions, incentives, risks, and outcomes are linked. Any later journal version should preserve this resource framing and add venue-specific case depth only where the evidence supports it.
 
 \section{Limitations}
 UOGTO has four main limits. First, metadata-only sources cannot support the same claims as parsed RDF files. Second, accepted mappings are sparse by design. This improves precision, but it leaves many plausible links for future review. Third, the search is not exhaustive. Search coverage, English-language bias, repository visibility, standards access, licence limits, snapshot timing, and the lack of dedicated behavioural-science, safety-science, health technology assessment, or outcomes searches all limit coverage. Fourth, UOGTO is broad but incomplete. New game-theory concepts should pass through the disposition workflow before they are added.
@@ -337,7 +337,7 @@ UOGTO has four main limits. First, metadata-only sources cannot support the same
 The project repository stores the ontology, examples, SHACL shapes, JSON-LD contexts, SPARQL questions, comparison outputs, network figures, Cosmograph-ready graph exports, and validation scripts:
 \url{https://github.com/edithatogo/UOGTO}.
 
-The local arXiv package records generated files and checksums under \path{dist/arxiv/}. The current upload-ready source archive SHA-256 is recorded in the arXiv contract under \path{docs/paper/}. The local checks used for this paper are:
+The local arXiv package records generated files and checksums under \path{dist/arxiv/}. The current external submission state, including any assigned arXiv identifier and rendered-PDF approval, is recorded in the arXiv state and contract documents under \path{docs/paper/}. The local checks used for this paper are:
 \begin{itemize}
 \item \texttt{make validate}
 \item \texttt{make ontology-comparison-check}

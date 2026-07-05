@@ -57,4 +57,19 @@ The strict arXiv-engine gate is deliberately stronger than the local fallback. `
 
 The CI arXiv Preflight workflow now runs the upload-ready target, retains `dist/arxiv/*` as the `uogto-arxiv-upload-ready` artifact for 90 days, and signs checksum-bound artifact provenance with GitHub artifact attestations on push/manual runs. The final remaining arXiv actions are: confirm a clean CI attestation, upload the tarball, inspect the arXiv-rendered PDF, complete `docs/paper/arxiv-post-submission-record-template.md`, and record the assigned arXiv identifier after acceptance.
 
+## 2026-07-05 submission revision decision
+
+The active route is arXiv-first, then journal-specific revision. Nature Human
+Behaviour remains the primary aspirational venue only as a Resource-style
+submission; Medical Decision Making / Medical Decision Making Policy & Practice
+is the strongest alternative if the manuscript is refitted as a tutorial,
+technical note, or methods explainer.
+
+The current external arXiv state is recorded in
+`docs/paper/arxiv-submission-state.md` as `not_submitted`: no identifier is
+assigned, no version is assigned, and the arXiv-rendered PDF has not been
+inspected. The final manifest and tarball hashes must come from the successful
+clean CI arXiv Preflight artifact selected for upload, not from a local
+dirty-tree run.
+
 Devil's advocate review update `2026-07-02`: final submission status is `do-not-submit-yet` until clean strict-engine CI, remote attestation, clean-tree manifest, and arXiv-rendered PDF inspection are complete. Red-team and devil's advocate review notes are archived under `docs/paper/reviews/`.
