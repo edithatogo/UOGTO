@@ -1,5 +1,16 @@
 # Conductor Run Log
 
+## 2026-07-05 - Interoperability benchmarks and executable fixtures
+
+- Completed Conductor track `uogto_interoperability_benchmarks_20260705`.
+- Added `docs/interoperability-benchmarks.json` with target disposition records for OpenSpiel, PettingZoo, Gambit, Gymnasium, and Mesa, including licenses, fixture paths where applicable, verification commands, integration status, and next adapter steps.
+- Added `docs/interoperability-benchmarks.md` and linked it from `README.md` and `docs/index.md`.
+- Added `examples/openspiel-matrix-game.jsonld` as an asserted OpenSpiel-style matrix-game binding fixture with execution, runtime, solver, strategy, action, and payoff-profile nodes.
+- Added `examples/pettingzoo-aec-gridworld.jsonld` as an illustrative PettingZoo-style AEC Markov-game fixture with transition, runtime, and simulation binding nodes.
+- Extended `RDFGameRunner` to detect JSON-LD input by suffix while preserving Turtle support.
+- Added `tests/test_interoperability_benchmarks.py` for inventory completeness, JSON-LD fixture parse/query checks, PettingZoo Markov binding checks, and OpenSpiel fixture runner payoff smoke coverage.
+- Verification passed: focused benchmark pytest (`4 passed`); `make validate`; `make test` (`239 passed, 1 skipped, 52 warnings`); `git diff --check`.
+
 ## 2026-07-05 - Validation contract coherence and roadmap tracks
 
 - Created active Conductor track `uogto_validation_contract_coherence_20260705` for competency-query expected-result completeness, release metadata coherence, and generated text normalization.

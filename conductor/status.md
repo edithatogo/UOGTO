@@ -7,7 +7,7 @@ Updated: `2026-07-05`
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
 - `uogto_registry_publication_followthrough_20260705`: New roadmap track for external registry and publication monitoring after v1.0.0.
-- `uogto_interoperability_benchmarks_20260705`: New roadmap track for executable interoperability fixtures and benchmark examples.
+- `uogto_interoperability_benchmarks_20260705`: Completed. Added an executable interoperability benchmark inventory, OpenSpiel and PettingZoo fixture examples, focused parse/query/runtime tests, and JSON-LD support in `RDFGameRunner` for fixture smoke coverage.
 - `uogto_alignment_evidence_expansion_20260705`: New roadmap track for evidence-backed alignment expansion and comparison artifact synchronization.
 - `uogto_manuscript_submission_revision_20260705`: New roadmap track for arXiv closeout, manuscript revision, and venue strategy.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
@@ -22,6 +22,18 @@ Updated: `2026-07-05`
 - Added first-price-auction incentive-constraint example coverage so `cq06` proves a real mechanism-design result.
 - Aligned package/workspace version metadata with the v1.0.0 ontology release.
 - Verification passed: `make validate`; `pytest tests/test_competency_query_expectations.py tests/test_competency_queries.py tests/test_parse_jsonld.py`; `make test` (`235 passed, 1 skipped, 42 warnings`); `make publishing-metadata`; `git diff --check`.
+
+## Interoperability Benchmarks - 2026-07-05
+
+- Completed track `uogto_interoperability_benchmarks_20260705`.
+- Added machine-readable target inventory at `docs/interoperability-benchmarks.json` and narrative documentation at `docs/interoperability-benchmarks.md`.
+- Added two executable JSON-LD fixtures:
+  - `examples/openspiel-matrix-game.jsonld` for an OpenSpiel-style matrix game with execution, runtime, and solver bindings plus payoff-profile runner coverage.
+  - `examples/pettingzoo-aec-gridworld.jsonld` for a PettingZoo-style AEC Markov game with transition, runtime, and simulation bindings.
+- Added focused benchmark tests in `tests/test_interoperability_benchmarks.py` covering inventory completeness, fixture parse/query semantics, PettingZoo Markov bindings, and `RDFGameRunner` payoff smoke coverage for the OpenSpiel fixture.
+- Extended `RDFGameRunner` to parse JSON-LD fixtures as well as Turtle files.
+- Linked the benchmark documentation from `README.md` and `docs/index.md`.
+- Verification passed: `.pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py -q` (`4 passed`); `make validate`; `make test` (`239 passed, 1 skipped, 52 warnings`); `git diff --check`.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03
 

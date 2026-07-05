@@ -140,9 +140,9 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: New
 - **Link**: [./tracks/uogto_registry_publication_followthrough_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_registry_publication_followthrough_20260705/)
 
-## [ ] Track: uogto_interoperability_benchmarks_20260705
+## [x] Track: uogto_interoperability_benchmarks_20260705
 - **Description**: Add executable interoperability benchmark fixtures and tests for external game/simulation tools.
-- **Status**: New
+- **Status**: Completed
 - **Link**: [./tracks/uogto_interoperability_benchmarks_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_interoperability_benchmarks_20260705/)
 
 ## [ ] Track: uogto_alignment_evidence_expansion_20260705
@@ -154,4 +154,3 @@ These tracks are retained for audit history but are no longer active work items.
 - **Description**: Plan arXiv closeout, manuscript revision, and target-venue strategy from presubmission review evidence.
 - **Status**: New
 - **Link**: [./tracks/uogto_manuscript_submission_revision_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_manuscript_submission_revision_20260705/)
-
