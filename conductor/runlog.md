@@ -7,6 +7,8 @@
 - Added `docs/paper/submission-revision-backlog.csv` with must-fix, should-fix, stretch, and watch items plus acceptance criteria.
 - Added `docs/paper/arxiv-submission-state.md` to record that the current external arXiv state is `not_submitted`; identifier, version, final uploaded artifact hashes, and arXiv-rendered PDF approval remain pending external registered-author upload.
 - Updated manuscript, supplement, arXiv process, arXiv contract, and Nature must-fix status docs to separate repo-local readiness from clean CI artifact evidence and external arXiv closeout.
+- Conductor review fixed one status-consistency issue so the arXiv contract no longer claims current-branch CI/attestation is already complete before a selected clean upload artifact exists.
+- Archived the completed track under `conductor/archive/uogto_manuscript_submission_revision_20260705/` and removed the active registry entry.
 - Verification passed: focused manuscript/arXiv pytest (`19 passed`); `make manuscript-sourcecheck`; `make figure-caption-freeze`; `make arxiv-upload-ready` (local ignored tarball SHA-256 `76c3450c5d2f7acc99c03fdc596b640e3d874bf4bd7402e5e3260a3b24c20730`, dirty-tree manifest non-final by design); `make validate`; `make test` (`251 passed, 52 warnings`); `git diff --check`.
 
 ## 2026-07-05 - Alignment evidence expansion
