@@ -3,6 +3,7 @@ message: "If you use this ontology, please cite it as below."
 authors:
   - family-names: "Mordaunt"
     given-names: "Dylan A"
+    orcid: "https://orcid.org/0000-0002-9775-0603"
     affiliation: "Flinders University; NSW Health"
 title: "Universal Open Game Theory Ontology (UOGTO)"
 doi: 10.5281/zenodo.20796937

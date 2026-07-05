@@ -15,6 +15,8 @@ DOCUMENTATION_URL = "https://edithatogo.github.io/UOGTO/"
 RELEASE_URL = "https://github.com/edithatogo/UOGTO/releases/tag/v1.0.0"
 RDF_ASSET_URL = "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl"
 BIOREGISTRY_RESPONSE_COMMENT = "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451"
+AUTHOR_ORCID_URL = "https://orcid.org/0000-0002-9775-0603"
+BIOREGISTRY_ORCID_COMMENT = "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980"
 
 REQUIRED_DOCUMENT_FRAGMENTS = [
     "Universal Open Game Theory Ontology (UOGTO)",
@@ -79,16 +81,18 @@ TARGETS = {
         "decision": "Do not submit without a defensible biomedical, clinical, public-health, behavioural-science, or health-simulation positioning note.",
     },
     "bioregistry": {
-        "status": "response_posted_awaiting_maintainer_review",
+        "status": "orcid_added_awaiting_maintainer_review",
         "route": "https://bioregistry.io/",
         "issue": "https://github.com/biopragmatics/bioregistry/issues/1999",
         "maintainer_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415",
         "template_update_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
         "namespace_orcid_feedback": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000",
         "response_comment": BIOREGISTRY_RESPONSE_COMMENT,
+        "orcid_comment": BIOREGISTRY_ORCID_COMMENT,
+        "author_orcid": AUTHOR_ORCID_URL,
         "review_status": "awaiting_bioregistry_maintainer_review_after_response",
         "namespace_decision": "Register uogto as the primary core prefix; retain uogtox as a separately documented extension prefix unless Bioregistry requires a separate compatibility decision.",
-        "orcid_handling": "Omit ORCID because no approved public ORCID is published in UOGTO project metadata.",
+        "orcid_handling": "ORCID is approved public project metadata and is mirrored in CITATION.cff, .zenodo.json, and the Bioregistry issue body.",
         "next_action": "Monitor maintainer response; if Bioregistry requires a squashed namespace, open a separate ontology-compatibility track.",
     },
     "obo_foundry": {

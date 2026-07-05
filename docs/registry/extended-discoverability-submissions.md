@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable; the Bioregistry namespace/ORCID response is posted and awaiting maintainer review.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable; the Bioregistry namespace response and approved ORCID follow-up are posted and awaiting maintainer review.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -80,19 +80,20 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Next action: do not submit unless that domain-positioning note is approved.
 
 ### Bioregistry
-- Status: `response_posted_awaiting_maintainer_review`
+- Status: `orcid_added_awaiting_maintainer_review`
 - Route: <https://bioregistry.io/>
 - Issue: <https://github.com/biopragmatics/bioregistry/issues/1999>
 - Maintainer template request: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415>
 - Template update comment: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>
 - Namespace/ORCID feedback: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000>
 - Namespace/ORCID response: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>
+- ORCID follow-up: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980>
 - Requested prefix: `uogto`
 - Requested URI format: `https://w3id.org/uogto/core#`
-- Evidence: no prior UOGTO Bioregistry issue was found before opening issue `1999`; the issue body was updated to the new-prefix template without inventing an ORCID absent from repository metadata.
+- Evidence: no prior UOGTO Bioregistry issue was found before opening issue `1999`; the issue body was updated to the new-prefix template, then updated again after explicit approval to include the public sole-author/contact ORCID.
 - Namespace decision: defend the published `v1.0.0` two-namespace design; use `uogto` / `https://w3id.org/uogto/core#` as the primary Bioregistry prefix record and keep `uogtox` / `https://w3id.org/uogto/extensions#` documented separately for extension modules unless Bioregistry requires a separate compatibility decision.
-- ORCID handling: omit ORCID because `CITATION.cff`, `.zenodo.json`, and the Bioregistry issue body do not publish an approved public ORCID.
-- Latest feedback: UOGTO maintainer response posted on 2026-07-05; awaiting Bioregistry maintainer review.
+- ORCID handling: approved sole-author/contact ORCID <https://orcid.org/0000-0002-9775-0603> is mirrored in `CITATION.cff`, `.zenodo.json`, and the Bioregistry issue body.
+- Latest feedback: UOGTO maintainer namespace response and ORCID follow-up posted on 2026-07-05; awaiting Bioregistry maintainer review.
 - Next action: monitor issue `1999`; if Bioregistry requires one squashed namespace, open a separate ontology-compatibility track instead of changing published IRIs in a registry metadata response.
 
 ### OBO Foundry

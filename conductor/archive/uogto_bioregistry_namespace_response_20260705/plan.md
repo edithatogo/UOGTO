@@ -34,7 +34,7 @@
 
 - Bioregistry response posted: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>.
 - Namespace decision: defend the published `v1.0.0` two-namespace design for the current response; register `uogto` as the primary core prefix and keep `uogtox` as a separately documented extension prefix.
-- ORCID decision: omit ORCID because no approved public ORCID is present in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue body.
+- ORCID decision: approved public sole-author/contact ORCID <https://orcid.org/0000-0002-9775-0603> is now present in `CITATION.cff`, `.zenodo.json`, and the Bioregistry issue body.
 - Verification passed: `make registry-links`; `make publication-status`; `make extended-registry-packet`; focused registry pytest (`14 passed`); `git diff --check`.
 
 ## Phase: Review Fixes

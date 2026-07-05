@@ -14,6 +14,7 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] Code license: MIT, see `LICENSE-CODE`
 - [x] Citation metadata: `CITATION.cff`
 - [x] Zenodo metadata: `.zenodo.json`
+- [x] Author ORCID: <https://orcid.org/0000-0002-9775-0603>
 - [x] WIDOCO documentation target: <https://edithatogo.github.io/UOGTO/>
 - [x] Zenodo DOI: <https://doi.org/10.5281/zenodo.20796937>
 

@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY_URL = "https://github.com/edithatogo/UOGTO"
 CORE_NAMESPACE = "https://w3id.org/uogto/core#"
 CC_BY_4 = "https://creativecommons.org/licenses/by/4.0/"
+AUTHOR_ORCID = "0000-0002-9775-0603"
+AUTHOR_ORCID_URL = f"https://orcid.org/{AUTHOR_ORCID}"
 PRIMARY_ONTOLOGY_URI = URIRef("https://w3id.org/uogto/core")
 DCTERMS = Namespace("http://purl.org/dc/terms/")
 VANN = Namespace("http://purl.org/vocab/vann/")
@@ -104,7 +106,13 @@ ZENODO_SCHEMA = {
             "items": {
                 "type": "object",
                 "required": ["name"],
-                "properties": {"name": {"type": "string", "minLength": 1}},
+                "properties": {
+                    "name": {"type": "string", "minLength": 1},
+                    "orcid": {
+                        "type": "string",
+                        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9X]{4}$",
+                    },
+                },
             },
         },
         "license": {"const": "cc-by-4.0"},
@@ -176,6 +184,8 @@ def check_citation():
         raise AssertionError("CITATION.cff version must match v1.0.0 release metadata")
     if citation["url"] != REPOSITORY_URL or citation["repository-code"] != REPOSITORY_URL:
         raise AssertionError("CITATION.cff repository URLs must point to edithatogo/UOGTO")
+    if not any(author.get("orcid") == AUTHOR_ORCID_URL for author in citation["authors"]):
+        raise AssertionError("CITATION.cff must publish the approved author ORCID")
 
 
 def check_zenodo():
@@ -186,6 +196,8 @@ def check_zenodo():
         raise AssertionError(".zenodo.json title does not match release title")
     if zenodo["version"] != "1.0.0":
         raise AssertionError(".zenodo.json version must match v1.0.0 release metadata")
+    if not any(creator.get("orcid") == AUTHOR_ORCID for creator in zenodo["creators"]):
+        raise AssertionError(".zenodo.json must publish the approved creator ORCID")
     if not any(item["identifier"] == REPOSITORY_URL for item in zenodo["related_identifiers"]):
         raise AssertionError(".zenodo.json related_identifiers must include the GitHub repository")
 

@@ -67,16 +67,16 @@
     {
       "id": "bioregistry-prefix-1999",
       "registry": "Bioregistry",
-      "status": "response_posted_awaiting_maintainer_review",
+      "status": "orcid_added_awaiting_maintainer_review",
       "classification": "metadata-policy",
       "owner": "UOGTO maintainer",
       "external_owner": "Bioregistry maintainers",
       "target_artifact": "docs/registry/bioregistry-namespace-response.md",
-      "evidence_url": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451",
+      "evidence_url": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980",
       "local_issue_url": "https://github.com/edithatogo/UOGTO/issues/34",
       "namespace_decision": "Defend the published two-namespace design for v1.0.0; register `uogto` as the primary core prefix and keep `uogtox` documented separately for extension modules unless Bioregistry requires a compatibility-track decision.",
-      "orcid_handling": "No ORCID is supplied because no approved public ORCID appears in CITATION.cff, .zenodo.json, or the Bioregistry issue body.",
-      "latest_observation": "UOGTO maintainer response posted on 2026-07-05 explaining the core/extension namespace split, limiting Bioregistry to the primary `uogto` core prefix, and omitting ORCID because it is not intentionally public in project metadata.",
+      "orcid_handling": "ORCID https://orcid.org/0000-0002-9775-0603 is approved public project metadata and is mirrored in CITATION.cff, .zenodo.json, and the Bioregistry issue body.",
+      "latest_observation": "UOGTO maintainer response posted on 2026-07-05 explaining the core/extension namespace split; follow-up on 2026-07-05 updated the Bioregistry issue body and comment thread with the approved sole-author/contact ORCID.",
       "acceptance_criterion": "Bioregistry maintainers accept the primary core prefix record, reject it, or request a squashed-namespace compatibility decision that is converted into a separate scoped Conductor track.",
       "next_action": "Monitor issue 1999; if Bioregistry requires one squashed namespace, open a separate ontology-compatibility track rather than editing published IRIs in this metadata response."
     }

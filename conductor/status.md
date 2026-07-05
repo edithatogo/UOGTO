@@ -10,7 +10,7 @@ Updated: `2026-07-05`
 - `uogto_interoperability_benchmarks_20260705`: Completed. Added an executable interoperability benchmark inventory, OpenSpiel and PettingZoo fixture examples, focused parse/query/runtime tests, and JSON-LD support in `RDFGameRunner` for fixture smoke coverage.
 - `uogto_alignment_evidence_expansion_20260705`: Completed and archived. Evidence-backed parent-axiom alignments are expanded, mapping-review queues are resolved to 12 accepted and 448 rejected rows, and synchronized comparison/manuscript artifacts are regenerated.
 - `uogto_manuscript_submission_revision_20260705`: Completed and archived. Submission decision memo, revision backlog, arXiv state record, manuscript/supplement framing updates, and verification evidence are in place; arXiv identifier and rendered-PDF approval remain external upload gates.
-- `uogto_bioregistry_namespace_response_20260705`: Completed and archived. Bioregistry response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defends the published core/extension namespace split, limits the registration to the primary `uogto` core prefix, omits ORCID because it is not public project metadata, and leaves any required namespace squashing to a separate compatibility track.
+- `uogto_bioregistry_namespace_response_20260705`: Completed and archived. Bioregistry response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defends the published core/extension namespace split, limits the registration to the primary `uogto` core prefix, and leaves any required namespace squashing to a separate compatibility track. ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980> adds the approved sole-author/contact ORCID.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 - `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
 
@@ -45,11 +45,11 @@ Updated: `2026-07-05`
   - LOV issue `83` remains open with no maintainer feedback.
   - OLS issue `1305` remains open but has maintainer acceptance intent to add the ontology.
   - Ontobee issue `212` remains open with no maintainer feedback.
-  - Bioregistry issue `1999` now has UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defending the published two-namespace design, limiting Bioregistry to the primary `uogto` core prefix, and omitting ORCID absent approved public metadata.
+  - Bioregistry issue `1999` now has UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defending the published two-namespace design, limiting Bioregistry to the primary `uogto` core prefix, plus ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980>.
 - Added durable triage docs at `docs/registry/publication-follow-up-triage.md` and `.json`.
 - Issue `#34` tracked the Bioregistry namespace/ORCID response decision.
 - Updated registry docs for LOV, OLS, extended discoverability, and documentation index.
-- Updated the extended-registry handoff generator and tests so Bioregistry is represented as `response_posted_awaiting_maintainer_review`.
+- Updated the extended-registry handoff generator and tests so Bioregistry is represented as `orcid_added_awaiting_maintainer_review`.
 - Verification passed: focused registry/triage pytest (`21 passed`); `make publishing-metadata`; `make registry-links`; `make publication-status`; `make publication-status-live`; `make extended-registry-packet`; `make validate`; `make test` (`242 passed, 1 skipped, 52 warnings`); `git diff --check`.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03

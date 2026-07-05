@@ -8,6 +8,8 @@ Maintainer feedback: <https://github.com/biopragmatics/bioregistry/issues/1999#i
 
 UOGTO response: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>
 
+ORCID follow-up: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980>
+
 ## Decision
 
 Retain the published UOGTO `v1.0.0` two-namespace design for the registry
@@ -28,10 +30,11 @@ format `https://w3id.org/uogto/core#$1`. The extension namespace
 
 ## ORCID Handling
 
-No ORCID was supplied in the Bioregistry response because no approved public
-ORCID is published in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue
-body. UOGTO should only add an ORCID after it is intentionally published in
-project metadata.
+The ORCID <https://orcid.org/0000-0002-9775-0603> is approved public project
+metadata for the current sole author/contact. It is now mirrored in
+`CITATION.cff`, `.zenodo.json`, and the Bioregistry issue body. A follow-up
+comment was posted so Bioregistry maintainers can see the update in the issue
+thread.
 
 ## Follow-Up Rule
 
