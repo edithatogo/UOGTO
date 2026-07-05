@@ -36,3 +36,7 @@
 - Namespace decision: defend the published `v1.0.0` two-namespace design for the current response; register `uogto` as the primary core prefix and keep `uogtox` as a separately documented extension prefix.
 - ORCID decision: omit ORCID because no approved public ORCID is present in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue body.
 - Verification passed: `make registry-links`; `make publication-status`; `make extended-registry-packet`; focused registry pytest (`14 passed`); `git diff --check`.
+
+## Phase: Review Fixes
+
+- [x] Task: Apply review suggestions d0dbd79
