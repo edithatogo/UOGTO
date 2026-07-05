@@ -4,10 +4,11 @@
 
 - Completed Conductor track `uogto_bioregistry_namespace_response_20260705`.
 - Rechecked Bioregistry issue `1999`; maintainer feedback requested a decision on squashing `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#`, plus ORCID metadata.
-- Confirmed UOGTO public metadata does not publish an approved ORCID in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue body.
-- Posted UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>, defending the published `v1.0.0` two-namespace design, asking Bioregistry to treat `uogto` as the primary core prefix, keeping `uogtox` documented separately for extension modules, and omitting ORCID rather than inferring a private identifier.
+- Initially confirmed UOGTO public metadata did not publish an approved ORCID in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue body.
+- Posted UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>, defending the published `v1.0.0` two-namespace design, asking Bioregistry to treat `uogto` as the primary core prefix, and keeping `uogtox` documented separately for extension modules.
+- After explicit maintainer approval, updated the Bioregistry issue body and posted ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980> with approved sole-author/contact ORCID <https://orcid.org/0000-0002-9775-0603>.
 - Added `docs/registry/bioregistry-namespace-response.md` as the durable decision record.
-- Updated `docs/registry/publication-follow-up-triage.*`, `docs/registry/extended-discoverability-submissions.md`, `docs/releases/v1.0.md`, and the extended-registry handoff generator/tests so Bioregistry is represented as `response_posted_awaiting_maintainer_review`.
+- Updated `docs/registry/publication-follow-up-triage.*`, `docs/registry/extended-discoverability-submissions.md`, `docs/releases/v1.0.md`, `CITATION.cff`, `.zenodo.json`, and the extended-registry handoff generator/tests so Bioregistry is represented as `orcid_added_awaiting_maintainer_review`.
 - Conductor review found and fixed one triage `target_artifact` row mix-up, with regression assertions added for Ontobee and Bioregistry target artifacts.
 - PR review fixed duplicated Bioregistry response URL handling in `tests/test_extended_registry_handoff.py` by reusing the handoff generator constant.
 - Archived the completed track under `conductor/archive/uogto_bioregistry_namespace_response_20260705/` and removed the active registry entry.
