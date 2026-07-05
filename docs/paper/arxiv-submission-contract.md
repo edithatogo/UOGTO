@@ -1,12 +1,17 @@
 # arXiv Submission Contract
 
-Updated: `2026-07-02`
+Updated: `2026-07-05`
 
 This contract records editor, reviewer, and publisher sign-off for the UOGTO arXiv submission package. It is governed by `conductor/agents/arxiv-submission-agents.json` and `conductor/workflows/arxiv-submission-contract-workflow.md`.
 
 The agent layer is process evidence, not external peer review. Role definitions exist in the registry, live Codex subagents reviewed the process/manuscript, and review notes are archived under `docs/paper/reviews/`.
 
 Additional academic-review workflows from `edithatogo/academic-research-skills` were installed and applied on 2026-07-02. The installed skill set was `academic-paper`, `academic-paper-reviewer`, `academic-pipeline`, and `deep-research`; the inspected upstream commit was `734dd23e03e7261db9204702be9221119a30d7d2`. The review synthesis is archived at `docs/paper/reviews/academic-research-skills-arxiv-review-2026-07-02.md`.
+
+The live external submission state is recorded in
+`docs/paper/arxiv-submission-state.md`. As of 2026-07-05, the arXiv identifier,
+version, final uploaded artifact hashes, and arXiv-rendered PDF approval remain
+external pending fields.
 
 ## Executed Codex Agent Runs
 
@@ -59,7 +64,7 @@ Warning disposition:
 | Agent | Status | Reviewed artifacts | Outcome |
 | --- | --- | --- | --- |
 | `publisher_submission_manager` | pass-ci-upload-ready | `dist/arxiv/uogto-arxiv-source.tar.gz`; `dist/arxiv/arxiv-submission-manifest.json`; `dist/arxiv/SHA256SUMS`; `docs/paper/arxiv-submission-process.md` | Upload candidate, manifest, checksum file, and operator checklist are present. The current-branch CI artifact must record a clean tracked tree. |
-| `provenance_publisher` | pass-attested | `.github/workflows/arxiv-preflight.yml`; `docs/release-process.md`; `conductor/runlog.md` | CI workflow performs strict arXiv-engine preflight, uploads the 90-day artifact, and attests the checksum-bound tarball. The downloaded artifact must pass `gh attestation verify` before upload. |
+| `provenance_publisher` | pending-current-branch-attestation | `.github/workflows/arxiv-preflight.yml`; `docs/release-process.md`; `conductor/runlog.md`; `docs/paper/arxiv-submission-state.md` | CI workflow performs strict arXiv-engine preflight, uploads the 90-day artifact, and attests the checksum-bound tarball. The downloaded artifact must pass `gh attestation verify` before upload. |
 
 Publisher artifact evidence:
 
@@ -87,7 +92,7 @@ Publisher artifact evidence:
 | Privacy/source-leak audit | pass | `docs/paper/arxiv-source-privacy-audit.json`; `docs/paper/arxiv-source-privacy-audit.md`; no `C:/Users` or OneDrive path disclosure in published audit artifacts. |
 | Citation reconciliation | pass | SourceRight citation reconciliation reports 19 matched citations and 0 issues. |
 | Upload artifact determinism | pass | CI artifact manifest must report `dirty: false`, `dirty_file_count: 0`, and `dirty_entries: []`; tarball SHA-256 must match `SHA256SUMS`. |
-| GitHub provenance attestation | pass | `.github/workflows/arxiv-preflight.yml` uses `actions/attest@v4` with `subject-checksums: dist/arxiv/SHA256SUMS`; the downloaded artifact must pass `gh attestation verify <tarball> --repo edithatogo/UOGTO`. |
+| GitHub provenance attestation | pending-current-branch-artifact | `.github/workflows/arxiv-preflight.yml` uses `actions/attest@v4` with `subject-checksums: dist/arxiv/SHA256SUMS`; the downloaded artifact must pass `gh attestation verify <tarball> --repo edithatogo/UOGTO`. |
 | Strict arXiv reviewer simulation | pass | `docs/paper/arxiv-strict-review-report.md` records `998.18/1000`, no blockers, and a minimum category score of `98.0%`; the only warning is the expected local pre-commit dirty-manifest provenance deduction. |
 
 ## Strict arXiv Review Simulation
@@ -103,4 +108,5 @@ The score is normalized to `1000` from the raw category weights. Current status 
 - Upload the CI artifact `uogto-arxiv-source.tar.gz` from the latest successful current-branch arXiv Preflight run to arXiv.
 - Inspect and approve the arXiv-rendered PDF.
 - Complete `docs/paper/arxiv-post-submission-record-template.md` after arXiv assigns an identifier.
+- Update `docs/paper/arxiv-submission-state.md` with the identifier, version, rendered-PDF approval, clean CI run, and uploaded artifact hashes.
 - Record the assigned arXiv identifier in release notes, citation metadata, and publication-status artifacts.

@@ -145,9 +145,9 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: Completed
 - **Link**: [./tracks/uogto_interoperability_benchmarks_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_interoperability_benchmarks_20260705/)
 
-## [ ] Track: uogto_manuscript_submission_revision_20260705
+## [x] Track: uogto_manuscript_submission_revision_20260705
 - **Description**: Plan arXiv closeout, manuscript revision, and target-venue strategy from presubmission review evidence.
-- **Status**: New
+- **Status**: Completed
 - **Link**: [./tracks/uogto_manuscript_submission_revision_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_manuscript_submission_revision_20260705/)
 
 ## [ ] Track: uogto_bioregistry_namespace_response_20260705

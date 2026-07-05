@@ -202,7 +202,7 @@ The case-study package demonstrates UOGTO across mechanism design, voting/social
 
 ### Submission readiness
 
-The pre-submission package now contains a polished manuscript draft, supplement prose, SourceRight reference checks, Authentext audit reports, arXiv privacy audit manifests, PRISMA SVG/PDF exports, a created PowerPoint deck, and a completed first figure-score loop. It is not yet a final submission package: final submission still requires frozen figure numbering and caption text, a rerun score loop, a clean strict arXiv-engine preflight, and clean-tree provenance.
+The pre-submission package now contains a polished manuscript draft, supplement prose, SourceRight reference checks, Authentext audit reports, arXiv privacy audit manifests, PRISMA SVG/PDF exports, a created PowerPoint deck, a completed first figure-score loop, and a figure/caption freeze manifest. It is not yet an externally complete submission record: final arXiv closeout still requires a clean current-branch strict arXiv-engine CI artifact, matching attestation, upload by a registered arXiv author, arXiv-rendered PDF inspection, and identifier recording.
 
 ## Supplementary tables
 
@@ -258,7 +258,7 @@ The pre-submission package now contains a polished manuscript draft, supplement 
 | C6 | Network and overlap analyses identify bridge concepts and sensitivity rather than universal coverage. | S5 | `docs/ontology-comparison/network-analysis.json`; `docs/ontology-comparison/network-sensitivity.md`; `docs/ontology-comparison/overlap-metrics.json` | Moderate to strong analysis support | Keep bridge claims conditional on sensitivity results. |
 | C7 | Quality benchmarking covers annotations, orphan classes, relation richness, hierarchy depth, imports, SHACL, examples, competency questions, profile, and reasoner status. | S3 | `docs/article-hardening/quality-metrics.json`; `docs/article-hardening/reasoner-report.md`; `docs/article-hardening/robot/` | Strong metrics support | Preserve plain-English interpretation for non-ontology reviewers. |
 | C8 | Reproducibility surfaces include RO-Crate, DuckDB design, tabular artefacts, dashboard outputs, SourceRight, arXiv checks, and CI. | S7, S9 | `docs/article-hardening/ro-crate-metadata.json`; `docs/article-hardening/duckdb-artifact-store.md`; `docs/paper/sourceright-report.md`; `.github/workflows/` | Strong package support | Re-run SourceRight and arXiv preflight after final citation changes. |
-| C9 | The package is improved but not yet frozen for submission. | S8, S9 | `image_scores.csv`; `presubmission_decision_memo.md`; `docs/presentation/uogto_nature_presubmission_deck.pptx` | Strong review evidence | Freeze supplement prose, figure numbering, captions, and deck claims before submission. |
+| C9 | The package has a frozen manuscript/supplement figure surface but not an externally complete arXiv record. | S8, S9 | `image_scores.csv`; `presubmission_decision_memo.md`; `docs/presentation/uogto_nature_presubmission_deck.pptx`; `docs/paper/arxiv-submission-state.md` | Strong review evidence | Use the clean CI artifact for upload, inspect the arXiv-rendered PDF, and record the assigned identifier before claiming external submission completion. |
 
 ## Data and code availability
 
@@ -273,4 +273,5 @@ The supplement is ready for final submission packaging when:
 - `make article-facing-tables`, `make manuscript-sourcecheck`, `make arxiv-privacy-audit`, and `make validate` pass;
 - SourceRight reports 0 citation reconciliation issues;
 - Authentext audit reports 0 high-signal findings for the supplement prose;
-- final release DOI, namespace IRIs, licence, and preferred citation are synchronized across the paper, README, RO-Crate, and citation/reuse page.
+- final release DOI, namespace IRIs, licence, and preferred citation are synchronized across the paper, README, RO-Crate, and citation/reuse page;
+- the arXiv submission state records the assigned identifier, rendered-PDF approval, clean CI artifact hashes, and attestation evidence after the external upload.
