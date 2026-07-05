@@ -42,6 +42,7 @@ def test_every_competency_query_has_expected_results() -> None:
     expected_queries = {entry["query"] for entry in manifest["queries"]}
     actual_queries = {path.name for path in (ROOT / "competency-questions").glob("*.rq")}
 
+    assert len(expected_queries) == len(manifest["queries"])
     assert expected_queries == actual_queries
 
 
