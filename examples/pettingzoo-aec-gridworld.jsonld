@@ -1,0 +1,152 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@graph": [
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo-aec-gridworld",
+      "@type": [
+        "GameSpecification",
+        "MarkovGame",
+        "ExecutableGameGraph"
+      ],
+      "identifier": "pettingzoo-aec-gridworld",
+      "name": "PettingZoo AEC Gridworld Interoperability Fixture",
+      "description": "Illustrative UOGTO fixture for a PettingZoo-style alternating-agent Markov game. This is a binding fixture, not a PettingZoo environment implementation.",
+      "hasPlayer": [
+        {
+          "@id": "http://example.org/uogto/interop/pettingzoo/agent-red"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/pettingzoo/agent-blue"
+        }
+      ],
+      "hasTransition": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/gridworld-transition"
+      },
+      "compiledToExecutionModel": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/aec-execution-model"
+      },
+      "hasExecutionBinding": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/aec-execution-binding"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/agent-red",
+      "@type": "Player",
+      "identifier": "agent-red",
+      "name": "Red Agent",
+      "hasPolicy": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/red-policy"
+      },
+      "hasActionSpace": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/grid-action-space"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/agent-blue",
+      "@type": "Player",
+      "identifier": "agent-blue",
+      "name": "Blue Agent",
+      "hasPolicy": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/blue-policy"
+      },
+      "hasActionSpace": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/grid-action-space"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/red-policy",
+      "@type": "Policy",
+      "identifier": "red-random-policy",
+      "name": "Red random policy"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/blue-policy",
+      "@type": "Policy",
+      "identifier": "blue-random-policy",
+      "name": "Blue random policy"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/grid-action-space",
+      "@type": "ActionSpace",
+      "identifier": "grid-action-space",
+      "name": "Discrete grid action space",
+      "description": "Representative movement action space for a gridworld environment."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/grid-observation-space",
+      "@type": "ObservationSpace",
+      "identifier": "grid-observation-space",
+      "name": "Grid observation space",
+      "description": "Representative observation space containing local cell state and agent positions."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/grid-reward-function",
+      "@type": "RewardFunction",
+      "identifier": "capture-reward-function",
+      "name": "Capture reward function",
+      "description": "Illustrative reward function for a gridworld capture objective."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/gridworld-transition",
+      "@type": "TransitionFunction",
+      "identifier": "aec-gridworld-transition",
+      "name": "AEC gridworld transition function",
+      "description": "Transition function representing alternating agent turns and successor grid states."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/aec-environment",
+      "@type": "MultiAgentEnvironment",
+      "identifier": "pettingzoo-aec-environment",
+      "name": "PettingZoo AEC environment binding target",
+      "description": "Environment node grouping the observation, action, reward, and learning hooks used by the fixture.",
+      "hasObservationSpace": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/grid-observation-space"
+      },
+      "hasLearningAlgorithm": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/self-play-baseline"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/self-play-baseline",
+      "@type": "LearningAlgorithm",
+      "identifier": "self-play-baseline",
+      "name": "Self-play baseline",
+      "discountFactor": 0.95,
+      "learningRate": 0.001
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/aec-execution-model",
+      "@type": "ExecutionModel",
+      "identifier": "pettingzoo-aec-execution-model",
+      "name": "PettingZoo AEC execution model",
+      "description": "Execution-model node for a future PettingZoo alternating-agent adapter."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/aec-execution-binding",
+      "@type": "ExecutionBinding",
+      "identifier": "pettingzoo-aec-execution-binding",
+      "name": "PettingZoo AEC execution binding",
+      "description": "Links the Markov-game fixture to runtime and simulation bindings for a future PettingZoo adapter.",
+      "hasRuntimeBinding": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/aec-runtime-binding"
+      },
+      "hasSimulationBinding": {
+        "@id": "http://example.org/uogto/interop/pettingzoo/aec-simulation-binding"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/aec-runtime-binding",
+      "@type": "RuntimeBinding",
+      "identifier": "pettingzoo-aec-runtime",
+      "name": "PettingZoo AEC runtime binding",
+      "description": "Optional runtime binding for a PettingZoo environment constructor."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/pettingzoo/aec-simulation-binding",
+      "@type": "SimulationBinding",
+      "identifier": "pettingzoo-aec-simulation",
+      "name": "PettingZoo AEC simulation binding",
+      "description": "Simulation binding for episode stepping and trace extraction."
+    }
+  ]
+}

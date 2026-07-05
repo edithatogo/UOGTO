@@ -3,6 +3,7 @@
 ## Repository Guides
 - [Ontology design patterns](ontology-design-patterns.md)
 - [Modelling decisions](modelling-decisions.md)
+- [Interoperability benchmarks](interoperability-benchmarks.md)
 - [Glossary](glossary.md)
 - [How to cite and reuse UOGTO](how-to-cite-and-reuse-uogto.md)
 - [Release process](release-process.md)

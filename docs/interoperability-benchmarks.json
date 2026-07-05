@@ -1,0 +1,87 @@
+{
+  "schema_version": "2026-07-05",
+  "track_id": "uogto_interoperability_benchmarks_20260705",
+  "verification_command": ".pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py",
+  "default_gate": "make validate",
+  "heavy_dependency_policy": "External game and simulation engines are not installed by the default validation gate. Benchmarks start with RDF/JSON-LD parse, SPARQL query, and lightweight runner smoke coverage.",
+  "targets": [
+    {
+      "id": "openspiel-matrix-game",
+      "target_tool": "OpenSpiel",
+      "target_family": "game-theory runtime and algorithm suite",
+      "license_spdx": "Apache-2.0",
+      "license_source": "https://github.com/google-deepmind/open_spiel",
+      "integration_status": "asserted_fixture",
+      "mapping_claim_level": "asserted UOGTO binding fixture with local RDFGameRunner smoke coverage; no external OpenSpiel round-trip claim",
+      "fixture_path": "examples/openspiel-matrix-game.jsonld",
+      "verification": [
+        "Parse JSON-LD with RDFLib",
+        "Query UOGTO ExecutableGameGraph and ExecutionBinding nodes",
+        "Load fixture with RDFGameRunner and query a payoff profile"
+      ],
+      "verification_command": ".pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py::test_openspiel_fixture_is_queryable_by_runner",
+      "priority": 1,
+      "next_adapter_step": "Add optional pyspiel round-trip tests behind an extras dependency or isolated CI job."
+    },
+    {
+      "id": "pettingzoo-aec-gridworld",
+      "target_tool": "PettingZoo",
+      "target_family": "multi-agent reinforcement learning environment API",
+      "license_spdx": "MIT",
+      "license_source": "https://github.com/Farama-Foundation/PettingZoo/blob/master/LICENSE",
+      "integration_status": "illustrative_fixture",
+      "mapping_claim_level": "illustrative AEC-style Markov-game binding fixture with parse/query coverage; no PettingZoo runtime dependency in default gate",
+      "fixture_path": "examples/pettingzoo-aec-gridworld.jsonld",
+      "verification": [
+        "Parse JSON-LD with RDFLib",
+        "Query MarkovGame transition coverage required by SHACL",
+        "Query runtime and simulation binding nodes"
+      ],
+      "verification_command": ".pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py::test_pettingzoo_fixture_exposes_markov_runtime_bindings",
+      "priority": 2,
+      "next_adapter_step": "Add optional PettingZoo environment-constructor tests once an adapter module exists."
+    },
+    {
+      "id": "gambit-strategic-game",
+      "target_tool": "Gambit",
+      "target_family": "finite non-cooperative game solver and interchange formats",
+      "license_spdx": "GPL-2.0",
+      "license_source": "https://github.com/gambitproject/gambit",
+      "integration_status": "future_candidate",
+      "mapping_claim_level": "future candidate only; GPL adapter boundary and file-format-only exchange need review before implementation",
+      "fixture_path": null,
+      "verification": [],
+      "verification_command": null,
+      "priority": 3,
+      "next_adapter_step": "Prototype a file-format fixture without linking Gambit runtime code into the default package."
+    },
+    {
+      "id": "gymnasium-single-agent-wrapper",
+      "target_tool": "Gymnasium",
+      "target_family": "single-agent reinforcement learning environment API",
+      "license_spdx": "MIT",
+      "license_source": "https://github.com/Farama-Foundation/Gymnasium/blob/main/LICENSE",
+      "integration_status": "future_candidate",
+      "mapping_claim_level": "future candidate for single-agent or reduction examples; lower priority than PettingZoo for multi-agent semantics",
+      "fixture_path": null,
+      "verification": [],
+      "verification_command": null,
+      "priority": 4,
+      "next_adapter_step": "Use only where a UOGTO game has a justified single-agent environment projection."
+    },
+    {
+      "id": "mesa-abm-binding",
+      "target_tool": "Mesa",
+      "target_family": "agent-based modelling framework",
+      "license_spdx": "Apache-2.0",
+      "license_source": "https://mesa.readthedocs.io/",
+      "integration_status": "future_candidate",
+      "mapping_claim_level": "future candidate for network and agent-based simulation traces; no fixture in this track",
+      "fixture_path": null,
+      "verification": [],
+      "verification_command": null,
+      "priority": 5,
+      "next_adapter_step": "Map network-game agents, schedule steps, and event traces before adding an optional Mesa dependency."
+    }
+  ]
+}

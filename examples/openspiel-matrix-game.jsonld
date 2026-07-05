@@ -1,0 +1,289 @@
+{
+  "@context": "../jsonld/context.jsonld",
+  "@graph": [
+    {
+      "@id": "http://example.org/uogto/interop/openspiel-matrix-game",
+      "@type": [
+        "GameSpecification",
+        "ExecutableGameGraph"
+      ],
+      "identifier": "openspiel-matrix-game",
+      "name": "OpenSpiel Matrix Game Interoperability Fixture",
+      "description": "UOGTO fixture for an OpenSpiel-style two-player matrix game. This asserts a semantic binding pattern, not a completed OpenSpiel round-trip adapter.",
+      "hasPlayer": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-player"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-player"
+        }
+      ],
+      "compiledToExecutionModel": {
+        "@id": "http://example.org/uogto/interop/openspiel/execution-model"
+      },
+      "hasExecutionBinding": {
+        "@id": "http://example.org/uogto/interop/openspiel/execution-binding"
+      },
+      "hasStrategyProfile": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/profile-cooperate-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/profile-defect-cooperate"
+        }
+      ],
+      "https://w3id.org/uogto/core#hasActionSpace": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-action-space"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-action-space"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-player",
+      "@type": "Player",
+      "identifier": "row-player",
+      "name": "Row Player"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-player",
+      "@type": "Player",
+      "identifier": "column-player",
+      "name": "Column Player"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-action-space",
+      "@type": "ActionSpace",
+      "identifier": "row-action-space",
+      "name": "Row Action Space",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/row-player"
+      },
+      "https://w3id.org/uogto/core#hasAction": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-defect"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-action-space",
+      "@type": "ActionSpace",
+      "identifier": "column-action-space",
+      "name": "Column Action Space",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/column-player"
+      },
+      "https://w3id.org/uogto/core#hasAction": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-defect"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-cooperate",
+      "@type": "Action",
+      "identifier": "row-cooperate",
+      "name": "Cooperate",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/row-player"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-defect",
+      "@type": "Action",
+      "identifier": "row-defect",
+      "name": "Defect",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/row-player"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-cooperate",
+      "@type": "Action",
+      "identifier": "column-cooperate",
+      "name": "Cooperate",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/column-player"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-defect",
+      "@type": "Action",
+      "identifier": "column-defect",
+      "name": "Defect",
+      "https://w3id.org/uogto/core#belongsToPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/column-player"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/profile-cooperate-cooperate",
+      "@type": "StrategyProfile",
+      "identifier": "profile-cooperate-cooperate",
+      "hasStrategy": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-cooperate-strategy"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-cooperate-strategy"
+        }
+      ],
+      "https://w3id.org/uogto/core#hasAction": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-cooperate"
+        }
+      ],
+      "hasPayoff": {
+        "@id": "http://example.org/uogto/interop/openspiel/payoff-cooperate-cooperate"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/payoff-cooperate-cooperate",
+      "@type": "PayoffProfile",
+      "identifier": "payoff-cooperate-cooperate",
+      "hasPayoffForPlayer": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-payoff-cooperate-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-payoff-cooperate-cooperate"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-payoff-cooperate-cooperate",
+      "@type": "PlayerPayoffLink",
+      "identifier": "row-payoff-cooperate-cooperate",
+      "payoffPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/row-player"
+      },
+      "payoffValue": 3.0
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-payoff-cooperate-cooperate",
+      "@type": "PlayerPayoffLink",
+      "identifier": "column-payoff-cooperate-cooperate",
+      "payoffPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/column-player"
+      },
+      "payoffValue": 3.0
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/profile-defect-cooperate",
+      "@type": "StrategyProfile",
+      "identifier": "profile-defect-cooperate",
+      "hasStrategy": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-defect-strategy"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-cooperate-strategy"
+        }
+      ],
+      "https://w3id.org/uogto/core#hasAction": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-defect"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-cooperate"
+        }
+      ],
+      "hasPayoff": {
+        "@id": "http://example.org/uogto/interop/openspiel/payoff-defect-cooperate"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/payoff-defect-cooperate",
+      "@type": "PayoffProfile",
+      "identifier": "payoff-defect-cooperate",
+      "hasPayoffForPlayer": [
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/row-payoff-defect-cooperate"
+        },
+        {
+          "@id": "http://example.org/uogto/interop/openspiel/column-payoff-defect-cooperate"
+        }
+      ]
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-payoff-defect-cooperate",
+      "@type": "PlayerPayoffLink",
+      "identifier": "row-payoff-defect-cooperate",
+      "payoffPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/row-player"
+      },
+      "payoffValue": 5.0
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-payoff-defect-cooperate",
+      "@type": "PlayerPayoffLink",
+      "identifier": "column-payoff-defect-cooperate",
+      "payoffPlayer": {
+        "@id": "http://example.org/uogto/interop/openspiel/column-player"
+      },
+      "payoffValue": 0.0
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-cooperate-strategy",
+      "@type": "Strategy",
+      "identifier": "row-cooperate-strategy",
+      "name": "Row cooperate strategy"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/row-defect-strategy",
+      "@type": "Strategy",
+      "identifier": "row-defect-strategy",
+      "name": "Row defect strategy"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/column-cooperate-strategy",
+      "@type": "Strategy",
+      "identifier": "column-cooperate-strategy",
+      "name": "Column cooperate strategy"
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/execution-model",
+      "@type": "ExecutionModel",
+      "identifier": "openspiel-matrix-execution-model",
+      "name": "OpenSpiel matrix-game execution model",
+      "description": "Execution-model node representing the external matrix-game runtime target."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/execution-binding",
+      "@type": "ExecutionBinding",
+      "identifier": "openspiel-matrix-execution-binding",
+      "name": "OpenSpiel matrix-game execution binding",
+      "description": "Maps players, action spaces, and payoff profiles to a matrix-game runtime contract.",
+      "hasRuntimeBinding": {
+        "@id": "http://example.org/uogto/interop/openspiel/runtime-binding"
+      },
+      "hasSolverBinding": {
+        "@id": "http://example.org/uogto/interop/openspiel/solver-binding"
+      }
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/runtime-binding",
+      "@type": "RuntimeBinding",
+      "identifier": "openspiel-pyspiel-runtime",
+      "name": "pyspiel runtime binding",
+      "description": "Optional Python runtime target for a future OpenSpiel adapter."
+    },
+    {
+      "@id": "http://example.org/uogto/interop/openspiel/solver-binding",
+      "@type": "SolverBinding",
+      "identifier": "openspiel-matrix-solver-binding",
+      "name": "OpenSpiel matrix solver binding",
+      "description": "Optional solver binding for future matrix-game equilibrium or value checks."
+    }
+  ]
+}

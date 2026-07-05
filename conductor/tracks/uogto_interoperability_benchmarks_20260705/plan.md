@@ -2,21 +2,21 @@
 
 ## Phase 1: Target Selection
 
-- [ ] Task: Build interoperability target inventory
-    - [ ] Review existing runner, playground, examples, and alignment modules.
-    - [ ] Rank candidate tool targets by relevance, license, maintenance, and testability.
-    - [ ] Record target disposition in a benchmark inventory document.
+- [x] Task: Build interoperability target inventory
+    - [x] Review existing runner, playground, examples, and alignment modules.
+    - [x] Rank candidate tool targets by relevance, license, maintenance, and testability.
+    - [x] Record target disposition in a benchmark inventory document.
 
 ## Phase 2: Fixtures and Queries
 
-- [ ] Task: Add executable fixture coverage
-    - [ ] Add or extend examples for at least two priority tools or formats.
-    - [ ] Add competency-query expectations or focused tests for those fixtures.
-    - [ ] Document asserted versus illustrative mappings.
+- [x] Task: Add executable fixture coverage
+    - [x] Add or extend examples for at least two priority tools or formats.
+    - [x] Add competency-query expectations or focused tests for those fixtures.
+    - [x] Document asserted versus illustrative mappings.
 
 ## Phase 3: Runtime Verification
 
-- [ ] Task: Verify local execution surface
-    - [ ] Add runner/playground smoke coverage where dependencies are lightweight.
-    - [ ] Keep heavy integrations optional or CI-isolated.
-    - [ ] Run `make validate` and focused runtime tests.
+- [x] Task: Verify local execution surface
+    - [x] Add runner/playground smoke coverage where dependencies are lightweight.
+    - [x] Keep heavy integrations optional or CI-isolated.
+    - [x] Run `make validate` and focused runtime tests.

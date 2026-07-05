@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
+from urllib.parse import urlparse
 
 import rdflib
 from rdflib.namespace import RDF, RDFS
@@ -11,7 +13,17 @@ UOGTO = rdflib.Namespace("https://w3id.org/uogto/core#")
 class RDFGameRunner:
     def __init__(self, ttl_path):
         self.graph = rdflib.Graph()
-        self.graph.parse(ttl_path, format="turtle")
+        self.graph.parse(ttl_path, format=self._format_for_path(ttl_path))
+
+    @staticmethod
+    def _format_for_path(path):
+        path_text = getattr(path, "name", str(path))
+        parsed = urlparse(path_text)
+        path_part = parsed.path if parsed.scheme else path_text
+        suffix = Path(path_part).suffix.lower()
+        if suffix in {".json", ".jsonld"}:
+            return "json-ld"
+        return "turtle"
         
     def get_game_specification(self):
         # Query for game spec nodes
