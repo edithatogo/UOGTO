@@ -1,5 +1,21 @@
 # Conductor Run Log
 
+## 2026-07-05 - Validation contract coherence and roadmap tracks
+
+- Created active Conductor track `uogto_validation_contract_coherence_20260705` for competency-query expected-result completeness, release metadata coherence, and generated text normalization.
+- Created roadmap tracks:
+  - `uogto_registry_publication_followthrough_20260705`;
+  - `uogto_interoperability_benchmarks_20260705`;
+  - `uogto_alignment_evidence_expansion_20260705`;
+  - `uogto_manuscript_submission_revision_20260705`.
+- Created matching GitHub issues `#27` through `#31` and recorded each issue URL in track metadata.
+- Consolidated competency-query expected results into `validation/competency-query-expectations.json`; removed stale `competency-questions/expected-results.json`.
+- Added validator/test coverage requiring every `.rq` competency query to have expected-result coverage and allowing required binding subsets when queries return extra selected variables.
+- Added first-price-auction incentive-constraint example coverage for `cq06`.
+- Aligned `pyproject.toml` and `pixi.toml` with the v1.0.0 ontology release metadata.
+- Added `.gitattributes` line-ending normalization rules to reduce generated CSV churn.
+- Verification passed: `make validate`; focused competency-query and JSON-LD pytest; `make test` (`235 passed, 1 skipped, 42 warnings`); `make publishing-metadata`; `git diff --check`.
+
 ## 2026-07-03 - Repository Validation And Runtime Hardening
 
 - Created and implemented `repo_validation_runtime_hardening_20260703`.

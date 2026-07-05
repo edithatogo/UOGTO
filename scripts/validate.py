@@ -114,7 +114,10 @@ def validate_competency_query_expectations(ontology_graph):
             for row in rows
         ]
         for required in entry.get("required_bindings", []):
-            if required not in row_bindings:
+            if not any(
+                all(row.get(binding) == value for binding, value in required.items())
+                for row in row_bindings
+            ):
                 print(
                     f"FAIL: Competency query {entry['query']} did not return "
                     f"required binding {required}."

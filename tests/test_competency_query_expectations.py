@@ -29,4 +29,22 @@ def test_competency_query_expectation_manifest_is_satisfied() -> None:
         labels = [str(var) for var in rows[0].labels] if rows else []
         bindings = [{labels[index]: str(value) for index, value in enumerate(row)} for row in rows]
         for required in entry.get("required_bindings", []):
-            assert required in bindings
+            assert any(
+                all(row.get(binding) == value for binding, value in required.items())
+                for row in bindings
+            ), entry["query"]
+
+
+def test_every_competency_query_has_expected_results() -> None:
+    manifest = json.loads(
+        (ROOT / "validation" / "competency-query-expectations.json").read_text(encoding="utf-8")
+    )
+    expected_queries = {entry["query"] for entry in manifest["queries"]}
+    actual_queries = {path.name for path in (ROOT / "competency-questions").glob("*.rq")}
+
+    assert len(expected_queries) == len(manifest["queries"])
+    assert expected_queries == actual_queries
+
+
+def test_no_legacy_competency_expectation_manifest() -> None:
+    assert not (ROOT / "competency-questions" / "expected-results.json").exists()
