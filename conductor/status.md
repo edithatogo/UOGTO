@@ -4,6 +4,7 @@ Updated: `2026-07-05`
 
 ## Active Work
 
+- `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. GitHub Project #8 is now issue-backed with 62 items: 32 Conductor track issues, 13 umbrella/workstream issues, and 17 merged pull requests. Stale draft placeholders were replaced, 21 Project #8 fields are available, and RI-HERO Project #9 mirrors the same 62 UOGTO items. Track issue state is 30 closed/completed and 2 open/in-progress (`uogto_publishing_discoverability_20260622`, `uogto_nature_presubmission_evaluation_20260625`).
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
 - `uogto_registry_publication_followthrough_20260705`: Completed. Live DOI, w3id, release-asset, prefix.cc, Wikidata, FAIRsharing, LOV, OLS, Ontobee, and Bioregistry follow-up was refreshed; durable triage is recorded in `docs/registry/publication-follow-up-triage.*`; Bioregistry response work is tracked separately in issue `#34`.
@@ -23,6 +24,20 @@ Updated: `2026-07-05`
 - Added first-price-auction incentive-constraint example coverage so `cq06` proves a real mechanism-design result.
 - Aligned package/workspace version metadata with the v1.0.0 ontology release.
 - Verification passed: `make validate`; `pytest tests/test_competency_query_expectations.py tests/test_competency_queries.py tests/test_parse_jsonld.py`; `make test` (`235 passed, 1 skipped, 42 warnings`); `make publishing-metadata`; `git diff --check`.
+
+## GitHub Project Reconciliation - 2026-07-05
+
+- Added `conductor/index.md` and `conductor/code_styleguides/markdown.md` so the local Conductor context has the expected entrypoint and code-style surface.
+- Updated `conductor/tracks.md` and `conductor/archive/index.md` so recent archived tracks are visible in the local registry and archive ledger.
+- Added reusable GitHub Project synchronization script at `scripts/maintenance/sync_github_projects.py`.
+- Created/reused 32 issue-backed Conductor track items with hidden `uogto-conductor-track-id` markers:
+  - 30 completed/archived track issues are closed.
+  - 2 in-progress track issues remain open: `uogto_publishing_discoverability_20260622` and `uogto_nature_presubmission_evaluation_20260625`.
+- Replaced 9 stale Project #8 draft placeholders with issue-backed items.
+- Populated GitHub Project #8 with 62 items: 45 issues and 17 merged pull requests.
+- Populated RI-HERO Project #9 with the same 62 UOGTO items.
+- Added Project #8 fields for Workstream, Exposure, Layer, Gate Type, Issue Role, Track ID, Track Location, and Synced date.
+- Verified Project #8 has 60 `Done` items, 2 `In Progress` items, and 0 draft items.
 
 ## Interoperability Benchmarks - 2026-07-05
 
