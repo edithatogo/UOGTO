@@ -78,11 +78,13 @@ TARGETS = {
         "decision": "Do not submit without a defensible biomedical, clinical, public-health, behavioural-science, or health-simulation positioning note.",
     },
     "bioregistry": {
-        "status": "submitted_template_updated",
+        "status": "maintainer_feedback_needs_response",
         "route": "https://bioregistry.io/",
         "issue": "https://github.com/biopragmatics/bioregistry/issues/1999",
         "maintainer_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415",
         "template_update_comment": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
+        "namespace_orcid_feedback": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000",
+        "next_action": "Respond with namespace design rationale and approved ORCID metadata, or open a namespace-consolidation follow-up task.",
     },
     "obo_foundry": {
         "status": "not_prioritized",

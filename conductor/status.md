@@ -6,7 +6,7 @@ Updated: `2026-07-05`
 
 - `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
-- `uogto_registry_publication_followthrough_20260705`: New roadmap track for external registry and publication monitoring after v1.0.0.
+- `uogto_registry_publication_followthrough_20260705`: Completed. Live DOI, w3id, release-asset, prefix.cc, Wikidata, FAIRsharing, LOV, OLS, Ontobee, and Bioregistry follow-up was refreshed; durable triage is recorded in `docs/registry/publication-follow-up-triage.*`; Bioregistry response work is tracked separately in issue `#34`.
 - `uogto_interoperability_benchmarks_20260705`: Completed. Added an executable interoperability benchmark inventory, OpenSpiel and PettingZoo fixture examples, focused parse/query/runtime tests, and JSON-LD support in `RDFGameRunner` for fixture smoke coverage.
 - `uogto_alignment_evidence_expansion_20260705`: New roadmap track for evidence-backed alignment expansion and comparison artifact synchronization.
 - `uogto_manuscript_submission_revision_20260705`: New roadmap track for arXiv closeout, manuscript revision, and venue strategy.
@@ -34,6 +34,22 @@ Updated: `2026-07-05`
 - Extended `RDFGameRunner` to parse JSON-LD fixtures as well as Turtle files.
 - Linked the benchmark documentation from `README.md` and `docs/index.md`.
 - Verification passed: `.pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py -q` (`5 passed`); `make validate`; `make test` (`240 passed, 1 skipped, 52 warnings`); `git diff --check`.
+
+## Registry Publication Follow-Through - 2026-07-05
+
+- Completed track `uogto_registry_publication_followthrough_20260705`.
+- Live publication status generated as `published` with documentation, release assets, Zenodo DOI, and w3id redirects resolving.
+- Direct live observations confirmed FAIRsharing record `8382`, prefix.cc `uogto`/`uogtox` TXT mappings, Wikidata item `Q140323510`, and Zenodo record `20796937` are reachable.
+- GitHub registry queues were refreshed:
+  - LOV issue `83` remains open with no maintainer feedback.
+  - OLS issue `1305` remains open but has maintainer acceptance intent to add the ontology.
+  - Ontobee issue `212` remains open with no maintainer feedback.
+  - Bioregistry issue `1999` has maintainer feedback requesting a namespace-design response and ORCID metadata.
+- Added durable triage docs at `docs/registry/publication-follow-up-triage.md` and `.json`.
+- Opened issue `#34` for the Bioregistry namespace/ORCID response decision.
+- Updated registry docs for LOV, OLS, extended discoverability, and documentation index.
+- Updated the extended-registry handoff generator and tests so Bioregistry is represented as `maintainer_feedback_needs_response`.
+- Verification passed: focused registry/triage pytest (`21 passed`); `make publishing-metadata`; `make registry-links`; `make publication-status`; `make publication-status-live`; `make extended-registry-packet`; `make validate`; `make test` (`242 passed, 1 skipped, 52 warnings`); `git diff --check`.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03
 

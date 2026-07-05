@@ -23,6 +23,7 @@
 - [OLS indexing](registry/ols-indexing.md)
 - [w3id submission](registry/w3id-submission.md)
 - [Extended discoverability submissions](registry/extended-discoverability-submissions.md)
+- [Publication follow-up triage](registry/publication-follow-up-triage.md)
 
 ## Comparative Research
 - [Ontology comparison report](ontology-comparison/report.md)

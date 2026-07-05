@@ -1,0 +1,82 @@
+{
+  "schema": "uogto.publication-follow-up-triage.v1",
+  "last_verified": "2026-07-05",
+  "verification_summary": {
+    "publication_status_live": "published",
+    "documentation_live": true,
+    "release_assets_live": true,
+    "zenodo_doi": "10.5281/zenodo.20796937",
+    "w3id_redirects_live": true,
+    "prefix_cc_mappings_live": true,
+    "wikidata_item_verified": "Q140323510",
+    "fairsharing_record_live": "https://fairsharing.org/8382"
+  },
+  "items": [
+    {
+      "id": "lov-review-83",
+      "registry": "LOV",
+      "status": "submitted_awaiting_maintainer_review",
+      "classification": "external-review",
+      "owner": "UOGTO maintainer",
+      "external_owner": "LOV maintainers",
+      "target_artifact": "docs/registry/lov-submission.md",
+      "evidence_url": "https://github.com/pyvandenbussche/lov/issues/83",
+      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-05.",
+      "acceptance_criterion": "LOV issue is accepted, rejected, or receives actionable maintainer feedback that is converted into a scoped Conductor task.",
+      "next_action": "Monitor issue 83; no repo patch is required until maintainer feedback arrives."
+    },
+    {
+      "id": "ols-indexing-1305",
+      "registry": "OLS",
+      "status": "accepted_pending_indexing",
+      "classification": "external-review",
+      "owner": "UOGTO maintainer",
+      "external_owner": "OLS maintainers",
+      "target_artifact": "docs/registry/ols-indexing.md",
+      "evidence_url": "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4833153237",
+      "latest_observation": "OLS maintainer replied that they will add the ontology; issue remains open as of 2026-07-05.",
+      "acceptance_criterion": "OLS exposes UOGTO in the public index or closes the issue with a clear disposition.",
+      "next_action": "Monitor OLS indexing; record public OLS URL once available."
+    },
+    {
+      "id": "fairsharing-curation-8382",
+      "registry": "FAIRsharing",
+      "status": "submitted_awaiting_curation",
+      "classification": "metadata-follow-up",
+      "owner": "UOGTO maintainer",
+      "external_owner": "FAIRsharing curators",
+      "target_artifact": "docs/registry/extended-discoverability-submissions.md",
+      "evidence_url": "https://fairsharing.org/8382",
+      "latest_observation": "Record page is live; prior public state recorded that it is awaiting FAIRsharing curator review.",
+      "acceptance_criterion": "FAIRsharing record receives curator decision, stable public status, and any issued identifier or recommended metadata patch is recorded.",
+      "next_action": "Monitor curator review; add organisation/publication/citation associations only when defensible."
+    },
+    {
+      "id": "ontobee-indexing-212",
+      "registry": "Ontobee",
+      "status": "submitted_awaiting_maintainer_review",
+      "classification": "external-review",
+      "owner": "UOGTO maintainer",
+      "external_owner": "Ontobee maintainers",
+      "target_artifact": "docs/registry/extended-discoverability-submissions.md",
+      "evidence_url": "https://github.com/OntoZoo/ontobee/issues/212",
+      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-05.",
+      "acceptance_criterion": "Ontobee indexes UOGTO, rejects the request, or asks for a scoped metadata/ontology change.",
+      "next_action": "Monitor issue 212; record index URL if accepted."
+    },
+    {
+      "id": "bioregistry-prefix-1999",
+      "registry": "Bioregistry",
+      "status": "maintainer_feedback_needs_response",
+      "classification": "metadata-policy",
+      "owner": "UOGTO maintainer",
+      "external_owner": "Bioregistry maintainers",
+      "target_artifact": "docs/registry/extended-discoverability-submissions.md",
+      "evidence_url": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000",
+      "local_issue_url": "https://github.com/edithatogo/UOGTO/issues/34",
+      "latest_observation": "Maintainer asked whether the core and extension URI formats should be squashed together and requested an ORCID.",
+      "acceptance_criterion": "A maintainer response is posted that either defends the two-namespace design with documented rationale and supplies an ORCID if approved, or records an accepted namespace-consolidation follow-up task.",
+      "next_action": "Prepare a response from the namespace design rationale; do not invent ORCID metadata absent from public project metadata."
+    }
+  ]
+}
