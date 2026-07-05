@@ -42,7 +42,7 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         )
         self.assertEqual(
             packet["targets"]["bioregistry"]["response_comment"],
-            "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451",
+            build_extended_registry_handoff.BIOREGISTRY_RESPONSE_COMMENT,
         )
         self.assertIn("primary core prefix", packet["targets"]["bioregistry"]["namespace_decision"])
         self.assertIn("no approved public ORCID", packet["targets"]["bioregistry"]["orcid_handling"])
