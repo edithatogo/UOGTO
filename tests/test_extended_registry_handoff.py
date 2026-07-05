@@ -32,6 +32,14 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
             packet["targets"]["bioregistry"]["template_update_comment"],
             "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220",
         )
+        self.assertEqual(
+            packet["targets"]["bioregistry"]["status"],
+            "maintainer_feedback_needs_response",
+        )
+        self.assertEqual(
+            packet["targets"]["bioregistry"]["namespace_orcid_feedback"],
+            "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000",
+        )
         self.assertEqual(packet["targets"]["obo_foundry"]["status"], "not_prioritized")
         self.assertIn("10.5281/zenodo.20796937", packet["ontology"]["doi"])
 

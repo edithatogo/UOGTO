@@ -1,5 +1,21 @@
 # Conductor Run Log
 
+## 2026-07-05 - Registry publication follow-through
+
+- Completed Conductor track `uogto_registry_publication_followthrough_20260705`.
+- Refreshed live publication observations: `make publication-status-live` wrote `dist/publication-status-live.json` with status `published`; documentation, release assets, Zenodo DOI, and w3id redirects resolved successfully.
+- Refreshed live registry queues:
+  - LOV issue `83` remains open with no maintainer feedback.
+  - OLS issue `1305` remains open, with maintainer acceptance intent to add the ontology.
+  - Ontobee issue `212` remains open with no maintainer feedback.
+  - Bioregistry issue `1999` has maintainer feedback requesting namespace-format rationale and ORCID metadata.
+- Confirmed FAIRsharing record `8382`, prefix.cc `uogto`/`uogtox` TXT mappings, Wikidata item `Q140323510`, and Zenodo record `20796937` are reachable.
+- Added `docs/registry/publication-follow-up-triage.md` and `.json` with owners, external owners, classification, target artifact, evidence URL, acceptance criterion, and next action for each open follow-up item.
+- Updated LOV, OLS, extended discoverability, and docs-index registry documentation.
+- Updated `scripts/maintenance/build_extended_registry_handoff.py` so Bioregistry now records `maintainer_feedback_needs_response`, with regression coverage in `tests/test_extended_registry_handoff.py`.
+- Opened GitHub issue `#34` for the Bioregistry namespace/ORCID response decision.
+- Verification passed: focused registry/triage pytest (`21 passed`); `make publishing-metadata`; `make registry-links`; `make publication-status`; `make publication-status-live`; `make extended-registry-packet`; `make validate`; `make test` (`242 passed, 1 skipped, 52 warnings`); `git diff --check`.
+
 ## 2026-07-05 - Interoperability benchmarks and executable fixtures
 
 - Completed Conductor track `uogto_interoperability_benchmarks_20260705`.

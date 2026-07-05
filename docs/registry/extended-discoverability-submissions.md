@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -80,15 +80,17 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Next action: do not submit unless that domain-positioning note is approved.
 
 ### Bioregistry
-- Status: `submitted_template_updated`
+- Status: `maintainer_feedback_needs_response`
 - Route: <https://bioregistry.io/>
 - Issue: <https://github.com/biopragmatics/bioregistry/issues/1999>
 - Maintainer template request: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4769473415>
 - Template update comment: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4778481220>
+- Namespace/ORCID feedback: <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4796538000>
 - Requested prefix: `uogto`
 - Requested URI format: `https://w3id.org/uogto/core#`
 - Evidence: no prior UOGTO Bioregistry issue was found before opening issue `1999`; the issue body was updated to the new-prefix template without inventing an ORCID absent from repository metadata.
-- Next action: track maintainer review feedback.
+- Latest feedback: maintainer asked whether the core and extension URI formats should be squashed together and requested an ORCID.
+- Next action: prepare a response from the namespace design rationale; do not invent ORCID metadata absent from public project metadata.
 
 ### OBO Foundry
 - Status: `not_prioritized`
@@ -97,6 +99,9 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Next action: no routine action; revisit only with a concrete biomedical governance fit.
 
 ## Follow-Up Queue
+- See `docs/registry/publication-follow-up-triage.md` and `.json` for owner, target artifact, acceptance criterion, and evidence URL per item.
+- Monitor LOV issue `83` for maintainer feedback.
+- Monitor OLS issue `1305` until public indexing is complete; maintainer has stated they will add the ontology.
 - Monitor FAIRsharing record `8382` curator review and DOI/status outcome.
 - Track Ontobee issue review feedback and index outcome.
-- Track Bioregistry issue review feedback.
+- Respond to Bioregistry issue `1999` about two namespace formats and ORCID metadata.

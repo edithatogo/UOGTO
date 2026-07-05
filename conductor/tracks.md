@@ -135,9 +135,9 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: Completed
 - **Link**: [./tracks/uogto_validation_contract_coherence_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_validation_contract_coherence_20260705/)
 
-## [ ] Track: uogto_registry_publication_followthrough_20260705
+## [x] Track: uogto_registry_publication_followthrough_20260705
 - **Description**: Track external registry and publication follow-through after v1.0.0.
-- **Status**: New
+- **Status**: Completed
 - **Link**: [./tracks/uogto_registry_publication_followthrough_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_registry_publication_followthrough_20260705/)
 
 ## [x] Track: uogto_interoperability_benchmarks_20260705
