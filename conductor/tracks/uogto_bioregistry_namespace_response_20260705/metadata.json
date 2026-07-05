@@ -1,11 +1,11 @@
 {
   "track_id": "uogto_bioregistry_namespace_response_20260705",
   "type": "chore",
-  "status": "new",
+  "status": "completed",
   "created_at": "2026-07-05T07:24:49Z",
-  "updated_at": "2026-07-05T07:24:49Z",
+  "updated_at": "2026-07-05T09:40:00Z",
   "description": "Resolve Bioregistry namespace and ORCID feedback for UOGTO prefix registration.",
   "github_issue": "https://github.com/edithatogo/UOGTO/issues/34",
-  "external_issue": "https://github.com/biopragmatics/bioregistry/issues/1999"
+  "external_issue": "https://github.com/biopragmatics/bioregistry/issues/1999",
+  "external_response": "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451"
 }
-

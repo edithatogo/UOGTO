@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## 2026-07-05 - Bioregistry namespace and ORCID response
+
+- Completed Conductor track `uogto_bioregistry_namespace_response_20260705`.
+- Rechecked Bioregistry issue `1999`; maintainer feedback requested a decision on squashing `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#`, plus ORCID metadata.
+- Confirmed UOGTO public metadata does not publish an approved ORCID in `CITATION.cff`, `.zenodo.json`, or the Bioregistry issue body.
+- Posted UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>, defending the published `v1.0.0` two-namespace design, asking Bioregistry to treat `uogto` as the primary core prefix, keeping `uogtox` documented separately for extension modules, and omitting ORCID rather than inferring a private identifier.
+- Added `docs/registry/bioregistry-namespace-response.md` as the durable decision record.
+- Updated `docs/registry/publication-follow-up-triage.*`, `docs/registry/extended-discoverability-submissions.md`, `docs/releases/v1.0.md`, and the extended-registry handoff generator/tests so Bioregistry is represented as `response_posted_awaiting_maintainer_review`.
+- Verification passed: focused registry pytest (`14 passed`); `make extended-registry-packet`; `make registry-links`; `make publication-status`; `git diff --check`.
+
 ## 2026-07-05 - Manuscript submission revision and venue strategy
 
 - Completed repo-local implementation for `uogto_manuscript_submission_revision_20260705`.
