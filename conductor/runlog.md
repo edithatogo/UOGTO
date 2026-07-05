@@ -8,7 +8,9 @@
 - Posted UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451>, defending the published `v1.0.0` two-namespace design, asking Bioregistry to treat `uogto` as the primary core prefix, keeping `uogtox` documented separately for extension modules, and omitting ORCID rather than inferring a private identifier.
 - Added `docs/registry/bioregistry-namespace-response.md` as the durable decision record.
 - Updated `docs/registry/publication-follow-up-triage.*`, `docs/registry/extended-discoverability-submissions.md`, `docs/releases/v1.0.md`, and the extended-registry handoff generator/tests so Bioregistry is represented as `response_posted_awaiting_maintainer_review`.
-- Verification passed: focused registry pytest (`14 passed`); `make extended-registry-packet`; `make registry-links`; `make publication-status`; `git diff --check`.
+- Conductor review found and fixed one triage `target_artifact` row mix-up, with regression assertions added for Ontobee and Bioregistry target artifacts.
+- Archived the completed track under `conductor/archive/uogto_bioregistry_namespace_response_20260705/` and removed the active registry entry.
+- Verification passed: focused registry pytest (`14 passed`); `make extended-registry-packet`; `make registry-links`; `make publication-status`; `make publishing-metadata`; `make validate`; `make test` (`252 passed, 52 warnings`); `git diff --check`; touched-file Ruff checks.
 
 ## 2026-07-05 - Manuscript submission revision and venue strategy
 
