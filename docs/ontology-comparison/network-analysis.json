@@ -6,6 +6,10 @@
     },
     {
       "degree": 2,
+      "node": "uogto:https://w3id.org/uogto/core#Action"
+    },
+    {
+      "degree": 2,
       "node": "uogto:https://w3id.org/uogto/core#Agent"
     },
     {
@@ -26,7 +30,15 @@
     },
     {
       "degree": 1,
+      "node": "source:http://www.w3.org/ns/prov#Activity"
+    },
+    {
+      "degree": 1,
       "node": "source:http://www.w3.org/ns/prov#Agent"
+    },
+    {
+      "degree": 1,
+      "node": "source:http://www.w3.org/ns/prov#Entity"
     },
     {
       "degree": 1,
@@ -50,7 +62,7 @@
     },
     {
       "degree": 1,
-      "node": "uogto:https://w3id.org/uogto/core#Action"
+      "node": "uogto:https://w3id.org/uogto/core#Outcome"
     },
     {
       "degree": 1,
@@ -562,6 +574,7 @@
         "uogto_core_rules": 0.5055,
         "uogto_core_strategies": 0.5055,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 0.5055,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 0.5055,
@@ -597,7 +610,7 @@
         "vimmp_ontologies": 0.5152,
         "xmile": 0.5152
       },
-      "component_count": 6,
+      "component_count": 7,
       "connected_components": [
         [
           "bfo",
@@ -683,6 +696,9 @@
           "uogto_core_uogto-core"
         ],
         [
+          "uogto_core_uogto-governance"
+        ],
+        [
           "uogto_extensions_algorithmic-solvers-patch"
         ]
       ],
@@ -727,6 +743,7 @@
         "uogto_core_rules": 1,
         "uogto_core_strategies": 1,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 1,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 1,
@@ -763,9 +780,10 @@
         "xmile": 1
       },
       "edge_count": 68,
-      "node_count": 74,
+      "node_count": 75,
       "orphan_nodes": [
         "uogto_core_uogto-core",
+        "uogto_core_uogto-governance",
         "uogto_extensions_algorithmic-solvers-patch"
       ]
     },
@@ -810,6 +828,7 @@
       "uogto_core_rules",
       "uogto_core_strategies",
       "uogto_core_uogto-core",
+      "uogto_core_uogto-governance",
       "uogto_extensions_algorithmic-game-theory",
       "uogto_extensions_algorithmic-solvers-patch",
       "uogto_extensions_auctions",
@@ -854,6 +873,7 @@
     "schema_org",
     "ssn_sosa",
     "uogto_core_uogto-core",
+    "uogto_core_uogto-governance",
     "uogto_extensions_algorithmic-solvers-patch"
   ],
   "orphan_terms": [],
@@ -883,7 +903,8 @@
       "uogto_core_payoffs",
       "uogto_core_rules",
       "uogto_core_strategies",
-      "uogto_core_uogto-core"
+      "uogto_core_uogto-core",
+      "uogto_core_uogto-governance"
     ],
     "discrete_event_simulation": [
       "devs"
@@ -1360,6 +1381,7 @@
         "uogto_core_rules": 0.5055,
         "uogto_core_strategies": 0.5055,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 0.5055,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 0.5055,
@@ -1395,7 +1417,7 @@
         "vimmp_ontologies": 0.5152,
         "xmile": 0.5152
       },
-      "component_count": 6,
+      "component_count": 7,
       "connected_components": [
         [
           "bfo",
@@ -1481,6 +1503,9 @@
           "uogto_core_uogto-core"
         ],
         [
+          "uogto_core_uogto-governance"
+        ],
+        [
           "uogto_extensions_algorithmic-solvers-patch"
         ]
       ],
@@ -1525,6 +1550,7 @@
         "uogto_core_rules": 1,
         "uogto_core_strategies": 1,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 1,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 1,
@@ -1561,9 +1587,10 @@
         "xmile": 1
       },
       "edge_count": 68,
-      "node_count": 74,
+      "node_count": 75,
       "orphan_nodes": [
         "uogto_core_uogto-core",
+        "uogto_core_uogto-governance",
         "uogto_extensions_algorithmic-solvers-patch"
       ]
     },
@@ -1608,6 +1635,7 @@
       "uogto_core_rules",
       "uogto_core_strategies",
       "uogto_core_uogto-core",
+      "uogto_core_uogto-governance",
       "uogto_extensions_algorithmic-game-theory",
       "uogto_extensions_algorithmic-solvers-patch",
       "uogto_extensions_auctions",
@@ -1752,6 +1780,9 @@
       ],
       "com": [
         "game_ontology_project"
+      ],
+      "competency": [
+        "uogto_core_uogto-governance"
       ],
       "compliance": [
         "uogto_extensions_deontic-logic"
@@ -3857,6 +3888,7 @@
         "uogto_core_rules": 0.3191,
         "uogto_core_strategies": 0.3191,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 0.3704,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 0.2985,
@@ -3892,7 +3924,7 @@
         "vimmp_ontologies": 0.1515,
         "xmile": 0.1818
       },
-      "component_count": 9,
+      "component_count": 10,
       "connected_components": [
         [
           "bfo",
@@ -3979,6 +4011,9 @@
           "uogto_core_uogto-core"
         ],
         [
+          "uogto_core_uogto-governance"
+        ],
+        [
           "uogto_extensions_algorithmic-solvers-patch"
         ]
       ],
@@ -4018,6 +4053,7 @@
         "uogto_core_rules": 9,
         "uogto_core_strategies": 9,
         "uogto_core_uogto-core": 0,
+        "uogto_core_uogto-governance": 0,
         "uogto_extensions_algorithmic-game-theory": 19,
         "uogto_extensions_algorithmic-solvers-patch": 0,
         "uogto_extensions_auctions": 3,
@@ -4054,7 +4090,7 @@
         "xmile": 1
       },
       "edge_count": 391,
-      "node_count": 69,
+      "node_count": 70,
       "orphan_nodes": [
         "devs",
         "game_ontology_project",
@@ -4063,6 +4099,7 @@
         "schema_org",
         "ssn_sosa",
         "uogto_core_uogto-core",
+        "uogto_core_uogto-governance",
         "uogto_extensions_algorithmic-solvers-patch"
       ]
     },
@@ -4102,6 +4139,7 @@
       "uogto_core_rules",
       "uogto_core_strategies",
       "uogto_core_uogto-core",
+      "uogto_core_uogto-governance",
       "uogto_extensions_algorithmic-game-theory",
       "uogto_extensions_algorithmic-solvers-patch",
       "uogto_extensions_auctions",
@@ -4139,16 +4177,20 @@
     ]
   },
   "summary": {
-    "alignment_graph_edges": 10,
-    "coverage_graph_edges": 11,
+    "alignment_graph_edges": 12,
+    "coverage_graph_edges": 12,
     "similarity_graph_edges": 391,
-    "source_graph_nodes": 74
+    "source_graph_nodes": 75
   },
   "term_alignment_bipartite_graph": {
     "bridge_terms": [
       {
         "degree": 3,
         "node": "uogto:https://w3id.org/uogto/core#description"
+      },
+      {
+        "degree": 2,
+        "node": "uogto:https://w3id.org/uogto/core#Action"
       },
       {
         "degree": 2,
@@ -4172,7 +4214,15 @@
       },
       {
         "degree": 1,
+        "node": "source:http://www.w3.org/ns/prov#Activity"
+      },
+      {
+        "degree": 1,
         "node": "source:http://www.w3.org/ns/prov#Agent"
+      },
+      {
+        "degree": 1,
+        "node": "source:http://www.w3.org/ns/prov#Entity"
       },
       {
         "degree": 1,
@@ -4196,7 +4246,7 @@
       },
       {
         "degree": 1,
-        "node": "uogto:https://w3id.org/uogto/core#Action"
+        "node": "uogto:https://w3id.org/uogto/core#Outcome"
       },
       {
         "degree": 1,
@@ -4237,9 +4287,19 @@
         "owl:equivalentClass"
       ],
       [
+        "source:http://www.w3.org/ns/prov#Activity",
+        "uogto:https://w3id.org/uogto/core#Action",
+        "skos:narrowMatch"
+      ],
+      [
         "source:http://www.w3.org/ns/prov#Agent",
         "uogto:https://w3id.org/uogto/core#Agent",
-        "owl:equivalentClass"
+        "skos:narrowMatch"
+      ],
+      [
+        "source:http://www.w3.org/ns/prov#Entity",
+        "uogto:https://w3id.org/uogto/core#Outcome",
+        "skos:narrowMatch"
       ],
       [
         "source:http://www.w3.org/ns/prov#Role",
@@ -4264,11 +4324,12 @@
       [
         "source:https://schema.org/Action",
         "uogto:https://w3id.org/uogto/core#Action",
-        "owl:equivalentClass"
+        "skos:narrowMatch"
       ]
     ],
     "metrics": {
       "betweenness_proxy": {
+        "uogto:https://w3id.org/uogto/core#Action": 2,
         "uogto:https://w3id.org/uogto/core#Agent": 2,
         "uogto:https://w3id.org/uogto/core#description": 6
       },
@@ -4277,21 +4338,24 @@
         "source:http://purl.org/dc/terms/description": 0.6,
         "source:http://purl.org/dc/terms/identifier": 1.0,
         "source:http://www.w3.org/2002/07/owl#Thing": 1.0,
+        "source:http://www.w3.org/ns/prov#Activity": 0.6667,
         "source:http://www.w3.org/ns/prov#Agent": 0.6667,
+        "source:http://www.w3.org/ns/prov#Entity": 1.0,
         "source:http://www.w3.org/ns/prov#Role": 1.0,
         "source:http://www.w3.org/ns/sosa/observes": 1.0,
         "source:http://xmlns.com/foaf/0.1/Agent": 0.6667,
         "source:https://ref.gs1.org/voc/description": 0.6,
-        "source:https://schema.org/Action": 1.0,
+        "source:https://schema.org/Action": 0.6667,
         "uogto:https://w3id.org/uogto/core#Action": 1.0,
         "uogto:https://w3id.org/uogto/core#Agent": 1.0,
+        "uogto:https://w3id.org/uogto/core#Outcome": 1.0,
         "uogto:https://w3id.org/uogto/core#Role": 1.0,
         "uogto:https://w3id.org/uogto/core#description": 1.0,
         "uogto:https://w3id.org/uogto/core#identifier": 1.0,
         "uogto:https://w3id.org/uogto/core#observes": 1.0,
         "uogto:https://w3id.org/uogto/extensions#Thing": 1.0
       },
-      "component_count": 7,
+      "component_count": 8,
       "connected_components": [
         [
           "source:http://ogp.me/ns#description",
@@ -4308,9 +4372,18 @@
           "uogto:https://w3id.org/uogto/extensions#Thing"
         ],
         [
+          "source:http://www.w3.org/ns/prov#Activity",
+          "source:https://schema.org/Action",
+          "uogto:https://w3id.org/uogto/core#Action"
+        ],
+        [
           "source:http://www.w3.org/ns/prov#Agent",
           "source:http://xmlns.com/foaf/0.1/Agent",
           "uogto:https://w3id.org/uogto/core#Agent"
+        ],
+        [
+          "source:http://www.w3.org/ns/prov#Entity",
+          "uogto:https://w3id.org/uogto/core#Outcome"
         ],
         [
           "source:http://www.w3.org/ns/prov#Role",
@@ -4319,10 +4392,6 @@
         [
           "source:http://www.w3.org/ns/sosa/observes",
           "uogto:https://w3id.org/uogto/core#observes"
-        ],
-        [
-          "source:https://schema.org/Action",
-          "uogto:https://w3id.org/uogto/core#Action"
         ]
       ],
       "degree": {
@@ -4330,22 +4399,25 @@
         "source:http://purl.org/dc/terms/description": 1,
         "source:http://purl.org/dc/terms/identifier": 1,
         "source:http://www.w3.org/2002/07/owl#Thing": 1,
+        "source:http://www.w3.org/ns/prov#Activity": 1,
         "source:http://www.w3.org/ns/prov#Agent": 1,
+        "source:http://www.w3.org/ns/prov#Entity": 1,
         "source:http://www.w3.org/ns/prov#Role": 1,
         "source:http://www.w3.org/ns/sosa/observes": 1,
         "source:http://xmlns.com/foaf/0.1/Agent": 1,
         "source:https://ref.gs1.org/voc/description": 1,
         "source:https://schema.org/Action": 1,
-        "uogto:https://w3id.org/uogto/core#Action": 1,
+        "uogto:https://w3id.org/uogto/core#Action": 2,
         "uogto:https://w3id.org/uogto/core#Agent": 2,
+        "uogto:https://w3id.org/uogto/core#Outcome": 1,
         "uogto:https://w3id.org/uogto/core#Role": 1,
         "uogto:https://w3id.org/uogto/core#description": 3,
         "uogto:https://w3id.org/uogto/core#identifier": 1,
         "uogto:https://w3id.org/uogto/core#observes": 1,
         "uogto:https://w3id.org/uogto/extensions#Thing": 1
       },
-      "edge_count": 10,
-      "node_count": 17,
+      "edge_count": 12,
+      "node_count": 20,
       "orphan_nodes": []
     },
     "nodes": [
@@ -4353,7 +4425,9 @@
       "source:http://purl.org/dc/terms/description",
       "source:http://purl.org/dc/terms/identifier",
       "source:http://www.w3.org/2002/07/owl#Thing",
+      "source:http://www.w3.org/ns/prov#Activity",
       "source:http://www.w3.org/ns/prov#Agent",
+      "source:http://www.w3.org/ns/prov#Entity",
       "source:http://www.w3.org/ns/prov#Role",
       "source:http://www.w3.org/ns/sosa/observes",
       "source:http://xmlns.com/foaf/0.1/Agent",
@@ -4361,6 +4435,7 @@
       "source:https://schema.org/Action",
       "uogto:https://w3id.org/uogto/core#Action",
       "uogto:https://w3id.org/uogto/core#Agent",
+      "uogto:https://w3id.org/uogto/core#Outcome",
       "uogto:https://w3id.org/uogto/core#Role",
       "uogto:https://w3id.org/uogto/core#description",
       "uogto:https://w3id.org/uogto/core#identifier",
@@ -4372,13 +4447,18 @@
     "edges": [
       [
         "prov_o",
-        "uogto_alignments_mcp-a2a",
+        "uogto_alignments_prov-o",
         "accepted"
       ],
       [
         "prov_o",
         "uogto_alignments_prov-o",
-        "needs_domain_review"
+        "accepted"
+      ],
+      [
+        "prov_o",
+        "uogto_alignments_prov-o",
+        "accepted"
       ],
       [
         "prov_o",
@@ -4428,20 +4508,19 @@
     ],
     "metrics": {
       "betweenness_proxy": {
-        "prov_o": 12,
+        "prov_o": 6,
         "schema_org": 2,
         "ssn_sosa": 2,
-        "uogto_alignments_mcp-a2a": 2,
         "uogto_core_uogto-core": 6
       },
       "closeness": {
-        "prov_o": 0.6364,
+        "prov_o": 0.5385,
         "schema_org": 0.4667,
         "ssn_sosa": 0.4667,
-        "uogto_alignments_mcp-a2a": 0.4667,
-        "uogto_alignments_prov-o": 0.4118,
+        "uogto_alignments_mcp-a2a": 0.3333,
+        "uogto_alignments_prov-o": 0.3684,
         "uogto_alignments_schema-org": 0.3333,
-        "uogto_alignments_wot-thing-description": 0.4118,
+        "uogto_alignments_wot-thing-description": 0.3684,
         "uogto_core_uogto-core": 0.6364
       },
       "component_count": 1,
@@ -4458,16 +4537,16 @@
         ]
       ],
       "degree": {
-        "prov_o": 4,
+        "prov_o": 3,
         "schema_org": 2,
         "ssn_sosa": 2,
-        "uogto_alignments_mcp-a2a": 2,
+        "uogto_alignments_mcp-a2a": 1,
         "uogto_alignments_prov-o": 1,
         "uogto_alignments_schema-org": 1,
         "uogto_alignments_wot-thing-description": 1,
         "uogto_core_uogto-core": 3
       },
-      "edge_count": 11,
+      "edge_count": 12,
       "node_count": 8,
       "orphan_nodes": []
     },

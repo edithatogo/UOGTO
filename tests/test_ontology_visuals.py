@@ -47,7 +47,7 @@ class TestOntologyComparisonVisuals(unittest.TestCase):
         self.assertEqual(summary["figure_count"], len(visuals.REQUIRED_FIGURES))
         self.assertEqual(summary["cosmograph_image_count"], len(visuals.REQUIRED_COSMOGRAPH_IMAGES))
         report = self.report.read_text(encoding="utf-8")
-        self.assertIn("Accepted mappings: 10", report)
+        self.assertIn("Accepted mappings: 12", report)
         self.assertIn("Source-similarity edges: 391", report)
         self.assertIn("## Inclusion and Exclusion Summary", report)
         self.assertIn("## Mapping Methods", report)

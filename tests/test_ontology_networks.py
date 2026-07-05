@@ -85,7 +85,7 @@ class TestOntologyNetworks(unittest.TestCase):
         provenance = json.loads(networks.DEFAULT_PROVENANCE.read_text(encoding="utf-8"))
         packet = networks.build_network_analysis(terms, review, provenance)
         summary = networks.validate_network_analysis(packet)
-        self.assertEqual(summary["alignment_edges"], 10)
+        self.assertEqual(summary["alignment_edges"], 12)
         self.assertGreaterEqual(summary["similarity_edges"], 1)
         self.assertIn("central_source_families", packet)
         self.assertIn("isolated_modelling_paradigms", packet)

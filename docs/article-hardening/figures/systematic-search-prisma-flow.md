@@ -8,11 +8,10 @@ flowchart TD
     N1["Article-hardening records<br/>identified and normalized<br/>n=39"]
     N2["Evidence sources retained<br/>for synthesis<br/>n=39"]
     N3["Comparative source<br/>families reviewed<br/>n=21 sources / 17 families"]
-    N4["Terms normalized<br/>from UOGTO + sources<br/>n=4,037"]
+    N4["Terms normalized<br/>from UOGTO + sources<br/>n=4,046"]
     N5["Mapping candidates<br/>reviewed<br/>n=460"]
-    N6["Accepted conservative<br/>alignments<br/>n=10"]
-    N7["Needs domain review<br/>n=1"]
-    N8["Rejected / non-asserted<br/>negative evidence<br/>n=449"]
+    N6["Accepted conservative<br/>alignments<br/>n=12"]
+    N7["Rejected / non-asserted<br/>negative evidence<br/>n=448"]
     N0 --> N1
     N1 --> N2
     N2 --> N3
@@ -20,5 +19,4 @@ flowchart TD
     N4 --> N5
     N5 --> N6
     N5 -.-> N7
-    N5 -.-> N8
 ```

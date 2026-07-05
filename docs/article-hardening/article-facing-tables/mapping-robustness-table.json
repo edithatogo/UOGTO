@@ -9,7 +9,7 @@
       "calibration_or_adjudication": "reviewed mappings only",
       "method": "Accepted TTL alignments exported to SSSOM TSV plus YAML metadata",
       "primary_metric": "mapping_count",
-      "primary_value": 10,
+      "primary_value": 12,
       "sensitivity_or_ablation": "n/a",
       "status": "complete"
     },

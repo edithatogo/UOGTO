@@ -80,7 +80,7 @@ Centre for Health Policy, The University of Melbourne}
 \maketitle
 
 \begin{abstract}
-Game theory studies choices between people, groups, or computer agents when each choice can affect the others. These models are now used in economics, public policy, safety, medicine, and artificial intelligence (AI). But the parts of a game are often described in different ways. One paper may use prose. Another may use code. Another may use a diagram. That makes it hard to compare the work. We present the \abblink{uogto}{Universal Open Game Theory Ontology (UOGTO)}. An ontology is a shared dictionary that computers and people can inspect. UOGTO gives names to players, actions, \glslink{strategy}{strategies}, information, \glslink{payoff}{payoffs}, \glslink{mechanism}{mechanisms}, \glslink{outcome}{outcomes}, \glslink{session}{sessions}, and \glslink{trace}{traces}. It separates the plan for a game from one actual run of that game. It also records where each claim came from. We compared 21 source families. We normalised 4,037 term rows, reviewed 460 possible mappings, and accepted 10 careful alignments. We kept rejected and review-needed rows as \glslink{negative-evidence}{negative evidence}. UOGTO is not a complete list of all game theory. It is also not a theory of human behaviour. Its role is practical: it helps readers see what a game model assumes, what evidence supports it, and what still needs review.
+Game theory studies choices between people, groups, or computer agents when each choice can affect the others. These models are now used in economics, public policy, safety, medicine, and artificial intelligence (AI). But the parts of a game are often described in different ways. One paper may use prose. Another may use code. Another may use a diagram. That makes it hard to compare the work. We present the \abblink{uogto}{Universal Open Game Theory Ontology (UOGTO)}. An ontology is a shared dictionary that computers and people can inspect. UOGTO gives names to players, actions, \glslink{strategy}{strategies}, information, \glslink{payoff}{payoffs}, \glslink{mechanism}{mechanisms}, \glslink{outcome}{outcomes}, \glslink{session}{sessions}, and \glslink{trace}{traces}. It separates the plan for a game from one actual run of that game. It also records where each claim came from. We compared 21 source families. We normalised 4,046 term rows, reviewed 460 possible mappings, and accepted 12 careful alignments. We kept rejected rows as \glslink{negative-evidence}{negative evidence}. UOGTO is not a complete list of all game theory. It is also not a theory of human behaviour. Its role is practical: it helps readers see what a game model assumes, what evidence supports it, and what still needs review.
 \end{abstract}
 
 \section*{Plain-language summary}
@@ -145,11 +145,11 @@ Agent and workflow reviews & Internal process checks, adversarial critique, and 
 \subsection{Source discovery found a broad but uneven evidence base}
 The search produced two linked sets of results. The first set was a source register. It records what we searched, what we kept, and what we did not find. This was a scoping workflow, not a full systematic review with two independent screeners. It found six routes that added sources and one route that found no extra source. In total, 39 source records were kept.
 
-The second set was the comparison package. It used a narrower group of 21 sources across 17 source families. These sources were relevant to game theory, simulation, agent-based models, system dynamics, provenance, web schemas, workflows, and related formalisms. Together, they produced 3,485 external term rows. UOGTO contributed 552 term rows. That gave 4,037 term rows for comparison.
+The second set was the comparison package. It used a narrower group of 21 sources across 17 source families. These sources were relevant to game theory, simulation, agent-based models, system dynamics, provenance, web schemas, workflows, and related formalisms. Together, they produced 3,485 external term rows. UOGTO contributed 561 term rows. That gave 4,046 term rows for comparison.
 
 The evidence was uneven. Some sources were parsed \abblink{rdf}{RDF}. Some were structured standards or schemas. Some were metadata-only records. Some were literature records. This matters because a parsed ontology file supports stronger claims than a web page about a standard. The workflow made that difference visible.
 
-The mapping review was careful by design. It reviewed 460 possible mappings. It accepted 10. It marked one for domain review. It kept 449 as rejected or not asserted. These rejected rows are not waste. They are \glslink{negative-evidence}{negative evidence}. They show what was considered and why it was not claimed. Figure~\ref{fig:systematic-search-prisma-flow} shows the process.
+The mapping review was careful by design. It reviewed 460 possible mappings. It accepted 12. It kept 448 as rejected or not asserted. These rejected rows are not waste. They are \glslink{negative-evidence}{negative evidence}. They show what was considered and why it was not claimed. Figure~\ref{fig:systematic-search-prisma-flow} shows the process.
 
 \begin{figure}[ht]
 \centering
@@ -166,21 +166,19 @@ The mapping review was careful by design. It reviewed 460 possible mappings. It 
 \node[box, below=of search] (records) {Records identified\\and normalized\\n=39};
 \node[keep, below=of records] (retained) {Evidence sources\\retained for synthesis\\n=39};
 \node[box, right=of records] (sources) {Comparative sources\\21 sources / 17 families};
-\node[box, below=of sources] (terms) {Terms normalized\\UOGTO + sources\\n=4,037};
+\node[box, below=of sources] (terms) {Terms normalized\\UOGTO + sources\\n=4,046};
 \node[review, right=of sources] (candidates) {Mapping candidates\\reviewed\\n=460};
-\node[keep, below=of candidates] (accepted) {Accepted conservative\\alignments\\n=10};
-\node[review, below=of accepted] (domain) {Needs domain review\\n=1};
-\node[reject, below=of terms] (rejected) {Rejected or non-asserted\\evidence\\n=449};
+\node[keep, below=of candidates] (accepted) {Accepted conservative\\alignments\\n=12};
+\node[reject, below=of terms] (rejected) {Rejected or non-asserted\\evidence\\n=448};
 \draw[arrow] (search) -- (records);
 \draw[arrow] (records) -- (retained);
 \draw[arrow] (retained.east) -- (sources.south west);
 \draw[arrow] (sources) -- (terms);
 \draw[arrow] (terms.north east) -- (candidates.south west);
 \draw[arrow] (candidates) -- (accepted);
-\draw[arrow, dashed] (accepted) -- (domain);
 \draw[arrow, dashed] (candidates.south west) -- (rejected.north east);
 \end{tikzpicture}}
-\caption{Search, screening, and mapping-review flow. The flow separates source discovery from comparative ontology screening, term extraction, mapping-candidate review, accepted alignments, domain-review work, and rejected or non-asserted evidence.}
+\caption{Search, screening, and mapping-review flow. The flow separates source discovery from comparative ontology screening, term extraction, mapping-candidate review, accepted alignments, and rejected or non-asserted evidence.}
 \label{fig:systematic-search-prisma-flow}
 \end{figure}
 
@@ -249,7 +247,7 @@ Mapping robustness & How do accepted mappings behave under ablations and publica
 \end{table}
 
 \subsection{Comparative mapping favours precision over broad equivalence}
-The comparison workflow reviewed 21 source families. It produced 4,037 term rows and 460 possible mappings. It accepted 10 mappings, marked one for domain review, and rejected 449. This low acceptance rate is deliberate. Similar words are not enough. Two fields can use the same word for different ideas, or different words for the same idea.
+The comparison workflow reviewed 21 source families. It produced 4,046 term rows and 460 possible mappings. It accepted 12 mappings and rejected 448. This low acceptance rate is deliberate. Similar words are not enough. Two fields can use the same word for different ideas, or different words for the same idea.
 
 \glslink{accepted-mapping}{Accepted alignments} are published in Turtle and \abblink{sssom}{SSSOM}. Rejected and review-needed rows stay in the data. This is important. A reader can see both what UOGTO claims and what it does not claim.
 
@@ -264,19 +262,19 @@ Measure & Count \\
 Candidate sources & 21 \\
 Source families & 17 \\
 External terms & 3,485 \\
-UOGTO terms & 552 \\
+UOGTO terms & 561 \\
 Mapping candidates & 460 \\
-Accepted mappings & 10 \\
-Needs domain review & 1 \\
-Rejected mappings & 449 \\
+Accepted mappings & 12 \\
+Needs domain review & 0 \\
+Rejected mappings & 448 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The 3,485 external terms in Table~\ref{tab:mapping-summary} are not 3,485 missing game-theory ideas. They are raw rows from many source types. Some come from upper ontologies. Some come from provenance, time, workflow, simulation, and metadata sources. UOGTO has 552 terms because it has a narrower job. It models reusable strategic-interaction ideas. Many nearby terms are kept as context, rejected candidates, or future review items.
+The 3,485 external terms in Table~\ref{tab:mapping-summary} are not 3,485 missing game-theory ideas. They are raw rows from many source types. Some come from upper ontologies. Some come from provenance, time, workflow, simulation, and metadata sources. UOGTO has 561 terms because it has a narrower job. It models reusable strategic-interaction ideas. Many nearby terms are kept as context, rejected candidates, or future review items.
 
 \subsection{Network analyses show bridges, not a universal merger}
-The network analysis asks a simple question: which sources and modules appear close to each other in the evidence? It found 74 nodes in the import/evidence graph, 69 nodes and 391 edges in the source-similarity graph, 10 term-alignment edges, and 11 module-coverage edges. A node is a source, module, term, or evidence group. An edge is a link between two nodes.
+The network analysis asks a simple question: which sources and modules appear close to each other in the evidence? It found 74 nodes in the import/evidence graph, 69 nodes and 391 edges in the source-similarity graph, 12 term-alignment edges, and 11 module-coverage edges. A node is a source, module, term, or evidence group. An edge is a link between two nodes.
 
 The graphs show bridges. They do not prove that all fields mean the same thing. Mean-field games, cooperative games, network games, congestion-routing games, evolutionary games, compositional open games, epistemic games, and causal games were central in the current evidence graph. That means they are useful review priorities. It does not mean they are finished modules.
 
@@ -379,14 +377,12 @@ Some comparator sources are metadata-only or licence-constrained. They are repre
   reject/.style={box, fill=red!7, draw=red!60!black},
   arrow/.style={-{Stealth[length=2.4mm]}, thick}
 ]
-\node[box] (terms) {4,037 normalized\\term rows};
+\node[box] (terms) {4,046 normalized\\term rows};
 \node[box, right=of terms] (candidates) {460 mapping\\candidates};
-\node[keep, right=of candidates] (accepted) {10 accepted\\alignments};
-\node[review, below=of accepted] (domain) {1 domain-review\\candidate};
-\node[reject, below=of candidates] (rejected) {449 rejected or\\non-asserted rows};
+\node[keep, right=of candidates] (accepted) {12 accepted\\alignments};
+\node[reject, below=of candidates] (rejected) {448 rejected or\\non-asserted rows};
 \draw[arrow] (terms) -- (candidates);
 \draw[arrow] (candidates) -- (accepted);
-\draw[arrow, dashed] (candidates) -- (domain);
 \draw[arrow, dashed] (candidates) -- (rejected);
 \end{tikzpicture}}
 \caption{Comparative mapping flow. The large rejected count reflects careful assertion rules. It does not mean UOGTO lacks every unmatched external term.}

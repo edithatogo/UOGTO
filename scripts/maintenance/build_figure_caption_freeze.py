@@ -23,19 +23,21 @@ EXPECTED_SUPPLEMENT_FIGURES = {
     "Supplementary Figure S5": "docs/ontology-comparison/figures/source_module_overlap_heatmap.svg",
     "Supplementary Figure S6": "docs/ontology-comparison/figures/source_similarity_network.svg",
     "Supplementary Figure S7": "docs/ontology-comparison/figures/reviewer_workload.svg",
+    "Supplementary Figure S8": "docs/paper/paper.tex",
+    "Supplementary Figure S9": "docs/paper/paper.tex",
+    "Supplementary Figure S10": "docs/paper/paper.tex",
+    "Supplementary Figure S11": "docs/ontology-comparison/cosmograph/source_similarity_cosmograph.svg",
+    "Supplementary Figure S12": "docs/ontology-comparison/cosmograph/term_alignment_cosmograph.svg",
+    "Supplementary Figure S13": "docs/ontology-comparison/cosmograph/import_uses_cosmograph.svg",
 }
 
 MAIN_MANUSCRIPT_CALLOUTS = {
-    "fig:architecture": "Semantic separation among game specifications, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, and execution bindings.",
-    "fig:mapping-flow": "Candidate-to-review-to-alignment flow for conservative ontology mappings.",
-    "fig:evidence-heatmap": "Source-family evidence levels separating parsed RDF from structured non-RDF, metadata-only, and literature-only evidence.",
-    "fig:network-sensitivity": "Network-sensitivity view showing bridge concepts and evidence limits.",
-    "fig:reproducibility": "Reproducibility chain from ontology source to validation, mapping, tables, and submission gates.",
+    "fig:systematic-search-prisma-flow": "Search, screening, and mapping-review flow from source discovery to accepted and rejected mapping evidence.",
 }
 
 RERUN_TRIGGERS = [
     "manuscript Figure~\\ref callouts change",
-    "supplementary figure numbering S1-S7 changes",
+    "supplementary figure numbering S1-S13 changes",
     "caption/title text changes",
     "source_path or rendered_path changes in image_scores.csv",
     "any source or rendered figure file hash changes",
@@ -188,7 +190,7 @@ def write_markdown(manifest: dict[str, object]) -> None:
         for error in errors:
             lines.append(f"- FAIL: {error}")
     else:
-        lines.append("- PASS: all frozen image score rows are 100/100, source/rendered files exist, supplement figures S1-S7 match the frozen numbering, and manuscript callouts match the frozen labels.")
+        lines.append("- PASS: all frozen image score rows are 100/100, source/rendered files exist, supplement figures S1-S13 match the frozen numbering, and manuscript callouts match the frozen labels.")
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

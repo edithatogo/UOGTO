@@ -14,6 +14,7 @@ pytest = ">=8.0.0"
 pyyaml = ">=6.0.1"
 jsonschema = ">=4.0.0"
 ruff = ">=0.3.0"
+textstat = ">=0.7.13,<0.8"
 
 [tasks]
 build = "python scripts/build.py"

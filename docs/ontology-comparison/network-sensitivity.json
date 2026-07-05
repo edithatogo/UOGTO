@@ -9,6 +9,10 @@
           },
           {
             "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 2,
             "node": "uogto:https://w3id.org/uogto/core#Agent"
           },
           {
@@ -29,7 +33,15 @@
           },
           {
             "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Activity"
+          },
+          {
+            "degree": 1,
             "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Entity"
           },
           {
             "degree": 1,
@@ -53,7 +65,7 @@
           },
           {
             "degree": 1,
-            "node": "uogto:https://w3id.org/uogto/core#Action"
+            "node": "uogto:https://w3id.org/uogto/core#Outcome"
           },
           {
             "degree": 1,
@@ -88,9 +100,18 @@
             "uogto:https://w3id.org/uogto/extensions#Thing"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "source:http://xmlns.com/foaf/0.1/Agent",
             "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -99,10 +120,6 @@
           [
             "source:http://www.w3.org/ns/sosa/observes",
             "uogto:https://w3id.org/uogto/core#observes"
-          ],
-          [
-            "source:https://schema.org/Action",
-            "uogto:https://w3id.org/uogto/core#Action"
           ]
         ],
         "edges": [
@@ -127,9 +144,19 @@
             "owl:equivalentClass"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "skos:narrowMatch"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "uogto:https://w3id.org/uogto/core#Agent",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome",
+            "skos:narrowMatch"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -154,11 +181,11 @@
           [
             "source:https://schema.org/Action",
             "uogto:https://w3id.org/uogto/core#Action",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
           ]
         ],
         "metrics": {
-          "component_count": 7,
+          "component_count": 8,
           "connected_components": [
             [
               "source:http://ogp.me/ns#description",
@@ -175,9 +202,18 @@
               "uogto:https://w3id.org/uogto/extensions#Thing"
             ],
             [
+              "source:http://www.w3.org/ns/prov#Activity",
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ],
+            [
               "source:http://www.w3.org/ns/prov#Agent",
               "source:http://xmlns.com/foaf/0.1/Agent",
               "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Entity",
+              "uogto:https://w3id.org/uogto/core#Outcome"
             ],
             [
               "source:http://www.w3.org/ns/prov#Role",
@@ -186,10 +222,6 @@
             [
               "source:http://www.w3.org/ns/sosa/observes",
               "uogto:https://w3id.org/uogto/core#observes"
-            ],
-            [
-              "source:https://schema.org/Action",
-              "uogto:https://w3id.org/uogto/core#Action"
             ]
           ],
           "degree": {
@@ -197,22 +229,25 @@
             "source:http://purl.org/dc/terms/description": 1,
             "source:http://purl.org/dc/terms/identifier": 1,
             "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Activity": 1,
             "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Entity": 1,
             "source:http://www.w3.org/ns/prov#Role": 1,
             "source:http://www.w3.org/ns/sosa/observes": 1,
             "source:http://xmlns.com/foaf/0.1/Agent": 1,
             "source:https://ref.gs1.org/voc/description": 1,
             "source:https://schema.org/Action": 1,
-            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 2,
             "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Outcome": 1,
             "uogto:https://w3id.org/uogto/core#Role": 1,
             "uogto:https://w3id.org/uogto/core#description": 3,
             "uogto:https://w3id.org/uogto/core#identifier": 1,
             "uogto:https://w3id.org/uogto/core#observes": 1,
             "uogto:https://w3id.org/uogto/extensions#Thing": 1
           },
-          "edge_count": 10,
-          "node_count": 17,
+          "edge_count": 12,
+          "node_count": 20,
           "orphan_nodes": []
         },
         "nodes": [
@@ -220,7 +255,9 @@
           "source:http://purl.org/dc/terms/description",
           "source:http://purl.org/dc/terms/identifier",
           "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Activity",
           "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Entity",
           "source:http://www.w3.org/ns/prov#Role",
           "source:http://www.w3.org/ns/sosa/observes",
           "source:http://xmlns.com/foaf/0.1/Agent",
@@ -228,6 +265,7 @@
           "source:https://schema.org/Action",
           "uogto:https://w3id.org/uogto/core#Action",
           "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Outcome",
           "uogto:https://w3id.org/uogto/core#Role",
           "uogto:https://w3id.org/uogto/core#description",
           "uogto:https://w3id.org/uogto/core#identifier",
@@ -401,6 +439,9 @@
           ],
           [
             "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_core_uogto-governance"
           ],
           [
             "uogto_extensions_algorithmic-solvers-patch"
@@ -749,7 +790,7 @@
           ]
         ],
         "metrics": {
-          "component_count": 6,
+          "component_count": 7,
           "connected_components": [
             [
               "bfo",
@@ -835,6 +876,9 @@
               "uogto_core_uogto-core"
             ],
             [
+              "uogto_core_uogto-governance"
+            ],
+            [
               "uogto_extensions_algorithmic-solvers-patch"
             ]
           ],
@@ -879,6 +923,7 @@
             "uogto_core_rules": 1,
             "uogto_core_strategies": 1,
             "uogto_core_uogto-core": 0,
+            "uogto_core_uogto-governance": 0,
             "uogto_extensions_algorithmic-game-theory": 1,
             "uogto_extensions_algorithmic-solvers-patch": 0,
             "uogto_extensions_auctions": 1,
@@ -915,9 +960,10 @@
             "xmile": 1
           },
           "edge_count": 68,
-          "node_count": 74,
+          "node_count": 75,
           "orphan_nodes": [
             "uogto_core_uogto-core",
+            "uogto_core_uogto-governance",
             "uogto_extensions_algorithmic-solvers-patch"
           ]
         },
@@ -962,6 +1008,7 @@
           "uogto_core_rules",
           "uogto_core_strategies",
           "uogto_core_uogto-core",
+          "uogto_core_uogto-governance",
           "uogto_extensions_algorithmic-game-theory",
           "uogto_extensions_algorithmic-solvers-patch",
           "uogto_extensions_auctions",
@@ -1004,11 +1051,15 @@
         "bridge_terms": [
           {
             "degree": 3,
-            "node": "uogto:https://w3id.org/uogto/core#Agent"
+            "node": "uogto:https://w3id.org/uogto/core#description"
           },
           {
-            "degree": 3,
-            "node": "uogto:https://w3id.org/uogto/core#description"
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
           },
           {
             "degree": 1,
@@ -1028,15 +1079,19 @@
           },
           {
             "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Activity"
+          },
+          {
+            "degree": 1,
             "node": "source:http://www.w3.org/ns/prov#Agent"
           },
           {
             "degree": 1,
-            "node": "source:http://www.w3.org/ns/prov#Role"
+            "node": "source:http://www.w3.org/ns/prov#Entity"
           },
           {
             "degree": 1,
-            "node": "source:http://www.w3.org/ns/prov#agent"
+            "node": "source:http://www.w3.org/ns/prov#Role"
           },
           {
             "degree": 1,
@@ -1056,7 +1111,7 @@
           },
           {
             "degree": 1,
-            "node": "uogto:https://w3id.org/uogto/core#Action"
+            "node": "uogto:https://w3id.org/uogto/core#Outcome"
           },
           {
             "degree": 1,
@@ -1091,10 +1146,18 @@
             "uogto:https://w3id.org/uogto/extensions#Thing"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
-            "source:http://www.w3.org/ns/prov#agent",
             "source:http://xmlns.com/foaf/0.1/Agent",
             "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -1103,10 +1166,6 @@
           [
             "source:http://www.w3.org/ns/sosa/observes",
             "uogto:https://w3id.org/uogto/core#observes"
-          ],
-          [
-            "source:https://schema.org/Action",
-            "uogto:https://w3id.org/uogto/core#Action"
           ]
         ],
         "edges": [
@@ -1131,19 +1190,24 @@
             "owl:equivalentClass"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "skos:narrowMatch"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "uogto:https://w3id.org/uogto/core#Agent",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome",
+            "skos:narrowMatch"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
             "uogto:https://w3id.org/uogto/core#Role",
             "owl:equivalentClass"
-          ],
-          [
-            "source:http://www.w3.org/ns/prov#agent",
-            "uogto:https://w3id.org/uogto/core#Agent",
-            "skos:relatedMatch"
           ],
           [
             "source:http://www.w3.org/ns/sosa/observes",
@@ -1163,11 +1227,11 @@
           [
             "source:https://schema.org/Action",
             "uogto:https://w3id.org/uogto/core#Action",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
           ]
         ],
         "metrics": {
-          "component_count": 7,
+          "component_count": 8,
           "connected_components": [
             [
               "source:http://ogp.me/ns#description",
@@ -1184,10 +1248,18 @@
               "uogto:https://w3id.org/uogto/extensions#Thing"
             ],
             [
+              "source:http://www.w3.org/ns/prov#Activity",
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ],
+            [
               "source:http://www.w3.org/ns/prov#Agent",
-              "source:http://www.w3.org/ns/prov#agent",
               "source:http://xmlns.com/foaf/0.1/Agent",
               "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Entity",
+              "uogto:https://w3id.org/uogto/core#Outcome"
             ],
             [
               "source:http://www.w3.org/ns/prov#Role",
@@ -1196,10 +1268,6 @@
             [
               "source:http://www.w3.org/ns/sosa/observes",
               "uogto:https://w3id.org/uogto/core#observes"
-            ],
-            [
-              "source:https://schema.org/Action",
-              "uogto:https://w3id.org/uogto/core#Action"
             ]
           ],
           "degree": {
@@ -1207,23 +1275,25 @@
             "source:http://purl.org/dc/terms/description": 1,
             "source:http://purl.org/dc/terms/identifier": 1,
             "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Activity": 1,
             "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Entity": 1,
             "source:http://www.w3.org/ns/prov#Role": 1,
-            "source:http://www.w3.org/ns/prov#agent": 1,
             "source:http://www.w3.org/ns/sosa/observes": 1,
             "source:http://xmlns.com/foaf/0.1/Agent": 1,
             "source:https://ref.gs1.org/voc/description": 1,
             "source:https://schema.org/Action": 1,
-            "uogto:https://w3id.org/uogto/core#Action": 1,
-            "uogto:https://w3id.org/uogto/core#Agent": 3,
+            "uogto:https://w3id.org/uogto/core#Action": 2,
+            "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Outcome": 1,
             "uogto:https://w3id.org/uogto/core#Role": 1,
             "uogto:https://w3id.org/uogto/core#description": 3,
             "uogto:https://w3id.org/uogto/core#identifier": 1,
             "uogto:https://w3id.org/uogto/core#observes": 1,
             "uogto:https://w3id.org/uogto/extensions#Thing": 1
           },
-          "edge_count": 11,
-          "node_count": 18,
+          "edge_count": 12,
+          "node_count": 20,
           "orphan_nodes": []
         },
         "nodes": [
@@ -1231,15 +1301,17 @@
           "source:http://purl.org/dc/terms/description",
           "source:http://purl.org/dc/terms/identifier",
           "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Activity",
           "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Entity",
           "source:http://www.w3.org/ns/prov#Role",
-          "source:http://www.w3.org/ns/prov#agent",
           "source:http://www.w3.org/ns/sosa/observes",
           "source:http://xmlns.com/foaf/0.1/Agent",
           "source:https://ref.gs1.org/voc/description",
           "source:https://schema.org/Action",
           "uogto:https://w3id.org/uogto/core#Action",
           "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Outcome",
           "uogto:https://w3id.org/uogto/core#Role",
           "uogto:https://w3id.org/uogto/core#description",
           "uogto:https://w3id.org/uogto/core#identifier",
@@ -1413,6 +1485,9 @@
           ],
           [
             "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_core_uogto-governance"
           ],
           [
             "uogto_extensions_algorithmic-solvers-patch"
@@ -1761,7 +1836,7 @@
           ]
         ],
         "metrics": {
-          "component_count": 6,
+          "component_count": 7,
           "connected_components": [
             [
               "bfo",
@@ -1847,6 +1922,9 @@
               "uogto_core_uogto-core"
             ],
             [
+              "uogto_core_uogto-governance"
+            ],
+            [
               "uogto_extensions_algorithmic-solvers-patch"
             ]
           ],
@@ -1891,6 +1969,7 @@
             "uogto_core_rules": 1,
             "uogto_core_strategies": 1,
             "uogto_core_uogto-core": 0,
+            "uogto_core_uogto-governance": 0,
             "uogto_extensions_algorithmic-game-theory": 1,
             "uogto_extensions_algorithmic-solvers-patch": 0,
             "uogto_extensions_auctions": 1,
@@ -1927,9 +2006,10 @@
             "xmile": 1
           },
           "edge_count": 68,
-          "node_count": 74,
+          "node_count": 75,
           "orphan_nodes": [
             "uogto_core_uogto-core",
+            "uogto_core_uogto-governance",
             "uogto_extensions_algorithmic-solvers-patch"
           ]
         },
@@ -1974,6 +2054,7 @@
           "uogto_core_rules",
           "uogto_core_strategies",
           "uogto_core_uogto-core",
+          "uogto_core_uogto-governance",
           "uogto_extensions_algorithmic-game-theory",
           "uogto_extensions_algorithmic-solvers-patch",
           "uogto_extensions_auctions",
@@ -2020,6 +2101,10 @@
           },
           {
             "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 2,
             "node": "uogto:https://w3id.org/uogto/core#Agent"
           },
           {
@@ -2040,7 +2125,15 @@
           },
           {
             "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Activity"
+          },
+          {
+            "degree": 1,
             "node": "source:http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Entity"
           },
           {
             "degree": 1,
@@ -2064,7 +2157,7 @@
           },
           {
             "degree": 1,
-            "node": "uogto:https://w3id.org/uogto/core#Action"
+            "node": "uogto:https://w3id.org/uogto/core#Outcome"
           },
           {
             "degree": 1,
@@ -2099,9 +2192,18 @@
             "uogto:https://w3id.org/uogto/extensions#Thing"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "source:http://xmlns.com/foaf/0.1/Agent",
             "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -2110,10 +2212,6 @@
           [
             "source:http://www.w3.org/ns/sosa/observes",
             "uogto:https://w3id.org/uogto/core#observes"
-          ],
-          [
-            "source:https://schema.org/Action",
-            "uogto:https://w3id.org/uogto/core#Action"
           ]
         ],
         "edges": [
@@ -2138,9 +2236,19 @@
             "owl:equivalentClass"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "skos:narrowMatch"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "uogto:https://w3id.org/uogto/core#Agent",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome",
+            "skos:narrowMatch"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -2165,11 +2273,11 @@
           [
             "source:https://schema.org/Action",
             "uogto:https://w3id.org/uogto/core#Action",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
           ]
         ],
         "metrics": {
-          "component_count": 7,
+          "component_count": 8,
           "connected_components": [
             [
               "source:http://ogp.me/ns#description",
@@ -2186,9 +2294,18 @@
               "uogto:https://w3id.org/uogto/extensions#Thing"
             ],
             [
+              "source:http://www.w3.org/ns/prov#Activity",
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ],
+            [
               "source:http://www.w3.org/ns/prov#Agent",
               "source:http://xmlns.com/foaf/0.1/Agent",
               "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Entity",
+              "uogto:https://w3id.org/uogto/core#Outcome"
             ],
             [
               "source:http://www.w3.org/ns/prov#Role",
@@ -2197,10 +2314,6 @@
             [
               "source:http://www.w3.org/ns/sosa/observes",
               "uogto:https://w3id.org/uogto/core#observes"
-            ],
-            [
-              "source:https://schema.org/Action",
-              "uogto:https://w3id.org/uogto/core#Action"
             ]
           ],
           "degree": {
@@ -2208,22 +2321,25 @@
             "source:http://purl.org/dc/terms/description": 1,
             "source:http://purl.org/dc/terms/identifier": 1,
             "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Activity": 1,
             "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Entity": 1,
             "source:http://www.w3.org/ns/prov#Role": 1,
             "source:http://www.w3.org/ns/sosa/observes": 1,
             "source:http://xmlns.com/foaf/0.1/Agent": 1,
             "source:https://ref.gs1.org/voc/description": 1,
             "source:https://schema.org/Action": 1,
-            "uogto:https://w3id.org/uogto/core#Action": 1,
+            "uogto:https://w3id.org/uogto/core#Action": 2,
             "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Outcome": 1,
             "uogto:https://w3id.org/uogto/core#Role": 1,
             "uogto:https://w3id.org/uogto/core#description": 3,
             "uogto:https://w3id.org/uogto/core#identifier": 1,
             "uogto:https://w3id.org/uogto/core#observes": 1,
             "uogto:https://w3id.org/uogto/extensions#Thing": 1
           },
-          "edge_count": 10,
-          "node_count": 17,
+          "edge_count": 12,
+          "node_count": 20,
           "orphan_nodes": []
         },
         "nodes": [
@@ -2231,7 +2347,9 @@
           "source:http://purl.org/dc/terms/description",
           "source:http://purl.org/dc/terms/identifier",
           "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Activity",
           "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Entity",
           "source:http://www.w3.org/ns/prov#Role",
           "source:http://www.w3.org/ns/sosa/observes",
           "source:http://xmlns.com/foaf/0.1/Agent",
@@ -2239,6 +2357,7 @@
           "source:https://schema.org/Action",
           "uogto:https://w3id.org/uogto/core#Action",
           "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Outcome",
           "uogto:https://w3id.org/uogto/core#Role",
           "uogto:https://w3id.org/uogto/core#description",
           "uogto:https://w3id.org/uogto/core#identifier",
@@ -2437,6 +2556,9 @@
           ],
           [
             "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_core_uogto-governance"
           ],
           [
             "uogto_extensions_algorithmic-solvers-patch"
@@ -2706,7 +2828,7 @@
           ]
         ],
         "metrics": {
-          "component_count": 22,
+          "component_count": 23,
           "connected_components": [
             [
               "bfo"
@@ -2817,6 +2939,9 @@
               "uogto_core_uogto-core"
             ],
             [
+              "uogto_core_uogto-governance"
+            ],
+            [
               "uogto_extensions_algorithmic-solvers-patch"
             ],
             [
@@ -2866,6 +2991,7 @@
             "uogto_core_rules": 1,
             "uogto_core_strategies": 1,
             "uogto_core_uogto-core": 0,
+            "uogto_core_uogto-governance": 0,
             "uogto_extensions_algorithmic-game-theory": 1,
             "uogto_extensions_algorithmic-solvers-patch": 0,
             "uogto_extensions_auctions": 1,
@@ -2902,7 +3028,7 @@
             "xmile": 0
           },
           "edge_count": 51,
-          "node_count": 73,
+          "node_count": 74,
           "orphan_nodes": [
             "bfo",
             "devs",
@@ -2920,6 +3046,7 @@
             "p_plan",
             "sed_ml",
             "uogto_core_uogto-core",
+            "uogto_core_uogto-governance",
             "uogto_extensions_algorithmic-solvers-patch",
             "vimmp_ontologies",
             "xmile"
@@ -2965,6 +3092,7 @@
           "uogto_core_rules",
           "uogto_core_strategies",
           "uogto_core_uogto-core",
+          "uogto_core_uogto-governance",
           "uogto_extensions_algorithmic-game-theory",
           "uogto_extensions_algorithmic-solvers-patch",
           "uogto_extensions_auctions",
@@ -3007,11 +3135,15 @@
         "bridge_terms": [
           {
             "degree": 3,
-            "node": "uogto:https://w3id.org/uogto/core#Agent"
+            "node": "uogto:https://w3id.org/uogto/core#description"
           },
           {
-            "degree": 3,
-            "node": "uogto:https://w3id.org/uogto/core#description"
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Action"
+          },
+          {
+            "degree": 2,
+            "node": "uogto:https://w3id.org/uogto/core#Agent"
           },
           {
             "degree": 1,
@@ -3031,15 +3163,19 @@
           },
           {
             "degree": 1,
+            "node": "source:http://www.w3.org/ns/prov#Activity"
+          },
+          {
+            "degree": 1,
             "node": "source:http://www.w3.org/ns/prov#Agent"
           },
           {
             "degree": 1,
-            "node": "source:http://www.w3.org/ns/prov#Role"
+            "node": "source:http://www.w3.org/ns/prov#Entity"
           },
           {
             "degree": 1,
-            "node": "source:http://www.w3.org/ns/prov#agent"
+            "node": "source:http://www.w3.org/ns/prov#Role"
           },
           {
             "degree": 1,
@@ -3059,7 +3195,7 @@
           },
           {
             "degree": 1,
-            "node": "uogto:https://w3id.org/uogto/core#Action"
+            "node": "uogto:https://w3id.org/uogto/core#Outcome"
           },
           {
             "degree": 1,
@@ -3094,10 +3230,18 @@
             "uogto:https://w3id.org/uogto/extensions#Thing"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "source:https://schema.org/Action",
+            "uogto:https://w3id.org/uogto/core#Action"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
-            "source:http://www.w3.org/ns/prov#agent",
             "source:http://xmlns.com/foaf/0.1/Agent",
             "uogto:https://w3id.org/uogto/core#Agent"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
@@ -3106,10 +3250,6 @@
           [
             "source:http://www.w3.org/ns/sosa/observes",
             "uogto:https://w3id.org/uogto/core#observes"
-          ],
-          [
-            "source:https://schema.org/Action",
-            "uogto:https://w3id.org/uogto/core#Action"
           ]
         ],
         "edges": [
@@ -3134,19 +3274,24 @@
             "owl:equivalentClass"
           ],
           [
+            "source:http://www.w3.org/ns/prov#Activity",
+            "uogto:https://w3id.org/uogto/core#Action",
+            "skos:narrowMatch"
+          ],
+          [
             "source:http://www.w3.org/ns/prov#Agent",
             "uogto:https://w3id.org/uogto/core#Agent",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
+          ],
+          [
+            "source:http://www.w3.org/ns/prov#Entity",
+            "uogto:https://w3id.org/uogto/core#Outcome",
+            "skos:narrowMatch"
           ],
           [
             "source:http://www.w3.org/ns/prov#Role",
             "uogto:https://w3id.org/uogto/core#Role",
             "owl:equivalentClass"
-          ],
-          [
-            "source:http://www.w3.org/ns/prov#agent",
-            "uogto:https://w3id.org/uogto/core#Agent",
-            "skos:relatedMatch"
           ],
           [
             "source:http://www.w3.org/ns/sosa/observes",
@@ -3166,11 +3311,11 @@
           [
             "source:https://schema.org/Action",
             "uogto:https://w3id.org/uogto/core#Action",
-            "owl:equivalentClass"
+            "skos:narrowMatch"
           ]
         ],
         "metrics": {
-          "component_count": 7,
+          "component_count": 8,
           "connected_components": [
             [
               "source:http://ogp.me/ns#description",
@@ -3187,10 +3332,18 @@
               "uogto:https://w3id.org/uogto/extensions#Thing"
             ],
             [
+              "source:http://www.w3.org/ns/prov#Activity",
+              "source:https://schema.org/Action",
+              "uogto:https://w3id.org/uogto/core#Action"
+            ],
+            [
               "source:http://www.w3.org/ns/prov#Agent",
-              "source:http://www.w3.org/ns/prov#agent",
               "source:http://xmlns.com/foaf/0.1/Agent",
               "uogto:https://w3id.org/uogto/core#Agent"
+            ],
+            [
+              "source:http://www.w3.org/ns/prov#Entity",
+              "uogto:https://w3id.org/uogto/core#Outcome"
             ],
             [
               "source:http://www.w3.org/ns/prov#Role",
@@ -3199,10 +3352,6 @@
             [
               "source:http://www.w3.org/ns/sosa/observes",
               "uogto:https://w3id.org/uogto/core#observes"
-            ],
-            [
-              "source:https://schema.org/Action",
-              "uogto:https://w3id.org/uogto/core#Action"
             ]
           ],
           "degree": {
@@ -3210,23 +3359,25 @@
             "source:http://purl.org/dc/terms/description": 1,
             "source:http://purl.org/dc/terms/identifier": 1,
             "source:http://www.w3.org/2002/07/owl#Thing": 1,
+            "source:http://www.w3.org/ns/prov#Activity": 1,
             "source:http://www.w3.org/ns/prov#Agent": 1,
+            "source:http://www.w3.org/ns/prov#Entity": 1,
             "source:http://www.w3.org/ns/prov#Role": 1,
-            "source:http://www.w3.org/ns/prov#agent": 1,
             "source:http://www.w3.org/ns/sosa/observes": 1,
             "source:http://xmlns.com/foaf/0.1/Agent": 1,
             "source:https://ref.gs1.org/voc/description": 1,
             "source:https://schema.org/Action": 1,
-            "uogto:https://w3id.org/uogto/core#Action": 1,
-            "uogto:https://w3id.org/uogto/core#Agent": 3,
+            "uogto:https://w3id.org/uogto/core#Action": 2,
+            "uogto:https://w3id.org/uogto/core#Agent": 2,
+            "uogto:https://w3id.org/uogto/core#Outcome": 1,
             "uogto:https://w3id.org/uogto/core#Role": 1,
             "uogto:https://w3id.org/uogto/core#description": 3,
             "uogto:https://w3id.org/uogto/core#identifier": 1,
             "uogto:https://w3id.org/uogto/core#observes": 1,
             "uogto:https://w3id.org/uogto/extensions#Thing": 1
           },
-          "edge_count": 11,
-          "node_count": 18,
+          "edge_count": 12,
+          "node_count": 20,
           "orphan_nodes": []
         },
         "nodes": [
@@ -3234,15 +3385,17 @@
           "source:http://purl.org/dc/terms/description",
           "source:http://purl.org/dc/terms/identifier",
           "source:http://www.w3.org/2002/07/owl#Thing",
+          "source:http://www.w3.org/ns/prov#Activity",
           "source:http://www.w3.org/ns/prov#Agent",
+          "source:http://www.w3.org/ns/prov#Entity",
           "source:http://www.w3.org/ns/prov#Role",
-          "source:http://www.w3.org/ns/prov#agent",
           "source:http://www.w3.org/ns/sosa/observes",
           "source:http://xmlns.com/foaf/0.1/Agent",
           "source:https://ref.gs1.org/voc/description",
           "source:https://schema.org/Action",
           "uogto:https://w3id.org/uogto/core#Action",
           "uogto:https://w3id.org/uogto/core#Agent",
+          "uogto:https://w3id.org/uogto/core#Outcome",
           "uogto:https://w3id.org/uogto/core#Role",
           "uogto:https://w3id.org/uogto/core#description",
           "uogto:https://w3id.org/uogto/core#identifier",
@@ -3441,6 +3594,9 @@
           ],
           [
             "uogto_core_uogto-core"
+          ],
+          [
+            "uogto_core_uogto-governance"
           ],
           [
             "uogto_extensions_algorithmic-solvers-patch"
@@ -3710,7 +3866,7 @@
           ]
         ],
         "metrics": {
-          "component_count": 22,
+          "component_count": 23,
           "connected_components": [
             [
               "bfo"
@@ -3821,6 +3977,9 @@
               "uogto_core_uogto-core"
             ],
             [
+              "uogto_core_uogto-governance"
+            ],
+            [
               "uogto_extensions_algorithmic-solvers-patch"
             ],
             [
@@ -3870,6 +4029,7 @@
             "uogto_core_rules": 1,
             "uogto_core_strategies": 1,
             "uogto_core_uogto-core": 0,
+            "uogto_core_uogto-governance": 0,
             "uogto_extensions_algorithmic-game-theory": 1,
             "uogto_extensions_algorithmic-solvers-patch": 0,
             "uogto_extensions_auctions": 1,
@@ -3906,7 +4066,7 @@
             "xmile": 0
           },
           "edge_count": 51,
-          "node_count": 73,
+          "node_count": 74,
           "orphan_nodes": [
             "bfo",
             "devs",
@@ -3924,6 +4084,7 @@
             "p_plan",
             "sed_ml",
             "uogto_core_uogto-core",
+            "uogto_core_uogto-governance",
             "uogto_extensions_algorithmic-solvers-patch",
             "vimmp_ontologies",
             "xmile"
@@ -3969,6 +4130,7 @@
           "uogto_core_rules",
           "uogto_core_strategies",
           "uogto_core_uogto-core",
+          "uogto_core_uogto-governance",
           "uogto_extensions_algorithmic-game-theory",
           "uogto_extensions_algorithmic-solvers-patch",
           "uogto_extensions_auctions",
@@ -4010,27 +4172,21 @@
   "schema": "uogto.ontology-comparison.network-sensitivity.v1",
   "sensitivity": {
     "accepted_only_vs_close_related": {
-      "bridge_nodes_added": [
-        "source:http://www.w3.org/ns/prov#agent"
-      ],
-      "bridge_nodes_removed": [
-        "source:http://xmlns.com/foaf/0.1/Agent"
-      ],
-      "community_count_after": 7,
-      "community_count_before": 7,
+      "bridge_nodes_added": [],
+      "bridge_nodes_removed": [],
+      "community_count_after": 8,
+      "community_count_before": 8,
       "component_delta": 0,
-      "edge_delta": 1,
-      "node_delta": 1,
-      "nodes_added": [
-        "source:http://www.w3.org/ns/prov#agent"
-      ],
+      "edge_delta": 0,
+      "node_delta": 0,
+      "nodes_added": [],
       "nodes_removed": []
     },
     "bridge_overlap": {
       "alignment_graph": [
         "source:http://ogp.me/ns#description",
         "source:http://purl.org/dc/terms/description",
-        "source:http://purl.org/dc/terms/identifier",
+        "uogto:https://w3id.org/uogto/core#Action",
         "uogto:https://w3id.org/uogto/core#Agent",
         "uogto:https://w3id.org/uogto/core#description"
       ],
@@ -4057,8 +4213,8 @@
         "game_ontology_project",
         "metadata_only_sources"
       ],
-      "community_count_after": 22,
-      "community_count_before": 6,
+      "community_count_after": 23,
+      "community_count_before": 7,
       "component_delta": 16,
       "edge_delta": -17,
       "node_delta": -1,
@@ -4072,6 +4228,6 @@
     "provenance_source_count": 21,
     "review_row_count": 460,
     "scenario_count": 4,
-    "source_count": 69
+    "source_count": 70
   }
 }

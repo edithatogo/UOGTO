@@ -55,7 +55,7 @@ class TestSssomMappingOutputs(unittest.TestCase):
 
     def test_repo_sssom_outputs_validate(self):
         summary = align.validate_sssom_outputs()
-        self.assertEqual(summary["row_count"], 10)
+        self.assertEqual(summary["row_count"], 12)
 
 
 if __name__ == "__main__":

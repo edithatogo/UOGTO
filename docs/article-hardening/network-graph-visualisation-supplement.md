@@ -22,7 +22,7 @@ The source-similarity graph contains 69 source or module nodes and 391 weighted 
 
 ![Accepted term-alignment Cosmograph render](../ontology-comparison/cosmograph/term_alignment_cosmograph.svg)
 
-The accepted term-alignment graph contains 10 accepted bipartite edges. Its sparseness is informative: UOGTO retains most candidate mappings as rejected, deferred, or domain-review evidence rather than converting lexical proximity into asserted equivalence.
+The accepted term-alignment graph contains 12 accepted bipartite edges. Its sparseness is informative: UOGTO retains most candidate mappings as rejected or non-asserted evidence rather than converting lexical proximity into asserted equivalence.
 
 ## Figure NG3. Import and evidence-use graph
 

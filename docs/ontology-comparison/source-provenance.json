@@ -1,5 +1,5 @@
 {
-  "created": "2026-06-24T04:51:42Z",
+  "created": "2026-07-05T08:16:47Z",
   "description": "Harvest/provenance manifest for comparative ontology mapping sources.",
   "schema": "uogto.ontology-comparison.source-provenance.v1",
   "sources": [
@@ -20,7 +20,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://github.com/BFO-ontology/BFO-2020",
       "triple_count": 0
     },
@@ -41,7 +41,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://acims.asu.edu/devs/",
       "triple_count": 0
     },
@@ -62,7 +62,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.loa.istc.cnr.it/dolce/overview.html",
       "triple_count": 0
     },
@@ -83,7 +83,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://github.com/emmo-repo/EMMO",
       "triple_count": 0
     },
@@ -104,7 +104,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.gameontology.com/",
       "triple_count": 0
     },
@@ -125,7 +125,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://en.wikipedia.org/wiki/Game_Description_Language",
       "triple_count": 0
     },
@@ -146,7 +146,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.sisostds.org/",
       "triple_count": 0
     },
@@ -167,7 +167,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://ontology.ihmc.us/kaos.html",
       "triple_count": 0
     },
@@ -188,7 +188,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://github.com/SED-ML/KiSAO",
       "triple_count": 0
     },
@@ -209,7 +209,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://co.mbine.org/standards/miase",
       "triple_count": 0
     },
@@ -230,7 +230,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.jasss.org/23/2/7.html",
       "triple_count": 0
     },
@@ -251,7 +251,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://ontouml.org/",
       "triple_count": 0
     },
@@ -272,7 +272,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://github.com/virtual-materials-marketplace/osmo",
       "triple_count": 0
     },
@@ -293,7 +293,7 @@
       "parse_status": "parsed",
       "rdf_format": "turtle",
       "retrieval_mode": "downloaded",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.w3.org/TR/owl-time/",
       "triple_count": 1296
     },
@@ -314,7 +314,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://vocab.linkeddata.es/p-plan/",
       "triple_count": 0
     },
@@ -335,7 +335,7 @@
       "parse_status": "parsed",
       "rdf_format": "xml",
       "retrieval_mode": "downloaded",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.w3.org/TR/prov-o/",
       "triple_count": 1146
     },
@@ -356,7 +356,7 @@
       "parse_status": "parsed",
       "rdf_format": "turtle",
       "retrieval_mode": "downloaded",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://schema.org/",
       "triple_count": 17949
     },
@@ -377,7 +377,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://sed-ml.org/",
       "triple_count": 0
     },
@@ -398,7 +398,7 @@
       "parse_status": "parsed",
       "rdf_format": "turtle",
       "retrieval_mode": "downloaded",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.w3.org/TR/vocab-ssn/",
       "triple_count": 520
     },
@@ -419,7 +419,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://github.com/virtual-materials-marketplace",
       "triple_count": 0
     },
@@ -440,7 +440,7 @@
       "parse_status": "not_attempted",
       "rdf_format": null,
       "retrieval_mode": "metadata_only",
-      "retrieval_timestamp": "2026-06-24T04:51:42Z",
+      "retrieval_timestamp": "2026-07-05T08:16:47Z",
       "source_url": "https://www.oasis-open.org/standard/xmile-v1-0/",
       "triple_count": 0
     }

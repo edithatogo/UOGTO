@@ -93,10 +93,15 @@ def prefill_decision(candidate):
     predicate = candidate["candidate_predicate"]
     confidence = float(candidate["confidence"])
     flags = set(candidate.get("review_flags", []))
+    evidence = candidate.get("evidence") or {}
     if predicate == "no_match":
+        if evidence.get("type_compatible") is False:
+            return "rejected", "", "ontology_alignment_reviewer", "Rejected because the candidate crosses incompatible term types without an approved bridge pattern."
         return "rejected", "", "automation_prefill", "Rejected because candidate generator classified this pair as no_match."
     if "metadata_only_source" in flags:
         return "defer_until_source_clarified", "", "automation_prefill", "Deferred until source artifact or domain review is available for metadata-only source."
+    if evidence.get("external_is_uogto_parent") and predicate == "skos:narrowMatch":
+        return "accepted", predicate, "ontology_alignment_reviewer", "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence."
     if confidence >= 0.53 and predicate in {"owl:equivalentClass", "owl:equivalentProperty", "skos:exactMatch"}:
         return "accepted", predicate, "automation_prefill", "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention."
     if confidence >= 0.55:

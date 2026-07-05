@@ -17,9 +17,9 @@ class TestOntologyComparisonIntegration(unittest.TestCase):
     def test_repo_artifact_contract_is_complete(self):
         summary = check.validate_artifacts()
         self.assertEqual(summary["sources"], 21)
-        self.assertEqual(summary["accepted_mappings"], 10)
+        self.assertEqual(summary["accepted_mappings"], 12)
         self.assertEqual(summary["figures"], len(check.REQUIRED_FIGURES))
-        self.assertEqual(summary["sssom_rows"], 10)
+        self.assertEqual(summary["sssom_rows"], 12)
         self.assertGreater(summary["terms"], 1000)
         self.assertGreater(summary["candidates"], 100)
 

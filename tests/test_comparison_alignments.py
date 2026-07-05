@@ -44,6 +44,24 @@ class TestComparisonAlignments(unittest.TestCase):
         self.assertEqual(reviewer, "automation_prefill")
         self.assertIn("exact/equivalent", rationale)
 
+    def test_prefill_decision_accepts_parent_backed_narrow_match(self):
+        item = candidate(0.58, "skos:narrowMatch")
+        item["evidence"]["external_is_uogto_parent"] = True
+        status, predicate, reviewer, rationale = align.prefill_decision(item)
+        self.assertEqual(status, "accepted")
+        self.assertEqual(predicate, "skos:narrowMatch")
+        self.assertEqual(reviewer, "ontology_alignment_reviewer")
+        self.assertIn("subclass", rationale)
+
+    def test_prefill_decision_rejects_incompatible_term_types(self):
+        item = candidate(0.48, "no_match")
+        item["evidence"]["type_compatible"] = False
+        status, predicate, reviewer, rationale = align.prefill_decision(item)
+        self.assertEqual(status, "rejected")
+        self.assertEqual(predicate, "")
+        self.assertEqual(reviewer, "ontology_alignment_reviewer")
+        self.assertIn("incompatible term types", rationale)
+
     def test_review_csv_round_trip_and_validation(self):
         rows = align.review_rows([candidate(), candidate(0.3, "skos:relatedMatch", ["low_confidence"])])
         output = self.temp_dir / "review.csv"

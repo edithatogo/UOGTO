@@ -145,11 +145,6 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: Completed
 - **Link**: [./tracks/uogto_interoperability_benchmarks_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_interoperability_benchmarks_20260705/)
 
-## [ ] Track: uogto_alignment_evidence_expansion_20260705
-- **Description**: Expand evidence-backed ontology alignments and synchronized comparison artifacts.
-- **Status**: New
-- **Link**: [./tracks/uogto_alignment_evidence_expansion_20260705/](file:///C:/Users/60217257/OneDrive%20-%20Flinders/repos/legal-nz/UOGTO/conductor/tracks/uogto_alignment_evidence_expansion_20260705/)
-
 ## [ ] Track: uogto_manuscript_submission_revision_20260705
 - **Description**: Plan arXiv closeout, manuscript revision, and target-venue strategy from presubmission review evidence.
 - **Status**: New

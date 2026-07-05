@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## 2026-07-05 - Alignment evidence expansion
+
+- Completed and archived Conductor track `uogto_alignment_evidence_expansion_20260705` under `conductor/archive/uogto_alignment_evidence_expansion_20260705/`.
+- Added parent-axiom evidence detection for UOGTO alignment rows so checked-in subclass relationships become conservative `skos:narrowMatch` accepted mappings rather than weak lexical review items.
+- Rejected incompatible term-type candidates deterministically and de-duplicated candidate rows by external/UOGTO term IRI pair so the strongest evidence row wins.
+- Regenerated ontology comparison candidates, mapping review, accepted TTL/SSSOM exports, overlap metrics, network analysis, Cosmograph assets, figures, and report artifacts.
+- Updated manuscript, raw-search, network-visualisation, article-facing table, candidate-ledger, readability, and figure-freeze artifacts to reflect 4,046 term rows, 460 mapping candidates, 12 accepted mappings, 0 mapping-review domain-review rows, and 448 rejected/non-asserted mappings.
+- Conductor review found and fixed one candidate de-duplication edge case and one stale figure-freeze contract.
+- Verification passed: `make ontology-comparison-all`; focused comparison/SSSOM/network/article/manuscript pytest (`36 passed`); `make article-facing-tables`; `make candidate-decision-ledger`; `make figure-caption-freeze`; `git diff --check`; `make validate`; `make test` (`247 passed, 1 skipped, 52 warnings`).
+
 ## 2026-07-05 - Registry publication follow-through
 
 - Completed Conductor track `uogto_registry_publication_followthrough_20260705`.

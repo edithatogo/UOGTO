@@ -36,7 +36,7 @@ Primary artefacts:
 - `docs/article-hardening/candidate-decision-ledger.md`
 - `docs/article-hardening/candidate-decision-ledger.csv`
 
-Supplementary Table S2 summarises source families, evidence levels, licence dispositions, and inclusion decisions. The repository-only raw search output supplement preserves the route-level raw search outputs and the narrowing ledger from 39 retained source rows to 21 comparative sources, 4,037 normalized term rows, 460 mapping candidates, and 10 accepted alignments. The repository-only candidate decision ledger joins route, source, mapping, and ontology-inclusion candidates into one 511-row audit table with recorded inclusion/exclusion rationales and heuristics. Supplementary Figure S3 shows source-family coverage by evidence level.
+Supplementary Table S2 summarises source families, evidence levels, licence dispositions, and inclusion decisions. The repository-only raw search output supplement preserves the route-level raw search outputs and the narrowing ledger from 39 retained source rows to 21 comparative sources, 4,046 normalized term rows, 460 mapping candidates, and 12 accepted alignments. The repository-only candidate decision ledger joins route, source, mapping, and ontology-inclusion candidates into one 511-row audit table with recorded inclusion/exclusion rationales and heuristics. Supplementary Figure S3 shows source-family coverage by evidence level.
 
 ### S3. Ontology implementation and validation
 
@@ -64,7 +64,7 @@ Supplementary Table S3 is the module audit table. It gives reviewers a compact a
 
 ### S4. Mapping and alignment evidence
 
-The mapping workflow separates candidate generation from accepted alignment. Candidate mappings are generated from deterministic lexical, definitional, hierarchy, property-signature, type-compatibility, and source-reliability signals. Accepted mappings are exported as both RDF alignment triples and SSSOM tables. Rejected mappings and domain-review rows remain available for audit; they are not silently discarded.
+The mapping workflow separates candidate generation from accepted alignment. Candidate mappings are generated from deterministic lexical, definitional, hierarchy, property-signature, type-compatibility, and source-reliability signals. Accepted mappings are exported as both RDF alignment triples and SSSOM tables. Rejected mappings and any future domain-review rows remain available for audit; they are not silently discarded.
 
 Primary artefacts:
 
@@ -75,7 +75,7 @@ Primary artefacts:
 - `docs/ontology-comparison/accepted-alignments.sssom.tsv`
 - `docs/ontology-comparison/accepted-alignments.sssom.yml`
 
-Supplementary Table S4 reports the mapping decision surface, including accepted, rejected, and domain-review rows. Supplementary Figure S4 shows the mapping flow from candidates to reviewed decisions and accepted alignments.
+Supplementary Table S4 reports the mapping decision surface, including accepted, rejected, and any domain-review rows. Supplementary Figure S4 shows the mapping flow from candidates to reviewed decisions and accepted alignments.
 
 ### S5. Robustness, calibration, and network analyses
 
@@ -194,7 +194,7 @@ The quality metrics show that UOGTO's article-facing claims are backed by parse 
 
 ### Mapping review and robustness
 
-The mapping workflow generated 460 candidates and accepted 10 conservative alignments. One candidate remained marked for domain review and 449 candidates were rejected. The robustness and calibration artefacts show why these numbers should be read as precision-oriented review evidence rather than evidence of low coverage. UOGTO records candidate matches that look plausible but are not asserted.
+The mapping workflow generated 460 candidates and accepted 12 conservative alignments. No mapping-review candidate remains marked for domain review, and 448 candidates were rejected. The robustness and calibration artefacts show why these numbers should be read as precision-oriented review evidence rather than evidence of low coverage. UOGTO records candidate matches that look plausible but are not asserted.
 
 ### Case-study coverage
 

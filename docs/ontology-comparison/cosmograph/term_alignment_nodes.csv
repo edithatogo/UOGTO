@@ -3,14 +3,17 @@ source:http://ogp.me/ns#description,Description,external_term,1,term_alignment
 source:http://purl.org/dc/terms/description,Description,external_term,1,term_alignment
 source:http://purl.org/dc/terms/identifier,Identifier,external_term,1,term_alignment
 source:http://www.w3.org/2002/07/owl#Thing,Thing,external_term,1,term_alignment
+source:http://www.w3.org/ns/prov#Activity,Activity,external_term,1,term_alignment
 source:http://www.w3.org/ns/prov#Agent,Agent,external_term,1,term_alignment
+source:http://www.w3.org/ns/prov#Entity,Entity,external_term,1,term_alignment
 source:http://www.w3.org/ns/prov#Role,Role,external_term,1,term_alignment
 source:http://www.w3.org/ns/sosa/observes,Observes,external_term,1,term_alignment
 source:http://xmlns.com/foaf/0.1/Agent,Agent,external_term,1,term_alignment
 source:https://ref.gs1.org/voc/description,Description,external_term,1,term_alignment
 source:https://schema.org/Action,Action,external_term,1,term_alignment
-uogto:https://w3id.org/uogto/core#Action,UOGTO: Action,uogto_term,1,term_alignment
+uogto:https://w3id.org/uogto/core#Action,UOGTO: Action,uogto_term,2,term_alignment
 uogto:https://w3id.org/uogto/core#Agent,UOGTO: Agent,uogto_term,2,term_alignment
+uogto:https://w3id.org/uogto/core#Outcome,UOGTO: Outcome,uogto_term,1,term_alignment
 uogto:https://w3id.org/uogto/core#Role,UOGTO: Role,uogto_term,1,term_alignment
 uogto:https://w3id.org/uogto/core#description,UOGTO: Description,uogto_term,3,term_alignment
 uogto:https://w3id.org/uogto/core#identifier,UOGTO: Identifier,uogto_term,1,term_alignment
