@@ -105,6 +105,22 @@ def test_openspiel_fixture_is_queryable_by_runner() -> None:
     assert payoffs == {row_player: 5.0, column_player: 0.0}
 
 
+def test_runner_format_detection_handles_paths_and_urls() -> None:
+    class NamedFile:
+        name = "examples/game.jsonld"
+
+    assert RDFGameRunner._format_for_path(Path("examples/game.jsonld")) == "json-ld"
+    assert RDFGameRunner._format_for_path("examples/game.json") == "json-ld"
+    assert RDFGameRunner._format_for_path("examples/game.ttl") == "turtle"
+    assert RDFGameRunner._format_for_path(NamedFile()) == "json-ld"
+    assert (
+        RDFGameRunner._format_for_path("https://example.org/uogto/game.jsonld?download=1")
+        == "json-ld"
+    )
+    assert RDFGameRunner._format_for_path("https://example.org/uogto/game.ttl?download=1") == "turtle"
+    assert RDFGameRunner._format_for_path("examples/game-without-extension") == "turtle"
+
+
 def test_pettingzoo_fixture_exposes_markov_runtime_bindings() -> None:
     graph = parse_fixture("examples/pettingzoo-aec-gridworld.jsonld")
     rows = list(

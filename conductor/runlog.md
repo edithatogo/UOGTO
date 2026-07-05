@@ -9,7 +9,7 @@
 - Added `examples/pettingzoo-aec-gridworld.jsonld` as an illustrative PettingZoo-style AEC Markov-game fixture with transition, runtime, and simulation binding nodes.
 - Extended `RDFGameRunner` to detect JSON-LD input by suffix while preserving Turtle support.
 - Added `tests/test_interoperability_benchmarks.py` for inventory completeness, JSON-LD fixture parse/query checks, PettingZoo Markov binding checks, and OpenSpiel fixture runner payoff smoke coverage.
-- Verification passed: focused benchmark pytest (`4 passed`); `make validate`; `make test` (`239 passed, 1 skipped, 52 warnings`); `git diff --check`.
+- Verification passed: focused benchmark pytest (`5 passed`); `make validate`; `make test` (`240 passed, 1 skipped, 52 warnings`); `git diff --check`.
 
 ## 2026-07-05 - Validation contract coherence and roadmap tracks
 

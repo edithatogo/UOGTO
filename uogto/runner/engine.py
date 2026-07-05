@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
+from urllib.parse import urlparse
 
 import rdflib
 from rdflib.namespace import RDF, RDFS
@@ -15,8 +17,11 @@ class RDFGameRunner:
 
     @staticmethod
     def _format_for_path(path):
-        suffix = str(path).lower().rsplit(".", 1)[-1]
-        if suffix in {"json", "jsonld"}:
+        path_text = getattr(path, "name", str(path))
+        parsed = urlparse(path_text)
+        path_part = parsed.path if parsed.scheme else path_text
+        suffix = Path(path_part).suffix.lower()
+        if suffix in {".json", ".jsonld"}:
             return "json-ld"
         return "turtle"
         

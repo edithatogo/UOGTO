@@ -33,7 +33,7 @@ Updated: `2026-07-05`
 - Added focused benchmark tests in `tests/test_interoperability_benchmarks.py` covering inventory completeness, fixture parse/query semantics, PettingZoo Markov bindings, and `RDFGameRunner` payoff smoke coverage for the OpenSpiel fixture.
 - Extended `RDFGameRunner` to parse JSON-LD fixtures as well as Turtle files.
 - Linked the benchmark documentation from `README.md` and `docs/index.md`.
-- Verification passed: `.pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py -q` (`4 passed`); `make validate`; `make test` (`239 passed, 1 skipped, 52 warnings`); `git diff --check`.
+- Verification passed: `.pixi/envs/default/python.exe -m pytest tests/test_interoperability_benchmarks.py -q` (`5 passed`); `make validate`; `make test` (`240 passed, 1 skipped, 52 warnings`); `git diff --check`.
 
 ## Repository Validation And Runtime Hardening - 2026-07-03
 
