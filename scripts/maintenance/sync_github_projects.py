@@ -583,22 +583,22 @@ def ensure_project_item(project_number: int, url: str, apply: bool, cache: dict[
     print(f"add to project {project_number}: {url}")
     if not apply:
         return None
-        item = require_json(
-            gh_json(
-                [
-                    "project",
-                    "item-add",
-                    str(project_number),
-                    "--owner",
-                    OWNER,
-                    "--url",
-                    url,
-                    "--format",
-                    "json",
-                ]
-            ),
-            f"project {project_number} add item {url}",
-        )
+    item = require_json(
+        gh_json(
+            [
+                "project",
+                "item-add",
+                str(project_number),
+                "--owner",
+                OWNER,
+                "--url",
+                url,
+                "--format",
+                "json",
+            ]
+        ),
+        f"project {project_number} add item {url}",
+    )
     cache[url] = item
     return item
 
