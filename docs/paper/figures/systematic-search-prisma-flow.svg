@@ -14,22 +14,19 @@
 <rect x="405" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
 <text x="421" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Comparative source</tspan><tspan x="421" dy="18">families reviewed</tspan><tspan x="421" dy="18">n=21 sources / 17 families</tspan></text>
 <rect x="405" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
-<text x="421" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Terms normalized</tspan><tspan x="421" dy="18">from UOGTO + sources</tspan><tspan x="421" dy="18">n=4,037</tspan></text>
+<text x="421" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Terms normalized</tspan><tspan x="421" dy="18">from UOGTO + sources</tspan><tspan x="421" dy="18">n=4,046</tspan></text>
 <rect x="740" y="215" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
 <text x="756" y="242" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Mapping candidates</tspan><tspan x="756" dy="18">reviewed</tspan><tspan x="756" dy="18">n=460</tspan></text>
 <rect x="740" y="335" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
-<text x="756" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Accepted conservative</tspan><tspan x="756" dy="18">alignments</tspan><tspan x="756" dy="18">n=10</tspan></text>
-<rect x="740" y="455" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
-<text x="756" y="482" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Needs domain review</tspan><tspan x="756" dy="18">n=1</tspan></text>
+<text x="756" y="362" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="756" dy="0">Accepted conservative</tspan><tspan x="756" dy="18">alignments</tspan><tspan x="756" dy="18">n=12</tspan></text>
 <rect x="405" y="455" width="230" height="82" rx="8" fill="#F8FAFC" stroke="#0072B2" stroke-width="2"/>
-<text x="421" y="482" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Rejected / non-asserted</tspan><tspan x="421" dy="18">negative evidence</tspan><tspan x="421" dy="18">n=449</tspan></text>
+<text x="421" y="482" font-size="14" font-family="Arial,Helvetica,sans-serif" fill="#334155"><tspan x="421" dy="0">Rejected / non-asserted</tspan><tspan x="421" dy="18">negative evidence</tspan><tspan x="421" dy="18">n=448</tspan></text>
 <line x1="185.0" y1="136.0" x2="185.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="185.0" y1="256.0" x2="185.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="185.0" y1="376.0" x2="520.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="520.0" y1="256.0" x2="520.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="520.0" y1="376.0" x2="855.0" y2="256.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="855.0" y1="256.0" x2="855.0" y2="376.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-<line x1="855.0" y1="256.0" x2="855.0" y2="496.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
 <line x1="855.0" y1="256.0" x2="520.0" y2="496.0" stroke="#475569" stroke-width="2" marker-end="url(#arrow) stroke-dasharray="7 5"/>
 <text x="42" y="520" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#64748B">PDF export is generated from the same structured figure specification for PDFLaTeX-safe manuscript packaging.</text>
 </svg>

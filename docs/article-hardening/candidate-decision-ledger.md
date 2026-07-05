@@ -27,9 +27,9 @@ The full row-level ledger is available in:
 
 | Decision class | Rows |
 | --- | --- |
-| excluded | 451 |
-| included | 58 |
-| needs_review | 2 |
+| excluded | 450 |
+| included | 60 |
+| needs_review | 1 |
 
 ## Assumptions and heuristics
 
@@ -104,10 +104,10 @@ The 460 mapping candidates are stored row-by-row in the CSV/JSON ledger. The sum
 
 | Review status | Decision predicate | Rows |
 | --- | --- | --- |
-| accepted | owl:equivalentClass | 5 |
+| accepted | owl:equivalentClass | 3 |
 | accepted | owl:equivalentProperty | 5 |
-| needs_domain_review | skos:relatedMatch | 1 |
-| rejected | no_match | 449 |
+| accepted | skos:narrowMatch | 4 |
+| rejected | no_match | 448 |
 
 ## Ontology-inclusion candidate decisions
 

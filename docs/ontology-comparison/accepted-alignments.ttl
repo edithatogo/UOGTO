@@ -4,6 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix uogtoalign: <https://w3id.org/uogto/alignments/comparison#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,6 +13,14 @@ uogtoalign:accepted_alignments a owl:Ontology ;
     rdfs:label "UOGTO comparative ontology accepted alignments"@en ;
     dcterms:description "Accepted review-backed alignments generated from docs/ontology-comparison/mapping-review.csv."@en .
 
+uogtoalign:mapping-0ab225257bfefe9b a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 1.0 ;
+    uogtoalign:mappingPredicate skos:narrowMatch ;
+    uogtoalign:reviewRationale "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm prov:Agent ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Agent> .
+
 uogtoalign:mapping-1f22622e34e682d5 a uogtoalign:MappingAssertion ;
     uogtoalign:confidence 0.5333 ;
     uogtoalign:mappingPredicate owl:equivalentProperty ;
@@ -19,6 +28,14 @@ uogtoalign:mapping-1f22622e34e682d5 a uogtoalign:MappingAssertion ;
     uogtoalign:reviewStatus "accepted" ;
     uogtoalign:sourceTerm dcterms:identifier ;
     uogtoalign:uogtoTerm <https://w3id.org/uogto/core#identifier> .
+
+uogtoalign:mapping-3dda61b5462ba5cc a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.5615 ;
+    uogtoalign:mappingPredicate skos:narrowMatch ;
+    uogtoalign:reviewRationale "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm prov:Entity ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Outcome> .
 
 uogtoalign:mapping-3f63576818b820e2 a uogtoalign:MappingAssertion ;
     uogtoalign:confidence 0.5316 ;
@@ -36,6 +53,14 @@ uogtoalign:mapping-4bb65e3c229e4751 a uogtoalign:MappingAssertion ;
     uogtoalign:sourceTerm foaf:Agent ;
     uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Agent> .
 
+uogtoalign:mapping-6796abf9f4fc3bfa a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 0.62 ;
+    uogtoalign:mappingPredicate skos:narrowMatch ;
+    uogtoalign:reviewRationale "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm prov:Activity ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Action> .
+
 uogtoalign:mapping-6dfa0cf78387055e a uogtoalign:MappingAssertion ;
     uogtoalign:confidence 0.5333 ;
     uogtoalign:mappingPredicate owl:equivalentProperty ;
@@ -44,6 +69,14 @@ uogtoalign:mapping-6dfa0cf78387055e a uogtoalign:MappingAssertion ;
     uogtoalign:sourceTerm sosa:observes ;
     uogtoalign:uogtoTerm <https://w3id.org/uogto/core#observes> .
 
+uogtoalign:mapping-92ccda714e703a94 a uogtoalign:MappingAssertion ;
+    uogtoalign:confidence 1.0 ;
+    uogtoalign:mappingPredicate skos:narrowMatch ;
+    uogtoalign:reviewRationale "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence." ;
+    uogtoalign:reviewStatus "accepted" ;
+    uogtoalign:sourceTerm schema:Action ;
+    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Action> .
+
 uogtoalign:mapping-9d8ac14d596018b4 a uogtoalign:MappingAssertion ;
     uogtoalign:confidence 0.5408 ;
     uogtoalign:mappingPredicate owl:equivalentProperty ;
@@ -51,22 +84,6 @@ uogtoalign:mapping-9d8ac14d596018b4 a uogtoalign:MappingAssertion ;
     uogtoalign:reviewStatus "accepted" ;
     uogtoalign:sourceTerm <http://ogp.me/ns#description> ;
     uogtoalign:uogtoTerm <https://w3id.org/uogto/core#description> .
-
-uogtoalign:mapping-ab2308c9b3db86c8 a uogtoalign:MappingAssertion ;
-    uogtoalign:confidence 0.5443 ;
-    uogtoalign:mappingPredicate owl:equivalentClass ;
-    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
-    uogtoalign:reviewStatus "accepted" ;
-    uogtoalign:sourceTerm schema:Action ;
-    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Action> .
-
-uogtoalign:mapping-b0f913c399bdc974 a uogtoalign:MappingAssertion ;
-    uogtoalign:confidence 0.55 ;
-    uogtoalign:mappingPredicate owl:equivalentClass ;
-    uogtoalign:reviewRationale "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention." ;
-    uogtoalign:reviewStatus "accepted" ;
-    uogtoalign:sourceTerm prov:Agent ;
-    uogtoalign:uogtoTerm <https://w3id.org/uogto/core#Agent> .
 
 uogtoalign:mapping-b14fae522b7c3ba1 a uogtoalign:MappingAssertion ;
     uogtoalign:confidence 0.5408 ;
@@ -100,7 +117,11 @@ dcterms:identifier owl:equivalentProperty <https://w3id.org/uogto/core#identifie
 
 owl:Thing owl:equivalentClass <https://w3id.org/uogto/extensions#Thing> .
 
-prov:Agent owl:equivalentClass <https://w3id.org/uogto/core#Agent> .
+prov:Activity skos:narrowMatch <https://w3id.org/uogto/core#Action> .
+
+prov:Agent skos:narrowMatch <https://w3id.org/uogto/core#Agent> .
+
+prov:Entity skos:narrowMatch <https://w3id.org/uogto/core#Outcome> .
 
 prov:Role owl:equivalentClass <https://w3id.org/uogto/core#Role> .
 
@@ -110,5 +131,5 @@ foaf:Agent owl:equivalentClass <https://w3id.org/uogto/core#Agent> .
 
 <https://ref.gs1.org/voc/description> owl:equivalentProperty <https://w3id.org/uogto/core#description> .
 
-schema:Action owl:equivalentClass <https://w3id.org/uogto/core#Action> .
+schema:Action skos:narrowMatch <https://w3id.org/uogto/core#Action> .
 

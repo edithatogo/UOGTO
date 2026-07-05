@@ -1,14 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="262" viewBox="0 0 1200 262" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="218" viewBox="0 0 1200 218" role="img" aria-labelledby="title desc">
 <title id="title">Reviewer workload by status</title><desc id="desc">Reviewer workload by status</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
 <text class="title" x="36" y="42">Reviewer workload by status</text>
 <line class="axis" x1="340" y1="88" x2="1130" y2="88"/>
 <text class="label" x="36" y="125">rejected</text>
 <rect x="340" y="104" width="740" height="28" fill="#0072B2" rx="3"/>
-<text class="small" x="1092" y="124">449</text>
+<text class="small" x="1092" y="124">448</text>
 <text class="label" x="36" y="169">accepted</text>
-<rect x="340" y="148" width="16" height="28" fill="#009E73" rx="3"/>
-<text class="small" x="368" y="168">10</text>
-<text class="label" x="36" y="213">needs_domain_review</text>
-<rect x="340" y="192" width="1" height="28" fill="#D55E00" rx="3"/>
-<text class="small" x="353" y="212">1</text>
+<rect x="340" y="148" width="19" height="28" fill="#009E73" rx="3"/>
+<text class="small" x="371" y="168">12</text>
 </svg>

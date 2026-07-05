@@ -12,9 +12,9 @@
 <text class="tiny" x="761" y="116" transform="rotate(-45 761 116)">uogto_core_rules</text>
 <text class="tiny" x="829" y="116" transform="rotate(-45 829 116)">uogto_core_strateg</text>
 <text class="tiny" x="897" y="116" transform="rotate(-45 897 116)">uogto_core_uogto-c</text>
-<text class="tiny" x="965" y="116" transform="rotate(-45 965 116)">uogto_extensions_a</text>
+<text class="tiny" x="965" y="116" transform="rotate(-45 965 116)">uogto_core_uogto-g</text>
 <text class="tiny" x="1033" y="116" transform="rotate(-45 1033 116)">uogto_extensions_a</text>
-<text class="tiny" x="1101" y="116" transform="rotate(-45 1101 116)">uogto_extensions_b</text>
+<text class="tiny" x="1101" y="116" transform="rotate(-45 1101 116)">uogto_extensions_a</text>
 <text class="tiny" x="1169" y="116" transform="rotate(-45 1169 116)">uogto_extensions_b</text>
 <text class="small" x="36" y="150">owl_time</text>
 <text class="small" x="36" y="184">prov_o</text>
@@ -22,14 +22,13 @@
 <text class="small" x="36" y="252">ssn_sosa</text>
 <rect x="260" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="260" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="282" y="182">2</text>
 <rect x="260" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="260" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="282" y="250">1</text>
 <rect x="328" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="350" y="148">1</text>
 <rect x="328" y="160" width="65" height="31" fill="#6BAED6" stroke="#E2E8F0"/>
-<text class="tiny" x="350" y="182">28</text>
+<text class="tiny" x="350" y="182">31</text>
 <rect x="328" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="328" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="350" y="250">2</text>
@@ -49,7 +48,7 @@
 <rect x="532" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="554" y="182">1</text>
 <rect x="532" y="194" width="65" height="31" fill="#C6DBEF" stroke="#E2E8F0"/>
-<text class="tiny" x="554" y="216">13</text>
+<text class="tiny" x="554" y="216">14</text>
 <rect x="532" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="600" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="622" y="148">3</text>
@@ -78,31 +77,31 @@
 <text class="tiny" x="894" y="148">43</text>
 <rect x="872" y="160" width="65" height="31" fill="#3182BD" stroke="#E2E8F0"/>
 <text class="tiny" x="894" y="182">36</text>
-<rect x="872" y="194" width="65" height="31" fill="#3182BD" stroke="#E2E8F0"/>
-<text class="tiny" x="894" y="216">36</text>
+<rect x="872" y="194" width="65" height="31" fill="#6BAED6" stroke="#E2E8F0"/>
+<text class="tiny" x="894" y="216">32</text>
 <rect x="872" y="228" width="65" height="31" fill="#3182BD" stroke="#E2E8F0"/>
-<text class="tiny" x="894" y="250">34</text>
+<text class="tiny" x="894" y="250">33</text>
 <rect x="940" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="940" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="962" y="182">2</text>
 <rect x="940" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="962" y="216">2</text>
+<text class="tiny" x="962" y="216">3</text>
 <rect x="940" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="1008" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="1030" y="148">1</text>
-<rect x="1008" y="160" width="65" height="31" fill="#DEEBF7" stroke="#E2E8F0"/>
-<text class="tiny" x="1030" y="182">6</text>
+<rect x="1008" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<text class="tiny" x="1030" y="182">2</text>
 <rect x="1008" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="1030" y="216">1</text>
+<text class="tiny" x="1030" y="216">2</text>
 <rect x="1008" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="1030" y="250">1</text>
 <rect x="1076" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
-<text class="tiny" x="1098" y="148">3</text>
-<rect x="1076" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<text class="tiny" x="1098" y="148">1</text>
+<rect x="1076" y="160" width="65" height="31" fill="#DEEBF7" stroke="#E2E8F0"/>
+<text class="tiny" x="1098" y="182">6</text>
 <rect x="1076" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<text class="tiny" x="1098" y="216">1</text>
 <rect x="1076" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <text class="tiny" x="1098" y="250">1</text>
 <rect x="1144" y="126" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
+<text class="tiny" x="1166" y="148">3</text>
 <rect x="1144" y="160" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="1144" y="194" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>
 <rect x="1144" y="228" width="65" height="31" fill="#F7FBFF" stroke="#E2E8F0"/>

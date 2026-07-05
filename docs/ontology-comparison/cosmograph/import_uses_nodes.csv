@@ -39,6 +39,7 @@ uogto_core_payoffs,UOGTO Payoffs,uogto_module,1,import_uses
 uogto_core_rules,UOGTO Rules,uogto_module,1,import_uses
 uogto_core_strategies,UOGTO Strategies,uogto_module,1,import_uses
 uogto_core_uogto-core,UOGTO Uogto Core,uogto_module,0,import_uses
+uogto_core_uogto-governance,UOGTO Uogto Governance,uogto_module,0,import_uses
 uogto_extensions_algorithmic-game-theory,UOGTO Algorithmic Game Theory,uogto_module,1,import_uses
 uogto_extensions_algorithmic-solvers-patch,UOGTO Algorithmic Solvers Patch,uogto_module,0,import_uses
 uogto_extensions_auctions,UOGTO Auctions,uogto_module,1,import_uses

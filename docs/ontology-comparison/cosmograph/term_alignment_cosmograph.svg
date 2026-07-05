@@ -5,48 +5,56 @@
 <text class="title" x="42" y="52">Term Alignment Cosmograph view</text>
 <text class="caption" x="42" y="82">Static Cosmograph-style rendering from the generated node/edge CSVs; node size encodes degree and edge opacity encodes weight.</text>
 <line x1="260.0" y1="170.0" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="241.1" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="312.2" x2="1140.0" y2="596.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="383.3" x2="1140.0" y2="810.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="454.4" x2="1140.0" y2="276.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="525.6" x2="1140.0" y2="490.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="596.7" x2="1140.0" y2="703.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="667.8" x2="1140.0" y2="276.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="738.9" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="810.0" x2="1140.0" y2="383.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="228.2" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="286.4" x2="1140.0" y2="627.1" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="344.5" x2="1140.0" y2="810.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="402.7" x2="1140.0" y2="261.4" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="460.9" x2="1140.0" y2="352.9" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="519.1" x2="1140.0" y2="444.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="577.3" x2="1140.0" y2="535.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="635.5" x2="1140.0" y2="718.6" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="693.6" x2="1140.0" y2="352.9" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="751.8" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
+<line x1="260.0" y1="810.0" x2="1140.0" y2="261.4" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
 <circle cx="1140.0" cy="170.0" r="27.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="276.7" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="261.4" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="352.9" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
 <circle cx="260.0" cy="170.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="241.1" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="312.2" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="383.3" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="454.4" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="525.6" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="596.7" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="667.8" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="738.9" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="228.2" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="286.4" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="344.5" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="402.7" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="460.9" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="519.1" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="577.3" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="635.5" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="693.6" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="260.0" cy="751.8" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
 <circle cx="260.0" cy="810.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="383.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="490.0" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="596.7" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="703.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="444.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="535.7" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="627.1" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
+<circle cx="1140.0" cy="718.6" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
 <circle cx="1140.0" cy="810.0" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
 <text class="tiny" text-anchor="end" x="1105.0" y="174.0">UOGTO: Description</text>
-<text class="tiny" text-anchor="end" x="1111.7" y="280.7">UOGTO: Agent</text>
+<text class="tiny" text-anchor="end" x="1111.7" y="265.4">UOGTO: Action</text>
+<text class="tiny" text-anchor="end" x="1111.7" y="356.9">UOGTO: Agent</text>
 <text class="tiny" text-anchor="start" x="281.7" y="174.0">Description</text>
-<text class="tiny" text-anchor="start" x="281.7" y="245.1">Description</text>
-<text class="tiny" text-anchor="start" x="281.7" y="316.2">Identifier</text>
-<text class="tiny" text-anchor="start" x="281.7" y="387.3">Thing</text>
-<text class="tiny" text-anchor="start" x="281.7" y="458.4">Agent</text>
-<text class="tiny" text-anchor="start" x="281.7" y="529.6">Role</text>
-<text class="tiny" text-anchor="start" x="281.7" y="600.7">Observes</text>
-<text class="tiny" text-anchor="start" x="281.7" y="671.8">Agent</text>
-<text class="tiny" text-anchor="start" x="281.7" y="742.9">Description</text>
+<text class="tiny" text-anchor="start" x="281.7" y="232.2">Description</text>
+<text class="tiny" text-anchor="start" x="281.7" y="290.4">Identifier</text>
+<text class="tiny" text-anchor="start" x="281.7" y="348.5">Thing</text>
+<text class="tiny" text-anchor="start" x="281.7" y="406.7">Activity</text>
+<text class="tiny" text-anchor="start" x="281.7" y="464.9">Agent</text>
+<text class="tiny" text-anchor="start" x="281.7" y="523.1">Entity</text>
+<text class="tiny" text-anchor="start" x="281.7" y="581.3">Role</text>
+<text class="tiny" text-anchor="start" x="281.7" y="639.5">Observes</text>
+<text class="tiny" text-anchor="start" x="281.7" y="697.6">Agent</text>
+<text class="tiny" text-anchor="start" x="281.7" y="755.8">Description</text>
 <text class="tiny" text-anchor="start" x="281.7" y="814.0">Action</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="387.3">UOGTO: Action</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="494.0">UOGTO: Role</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="600.7">UOGTO: Identifier</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="707.3">UOGTO: Observes</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="448.3">UOGTO: Outcome</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="539.7">UOGTO: Role</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="631.1">UOGTO: Identifier</text>
+<text class="tiny" text-anchor="end" x="1118.3" y="722.6">UOGTO: Observes</text>
 <text class="tiny" text-anchor="end" x="1118.3" y="814.0">UOGTO: Thing</text>
 <rect x="30" y="842" width="520" height="70" fill="#FFFFFF" opacity="0.82" rx="8"/>
 <circle cx="42" cy="868" r="7" fill="#D97706"/>
@@ -57,5 +65,5 @@
 <text class="tiny" x="307" y="872">UOGTO term/module</text>
 <circle cx="420" cy="868" r="7" fill="#9333EA"/>
 <text class="tiny" x="433" y="872">format/import/evidence</text>
-<text class="caption" x="42" y="958">Rendered nodes: 17 of 17; rendered edges: 10 of 10.</text>
+<text class="caption" x="42" y="958">Rendered nodes: 20 of 20; rendered edges: 12 of 12.</text>
 </svg>

@@ -82,6 +82,7 @@ def evidence_features(external, uogto):
     exact_iri = external["term_iri"] == uogto["term_iri"]
     exact_label = external["label"].strip().lower() == uogto["label"].strip().lower()
     normalized_label = external.get("normalised_label") and external.get("normalised_label") == uogto.get("normalised_label")
+    external_is_uogto_parent = external["term_iri"] in set(uogto.get("parents", []))
     synonym_match = bool({s.lower() for s in external.get("synonyms", [])} & ({uogto["label"].lower()} | {s.lower() for s in uogto.get("synonyms", [])}))
     lexical = max(SequenceMatcher(None, external.get("normalised_label", ""), uogto.get("normalised_label", "")).ratio(), jaccard(ext_tokens, uogto_tokens))
     definition = SequenceMatcher(None, text_blob(external, ("definitions",)), text_blob(uogto, ("definitions",))).ratio() if external.get("definitions") and uogto.get("definitions") else 0.0
@@ -89,11 +90,12 @@ def evidence_features(external, uogto):
     embedding = cosine_counter(token_counter(external), token_counter(uogto))
     compatible = type_compatible(external, uogto)
     reliability = 1.0 if external.get("source_kind") == "external_rdf" else 0.62
-    return {"exact_iri": exact_iri, "exact_label": exact_label, "normalized_label": bool(normalized_label), "synonym": synonym_match, "lexical_similarity": round(lexical, 4), "definition_similarity": round(definition, 4), "structural_similarity": round(structural, 4), "property_signature_similarity": round(signature_score(external, uogto), 4), "embedding_similarity": round(embedding, 4), "type_compatible": compatible, "source_reliability": reliability}
+    return {"exact_iri": exact_iri, "exact_label": exact_label, "normalized_label": bool(normalized_label), "synonym": synonym_match, "lexical_similarity": round(lexical, 4), "definition_similarity": round(definition, 4), "structural_similarity": round(max(structural, 1.0 if external_is_uogto_parent else 0.0), 4), "property_signature_similarity": round(signature_score(external, uogto), 4), "embedding_similarity": round(embedding, 4), "type_compatible": compatible, "source_reliability": reliability, "external_is_uogto_parent": external_is_uogto_parent}
 
 
 def confidence(features):
     score = 0.0
+    score += 0.46 if features["external_is_uogto_parent"] else 0
     score += 0.25 if features["exact_iri"] else 0
     score += 0.18 if features["exact_label"] else 0
     score += 0.15 if features["normalized_label"] else 0
@@ -108,10 +110,12 @@ def confidence(features):
 
 
 def classify(external, uogto, features, score):
-    if not features["type_compatible"] and score < 0.45:
+    if not features["type_compatible"]:
         return "no_match"
     if features["exact_iri"]:
         return "owl:equivalentProperty" if "property" in external["term_type"] else "owl:equivalentClass"
+    if features["external_is_uogto_parent"]:
+        return "skos:narrowMatch"
     if score >= 0.50 and features["type_compatible"] and (features["exact_label"] or features["normalized_label"]):
         return "owl:equivalentProperty" if "property" in external["term_type"] else "owl:equivalentClass"
     if score >= 0.62:
@@ -136,6 +140,8 @@ def index_uogto(rows):
                 index[("text", key)].add(i)
         for token in row.get("tokens", []):
             index[("token", token)].add(i)
+        for parent in row.get("parents", []):
+            index[("parent_iri", parent)].add(i)
         for synonym in row.get("synonyms", []):
             index[("text", synonym.lower())].add(i)
         index[("type", row.get("term_type"))].add(i)
@@ -150,6 +156,8 @@ def plausible_uogto_indices(external, uogto_rows, index, max_candidates=80):
     for synonym in external.get("synonyms", []):
         for idx in index.get(("text", synonym.lower()), set()):
             hits[idx] += 4
+    for idx in index.get(("parent_iri", external["term_iri"]), set()):
+        hits[idx] += 10
     for token in external.get("tokens", []):
         for idx in index.get(("token", token), set()):
             hits[idx] += 2
@@ -187,10 +195,14 @@ def generate_candidates(rows, per_source_limit=120):
             if candidate["candidate_predicate"] != "no_match" or candidate["confidence"] >= 0.12:
                 local.append(candidate)
         local.sort(key=lambda c: (-c["confidence"], c["source_term_iri"], c["uogto_term_iri"]))
-        for candidate in local[:10]:
-            key = (candidate["source_term_iri"], candidate["uogto_term_iri"], candidate["candidate_predicate"])
+        emitted_for_external = 0
+        for candidate in local:
+            key = (candidate["source_term_iri"], candidate["uogto_term_iri"])
             if key not in seen and per_source[candidate["source_id"]] < per_source_limit:
                 seen.add(key); per_source[candidate["source_id"]] += 1; candidates.append(candidate)
+                emitted_for_external += 1
+                if emitted_for_external >= 10:
+                    break
     return sorted(candidates, key=lambda c: (c["source_id"], -c["confidence"], c["source_term_iri"], c["uogto_term_iri"]))
 
 

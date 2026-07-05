@@ -242,18 +242,10 @@
         "uogto_source_id": "uogto_extensions_verification-games"
       },
       {
-        "accepted": 1,
-        "candidate_count": 2,
+        "accepted": 3,
+        "candidate_count": 31,
         "needs_domain_review": 0,
-        "rejected": 1,
-        "source_id": "prov_o",
-        "uogto_source_id": "uogto_alignments_mcp-a2a"
-      },
-      {
-        "accepted": 0,
-        "candidate_count": 28,
-        "needs_domain_review": 1,
-        "rejected": 27,
+        "rejected": 28,
         "source_id": "prov_o",
         "uogto_source_id": "uogto_alignments_prov-o"
       },
@@ -419,9 +411,9 @@
       },
       {
         "accepted": 0,
-        "candidate_count": 13,
+        "candidate_count": 14,
         "needs_domain_review": 0,
-        "rejected": 13,
+        "rejected": 14,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_core_actions"
       },
@@ -435,11 +427,19 @@
       },
       {
         "accepted": 4,
-        "candidate_count": 36,
+        "candidate_count": 32,
         "needs_domain_review": 0,
-        "rejected": 32,
+        "rejected": 28,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_core_uogto-core"
+      },
+      {
+        "accepted": 0,
+        "candidate_count": 3,
+        "needs_domain_review": 0,
+        "rejected": 3,
+        "source_id": "schema_org",
+        "uogto_source_id": "uogto_core_uogto-governance"
       },
       {
         "accepted": 0,
@@ -475,14 +475,6 @@
       },
       {
         "accepted": 0,
-        "candidate_count": 1,
-        "needs_domain_review": 0,
-        "rejected": 1,
-        "source_id": "schema_org",
-        "uogto_source_id": "uogto_extensions_deontic-logic"
-      },
-      {
-        "accepted": 0,
         "candidate_count": 3,
         "needs_domain_review": 0,
         "rejected": 3,
@@ -499,25 +491,17 @@
       },
       {
         "accepted": 0,
-        "candidate_count": 1,
+        "candidate_count": 10,
         "needs_domain_review": 0,
-        "rejected": 1,
-        "source_id": "schema_org",
-        "uogto_source_id": "uogto_extensions_information-design"
-      },
-      {
-        "accepted": 0,
-        "candidate_count": 11,
-        "needs_domain_review": 0,
-        "rejected": 11,
+        "rejected": 10,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_extensions_marl"
       },
       {
         "accepted": 0,
-        "candidate_count": 6,
+        "candidate_count": 7,
         "needs_domain_review": 0,
-        "rejected": 6,
+        "rejected": 7,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_extensions_matching-allocation"
       },
@@ -547,17 +531,17 @@
       },
       {
         "accepted": 0,
-        "candidate_count": 6,
+        "candidate_count": 7,
         "needs_domain_review": 0,
-        "rejected": 6,
+        "rejected": 7,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_extensions_privacy-disclosure"
       },
       {
         "accepted": 0,
-        "candidate_count": 6,
+        "candidate_count": 7,
         "needs_domain_review": 0,
-        "rejected": 6,
+        "rejected": 7,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
       },
@@ -603,9 +587,9 @@
       },
       {
         "accepted": 1,
-        "candidate_count": 34,
+        "candidate_count": 33,
         "needs_domain_review": 0,
-        "rejected": 33,
+        "rejected": 32,
         "source_id": "ssn_sosa",
         "uogto_source_id": "uogto_core_uogto-core"
       },
@@ -813,13 +797,13 @@
         "review_precision": 0.0
       },
       "prov_o": {
-        "accepted": 3,
-        "accepted_candidate_rate": 0.0259,
-        "candidate_count": 116,
+        "accepted": 5,
+        "accepted_candidate_rate": 0.0427,
+        "candidate_count": 117,
         "deferred": 0,
-        "needs_domain_review": 1,
+        "needs_domain_review": 0,
         "rejected": 112,
-        "review_precision": 0.0261
+        "review_precision": 0.0427
       },
       "schema_org": {
         "accepted": 5,
@@ -832,12 +816,12 @@
       },
       "ssn_sosa": {
         "accepted": 2,
-        "accepted_candidate_rate": 0.0192,
-        "candidate_count": 104,
+        "accepted_candidate_rate": 0.0194,
+        "candidate_count": 103,
         "deferred": 0,
         "needs_domain_review": 0,
-        "rejected": 102,
-        "review_precision": 0.0192
+        "rejected": 101,
+        "review_precision": 0.0194
       }
     }
   },
@@ -1466,6 +1450,26 @@
         "class": 37,
         "datatype_property": 11,
         "object_property": 31,
+        "ontology_metadata": 1
+      }
+    },
+    "uogto_core_uogto-governance": {
+      "annotation_completeness": 1.0,
+      "family": "core",
+      "hierarchy_parent_term_count": 0,
+      "import_count": 0,
+      "licence_disposition": null,
+      "parse_status": null,
+      "property_density": 0.7778,
+      "retrieval_mode": null,
+      "source_id": "uogto_core_uogto-governance",
+      "source_kind": "uogto",
+      "source_name": "uogto-governance",
+      "term_count": 9,
+      "term_type_distribution": {
+        "class": 1,
+        "datatype_property": 6,
+        "object_property": 1,
         "ontology_metadata": 1
       }
     },
@@ -2138,7 +2142,8 @@
     }
   },
   "domain_module_coverage": {
-    "uogto_alignments_mcp-a2a": 2,
+    "uogto_alignments_mcp-a2a": 1,
+    "uogto_alignments_prov-o": 3,
     "uogto_alignments_schema-org": 1,
     "uogto_alignments_wot-thing-description": 1,
     "uogto_core_uogto-core": 6
@@ -2164,14 +2169,14 @@
       "unmatched_terms": 73
     },
     {
-      "candidate_coverage": 0.4466,
+      "candidate_coverage": 0.4563,
       "source_id": "prov_o",
-      "unmatched_terms": 57
+      "unmatched_terms": 56
     },
     {
-      "candidate_coverage": 0.4694,
+      "candidate_coverage": 0.449,
       "source_id": "ssn_sosa",
-      "unmatched_terms": 26
+      "unmatched_terms": 27
     },
     {
       "candidate_coverage": 0.0,
@@ -2212,11 +2217,10 @@
     },
     "observation_sensor": {
       "accepted": 2,
-      "rejected": 102
+      "rejected": 101
     },
     "provenance": {
-      "accepted": 3,
-      "needs_domain_review": 1,
+      "accepted": 5,
       "rejected": 112
     },
     "time": {
@@ -2330,10 +2334,10 @@
       "term_count": 1
     },
     "prov_o": {
-      "accepted_coverage": 0.0291,
-      "accepted_term_count": 3,
-      "candidate_coverage": 0.4466,
-      "candidate_term_count": 46,
+      "accepted_coverage": 0.0485,
+      "accepted_term_count": 5,
+      "candidate_coverage": 0.4563,
+      "candidate_term_count": 47,
       "term_count": 103
     },
     "schema_org": {
@@ -2353,8 +2357,8 @@
     "ssn_sosa": {
       "accepted_coverage": 0.0408,
       "accepted_term_count": 2,
-      "candidate_coverage": 0.4694,
-      "candidate_term_count": 23,
+      "candidate_coverage": 0.449,
+      "candidate_term_count": 22,
       "term_count": 49
     },
     "vimmp_ontologies": {
@@ -2373,11 +2377,11 @@
     }
   },
   "summary": {
-    "accepted_mapping_count": 10,
+    "accepted_mapping_count": 12,
     "external_source_count": 21,
     "external_term_count": 3485,
     "review_candidate_count": 460,
-    "uogto_term_count": 552
+    "uogto_term_count": 561
   },
   "term_type_coverage": {
     "external": {
@@ -2391,10 +2395,10 @@
       "source_metadata": 17
     },
     "uogto": {
-      "class": 308,
-      "datatype_property": 48,
-      "object_property": 149,
-      "ontology_metadata": 47
+      "class": 309,
+      "datatype_property": 54,
+      "object_property": 150,
+      "ontology_metadata": 48
     }
   },
   "unmatched_source_concepts": [
@@ -3059,12 +3063,6 @@
       "term_type": "annotation_property"
     },
     {
-      "label": "Activity",
-      "source_id": "prov_o",
-      "term_iri": "http://www.w3.org/ns/prov#Activity",
-      "term_type": "class"
-    },
-    {
       "label": "InstantaneousEvent",
       "source_id": "prov_o",
       "term_iri": "http://www.w3.org/ns/prov#InstantaneousEvent",
@@ -3593,6 +3591,18 @@
       "term_type": "class"
     },
     {
+      "label": "AnatomicalStructure",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AnatomicalStructure",
+      "term_type": "class"
+    },
+    {
+      "label": "AnatomicalSystem",
+      "source_id": "schema_org",
+      "term_iri": "https://schema.org/AnatomicalSystem",
+      "term_type": "class"
+    },
+    {
       "label": "AnimalShelter",
       "source_id": "schema_org",
       "term_iri": "https://schema.org/AnimalShelter",
@@ -3891,20 +3901,14 @@
       "source_id": "schema_org",
       "term_iri": "https://schema.org/BlogPosting",
       "term_type": "class"
-    },
-    {
-      "label": "BloodTest",
-      "source_id": "schema_org",
-      "term_iri": "https://schema.org/BloodTest",
-      "term_type": "class"
     }
   ],
   "uogto_coverage": {
-    "accepted_coverage": 0.0127,
-    "accepted_term_count": 7,
-    "candidate_coverage": 0.2699,
+    "accepted_coverage": 0.0143,
+    "accepted_term_count": 8,
+    "candidate_coverage": 0.2656,
     "candidate_term_count": 149,
-    "term_count": 552
+    "term_count": 561
   },
   "uogto_stronger_coverage_areas": [
     {
@@ -4277,6 +4281,54 @@
       "label": "Universal Open Game Theory Ontology (UOGTO) Core",
       "source_id": "uogto_core_uogto-core",
       "term_iri": "https://w3id.org/uogto/core",
+      "term_type": "ontology_metadata"
+    },
+    {
+      "label": "Ontology governance record",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#OntologyGovernanceRecord",
+      "term_type": "class"
+    },
+    {
+      "label": "competency question reference",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#competencyQuestionReference",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "governance status",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#governanceStatus",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "maturity level",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#maturityLevel",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "source evidence reference",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#sourceEvidenceReference",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "steward",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#steward",
+      "term_type": "datatype_property"
+    },
+    {
+      "label": "has governance record",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core#hasGovernanceRecord",
+      "term_type": "object_property"
+    },
+    {
+      "label": "UOGTO governance metadata",
+      "source_id": "uogto_core_uogto-governance",
+      "term_iri": "https://w3id.org/uogto/core/governance",
       "term_type": "ontology_metadata"
     },
     {
@@ -5399,54 +5451,6 @@
       "label": "PosteriorBelief",
       "source_id": "uogto_extensions_information-design",
       "term_iri": "https://w3id.org/uogto/extensions#PosteriorBelief",
-      "term_type": "class"
-    },
-    {
-      "label": "ReceiverBelief",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions#ReceiverBelief",
-      "term_type": "class"
-    },
-    {
-      "label": "entropyValue",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions#entropyValue",
-      "term_type": "datatype_property"
-    },
-    {
-      "label": "hasDisclosurePolicy",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions#hasDisclosurePolicy",
-      "term_type": "object_property"
-    },
-    {
-      "label": "hasPosteriorBelief",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions#hasPosteriorBelief",
-      "term_type": "object_property"
-    },
-    {
-      "label": "hasSignalStructure",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions#hasSignalStructure",
-      "term_type": "object_property"
-    },
-    {
-      "label": "UOGTO Extension - Information Design",
-      "source_id": "uogto_extensions_information-design",
-      "term_iri": "https://w3id.org/uogto/extensions/information-design",
-      "term_type": "ontology_metadata"
-    },
-    {
-      "label": "CollectiveChoiceArena",
-      "source_id": "uogto_extensions_institutional-economics",
-      "term_iri": "https://w3id.org/uogto/extensions#CollectiveChoiceArena",
-      "term_type": "class"
-    },
-    {
-      "label": "EnforcementMechanism",
-      "source_id": "uogto_extensions_institutional-economics",
-      "term_iri": "https://w3id.org/uogto/extensions#EnforcementMechanism",
       "term_type": "class"
     }
   ]

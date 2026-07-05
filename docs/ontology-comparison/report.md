@@ -19,14 +19,14 @@ Mapping candidates are generated from exact IRI matches, exact and normalized la
 ## Source Inventory
 - Candidate sources: 21
 - External terms: 3485
-- UOGTO terms: 552
+- UOGTO terms: 561
 - Review candidates: 460
-- Accepted mappings: 10
+- Accepted mappings: 12
 
 ## Mapping Review Results
-- Accepted: 10
-- Needs domain review: 1
-- Rejected: 449
+- Accepted: 12
+- Needs domain review: 0
+- Rejected: 448
 
 The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate and rejected rows remain audit records and should not be treated as asserted ontology alignments.
 
@@ -35,19 +35,19 @@ The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate
 | --- | ---: | ---: |
 | `schema_org` | 3175 | 0.0137 |
 | `owl_time` | 73 | 0.2474 |
-| `prov_o` | 57 | 0.4466 |
-| `ssn_sosa` | 26 | 0.4694 |
+| `prov_o` | 56 | 0.4563 |
+| `ssn_sosa` | 27 | 0.449 |
 | `bfo` | 1 | 0.0 |
 | `devs` | 1 | 0.0 |
 | `dolce` | 1 | 0.0 |
 | `emmo` | 1 | 0.0 |
 
 ## Network Findings
-- Import/evidence source graph nodes: 74
-- Source-similarity graph nodes: 69
-- Term-alignment bipartite edges: 10
+- Import/evidence source graph nodes: 75
+- Source-similarity graph nodes: 70
+- Term-alignment bipartite edges: 12
 - Source-similarity edges: 391
-- UOGTO module coverage edges: 11
+- UOGTO module coverage edges: 12
 
 The import/evidence graph and source-similarity graph are separate views; their node counts are not expected to match.
 

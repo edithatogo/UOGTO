@@ -55,6 +55,22 @@ class TestOntologyMappingCandidates(unittest.TestCase):
         self.assertEqual(candidate["candidate_predicate"], "owl:equivalentProperty")
         self.assertTrue(candidate["evidence"]["type_compatible"])
 
+    def test_external_parent_axiom_classifies_as_narrow_match(self):
+        external = row("prov_o", "external_rdf", "http://www.w3.org/ns/prov#Activity", "Activity", tokens=["activity"])
+        uogto = row("uogto_alignments_prov-o", "uogto", "https://w3id.org/uogto/core#Action", "Action", tokens=["action"])
+        uogto["parents"] = [external["term_iri"]]
+        candidate = mapper.make_candidate(external, uogto)
+        self.assertEqual(candidate["candidate_predicate"], "skos:narrowMatch")
+        self.assertGreaterEqual(candidate["confidence"], 0.5)
+        self.assertTrue(candidate["evidence"]["external_is_uogto_parent"])
+
+    def test_incompatible_property_class_pair_is_no_match(self):
+        external = row("prov_o", "external_rdf", "http://www.w3.org/ns/prov#agent", "agent", "object_property")
+        uogto = row("uogto_alignments_prov-o", "uogto", "https://w3id.org/uogto/core#Agent", "Agent", "class")
+        candidate = mapper.make_candidate(external, uogto)
+        self.assertEqual(candidate["candidate_predicate"], "no_match")
+        self.assertFalse(candidate["evidence"]["type_compatible"])
+
     def test_generate_candidates_is_deterministic_and_external_to_uogto(self):
         rows = [
             row("uogto_core_games", "uogto", "https://w3id.org/uogto/core#Game", "Game"),
@@ -68,6 +84,21 @@ class TestOntologyMappingCandidates(unittest.TestCase):
         self.assertGreaterEqual(len(first), 2)
         self.assertTrue(all(c["source_id"] == "schema_org" for c in first))
         self.assertTrue(all(c["uogto_source_id"].startswith("uogto_") for c in first))
+
+    def test_generate_candidates_keeps_strongest_row_per_term_pair(self):
+        external = row("schema_org", "external_rdf", "https://schema.org/Action", "Action")
+        core = row("uogto_core", "uogto", "https://w3id.org/uogto/core#Action", "Action")
+        alignment = row("uogto_alignments_schema-org", "uogto", "https://w3id.org/uogto/core#Action", "Action")
+        alignment["parents"] = [external["term_iri"]]
+        candidates = mapper.generate_candidates([core, alignment, external])
+        pair_candidates = [
+            candidate
+            for candidate in candidates
+            if candidate["source_term_iri"] == external["term_iri"]
+            and candidate["uogto_term_iri"] == core["term_iri"]
+        ]
+        self.assertEqual(len(pair_candidates), 1)
+        self.assertEqual(pair_candidates[0]["candidate_predicate"], "skos:narrowMatch")
 
     def test_validate_candidates_rejects_invalid_predicate(self):
         candidate = mapper.make_candidate(
@@ -83,7 +114,7 @@ class TestOntologyMappingCandidates(unittest.TestCase):
         summary = mapper.validate_candidates(rows)
         self.assertGreater(summary["candidate_count"], 100)
         self.assertGreater(summary["source_count"], 3)
-        self.assertIn("skos:relatedMatch", summary["by_predicate"])
+        self.assertIn("skos:narrowMatch", summary["by_predicate"])
 
     def test_write_and_read_jsonl_round_trips(self):
         candidate = mapper.make_candidate(

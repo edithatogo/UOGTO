@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-06-25T12:41:02+00:00",
+  "generated_at_utc": "2026-07-05T08:17:32+00:00",
   "status": "frozen",
   "freeze_scope": "manuscript and supplement figure numbering, captions, placement callouts, source/rendered file hashes, and image score loop status",
   "rerun_required_when": [
     "manuscript Figure~\\ref callouts change",
-    "supplementary figure numbering S1-S7 changes",
+    "supplementary figure numbering S1-S13 changes",
     "caption/title text changes",
     "source_path or rendered_path changes in image_scores.csv",
     "any source or rendered figure file hash changes",
@@ -13,24 +13,8 @@
   ],
   "main_manuscript_callouts": [
     {
-      "label": "fig:architecture",
-      "frozen_caption_intent": "Semantic separation among game specifications, sessions, traces, strategies, actions, payoffs, outcomes, mechanisms, and execution bindings."
-    },
-    {
-      "label": "fig:evidence-heatmap",
-      "frozen_caption_intent": "Source-family evidence levels separating parsed RDF from structured non-RDF, metadata-only, and literature-only evidence."
-    },
-    {
-      "label": "fig:mapping-flow",
-      "frozen_caption_intent": "Candidate-to-review-to-alignment flow for conservative ontology mappings."
-    },
-    {
-      "label": "fig:network-sensitivity",
-      "frozen_caption_intent": "Network-sensitivity view showing bridge concepts and evidence limits."
-    },
-    {
-      "label": "fig:reproducibility",
-      "frozen_caption_intent": "Reproducibility chain from ontology source to validation, mapping, tables, and submission gates."
+      "label": "fig:systematic-search-prisma-flow",
+      "frozen_caption_intent": "Search, screening, and mapping-review flow from source discovery to accepted and rejected mapping evidence."
     }
   ],
   "supplementary_figures": [
@@ -68,6 +52,36 @@
       "number": "Supplementary Figure S7",
       "title": "Reviewer workload and mapping review distribution",
       "primary_file": "docs/ontology-comparison/figures/reviewer_workload.svg"
+    },
+    {
+      "number": "Supplementary Figure S8",
+      "title": "ArXiv-safe mapping flow summary",
+      "primary_file": "docs/paper/paper.tex"
+    },
+    {
+      "number": "Supplementary Figure S9",
+      "title": "ArXiv-safe network-analysis summary",
+      "primary_file": "docs/paper/paper.tex"
+    },
+    {
+      "number": "Supplementary Figure S10",
+      "title": "Economics-facing module roadmap",
+      "primary_file": "docs/paper/paper.tex"
+    },
+    {
+      "number": "Supplementary Figure S11",
+      "title": "Cosmograph source-similarity graph image",
+      "primary_file": "docs/ontology-comparison/cosmograph/source_similarity_cosmograph.svg"
+    },
+    {
+      "number": "Supplementary Figure S12",
+      "title": "Cosmograph accepted term-alignment graph image",
+      "primary_file": "docs/ontology-comparison/cosmograph/term_alignment_cosmograph.svg"
+    },
+    {
+      "number": "Supplementary Figure S13",
+      "title": "Cosmograph import and evidence-use graph image",
+      "primary_file": "docs/ontology-comparison/cosmograph/import_uses_cosmograph.svg"
     }
   ],
   "image_score_rows": [
@@ -92,8 +106,8 @@
       "caption_or_slide": "Mapping match classes",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "0da194e3a998d736ff923778b69d69042136f8361c26bcfb3d74e219bd06e154",
-      "rendered_sha256": "0da194e3a998d736ff923778b69d69042136f8361c26bcfb3d74e219bd06e154",
+      "source_sha256": "fca3467fa48f38f4eded4dfa818969327a8f417dd89b48b227901a90a7579d87",
+      "rendered_sha256": "fca3467fa48f38f4eded4dfa818969327a8f417dd89b48b227901a90a7579d87",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -105,8 +119,8 @@
       "caption_or_slide": "Reviewer workload",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "bad498f6214a40d0e5dafcb4792ac7f863fb134933774803329ef9538b322bde",
-      "rendered_sha256": "bad498f6214a40d0e5dafcb4792ac7f863fb134933774803329ef9538b322bde",
+      "source_sha256": "0e837219c9b564f962b182976d8823d277e5c97949b3fea23baa6d7731491a31",
+      "rendered_sha256": "0e837219c9b564f962b182976d8823d277e5c97949b3fea23baa6d7731491a31",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -144,8 +158,8 @@
       "caption_or_slide": "Source module overlap",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "1712592363b27f2741c9e80353e41d7983ddae4d925cb0bf4bf49c69b6f2f864",
-      "rendered_sha256": "1712592363b27f2741c9e80353e41d7983ddae4d925cb0bf4bf49c69b6f2f864",
+      "source_sha256": "b8b5e2b8f8bdd2d9aee6efc6f1786823540d42c49f7fd791ae793f1c7d92baae",
+      "rendered_sha256": "b8b5e2b8f8bdd2d9aee6efc6f1786823540d42c49f7fd791ae793f1c7d92baae",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -170,8 +184,8 @@
       "caption_or_slide": "Mapping flow",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "24e77caf87fb7c2f7e39e43961c87072c08488b3561a795c9b96f95402f773b3",
-      "rendered_sha256": "24e77caf87fb7c2f7e39e43961c87072c08488b3561a795c9b96f95402f773b3",
+      "source_sha256": "ff55bf66514912336adb522d023112d9ad8d4396b1da8f93d3d0ecfc8559990d",
+      "rendered_sha256": "ff55bf66514912336adb522d023112d9ad8d4396b1da8f93d3d0ecfc8559990d",
       "source_exists": true,
       "rendered_exists": true
     },
@@ -196,7 +210,7 @@
       "caption_or_slide": "PRISMA source discovery flow",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "d27bdea0aebf3f75da2c257539405294bb64ba7486179791210eb0f0e3f918c5",
+      "source_sha256": "7d9e81be37082e1142a8e7a22370959712326819014ca3b147621f5a653dd463",
       "rendered_sha256": "cded4402de29dfa824efcac723c2b82165edab51e3131887a6295dc37525e4dd",
       "source_exists": true,
       "rendered_exists": true
@@ -209,7 +223,7 @@
       "caption_or_slide": "PRISMA screening flow",
       "total_score": 100,
       "status": "improved-100",
-      "source_sha256": "a5b3d23a331f223681bc6b1a1f784438438556f3fc5f5d91cdac4778c6f38b11",
+      "source_sha256": "df23162e4452728e4a52d3692d29b6fdb5d5c5c620639a65a26c017a13bc522f",
       "rendered_sha256": "30adba3a5ed393bf9793a2a713727f378d112915c977846dc113137ecc1622fe",
       "source_exists": true,
       "rendered_exists": true

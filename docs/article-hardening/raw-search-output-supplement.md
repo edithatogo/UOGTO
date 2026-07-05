@@ -28,11 +28,11 @@ The raw search output is deliberately broader than the manuscript comparison set
 1. Search routes record what was found or preserved at the source-discovery stage.
 2. Source-extension records preserve the 39 retained source rows and their evidence levels.
 3. The comparative ontology subset narrows the evidence to 21 source families used for term extraction and mapping.
-4. Term extraction yields 4,037 rows: 3,468 external RDF rows, 17 external metadata rows, and 552 UOGTO rows.
-5. Mapping review narrows 460 candidates to 10 accepted alignments, one domain-review row, and 449 rejected or non-asserted rows.
+4. Term extraction yields 4,046 rows: 3,468 external RDF rows, 17 external metadata rows, and 561 UOGTO rows.
+5. Mapping review narrows 460 candidates to 12 accepted alignments, 0 domain-review rows, and 448 rejected or non-asserted rows.
 6. The candidate decision ledger joins route, source, mapping, and ontology-inclusion decisions into one row-level audit table with recorded rationales and heuristics.
 
-This is a scoping-review-style evidence trail, not a claim that all 39 retained source rows were parsed as ontology files or that all 4,037 term rows represent missing UOGTO concepts.
+This is a scoping-review-style evidence trail, not a claim that all 39 retained source rows were parsed as ontology files or that all 4,046 term rows represent missing UOGTO concepts.
 
 ## Raw Search Route Outputs
 
@@ -114,10 +114,10 @@ The source-extension inventory retains 39 source rows across 27 source families.
 | Raw search/source route results | 39 | `docs/article-hardening/search-log.jsonl` | Broad source-discovery register. |
 | Retained source-extension rows | 39 | `docs/article-hardening/source-extension-inventory.json` | Evidence-levelled source register. |
 | Comparative source subset | 21 sources / 17 families | `docs/ontology-comparison/source-inventory.json` | Candidate sources used for ontology comparison and term extraction. |
-| Normalized term rows | 4,037 | `docs/ontology-comparison/term-inventory.jsonl` | 3,468 external RDF rows, 17 external metadata rows, and 552 UOGTO rows. |
+| Normalized term rows | 4,046 | `docs/ontology-comparison/term-inventory.jsonl` | 3,468 external RDF rows, 17 external metadata rows, and 561 UOGTO rows. |
 | Mapping candidates | 460 | `docs/ontology-comparison/mapping-candidates.jsonl` | Deterministic candidate surface for review. |
-| Reviewed mapping rows | 460 | `docs/ontology-comparison/mapping-review.csv` | 10 accepted, one domain-review, 449 rejected or non-asserted rows. |
-| Accepted alignments | 10 | `docs/ontology-comparison/accepted-alignments.sssom.tsv`; `docs/ontology-comparison/accepted-alignments.ttl` | Conservative crosswalks emitted for reuse. |
+| Reviewed mapping rows | 460 | `docs/ontology-comparison/mapping-review.csv` | 12 accepted, 0 domain-review, 448 rejected or non-asserted rows. |
+| Accepted alignments | 12 | `docs/ontology-comparison/accepted-alignments.sssom.tsv`; `docs/ontology-comparison/accepted-alignments.ttl` | Conservative crosswalks emitted for reuse. |
 | Unified candidate decision ledger | 511 | `docs/article-hardening/candidate-decision-ledger.csv`; `.json`; `.md` | Route, source, mapping, and ontology-inclusion candidate decisions with rationales and heuristics. |
 | Ontology copy for review | 49 source files / 5 release-copy assets | `docs/article-hardening/ontology-snapshot-supplement.md`; `dist/uogto.ttl` | Compact copy and modular source ledger for the ontology being discussed. |
 | Ontology citation register | 19 reference records | `docs/article-hardening/ontology-citation-register.md`; `.json` | Final corresponding references for the ontology and manuscript evidence package. |
@@ -128,9 +128,9 @@ The narrowing steps support the manuscript's restrained claims:
 
 - The 39 raw retained rows describe discovery breadth and evidence heterogeneity.
 - The 21-source comparative subset describes the material actually used for ontology comparison.
-- The 4,037 term rows describe extraction breadth, not unmodelled game-theory concepts.
+- The 4,046 term rows describe extraction breadth, not unmodelled game-theory concepts.
 - The 460 mapping candidates describe a review surface, not asserted equivalence.
-- The 10 accepted alignments describe conservative reusable mappings.
+- The 12 accepted alignments describe conservative reusable mappings.
 - Rejected rows, metadata-only rows, and the negative-evidence route are preserved so readers can inspect omissions and non-assertions.
 - The ontology snapshot supplement identifies the compact ontology copy and checksums corresponding to these counts.
 - The ontology citation register identifies the final reference set corresponding to the ontology evidence package.

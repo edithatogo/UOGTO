@@ -4,14 +4,14 @@
 <line class="axis" x1="340" y1="88" x2="1130" y2="88"/>
 <text class="label" x="36" y="125">no_match</text>
 <rect x="340" y="104" width="740" height="28" fill="#0072B2" rx="3"/>
-<text class="small" x="1092" y="124">449</text>
-<text class="label" x="36" y="169">owl:equivalentClass</text>
+<text class="small" x="1092" y="124">448</text>
+<text class="label" x="36" y="169">owl:equivalentProperty</text>
 <rect x="340" y="148" width="8" height="28" fill="#009E73" rx="3"/>
 <text class="small" x="360" y="168">5</text>
-<text class="label" x="36" y="213">owl:equivalentProperty</text>
-<rect x="340" y="192" width="8" height="28" fill="#D55E00" rx="3"/>
-<text class="small" x="360" y="212">5</text>
-<text class="label" x="36" y="257">skos:relatedMatch</text>
-<rect x="340" y="236" width="1" height="28" fill="#CC79A7" rx="3"/>
-<text class="small" x="353" y="256">1</text>
+<text class="label" x="36" y="213">skos:narrowMatch</text>
+<rect x="340" y="192" width="6" height="28" fill="#D55E00" rx="3"/>
+<text class="small" x="358" y="212">4</text>
+<text class="label" x="36" y="257">owl:equivalentClass</text>
+<rect x="340" y="236" width="4" height="28" fill="#CC79A7" rx="3"/>
+<text class="small" x="356" y="256">3</text>
 </svg>
