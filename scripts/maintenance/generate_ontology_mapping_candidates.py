@@ -82,15 +82,16 @@ def evidence_features(external, uogto):
     exact_iri = external["term_iri"] == uogto["term_iri"]
     exact_label = external["label"].strip().lower() == uogto["label"].strip().lower()
     normalized_label = external.get("normalised_label") and external.get("normalised_label") == uogto.get("normalised_label")
-    external_is_uogto_parent = external["term_iri"] in set(uogto.get("parents", []))
+    external_is_uogto_parent = external["term_iri"] in (uogto.get("parents") or [])
     synonym_match = bool({s.lower() for s in external.get("synonyms", [])} & ({uogto["label"].lower()} | {s.lower() for s in uogto.get("synonyms", [])}))
     lexical = max(SequenceMatcher(None, external.get("normalised_label", ""), uogto.get("normalised_label", "")).ratio(), jaccard(ext_tokens, uogto_tokens))
     definition = SequenceMatcher(None, text_blob(external, ("definitions",)), text_blob(uogto, ("definitions",))).ratio() if external.get("definitions") and uogto.get("definitions") else 0.0
-    structural = max(hierarchy_score(external, uogto), signature_score(external, uogto))
+    sig_score = signature_score(external, uogto)
+    structural = max(hierarchy_score(external, uogto), sig_score)
     embedding = cosine_counter(token_counter(external), token_counter(uogto))
     compatible = type_compatible(external, uogto)
     reliability = 1.0 if external.get("source_kind") == "external_rdf" else 0.62
-    return {"exact_iri": exact_iri, "exact_label": exact_label, "normalized_label": bool(normalized_label), "synonym": synonym_match, "lexical_similarity": round(lexical, 4), "definition_similarity": round(definition, 4), "structural_similarity": round(max(structural, 1.0 if external_is_uogto_parent else 0.0), 4), "property_signature_similarity": round(signature_score(external, uogto), 4), "embedding_similarity": round(embedding, 4), "type_compatible": compatible, "source_reliability": reliability, "external_is_uogto_parent": external_is_uogto_parent}
+    return {"exact_iri": exact_iri, "exact_label": exact_label, "normalized_label": bool(normalized_label), "synonym": synonym_match, "lexical_similarity": round(lexical, 4), "definition_similarity": round(definition, 4), "structural_similarity": round(max(structural, 1.0 if external_is_uogto_parent else 0.0), 4), "property_signature_similarity": round(sig_score, 4), "embedding_similarity": round(embedding, 4), "type_compatible": compatible, "source_reliability": reliability, "external_is_uogto_parent": external_is_uogto_parent}
 
 
 def confidence(features):
@@ -115,6 +116,7 @@ def classify(external, uogto, features, score):
     if features["exact_iri"]:
         return "owl:equivalentProperty" if "property" in external["term_type"] else "owl:equivalentClass"
     if features["external_is_uogto_parent"]:
+        # skos:narrowMatch follows skos:narrower: the external parent has the UOGTO child as a narrower match.
         return "skos:narrowMatch"
     if score >= 0.50 and features["type_compatible"] and (features["exact_label"] or features["normalized_label"]):
         return "owl:equivalentProperty" if "property" in external["term_type"] else "owl:equivalentClass"
@@ -199,7 +201,9 @@ def generate_candidates(rows, per_source_limit=120):
         for candidate in local:
             key = (candidate["source_term_iri"], candidate["uogto_term_iri"])
             if key not in seen and per_source[candidate["source_id"]] < per_source_limit:
-                seen.add(key); per_source[candidate["source_id"]] += 1; candidates.append(candidate)
+                seen.add(key)
+                per_source[candidate["source_id"]] += 1
+                candidates.append(candidate)
                 emitted_for_external += 1
                 if emitted_for_external >= 10:
                     break

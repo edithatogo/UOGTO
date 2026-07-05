@@ -93,7 +93,7 @@ def prefill_decision(candidate):
     predicate = candidate["candidate_predicate"]
     confidence = float(candidate["confidence"])
     flags = set(candidate.get("review_flags", []))
-    evidence = candidate.get("evidence", {})
+    evidence = candidate.get("evidence") or {}
     if predicate == "no_match":
         if evidence.get("type_compatible") is False:
             return "rejected", "", "ontology_alignment_reviewer", "Rejected because the candidate crosses incompatible term types without an approved bridge pattern."
