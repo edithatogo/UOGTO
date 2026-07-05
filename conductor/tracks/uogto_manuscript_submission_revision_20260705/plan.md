@@ -28,3 +28,9 @@
     - [x] Ran focused manuscript/arXiv tests: `19 passed`.
     - [x] Ran `make validate`: passed.
     - [x] Ran `make test`: `251 passed, 52 warnings`.
+
+## Phase 4: Review Fixes
+
+- [x] Task: Apply Conductor review fixes
+    - [x] Reconciled arXiv contract CI/attestation status rows with the external-state file so the docs require clean CI evidence without claiming it already exists before PR/selected upload artifact verification.
+    - [x] Updated regression tests for the stricter status wording.

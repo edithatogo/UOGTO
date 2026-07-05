@@ -83,10 +83,10 @@ Publisher artifact evidence:
 | Contract check | Status | Evidence |
 | --- | --- | --- |
 | `make arxiv-upload-ready` | pass-local-packaging | Built PDF with bundled Tectonic, passed privacy audit, passed SourceRight CSL validation/citation reconciliation, and generated `dist/arxiv/*`. |
-| GitHub arXiv Preflight | pass-ci-strict | Latest successful current-branch manual workflow run must pass strict arXiv source package tests, strict preflight, upload-ready artifact build, upload, and provenance attestation. |
-| PR arXiv Preflight | pass-ci-strict | Current pull-request check must pass on the current branch head. |
-| PR manuscript PDF | pass-ci | Current pull-request check must pass on the current branch head. |
-| PR validate | pass-ci | Current pull-request check must pass on the current branch head. |
+| GitHub arXiv Preflight | required-before-upload | Latest successful current-branch manual workflow run must pass strict arXiv source package tests, strict preflight, upload-ready artifact build, upload, and provenance attestation. |
+| PR arXiv Preflight | required-before-merge-upload | Current pull-request check must pass on the current branch head. |
+| PR manuscript PDF | required-before-merge | Current pull-request check must pass on the current branch head. |
+| PR validate | required-before-merge | Current pull-request check must pass on the current branch head. |
 | `make validate` | pass-local | Parsed ontology modules, SHACL shapes, examples, and competency queries successfully on 2026-07-02. |
 | `make test` | pass-local | `219 passed, 1 skipped, 21 warnings` on 2026-07-03 after `make build`; focused source/package reruns and full-suite rerun passed. |
 | Privacy/source-leak audit | pass | `docs/paper/arxiv-source-privacy-audit.json`; `docs/paper/arxiv-source-privacy-audit.md`; no `C:/Users` or OneDrive path disclosure in published audit artifacts. |

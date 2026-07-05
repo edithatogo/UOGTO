@@ -33,8 +33,8 @@ track the external blocker without pretending that an identifier exists.
 | Final manifest SHA-256 | pending the successful clean CI arXiv Preflight artifact used for upload |
 | Final tarball SHA-256 | pending the successful clean CI arXiv Preflight artifact used for upload |
 | Final `SHA256SUMS` SHA-256 | pending the successful clean CI arXiv Preflight artifact used for upload |
-| GitHub Actions arXiv Preflight run | pending current branch CI after the submission-revision commit |
-| GitHub artifact attestation | pending current branch CI after the submission-revision commit |
+| GitHub Actions arXiv Preflight run | pending selection of the successful clean CI artifact used for upload |
+| GitHub artifact attestation | pending selection and verification of the artifact used for upload |
 
 ## Closeout Rule
 

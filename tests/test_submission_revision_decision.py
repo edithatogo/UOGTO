@@ -49,7 +49,7 @@ def test_arxiv_submission_state_keeps_identifier_and_pdf_approval_external() -> 
         "Submission state | `not_submitted`",
         "arXiv identifier | `not assigned`",
         "arXiv-rendered PDF inspected | `no`",
-        "pending the successful clean CI arXiv Preflight artifact",
+        "pending selection of the successful clean CI artifact",
         "identifier assignment and rendered-PDF inspection require an external",
     ]:
         assert expected in state
