@@ -1,5 +1,19 @@
 # Conductor Run Log
 
+## 2026-07-05 - GitHub Project and Conductor Ledger Reconciliation
+
+- Reconciled the local Conductor entrypoint by adding `conductor/index.md` and `conductor/code_styleguides/markdown.md`.
+- Updated `conductor/tracks.md` and `conductor/archive/index.md` so recent archived tracks are visible in the local registry and archive ledger.
+- Added reusable sync script `scripts/maintenance/sync_github_projects.py` for issue-backed GitHub Project reconciliation.
+- Created or reused one GitHub issue per local Conductor track using hidden `uogto-conductor-track-id` markers.
+- Native GitHub subissues now represent the hierarchy: RI-HERO umbrella issue `#4` -> UOGTO workstream issues -> 32 Conductor track issues.
+- Replaced stale Project #8 draft placeholders with issue-backed items, added relevant Project #8 fields, and mirrored merged pull requests as completed development ledger items.
+- Live verification after sync:
+  - Project #8 contains 62 items: 45 issues and 17 merged pull requests.
+  - Project #8 has 60 `Done` items, 2 `In Progress` items, and 0 draft items.
+  - RI-HERO Project #9 mirrors the same 62 UOGTO issue and pull-request items.
+  - Track issues are 30 closed and 2 open (`uogto_publishing_discoverability_20260622`, `uogto_nature_presubmission_evaluation_20260625`).
+
 ## 2026-07-05 - Bioregistry namespace and ORCID response
 
 - Completed Conductor track `uogto_bioregistry_namespace_response_20260705`.
