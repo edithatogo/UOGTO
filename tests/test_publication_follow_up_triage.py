@@ -47,7 +47,15 @@ def test_publication_follow_up_triage_records_current_external_feedback() -> Non
     items = {item["id"]: item for item in load_triage()["items"]}
     assert items["ols-indexing-1305"]["status"] == "accepted_pending_indexing"
     assert "will add the ontology" in items["ols-indexing-1305"]["latest_observation"]
+    assert (
+        items["ontobee-indexing-212"]["target_artifact"]
+        == "docs/registry/extended-discoverability-submissions.md"
+    )
     assert items["bioregistry-prefix-1999"]["status"] == "response_posted_awaiting_maintainer_review"
+    assert (
+        items["bioregistry-prefix-1999"]["target_artifact"]
+        == "docs/registry/bioregistry-namespace-response.md"
+    )
     assert "primary core prefix" in items["bioregistry-prefix-1999"]["namespace_decision"]
     assert "No ORCID is supplied" in items["bioregistry-prefix-1999"]["orcid_handling"]
     assert "issuecomment-4885550451" in items["bioregistry-prefix-1999"]["evidence_url"]
