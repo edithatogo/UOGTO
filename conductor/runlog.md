@@ -374,3 +374,12 @@
 - Verified GitHub Project #9 `RI-HERO Meta-Program` mirrors 64 UOGTO items: 45 issues, 19 merged pull requests, 62 `Done`, and 2 `In Progress`.
 - Fixed the project sync missing-item add path and added regression coverage in `tests/test_sync_github_projects.py`.
 - Updated local Conductor status files to match the post-PR #67/#68 project ledger state.
+
+## 2026-07-06 Publishing Discoverability Follow-Up
+
+- Verified LOV issue `83` remains open with no maintainer comments; public LOV `uogto` vocabulary API/page routes still return 404.
+- Verified OLS issue `1305` remains open with maintainer acceptance evidence from 2026-06-29 that the ontology will be added.
+- Verified public OLS API/search checks do not yet expose a `uogto` ontology entry, so OLS remains `accepted_pending_indexing`.
+- Verified Ontobee issue `212` remains open with no maintainer comments.
+- Regenerated `dist/publication-status-live.json`; publication status remains `published` with no repo-side blockers.
+- Updated registry follow-up docs and the active publishing/discoverability plan to separate tracked OLS feedback from the remaining public-indexing external gate.

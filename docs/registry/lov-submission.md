@@ -1,7 +1,7 @@
 # Linked Open Vocabularies Submission
 
 ## Status
-Submitted on 2026-06-22 through the active LOV GitHub issue route after `v1.0.0`, WIDOCO documentation, release assets, and the Zenodo DOI were public. Live follow-up on 2026-07-05 confirmed issue `83` remains open with no maintainer comments.
+Submitted on 2026-06-22 through the active LOV GitHub issue route after `v1.0.0`, WIDOCO documentation, release assets, and the Zenodo DOI were public. Live follow-up on 2026-07-06 confirmed issue `83` remains open with no maintainer comments; public LOV `uogto` vocabulary API/page routes still return 404.
 
 Submission route checked 2026-06-22: Linked Open Vocabularies frontend repository `pyvandenbussche/lov` is active at <https://github.com/pyvandenbussche/lov>. The current LOV site root is <https://lov.linkeddata.es/>; the historical `/dataset/lov/` URL redirects to a 404. No repository issue template was exposed through the GitHub contents API, so the final submission route should be confirmed at submission time.
 
@@ -41,5 +41,5 @@ UOGTO is a modular OWL/SHACL ontology for game-theoretic semantics, including cl
 ## Submission Record
 - Submission date: `2026-06-22`
 - Submission URL: <https://github.com/pyvandenbussche/lov/issues/83>
-- Review status: `Submitted; awaiting LOV maintainer review; no maintainer feedback as of 2026-07-05`
+- Review status: `Submitted; awaiting LOV maintainer review; no maintainer feedback as of 2026-07-06`
 - Acceptance status: `TBD`

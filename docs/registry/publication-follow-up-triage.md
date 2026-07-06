@@ -1,6 +1,6 @@
 # Publication Follow-Up Triage
 
-Last verified: `2026-07-05`
+Last verified: `2026-07-06`
 
 This queue records external registry feedback after UOGTO `v1.0.0`. It keeps
 curator and maintainer waiting states separate from repo-side validation
@@ -31,9 +31,10 @@ Machine-readable queue: `docs/registry/publication-follow-up-triage.json`.
 
 ## Current Notes
 
-- OLS maintainer feedback on 2026-06-29 says the ontology will be added, but the issue remains open; this is `accepted_pending_indexing`, not locally complete.
+- OLS maintainer feedback on 2026-06-29 says the ontology will be added, but the issue remains open; public OLS API/search checks on 2026-07-06 did not yet expose UOGTO. This is `accepted_pending_indexing`, not locally complete.
 - Bioregistry feedback on 2026-06-25 asked whether `https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#` should be squashed together and asked for an ORCID.
 - UOGTO response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defends the published two-namespace design for `v1.0.0`, asks Bioregistry to treat `uogto` as the primary core prefix, and keeps `uogtox` documented separately for extension modules.
 - ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980> records the approved sole-author/contact ORCID <https://orcid.org/0000-0002-9775-0603>, which is now mirrored in `CITATION.cff`, `.zenodo.json`, and the Bioregistry issue body.
 - Local issue <https://github.com/edithatogo/UOGTO/issues/34> tracks the Bioregistry response decision; any required namespace squashing should become a separate ontology-compatibility track rather than a metadata-only edit.
-- LOV and Ontobee have no maintainer feedback recorded as of this verification pass.
+- LOV has no maintainer feedback recorded as of 2026-07-06, and public LOV `uogto` vocabulary API/page routes still return 404.
+- Ontobee issue `212` remains open with no maintainer comments as of 2026-07-06.

@@ -112,7 +112,9 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] Task: Submit OLS indexing request
     - [x] Submit the inclusion request after LOV submission materials and WIDOCO documentation are complete.
     - [x] Track request URL and review status in `docs/registry/ols-indexing.md`.
-    - [ ] Track reviewer feedback, metadata changes, and indexing outcome in `docs/registry/ols-indexing.md`.
+    - [x] Track reviewer feedback and metadata-change disposition in `docs/registry/ols-indexing.md`.
+      - OLS maintainer accepted the ontology for addition; no repo metadata changes were requested.
+    - [ ] Track public indexing outcome in `docs/registry/ols-indexing.md`.
 
 ### Required Configuration Files
 - `docs/registry/ols-indexing.md`
@@ -123,7 +125,7 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] OLS compatibility checklist passes for repo-side ontology metadata.
 - [x] OLS compatibility checklist passes for the published ontology artifact.
 - [x] Inclusion request is submitted with stable documentation, release, DOI, and RDF artifact links.
-- [ ] OLS review feedback is tracked and resolved or converted into follow-up Conductor tasks.
+- [x] OLS review feedback is tracked and resolved or converted into follow-up Conductor tasks.
 - [ ] OLS indexing status is recorded once accepted or rejected.
 
 ## Phase 5: Release Gate and Ongoing Documentation Maintenance

@@ -1,6 +1,6 @@
 {
   "schema": "uogto.publication-follow-up-triage.v1",
-  "last_verified": "2026-07-05",
+  "last_verified": "2026-07-06",
   "verification_summary": {
     "publication_status_live": "published",
     "documentation_live": true,
@@ -21,7 +21,7 @@
       "external_owner": "LOV maintainers",
       "target_artifact": "docs/registry/lov-submission.md",
       "evidence_url": "https://github.com/pyvandenbussche/lov/issues/83",
-      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-05.",
+      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-06; public LOV `uogto` vocabulary API/page routes still return 404.",
       "acceptance_criterion": "LOV issue is accepted, rejected, or receives actionable maintainer feedback that is converted into a scoped Conductor task.",
       "next_action": "Monitor issue 83; no repo patch is required until maintainer feedback arrives."
     },
@@ -34,7 +34,7 @@
       "external_owner": "OLS maintainers",
       "target_artifact": "docs/registry/ols-indexing.md",
       "evidence_url": "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4833153237",
-      "latest_observation": "OLS maintainer replied that they will add the ontology; issue remains open as of 2026-07-05.",
+      "latest_observation": "OLS maintainer replied that they will add the ontology; issue remains open and public OLS API/search checks did not yet expose `uogto` as of 2026-07-06.",
       "acceptance_criterion": "OLS exposes UOGTO in the public index or closes the issue with a clear disposition.",
       "next_action": "Monitor OLS indexing; record public OLS URL once available."
     },
@@ -60,7 +60,7 @@
       "external_owner": "Ontobee maintainers",
       "target_artifact": "docs/registry/extended-discoverability-submissions.md",
       "evidence_url": "https://github.com/OntoZoo/ontobee/issues/212",
-      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-05.",
+      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-06.",
       "acceptance_criterion": "Ontobee indexes UOGTO, rejects the request, or asks for a scoped metadata/ontology change.",
       "next_action": "Monitor issue 212; record index URL if accepted."
     },
