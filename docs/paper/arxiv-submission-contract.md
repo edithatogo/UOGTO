@@ -44,7 +44,7 @@ Editorial fixes applied:
 
 | Agent | Status | Reviewed artifacts | Outcome |
 | --- | --- | --- | --- |
-| `arxiv_toolchain_reviewer` | pass-ci-verified | `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md`; `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md`; `docs/paper/arxiv-source-privacy-audit.json` | Local upload-ready packaging is reproducible, and the GitHub Actions arXiv preflight workflow runs the strict arXiv-engine path with `latexmk`/`pdflatex`. |
+| `arxiv_toolchain_reviewer` | pass-ci-verified | `conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md`; `conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md`; `docs/paper/arxiv-source-privacy-audit.json` | Local upload-ready packaging is reproducible, and the GitHub Actions arXiv preflight workflow runs the strict arXiv-engine path with `latexmk`/`pdflatex`. |
 | `red_team_reviewer` | pass-after-fixes | `docs/paper/arxiv-source-privacy-audit.md`; `docs/paper/source-review-queue.jsonl`; `docs/paper/sourceright-citations.md`; `docs/paper/reviews/arxiv-red-team-review-2026-07-02.md` | Privacy audit passes without committed local path disclosure and now detects forward-slash local paths. SourceRight citation reconciliation reports 0 issues. Clean strict-engine CI and attestation are required current-branch gates. |
 
 ## Devil's Advocate Contract

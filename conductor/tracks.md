@@ -125,10 +125,10 @@ These tracks are retained for audit history but are no longer active work items.
 - **Status**: Completed and archived.
 - **Link**: [./archive/uogto_article_hardening_protocol_20260624/](./archive/uogto_article_hardening_protocol_20260624/)
 
-## [~] Track: uogto_nature_presubmission_evaluation_20260625
+## [x] Archived Track: uogto_nature_presubmission_evaluation_20260625
 - **Description**: Nature-ready professor-level presubmission evaluation of UOGTO covering GitHub setup, ontology quality, evaluation protocol, analysis artefacts, manuscript, supplement, figures, and PowerPoint.
-- **Status**: Active
-- **Link**: [./tracks/uogto_nature_presubmission_evaluation_20260625/](./tracks/uogto_nature_presubmission_evaluation_20260625/)
+- **Status**: Completed and archived; remaining submission-stage arXiv/journal gates are tracked in the manuscript revision backlog.
+- **Link**: [./archive/uogto_nature_presubmission_evaluation_20260625/](./archive/uogto_nature_presubmission_evaluation_20260625/)
 
 ## [x] Track: repo_arxiv_submission_hardening_20260702
 - **Description**: Finish repository contribution polish, formalize strict arXiv submission-review simulation, and loop until the manuscript/package scores above 995/1000.

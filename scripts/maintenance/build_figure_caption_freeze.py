@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TRACK = ROOT / "conductor" / "tracks" / "uogto_nature_presubmission_evaluation_20260625"
+TRACK = ROOT / "conductor" / "archive" / "uogto_nature_presubmission_evaluation_20260625"
 IMAGE_SCORES = TRACK / "image_scores.csv"
 PAPER = ROOT / "docs" / "paper" / "paper.tex"
 SUPPLEMENT = ROOT / "docs" / "paper" / "supplement-package.md"

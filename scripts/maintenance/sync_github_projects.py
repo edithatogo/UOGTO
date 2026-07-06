@@ -213,24 +213,69 @@ def human_title(track_id: str) -> str:
     return " ".join(words)
 
 
-def parse_track_descriptions(root: Path) -> dict[str, str]:
+def parse_track_registry(root: Path) -> dict[str, dict[str, str]]:
     text = (root / "conductor" / "tracks.md").read_text(encoding="utf-8")
-    descriptions: dict[str, str] = {}
+    registry: dict[str, dict[str, str]] = {}
     pattern = re.compile(
-        r"^## \[[ x~]\] (?:Archived )?Track: (?P<track>[A-Za-z0-9_]+)\n"
+        r"^## \[(?P<marker>[ x~])\] (?P<archived>Archived )?Track: (?P<track>[A-Za-z0-9_]+)\n"
         r"(?P<body>.*?)(?=^## \[[ x~]\] (?:Archived )?Track:|\Z)",
         re.MULTILINE | re.DOTALL,
     )
     for match in pattern.finditer(text):
         body = match.group("body")
         description_match = re.search(r"^- \*\*Description\*\*: (?P<description>.+)$", body, re.MULTILINE)
-        if description_match:
-            descriptions[match.group("track")] = description_match.group("description").strip()
-    return descriptions
+        status_match = re.search(r"^- \*\*Status\*\*: (?P<status>.+)$", body, re.MULTILINE)
+        registry[match.group("track")] = {
+            "description": description_match.group("description").strip() if description_match else "",
+            "marker": match.group("marker"),
+            "status": status_match.group("status").strip() if status_match else "",
+            "archived_heading": "true" if match.group("archived") else "false",
+        }
+    return registry
+
+
+def parse_track_descriptions(root: Path) -> dict[str, str]:
+    return {
+        track_id: data["description"]
+        for track_id, data in parse_track_registry(root).items()
+        if data["description"]
+    }
+
+
+def metadata_status(path: Path) -> str:
+    metadata_path = path / "metadata.json"
+    if not metadata_path.exists():
+        return ""
+    try:
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return ""
+    return str(metadata.get("status", "")).strip().lower()
+
+
+def is_active_track(track_id: str, registry: dict[str, dict[str, str]], location: str, path: Path) -> bool:
+    entry = registry.get(track_id)
+    if entry:
+        if entry["marker"] == "~":
+            return True
+        if entry["marker"] == "x" or entry["archived_heading"] == "true":
+            return False
+        status = entry["status"].lower()
+        if "active" in status or "in progress" in status:
+            return True
+        if "completed" in status or "archived" in status:
+            return False
+    status = metadata_status(path)
+    if status in {"active", "in-progress", "in_progress", "in progress"}:
+        return True
+    if status in {"complete", "completed", "archived"}:
+        return False
+    return location == "tracks" and entry is None
 
 
 def discover_tracks(root: Path) -> list[Track]:
-    descriptions = parse_track_descriptions(root)
+    registry = parse_track_registry(root)
+    descriptions = {track_id: data["description"] for track_id, data in registry.items() if data["description"]}
     tracks_dir = root / "conductor" / "tracks"
     archive_dir = root / "conductor" / "archive"
     ids: set[str] = set()
@@ -255,10 +300,8 @@ def discover_tracks(root: Path) -> list[Track]:
         override = TRACK_OVERRIDES.get(track_id, {})
         workstream = override.get("workstream", "Conductor")
         gate_type = override.get("gate_type", "Repo-local")
-        active = track_id in {
-            "uogto_publishing_discoverability_20260622",
-            "uogto_nature_presubmission_evaluation_20260625",
-        }
+        track_path = archive_path if location == "archive" else active_path
+        active = is_active_track(track_id, registry, location, track_path)
         status = STATUS_IN_PROGRESS if active else STATUS_DONE
         issue_state = "open" if active else "closed"
         description = override.get("description") or descriptions.get(track_id) or f"Mirror local Conductor track `{track_id}`."

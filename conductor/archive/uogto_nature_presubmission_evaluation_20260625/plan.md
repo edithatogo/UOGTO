@@ -95,3 +95,9 @@ Run and record:
 - unfinished-marker sweep using the repo standard marker list
 
 The track is complete only when every planned artefact exists, every matrix has been populated, and every blocker is explicit.
+
+## 2026-07-06 Archive Closeout
+
+- [x] Confirmed reviewer findings, review matrix, image scores, arXiv toolchain matrix, acceptance checklist, recommendations, and decision memo are present.
+- [x] Confirmed later manuscript-submission revision work translated open presubmission findings into `docs/paper/submission-revision-decision-memo.md`, `docs/paper/submission-revision-backlog.csv`, and `docs/paper/arxiv-submission-state.md`.
+- [x] Archived this evaluation track as repo-complete; remaining arXiv identifier, rendered-PDF approval, journal article-type selection, and cover-package work remain external or submission-stage gates rather than unfinished evaluation-track setup.

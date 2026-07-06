@@ -383,3 +383,9 @@
 - Verified Ontobee issue `212` remains open with no maintainer comments.
 - Regenerated `dist/publication-status-live.json`; publication status remains `published` with no repo-side blockers.
 - Updated registry follow-up docs and the active publishing/discoverability plan to separate tracked OLS feedback from the remaining public-indexing external gate.
+
+## 2026-07-06 Nature Presubmission Evaluation Archive Closeout
+
+- Archived `uogto_nature_presubmission_evaluation_20260625` under `conductor/archive/uogto_nature_presubmission_evaluation_20260625/`.
+- Marked the evaluation track repo-complete because its reviewer findings, review matrix, image score matrix, arXiv toolchain matrix, acceptance checklist, recommendations, decision memo, and figure-caption freeze evidence are present.
+- Kept remaining arXiv identifier, rendered-PDF approval, journal article-type selection, and cover-package work in `docs/paper/submission-revision-backlog.csv` and `docs/paper/arxiv-submission-state.md` rather than leaving the presubmission evaluation track active.

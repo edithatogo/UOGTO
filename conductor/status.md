@@ -4,9 +4,9 @@ Updated: `2026-07-06`
 
 ## Active Work
 
-- `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. GitHub Project #8 is now issue-backed with 62 items: 32 Conductor track issues, 13 umbrella/workstream issues, and 17 merged pull requests. Stale draft placeholders were replaced, 21 Project #8 fields are available, and RI-HERO Project #9 mirrors the same 62 UOGTO items. Track issue state is 30 closed/completed and 2 open/in-progress (`uogto_publishing_discoverability_20260622`, `uogto_nature_presubmission_evaluation_20260625`).
+- `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. GitHub Project #8 is now issue-backed with 62 items: 32 Conductor track issues, 13 umbrella/workstream issues, and 17 merged pull requests. Stale draft placeholders were replaced, 21 Project #8 fields are available, and RI-HERO Project #9 mirrors the same 62 UOGTO items. After the 2026-07-06 presubmission archive closeout, the only open/in-progress track is `uogto_publishing_discoverability_20260622`.
 - `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Live follow-up on 2026-07-06 confirmed LOV issue `83` is still open with no maintainer comments, while OLS issue `1305` is accepted by a maintainer but not yet visible in the public OLS API/search index.
-- `uogto_nature_presubmission_evaluation_20260625`: Active. arXiv upload-ready hardening is implemented and verified with deterministic packaging, privacy-audit enforcement, checksums, `00README.json` preview, strict CI arXiv-engine gating, 90-day artifact retention, checksum-bound GitHub artifact attestation, and a clean tracked-tree upload manifest.
+- `uogto_nature_presubmission_evaluation_20260625`: Completed and archived. Reviewer findings, review/image matrices, arXiv toolchain review, recommendations, decision memo, and figure-caption freeze evidence are retained under `conductor/archive/uogto_nature_presubmission_evaluation_20260625/`; remaining submission-stage gates are tracked by the manuscript revision backlog and arXiv state record.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
 - `uogto_registry_publication_followthrough_20260705`: Completed. Live DOI, w3id, release-asset, prefix.cc, Wikidata, FAIRsharing, LOV, OLS, Ontobee, and Bioregistry follow-up was refreshed; durable triage is recorded in `docs/registry/publication-follow-up-triage.*`; Bioregistry response work is tracked separately in issue `#34`.
 - `uogto_interoperability_benchmarks_20260705`: Completed. Added an executable interoperability benchmark inventory, OpenSpiel and PettingZoo fixture examples, focused parse/query/runtime tests, and JSON-LD support in `RDFGameRunner` for fixture smoke coverage.
@@ -33,7 +33,7 @@ Updated: `2026-07-06`
 - Added reusable GitHub Project synchronization script at `scripts/maintenance/sync_github_projects.py`.
 - Created/reused 32 issue-backed Conductor track items with hidden `uogto-conductor-track-id` markers:
   - 30 completed/archived track issues are closed.
-  - 2 in-progress track issues remain open: `uogto_publishing_discoverability_20260622` and `uogto_nature_presubmission_evaluation_20260625`.
+  - 2 in-progress track issues remained open at that sync point: `uogto_publishing_discoverability_20260622` and `uogto_nature_presubmission_evaluation_20260625`. The presubmission evaluation track was archived on 2026-07-06 and should close as completed on the next GitHub Project sync.
 - Replaced 9 stale Project #8 draft placeholders with issue-backed items.
 - Populated GitHub Project #8 with 62 items: 45 issues and 17 merged pull requests.
 - Populated RI-HERO Project #9 with the same 62 UOGTO items.

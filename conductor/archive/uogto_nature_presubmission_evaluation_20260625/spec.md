@@ -47,3 +47,7 @@ This track does not directly rewrite ontology modules, regenerate analysis artef
 
 ## 2026-06-25T10:13:36+00:00 Current Implementation Boundary
 - This track now records completed supplement prose, privacy audit, deck creation, and manuscript/supplement figure loop. Remaining work is final freeze-and-verify plus PowerPoint readability polish, not initial asset creation.
+
+## 2026-07-06 Archive Boundary
+- The presubmission evaluation package is repo-complete and archived.
+- Remaining submission work is governed by `docs/paper/submission-revision-backlog.csv` and `docs/paper/arxiv-submission-state.md`, not by this evaluation setup track.
