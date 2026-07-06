@@ -140,8 +140,8 @@ Primary artefacts:
 - `docs/article-hardening/figures/`
 - `docs/ontology-comparison/figures/`
 - `docs/ontology-comparison/cosmograph/`
-- `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv`
-- `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.md`
+- `conductor/archive/uogto_nature_presubmission_evaluation_20260625/image_scores.csv`
+- `conductor/archive/uogto_nature_presubmission_evaluation_20260625/image_scores.md`
 
 Supplementary Table S9 records figure readiness and score history. Supplementary Figures S1 to S13 are the current candidate figure set for manuscript and supplement packaging.
 
@@ -162,8 +162,8 @@ Primary artefacts:
 - `.github/workflows/arxiv-preflight.yml`
 - `scripts/maintenance/clean_arxiv_source_package.py`
 - `scripts/maintenance/audit_arxiv_source_privacy.py`
-- `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md`
-- `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md`
+- `conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md`
+- `conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md`
 
 Supplementary Table S10 records manuscript and arXiv submission gates. The current SourceRight run reports 11 matched citations and 0 citation reconciliation issues. The remaining SourceRight warnings are missing-DOI warnings for references that are standards pages, APIs, or URL-based resources rather than DOI-bearing articles.
 
@@ -220,7 +220,7 @@ The pre-submission package now contains a polished manuscript draft, supplement 
 | Supplementary Table S6 | Missing game-theory element dispositions | `docs/article-hardening/article-facing-tables/missing-game-theory-element-dispositions.csv` |
 | Supplementary Table S7 | Case-study and use-case coverage | `docs/article-hardening/use-case-coverage-matrix.csv` |
 | Supplementary Table S8 | Reproducibility and packaging artefacts | `docs/article-hardening/ro-crate-metadata.json` |
-| Supplementary Table S9 | Figure readiness and score history | `conductor/tracks/uogto_nature_presubmission_evaluation_20260625/image_scores.csv` |
+| Supplementary Table S9 | Figure readiness and score history | `conductor/archive/uogto_nature_presubmission_evaluation_20260625/image_scores.csv` |
 | Supplementary Table S10 | Manuscript, SourceRight, and arXiv gates | `docs/paper/sourceright-report.md`; `docs/paper/arxiv-source-privacy-audit.md` |
 | Supplementary Table S11 | Governance, citation, reuse, and change control | `docs/how-to-cite-and-reuse-uogto.md`; `docs/article-hardening/term-changelog.md` |
 | Supplementary Table S12 | LaTeX visual presentation scorecard | `docs/paper/latex-visual-presentation-scorecard.md`; `.json` |

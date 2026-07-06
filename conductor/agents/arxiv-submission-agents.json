@@ -62,8 +62,8 @@
         "upload-ready artifact determinism"
       ],
       "required_inputs": [
-        "conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md",
-        "conductor/tracks/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md",
+        "conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_acceptance_checklist.md",
+        "conductor/archive/uogto_nature_presubmission_evaluation_20260625/arxiv_toolchain_matrix.md",
         "docs/paper/arxiv-source-privacy-audit.json"
       ],
       "required_output": "docs/paper/arxiv-submission-contract.md#review-contract"

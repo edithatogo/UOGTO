@@ -59,3 +59,46 @@ def test_ensure_project_item_dry_run_does_not_add(monkeypatch: Any) -> None:
     monkeypatch.setattr(module, "gh_json", fail_gh_json)
 
     assert module.ensure_project_item(8, "https://github.com/edithatogo/UOGTO/pull/67", False, {}) is None
+
+
+def test_discover_tracks_derives_active_state_from_tracks_registry(tmp_path: Path) -> None:
+    module = load_sync_module()
+    conductor = tmp_path / "conductor"
+    tracks = conductor / "tracks"
+    archive = conductor / "archive"
+    for track_id, parent in {
+        "active_track_20260706": tracks,
+        "completed_but_unarchived_track_20260706": tracks,
+        "archived_track_20260706": archive,
+    }.items():
+        (parent / track_id).mkdir(parents=True)
+    (conductor / "tracks.md").write_text(
+        "\n".join(
+            [
+                "# Project Tracks",
+                "",
+                "## [~] Track: active_track_20260706",
+                "- **Description**: Active test track.",
+                "- **Status**: In Progress",
+                "",
+                "## [x] Track: completed_but_unarchived_track_20260706",
+                "- **Description**: Completed test track still retained in tracks.",
+                "- **Status**: Completed",
+                "",
+                "## [x] Archived Track: archived_track_20260706",
+                "- **Description**: Archived test track.",
+                "- **Status**: Completed and archived.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    discovered = {track.track_id: track for track in module.discover_tracks(tmp_path)}
+
+    assert discovered["active_track_20260706"].status == module.STATUS_IN_PROGRESS
+    assert discovered["active_track_20260706"].issue_state == "open"
+    assert discovered["completed_but_unarchived_track_20260706"].status == module.STATUS_DONE
+    assert discovered["completed_but_unarchived_track_20260706"].issue_state == "closed"
+    assert discovered["archived_track_20260706"].status == module.STATUS_DONE
+    assert discovered["archived_track_20260706"].issue_state == "closed"
