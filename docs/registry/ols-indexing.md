@@ -1,7 +1,7 @@
 # Ontology Lookup Service Indexing
 
 ## Status
-Submitted on 2026-06-22 through the active OLS GitHub issue route after v1.0 release assets, WIDOCO documentation, and Zenodo DOI metadata were public. Live follow-up on 2026-07-05 confirmed OLS maintainer feedback that the ontology will be added, with issue `1305` still open pending indexing closeout.
+Submitted on 2026-06-22 through the active OLS GitHub issue route after v1.0 release assets, WIDOCO documentation, and Zenodo DOI metadata were public. Live follow-up on 2026-07-06 confirmed OLS maintainer feedback that the ontology will be added, with issue `1305` still open pending indexing closeout. Public OLS API/search checks on 2026-07-06 did not yet expose a `uogto` ontology entry.
 
 Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4` at <https://github.com/EBISPOT/ols4>, with homepage <https://www.ebi.ac.uk/ols4/>. The repository exposes a dedicated issue template for adding a new ontology: <https://github.com/EBISPOT/ols4/blob/dev/.github/ISSUE_TEMPLATE/add-a-new-ontology-to-the-ebi-ols-instance-.md>.
 
@@ -39,12 +39,13 @@ Submission route checked 2026-06-22: the current OLS repository is `EBISPOT/ols4
 - [x] Submit inclusion request.
 - [x] Record request date.
 - [x] Record request URL.
-- [ ] Track reviewer feedback.
-- [ ] Convert requested changes into Conductor follow-up tasks.
+- [x] Track reviewer feedback.
+- [x] Convert requested changes into Conductor follow-up tasks.
+  - No metadata changes were requested; OLS maintainer response says the ontology will be added.
 
 ## Request Record
 - Request date: `2026-06-22`
 - Request URL: <https://github.com/EBISPOT/ols4/issues/1305>
 - Review status: `Accepted by OLS maintainer; awaiting indexing closeout`
-- Indexing status: `Accepted pending public OLS index URL`
+- Indexing status: `Accepted pending public OLS index URL`; OLS API/search did not expose `uogto` as of 2026-07-06.
 - Maintainer acceptance evidence: <https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4833153237>
