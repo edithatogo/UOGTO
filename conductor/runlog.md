@@ -362,3 +362,15 @@
 - GitHub PR #21 checks passed on commit `4e7bb47`: `Required Gate`, `Validate UOGTO`, `Build Manuscript PDF`, and `arXiv Preflight`.
 - Updated `main` branch protection to require both `Validate UOGTO` and `Required Gate`, preserving strict status checks, one required approving review, code-owner review, conversation resolution, linear history, no force-pushes, and no branch deletion.
 - Cleaned generated local build/cache outputs from the main workspace while preserving `.pixi/`, `.codex/`, and the active clean PR worktree.
+
+## 2026-07-06 GitHub Project Status Refresh
+
+- Verified local `main` is clean and synced with `origin/main`.
+- Verified no open pull requests remain in `edithatogo/UOGTO`.
+- Verified the only open UOGTO issues are active Conductor tracks:
+  - `#62` `track: UOGTO Nature Presubmission Evaluation`.
+  - `#65` `track: UOGTO Publishing Discoverability`.
+- Verified GitHub Project #8 `UOGTO Conductor Roadmap` has 64 items: 45 issues, 19 merged pull requests, 0 draft items, 62 `Done`, and 2 `In Progress`.
+- Verified GitHub Project #9 `RI-HERO Meta-Program` mirrors 64 UOGTO items: 45 issues, 19 merged pull requests, 62 `Done`, and 2 `In Progress`.
+- Fixed the project sync missing-item add path and added regression coverage in `tests/test_sync_github_projects.py`.
+- Updated local Conductor status files to match the post-PR #67/#68 project ledger state.
