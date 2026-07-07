@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## 2026-07-07 - GitHub Project Ledger Refresh
+
+- Rechecked the local Conductor ledger, GitHub issues, native subissues, and Project v2 boards after PR `#72` merged.
+- Confirmed all 32 local Conductor track IDs have matching GitHub issues with hidden `uogto-conductor-track-id` markers; there are no missing or extra track issue markers.
+- Confirmed the only active local track is `uogto_publishing_discoverability_20260622`, mirrored by open issue `#65`; all other track issues are closed.
+- Added merged PR `#72` to Project #8 `UOGTO Conductor Roadmap` and Project #9 `RI-HERO Meta-Program`, then populated its project fields as `Done`, `Publishing`, `External`, and pull-request/deliverable layer.
+- Live Project #8 state after the refresh: 68 UOGTO items, 45 issues, 23 merged pull requests, 0 draft items, 67 `Done`, and 1 `In Progress`.
+- Live Project #9 state after the refresh: 225 total items, including the same 68 UOGTO items mirrored from Project #8, with the UOGTO subset at 67 `Done` and 1 `In Progress`.
+- Confirmed native subissue hierarchy is complete: umbrella issue `#4` links to UOGTO workstreams, and workstream subissues contain all 32 Conductor track issues.
+
 ## 2026-07-07 - Cross-Registry Metadata Supplement
 
 - Applied lessons from OLS and Bioregistry maintainer feedback across the registry follow-up surface.

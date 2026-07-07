@@ -6,6 +6,8 @@ Snapshot of the RI-HERO meta-program as tracked in GitHub Projects and the repo 
 - GitHub Project: [RI-HERO Meta-Program](https://github.com/users/edithatogo/projects/9)
 - Repo linkage: `edithatogo/UOGTO`
 - Purpose: health economics research on outcomes framing for UOGTO and related workstreams
+- Current UOGTO mirror: 68 UOGTO items in the board, including 45 issues and 23 merged pull requests; 67 are `Done` and 1 is `In Progress`.
+- Conductor coverage: all 32 local UOGTO Conductor tracks have matching GitHub issues and workstream subissue links.
 - Discussions:
   - [Welcome to UOGTO Discussions](https://github.com/edithatogo/UOGTO/discussions/17)
   - [RI-HERO Meta-Program](https://github.com/edithatogo/UOGTO/discussions/18)

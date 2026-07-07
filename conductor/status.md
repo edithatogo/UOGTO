@@ -4,7 +4,7 @@ Updated: `2026-07-07`
 
 ## Active Work
 
-- `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. GitHub Project #8 is now issue-backed with 62 items: 32 Conductor track issues, 13 umbrella/workstream issues, and 17 merged pull requests. Stale draft placeholders were replaced, 21 Project #8 fields are available, and RI-HERO Project #9 mirrors the same 62 UOGTO items. After the 2026-07-06 presubmission archive closeout, the only open/in-progress track is `uogto_publishing_discoverability_20260622`.
+- `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. Live verification on 2026-07-07 confirms GitHub Project #8 is issue-backed with 68 UOGTO items: 32 Conductor track issues, 13 umbrella/workstream issues, and 23 merged pull requests. Stale draft placeholders remain removed, 21 Project #8 fields are available, PR `#72` is included as a completed publishing deliverable, and RI-HERO Project #9 mirrors the same 68 UOGTO items inside its larger 225-item program board. The only open/in-progress track is `uogto_publishing_discoverability_20260622`.
 - `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Cross-registry lessons from OLS and Bioregistry feedback were applied on 2026-07-07: LOV, OLS, and Ontobee now have supplemental comments with the core/extension namespace policy, approved sole-author/contact ORCID, and health-relevance explanation where relevant. External review/indexing remains open for LOV issue `83`, OLS public API/search visibility for issue `1305`, Ontobee issue `212`, Bioregistry issue `1999`, and any FAIRsharing curator follow-up.
 - `uogto_nature_presubmission_evaluation_20260625`: Completed and archived. Reviewer findings, review/image matrices, arXiv toolchain review, recommendations, decision memo, and figure-caption freeze evidence are retained under `conductor/archive/uogto_nature_presubmission_evaluation_20260625/`; remaining submission-stage gates are tracked by the manuscript revision backlog and arXiv state record.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
@@ -32,13 +32,13 @@ Updated: `2026-07-07`
 - Updated `conductor/tracks.md` and `conductor/archive/index.md` so recent archived tracks are visible in the local registry and archive ledger.
 - Added reusable GitHub Project synchronization script at `scripts/maintenance/sync_github_projects.py`.
 - Created/reused 32 issue-backed Conductor track items with hidden `uogto-conductor-track-id` markers:
-  - 30 completed/archived track issues are closed.
-  - 2 in-progress track issues remained open at that sync point: `uogto_publishing_discoverability_20260622` and `uogto_nature_presubmission_evaluation_20260625`. The presubmission evaluation track was archived on 2026-07-06 and should close as completed on the next GitHub Project sync.
+  - 31 completed/archived track issues are closed.
+  - 1 in-progress track issue remains open: `uogto_publishing_discoverability_20260622`.
 - Replaced 9 stale Project #8 draft placeholders with issue-backed items.
-- Populated GitHub Project #8 with 62 items: 45 issues and 17 merged pull requests.
-- Populated RI-HERO Project #9 with the same 62 UOGTO items.
+- Populated GitHub Project #8 with 68 UOGTO items after the 2026-07-07 refresh: 45 issues and 23 merged pull requests.
+- Populated RI-HERO Project #9 with the same 68 UOGTO items inside its 225-item program board.
 - Added Project #8 fields for Workstream, Exposure, Layer, Gate Type, Issue Role, Track ID, Track Location, and Synced date.
-- Verified Project #8 has 60 `Done` items, 2 `In Progress` items, and 0 draft items.
+- Verified Project #8 has 67 `Done` items, 1 `In Progress` item, and 0 draft items.
 
 ## Interoperability Benchmarks - 2026-07-05
 
