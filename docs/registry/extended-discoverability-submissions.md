@@ -1,7 +1,7 @@
 # Extended Discoverability Submissions
 
 ## Status
-Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable; the Bioregistry namespace response and approved ORCID follow-up are posted and awaiting maintainer review.
+Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable; the Bioregistry namespace response and approved ORCID follow-up are posted and awaiting maintainer review. On 2026-07-07, cross-registry metadata supplements were posted to LOV, OLS, and Ontobee so those requests also carry the namespace policy, ORCID, release evidence, and biomedical/health relevance note learned from OLS and Bioregistry feedback.
 
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
@@ -18,6 +18,16 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Canonical RDF release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto.ttl>
 - SHACL shapes release asset: <https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uogto-shapes.ttl>
 - Maintainer route: GitHub issues on `edithatogo/UOGTO`
+- Author/contact ORCID: <https://orcid.org/0000-0002-9775-0603>
+
+## Cross-Registry Metadata Supplement
+
+- Namespace policy: `uogto` is the primary stable core prefix for `https://w3id.org/uogto/core#`; `uogtox` remains the intentionally separate extension prefix for `https://w3id.org/uogto/extensions#`.
+- Biomedical/health relevance: UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, health economics, behavioural/public-health interaction models, mechanism design, and health-simulation settings.
+- LOV supplement: <https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021>
+- OLS supplement: <https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274>
+- Ontobee supplement: <https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502>
+- Accepted/live records without an issue-comment route, including prefix.cc and Wikidata, require no retroactive edit unless their native schema has a defensible field for the new metadata.
 
 ## Existing First-Wave Registry State
 - LOV submission: <https://github.com/pyvandenbussche/lov/issues/83>
@@ -38,6 +48,7 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - Account evidence: draft record created and updated through an authenticated FAIRsharing session on 2026-06-24.
 - Populated metadata: title, abbreviation, homepage, year of creation `2026`, country `Australia`, status `Ready`, registry type `Standard / Terminology Artefact`, contact point `Dylan Mordaunt`, taxonomic range `Not Applicable`, subject `Knowledge And Information Systems`, domain `Knowledge Representation`, object type `Dataset`, user tags `Semantic Web` and `Ontology`, CC-BY-4.0 licence, GitHub repository support link, documentation support link, and Zenodo DOI support link.
 - Curation evidence: required `data processes and conditions` metadata persisted on 2026-06-24 with `read` / `User interface` access for the public documentation and canonical RDF artifact; the public page now reports `This record is awaiting review by FAIRsharing curators`.
+- Cross-registry update policy: add ORCID, namespace-policy, and health-relevance metadata to FAIRsharing only if curator guidance or the editable record schema provides an appropriate field; do not invent weak record associations.
 - Recommended remaining fields: organisation links, publications, citations, and record associations. These are nonblocking and require curation guidance or defensible FAIRsharing record associations before adding.
 - Next action: monitor FAIRsharing curator review and record the FAIRsharing DOI/status when issued.
 
@@ -47,6 +58,7 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 - `uogto`: submitted and live at <http://prefix.cc/uogto.file.txt>, mapping to `https://w3id.org/uogto/core#`.
 - `uogtox`: submitted and live at <http://prefix.cc/uogtox.file.txt>, mapping to `https://w3id.org/uogto/extensions#`.
 - Evidence: prefix.cc accepted the `uogto` POST and the later `uogtox` retry; both TXT endpoints return the expected mappings.
+- Cross-registry update status: no change needed; the live mappings already encode the core and extension namespace split clarified in Bioregistry feedback.
 - Next action: monitor for any future mapping correction requests; no repo-side blocker remains.
 
 ### Wikidata
@@ -65,19 +77,21 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
   - source code repository URL: `https://github.com/edithatogo/UOGTO`
   - copyright license: Creative Commons Attribution 4.0 International (`Q20007257`)
 - Live verification: Wikidata item, documentation site, GitHub repository, and Zenodo record loaded successfully in Chrome; DOI resolved to `https://zenodo.org/records/20796937`.
+- Cross-registry update policy: do not add author, ORCID, or health-relevance statements unless a stable citation or Wikidata property mapping makes the statement defensible.
 
 ### Ontobee
 - Status: `submitted`
 - Route: <https://ontobee.org/>
 - Issue: <https://github.com/OntoZoo/ontobee/issues/212>
 - Evidence: w3id PR `6238` is merged and live redirects resolve before submission.
+- Metadata supplement: <https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502>
 - Next action: track Ontobee issue review feedback and record the index URL if accepted.
 
 ### BioPortal
 - Status: `not_submitted_conditional`
 - Route: <https://bioportal.bioontology.org/>
-- Rationale: BioPortal is primarily a biomedical ontology portal. UOGTO should only be submitted there if the project adopts a defensible biomedical, clinical, public-health, behavioural-science, or health-simulation positioning note.
-- Next action: do not submit unless that domain-positioning note is approved.
+- Rationale: BioPortal is primarily a biomedical ontology portal. OLS feedback produced a defensible biomedical/health relevance note, but BioPortal submission still needs an approved BioPortal-specific positioning decision and metadata package.
+- Next action: do not submit unless that BioPortal-specific domain-positioning note is approved.
 
 ### Bioregistry
 - Status: `orcid_added_awaiting_maintainer_review`
@@ -104,8 +118,8 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 
 ## Follow-Up Queue
 - See `docs/registry/publication-follow-up-triage.md` and `.json` for owner, target artifact, acceptance criterion, and evidence URL per item.
-- Monitor LOV issue `83` for maintainer feedback.
+- Monitor LOV issue `83` after the 2026-07-07 metadata supplement.
 - Monitor OLS issue `1305` until public indexing is complete; maintainer has stated they will add the ontology.
 - Monitor FAIRsharing record `8382` curator review and DOI/status outcome.
-- Track Ontobee issue review feedback and index outcome.
+- Track Ontobee issue review feedback and index outcome after the 2026-07-07 metadata supplement.
 - Monitor Bioregistry issue `1999` after the namespace/ORCID response; convert any squashed-namespace requirement into a separate ontology-compatibility track.

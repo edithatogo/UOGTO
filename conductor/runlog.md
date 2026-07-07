@@ -1,5 +1,14 @@
 # Conductor Run Log
 
+## 2026-07-07 - Cross-Registry Metadata Supplement
+
+- Applied lessons from OLS and Bioregistry maintainer feedback across the registry follow-up surface.
+- Posted a LOV supplement with the published namespace policy, sole-author/contact ORCID, and cross-registry context: https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021.
+- Posted an OLS supplement with the same namespace and ORCID metadata plus the biomedical/health relevance explanation requested during OLS review: https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274.
+- Posted an Ontobee supplement with namespace policy, ORCID, health relevance, and canonical publication links: https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502.
+- Updated registry documentation, triage state, generated extended-registry handoff metadata, and regression tests so open registries carry the learned metadata bundle while accepted/live records such as prefix.cc and Wikidata are left unchanged unless their schemas or curators ask for those statements.
+- Remaining work is external: LOV maintainer review, OLS public indexing/search visibility, Ontobee maintainer review, Bioregistry maintainer disposition, and any FAIRsharing curator updates.
+
 ## 2026-07-05 - GitHub Project and Conductor Ledger Reconciliation
 
 - Reconciled the local Conductor entrypoint by adding `conductor/index.md` and `conductor/code_styleguides/markdown.md`.

@@ -21,6 +21,11 @@ def test_publication_follow_up_triage_has_required_fields() -> None:
     assert triage["verification_summary"]["publication_status_live"] == "published"
     assert triage["verification_summary"]["w3id_redirects_live"] is True
     assert triage["verification_summary"]["prefix_cc_mappings_live"] is True
+    assert (
+        triage["verification_summary"]["cross_registry_supplements"]["lov"]
+        == "https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021"
+    )
+    assert "health economics" in triage["learned_metadata_bundle"]["health_relevance"]
 
     required = {
         "id",
@@ -47,10 +52,13 @@ def test_publication_follow_up_triage_records_current_external_feedback() -> Non
     items = {item["id"]: item for item in load_triage()["items"]}
     assert items["ols-indexing-1305"]["status"] == "accepted_pending_indexing"
     assert "will add the ontology" in items["ols-indexing-1305"]["latest_observation"]
+    assert items["ols-indexing-1305"]["supplement_comment_url"].endswith("4902620274")
+    assert items["lov-review-83"]["supplement_comment_url"].endswith("4902620021")
     assert (
         items["ontobee-indexing-212"]["target_artifact"]
         == "docs/registry/extended-discoverability-submissions.md"
     )
+    assert items["ontobee-indexing-212"]["supplement_comment_url"].endswith("4902620502")
     assert items["bioregistry-prefix-1999"]["status"] == "orcid_added_awaiting_maintainer_review"
     assert (
         items["bioregistry-prefix-1999"]["target_artifact"]

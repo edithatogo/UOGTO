@@ -17,6 +17,27 @@ RDF_ASSET_URL = "https://github.com/edithatogo/UOGTO/releases/download/v1.0.0/uo
 BIOREGISTRY_RESPONSE_COMMENT = "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451"
 AUTHOR_ORCID_URL = "https://orcid.org/0000-0002-9775-0603"
 BIOREGISTRY_ORCID_COMMENT = "https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980"
+LOV_SUPPLEMENT_COMMENT = "https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021"
+OLS_SUPPLEMENT_COMMENT = "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274"
+ONTOBEE_SUPPLEMENT_COMMENT = "https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502"
+
+REGISTRY_METADATA_SUPPLEMENT = {
+    "namespace_policy": (
+        "Register uogto as the primary core prefix for https://w3id.org/uogto/core#; "
+        "retain uogtox as the separate extension prefix for https://w3id.org/uogto/extensions#."
+    ),
+    "author_orcid": AUTHOR_ORCID_URL,
+    "health_relevance": (
+        "UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, "
+        "health economics, behavioural/public-health interaction models, mechanism design, "
+        "and health-simulation settings."
+    ),
+    "supplement_comments": {
+        "lov": LOV_SUPPLEMENT_COMMENT,
+        "ols": OLS_SUPPLEMENT_COMMENT,
+        "ontobee": ONTOBEE_SUPPLEMENT_COMMENT,
+    },
+}
 
 REQUIRED_DOCUMENT_FRAGMENTS = [
     "Universal Open Game Theory Ontology (UOGTO)",
@@ -32,6 +53,9 @@ REQUIRED_DOCUMENT_FRAGMENTS = [
     "LOV submission: <https://github.com/pyvandenbussche/lov/issues/83>",
     "OLS request: <https://github.com/EBISPOT/ols4/issues/1305>",
     "w3id redirect PR: <https://github.com/perma-id/w3id.org/pull/6238>",
+    LOV_SUPPLEMENT_COMMENT,
+    OLS_SUPPLEMENT_COMMENT,
+    ONTOBEE_SUPPLEMENT_COMMENT,
 ]
 
 
@@ -48,6 +72,7 @@ TARGETS = {
             "record associations",
         ],
         "evidence": "Required data processes and conditions metadata persisted on 2026-06-24; public record reports awaiting FAIRsharing curator review.",
+        "cross_registry_update_policy": "Add ORCID, namespace-policy, and health-relevance metadata only if curator guidance or the editable record schema provides appropriate fields.",
     },
     "prefix_cc": {
         "status": "submitted",
@@ -62,23 +87,26 @@ TARGETS = {
                 "evidence": "http://prefix.cc/uogtox.file.txt",
             }
         },
+        "cross_registry_update_status": "No change required; live prefix mappings already encode the core and extension namespace split.",
     },
     "wikidata": {
         "status": "created_verified",
         "route": "https://www.wikidata.org/wiki/Q140323510",
         "item": "https://www.wikidata.org/wiki/Q140323510",
         "evidence": "Item Q140323510 was created through the authenticated Wikidata session and verified with DOI, documentation, repository, ontology classification, and CC-BY-4.0 license statements.",
+        "cross_registry_update_policy": "Do not add author, ORCID, or health-relevance statements unless a stable citation or Wikidata property mapping makes the statement defensible.",
     },
     "ontobee": {
         "status": "submitted",
         "route": "https://ontobee.org/",
         "issue": "https://github.com/OntoZoo/ontobee/issues/212",
         "evidence": "w3id PR 6238 is merged and /uogto/core plus /uogto/extensions return 303 redirects to the UOGTO documentation.",
+        "supplement_comment": ONTOBEE_SUPPLEMENT_COMMENT,
     },
     "bioportal": {
         "status": "not_submitted_conditional",
         "route": "https://bioportal.bioontology.org/",
-        "decision": "Do not submit without a defensible biomedical, clinical, public-health, behavioural-science, or health-simulation positioning note.",
+        "decision": "Do not submit without an approved BioPortal-specific positioning note, even though the OLS request now records a defensible biomedical and health relevance summary.",
     },
     "bioregistry": {
         "status": "orcid_added_awaiting_maintainer_review",
@@ -90,6 +118,7 @@ TARGETS = {
         "response_comment": BIOREGISTRY_RESPONSE_COMMENT,
         "orcid_comment": BIOREGISTRY_ORCID_COMMENT,
         "author_orcid": AUTHOR_ORCID_URL,
+        "cross_registry_metadata_supplement": REGISTRY_METADATA_SUPPLEMENT,
         "review_status": "awaiting_bioregistry_maintainer_review_after_response",
         "namespace_decision": "Register uogto as the primary core prefix; retain uogtox as a separately documented extension prefix unless Bioregistry requires a separate compatibility decision.",
         "orcid_handling": "ORCID is approved public project metadata and is mirrored in CITATION.cff, .zenodo.json, and the Bioregistry issue body.",
@@ -148,7 +177,9 @@ def build_extended_registry_handoff() -> dict:
             "documentation": DOCUMENTATION_URL,
             "release": RELEASE_URL,
             "canonical_rdf": RDF_ASSET_URL,
+            "author_orcid": AUTHOR_ORCID_URL,
         },
+        "cross_registry_metadata_supplement": REGISTRY_METADATA_SUPPLEMENT,
         "targets": TARGETS,
         "source_document": "docs/registry/extended-discoverability-submissions.md",
     }
