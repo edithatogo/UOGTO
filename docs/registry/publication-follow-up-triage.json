@@ -1,6 +1,6 @@
 {
   "schema": "uogto.publication-follow-up-triage.v1",
-  "last_verified": "2026-07-06",
+  "last_verified": "2026-07-07",
   "verification_summary": {
     "publication_status_live": "published",
     "documentation_live": true,
@@ -9,7 +9,17 @@
     "w3id_redirects_live": true,
     "prefix_cc_mappings_live": true,
     "wikidata_item_verified": "Q140323510",
-    "fairsharing_record_live": "https://fairsharing.org/8382"
+    "fairsharing_record_live": "https://fairsharing.org/8382",
+    "cross_registry_supplements": {
+      "lov": "https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021",
+      "ols": "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274",
+      "ontobee": "https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502"
+    }
+  },
+  "learned_metadata_bundle": {
+    "namespace_policy": "Treat `uogto` / `https://w3id.org/uogto/core#` as the primary core prefix and keep `uogtox` / `https://w3id.org/uogto/extensions#` as the separate extension namespace unless a compatibility track changes published IRIs.",
+    "orcid": "https://orcid.org/0000-0002-9775-0603",
+    "health_relevance": "UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, health economics, behavioural/public-health interaction models, mechanism design, and health-simulation settings."
   },
   "items": [
     {
@@ -21,9 +31,10 @@
       "external_owner": "LOV maintainers",
       "target_artifact": "docs/registry/lov-submission.md",
       "evidence_url": "https://github.com/pyvandenbussche/lov/issues/83",
-      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-06; public LOV `uogto` vocabulary API/page routes still return 404.",
+      "supplement_comment_url": "https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021",
+      "latest_observation": "Issue is open with no maintainer comments; cross-registry metadata supplement posted on 2026-07-07; public LOV `uogto` vocabulary API/page routes still returned 404 in the latest live check.",
       "acceptance_criterion": "LOV issue is accepted, rejected, or receives actionable maintainer feedback that is converted into a scoped Conductor task.",
-      "next_action": "Monitor issue 83; no repo patch is required until maintainer feedback arrives."
+      "next_action": "Monitor issue 83 after the metadata supplement; no further repo patch is required until maintainer feedback arrives."
     },
     {
       "id": "ols-indexing-1305",
@@ -34,9 +45,10 @@
       "external_owner": "OLS maintainers",
       "target_artifact": "docs/registry/ols-indexing.md",
       "evidence_url": "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4833153237",
-      "latest_observation": "OLS maintainer replied that they will add the ontology; issue remains open and public OLS API/search checks did not yet expose `uogto` as of 2026-07-06.",
+      "supplement_comment_url": "https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274",
+      "latest_observation": "OLS maintainer replied that they will add the ontology; cross-registry metadata supplement posted on 2026-07-07; issue remains open and public OLS API/search checks did not yet expose `uogto` as of 2026-07-06.",
       "acceptance_criterion": "OLS exposes UOGTO in the public index or closes the issue with a clear disposition.",
-      "next_action": "Monitor OLS indexing; record public OLS URL once available."
+      "next_action": "Monitor OLS indexing after the metadata supplement; record public OLS URL once available."
     },
     {
       "id": "fairsharing-curation-8382",
@@ -47,7 +59,7 @@
       "external_owner": "FAIRsharing curators",
       "target_artifact": "docs/registry/extended-discoverability-submissions.md",
       "evidence_url": "https://fairsharing.org/8382",
-      "latest_observation": "Record page is live; prior public state recorded that it is awaiting FAIRsharing curator review.",
+      "latest_observation": "Record page is live; prior public state recorded that it is awaiting FAIRsharing curator review; cross-registry metadata should be added only if curator guidance or editable schema fields support it.",
       "acceptance_criterion": "FAIRsharing record receives curator decision, stable public status, and any issued identifier or recommended metadata patch is recorded.",
       "next_action": "Monitor curator review; add organisation/publication/citation associations only when defensible."
     },
@@ -60,9 +72,10 @@
       "external_owner": "Ontobee maintainers",
       "target_artifact": "docs/registry/extended-discoverability-submissions.md",
       "evidence_url": "https://github.com/OntoZoo/ontobee/issues/212",
-      "latest_observation": "Issue is open with no maintainer comments as of 2026-07-06.",
+      "supplement_comment_url": "https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502",
+      "latest_observation": "Issue is open with no maintainer comments; cross-registry metadata supplement posted on 2026-07-07.",
       "acceptance_criterion": "Ontobee indexes UOGTO, rejects the request, or asks for a scoped metadata/ontology change.",
-      "next_action": "Monitor issue 212; record index URL if accepted."
+      "next_action": "Monitor issue 212 after the metadata supplement; record index URL if accepted."
     },
     {
       "id": "bioregistry-prefix-1999",

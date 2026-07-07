@@ -1,11 +1,11 @@
 # Conductor Status
 
-Updated: `2026-07-06`
+Updated: `2026-07-07`
 
 ## Active Work
 
 - `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. GitHub Project #8 is now issue-backed with 62 items: 32 Conductor track issues, 13 umbrella/workstream issues, and 17 merged pull requests. Stale draft placeholders were replaced, 21 Project #8 fields are available, and RI-HERO Project #9 mirrors the same 62 UOGTO items. After the 2026-07-06 presubmission archive closeout, the only open/in-progress track is `uogto_publishing_discoverability_20260622`.
-- `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Live follow-up on 2026-07-06 confirmed LOV issue `83` is still open with no maintainer comments, while OLS issue `1305` is accepted by a maintainer but not yet visible in the public OLS API/search index.
+- `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Cross-registry lessons from OLS and Bioregistry feedback were applied on 2026-07-07: LOV, OLS, and Ontobee now have supplemental comments with the core/extension namespace policy, approved sole-author/contact ORCID, and health-relevance explanation where relevant. External review/indexing remains open for LOV issue `83`, OLS public API/search visibility for issue `1305`, Ontobee issue `212`, Bioregistry issue `1999`, and any FAIRsharing curator follow-up.
 - `uogto_nature_presubmission_evaluation_20260625`: Completed and archived. Reviewer findings, review/image matrices, arXiv toolchain review, recommendations, decision memo, and figure-caption freeze evidence are retained under `conductor/archive/uogto_nature_presubmission_evaluation_20260625/`; remaining submission-stage gates are tracked by the manuscript revision backlog and arXiv state record.
 - `uogto_validation_contract_coherence_20260705`: Completed. Competency-query expected-result completeness, release metadata coherence, and generated text normalization are implemented and locally verified.
 - `uogto_registry_publication_followthrough_20260705`: Completed. Live DOI, w3id, release-asset, prefix.cc, Wikidata, FAIRsharing, LOV, OLS, Ontobee, and Bioregistry follow-up was refreshed; durable triage is recorded in `docs/registry/publication-follow-up-triage.*`; Bioregistry response work is tracked separately in issue `#34`.

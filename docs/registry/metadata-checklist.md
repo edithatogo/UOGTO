@@ -18,6 +18,14 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] WIDOCO documentation target: <https://edithatogo.github.io/UOGTO/>
 - [x] Zenodo DOI: <https://doi.org/10.5281/zenodo.20796937>
 
+## Cross-Registry Lessons From Maintainer Feedback
+
+- [x] Namespace policy: treat `uogto` / `https://w3id.org/uogto/core#` as the primary stable core prefix, while keeping `uogtox` / `https://w3id.org/uogto/extensions#` as the intentionally separate extension namespace unless a future compatibility track changes published IRIs.
+- [x] ORCID policy: the approved sole-author/contact ORCID is public project metadata and should be included where registry schemas support contributor or contact ORCID fields.
+- [x] Biomedical and health relevance note: UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, health economics, behavioural/public-health interaction models, mechanism design, and health-simulation settings.
+- [x] Cross-registry supplements posted for LOV, OLS, and Ontobee after OLS and Bioregistry feedback.
+- [x] Accepted or live records without comment threads, including prefix.cc and Wikidata, require no retroactive edit unless their registry schema has a defensible field for the new metadata.
+
 ## Ontology Annotation Requirements
 - [x] Every class and property is covered by the semantic audit for `rdfs:label` and `skos:definition`.
 - [x] Release ontology header exposes `dcterms:title`.
@@ -46,3 +54,6 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] LOV submission issue is open: <https://github.com/pyvandenbussche/lov/issues/83>.
 - [x] OLS indexing document is complete.
 - [x] OLS indexing issue is open: <https://github.com/EBISPOT/ols4/issues/1305>.
+- [x] LOV metadata supplement: <https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021>.
+- [x] OLS metadata supplement: <https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274>.
+- [x] Ontobee metadata supplement: <https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502>.

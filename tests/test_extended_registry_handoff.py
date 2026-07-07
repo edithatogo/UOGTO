@@ -24,9 +24,15 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         self.assertEqual(packet["targets"]["prefix_cc"]["submitted"]["uogtox"]["uri"], "https://w3id.org/uogto/extensions#")
         self.assertEqual(packet["targets"]["fairsharing"]["record"], "https://fairsharing.org/8382")
         self.assertEqual(packet["targets"]["fairsharing"]["review_status"], "awaiting_fairsharing_curator_review")
+        self.assertIn("editable record schema", packet["targets"]["fairsharing"]["cross_registry_update_policy"])
         self.assertEqual(packet["targets"]["wikidata"]["status"], "created_verified")
         self.assertEqual(packet["targets"]["wikidata"]["item"], "https://www.wikidata.org/wiki/Q140323510")
+        self.assertIn("Wikidata property", packet["targets"]["wikidata"]["cross_registry_update_policy"])
         self.assertEqual(packet["targets"]["ontobee"]["issue"], "https://github.com/OntoZoo/ontobee/issues/212")
+        self.assertEqual(
+            packet["targets"]["ontobee"]["supplement_comment"],
+            build_extended_registry_handoff.ONTOBEE_SUPPLEMENT_COMMENT,
+        )
         self.assertEqual(packet["targets"]["bioregistry"]["issue"], "https://github.com/biopragmatics/bioregistry/issues/1999")
         self.assertEqual(
             packet["targets"]["bioregistry"]["template_update_comment"],
@@ -52,6 +58,20 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
             packet["targets"]["bioregistry"]["author_orcid"],
             build_extended_registry_handoff.AUTHOR_ORCID_URL,
         )
+        self.assertEqual(
+            packet["cross_registry_metadata_supplement"]["supplement_comments"]["lov"],
+            build_extended_registry_handoff.LOV_SUPPLEMENT_COMMENT,
+        )
+        self.assertEqual(
+            packet["cross_registry_metadata_supplement"]["supplement_comments"]["ols"],
+            build_extended_registry_handoff.OLS_SUPPLEMENT_COMMENT,
+        )
+        self.assertEqual(
+            packet["cross_registry_metadata_supplement"]["supplement_comments"]["ontobee"],
+            build_extended_registry_handoff.ONTOBEE_SUPPLEMENT_COMMENT,
+        )
+        self.assertIn("health economics", packet["cross_registry_metadata_supplement"]["health_relevance"])
+        self.assertEqual(packet["ontology"]["author_orcid"], build_extended_registry_handoff.AUTHOR_ORCID_URL)
         self.assertIn("primary core prefix", packet["targets"]["bioregistry"]["namespace_decision"])
         self.assertIn("approved public project metadata", packet["targets"]["bioregistry"]["orcid_handling"])
         self.assertIn("bioregistry", packet["review_pending"])

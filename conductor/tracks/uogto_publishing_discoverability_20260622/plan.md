@@ -84,6 +84,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [~] Task: Submit to LOV
     - [x] Complete the formal LOV submission after v1.0 DOI is live.
     - [x] Track submission URL and review status in `docs/registry/lov-submission.md`.
+    - [x] Post a cross-registry metadata supplement after OLS and Bioregistry feedback clarified author ORCID, namespace-policy, and health-relevance expectations.
+      - LOV supplement: https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021.
     - [ ] Track review feedback, required metadata corrections, and final acceptance status in `docs/registry/lov-submission.md`.
 
 ### Required Configuration Files
@@ -114,6 +116,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Track request URL and review status in `docs/registry/ols-indexing.md`.
     - [x] Track reviewer feedback and metadata-change disposition in `docs/registry/ols-indexing.md`.
       - OLS maintainer accepted the ontology for addition; no repo metadata changes were requested.
+    - [x] Post a supplemental comment with the shared namespace-policy, sole-author ORCID, and biomedical/health relevance bundle learned from OLS and Bioregistry feedback.
+      - OLS supplement: https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274.
     - [ ] Track public indexing outcome in `docs/registry/ols-indexing.md`.
 
 ### Required Configuration Files
@@ -155,6 +159,11 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
     - [x] Harden generated maintenance outputs to avoid no-op changelog entries and nondeterministic validation-report churn.
     - [x] Verify current LOV and OLS submission routes for DOI-ready handoff.
     - [x] Record Zenodo DOI, submit LOV issue, submit OLS issue, and add DOI evidence to the w3id PR.
+    - [x] Apply cross-registry maintainer-feedback lessons across open registry submissions and local handoff docs.
+      - [x] Preserve the published namespace policy: `uogto` maps to `https://w3id.org/uogto/core#`; `uogtox` maps to `https://w3id.org/uogto/extensions#`; namespace squashing remains a separate compatibility decision.
+      - [x] Add the approved sole-author/contact ORCID `https://orcid.org/0000-0002-9775-0603` to open registry follow-ups where the registry accepts person metadata.
+      - [x] Add the OLS biomedical/health relevance explanation to OLS and Ontobee-facing materials, while keeping LOV framed as a semantic-web vocabulary registry.
+      - [x] Post supplemental comments to LOV, OLS, and Ontobee; do not force retroactive edits into accepted/live records such as prefix.cc or Wikidata where the schema does not call for those statements.
 
 ### Required Configuration Files
 - `docs/releases/v1.0.md`
@@ -209,3 +218,8 @@ This plan begins after the completed UOGTO ontology modeling, SHACL validation, 
 - [x] `make zenodo-depositions` and `pixi run zenodo-depositions` inspect authenticated Zenodo depositions through `ZENODO_ACCESS_TOKEN`; the parent `legal-nz/.env` token was found and used without printing it.
 - [x] Zenodo DOI is no longer open: record `20796937` is published with DOI `10.5281/zenodo.20796937`; public DOI resolution returns the Zenodo record.
 - [x] w3id is resolved: PR `6238` is merged, and live `/uogto/core` plus `/uogto/extensions` redirects resolve to the UOGTO documentation site.
+- [x] Cross-registry metadata supplements are posted and recorded after OLS/Bioregistry feedback:
+  - LOV supplement: https://github.com/pyvandenbussche/lov/issues/83#issuecomment-4902620021.
+  - OLS supplement: https://github.com/EBISPOT/ols4/issues/1305#issuecomment-4902620274.
+  - Ontobee supplement: https://github.com/OntoZoo/ontobee/issues/212#issuecomment-4902620502.
+  - Local registry docs and generated handoff packets now carry the shared namespace, ORCID, and health-relevance policy without reopening already accepted/live registries that lack matching metadata fields.
