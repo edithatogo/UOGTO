@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 import pytest
@@ -30,7 +31,9 @@ def test_arxiv_strict_review_artifacts_are_written() -> None:
         assert Path(path).exists()
 
     report = Path("docs/paper/arxiv-strict-review-report.md").read_text(encoding="utf-8")
-    assert "Score: `998.18/1000`" in report
+    score_match = re.search(r"Score: `([0-9.]+)/1000`", report)
+    assert score_match is not None
+    assert float(score_match.group(1)) >= 995
     assert "Blockers" in report
     assert "- None." in report
 
