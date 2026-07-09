@@ -736,3 +736,18 @@ Post-commit provenance refresh:
 - Committed the validated paper/source/figure update as `2dcbc4e`.
 - Reran `make arxiv-upload-ready` from the clean commit; archive SHA256 remained `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
 - Reran `make arxiv-strict-review` from the clean commit; score increased to `1000.0/1000`, minimum category score `100.0%`, and warnings `0`.
+
+## 2026-07-09T11:05:00Z - Open issue follow-through after PR #84 merge block
+
+- Attempted normal PR #84 squash merge; GitHub blocked merge because branch policy requires all requirements to be met.
+- Attempted admin PR #84 squash merge; GitHub still blocked merge because all comments must be resolved and at least one approving review from a writer is required.
+- Confirmed self-approval is not allowed for the authenticated account.
+- Confirmed open issues: #65 and #75-#83.
+- Added `docs/roadmap/uogto-field-expansion-roadmap.md` to map #76-#83 into implementation slices with examples, SHACL checks, competency questions, decision ledgers, and validation gates.
+- Added `docs/roadmap/applied-extension-pack-pattern.md` to define applied extension-pack boundaries for #83.
+- Added Conductor track `conductor/tracks/uogto_field_expansion_examples_validation_20260709/`.
+- Added `tests/test_field_expansion_roadmap.py` to keep the roadmap and Conductor links test-visible.
+- Current issue disposition:
+  - #75: implemented by PR #84; waiting on external approving review/merge.
+  - #65: repo-side publishing/discoverability work is implemented; open state represents external registry/indexing review outcomes.
+  - #76-#83: roadmap and Conductor track are now present; implementation slices are ready for subsequent worked-example PRs.

@@ -1,5 +1,15 @@
 # UOGTO Project Status
 
+## 2026-07-09 Open Issue Follow-Through
+
+- PR #84 remains merge-blocked by GitHub branch protection requiring an approving review from a writer; all required checks pass, self-approval was rejected by GitHub, and admin merge is still blocked by the same review/comment-resolution policy.
+- Issue #75 is implemented in PR #84 and is waiting only on that external review/merge gate.
+- Added the planned Conductor track `uogto_field_expansion_examples_validation_20260709` for issues #76-#83.
+- Added `docs/roadmap/uogto-field-expansion-roadmap.md`, mapping each open field-expansion issue to worked examples, SHACL checks, competency questions, source/mapping decision records, and validation gates.
+- Added `docs/roadmap/applied-extension-pack-pattern.md` so health economics, medical decision modelling, safety systems, and genomic-policy work can use domain extension packs without turning UOGTO core into a domain-specific ontology.
+- Added `tests/test_field_expansion_roadmap.py` so the issue-to-roadmap and Conductor-track links remain visible in CI.
+- Issue #65 remains an external-review publishing/discoverability tracker: repo-side DOI, WIDOCO, Pages, w3id, registry packets, and registry supplements are implemented; open state reflects remaining external registry/indexing outcomes.
+
 ## 2026-07-09 Appendix Graph Figure Redesign
 
 - Implemented print-oriented appendix graph figures for the paper by replacing the dense generic network renderer with graph-specific static views:

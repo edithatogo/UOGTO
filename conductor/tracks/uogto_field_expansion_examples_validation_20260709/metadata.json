@@ -1,0 +1,8 @@
+{
+  "track_id": "uogto_field_expansion_examples_validation_20260709",
+  "type": "roadmap",
+  "status": "planned",
+  "created_at": "2026-07-09T00:00:00Z",
+  "updated_at": "2026-07-09T00:00:00Z",
+  "description": "Plan and sequence UOGTO field-expansion examples, SHACL checks, competency queries, and applied extension-pack boundaries for GitHub issues #76-#83."
+}
