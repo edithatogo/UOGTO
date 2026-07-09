@@ -4,8 +4,8 @@ This report identifies reference integrity risks, including patterns commonly se
 
 ## Summary
 
-- Total references: 11
-- References with provider candidates: 11
+- Total references: 24
+- References with provider candidates: 24
 - Manual review queue: 0
 - Unresolved reviews: 0
 - Provider conflicts: 0
@@ -18,7 +18,7 @@ This report identifies reference integrity risks, including patterns commonly se
 - `warning` `identifier` `arxiv-2006-06580v3` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
 - `warning` `identifier` `arxiv-api` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
 - `warning` `identifier` `crossref` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
-- `warning` `identifier` `open-spiel-2019` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
+- `warning` `identifier` `nisan-2007` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
 - `warning` `identifier` `openalex` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
 - `warning` `identifier` `w3c-json-ld11` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.
 - `warning` `identifier` `w3c-owl2-overview` `report.missing_doi`: Reference has no DOI in canonical CSL JSON AI-risk signal.

@@ -177,6 +177,38 @@
       ],
       "review_status": "not_required"
     },
+    "prisma-s-2021": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "prisma-s-2021",
+            "title": "PRISMA-S: An Extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews",
+            "URL": "https://doi.org/10.1186/s13643-020-01542-z",
+            "DOI": "10.1186/s13643-020-01542-z"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "prisma-scr-2018": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "prisma-scr-2018",
+            "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+            "URL": "https://doi.org/10.7326/M18-0850",
+            "DOI": "10.7326/m18-0850"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
     "rapoport-chammah-1965": {
       "provider_candidates": [
         {
@@ -193,6 +225,22 @@
       ],
       "review_status": "not_required"
     },
+    "ro-crate-2022": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "ro-crate-2022",
+            "title": "Packaging Research Artefacts with RO-Crate",
+            "URL": "https://doi.org/10.3233/DS-210053",
+            "DOI": "10.3233/ds-210053"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
     "shapley-1953": {
       "provider_candidates": [
         {
@@ -204,6 +252,22 @@
             "title": "A Value for n-Person Games",
             "URL": "https://doi.org/10.1515/9781400881970-018",
             "DOI": "10.1515/9781400881970-018"
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "sssom-2022": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "sssom-2022",
+            "title": "SSSOM: A Simple Standard for Sharing Ontological Mappings",
+            "URL": "https://doi.org/10.1093/database/baac035",
+            "DOI": "10.1093/database/baac035"
           }
         }
       ],
@@ -300,6 +364,22 @@
             "title": "SPARQL 1.1 Query Language",
             "URL": "https://www.w3.org/TR/sparql11-query/",
             "DOI": null
+          }
+        }
+      ],
+      "review_status": "not_required"
+    },
+    "widoco-2017": {
+      "provider_candidates": [
+        {
+          "provider": "uogto-local-source-inventory",
+          "confidence": 1.0,
+          "retrieved_at": "2026-06-22T00:00:00Z",
+          "data": {
+            "id": "widoco-2017",
+            "title": "WIDOCO: A Wizard for Documenting Ontologies",
+            "URL": "https://doi.org/10.1007/978-3-319-68204-4_9",
+            "DOI": "10.1007/978-3-319-68204-4_9"
           }
         }
       ],

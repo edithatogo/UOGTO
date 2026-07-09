@@ -1,10 +1,10 @@
 # arXiv Strict Review Report
 
-Generated: `2026-07-02T12:52:18+00:00`
+Generated: `2026-07-09T10:32:39+00:00`
 Status: `pass`
-Score: `998.18/1000`
-Raw weighted score: `1098.0/1100`
-Minimum category score: `98.0%`
+Score: `1000.0/1000`
+Raw weighted score: `1100/1100`
+Minimum category score: `100.0%`
 
 ## Blockers
 
@@ -20,13 +20,13 @@ Minimum category score: `98.0%`
 | Citations and source integrity | Source-integrity reviewer | 140/140 | 100.0% |
 | Moderation and topicality risk | Moderation reviewer | 120/120 | 100.0% |
 | Manuscript quality | Manuscript readability reviewer | 110/110 | 100.0% |
-| Repo/artifact provenance | Publisher/provenance reviewer | 98.0/100 | 98.0% |
+| Repo/artifact provenance | Publisher/provenance reviewer | 100/100 | 100.0% |
 | Visual PDF QA | PDF visual reviewer | 70/70 | 100.0% |
 | Operational readiness | Publisher submission manager | 100/100 | 100.0% |
 
 ## Warnings
 
-- Manifest records a clean tracked tree or local pre-commit iteration
+- None.
 
 ## Remaining External Steps
 

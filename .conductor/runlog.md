@@ -669,3 +669,93 @@ Remote validation for commit `1574b09783d46761178c1a0798b7f87da514f14b`:
 - Added visual-label regression coverage in `tests/test_ontology_visuals.py`.
 - Local validation passed: `make ontology-comparison-visuals`, `make ontology-comparison-check`, focused ontology visual pytest, `make arxiv-upload-ready`, `make validate`, and `make test`.
 - arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `dd88669d6ddded3baffb9331711837a8c4ffdc0ac1416200a62ed468ea44b1f4`.
+
+## 2026-07-07T13:14:19+00:00 - Focused arXiv manuscript framing and back-matter revision
+
+- Updated `docs/paper/paper.tex` with focused manuscript changes only: shifted framing from evaluating UOGTO to presenting the ontology, its development workflow, the problems it solves, and applications for audit/reuse.
+- Rewrote the source-discovery Results and Methods prose as a PRISMA-ScR/PRISMA-S-style scoping search strategy with explicit search routes, eligibility criteria, evidence levels, charting fields, and use in ontology construction.
+- Expanded Discussion into contribution, intended-use, interpretation, limitations, and future-work subsections; limitations now sit under Discussion.
+- Moved references before appendix/supplementary material and page-separated the supplementary visual summaries, glossary, and abbreviations after references.
+- Updated `scripts/maintenance/score_arxiv_submission.py` so the arXiv strict scorer accepts an explicit `\subsection{Limitations}` as well as a standalone limitations section.
+- Refreshed `docs/paper/sourceright-report.md` and `.json`; SourceRight now reports 19 verified references, 0 queued manual reviews, 0 unresolved reviews, and 0 provider conflicts.
+- Local validation passed: `git diff --check`, `make manuscript-sourcecheck`, focused manuscript pytest, `make validate`, `make test` (`255 passed, 52 warnings`), `make arxiv-upload-ready`, and `make arxiv-strict-review`.
+- Rendered and visually inspected the generated PDF end matter. References end before the appendix, supplementary visuals occupy pages 14-18, glossary starts on page 19, and abbreviations start on page 21.
+- arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `1a9554b0096deaed6547859d2ebcc619d67b1d369bf31914a5a9046527c73a65`.
+
+## 2026-07-09T09:04:55Z - SourceRight-backed paper citation and resource-snapshot continuation
+
+- Implemented the focused recommendations from the paper review pass: corrected remaining 21-source/17-family wording, corrected the appendix term-alignment edge count from 10 to 12, and added a compact UOGTO v1.0.0 resource snapshot to `docs/paper/paper.tex`.
+- Added PRISMA-ScR, PRISMA-S, SSSOM, RO-Crate, and WIDOCO references to the manuscript source generator and cited them in the source-discovery, mapping, reproducibility, and generated-documentation prose.
+- Regenerated SourceRight-controlled reference artefacts from the generator and CLI:
+  - `docs/paper/references.csl.json`
+  - `.sourceright/references.csl.json`
+  - `.sourceright/references.verification.json`
+  - `docs/paper/sourceright-report.json`
+  - `docs/paper/sourceright-report.md`
+  - `docs/paper/sourceright-validate-csl.json`
+  - `docs/paper/sourceright-citations.md`
+  - `docs/paper/source-inventory.json`
+  - `docs/paper/manuscript-citations.txt`
+- SourceRight status after regeneration: 24 verified manuscript references, 0 review-queue entries, 0 unresolved reviews, 0 provider conflicts, 0 citation reconciliation issues, and 10 expected DOI-missing warnings for URL/API/standards references.
+- Updated `tests/test_ontology_snapshot_supplement.py` so the repository-only citation-register tests track the new 24-reference manuscript bibliography.
+- Local validation passed:
+  - `make manuscript-sourcecheck`
+  - `make arxiv-upload-ready`
+  - `make build`
+  - `make validate`
+  - `make test` (`255 passed, 52 warnings`)
+  - `make arxiv-strict-review` (`998.18/1000`, no blockers)
+- arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `f500b5fa3bfeaf758c660ddb4601cb12ad380bf8a77dad995659ee3fee5f0dbd`.
+
+## 2026-07-09T10:23:20Z - Appendix graph figure redesign continuation
+
+- Replaced the generic dense appendix graph rendering path with graph-specific static renderers in `scripts/maintenance/visualise_ontology_comparison.py`.
+- Source-similarity now renders as a print-oriented backbone view of comparator source families, UOGTO bridge modules, and strongest overlap signals.
+- Accepted term alignments now render as a left-right bipartite graph with vocabulary-aware source labels and a mapping-type legend.
+- Import/evidence use now renders as a layered source/evidence/import figure that keeps metadata-only evidence distinct from parsed/import evidence.
+- Added default paper-PDF sync for the generated graph derivatives:
+  - `docs/paper/figures/source-similarity-cosmograph.pdf`
+  - `docs/paper/figures/term-alignment-cosmograph.pdf`
+  - `docs/paper/figures/import-evidence-use-cosmograph.pdf`
+- Updated `docs/paper/figure-redesign-plan.md` to record the implemented approach and future optional `networkx`/`matplotlib` enhancement path.
+- Corrected the accepted term-alignment appendix caption so it no longer implies rejected candidates are displayed in the accepted-alignment figure.
+- Added `tests/test_ontology_visuals.py` coverage for paper graph PDF sync naming.
+- Visually inspected regenerated PNG derivatives for the source-similarity, term-alignment, and import/evidence-use figures.
+- Local validation passed:
+  - `make ontology-comparison-visuals`
+  - `python -m pytest tests/test_ontology_visuals.py` (`6 passed`)
+  - `make ontology-comparison-check`
+  - `make manuscript-sourcecheck`
+  - `make arxiv-upload-ready`
+  - `make arxiv-strict-review` (`998.18/1000`, no blockers)
+  - `make validate`
+  - `make test` (`256 passed, 52 warnings`)
+- arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
+
+Post-commit provenance refresh:
+- Committed the validated paper/source/figure update as `2dcbc4e`.
+- Reran `make arxiv-upload-ready` from the clean commit; archive SHA256 remained `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
+- Reran `make arxiv-strict-review` from the clean commit; score increased to `1000.0/1000`, minimum category score `100.0%`, and warnings `0`.
+
+## 2026-07-09T11:05:00Z - Open issue follow-through after PR #84 merge block
+
+- Attempted normal PR #84 squash merge; GitHub blocked merge because branch policy requires all requirements to be met.
+- Attempted admin PR #84 squash merge; GitHub still blocked merge because all comments must be resolved and at least one approving review from a writer is required.
+- Confirmed self-approval is not allowed for the authenticated account.
+- Confirmed open issues: #65 and #75-#83.
+- Added `docs/roadmap/uogto-field-expansion-roadmap.md` to map #76-#83 into implementation slices with examples, SHACL checks, competency questions, decision ledgers, and validation gates.
+- Added `docs/roadmap/applied-extension-pack-pattern.md` to define applied extension-pack boundaries for #83.
+- Added Conductor track `conductor/tracks/uogto_field_expansion_examples_validation_20260709/`.
+- Added `tests/test_field_expansion_roadmap.py` to keep the roadmap and Conductor links test-visible.
+- Current issue disposition:
+  - #75: implemented by PR #84; waiting on external approving review/merge.
+  - #65: repo-side publishing/discoverability work is implemented; open state represents external registry/indexing review outcomes.
+  - #76-#83: roadmap and Conductor track are now present; implementation slices are ready for subsequent worked-example PRs.
+
+## 2026-07-09T11:20:00Z - PR #84 review-thread fixes
+
+- Addressed all three unresolved Gemini review threads on PR #84:
+  - hardened the LaTeX readability `\item` regex with a negative lookahead;
+  - replaced exact limitations-section string matching with a robust section/subsection regex;
+  - added a defensive graph-rendering check before reading term-alignment node positions.
+- Focused validation passed: `python -m pytest tests/test_arxiv_strict_review.py tests/test_ontology_visuals.py tests/test_field_expansion_roadmap.py` (`13 passed`) and `git diff --check`.

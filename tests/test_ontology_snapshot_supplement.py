@@ -27,7 +27,7 @@ class TestOntologySnapshotSupplement(unittest.TestCase):
         self.assertIn("dist/uogto-shapes.ttl", copy_paths)
         self.assertGreaterEqual(len(manifest["ontology_source_files"]), 40)
         self.assertEqual(manifest["citation_count"], len(manifest["citations"]))
-        self.assertEqual(manifest["citation_count"], 19)
+        self.assertEqual(manifest["citation_count"], 24)
         self.assertTrue(all(len(asset["sha256"]) == 64 for asset in manifest["ontology_copy_assets"]))
 
     def test_outputs_link_copy_and_citation_register(self):
@@ -52,7 +52,7 @@ class TestOntologySnapshotSupplement(unittest.TestCase):
         self.assertIn("dist/uogto.ttl", supplement)
         self.assertIn("ontology-citation-register.md", supplement)
         self.assertIn("10.5281/zenodo.20796937", citation_md)
-        self.assertEqual(len(citation_json["citations"]), 19)
+        self.assertEqual(len(citation_json["citations"]), 24)
 
 
 if __name__ == "__main__":

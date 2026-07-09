@@ -10,9 +10,15 @@ DEFAULT_NETWORK = ROOT / 'docs' / 'ontology-comparison' / 'network-analysis.json
 DEFAULT_PROVENANCE = ROOT / 'docs' / 'ontology-comparison' / 'source-provenance.json'
 DEFAULT_FIGURES = ROOT / 'docs' / 'ontology-comparison' / 'figures'
 DEFAULT_COSMOGRAPH = ROOT / 'docs' / 'ontology-comparison' / 'cosmograph'
+DEFAULT_PAPER_FIGURES = ROOT / 'docs' / 'paper' / 'figures'
 DEFAULT_REPORT = ROOT / 'docs' / 'ontology-comparison' / 'report.md'
 REQUIRED_FIGURES = ['source_sizes_bar.svg','match_classes_bar.svg','source_module_overlap_heatmap.svg','source_family_evidence_heatmap.svg','source_family_term_heatmap.svg','uogto_coverage_treemap.svg','source_similarity_network.svg','mapping_flow_sankey.svg','reviewer_workload.svg']
 REQUIRED_COSMOGRAPH_IMAGES = ['source_similarity_cosmograph.svg','term_alignment_cosmograph.svg','import_uses_cosmograph.svg']
+PAPER_GRAPH_PDFS = {
+    'source_similarity_cosmograph.pdf': 'source-similarity-cosmograph.pdf',
+    'term_alignment_cosmograph.pdf': 'term-alignment-cosmograph.pdf',
+    'import_uses_cosmograph.pdf': 'import-evidence-use-cosmograph.pdf',
+}
 
 
 def load_json(path):
@@ -109,6 +115,35 @@ def clip_label(value, limit=42):
     return text if len(text) <= limit else text[: limit - 3].rstrip() + '...'
 
 
+def compact_node_label(node, limit=40):
+    text = publication_label(node)
+    if node.startswith(('source:', 'uogto:')):
+        text = title_words(local_name(node))
+    text = text.replace('UOGTO Extensions ', 'UOGTO ')
+    return text if len(text) <= limit else text[: limit - 3].rstrip() + '...'
+
+
+def alignment_source_label(node, limit=40):
+    iri = node.removeprefix('source:')
+    vocabularies = [
+        ('http://ogp.me/ns#', 'OGP'),
+        ('http://purl.org/dc/terms/', 'DCTERMS'),
+        ('http://www.w3.org/2002/07/owl#', 'OWL'),
+        ('http://www.w3.org/ns/prov#', 'PROV'),
+        ('http://www.w3.org/ns/sosa/', 'SOSA'),
+        ('http://xmlns.com/foaf/0.1/', 'FOAF'),
+        ('https://gs1.org/voc/', 'GS1'),
+        ('https://schema.org/', 'Schema.org'),
+    ]
+    prefix = 'Source'
+    for namespace, label in vocabularies:
+        if iri.startswith(namespace):
+            prefix = label
+            break
+    text = '{} {}'.format(prefix, title_words(local_name(iri)))
+    return text if len(text) <= limit else text[: limit - 3].rstrip() + '...'
+
+
 def scale_colour(value, max_value):
     if not value or not max_value:
         return SEQUENTIAL[0]
@@ -121,7 +156,7 @@ def write_svg(path, width, height, body, title, caption=None):
     caption = caption or title
     svg = '<svg xmlns="http://www.w3.org/2000/svg" width="{}" height="{}" viewBox="0 0 {} {}" role="img" aria-labelledby="title desc">\n'.format(width, height, width, height)
     svg += '<title id="title">{}</title><desc id="desc">{}</desc>'.format(esc(title), esc(caption))
-    svg += '<style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>\n'
+    svg += '<style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}.edgeLabel{font-size:12px;paint-order:stroke;stroke:#ffffff;stroke-width:5px;stroke-linejoin:round}</style><rect width="100%" height="100%" fill="#ffffff"/>\n'
     svg += body + '\n</svg>\n'
     path.write_text(svg, encoding='utf-8')
 
@@ -300,6 +335,8 @@ def cosmograph_exports(network, output_dir=DEFAULT_COSMOGRAPH):
         cosmograph_static_svg(image_path, f'{graph_name.replace("_", " ").title()} Cosmograph view', graph, graph_name)
         written.append(image_path)
         written.extend(optional_image_derivatives(image_path))
+    if output_dir == DEFAULT_COSMOGRAPH:
+        written.extend(sync_paper_graph_pdfs(output_dir))
     readme = output_dir / 'README.md'
     readme.write_text(
         '# Cosmograph-ready network exports\n\n'
@@ -320,6 +357,19 @@ def cosmograph_exports(network, output_dir=DEFAULT_COSMOGRAPH):
         encoding='utf-8',
     )
     written.append(readme)
+    return written
+
+
+def sync_paper_graph_pdfs(output_dir, paper_dir=DEFAULT_PAPER_FIGURES):
+    written = []
+    paper_dir.mkdir(parents=True, exist_ok=True)
+    for source_name, target_name in PAPER_GRAPH_PDFS.items():
+        source = output_dir / source_name
+        if not source.exists():
+            continue
+        target = paper_dir / target_name
+        shutil.copy2(source, target)
+        written.append(target)
     return written
 
 
@@ -380,6 +430,173 @@ def graph_layout(nodes, graph_name):
 
 
 def cosmograph_static_svg(path, title, graph, graph_name):
+    if graph_name == 'source_similarity':
+        source_similarity_publication_svg(path, graph)
+        return
+    if graph_name == 'term_alignment':
+        term_alignment_publication_svg(path, graph)
+        return
+    if graph_name == 'import_uses':
+        import_uses_publication_svg(path, graph)
+        return
+    generic_network_svg(path, title, graph, graph_name)
+
+
+def graph_nodes_and_edges(graph):
+    nodes = set(graph.get('nodes', []))
+    edges = []
+    for edge in graph.get('edges', []):
+        if len(edge) < 2:
+            continue
+        source, target = edge[0], edge[1]
+        weight = edge[2] if len(edge) > 2 else 1
+        nodes.update([source, target])
+        edges.append((source, target, weight))
+    return nodes, edges
+
+
+def vertical_positions(nodes, x, y0, y1):
+    positions = {}
+    count = len(nodes)
+    if count == 1:
+        return {nodes[0]: (x, (y0 + y1) / 2)}
+    for idx, node in enumerate(nodes):
+        y = y0 + idx * ((y1 - y0) / max(1, count - 1))
+        positions[node] = (x, y)
+    return positions
+
+
+def source_similarity_publication_svg(path, graph):
+    degree_map = graph.get('metrics', {}).get('degree', {})
+    nodes, edges = graph_nodes_and_edges(graph)
+    uogto_nodes = [node for node in nodes if node.startswith('uogto_')]
+    source_nodes = sorted(nodes - set(uogto_nodes), key=lambda node: (-degree_map.get(node, 0), publication_label(node)))[:18]
+    uogto_nodes = sorted(uogto_nodes, key=lambda node: (-degree_map.get(node, 0), publication_label(node)))[:16]
+    shown = set(source_nodes) | set(uogto_nodes)
+    visible_edges = [
+        (left, right, edge_weight(weight))
+        for left, right, weight in edges
+        if left in shown and right in shown
+    ]
+    visible_edges = sorted(visible_edges, key=lambda item: (-item[2], publication_label(item[0]), publication_label(item[1])))[:95]
+    width, height = 1500, 980
+    positions = {}
+    positions.update(vertical_positions(source_nodes, 300, 150, 820))
+    positions.update(vertical_positions(uogto_nodes, 1180, 150, 820))
+    max_weight = max([weight for _, _, weight in visible_edges] or [1])
+    parts = [
+        '<text class="title" x="48" y="48">Source-similarity backbone</text>',
+        '<text class="caption" x="48" y="78">Print view of the strongest overlap links among comparator sources and UOGTO modules. Edges guide review; they are not equivalence claims.</text>',
+        '<text class="label" x="112" y="120">Comparator source families</text>',
+        '<text class="label" x="1035" y="120">UOGTO bridge modules</text>',
+    ]
+    for left, right, weight in visible_edges:
+        x1, y1 = positions[left]; x2, y2 = positions[right]
+        opacity = 0.18 + 0.48 * min(1, weight / max_weight)
+        line_width = 0.8 + 5.0 * min(1, weight / max_weight)
+        parts.append('<path d="M{:.1f},{:.1f} C610,{:.1f} 890,{:.1f} {:.1f},{:.1f}" fill="none" stroke="#475569" stroke-width="{:.2f}" opacity="{:.2f}"/>'.format(x1 + 132, y1, y1, y2, x2 - 132, y2, line_width, opacity))
+    parts.extend([
+        '<rect x="574" y="438" width="352" height="74" fill="#F8FAFC" stroke="#CBD5E1" rx="8" opacity="0.96"/>',
+        '<text class="small" text-anchor="middle" x="750" y="468">Overlap signals</text>',
+        '<text class="tiny" text-anchor="middle" x="750" y="492">labels, terms, imports, formats, and coverage</text>',
+    ])
+    for node in source_nodes:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="264" height="32" fill="#FEF3C7" stroke="#D97706" rx="5"/>'.format(x - 132, y - 16))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 4, esc(compact_node_label(node, 32)), degree_map.get(node, 0)))
+    for node in uogto_nodes:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="264" height="32" fill="#DCFCE7" stroke="#0F766E" rx="5"/>'.format(x - 132, y - 16))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 4, esc(compact_node_label(node, 32)), degree_map.get(node, 0)))
+    parts.append('<text class="caption" x="48" y="930">Shown: {} high-degree nodes and {} strongest visible links from {} graph edges.</text>'.format(len(shown), len(visible_edges), len(edges)))
+    write_svg(path, width, height, '\n'.join(parts), 'Source-similarity backbone', 'Print-oriented backbone view of source-similarity overlap links.')
+
+
+def term_alignment_publication_svg(path, graph):
+    degree_map = graph.get('metrics', {}).get('degree', {})
+    nodes, edges = graph_nodes_and_edges(graph)
+    source_nodes = sorted([node for node in nodes if node.startswith('source:')], key=lambda node: compact_node_label(node))
+    uogto_nodes = sorted([node for node in nodes if node.startswith('uogto:')], key=lambda node: compact_node_label(node))
+    width, height = 1500, 900
+    positions = {}
+    positions.update(vertical_positions(source_nodes, 330, 150, 750))
+    positions.update(vertical_positions(uogto_nodes, 1165, 150, 750))
+    predicate_colours = {
+        'owl:equivalentClass': '#0072B2',
+        'owl:equivalentProperty': '#009E73',
+        'skos:narrowMatch': '#D55E00',
+    }
+    parts = [
+        '<text class="title" x="48" y="48">Accepted term alignments</text>',
+        '<text class="caption" x="48" y="78">All 12 accepted UOGTO-to-external mappings. The sparseness is deliberate: candidates are not asserted until reviewed.</text>',
+        '<text class="label" x="128" y="118">External terms</text>',
+        '<text class="label" x="1015" y="118">UOGTO terms</text>',
+    ]
+    for left, right, predicate in edges:
+        if left not in positions or right not in positions:
+            continue
+        x1, y1 = positions[left]; x2, y2 = positions[right]
+        colour = predicate_colours.get(str(predicate), '#64748B')
+        parts.append('<path d="M{:.1f},{:.1f} C610,{:.1f} 880,{:.1f} {:.1f},{:.1f}" fill="none" stroke="{}" stroke-width="2.4" opacity="0.74"/>'.format(x1 + 150, y1, y1, y2, x2 - 150, y2, colour))
+    for node in source_nodes:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>'.format(x - 150, y - 17))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 4, esc(alignment_source_label(node, 38)), degree_map.get(node, 0)))
+    for node in uogto_nodes:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>'.format(x - 150, y - 17))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 4, esc(compact_node_label(node, 38)), degree_map.get(node, 0)))
+    legend_x, legend_y = 48, 826
+    for idx, (label, colour) in enumerate(predicate_colours.items()):
+        x = legend_x + idx * 235
+        parts.append('<line x1="{}" y1="{}" x2="{}" y2="{}" stroke="{}" stroke-width="3"/>'.format(x, legend_y, x + 34, legend_y, colour))
+        parts.append('<text class="tiny" x="{}" y="{}">{}</text>'.format(x + 44, legend_y + 4, esc(label)))
+    write_svg(path, width, height, '\n'.join(parts), 'Accepted term alignments', 'Bipartite accepted mapping view with predicate labels.')
+
+
+def import_uses_publication_svg(path, graph):
+    degree_map = graph.get('metrics', {}).get('degree', {})
+    nodes, edges = graph_nodes_and_edges(graph)
+    imports = sorted([node for node in nodes if node.startswith('import:')], key=lambda node: (-degree_map.get(node, 0), publication_label(node)))
+    evidence = sorted([node for node in nodes if node.startswith('format:') or node == 'metadata_only_sources'], key=lambda node: (-degree_map.get(node, 0), publication_label(node)))
+    sources = sorted([node for node in nodes if node not in set(imports) | set(evidence)], key=lambda node: (-degree_map.get(node, 0), publication_label(node)))[:24]
+    width, height = 1500, 980
+    positions = {}
+    positions.update(vertical_positions(sources, 270, 145, 845))
+    positions.update(vertical_positions(evidence, 750, 260, 720))
+    positions.update(vertical_positions(imports, 1210, 170, 810))
+    visible = [(left, right, str(kind)) for left, right, kind in edges if left in positions and right in positions]
+    parts = [
+        '<text class="title" x="48" y="48">Import and evidence-use layers</text>',
+        '<text class="caption" x="48" y="78">Layered view separating sources, evidence/format surfaces, and imports. Metadata-only evidence is not treated as a parsed semantic import.</text>',
+        '<text class="label" x="160" y="116">Sources</text>',
+        '<text class="label" x="640" y="236">Evidence or format surface</text>',
+        '<text class="label" x="1124" y="140">Imports</text>',
+    ]
+    edge_colours = {'metadata': '#9333EA', 'format': '#475569', 'import': '#0F766E'}
+    for left, right, kind in visible:
+        x1, y1 = positions[left]; x2, y2 = positions[right]
+        colour = edge_colours.get(kind, '#64748B')
+        parts.append('<path d="M{:.1f},{:.1f} C520,{:.1f} 1000,{:.1f} {:.1f},{:.1f}" fill="none" stroke="{}" stroke-width="1.6" opacity="0.42"/>'.format(x1 + 130, y1, y1, y2, x2 - 130, y2, colour))
+    for node in sources:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="260" height="28" fill="#FFF7ED" stroke="#D97706" rx="4"/>'.format(x - 130, y - 14))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{}</text>'.format(x, y + 4, esc(compact_node_label(node, 31))))
+    for node in evidence:
+        x, y = positions[node]
+        fill = '#F3E8FF' if node == 'metadata_only_sources' else '#F1F5F9'
+        stroke = '#9333EA' if node == 'metadata_only_sources' else '#475569'
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="270" height="40" fill="{}" stroke="{}" rx="6"/>'.format(x - 135, y - 20, fill, stroke))
+        parts.append('<text class="small" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 5, esc(compact_node_label(node, 30)), degree_map.get(node, 0)))
+    for node in imports:
+        x, y = positions[node]
+        parts.append('<rect x="{:.1f}" y="{:.1f}" width="260" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>'.format(x - 130, y - 17))
+        parts.append('<text class="tiny" text-anchor="middle" x="{:.1f}" y="{:.1f}">{} ({})</text>'.format(x, y + 4, esc(compact_node_label(node, 31)), degree_map.get(node, 0)))
+    parts.append('<text class="caption" x="48" y="930">Shown: {} of {} source/evidence/import nodes and {} edges.</text>'.format(len(sources) + len(evidence) + len(imports), len(nodes), len(visible)))
+    write_svg(path, width, height, '\n'.join(parts), 'Import and evidence-use layers', 'Layered print view separating source records, evidence surfaces, and imports.')
+
+
+def generic_network_svg(path, title, graph, graph_name):
     degree_map = graph.get('metrics', {}).get('degree', {})
     graph_nodes = set(graph.get('nodes', []))
     for edge in graph.get('edges', []):

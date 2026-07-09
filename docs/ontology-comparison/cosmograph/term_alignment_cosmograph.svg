@@ -1,69 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
-<title id="title">Term Alignment Cosmograph view</title><desc id="desc">Term Alignment Cosmograph view</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}</style><rect width="100%" height="100%" fill="#ffffff"/>
-<defs><radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#E2E8F0"/></radialGradient></defs>
-<rect width="100%" height="100%" fill="url(#bg)"/>
-<text class="title" x="42" y="52">Term Alignment Cosmograph view</text>
-<text class="caption" x="42" y="82">Static Cosmograph-style rendering from the generated node/edge CSVs; node size encodes degree and edge opacity encodes weight.</text>
-<line x1="260.0" y1="170.0" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="228.2" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="286.4" x2="1140.0" y2="627.1" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="344.5" x2="1140.0" y2="810.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="402.7" x2="1140.0" y2="261.4" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="460.9" x2="1140.0" y2="352.9" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="519.1" x2="1140.0" y2="444.3" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="577.3" x2="1140.0" y2="535.7" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="635.5" x2="1140.0" y2="718.6" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="693.6" x2="1140.0" y2="352.9" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="751.8" x2="1140.0" y2="170.0" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<line x1="260.0" y1="810.0" x2="1140.0" y2="261.4" stroke="#334155" stroke-width="4.10" opacity="0.70"/>
-<circle cx="1140.0" cy="170.0" r="27.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="261.4" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="352.9" r="20.3" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="170.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="228.2" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="286.4" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="344.5" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="402.7" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="460.9" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="519.1" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="577.3" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="635.5" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="693.6" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="751.8" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="260.0" cy="810.0" r="13.7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="444.3" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="535.7" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="627.1" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="718.6" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<circle cx="1140.0" cy="810.0" r="13.7" fill="#0F766E" stroke="#FFFFFF" stroke-width="2" opacity="0.96"/>
-<text class="tiny" text-anchor="end" x="1105.0" y="174.0">UOGTO: Description</text>
-<text class="tiny" text-anchor="end" x="1111.7" y="265.4">UOGTO: Action</text>
-<text class="tiny" text-anchor="end" x="1111.7" y="356.9">UOGTO: Agent</text>
-<text class="tiny" text-anchor="start" x="281.7" y="174.0">Description</text>
-<text class="tiny" text-anchor="start" x="281.7" y="232.2">Description</text>
-<text class="tiny" text-anchor="start" x="281.7" y="290.4">Identifier</text>
-<text class="tiny" text-anchor="start" x="281.7" y="348.5">Thing</text>
-<text class="tiny" text-anchor="start" x="281.7" y="406.7">Activity</text>
-<text class="tiny" text-anchor="start" x="281.7" y="464.9">Agent</text>
-<text class="tiny" text-anchor="start" x="281.7" y="523.1">Entity</text>
-<text class="tiny" text-anchor="start" x="281.7" y="581.3">Role</text>
-<text class="tiny" text-anchor="start" x="281.7" y="639.5">Observes</text>
-<text class="tiny" text-anchor="start" x="281.7" y="697.6">Agent</text>
-<text class="tiny" text-anchor="start" x="281.7" y="755.8">Description</text>
-<text class="tiny" text-anchor="start" x="281.7" y="814.0">Action</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="448.3">UOGTO: Outcome</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="539.7">UOGTO: Role</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="631.1">UOGTO: Identifier</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="722.6">UOGTO: Observes</text>
-<text class="tiny" text-anchor="end" x="1118.3" y="814.0">UOGTO: Thing</text>
-<rect x="30" y="842" width="520" height="70" fill="#FFFFFF" opacity="0.82" rx="8"/>
-<circle cx="42" cy="868" r="7" fill="#D97706"/>
-<text class="tiny" x="55" y="872">source</text>
-<circle cx="168" cy="868" r="7" fill="#2563EB"/>
-<text class="tiny" x="181" y="872">external term</text>
-<circle cx="294" cy="868" r="7" fill="#0F766E"/>
-<text class="tiny" x="307" y="872">UOGTO term/module</text>
-<circle cx="420" cy="868" r="7" fill="#9333EA"/>
-<text class="tiny" x="433" y="872">format/import/evidence</text>
-<text class="caption" x="42" y="958">Rendered nodes: 20 of 20; rendered edges: 12 of 12.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="title desc">
+<title id="title">Accepted term alignments</title><desc id="desc">Bipartite accepted mapping view with predicate labels.</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933}.tiny{font-size:12px}.small{font-size:14px}.label{font-size:15px}.title{font-size:24px;font-weight:700}.caption{font-size:14px;fill:#475569}.axis{stroke:#CBD5E1}.callout{font-size:14px;font-weight:700}.edgeLabel{font-size:12px;paint-order:stroke;stroke:#ffffff;stroke-width:5px;stroke-linejoin:round}</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="48" y="48">Accepted term alignments</text>
+<text class="caption" x="48" y="78">All 12 accepted UOGTO-to-external mappings. The sparseness is deliberate: candidates are not asserted until reviewed.</text>
+<text class="label" x="128" y="118">External terms</text>
+<text class="label" x="1015" y="118">UOGTO terms</text>
+<path d="M480.0,368.2 C610,368.2 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,477.3 C610,477.3 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,586.4 C610,586.4 880,407.1 1015.0,407.1" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,750.0 C610,750.0 880,750.0 1015.0,750.0" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,204.5 C610,204.5 880,150.0 1015.0,150.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,259.1 C610,259.1 880,235.7 1015.0,235.7" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,531.8 C610,531.8 880,578.6 1015.0,578.6" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,695.5 C610,695.5 880,664.3 1015.0,664.3" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,640.9 C610,640.9 880,492.9 1015.0,492.9" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,313.6 C610,313.6 880,235.7 1015.0,235.7" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,422.7 C610,422.7 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,150.0 C610,150.0 880,150.0 1015.0,150.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<rect x="180.0" y="133.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="154.0">Schema.org Action (1)</text>
+<rect x="180.0" y="187.5" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="208.5">PROV Activity (1)</text>
+<rect x="180.0" y="242.1" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="263.1">PROV Agent (1)</text>
+<rect x="180.0" y="296.6" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="317.6">FOAF Agent (1)</text>
+<rect x="180.0" y="351.2" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="372.2">OGP Description (1)</text>
+<rect x="180.0" y="405.7" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="426.7">Source Description (1)</text>
+<rect x="180.0" y="460.3" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="481.3">DCTERMS Description (1)</text>
+<rect x="180.0" y="514.8" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="535.8">PROV Entity (1)</text>
+<rect x="180.0" y="569.4" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="590.4">DCTERMS Identifier (1)</text>
+<rect x="180.0" y="623.9" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="644.9">SOSA Observes (1)</text>
+<rect x="180.0" y="678.5" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="699.5">PROV Role (1)</text>
+<rect x="180.0" y="733.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="754.0">OWL Thing (1)</text>
+<rect x="1015.0" y="133.0" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="154.0">Action (2)</text>
+<rect x="1015.0" y="218.7" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="239.7">Agent (2)</text>
+<rect x="1015.0" y="304.4" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="325.4">Description (3)</text>
+<rect x="1015.0" y="390.1" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="411.1">Identifier (1)</text>
+<rect x="1015.0" y="475.9" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="496.9">Observes (1)</text>
+<rect x="1015.0" y="561.6" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="582.6">Outcome (1)</text>
+<rect x="1015.0" y="647.3" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="668.3">Role (1)</text>
+<rect x="1015.0" y="733.0" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="754.0">Thing (1)</text>
+<line x1="48" y1="826" x2="82" y2="826" stroke="#0072B2" stroke-width="3"/>
+<text class="tiny" x="92" y="830">owl:equivalentClass</text>
+<line x1="283" y1="826" x2="317" y2="826" stroke="#009E73" stroke-width="3"/>
+<text class="tiny" x="327" y="830">owl:equivalentProperty</text>
+<line x1="518" y1="826" x2="552" y2="826" stroke="#D55E00" stroke-width="3"/>
+<text class="tiny" x="562" y="830">skos:narrowMatch</text>
 </svg>
