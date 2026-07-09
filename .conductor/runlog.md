@@ -751,3 +751,11 @@ Post-commit provenance refresh:
   - #75: implemented by PR #84; waiting on external approving review/merge.
   - #65: repo-side publishing/discoverability work is implemented; open state represents external registry/indexing review outcomes.
   - #76-#83: roadmap and Conductor track are now present; implementation slices are ready for subsequent worked-example PRs.
+
+## 2026-07-09T11:20:00Z - PR #84 review-thread fixes
+
+- Addressed all three unresolved Gemini review threads on PR #84:
+  - hardened the LaTeX readability `\item` regex with a negative lookahead;
+  - replaced exact limitations-section string matching with a robust section/subsection regex;
+  - added a defensive graph-rendering check before reading term-alignment node positions.
+- Focused validation passed: `python -m pytest tests/test_arxiv_strict_review.py tests/test_ontology_visuals.py tests/test_field_expansion_roadmap.py` (`13 passed`) and `git diff --check`.

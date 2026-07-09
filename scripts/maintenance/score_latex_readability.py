@@ -20,7 +20,7 @@ def latex_to_text(tex: str) -> str:
     tex = re.sub(r"%.*", " ", tex)
     tex = re.sub(r"\\begin\{thebibliography\}(?:\{[^{}]*\})?.*?\\end\{thebibliography\}", " ", tex, flags=re.S)
     tex = re.sub(r"\\begin\{(tikzpicture|tabular|longtable)\}.*?\\end\{\1\}", " ", tex, flags=re.S)
-    tex = re.sub(r"\\item(?:\[[^\]]*\])?", ". ", tex)
+    tex = re.sub(r"\\item(?![a-zA-Z])(?:\[[^\]]*\])?", ". ", tex)
     tex = re.sub(r"\\(caption|title|author|date|section|subsection|item)\*?(?:\[[^\]]*\])?\{([^{}]*)\}", r" \2. ", tex)
     tex = re.sub(r"\\(glslink|abblink|href)\{[^{}]*\}\{([^{}]*)\}", r" \2 ", tex)
     tex = re.sub(r"\\(cite|ref|label|path|url)\{[^{}]*\}", " ", tex)

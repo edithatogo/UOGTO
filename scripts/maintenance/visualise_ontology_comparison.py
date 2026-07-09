@@ -533,6 +533,8 @@ def term_alignment_publication_svg(path, graph):
         '<text class="label" x="1015" y="118">UOGTO terms</text>',
     ]
     for left, right, predicate in edges:
+        if left not in positions or right not in positions:
+            continue
         x1, y1 = positions[left]; x2, y2 = positions[right]
         colour = predicate_colours.get(str(predicate), '#64748B')
         parts.append('<path d="M{:.1f},{:.1f} C610,{:.1f} 880,{:.1f} {:.1f},{:.1f}" fill="none" stroke="{}" stroke-width="2.4" opacity="0.74"/>'.format(x1 + 150, y1, y1, y2, x2 - 150, y2, colour))

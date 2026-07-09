@@ -236,7 +236,7 @@ def score_submission(root: Path = ROOT) -> dict[str, Any]:
 
     # Moderation and topicality risk: 120
     report.add("moderation", "Scientific contribution is stated", 25, "main contribution" in paper.lower() or "main result" in paper.lower(), rel_path(paper_path))
-    limitations_explicit = "\\section{Limitations}" in paper or "\\subsection{Limitations}" in paper
+    limitations_explicit = bool(re.search(r"\\(?:sub)?section\*?\{\s*Limitations\s*\}", paper))
     report.add("moderation", "Limitations are explicit", 25, limitations_explicit, rel_path(paper_path))
     report.add("moderation", "AI/tool use is not represented as peer review", 20, "not independent peer review" in paper, rel_path(paper_path))
     report.add("moderation", "Topicality and category rationale are documented", 20, "Category rationale" in process, rel_path(process_path))
