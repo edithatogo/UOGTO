@@ -731,3 +731,8 @@ Remote validation for commit `1574b09783d46761178c1a0798b7f87da514f14b`:
   - `make validate`
   - `make test` (`256 passed, 52 warnings`)
 - arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
+
+Post-commit provenance refresh:
+- Committed the validated paper/source/figure update as `2dcbc4e`.
+- Reran `make arxiv-upload-ready` from the clean commit; archive SHA256 remained `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
+- Reran `make arxiv-strict-review` from the clean commit; score increased to `1000.0/1000`, minimum category score `100.0%`, and warnings `0`.

@@ -10,7 +10,7 @@
 - Added regression coverage in `tests/test_ontology_visuals.py` for the paper graph PDF sync contract.
 - Updated `docs/paper/figure-redesign-plan.md` with implemented status and corrected the accepted-alignment appendix caption in `docs/paper/paper.tex`.
 - Visually inspected the regenerated source-similarity, term-alignment, and import/evidence-use PNG derivatives.
-- Validation passed: `make ontology-comparison-visuals`; `python -m pytest tests/test_ontology_visuals.py`; `make ontology-comparison-check`; `make manuscript-sourcecheck`; `make arxiv-upload-ready`; `make arxiv-strict-review` (`998.18/1000`, no blockers); `make validate`; `make test` (`256 passed, 52 warnings`).
+- Validation passed: `make ontology-comparison-visuals`; `python -m pytest tests/test_ontology_visuals.py`; `make ontology-comparison-check`; `make manuscript-sourcecheck`; `make arxiv-upload-ready`; `make arxiv-strict-review` (`998.18/1000`, no blockers); `make validate`; `make test` (`256 passed, 52 warnings`). After committing the validated tree, `make arxiv-upload-ready` and `make arxiv-strict-review` were rerun from a clean commit and the strict score increased to `1000.0/1000` with no warnings.
 - Current arXiv upload-ready archive SHA256 is `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
 
 ## 2026-07-07 Focused arXiv Manuscript Revision
