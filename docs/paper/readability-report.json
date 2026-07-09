@@ -1,20 +1,20 @@
 {
   "generated_at_utc": "deterministic-local-preflight",
   "paper": "docs\\paper\\paper.tex",
-  "plain_text_excerpt": "Game theory studies choices between people, groups, or computer agents when each choice can affect the others. These models are now used in economics, public policy, safety, medicine, and artificial intelligence (AI). But the parts of a game are often described in different ways. One paper may use prose. Another may use code. Another may use a diagram. That makes it hard to compare the work. We present the Universal Open Game Theory Ontology (UOGTO) . An ontology is a shared dictionary that computers and people can inspect. UOGTO gives names to players, actions, strategies , information, payoffs , mechanisms , outcomes , sessions , and traces . It separates the plan for a game from one actual run of that game. It also records where each claim came from. We compared 21 source families. We normalised 4,046 term rows, reviewed 460 possible mappings, and accepted 12 careful alignments. We kept rejected rows as negative evidence . UOGTO is not a complete list of all game theory. It is also ",
+  "plain_text_excerpt": "Game theory studies choices between people, groups, or computer agents when each choice can affect the others. These models are now used in economics, public policy, safety, medicine, and artificial intelligence (AI). But the parts of a game are often described in different ways. One paper may use prose. Another may use code. Another may use a diagram. That makes it hard to compare the work or audit the assumptions behind it. We present the Universal Open Game Theory Ontology (UOGTO) . An ontology is a shared dictionary that computers and people can inspect. UOGTO gives names to players, actions, strategies , information, payoffs , mechanisms , outcomes , sessions , and traces . It separates the plan for a game from one actual run of that game. It also records where each claim came from. We compared 21 sources across 17 source families. We normalised 4,046 term rows, reviewed 460 possible mappings, and accepted 12 careful alignments. We kept rejected rows as negative evidence . UOGTO i",
   "schema": "uogto.paper-readability-report.v1",
   "scope": "main manuscript prose before appendix, bibliography, glossary, and abbreviations",
   "scores": {
-    "character_count": 23719,
-    "dale_chall": 11.73,
-    "flesch_kincaid_grade": 8.87,
-    "flesch_reading_ease": 50.74,
-    "gunning_fog": 11.33,
-    "sentence_count": 332,
-    "smog_index": 11.23,
-    "target_reader": "14-year-old reader, roughly US grade 8-9",
+    "character_count": 30393,
+    "dale_chall": 12.16,
+    "flesch_kincaid_grade": 10.45,
+    "flesch_reading_ease": 42.2,
+    "gunning_fog": 13.05,
+    "sentence_count": 360,
+    "smog_index": 12.38,
+    "target_reader": "technical reader with plain-language support, roughly US grade 10-11",
     "target_status": "pass",
-    "word_count": 3598
+    "word_count": 4458
   },
   "scoring_tool": "textstat"
 }

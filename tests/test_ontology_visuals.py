@@ -71,6 +71,19 @@ class TestOntologyComparisonVisuals(unittest.TestCase):
         for name in visuals.REQUIRED_COSMOGRAPH_IMAGES:
             self.assertIn(f"cosmograph/{name}", self.report.read_text(encoding="utf-8"))
 
+    def test_paper_graph_pdf_sync_uses_expected_names(self):
+        paper_dir = self.temp_dir / "paper-figures"
+        for source_name in visuals.PAPER_GRAPH_PDFS:
+            source = self.cosmograph_dir / source_name
+            source.parent.mkdir(parents=True, exist_ok=True)
+            source.write_text("%PDF-1.7\n", encoding="utf-8")
+
+        written = visuals.sync_paper_graph_pdfs(self.cosmograph_dir, paper_dir)
+
+        self.assertEqual(len(written), len(visuals.PAPER_GRAPH_PDFS))
+        for target_name in visuals.PAPER_GRAPH_PDFS.values():
+            self.assertTrue((paper_dir / target_name).exists())
+
     def test_check_only_validates_repo_outputs(self):
         visuals.validate_outputs(visuals.DEFAULT_FIGURES, visuals.DEFAULT_REPORT)
 

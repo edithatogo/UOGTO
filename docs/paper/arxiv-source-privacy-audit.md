@@ -14,7 +14,7 @@ Cleaner manifest: `.tmp/arxiv-source-package.manifest.json`
 | Private notes, referee material, journal templates | pass | count=0 |
 | Unused figures | pass | count=0 |
 | Auxiliary, log, and output files | pass | count=0 |
-| Embedded PDF/image metadata | pass | metadata_files_reviewed=3, metadata_bearing_files=1, private_metadata_hits=0 |
+| Embedded PDF/image metadata | pass | metadata_files_reviewed=3, metadata_bearing_files=2, private_metadata_hits=0 |
 | Credentials, private keys, and tokens | pass | count=0 |
 | Private URLs, local paths, and UNC paths | pass | count=0 |
 
@@ -24,6 +24,7 @@ No failing source-leak or privacy findings were detected.
 
 ## Embedded Metadata Review
 
+- `figures/import-evidence-use-cosmograph.pdf`: Author, CreationDate, Creator, ModDate, Producer, Title; private hits=0
 - `figures/term-alignment-cosmograph.pdf`: Author, CreationDate, Creator, ModDate, Producer, Title; private hits=0
 
 ## Scope and Policy

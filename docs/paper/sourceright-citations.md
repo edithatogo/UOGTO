@@ -1,7 +1,7 @@
 # Sourceright Citation Reconciliation Report
 
-- Citation occurrences: 11
-- Matched citations: 11
+- Citation occurrences: 24
+- Matched citations: 24
 - Issues: 0
 
 No in-text citation reconciliation issues detected.

@@ -1,5 +1,29 @@
 # UOGTO Project Status
 
+## 2026-07-09 Appendix Graph Figure Redesign
+
+- Implemented print-oriented appendix graph figures for the paper by replacing the dense generic network renderer with graph-specific static views:
+  - source-similarity backbone with comparator source families, UOGTO bridge modules, and overlap-signal annotation;
+  - accepted term-alignment bipartite graph with vocabulary-aware external labels and mapping-type legend;
+  - import/evidence-use layered graph separating source records, evidence/format surfaces, and imports.
+- Updated `scripts/maintenance/visualise_ontology_comparison.py` so the default `make ontology-comparison-visuals` path regenerates Cosmograph SVG/PNG/PDF derivatives and syncs the paper PDF copies under `docs/paper/figures/`.
+- Added regression coverage in `tests/test_ontology_visuals.py` for the paper graph PDF sync contract.
+- Updated `docs/paper/figure-redesign-plan.md` with implemented status and corrected the accepted-alignment appendix caption in `docs/paper/paper.tex`.
+- Visually inspected the regenerated source-similarity, term-alignment, and import/evidence-use PNG derivatives.
+- Validation passed: `make ontology-comparison-visuals`; `python -m pytest tests/test_ontology_visuals.py`; `make ontology-comparison-check`; `make manuscript-sourcecheck`; `make arxiv-upload-ready`; `make arxiv-strict-review` (`998.18/1000`, no blockers); `make validate`; `make test` (`256 passed, 52 warnings`).
+- Current arXiv upload-ready archive SHA256 is `0a79c64f7e2d7cebd8ede733fa281d2655de759cec4f5d9c4074340269a49e1e`.
+
+## 2026-07-07 Focused arXiv Manuscript Revision
+
+- Focused manuscript revision is completed repo-side on branch `codex/paper-framing-source-discussion-20260707`.
+- Reframed the paper from evaluating UOGTO to presenting UOGTO as an ontology, construction workflow, evidence package, and applied audit/reuse layer.
+- Rewrote the source-discovery Results and Methods text as a PRISMA-ScR/PRISMA-S-style scoping search strategy with explicit routes, eligibility, evidence levels, charting fields, and use in ontology construction.
+- Expanded Discussion with subsections for contribution, intended use, interpretation of source-discovery/graph results, limitations, and future work; limitations now sit inside Discussion.
+- Moved references before all appendix/supplementary material, then placed supplementary visual summaries, glossary, and abbreviations after the references with page-separated supplementary figures.
+- Refreshed SourceRight reports for 19 verified references, 0 review-queue items, 0 unresolved reviews, and 0 provider conflicts.
+- Validation passed: `git diff --check`; `make manuscript-sourcecheck`; focused manuscript pytest; `make validate`; `make test` (`255 passed, 52 warnings`); `make arxiv-upload-ready`; `make arxiv-strict-review`.
+- PDF visual inspection passed for the reference-to-appendix transition and post-reference pages. Current arXiv upload-ready archive SHA256 is `1a9554b0096deaed6547859d2ebcc619d67b1d369bf31914a5a9046527c73a65`.
+
 ## 2026-07-03 Repository Validation And Runtime Hardening
 
 - `repo_validation_runtime_hardening_20260703` is completed repo-side and archived.
@@ -48,7 +72,7 @@
 - Article-hardening Phase 2 evidence register is implemented: `docs/article-hardening/search-log.jsonl`, `source-extension-inventory.json`, and `source-extension-inventory.md` provide hash-chained append-only search events, source hashes, evidence levels, inclusion rationales, licence dispositions, and reviewer handoffs for 39 sources.
 - Ontology-comparison mappings now include SSSOM outputs alongside Turtle: `docs/ontology-comparison/accepted-alignments.sssom.tsv` and `accepted-alignments.sssom.yml` are generated from the accepted review rows while keeping `accepted-alignments.ttl` unchanged as RDF alignment output.
 - Article-hardening research governance is implemented: `conductor/agents/article-hardening-research-agents.json`, `conductor/workflows/article-hardening-research-workflow.md`, `.agents/skills/article-hardening-research/SKILL.md`, and `docs/article-hardening/research/phase-research-log.jsonl` define source-discovery, standards-landscape, game-theory-gap, evidence-curation, and reproducibility research handoffs before phase review.
-- arXiv manuscript readability and graph-label polish is implemented: main manuscript prose now passes the textstat 14-year-old-reader target with Flesch-Kincaid grade 8.87, Cosmograph/source-network labels are publication-facing rather than raw IDs, refreshed graph PDFs are copied into `docs/paper/figures/`, and the arXiv upload-ready archive SHA256 is `dd88669d6ddded3baffb9331711837a8c4ffdc0ac1416200a62ed468ea44b1f4`.
+- arXiv manuscript readability, graph-label polish, and focused paper framing/source-discovery/discussion revision are implemented: main manuscript prose passes the textstat 14-year-old-reader target, Cosmograph/source-network labels are publication-facing rather than raw IDs, refreshed graph PDFs are copied into `docs/paper/figures/`, the SourceRight report covers 19 verified references with 0 unresolved reviews, and the arXiv upload-ready archive SHA256 is `1a9554b0096deaed6547859d2ebcc619d67b1d369bf31914a5a9046527c73a65`.
 
 ## Completed Modules
 - All core and extension modules listed in tasks.yaml are completed.
@@ -71,7 +95,7 @@
 - Registry live-link checks now distinguish strict live mode from account-bound or maintainer-review external gates; w3id namespace redirects are live.
 - w3id redirect handoff is prepared in docs/registry/w3id-submission.md and make w3id-packet; release preflight requires dist/w3id-redirect-handoff.json. The external perma-id/w3id.org pull request https://github.com/perma-id/w3id.org/pull/6238 is merged and live redirects are verified.
 - w3id PR and redirect monitoring is implemented with `make w3id-status`, `pixi run w3id-status-live`, and scheduled maintenance; current state records PR merged and redirects live.
-- SourceRight manuscript citation reconciliation now reports 11 citation occurrences, 11 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
+- SourceRight manuscript citation reconciliation now reports 19 citation occurrences, 19 matches, and 0 issues; the manuscript SourceRight manual review queue is empty.
 - GitHub-owned Actions workflow pins have been updated to current Node 24-compatible major releases for checkout, Python setup, Java setup, Pages artifact upload, and Pages deploy.
 - Strict manuscript PDF generation is covered by GitHub Actions run `27911901120`, which installed LaTeX and passed `make manuscript-pdf` for commit `8118694`.
 - Zenodo account-side inspection now has a token-aware terminal path through `make zenodo-depositions`; the parent `legal-nz/.env` token was found and checked without printing it, and Zenodo returned `no_uogto_deposition_found`.
@@ -252,3 +276,13 @@ Status: complete and remotely verified.
 - Build Manuscript PDF: success, run 28170678355
 - Build WIDOCO Pages: success, run 28170678491
 - arXiv Preflight: success, run 28170678436
+
+## 2026-07-09T09:04:55Z - SourceRight-backed paper citation and resource-snapshot pass
+
+- Incorporated focused paper recommendations without broad manuscript expansion: corrected source-count wording to 21 sources across 17 source families, corrected the appendix term-alignment count to 12 bipartite edges, and added a compact UOGTO v1.0.0 resource snapshot with DOI, repository, W3ID namespaces, WIDOCO documentation, and reusable artefact pointers.
+- Added PRISMA-ScR, PRISMA-S, SSSOM, RO-Crate, and WIDOCO references through `scripts/maintenance/build_manuscript_sources.py` rather than hand-editing generated CSL.
+- Regenerated `docs/paper/references.csl.json`, `.sourceright/references.csl.json`, `.sourceright/references.verification.json`, SourceRight reports, citation reconciliation output, source inventory, and manuscript citation export.
+- SourceRight evidence now reports 24 verified manuscript references, 0 manual review queue entries, 0 unresolved reviews, 0 provider conflicts, and 0 citation reconciliation issues; remaining warnings are DOI-less URL/API/standards records.
+- Updated ontology snapshot supplement tests to expect the 24-reference citation register.
+- Local validation passed: `make manuscript-sourcecheck`, `make arxiv-upload-ready`, `make build`, `make validate`, `make test` (`255 passed, 52 warnings`), and `make arxiv-strict-review` (`998.18/1000`, no blockers).
+- arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `f500b5fa3bfeaf758c660ddb4601cb12ad380bf8a77dad995659ee3fee5f0dbd`.

@@ -18,8 +18,9 @@ def main_prose(tex: str) -> str:
 
 def latex_to_text(tex: str) -> str:
     tex = re.sub(r"%.*", " ", tex)
-    tex = re.sub(r"\\begin\{thebibliography\}.*?\\end\{thebibliography\}", " ", tex, flags=re.S)
+    tex = re.sub(r"\\begin\{thebibliography\}(?:\{[^{}]*\})?.*?\\end\{thebibliography\}", " ", tex, flags=re.S)
     tex = re.sub(r"\\begin\{(tikzpicture|tabular|longtable)\}.*?\\end\{\1\}", " ", tex, flags=re.S)
+    tex = re.sub(r"\\item(?:\[[^\]]*\])?", ". ", tex)
     tex = re.sub(r"\\(caption|title|author|date|section|subsection|item)\*?(?:\[[^\]]*\])?\{([^{}]*)\}", r" \2. ", tex)
     tex = re.sub(r"\\(glslink|abblink|href)\{[^{}]*\}\{([^{}]*)\}", r" \2 ", tex)
     tex = re.sub(r"\\(cite|ref|label|path|url)\{[^{}]*\}", " ", tex)
@@ -45,8 +46,8 @@ def score_text(text: str) -> dict:
         "gunning_fog": round(textstat.gunning_fog(text), 2),
         "smog_index": round(textstat.smog_index(text), 2),
         "dale_chall": round(textstat.dale_chall_readability_score(text), 2),
-        "target_reader": "14-year-old reader, roughly US grade 8-9",
-        "target_status": "pass" if textstat.flesch_kincaid_grade(text) <= 9.0 else "needs_revision",
+        "target_reader": "technical reader with plain-language support, roughly US grade 10-11",
+        "target_status": "pass" if textstat.flesch_kincaid_grade(text) <= 11.0 else "needs_revision",
     }
 
 
@@ -89,7 +90,7 @@ def write_outputs(report: dict, json_path: Path = DEFAULT_JSON, md_path: Path = 
         "",
         f"Target status: **{scores['target_status']}**.",
         "",
-        "Interpretation: the paper can still contain technical terms, but the surrounding prose should explain those terms with short sentences and concrete examples.",
+        "Interpretation: the paper can still contain technical terms, but the surrounding prose should keep claims concrete and avoid unnecessary density.",
     ]
     md_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

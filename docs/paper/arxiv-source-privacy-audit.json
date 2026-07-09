@@ -14,7 +14,7 @@
       "status": "pass"
     },
     "embedded_metadata": {
-      "metadata_bearing_files": 1,
+      "metadata_bearing_files": 2,
       "metadata_files_reviewed": 3,
       "private_metadata_hits": 0,
       "status": "pass"
@@ -50,6 +50,18 @@
         "Producer",
         "Title"
       ],
+      "path": "figures/import-evidence-use-cosmograph.pdf",
+      "private_hits": []
+    },
+    {
+      "metadata_keys": [
+        "Author",
+        "CreationDate",
+        "Creator",
+        "ModDate",
+        "Producer",
+        "Title"
+      ],
       "path": "figures/term-alignment-cosmograph.pdf",
       "private_hits": []
     }
@@ -76,7 +88,7 @@
     "failures": 0,
     "files_reviewed": 4,
     "findings": 0,
-    "metadata_bearing_files": 1,
+    "metadata_bearing_files": 2,
     "metadata_files_reviewed": 3,
     "text_files_reviewed": 1
   }
