@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org/applied-pack/> . @prefix hta: <https://w3id.org/uogto/packs/hta#> . @prefix uogto: <https://w3id.org/uogto/core#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:hta-adoption a hta:TechnologyAppraisalGame ; uogto:identifier "hta-adoption" ; uogto:hasPlayer ex:payer, ex:sponsor ; uogto:governedByRule ex:threshold ; uogto:producesOutcome ex:funded .
+ex:payer a uogto:Player ; uogto:identifier "payer" ; uogto:selectsAction ex:adopt . ex:sponsor a uogto:Player ; uogto:identifier "sponsor" . ex:adopt a uogto:Action .
+ex:threshold a hta:AppraisalThreshold ; hta:thresholdValue "50000.0"^^xsd:double . ex:funded a uogto:Outcome ; uogto:assignsPayoff ex:budget-impact . ex:budget-impact a hta:BudgetImpact ; uogto:payoffValue "-1200000.0"^^xsd:double .
+ex:hta-state a uogto:State . ex:hta-session a uogto:PlaySession ; uogto:hasState ex:hta-state ; uogto:emitsEventTrace ex:hta-trace . ex:hta-trace a uogto:EventTrace .

@@ -303,3 +303,9 @@ Status: complete and remotely verified.
 - Applied extension-pack boundaries are documented; implementation issues #85-#88 are native subissues of roadmap #76 and are present on UOGTO project #8 and RI-HERO project #9.
 - Local gates passed: `make build`, `make validate`, focused field-expansion tests, and `make test` (262 passed, 52 warnings).
 - Publishing issue #65 remains externally gated by registry/indexing review and is not a repo implementation blocker.
+## 2026-07-12 - Applied Extension Packs
+
+- Track `uogto_applied_extension_packs_20260712` is complete, reviewed, and archived.
+- Issues #85-#88 are implemented as separate companion modules using the established `uogtox:` namespace contract.
+- Each pack has a worked example, SHACL constraints, deterministic competency query, and JSON-LD context coverage.
+- Local gates passed: semantic audit, `make build`, `make validate`, and `make test` (264 passed, 52 warnings).

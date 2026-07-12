@@ -145,6 +145,22 @@
       "example_graphs": ["examples/reputation-trust-game.ttl"],
       "min_count": 1,
       "required_bindings": [{"game": "http://example.org/field-expansion/reputation-trust-game", "player": "http://example.org/field-expansion/trustee", "score": "http://example.org/field-expansion/trustee-score"}]
+    },
+    {
+      "query": "cq17-hta-appraisal-game.rq", "example_graphs": ["examples/hta-payer-adoption-game.ttl"], "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/applied-pack/hta-adoption", "threshold": "http://example.org/applied-pack/threshold"}]
+    },
+    {
+      "query": "cq18-medical-treatment-choice.rq", "example_graphs": ["examples/shared-treatment-choice-game.ttl"], "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/applied-pack/treatment-choice", "patient": "http://example.org/applied-pack/patient", "treatment": "http://example.org/applied-pack/treatment-a"}]
+    },
+    {
+      "query": "cq19-safety-coordination-game.rq", "example_graphs": ["examples/safety-barrier-coordination-game.ttl"], "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/applied-pack/safety-coordination", "hazard": "http://example.org/applied-pack/overpressure", "barrier": "http://example.org/applied-pack/shutdown-barrier"}]
+    },
+    {
+      "query": "cq20-genomic-data-access-game.rq", "example_graphs": ["examples/genomic-data-access-game.ttl"], "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/applied-pack/genomic-access", "consent": "http://example.org/applied-pack/research-consent", "risk": "http://example.org/applied-pack/disclosure-risk"}]
     }
   ]
 }

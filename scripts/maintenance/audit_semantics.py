@@ -14,6 +14,12 @@ SKOS = rdflib.Namespace("http://www.w3.org/2004/02/skos/core#")
 ROOT = Path(__file__).resolve().parents[2]
 CORE_NS = "https://w3id.org/uogto/core#"
 EXT_NS = "https://w3id.org/uogto/extensions#"
+PACK_NAMESPACES = {
+    "hta": "https://w3id.org/uogto/packs/hta#",
+    "mdm": "https://w3id.org/uogto/packs/medical-decision#",
+    "safety": "https://w3id.org/uogto/packs/safety#",
+    "genomic": "https://w3id.org/uogto/packs/genomic-policy#",
+}
 INSTANCE_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 def audit_semantics():
@@ -81,6 +87,7 @@ def audit_namespace_policy(graph):
         value = str(subject)
         if value.startswith("https://w3id.org/uogto/") and not (
             value.startswith(CORE_NS) or value.startswith(EXT_NS)
+            or any(value.startswith(namespace) for namespace in PACK_NAMESPACES.values())
         ):
             print(f"Invalid UOGTO namespace for class: {subject}")
             conforms = False
@@ -98,7 +105,7 @@ def audit_property_separation(graph):
 
 def audit_jsonld_term_coverage(graph):
     context_terms = {}
-    for context_path in [ROOT / "jsonld/core.context.jsonld", ROOT / "jsonld/extensions.context.jsonld"]:
+    for context_path in [ROOT / "jsonld/core.context.jsonld", ROOT / "jsonld/extensions.context.jsonld", ROOT / "jsonld/packs.context.jsonld"]:
         context = json.loads(context_path.read_text(encoding="utf-8"))["@context"]
         for term, value in context.items():
             if isinstance(value, str):
@@ -115,7 +122,12 @@ def audit_jsonld_term_coverage(graph):
             elif value.startswith(EXT_NS):
                 compact = "uogtox:" + value.removeprefix(EXT_NS)
             else:
-                continue
+                compact = next(
+                    (prefix + ":" + value.removeprefix(namespace) for prefix, namespace in PACK_NAMESPACES.items() if value.startswith(namespace)),
+                    None,
+                )
+                if compact is None:
+                    continue
             if compact not in context_terms:
                 missing.append(compact)
 

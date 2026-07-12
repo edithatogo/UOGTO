@@ -1,0 +1,7 @@
+@prefix genomic: <https://w3id.org/uogto/packs/genomic-policy#> . @prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+<https://w3id.org/uogto/packs/genomic-policy> a owl:Ontology ; rdfs:label "UOGTO Applied Pack - Genomic Policy"@en ; owl:imports <https://w3id.org/uogto/core> .
+genomic:GenomicDataAccessGame a owl:Class ; rdfs:subClassOf uogto:GameSpecification ; rdfs:label "Genomic data access game"@en ; skos:definition "A game representing strategic access to genomic research data."@en .
+genomic:ConsentScope a owl:Class ; rdfs:subClassOf uogto:Rule ; rdfs:label "Consent scope"@en ; skos:definition "A domain-local rule defining permitted uses of genomic data."@en .
+genomic:GenomicDataCategory a owl:Class ; rdfs:subClassOf uogto:GameEntity ; rdfs:label "Genomic data category"@en ; skos:definition "A category of genomic information governed by an access decision."@en .
+genomic:DisclosureRisk a owl:Class ; rdfs:subClassOf uogto:Payoff ; rdfs:label "Disclosure risk"@en ; skos:definition "A negative consequence associated with disclosing genomic information."@en .

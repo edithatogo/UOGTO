@@ -1,0 +1,8 @@
+@prefix hta: <https://w3id.org/uogto/packs/hta#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<https://w3id.org/uogto/packs/hta> a owl:Ontology ; rdfs:label "UOGTO Applied Pack - Health Economics and HTA"@en ; owl:imports <https://w3id.org/uogto/core> .
+hta:TechnologyAppraisalGame a owl:Class ; rdfs:subClassOf uogto:GameSpecification ; rdfs:label "Technology appraisal game"@en ; skos:definition "A game representing strategic decisions within a health technology appraisal."@en .
+hta:AppraisalThreshold a owl:Class ; rdfs:subClassOf uogto:Rule ; rdfs:label "Appraisal threshold"@en ; skos:definition "A decision threshold used by an appraisal institution."@en .
+hta:BudgetImpact a owl:Class ; rdfs:subClassOf uogto:Payoff ; rdfs:label "Budget impact"@en ; skos:definition "A budget consequence associated with an appraisal outcome."@en .
+hta:thresholdValue a owl:DatatypeProperty ; rdfs:label "threshold value"@en ; rdfs:range xsd:double ; skos:definition "The numeric value of an appraisal threshold."@en .
