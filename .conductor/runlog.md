@@ -766,3 +766,8 @@ Post-commit provenance refresh:
 - Scoped four applied extension packs in `docs/roadmap/applied-extension-pack-backlog.md` and created GitHub issues #85-#88.
 - Verified with focused tests (7 passed), `make build`, `make validate`, and `make test` (262 passed, 52 warnings).
 - Conductor review found no actionable defects; the final focused review suite passed (10 passed, 17 warnings), and the track was archived.
+## 2026-07-12T00:00:00Z - Applied extension packs
+
+- Implemented health economics/HTA, medical decision modelling, safety systems, and genomic policy companion ontology modules for issues #85-#88.
+- Added four worked examples, applied-pack SHACL constraints, CQ17-CQ20 with expected bindings, JSON-LD context coverage, and regression tests.
+- Full validation passed with 264 tests and 52 dependency deprecation warnings; review found no actionable defects and the track was archived.

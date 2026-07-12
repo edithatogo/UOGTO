@@ -1,0 +1,2 @@
+PREFIX mdm: <https://w3id.org/uogto/extensions#> PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?game ?patient ?treatment ?state ?outcome WHERE { ?game a mdm:SharedTreatmentChoiceGame ; uogto:hasPlayer ?patient ; uogto:hasState ?state ; uogto:producesOutcome ?outcome . ?patient uogto:selectsAction ?treatment . }

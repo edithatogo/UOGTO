@@ -1,0 +1,7 @@
+@prefix safety: <https://w3id.org/uogto/extensions#> . @prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+<https://w3id.org/uogto/packs/safety> a owl:Ontology ; rdfs:label "UOGTO Applied Pack - Safety Systems"@en ; owl:imports <https://w3id.org/uogto/core> .
+safety:SafetyCoordinationGame a owl:Class ; rdfs:subClassOf uogto:GameSpecification ; rdfs:label "Safety coordination game"@en ; skos:definition "A game representing coordinated action around a safety control."@en .
+safety:Hazard a owl:Class ; rdfs:subClassOf uogto:State ; rdfs:label "Hazard"@en ; skos:definition "A domain-local state with potential to cause harm."@en .
+safety:SafetyBarrier a owl:Class ; rdfs:subClassOf uogto:Rule ; rdfs:label "Safety barrier"@en ; skos:definition "A control that constrains actions to reduce safety risk."@en .
+safety:IncidentEvidence a owl:Class ; rdfs:subClassOf uogto:EventTrace ; rdfs:label "Incident evidence"@en ; skos:definition "Trace evidence describing a safety-relevant event."@en .

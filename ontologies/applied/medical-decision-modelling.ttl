@@ -1,0 +1,7 @@
+@prefix mdm: <https://w3id.org/uogto/extensions#> . @prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+<https://w3id.org/uogto/packs/medical-decision> a owl:Ontology ; rdfs:label "UOGTO Applied Pack - Medical Decision Modelling"@en ; owl:imports <https://w3id.org/uogto/core> .
+mdm:SharedTreatmentChoiceGame a owl:Class ; rdfs:subClassOf uogto:GameSpecification ; rdfs:label "Shared treatment choice game"@en ; skos:definition "A game representing a shared treatment decision under uncertainty."@en .
+mdm:TreatmentOption a owl:Class ; rdfs:subClassOf uogto:Action ; rdfs:label "Treatment option"@en ; skos:definition "A treatment action available in a medical decision model."@en .
+mdm:ClinicalState a owl:Class ; rdfs:subClassOf uogto:State ; rdfs:label "Clinical state"@en ; skos:definition "A domain-local patient state used by a medical decision model."@en .
+mdm:QualityAdjustedOutcome a owl:Class ; rdfs:subClassOf uogto:Outcome ; rdfs:label "Quality-adjusted outcome"@en ; skos:definition "An outcome combining duration and quality of health."@en .

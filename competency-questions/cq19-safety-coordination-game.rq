@@ -1,0 +1,2 @@
+PREFIX safety: <https://w3id.org/uogto/extensions#> PREFIX uogto: <https://w3id.org/uogto/core#>
+SELECT ?game ?hazard ?barrier ?action ?trace WHERE { ?game a safety:SafetyCoordinationGame ; uogto:hasState ?hazard ; uogto:governedByRule ?barrier ; uogto:hasPlayer ?player . ?player uogto:selectsAction ?action . ?session uogto:emitsEventTrace ?trace . }

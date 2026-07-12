@@ -860,6 +860,24 @@
     },
     "revenueValue": {
       "@id": "uogtox:revenueValue"
+    },
+    "AppraisalThreshold": "uogtox:AppraisalThreshold",
+    "BudgetImpact": "uogtox:BudgetImpact",
+    "ClinicalState": "uogtox:ClinicalState",
+    "ConsentScope": "uogtox:ConsentScope",
+    "DisclosureRisk": "uogtox:DisclosureRisk",
+    "GenomicDataAccessGame": "uogtox:GenomicDataAccessGame",
+    "GenomicDataCategory": "uogtox:GenomicDataCategory",
+    "Hazard": "uogtox:Hazard",
+    "IncidentEvidence": "uogtox:IncidentEvidence",
+    "QualityAdjustedOutcome": "uogtox:QualityAdjustedOutcome",
+    "SafetyBarrier": "uogtox:SafetyBarrier",
+    "SafetyCoordinationGame": "uogtox:SafetyCoordinationGame",
+    "SharedTreatmentChoiceGame": "uogtox:SharedTreatmentChoiceGame",
+    "TechnologyAppraisalGame": "uogtox:TechnologyAppraisalGame",
+    "TreatmentOption": "uogtox:TreatmentOption",
+    "thresholdValue": {
+      "@id": "uogtox:thresholdValue"
     }
   }
 }

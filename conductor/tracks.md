@@ -93,6 +93,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Archived Tracks
 
+## [x] Archived Track: uogto_applied_extension_packs_20260712
+- **Description**: Implement applied extension packs for health economics, medical decisions, safety systems, and genomic policy.
+- **Status**: Completed, reviewed, and archived
+- **Link**: [./archive/uogto_applied_extension_packs_20260712/](./archive/uogto_applied_extension_packs_20260712/)
+
 ## [x] Archived Track: uogto_field_expansion_examples_validation_20260709
 - **Description**: Implement the worked examples, SHACL checks, competency queries, and evidence decisions for field-expansion issues #77-#82, then scope applied extension packs.
 - **Status**: Completed, reviewed, and archived
