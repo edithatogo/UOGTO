@@ -16,6 +16,7 @@ def test_representative_negative_shacl_fixtures_are_rejected() -> None:
         ("execution", "ex:a a uogtox:LLMAgent ."),
         ("examples", "ex:p a uogto:Player ."),
         ("governance", "ex:m a uogtox:Mechanism ."),
+        ("field-expansions", "ex:g a uogtox:MeanFieldGame ."),
     ]
     for shape_name, body in cases:
         data_graph = Graph()

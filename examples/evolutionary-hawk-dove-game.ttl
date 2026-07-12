@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:evolutionary-hawk-dove a uogtox:EvolutionaryGame ; uogto:identifier "evolutionary-hawk-dove" ; uogto:hasPlayer ex:population-player ; uogtox:hasPopulation ex:mixed-population ; uogto:hasStrategy ex:hawk, ex:dove ; uogto:producesOutcome ex:post-update-distribution .
+ex:population-player a uogto:Player ; uogto:identifier "population-player" .
+ex:mixed-population a uogtox:Population ; uogtox:hasReplicatorDynamic ex:replicator-update ; uogtox:hasFitnessFunction ex:expected-payoff-fitness . ex:hawk a uogto:Strategy . ex:dove a uogto:Strategy . ex:replicator-update a uogtox:ReplicatorDynamic . ex:expected-payoff-fitness a uogtox:FitnessFunction .
+ex:post-update-distribution a uogto:Outcome ; uogto:assignsPayoff ex:population-payoff . ex:population-payoff a uogto:Payoff ; uogto:payoffValue "1.4"^^xsd:double . ex:evolution-state a uogto:State . ex:evolution-session a uogto:PlaySession ; uogto:hasState ex:evolution-state ; uogto:emitsEventTrace ex:evolution-trace . ex:evolution-trace a uogto:EventTrace .

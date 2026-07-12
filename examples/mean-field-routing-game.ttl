@@ -1,0 +1,9 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:mean-field-routing a uogtox:MeanFieldGame ; uogto:identifier "mean-field-routing" ; uogto:hasPlayer ex:representative-commuter ; uogtox:hasRepresentativeAgent ex:representative-commuter ; uogtox:hasPopulationState ex:population-before ; uogto:hasStrategy ex:avoid-crowding ; uogto:producesOutcome ex:balanced-load .
+ex:representative-commuter a uogto:Player, uogtox:RepresentativeAgent ; uogto:identifier "representative-commuter" ; uogto:hasStrategy ex:avoid-crowding .
+ex:population-before a uogtox:PopulationState ; uogtox:densityValue "0.72"^^xsd:double . ex:avoid-crowding a uogtox:PopulationPolicy .
+ex:balanced-load a uogto:Outcome ; uogto:assignsPayoff ex:mean-travel-cost . ex:mean-travel-cost a uogto:Payoff ; uogto:payoffValue "-4.2"^^xsd:double .
+ex:mean-field-session a uogto:PlaySession ; uogto:hasState ex:population-before ; uogto:emitsEventTrace ex:mean-field-trace . ex:mean-field-trace a uogto:EventTrace .

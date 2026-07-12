@@ -1,0 +1,3 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?agent ?policy ?observation ?action ?outcome ?trace WHERE { ?game a uogtox:MarkovGame ; uogto:hasPlayer ?agent . ?agent uogtox:hasPolicy ?policy ; uogto:observes ?observation ; uogto:selectsAction ?action . ?action uogto:producesOutcome ?outcome . ?session uogtox:hasLearningProcess ?process ; uogto:emitsEventTrace ?trace . }

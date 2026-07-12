@@ -759,3 +759,10 @@ Post-commit provenance refresh:
   - replaced exact limitations-section string matching with a robust section/subsection regex;
   - added a defensive graph-rendering check before reading term-alignment node positions.
 - Focused validation passed: `python -m pytest tests/test_arxiv_strict_review.py tests/test_ontology_visuals.py tests/test_field_expansion_roadmap.py` (`13 passed`) and `git diff --check`.
+## 2026-07-12T00:00:00Z - Field expansion implementation
+
+- Added six field-expansion example graphs covering mean-field routing, two-route congestion, evolutionary dynamics, institutional/information design, MARL learning, and trust/reputation/provenance.
+- Added `shapes/field-expansions.shacl.ttl`, competency queries CQ11-CQ16, deterministic expected bindings, negative SHACL coverage, and a field-expansion decision ledger.
+- Scoped four applied extension packs in `docs/roadmap/applied-extension-pack-backlog.md` and created GitHub issues #85-#88.
+- Verified with focused tests (7 passed), `make build`, `make validate`, and `make test` (262 passed, 52 warnings).
+- Conductor review found no actionable defects; the final focused review suite passed (10 passed, 17 warnings), and the track was archived.
