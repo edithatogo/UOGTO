@@ -1,0 +1,31 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+uogtox:MeanFieldExampleShape a sh:NodeShape ; sh:targetClass uogtox:MeanFieldGame ;
+    sh:property [ sh:path uogtox:hasRepresentativeAgent ; sh:minCount 1 ; sh:class uogtox:RepresentativeAgent ] ;
+    sh:property [ sh:path uogtox:hasPopulationState ; sh:minCount 1 ; sh:class uogtox:PopulationState ] ;
+    sh:property [ sh:path uogto:hasPlayer ; sh:minCount 1 ] .
+uogtox:RoutingExampleShape a sh:NodeShape ; sh:targetClass uogtox:RoutingGame ;
+    sh:property [ sh:path uogto:hasPlayer ; sh:minCount 2 ] ;
+    sh:property [ sh:path uogtox:hasResource ; sh:minCount 2 ; sh:class uogtox:Resource ] ;
+    sh:property [ sh:path uogtox:hasNetworkFlow ; sh:minCount 1 ; sh:class uogtox:NetworkFlow ] .
+uogtox:EvolutionaryExampleShape a sh:NodeShape ; sh:targetClass uogtox:EvolutionaryGame ;
+    sh:property [ sh:path uogtox:hasPopulation ; sh:minCount 1 ; sh:class uogtox:Population ] ;
+    sh:property [ sh:path uogto:hasStrategy ; sh:minCount 2 ; sh:class uogto:Strategy ] ;
+    sh:property [ sh:path uogto:producesOutcome ; sh:minCount 1 ; sh:class uogto:Outcome ] .
+uogtox:InstitutionalExampleShape a sh:NodeShape ; sh:targetClass uogtox:InstitutionalEconomicsGame ;
+    sh:property [ sh:path uogtox:hasInstitution ; sh:minCount 1 ; sh:class uogtox:Institution ] ;
+    sh:property [ sh:path uogto:governedByRule ; sh:minCount 1 ; sh:class uogtox:InstitutionalRule ] ;
+    sh:property [ sh:path uogto:producesOutcome ; sh:minCount 1 ; sh:class uogto:Outcome ] .
+uogtox:InformationDesignExampleShape a sh:NodeShape ; sh:targetClass uogtox:InformationDesignGame ;
+    sh:property [ sh:path uogtox:hasSignalStructure ; sh:minCount 1 ; sh:class uogtox:SignalStructure ] ;
+    sh:property [ sh:path uogtox:hasDisclosurePolicy ; sh:minCount 1 ; sh:class uogtox:DisclosurePolicy ] ;
+    sh:property [ sh:path uogto:producesOutcome ; sh:minCount 1 ; sh:class uogto:Outcome ] .
+uogtox:LearningSessionExampleShape a sh:NodeShape ; sh:targetSubjectsOf uogtox:hasLearningProcess ;
+    sh:class uogto:PlaySession ; sh:property [ sh:path uogto:emitsEventTrace ; sh:minCount 1 ; sh:class uogto:EventTrace ] .
+uogtox:ProvenanceSessionExampleShape a sh:NodeShape ; sh:targetSubjectsOf uogtox:hasProvenanceTrace ;
+    sh:class uogto:PlaySession ; sh:property [ sh:path uogto:emitsEventTrace ; sh:minCount 1 ; sh:class uogto:EventTrace ] .
+uogtox:ReputationScoreExampleShape a sh:NodeShape ; sh:targetClass uogtox:ReputationScore ;
+    sh:property [ sh:path uogtox:scoreValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double ; sh:minInclusive 0.0 ; sh:maxInclusive 1.0 ] .

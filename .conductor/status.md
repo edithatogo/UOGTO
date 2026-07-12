@@ -296,3 +296,10 @@ Status: complete and remotely verified.
 - Updated ontology snapshot supplement tests to expect the 24-reference citation register.
 - Local validation passed: `make manuscript-sourcecheck`, `make arxiv-upload-ready`, `make build`, `make validate`, `make test` (`255 passed, 52 warnings`), and `make arxiv-strict-review` (`998.18/1000`, no blockers).
 - arXiv upload-ready archive rebuilt at `dist/arxiv/uogto-arxiv-source.tar.gz` with SHA256 `f500b5fa3bfeaf758c660ddb4601cb12ad380bf8a77dad995659ee3fee5f0dbd`.
+## 2026-07-12 - Field Expansion Examples and Validation
+
+- Track `uogto_field_expansion_examples_validation_20260709` is complete, reviewed, and archived.
+- Issues #77-#82 now have worked examples, SHACL constraints, competency-query expectations, and accepted/deferred/external decision evidence.
+- Applied extension-pack boundaries are documented; implementation issues #85-#88 are native subissues of roadmap #76 and are present on UOGTO project #8 and RI-HERO project #9.
+- Local gates passed: `make build`, `make validate`, focused field-expansion tests, and `make test` (262 passed, 52 warnings).
+- Publishing issue #65 remains externally gated by registry/indexing review and is not a repo implementation blocker.

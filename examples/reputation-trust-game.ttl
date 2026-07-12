@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:reputation-trust-game a uogto:GameSpecification ; uogto:identifier "reputation-trust-game" ; uogto:hasPlayer ex:trustor, ex:trustee ; uogto:producesOutcome ex:cooperation-outcome . ex:trustor a uogto:Player ; uogto:identifier "trustor" ; uogto:observes ex:trustee-score ; uogto:selectsAction ex:entrust . ex:trustee a uogto:Player ; uogto:identifier "trustee" ; uogtox:hasReputationScore ex:trustee-score ; uogtox:hasIdentityClaim ex:verified-claim ; uogto:selectsAction ex:honour .
+ex:trustee-score a uogtox:ReputationScore ; uogtox:scoreValue "0.86"^^xsd:double ; prov:wasDerivedFrom ex:verified-claim . ex:verified-claim a uogtox:IdentityClaim, prov:Entity . ex:entrust a uogto:Action . ex:honour a uogto:Action . ex:cooperation-outcome a uogto:Outcome ; uogto:assignsPayoff ex:trust-payoff . ex:trust-payoff a uogto:Payoff ; uogto:payoffValue "3.0"^^xsd:double .
+ex:trust-state a uogto:State . ex:trust-session a uogto:PlaySession ; uogto:hasState ex:trust-state ; uogto:emitsEventTrace ex:trust-event-trace ; uogtox:hasProvenanceTrace ex:trust-provenance . ex:trust-event-trace a uogto:EventTrace . ex:trust-provenance a uogtox:ProvenanceTrace, prov:Activity ; prov:used ex:verified-claim .

@@ -93,6 +93,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Archived Tracks
 
+## [x] Archived Track: uogto_field_expansion_examples_validation_20260709
+- **Description**: Implement the worked examples, SHACL checks, competency queries, and evidence decisions for field-expansion issues #77-#82, then scope applied extension packs.
+- **Status**: Completed, reviewed, and archived
+- **Link**: [./archive/uogto_field_expansion_examples_validation_20260709/](./archive/uogto_field_expansion_examples_validation_20260709/)
+
 These tracks are retained for audit history but are no longer active work items.
 
 ## [x] Archived Track: scoping_review_protocol_20260621

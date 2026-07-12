@@ -1,0 +1,3 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?feature ?outcome WHERE { { ?game a uogtox:InstitutionalEconomicsGame ; uogto:governedByRule ?feature ; uogto:producesOutcome ?outcome . } UNION { ?game a uogtox:InformationDesignGame ; uogtox:hasSignalStructure ?feature ; uogto:producesOutcome ?outcome . } }

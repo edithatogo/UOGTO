@@ -1,0 +1,3 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?population ?strategy ?dynamic ?outcome WHERE { ?game a uogtox:EvolutionaryGame ; uogtox:hasPopulation ?population ; uogto:hasStrategy ?strategy ; uogto:producesOutcome ?outcome . ?population uogtox:hasReplicatorDynamic ?dynamic . }

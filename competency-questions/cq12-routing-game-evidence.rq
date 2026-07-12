@@ -1,0 +1,3 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?player ?action ?resource ?outcome WHERE { ?game a uogtox:RoutingGame ; uogto:hasPlayer ?player ; uogtox:hasResource ?resource ; uogto:producesOutcome ?outcome . ?player uogto:selectsAction ?action . }

@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:marl-coordination a uogtox:MarkovGame ; uogto:identifier "marl-coordination" ; uogto:hasPlayer ex:learner-a, ex:learner-b ; uogto:hasTransition ex:joint-transition .
+ex:learner-a a uogto:Player, uogto:Agent ; uogto:identifier "learner-a" ; uogtox:hasPolicy ex:policy-a ; uogto:observes ex:observation-a ; uogto:selectsAction ex:move-right . ex:learner-b a uogto:Player, uogto:Agent ; uogto:identifier "learner-b" ; uogtox:hasPolicy ex:policy-b ; uogto:observes ex:observation-b ; uogto:selectsAction ex:wait .
+ex:policy-a a uogtox:Policy . ex:policy-b a uogtox:Policy . ex:observation-a a uogto:State . ex:observation-b a uogto:State . ex:move-right a uogto:Action ; uogto:producesOutcome ex:coordinated-outcome . ex:wait a uogto:Action . ex:coordinated-outcome a uogto:Outcome ; uogto:assignsPayoff ex:joint-reward . ex:joint-reward a uogto:Payoff ; uogto:payoffValue "1.0"^^xsd:double . ex:joint-transition a uogto:TransitionFunction .
+ex:learning-session a uogto:PlaySession ; uogto:hasState ex:observation-a ; uogtox:hasLearningProcess ex:q-learning ; uogto:emitsEventTrace ex:learning-trace . ex:q-learning a uogtox:LearningProcess, uogtox:QLearning ; uogtox:learningRate "0.1"^^xsd:double ; uogtox:discountFactor "0.95"^^xsd:double . ex:learning-trace a uogto:EventTrace .

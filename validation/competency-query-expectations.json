@@ -109,6 +109,42 @@
           "importedOntology": "https://w3id.org/uogto/core"
         }
       ]
+    },
+    {
+      "query": "cq11-mean-field-game-evidence.rq",
+      "example_graphs": ["examples/mean-field-routing-game.ttl"],
+      "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/field-expansion/mean-field-routing", "agent": "http://example.org/field-expansion/representative-commuter"}]
+    },
+    {
+      "query": "cq12-routing-game-evidence.rq",
+      "example_graphs": ["examples/two-route-congestion-game.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"game": "http://example.org/field-expansion/two-route-game", "player": "http://example.org/field-expansion/driver-a", "action": "http://example.org/field-expansion/choose-north"}]
+    },
+    {
+      "query": "cq13-evolutionary-game-evidence.rq",
+      "example_graphs": ["examples/evolutionary-hawk-dove-game.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"game": "http://example.org/field-expansion/evolutionary-hawk-dove", "population": "http://example.org/field-expansion/mixed-population"}]
+    },
+    {
+      "query": "cq14-institution-and-information-design-evidence.rq",
+      "example_graphs": ["examples/institutional-information-design-games.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"game": "http://example.org/field-expansion/commons-institution", "feature": "http://example.org/field-expansion/withdrawal-quota"}, {"game": "http://example.org/field-expansion/public-signal-design", "feature": "http://example.org/field-expansion/binary-signal"}]
+    },
+    {
+      "query": "cq15-marl-learning-evidence.rq",
+      "example_graphs": ["examples/marl-learning-episode.ttl"],
+      "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/field-expansion/marl-coordination", "agent": "http://example.org/field-expansion/learner-a", "policy": "http://example.org/field-expansion/policy-a"}]
+    },
+    {
+      "query": "cq16-trust-reputation-provenance-evidence.rq",
+      "example_graphs": ["examples/reputation-trust-game.ttl"],
+      "min_count": 1,
+      "required_bindings": [{"game": "http://example.org/field-expansion/reputation-trust-game", "player": "http://example.org/field-expansion/trustee", "score": "http://example.org/field-expansion/trustee-score"}]
     }
   ]
 }

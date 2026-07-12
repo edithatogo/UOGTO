@@ -1,0 +1,14 @@
+issue,field,concept,disposition,rationale,evidence
+77,mean-field games,representative agent,accepted,UOGTO already models reusable agent and policy structure,ontologies/extensions/mean-field-games.ttl
+77,mean-field games,Hamilton-Jacobi-Bellman PDE,deferred,Mathematical solver detail is not required for the reusable game graph,docs/roadmap/uogto-field-expansion-roadmap.md
+78,congestion routing,route as action,accepted,Routes are choices and resources remain distinct,examples/two-route-congestion-game.ttl
+78,congestion routing,transport network ontology,external,UOGTO links game semantics without duplicating transport topology standards,docs/roadmap/uogto-field-expansion-roadmap.md
+79,evolutionary games,replicator update,accepted,The update rule is needed to retrieve the population transition,examples/evolutionary-hawk-dove-game.ttl
+79,evolutionary games,biological taxonomy,external,Taxonomic semantics are outside the reusable game layer,docs/roadmap/uogto-field-expansion-roadmap.md
+80,institutional economics,institutional rule,accepted,Rules and enforcement affect admissible play and outcomes,examples/institutional-information-design-games.ttl
+80,information design,signal structure,accepted,Signal design is needed to represent information assumptions,examples/institutional-information-design-games.ttl
+80,institutional economics,full legal rights ontology,external,Domain rights should be supplied by applied packs or alignments,docs/roadmap/applied-extension-pack-pattern.md
+81,learning in games,policy observation action trace,accepted,These relations form a reusable learning episode contract,examples/marl-learning-episode.ttl
+81,learning in games,library tensor schema,external,OpenSpiel and MARL implementation details belong in bindings,docs/roadmap/uogto-field-expansion-roadmap.md
+82,trust and reputation,reputation score,accepted,The score changes strategic choice and is constrained to a unit interval,examples/reputation-trust-game.ttl
+82,provenance,PROV activity and derivation,external-alignment,PROV-O supplies general provenance without duplication,ontologies/alignments/prov-o.ttl

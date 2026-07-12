@@ -1,0 +1,3 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+SELECT ?game ?player ?score ?claim ?action ?outcome ?provenance WHERE { ?game uogto:identifier "reputation-trust-game" ; uogto:hasPlayer ?player ; uogto:producesOutcome ?outcome . ?player uogtox:hasReputationScore ?score ; uogtox:hasIdentityClaim ?claim ; uogto:selectsAction ?action . ?session uogtox:hasProvenanceTrace ?provenance . }

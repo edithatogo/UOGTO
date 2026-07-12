@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:two-route-game a uogtox:CongestionGame, uogtox:RoutingGame ; uogto:identifier "two-route-congestion" ; uogto:hasPlayer ex:driver-a, ex:driver-b ; uogtox:hasResource ex:north-route, ex:south-route ; uogtox:hasNetworkFlow ex:observed-flow ; uogto:producesOutcome ex:routing-outcome .
+ex:driver-a a uogto:Player ; uogto:identifier "driver-a" ; uogto:hasAvailableAction ex:choose-north, ex:choose-south ; uogto:selectsAction ex:choose-north .
+ex:driver-b a uogto:Player ; uogto:identifier "driver-b" ; uogto:hasAvailableAction ex:choose-north, ex:choose-south ; uogto:selectsAction ex:choose-south .
+ex:choose-north a uogto:Action . ex:choose-south a uogto:Action . ex:north-route a uogtox:Resource ; uogtox:capacityValue "2.0"^^xsd:double ; uogtox:hasLatencyFunction ex:north-latency .
+ex:south-route a uogtox:Resource ; uogtox:capacityValue "2.0"^^xsd:double ; uogtox:hasLatencyFunction ex:south-latency . ex:north-latency a uogtox:LatencyFunction . ex:south-latency a uogtox:LatencyFunction . ex:observed-flow a uogtox:NetworkFlow .
+ex:routing-outcome a uogto:Outcome ; uogto:assignsPayoff ex:routing-cost . ex:routing-cost a uogto:Payoff ; uogto:payoffValue "-3.0"^^xsd:double . ex:routing-state a uogto:State . ex:routing-session a uogto:PlaySession ; uogto:hasState ex:routing-state ; uogto:emitsEventTrace ex:routing-trace . ex:routing-trace a uogto:EventTrace .

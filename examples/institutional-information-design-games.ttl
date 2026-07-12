@@ -1,0 +1,9 @@
+@prefix ex: <http://example.org/field-expansion/> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:commons-institution a uogtox:InstitutionalEconomicsGame ; uogto:identifier "commons-institution" ; uogto:hasPlayer ex:member-a, ex:member-b ; uogtox:hasInstitution ex:water-council ; uogto:governedByRule ex:withdrawal-quota ; uogto:producesOutcome ex:sustainable-withdrawal .
+ex:member-a a uogto:Player ; uogto:identifier "member-a" . ex:member-b a uogto:Player ; uogto:identifier "member-b" . ex:water-council a uogtox:Institution ; uogtox:hasEnforcementMechanism ex:peer-monitoring . ex:withdrawal-quota a uogtox:InstitutionalRule . ex:peer-monitoring a uogtox:EnforcementMechanism . ex:sustainable-withdrawal a uogto:Outcome ; uogto:assignsPayoff ex:commons-payoff . ex:commons-payoff a uogto:Payoff ; uogto:payoffValue "2.0"^^xsd:double .
+ex:public-signal-design a uogtox:InformationDesignGame ; uogto:identifier "public-signal-design" ; uogto:hasPlayer ex:receiver ; uogtox:hasDesigner ex:designer ; uogtox:hasSignalStructure ex:binary-signal ; uogtox:hasDisclosurePolicy ex:truthful-disclosure ; uogto:producesOutcome ex:informed-choice .
+ex:designer a uogtox:InformationDesigner . ex:receiver a uogto:Player ; uogto:identifier "receiver" ; uogtox:hasPosteriorBelief ex:posterior-high . ex:binary-signal a uogtox:SignalStructure ; uogtox:entropyValue "0.81"^^xsd:double . ex:truthful-disclosure a uogtox:DisclosurePolicy . ex:posterior-high a uogtox:PosteriorBelief . ex:informed-choice a uogto:Outcome ; uogto:assignsPayoff ex:information-payoff . ex:information-payoff a uogto:Payoff ; uogto:payoffValue "1.5"^^xsd:double .
+ex:institution-info-state a uogto:State . ex:institution-info-session a uogto:PlaySession ; uogto:hasState ex:institution-info-state ; uogto:emitsEventTrace ex:institution-info-trace . ex:institution-info-trace a uogto:EventTrace .
