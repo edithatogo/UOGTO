@@ -1,2 +1,2 @@
-PREFIX hta: <https://w3id.org/uogto/extensions#> PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX hta: <https://w3id.org/uogto/packs/hta#> PREFIX uogto: <https://w3id.org/uogto/core#>
 SELECT ?game ?threshold ?outcome ?impact WHERE { ?game a hta:TechnologyAppraisalGame ; uogto:governedByRule ?threshold ; uogto:producesOutcome ?outcome . ?outcome uogto:assignsPayoff ?impact . }

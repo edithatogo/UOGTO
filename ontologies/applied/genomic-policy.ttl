@@ -1,4 +1,4 @@
-@prefix genomic: <https://w3id.org/uogto/extensions#> . @prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix genomic: <https://w3id.org/uogto/packs/genomic-policy#> . @prefix uogto: <https://w3id.org/uogto/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 <https://w3id.org/uogto/packs/genomic-policy> a owl:Ontology ; rdfs:label "UOGTO Applied Pack - Genomic Policy"@en ; owl:imports <https://w3id.org/uogto/core> .
 genomic:GenomicDataAccessGame a owl:Class ; rdfs:subClassOf uogto:GameSpecification ; rdfs:label "Genomic data access game"@en ; skos:definition "A game representing strategic access to genomic research data."@en .

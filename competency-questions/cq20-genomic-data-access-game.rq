@@ -1,2 +1,2 @@
-PREFIX genomic: <https://w3id.org/uogto/extensions#> PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX genomic: <https://w3id.org/uogto/packs/genomic-policy#> PREFIX uogto: <https://w3id.org/uogto/core#>
 SELECT ?game ?consent ?custodian ?action ?risk WHERE { ?game a genomic:GenomicDataAccessGame ; uogto:governedByRule ?consent ; uogto:hasPlayer ?custodian ; uogto:producesOutcome ?outcome . ?custodian uogto:selectsAction ?action . ?outcome uogto:assignsPayoff ?risk . }
