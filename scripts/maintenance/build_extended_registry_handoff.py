@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = ROOT / "dist" / "extended-registry-handoff.json"
 DOC_PATH = ROOT / "docs" / "registry" / "extended-discoverability-submissions.md"
+ENRICHMENT_PATH = ROOT / "docs" / "registry" / "registry-enrichment-decision.json"
 
 CORE_NAMESPACE = "https://w3id.org/uogto/core#"
 EXTENSION_NAMESPACE = "https://w3id.org/uogto/extensions#"
@@ -56,6 +57,7 @@ REQUIRED_DOCUMENT_FRAGMENTS = [
     LOV_SUPPLEMENT_COMMENT,
     OLS_SUPPLEMENT_COMMENT,
     ONTOBEE_SUPPLEMENT_COMMENT,
+    "registry-enrichment-decision.json",
 ]
 
 
@@ -138,8 +140,15 @@ def read_doc() -> str:
     return DOC_PATH.read_text(encoding="utf-8")
 
 
+def read_enrichment_decision() -> dict:
+    if not ENRICHMENT_PATH.exists():
+        raise AssertionError("Missing docs/registry/registry-enrichment-decision.json")
+    return json.loads(ENRICHMENT_PATH.read_text(encoding="utf-8"))
+
+
 def build_extended_registry_handoff() -> dict:
     doc_text = read_doc()
+    enrichment_decision = read_enrichment_decision()
     missing = [fragment for fragment in REQUIRED_DOCUMENT_FRAGMENTS if fragment not in doc_text]
     if missing:
         raise AssertionError(
@@ -180,6 +189,7 @@ def build_extended_registry_handoff() -> dict:
             "author_orcid": AUTHOR_ORCID_URL,
         },
         "cross_registry_metadata_supplement": REGISTRY_METADATA_SUPPLEMENT,
+        "future_enrichment": enrichment_decision,
         "targets": TARGETS,
         "source_document": "docs/registry/extended-discoverability-submissions.md",
     }

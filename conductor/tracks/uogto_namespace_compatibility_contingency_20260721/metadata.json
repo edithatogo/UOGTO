@@ -1,0 +1,10 @@
+{
+  "track_id": "uogto_namespace_compatibility_contingency_20260721",
+  "type": "architecture",
+  "status": "completed",
+  "created_at": "2026-07-21T00:00:00Z",
+  "updated_at": "2026-07-21T22:00:00Z",
+  "description": "Assess a future Bioregistry namespace-compatibility layer without changing published UOGTO IRIs.",
+  "github_issue": "https://github.com/edithatogo/UOGTO/issues/95",
+  "external_issue": "https://github.com/biopragmatics/bioregistry/issues/1999"
+}

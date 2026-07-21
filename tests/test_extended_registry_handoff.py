@@ -78,6 +78,12 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         self.assertEqual(packet["targets"]["obo_foundry"]["status"], "not_prioritized")
         self.assertIn("10.5281/zenodo.20796937", packet["ontology"]["doi"])
 
+    def test_packet_records_future_enrichment_decision(self):
+        packet = build_extended_registry_handoff.build_extended_registry_handoff()
+        self.assertEqual(packet["future_enrichment"]["schema"], "uogto.registry-enrichment-decision.v1")
+        self.assertEqual(packet["future_enrichment"]["fairsharing"]["status"], "awaiting_curator_review")
+        self.assertEqual(packet["future_enrichment"]["wikidata"]["status"], "live_minimal_metadata")
+
     def test_packet_records_actionable_blockers(self):
         packet = build_extended_registry_handoff.build_extended_registry_handoff()
         blockers = {item["target"]: item["message"] for item in packet["blockers"]}
