@@ -1,5 +1,9 @@
 # Project Tracks
 
+## [ ] Track: portfolio_registry_submission_roadmap_20260721
+
+[Specification and plan](./tracks/portfolio_registry_submission_roadmap_20260721/)
+
 This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
 ---
