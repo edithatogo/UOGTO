@@ -179,3 +179,22 @@ These tracks are retained for audit history but are no longer active work items.
 - **Description**: Respond to Bioregistry namespace and ORCID feedback and update local registry follow-up evidence.
 - **Status**: Completed and archived; Bioregistry maintainer review remains external.
 - **Link**: [./archive/uogto_bioregistry_namespace_response_20260705/](./archive/uogto_bioregistry_namespace_response_20260705/)
+
+## [x] Track: uogto_registry_metadata_enrichment_20260721
+- **Description**: Implement repository-owned FAIRsharing and Wikidata enrichment evidence and maintain external registry follow-up.
+- **Status**: Repository implementation completed; external curator and registry decisions remain gated.
+- **GitHub issue**: [#93](https://github.com/edithatogo/UOGTO/issues/93)
+- **Link**: [./tracks/uogto_registry_metadata_enrichment_20260721/](./tracks/uogto_registry_metadata_enrichment_20260721/)
+
+## [x] Track: uogto_biomedical_registry_positioning_20260721
+- **Description**: Prepare a defensible BioPortal and OBO Foundry positioning decision without premature submission.
+- **Status**: Repository decision package completed; submission remains conditional on an approved scope and governance fit.
+- **GitHub issue**: [#94](https://github.com/edithatogo/UOGTO/issues/94)
+- **Link**: [./tracks/uogto_biomedical_registry_positioning_20260721/](./tracks/uogto_biomedical_registry_positioning_20260721/)
+
+## [x] Track: uogto_namespace_compatibility_contingency_20260721
+- **Description**: Assess a future Bioregistry namespace-compatibility layer without changing published UOGTO IRIs.
+- **Status**: Compatibility decision completed; activation of migration work depends on Bioregistry maintainer requirements.
+- **GitHub issue**: [#95](https://github.com/edithatogo/UOGTO/issues/95)
+- **External issue**: [Bioregistry #1999](https://github.com/biopragmatics/bioregistry/issues/1999)
+- **Link**: [./tracks/uogto_namespace_compatibility_contingency_20260721/](./tracks/uogto_namespace_compatibility_contingency_20260721/)

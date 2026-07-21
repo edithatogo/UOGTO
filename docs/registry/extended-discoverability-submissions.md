@@ -3,6 +3,8 @@
 ## Status
 Second-wave discoverability is repo-side implemented with live prefix.cc mappings for `uogto` and `uogtox`, submitted Bioregistry and Ontobee requests, live Wikidata item `Q140323510`, and FAIRsharing record `8382` awaiting curator review. BioPortal and OBO Foundry are not current targets without a stronger biomedical scope. Live follow-up on 2026-07-05 confirmed FAIRsharing, prefix.cc, Wikidata, and Zenodo pages/endpoints are reachable; the Bioregistry namespace response and approved ORCID follow-up are posted and awaiting maintainer review. On 2026-07-07, cross-registry metadata supplements were posted to LOV, OLS, and Ontobee so those requests also carry the namespace policy, ORCID, release evidence, and biomedical/health relevance note learned from OLS and Bioregistry feedback.
 
+The 2026-07-21 enrichment decision is recorded in [registry-enrichment-decision.json](./registry-enrichment-decision.json). Organisation links, publications, citations, record associations, author/ORCID statements, and health-domain statements remain deferred unless the target registry exposes a defensible field and authoritative evidence. The associated Conductor tracks are [registry metadata enrichment](../../conductor/tracks/uogto_registry_metadata_enrichment_20260721/), [biomedical registry positioning](../../conductor/tracks/uogto_biomedical_registry_positioning_20260721/), and [namespace compatibility contingency](../../conductor/tracks/uogto_namespace_compatibility_contingency_20260721/).
+
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
 - Preferred core prefix: `uogto`

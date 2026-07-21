@@ -1,6 +1,6 @@
 # Conductor Status
 
-Updated: `2026-07-07`
+Updated: `2026-07-21`
 
 ## Active Work
 
@@ -13,6 +13,9 @@ Updated: `2026-07-07`
 - `uogto_alignment_evidence_expansion_20260705`: Completed and archived. Evidence-backed parent-axiom alignments are expanded, mapping-review queues are resolved to 12 accepted and 448 rejected rows, and synchronized comparison/manuscript artifacts are regenerated.
 - `uogto_manuscript_submission_revision_20260705`: Completed and archived. Submission decision memo, revision backlog, arXiv state record, manuscript/supplement framing updates, and verification evidence are in place; arXiv identifier and rendered-PDF approval remain external upload gates.
 - `uogto_bioregistry_namespace_response_20260705`: Completed and archived. Bioregistry response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defends the published core/extension namespace split, limits the registration to the primary `uogto` core prefix, and leaves any required namespace squashing to a separate compatibility track. ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980> adds the approved sole-author/contact ORCID.
+- `uogto_registry_metadata_enrichment_20260721`: Repository implementation completed and issue <https://github.com/edithatogo/UOGTO/issues/93> is closed. Repository evidence records FAIRsharing and Wikidata enrichment candidates with fail-closed deferred decisions.
+- `uogto_biomedical_registry_positioning_20260721`: Repository decision package completed and issue <https://github.com/edithatogo/UOGTO/issues/94> is closed. BioPortal and OBO Foundry remain conditional targets pending a defensible biomedical scope and governance fit.
+- `uogto_namespace_compatibility_contingency_20260721`: Compatibility decision completed and issue <https://github.com/edithatogo/UOGTO/issues/95> is closed. The decision preserves published v1.0.0 IRIs and defines a migration trigger only if Bioregistry requires namespace squashing.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 - `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
 

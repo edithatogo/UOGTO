@@ -408,3 +408,11 @@
 - Archived `uogto_nature_presubmission_evaluation_20260625` under `conductor/archive/uogto_nature_presubmission_evaluation_20260625/`.
 - Marked the evaluation track repo-complete because its reviewer findings, review matrix, image score matrix, arXiv toolchain matrix, acceptance checklist, recommendations, decision memo, and figure-caption freeze evidence are present.
 - Kept remaining arXiv identifier, rendered-PDF approval, journal article-type selection, and cover-package work in `docs/paper/submission-revision-backlog.csv` and `docs/paper/arxiv-submission-state.md` rather than leaving the presubmission evaluation track active.
+## 2026-07-21 - Registry enrichment and compatibility roadmap
+
+- Created Conductor tracks `uogto_registry_metadata_enrichment_20260721`, `uogto_biomedical_registry_positioning_20260721`, and `uogto_namespace_compatibility_contingency_20260721`.
+- Cross-referenced the tracks to GitHub issues `#93`, `#94`, and `#95` and added them to Project #8 with Registry, Track, External review, and completed/Done metadata after repository validation.
+- Added `docs/registry/registry-enrichment-decision.json` with fail-closed FAIRsharing and Wikidata enrichment decisions.
+- Added `docs/registry/biomedical-registry-positioning.md` documenting conditional BioPortal/OBO Foundry decisions and the future submission package.
+- Added `docs/registry/namespace-compatibility-decision.md` documenting non-breaking namespace options and the Bioregistry migration trigger.
+- Extended the registry handoff packet and regression tests to carry the enrichment decision record.
