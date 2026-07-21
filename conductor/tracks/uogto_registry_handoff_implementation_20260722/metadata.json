@@ -1,0 +1,14 @@
+{
+  "track_id": "uogto_registry_handoff_implementation_20260722",
+  "version": "1.0.0",
+  "type": "feature",
+  "status": "repo_complete_external_pending",
+  "created_at": "2026-07-22T00:00:00Z",
+  "updated_at": "2026-07-22T00:00:00Z",
+  "github_parent_issue": "https://github.com/edithatogo/UOGTO/issues/65",
+  "github_subissues": [
+    "https://github.com/edithatogo/UOGTO/issues/98",
+    "https://github.com/edithatogo/UOGTO/issues/99"
+  ],
+  "external_evidence_required": true
+}

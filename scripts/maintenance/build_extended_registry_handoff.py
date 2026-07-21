@@ -131,6 +131,20 @@ TARGETS = {
         "route": "https://obofoundry.org/",
         "decision": "Do not pursue unless UOGTO is repositioned for biological or biomedical ontology governance.",
     },
+    "bartoc": {
+        "status": "prepared_external_submission",
+        "route": "https://bartoc.org/",
+        "submission_document": "docs/registry/bartoc-submission.md",
+        "evidence": "Repository-side handoff is complete; account-side submission and curator disposition remain external.",
+        "next_action": "Submit the prepared core ontology record and record the BARTOC identifier and disposition.",
+    },
+    "research_vocabularies_australia": {
+        "status": "prepared_external_submission",
+        "route": "https://vocabs.ardc.edu.au/",
+        "submission_document": "docs/registry/rva-submission.md",
+        "evidence": "Repository-side upload-and-describe handoff is complete; account registration, review, and publication remain external.",
+        "next_action": "Upload the canonical RDF asset and record the RVA vocabulary identifier and publication evidence.",
+    },
 }
 
 
