@@ -1,4 +1,22 @@
 # Changelog
+## [1.1.0](https://github.com/edithatogo/UOGTO/compare/v1.0.0...v1.1.0) (2026-07-22)
+
+
+### Features
+
+* implement registry enrichment roadmap tracks ([#96](https://github.com/edithatogo/UOGTO/issues/96)) ([63c89ee](https://github.com/edithatogo/UOGTO/commit/63c89eef24af8686a7948b488cf1498218554898))
+
+
+### Documentation
+
+* add approved ORCID to Bioregistry metadata ([#40](https://github.com/edithatogo/UOGTO/issues/40)) ([2d3427a](https://github.com/edithatogo/UOGTO/commit/2d3427a06f67a64aa2e8b4e76461c75cc14df925))
+* add citation and reuse page ([049fe17](https://github.com/edithatogo/UOGTO/commit/049fe175b62e9d798fd5f451ca32f8b6c139f485))
+* add glossary and modelling decisions ([485686d](https://github.com/edithatogo/UOGTO/commit/485686d48597e748c8d2e0d8484fc1662a771d74))
+* add uogto audience pages ([8b277c6](https://github.com/edithatogo/UOGTO/commit/8b277c6be723868d6f209da06f7aae12478f4a40))
+* **conductor:** refresh GitHub project ledger state ([7294ace](https://github.com/edithatogo/UOGTO/commit/7294ace2e097b098a5d2960732ae3992e1b82b2f))
+* define sole-developer repository harness ([#97](https://github.com/edithatogo/UOGTO/issues/97)) ([7affd6f](https://github.com/edithatogo/UOGTO/commit/7affd6fd5db43f7fb64733b2aa62c2b029e47f24))
+* **registry:** apply cross-registry metadata supplements ([a4438f8](https://github.com/edithatogo/UOGTO/commit/a4438f87fd040dc8dc245eeb5bded680d934d2d3))
+
 ## [2026-06-22]
 
 ### Bug Fixes
