@@ -198,3 +198,10 @@ These tracks are retained for audit history but are no longer active work items.
 - **GitHub issue**: [#95](https://github.com/edithatogo/UOGTO/issues/95)
 - **External issue**: [Bioregistry #1999](https://github.com/biopragmatics/bioregistry/issues/1999)
 - **Link**: [./tracks/uogto_namespace_compatibility_contingency_20260721/](./tracks/uogto_namespace_compatibility_contingency_20260721/)
+
+## [x] Track: uogto_registry_handoff_implementation_20260722
+- **Description**: Implement BARTOC and Research Vocabularies Australia registry handoff packages and generated evidence.
+- **Status**: Repository implementation complete; external submission and curator/publication decisions remain open.
+- **GitHub parent issue**: [#65](https://github.com/edithatogo/UOGTO/issues/65)
+- **GitHub subissues**: [#98](https://github.com/edithatogo/UOGTO/issues/98), [#99](https://github.com/edithatogo/UOGTO/issues/99)
+- **Link**: [./tracks/uogto_registry_handoff_implementation_20260722/](./tracks/uogto_registry_handoff_implementation_20260722/)

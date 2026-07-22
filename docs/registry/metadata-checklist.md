@@ -25,6 +25,8 @@ This checklist is shared by the Zenodo, LOV, and OLS publication workflows.
 - [x] Biomedical and health relevance note: UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, health economics, behavioural/public-health interaction models, mechanism design, and health-simulation settings.
 - [x] Cross-registry supplements posted for LOV, OLS, and Ontobee after OLS and Bioregistry feedback.
 - [x] Accepted or live records without comment threads, including prefix.cc and Wikidata, require no retroactive edit unless their registry schema has a defensible field for the new metadata.
+- [x] BARTOC handoff is recorded in `docs/registry/bartoc-submission.md`.
+- [x] RVA handoff is recorded in `docs/registry/rva-submission.md`.
 
 ## Ontology Annotation Requirements
 - [x] Every class and property is covered by the semantic audit for `rdfs:label` and `skos:definition`.
