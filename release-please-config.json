@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "python",
+  "package-name": "uogto",
+  "python-name": "uogto",
+  "version-file": "pyproject.toml",
+  "changelog-path": "CHANGELOG.md",
+  "include-component-in-tag": false,
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "extra-files": ["CITATION.cff", ".zenodo.json"]
+    }
+  }
+}
