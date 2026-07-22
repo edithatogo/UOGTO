@@ -5,6 +5,11 @@ Second-wave discoverability is repo-side implemented with live prefix.cc mapping
 
 The 2026-07-21 enrichment decision is recorded in [registry-enrichment-decision.json](./registry-enrichment-decision.json). Organisation links, publications, citations, record associations, author/ORCID statements, and health-domain statements remain deferred unless the target registry exposes a defensible field and authoritative evidence. The associated Conductor tracks are [registry metadata enrichment](../../conductor/tracks/uogto_registry_metadata_enrichment_20260721/), [biomedical registry positioning](../../conductor/tracks/uogto_biomedical_registry_positioning_20260721/), and [namespace compatibility contingency](../../conductor/tracks/uogto_namespace_compatibility_contingency_20260721/).
 
+The next registry-readiness handoffs are [BARTOC](./bartoc-submission.md) and [Research Vocabularies Australia](./rva-submission.md). They are prepared external submissions, not evidence of acceptance. Their parent roadmap is [UOGTO #65](https://github.com/edithatogo/UOGTO/issues/65), with registry-specific subissues [#98](https://github.com/edithatogo/UOGTO/issues/98) and [#99](https://github.com/edithatogo/UOGTO/issues/99).
+
+- BARTOC route: <https://bartoc.org/>
+- Research Vocabularies Australia route: <https://vocabs.ardc.edu.au/>
+
 ## Shared Submission Metadata
 - Ontology title: Universal Open Game Theory Ontology (UOGTO)
 - Preferred core prefix: `uogto`

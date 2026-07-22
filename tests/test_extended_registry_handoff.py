@@ -84,6 +84,13 @@ class TestExtendedRegistryHandoff(unittest.TestCase):
         self.assertEqual(packet["future_enrichment"]["fairsharing"]["status"], "awaiting_curator_review")
         self.assertEqual(packet["future_enrichment"]["wikidata"]["status"], "live_minimal_metadata")
 
+    def test_packet_records_bartoc_and_rva_handoffs(self):
+        packet = build_extended_registry_handoff.build_extended_registry_handoff()
+        self.assertEqual(packet["targets"]["bartoc"]["status"], "prepared_external_submission")
+        self.assertEqual(packet["targets"]["research_vocabularies_australia"]["status"], "prepared_external_submission")
+        self.assertEqual(packet["targets"]["bartoc"]["submission_document"], "docs/registry/bartoc-submission.md")
+        self.assertEqual(packet["targets"]["research_vocabularies_australia"]["submission_document"], "docs/registry/rva-submission.md")
+
     def test_packet_records_actionable_blockers(self):
         packet = build_extended_registry_handoff.build_extended_registry_handoff()
         blockers = {item["target"]: item["message"] for item in packet["blockers"]}
