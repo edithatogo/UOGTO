@@ -985,6 +985,6 @@
   ],
   "schema": "uogto.article.module-audit-table.v1",
   "sources": [
-    "docs\\article-hardening\\quality-metrics.json"
+    "docs/article-hardening/quality-metrics.json"
   ]
 }
