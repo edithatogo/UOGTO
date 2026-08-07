@@ -51,11 +51,25 @@ UOGTO_PROJECT_FIELDS: dict[str, tuple[str, list[str]]] = {
     ),
     "Gate Type": (
         "SINGLE_SELECT",
-        ["Repo-local", "CI/validation", "External review", "External submission", "Monitoring", "Historical"],
+        [
+            "Repo-local",
+            "CI/validation",
+            "External review",
+            "External submission",
+            "Monitoring",
+            "Historical",
+        ],
     ),
     "Issue Role": (
         "SINGLE_SELECT",
-        ["Umbrella", "Workstream", "Conductor track", "Development PR", "Registry follow-up", "External gate"],
+        [
+            "Umbrella",
+            "Workstream",
+            "Conductor track",
+            "Development PR",
+            "Registry follow-up",
+            "External gate",
+        ],
     ),
     "Track ID": ("TEXT", []),
     "Track Location": ("TEXT", []),
@@ -109,7 +123,11 @@ TRACK_OVERRIDES: dict[str, dict[str, str]] = {
         "gate_type": "Repo-local",
         "description": "Bootstrap the UOGTO repository, ontology scaffold, examples, validation, and initial track context.",
     },
-    "uogto_core_ontology_20260620": {"workstream": "Ontology", "gate_type": "Repo-local", "parent_issue": "7"},
+    "uogto_core_ontology_20260620": {
+        "workstream": "Ontology",
+        "gate_type": "Repo-local",
+        "parent_issue": "7",
+    },
     "uogto_classical_cooperative_20260620": {"workstream": "Ontology", "gate_type": "Repo-local"},
     "uogto_information_epistemic_20260620": {"workstream": "Ontology", "gate_type": "Repo-local"},
     "uogto_dynamics_simulation_20260620": {"workstream": "Ontology", "gate_type": "Repo-local"},
@@ -121,25 +139,77 @@ TRACK_OVERRIDES: dict[str, dict[str, str]] = {
     "uogto_release_validation_20260620": {"workstream": "Validation", "gate_type": "CI/validation"},
     "repo_maintenance_20260621": {"workstream": "Maintenance", "gate_type": "Monitoring"},
     "maintenance_improvements_20260621": {"workstream": "Maintenance", "gate_type": "Historical"},
-    "executable_simulation_visualizer_20260621": {"workstream": "Maintenance", "gate_type": "Historical"},
+    "executable_simulation_visualizer_20260621": {
+        "workstream": "Maintenance",
+        "gate_type": "Historical",
+    },
     "scoping_review_protocol_20260621": {"workstream": "Research", "gate_type": "Historical"},
     "systematic_literature_review_20260621": {"workstream": "Research", "gate_type": "Historical"},
-    "scoping_review_execution_paper_20260621": {"workstream": "Research", "gate_type": "Repo-local"},
-    "uogto_publishing_discoverability_20260622": {"workstream": "Publishing", "gate_type": "External review"},
-    "conductor_state_reconciliation_20260622": {"workstream": "Conductor", "gate_type": "Repo-local"},
-    "manuscript_source_verification_20260622": {"workstream": "Manuscript", "gate_type": "Repo-local"},
-    "uogto_extended_discoverability_registries_20260622": {"workstream": "Registry", "gate_type": "External review"},
-    "uogto_comparative_simulation_ontology_mapping_20260624": {"workstream": "Research", "gate_type": "Repo-local", "parent_issue": "12"},
-    "uogto_article_hardening_protocol_20260624": {"workstream": "Research", "gate_type": "Repo-local"},
-    "uogto_nature_presubmission_evaluation_20260625": {"workstream": "Manuscript", "gate_type": "External submission"},
-    "repo_arxiv_submission_hardening_20260702": {"workstream": "Publishing", "gate_type": "External submission"},
-    "repo_validation_runtime_hardening_20260703": {"workstream": "Validation", "gate_type": "CI/validation"},
-    "uogto_validation_contract_coherence_20260705": {"workstream": "Validation", "gate_type": "CI/validation"},
-    "uogto_registry_publication_followthrough_20260705": {"workstream": "Registry", "gate_type": "External review"},
-    "uogto_interoperability_benchmarks_20260705": {"workstream": "Validation", "gate_type": "Repo-local"},
-    "uogto_alignment_evidence_expansion_20260705": {"workstream": "Ontology", "gate_type": "Repo-local"},
-    "uogto_manuscript_submission_revision_20260705": {"workstream": "Manuscript", "gate_type": "External submission"},
-    "uogto_bioregistry_namespace_response_20260705": {"workstream": "Registry", "gate_type": "External review"},
+    "scoping_review_execution_paper_20260621": {
+        "workstream": "Research",
+        "gate_type": "Repo-local",
+    },
+    "uogto_publishing_discoverability_20260622": {
+        "workstream": "Publishing",
+        "gate_type": "External review",
+    },
+    "conductor_state_reconciliation_20260622": {
+        "workstream": "Conductor",
+        "gate_type": "Repo-local",
+    },
+    "manuscript_source_verification_20260622": {
+        "workstream": "Manuscript",
+        "gate_type": "Repo-local",
+    },
+    "uogto_extended_discoverability_registries_20260622": {
+        "workstream": "Registry",
+        "gate_type": "External review",
+    },
+    "uogto_comparative_simulation_ontology_mapping_20260624": {
+        "workstream": "Research",
+        "gate_type": "Repo-local",
+        "parent_issue": "12",
+    },
+    "uogto_article_hardening_protocol_20260624": {
+        "workstream": "Research",
+        "gate_type": "Repo-local",
+    },
+    "uogto_nature_presubmission_evaluation_20260625": {
+        "workstream": "Manuscript",
+        "gate_type": "External submission",
+    },
+    "repo_arxiv_submission_hardening_20260702": {
+        "workstream": "Publishing",
+        "gate_type": "External submission",
+    },
+    "repo_validation_runtime_hardening_20260703": {
+        "workstream": "Validation",
+        "gate_type": "CI/validation",
+    },
+    "uogto_validation_contract_coherence_20260705": {
+        "workstream": "Validation",
+        "gate_type": "CI/validation",
+    },
+    "uogto_registry_publication_followthrough_20260705": {
+        "workstream": "Registry",
+        "gate_type": "External review",
+    },
+    "uogto_interoperability_benchmarks_20260705": {
+        "workstream": "Validation",
+        "gate_type": "Repo-local",
+    },
+    "uogto_alignment_evidence_expansion_20260705": {
+        "workstream": "Ontology",
+        "gate_type": "Repo-local",
+    },
+    "uogto_manuscript_submission_revision_20260705": {
+        "workstream": "Manuscript",
+        "gate_type": "External submission",
+    },
+    "uogto_bioregistry_namespace_response_20260705": {
+        "workstream": "Registry",
+        "gate_type": "External review",
+    },
 }
 
 EXISTING_TRACK_ISSUES = {
@@ -223,10 +293,14 @@ def parse_track_registry(root: Path) -> dict[str, dict[str, str]]:
     )
     for match in pattern.finditer(text):
         body = match.group("body")
-        description_match = re.search(r"^- \*\*Description\*\*: (?P<description>.+)$", body, re.MULTILINE)
+        description_match = re.search(
+            r"^- \*\*Description\*\*: (?P<description>.+)$", body, re.MULTILINE
+        )
         status_match = re.search(r"^- \*\*Status\*\*: (?P<status>.+)$", body, re.MULTILINE)
         registry[match.group("track")] = {
-            "description": description_match.group("description").strip() if description_match else "",
+            "description": description_match.group("description").strip()
+            if description_match
+            else "",
             "marker": match.group("marker"),
             "status": status_match.group("status").strip() if status_match else "",
             "archived_heading": "true" if match.group("archived") else "false",
@@ -253,7 +327,9 @@ def metadata_status(path: Path) -> str:
     return str(metadata.get("status", "")).strip().lower()
 
 
-def is_active_track(track_id: str, registry: dict[str, dict[str, str]], location: str, path: Path) -> bool:
+def is_active_track(
+    track_id: str, registry: dict[str, dict[str, str]], location: str, path: Path
+) -> bool:
     entry = registry.get(track_id)
     if entry:
         if entry["marker"] == "~":
@@ -275,7 +351,9 @@ def is_active_track(track_id: str, registry: dict[str, dict[str, str]], location
 
 def discover_tracks(root: Path) -> list[Track]:
     registry = parse_track_registry(root)
-    descriptions = {track_id: data["description"] for track_id, data in registry.items() if data["description"]}
+    descriptions = {
+        track_id: data["description"] for track_id, data in registry.items() if data["description"]
+    }
     tracks_dir = root / "conductor" / "tracks"
     archive_dir = root / "conductor" / "archive"
     ids: set[str] = set()
@@ -304,7 +382,11 @@ def discover_tracks(root: Path) -> list[Track]:
         active = is_active_track(track_id, registry, location, track_path)
         status = STATUS_IN_PROGRESS if active else STATUS_DONE
         issue_state = "open" if active else "closed"
-        description = override.get("description") or descriptions.get(track_id) or f"Mirror local Conductor track `{track_id}`."
+        description = (
+            override.get("description")
+            or descriptions.get(track_id)
+            or f"Mirror local Conductor track `{track_id}`."
+        )
         tracks.append(
             Track(
                 track_id=track_id,
@@ -322,24 +404,42 @@ def discover_tracks(root: Path) -> list[Track]:
 
 
 def ensure_labels(apply: bool) -> None:
-    labels_list = gh_json(["label", "list", "--repo", REPO, "--limit", "200", "--json", "name"]) or []
+    labels_list = (
+        gh_json(["label", "list", "--repo", REPO, "--limit", "200", "--json", "name"]) or []
+    )
     existing = {label["name"] for label in labels_list}
     for name, (description, color) in LABELS.items():
         if name in existing:
             continue
         print(f"create label {name}")
         if apply:
-            run(["gh", "label", "create", name, "--repo", REPO, "--description", description, "--color", color])
+            run(
+                [
+                    "gh",
+                    "label",
+                    "create",
+                    name,
+                    "--repo",
+                    REPO,
+                    "--description",
+                    description,
+                    "--color",
+                    color,
+                ]
+            )
 
 
 def load_issues() -> dict[int, dict[str, Any]]:
-    issues = gh_json(
-        [
-            "api",
-            "--paginate",
-            f"repos/{REPO}/issues?state=all&per_page=100",
-        ]
-    ) or []
+    issues = (
+        gh_json(
+            [
+                "api",
+                "--paginate",
+                f"repos/{REPO}/issues?state=all&per_page=100",
+            ]
+        )
+        or []
+    )
     normalized: dict[int, dict[str, Any]] = {}
     for issue in issues:
         if "pull_request" in issue:
@@ -365,19 +465,6 @@ def issue_track_id(issue: dict[str, Any]) -> str | None:
     if old_marker:
         return old_marker.group(1)
     return None
-
-
-def fetch_issue(number: int) -> dict[str, Any]:
-    issue = require_json(gh_json(["api", f"repos/{REPO}/issues/{number}"]), f"issue #{number}")
-    return {
-        "number": issue["number"],
-        "title": issue["title"],
-        "body": issue.get("body") or "",
-        "state": issue["state"].upper(),
-        "url": issue["html_url"],
-        "labels": issue.get("labels", []),
-        "projectItems": [],
-    }
 
 
 def set_issue_state(number: int, state: str) -> None:
@@ -489,7 +576,11 @@ def ensure_track_issues(tracks: list[Track], apply: bool) -> dict[str, dict[str,
         if track.location == "archive":
             labels.append("track-archived")
         labels.extend(WORKSTREAM_LABELS[track.workstream])
-        parent = int(TRACK_OVERRIDES.get(track.track_id, {}).get("parent_issue", PARENT_ISSUES[track.workstream]))
+        parent = int(
+            TRACK_OVERRIDES.get(track.track_id, {}).get(
+                "parent_issue", PARENT_ISSUES[track.workstream]
+            )
+        )
         milestone = MILESTONES[track.workstream]
         issue = by_track.get(track.track_id)
 
@@ -529,7 +620,9 @@ def ensure_track_issues(tracks: list[Track], apply: bool) -> dict[str, dict[str,
         else:
             number = int(issue["number"])
             body = build_issue_body(track, issue.get("body") or "")
-            already_synced = f"uogto-conductor-track-id: {track.track_id}" in (issue.get("body") or "")
+            already_synced = f"uogto-conductor-track-id: {track.track_id}" in (
+                issue.get("body") or ""
+            )
             if already_synced:
                 print(f"reuse issue #{number} for {track.track_id}")
             else:
@@ -566,7 +659,9 @@ def ensure_track_issues(tracks: list[Track], apply: bool) -> dict[str, dict[str,
 
 def ensure_project_fields(project_number: int, apply: bool) -> dict[str, dict[str, Any]]:
     fields = require_json(
-        gh_json(["project", "field-list", str(project_number), "--owner", OWNER, "--format", "json"]),
+        gh_json(
+            ["project", "field-list", str(project_number), "--owner", OWNER, "--format", "json"]
+        ),
         f"project {project_number} field list",
     )["fields"]
     existing = {field["name"]: field for field in fields}
@@ -592,7 +687,9 @@ def ensure_project_fields(project_number: int, apply: bool) -> dict[str, dict[st
                 args.extend(["--single-select-options", ",".join(options)])
             require_json(gh_json(args), f"project {project_number} field creation for {name}")
     fields = require_json(
-        gh_json(["project", "field-list", str(project_number), "--owner", OWNER, "--format", "json"]),
+        gh_json(
+            ["project", "field-list", str(project_number), "--owner", OWNER, "--format", "json"]
+        ),
         f"project {project_number} field list",
     )["fields"]
     return {field["name"]: field for field in fields}
@@ -607,11 +704,21 @@ def project_info(project_number: int) -> dict[str, Any]:
 
 def project_items(project_number: int) -> list[dict[str, Any]]:
     return require_json(
-        gh_json(["project", "item-list", str(project_number), "--owner", OWNER, "--format", "json", "--limit", "500"]),
+        gh_json(
+            [
+                "project",
+                "item-list",
+                str(project_number),
+                "--owner",
+                OWNER,
+                "--format",
+                "json",
+                "--limit",
+                "500",
+            ]
+        ),
         f"project {project_number} item list",
-    )[
-        "items"
-    ]
+    )["items"]
 
 
 def content_url(item: dict[str, Any]) -> str | None:
@@ -619,7 +726,9 @@ def content_url(item: dict[str, Any]) -> str | None:
     return content.get("url")
 
 
-def ensure_project_item(project_number: int, url: str, apply: bool, cache: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+def ensure_project_item(
+    project_number: int, url: str, apply: bool, cache: dict[str, dict[str, Any]]
+) -> dict[str, Any] | None:
     item = cache.get(url)
     if item:
         return item
@@ -653,7 +762,9 @@ def option_id(field: dict[str, Any], option_name: str) -> str:
     raise KeyError(f"option {option_name!r} not found for field {field['name']!r}")
 
 
-def set_select(project_id: str, item_id: str, field: dict[str, Any], value: str, apply: bool) -> None:
+def set_select(
+    project_id: str, item_id: str, field: dict[str, Any], value: str, apply: bool
+) -> None:
     if not apply:
         return
     run(
@@ -726,7 +837,18 @@ def delete_draft_items(project_number: int, apply: bool) -> int:
             deleted += 1
             print(f"delete stale draft item from project {project_number}: {item['title']}")
             if apply:
-                run(["gh", "project", "item-delete", str(project_number), "--owner", OWNER, "--id", item["id"]])
+                run(
+                    [
+                        "gh",
+                        "project",
+                        "item-delete",
+                        str(project_number),
+                        "--owner",
+                        OWNER,
+                        "--id",
+                        item["id"],
+                    ]
+                )
     return deleted
 
 
@@ -753,9 +875,16 @@ def mirror_items(
     uogto_info = project_info(UOGTO_PROJECT)
     rihero_info = project_info(RIHERO_PROJECT)
     uogto_fields = ensure_project_fields(UOGTO_PROJECT, apply)
-    rihero_fields = {field["name"]: field for field in gh_json(["project", "field-list", str(RIHERO_PROJECT), "--owner", OWNER, "--format", "json"])["fields"]}
+    rihero_fields = {
+        field["name"]: field
+        for field in gh_json(
+            ["project", "field-list", str(RIHERO_PROJECT), "--owner", OWNER, "--format", "json"]
+        )["fields"]
+    }
     uogto_cache = {url: item for item in project_items(UOGTO_PROJECT) if (url := content_url(item))}
-    rihero_cache = {url: item for item in project_items(RIHERO_PROJECT) if (url := content_url(item))}
+    rihero_cache = {
+        url: item for item in project_items(RIHERO_PROJECT) if (url := content_url(item))
+    }
 
     deleted_drafts = delete_draft_items(UOGTO_PROJECT, apply)
 
@@ -779,7 +908,11 @@ def mirror_items(
         if track:
             status = track.status
             workstream = track.workstream
-            exposure = "Monitoring" if track.status == STATUS_IN_PROGRESS else ("External" if track.gate_type.startswith("External") else "Repo")
+            exposure = (
+                "Monitoring"
+                if track.status == STATUS_IN_PROGRESS
+                else ("External" if track.gate_type.startswith("External") else "Repo")
+            )
             gate_type = track.gate_type
             role = "Conductor track"
             layer_8 = "Track"
@@ -817,31 +950,54 @@ def mirror_items(
             set_select(uogto_info["id"], item["id"], uogto_fields["Gate Type"], gate_type, apply)
             set_select(uogto_info["id"], item["id"], uogto_fields["Issue Role"], role, apply)
             set_text(uogto_info["id"], item["id"], uogto_fields["Track ID"], track_id or "", apply)
-            set_text(uogto_info["id"], item["id"], uogto_fields["Track Location"], track_location, apply)
+            set_text(
+                uogto_info["id"], item["id"], uogto_fields["Track Location"], track_location, apply
+            )
             set_date(uogto_info["id"], item["id"], uogto_fields["Synced"], TODAY, apply)
-        if ri_item and workstream in {"RI-HERO synthesis", "Conductor", "Ontology", "Validation", "Publishing", "Registry", "Research", "Manuscript", "Maintenance"}:
+        if ri_item and workstream in {
+            "RI-HERO synthesis",
+            "Conductor",
+            "Ontology",
+            "Validation",
+            "Publishing",
+            "Registry",
+            "Research",
+            "Manuscript",
+            "Maintenance",
+        }:
             set_select(rihero_info["id"], ri_item["id"], rihero_fields["Status"], status, apply)
             if "Workstream" in rihero_fields:
-                set_select(rihero_info["id"], ri_item["id"], rihero_fields["Workstream"], rihero_workstream(workstream), apply)
+                set_select(
+                    rihero_info["id"],
+                    ri_item["id"],
+                    rihero_fields["Workstream"],
+                    rihero_workstream(workstream),
+                    apply,
+                )
             if "Exposure" in rihero_fields:
-                set_select(rihero_info["id"], ri_item["id"], rihero_fields["Exposure"], exposure, apply)
+                set_select(
+                    rihero_info["id"], ri_item["id"], rihero_fields["Exposure"], exposure, apply
+                )
             if "Layer" in rihero_fields:
                 set_select(rihero_info["id"], ri_item["id"], rihero_fields["Layer"], layer_9, apply)
 
-    prs = gh_json(
-        [
-            "pr",
-            "list",
-            "--repo",
-            REPO,
-            "--state",
-            "all",
-            "--limit",
-            "100",
-            "--json",
-            "number,title,state,mergedAt,url",
-        ]
-    ) or []
+    prs = (
+        gh_json(
+            [
+                "pr",
+                "list",
+                "--repo",
+                REPO,
+                "--state",
+                "all",
+                "--limit",
+                "100",
+                "--json",
+                "number,title,state,mergedAt,url",
+            ]
+        )
+        or []
+    )
     merged_prs = [pr for pr in prs if pr.get("state") == "MERGED"]
     for pr in merged_prs:
         workstream = pr_workstream(pr["title"])
@@ -854,13 +1010,25 @@ def mirror_items(
             set_select(uogto_info["id"], item["id"], uogto_fields["Exposure"], exposure, apply)
             set_select(uogto_info["id"], item["id"], uogto_fields["Layer"], "Pull request", apply)
             set_select(uogto_info["id"], item["id"], uogto_fields["Gate Type"], "Repo-local", apply)
-            set_select(uogto_info["id"], item["id"], uogto_fields["Issue Role"], "Development PR", apply)
+            set_select(
+                uogto_info["id"], item["id"], uogto_fields["Issue Role"], "Development PR", apply
+            )
             set_date(uogto_info["id"], item["id"], uogto_fields["Synced"], TODAY, apply)
         if ri_item and apply:
-            set_select(rihero_info["id"], ri_item["id"], rihero_fields["Status"], STATUS_DONE, apply)
-            set_select(rihero_info["id"], ri_item["id"], rihero_fields["Workstream"], rihero_workstream(workstream), apply)
+            set_select(
+                rihero_info["id"], ri_item["id"], rihero_fields["Status"], STATUS_DONE, apply
+            )
+            set_select(
+                rihero_info["id"],
+                ri_item["id"],
+                rihero_fields["Workstream"],
+                rihero_workstream(workstream),
+                apply,
+            )
             set_select(rihero_info["id"], ri_item["id"], rihero_fields["Exposure"], exposure, apply)
-            set_select(rihero_info["id"], ri_item["id"], rihero_fields["Layer"], "Deliverable", apply)
+            set_select(
+                rihero_info["id"], ri_item["id"], rihero_fields["Layer"], "Deliverable", apply
+            )
 
     return {
         "tracks": len(tracks),
@@ -898,9 +1066,9 @@ Operating rules:
 - RI-HERO Meta-Program mirrors these UOGTO issue and pull-request items at the item level because GitHub Projects cannot nest projects.
 
 Current synchronized state as of {TODAY}:
-- {summary['tracks']} Conductor track issues mirrored from local track/archive folders.
-- {summary['workstream_issues']} umbrella/workstream issues included.
-- {summary['merged_prs']} merged pull requests included as development ledger items.
+- {summary["tracks"]} Conductor track issues mirrored from local track/archive folders.
+- {summary["workstream_issues"]} umbrella/workstream issues included.
+- {summary["merged_prs"]} merged pull requests included as development ledger items.
 - Stale draft seed items have been replaced by issue-backed project items.
 - Custom fields are populated for Workstream, Exposure, Layer, Gate Type, Issue Role, Track ID, Track Location, and Synced date.
 
@@ -929,9 +1097,9 @@ Dedicated UOGTO board:
 - https://github.com/users/{OWNER}/projects/{UOGTO_PROJECT}
 
 Mirrored UOGTO state as of {TODAY}:
-- {summary['tracks']} local Conductor tracks represented as GitHub issues with hidden `uogto-conductor-track-id` markers.
-- {summary['workstream_issues']} UOGTO umbrella/workstream issues represented.
-- {summary['merged_prs']} merged UOGTO pull requests represented as completed development ledger items.
+- {summary["tracks"]} local Conductor tracks represented as GitHub issues with hidden `uogto-conductor-track-id` markers.
+- {summary["workstream_issues"]} UOGTO umbrella/workstream issues represented.
+- {summary["merged_prs"]} merged UOGTO pull requests represented as completed development ledger items.
 - Native subissues link UOGTO workstream issues to their track issues.
 - Repo-local completion is separated from external registry, publication, and arXiv gates through Workstream, Exposure, and Layer fields.
 
