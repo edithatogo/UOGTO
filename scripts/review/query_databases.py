@@ -6,6 +6,7 @@ import os
 import sys
 
 RAW_DATA_DIR = "data/raw"
+TIMEOUT_SECONDS = 10
 
 def fetch_url(url):
     req = urllib.request.Request(
@@ -13,7 +14,7 @@ def fetch_url(url):
         headers={"User-Agent": "UOGTO-Scoping-Review-Agent/1.0 (mailto:uogto@example.org)"}
     )
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS) as response:
             return response.read()
     except Exception as e:
         print(f"Error fetching {url}: {e}", file=sys.stderr)
