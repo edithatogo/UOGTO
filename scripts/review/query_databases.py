@@ -13,7 +13,7 @@ def fetch_url(url):
         headers={"User-Agent": "UOGTO-Scoping-Review-Agent/1.0 (mailto:uogto@example.org)"}
     )
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             return response.read()
     except Exception as e:
         print(f"Error fetching {url}: {e}", file=sys.stderr)

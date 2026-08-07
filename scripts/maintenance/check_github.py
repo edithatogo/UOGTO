@@ -67,7 +67,7 @@ def get_via_api(repo=REPO):
         headers=headers
     )
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode())
             issues = []
             prs = []
