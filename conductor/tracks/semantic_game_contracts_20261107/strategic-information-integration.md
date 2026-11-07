@@ -5,6 +5,24 @@ remain pending. No ontology/runtime implementation or new IRI is claimed. Existi
 SGC.01–SGC.08 and interoperability owners remain responsible; this is not a separate
 scientific-ecosystem track or solver project.
 
+## Parallel-owner reconciliation
+
+Read the [shared reconciliation](https://github.com/edithatogo/paignia/blob/87b4bda345b85310e85239d4845b0f85bf1c6439/docs/integrations/parallel-plan-reconciliation-20261108.md)
+and [PR #126](https://github.com/edithatogo/UOGTO/pull/126), which retains the eight
+SGC leaves. UOGTO owns ontology, executable profiles and conformance fixtures;
+Paignia owns the optional Rust mapping and numerical methods. Paignia #2 merged
+a bounded core/solve seed, not a qualified general solver or semantic adapter.
+Preserve canonical full IRIs, legacy full-IRI mappings and source-specific
+CC-BY-4.0/MIT provenance where applicable; reject namespace collisions and unknown
+terms rather than silently normalising them. No ontology asset is forked here.
+
+Static SGC.08 acceptance uses version-matched SGC.01–SGC.05 evidence and does not
+wait for optional dynamic SGC.06. Voiage-specific requirements below qualify only
+this optional strategic-information composition, not every static semantic
+consumer. Semantic conformance, Rust execution and numerical validity remain
+separate. The owner PR and this supplement retain their disjoint source scopes;
+these references do not change dependency pins or task status.
+
 ## Scope
 
 Map the existing executable game subset to the game provider's response evidence
@@ -35,9 +53,10 @@ dynamic trace claims additionally need SGC.06 and qualified native dispatch.
 - [ ] SGC.06–07: distinguish solver analysis from selected-policy causal execution,
   and Python/reference origin from native execution. Unsupported concepts, unknown
   versions and missing native evidence remain explicit; no reference fallback is success.
-- [ ] SGC.08: bind the selected profile and artifacts to the exact provider and
-  Voiage consumer versions. Keep semantic, numerical, static and dynamic acceptance
-  separate; do not close the whole track from one profile-specific receipt.
+- [ ] SGC.08: for this optional integration, bind the selected profile and artifacts
+  to the exact provider and Voiage consumer versions. Keep semantic, numerical,
+  static and dynamic acceptance separate; do not close the whole track from one
+  profile-specific receipt or make this integration a universal SGC.08 prerequisite.
 
 ## Competency questions and test cases
 
