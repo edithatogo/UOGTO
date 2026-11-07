@@ -71,6 +71,15 @@ Agent review is an internal control, not external peer or domain-expert approval
 Repeated human approval is not an implementation gate in this solo-maintainer
 workflow. Unresolved semantics remain explicit alternatives or unsupported.
 
+Acceptance is scoped to the capability used. Static semantic compatibility needs
+SGC.01–SGC.05 and a version-matched SGC.08 receipt with actual Rust interchange;
+it does not require a Kairos adapter or native simulation evidence. A dynamic
+execution receipt additionally requires SGC.06's trace contract and the native
+provider's dispatch evidence. Record these outcomes separately, retaining the
+optional execution work as pending until its own checks pass. SGC.07 can label
+the known Python reference origin before a native adapter exists. Static
+acceptance does not close the whole track or any numerical/provider obligation.
+
 This change adds planning documents only. No IRI, ontology, SHACL shape,
 JSON-LD context, runtime, dependency, pin, or generated artifact changes. All
 execution and provider acceptance remain pending. Future implementation records

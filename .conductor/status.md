@@ -1,5 +1,17 @@
 # UOGTO Project Status
 
+## 2026-11-07 Static and Dynamic Game Acceptance
+
+- Refined the existing semantic-game track without changing its eight task IDs
+  or pending implementation status. Static semantic receipts require
+  SGC.01–SGC.05; dynamic claims additionally require SGC.06 and native dispatch
+  evidence. Reference-tool labelling can proceed before a native adapter exists.
+- Static acceptance leaves the dynamic receipt and optional work open. No
+  ontology, schema, runtime, dependency, pin, or provider qualification changed.
+- Focused dependency/scope checks, five local links, three existing documentation
+  tests, and `git diff --check` passed. `make validate` remains blocked by missing
+  RDFLib in the tools environment; no ontology-validation pass is claimed.
+
 ## 2026-11-07 Executable Game Contract Planning
 
 - Added `semantic_game_contracts_20261107` with eight pending leaves for the

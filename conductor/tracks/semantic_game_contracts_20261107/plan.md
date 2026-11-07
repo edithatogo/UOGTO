@@ -105,7 +105,9 @@ existing owners.
 
 - Behavior: runner-facing output/help states its reference/experimental origin
   and never presents a Python run as production Rust simulation.
-- Depends on: SGC.01 and SGC.06's agreed provenance vocabulary.
+- Depends on: the known reference-tool origin and an agreed minimal origin-label
+  vocabulary. Align those labels with SGC.01's profile when available; a completed
+  Rust provider, native adapter, or SGC.06 is not a prerequisite for honest labels.
 - Execution: local; no change to mathematical semantics or existing namespaces.
 - Files (4): `uogto/runner/engine.py`, `docs/uogto-for-game-theorists.md`,
   `README.md`, `tests/test_runner_execution_origin.py` (future).
@@ -118,8 +120,10 @@ existing owners.
 
 - Behavior: reject a consumer conformance receipt whose UOGTO profile, game
   package versions, or fixture hashes differ from the tested contract.
-- Depends on: SGC.01–SGC.07; downstream scientific-alignment owners provide
-  provider/pin qualification, not this semantic track.
+- Depends on: SGC.01–SGC.05 for a static semantic receipt. A receipt claiming
+  dynamic execution additionally requires SGC.06 and the native provider's
+  dispatch evidence. Downstream scientific-alignment owners retain provider/pin
+  qualification. SGC.07's reference-tool labels do not gate static compatibility.
 - Execution: specialist for the coherent public contract; reuse earlier reviews
   rather than adding a separate human approval chain.
 - Files (4, future): `validation/semantic-game-consumer-receipt.json`,
@@ -128,14 +132,23 @@ existing owners.
 - Check: `python -m pytest tests/test_semantic_game_receipt.py` (future target),
   `python scripts/validate_semantic_game_receipt.py` (future helper), then
   `make validate` and `make test` at the phase gate. Require nonzero passing tests
-  and real Rust interchange evidence; reject mismatched/absent evidence.
-  Acceptance establishes semantic compatibility only, not equilibrium
-  correctness, numerical validity, model validity, or a provider release.
+  and real Rust interchange evidence; reject mismatched/absent evidence for the
+  declared receipt scope. Test that a version-matched static receipt passes
+  without a Kairos adapter or native-execution receipt, while promoting that same
+  evidence to a dynamic-execution claim fails. A dynamic receipt must bind the
+  SGC.06 trace contract and actual native dispatch before it can pass.
+  Static acceptance establishes semantic compatibility only, not simulation,
+  equilibrium correctness, numerical validity, model validity, or a provider
+  release. Record static and dynamic outcomes separately within this leaf;
+  passing one scope cannot mark the other accepted.
 
 ## Completion evidence
 
 All leaves remain pending in this planning commit. Future completion records
 exact revisions, commands, test counts, fixture hashes, failures, and specialist
-findings. Preserve existing track ownership and external gates. No ontology
-term, IRI, public schema, dependency pin, runtime, or scientific claim changes
-as a side effect of creating this plan.
+findings. A qualified static semantic receipt can be consumed while SGC.06 and
+the dynamic-execution receipt remain pending. Honest reference-tool labelling
+can proceed independently. Neither partial acceptance closes the optional work
+or the whole track. Preserve existing track ownership and external gates. No
+ontology term, IRI, public schema, dependency pin, runtime, or scientific claim
+changes as a side effect of creating this plan.
