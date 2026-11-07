@@ -12,3 +12,8 @@ Status: new; all implementation leaves pending.
 This track supplies semantic contracts and conformance evidence. It does not
 replace provider qualification, implement a simulation core, change published
 IRIs, or promote historical completion into new runtime evidence.
+
+## Strategic information integration — 8 November 2026
+
+- [Owner-scoped roadmap and acceptance cases](strategic-information-integration.md).
+  Planning only; existing implementation statuses, pins and release gates remain unchanged.
