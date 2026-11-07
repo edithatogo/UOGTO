@@ -2,6 +2,11 @@
 
 This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
+## [ ] Track: semantic_game_contracts_20261107
+- **Description**: Versioned executable subset and identity-preserving mappings to the existing generic Rust game packages, with negative SHACL and round-trip evidence.
+- **Status**: New; eight implementation leaves pending. No IRI, schema, pin, or runtime change in this planning record.
+- **Link**: [./tracks/semantic_game_contracts_20261107/](./tracks/semantic_game_contracts_20261107/)
+
 ---
 
 ## [x] Track: uogto_bootstrap_20260620

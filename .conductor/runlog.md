@@ -1,5 +1,18 @@
 # Conductor Run Log
 
+## [2026-11-07] - Executable Game Contract Planning
+
+- Added and registered `semantic_game_contracts_20261107`; implementation
+  remains pending, separate from historical completed tracks.
+- Defined eight leaves with file budgets, dependencies, future acceptance
+  targets, and local/specialist review boundaries. Reuse `uogto-game-core` and
+  `uogto-game-solve`; preserve specification, instance, `PlaySession`, and trace
+  identity. Python reference tools are distinct from production Rust simulation.
+- Required `make validate` was attempted with the available tools Python and
+  stopped at `ModuleNotFoundError: No module named 'rdflib'`. RDFLib/PySHACL are
+  absent from that environment. No repository dependencies were changed and no
+  validation was waived. Structural/doc/JSON results are in the track metadata.
+
 ## [2026-07-03] - Repository Validation And Runtime Hardening
 
 - Completed repo-side implementation for `repo_validation_runtime_hardening_20260703`.

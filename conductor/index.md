@@ -21,6 +21,10 @@ implementation evidence, and GitHub project synchronization.
 - [Active track directory](./tracks/)
 - [Archived track directory](./archive/)
 
+## Pending game-package contracts
+
+- [Executable subset and semantic identity](./tracks/semantic_game_contracts_20261107/index.md)
+
 ## Operating Notes
 
 - `conductor/tracks.md` is the readable registry for all active, completed, and
