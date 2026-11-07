@@ -8,6 +8,13 @@ not repeated human approval. Split additional behavior or files into a linked
 leaf before expanding scope. Provider and numerical completion stay with their
 existing owners.
 
+Paignia is the chosen provider name. Reuse these eight leaves and issue #123;
+no separate naming or adapter track is introduced. The renamed seed is moving
+to the created Paignia repository; source transfer of `paignia-core`/`paignia-solve`
+is not publication or scientific acceptance.
+Resolve exact package IDs/revisions before running a provider-dependent leaf;
+retain `uogto-game-*` in historical receipts.
+
 ## Phase A — explicit subset and identities
 
 ### [ ] SGC.01 — reject an unsupported executable contract version
@@ -22,7 +29,8 @@ existing owners.
   `uogto/interchange/game_contract.py`, `tests/test_executable_game_subset.py`.
 - Check: `python -m pytest tests/test_executable_game_subset.py` (future target).
   Known supported fixtures pass; unknown versions and unsupported game classes
-  produce named failures. Record exact `uogto-game-core`/`uogto-game-solve` versions.
+  produce named failures. Record exact Paignia core/solver IDs and versions from
+  the selected provider artifact, including legacy IDs when auditing old evidence.
 
 ### [ ] SGC.02 — preserve full semantic identifiers in Rust interchange
 
@@ -36,6 +44,11 @@ existing owners.
 - Check: `python -m pytest tests/test_game_identifier_mapping.py` (future target).
   Distinct IRIs sharing a label or local name remain distinct; ambiguous or
   non-reversible encodings are rejected. No public namespace is renamed.
+  Cover the full `https://w3id.org/uogto/core#`,
+  `https://w3id.org/uogto/extensions#` and legacy
+  `https://kairos.dev/ontology/game-theory#` IRIs. An unreviewed same-local-name
+  pair must fail equivalence mapping; an explicitly supported versioned mapping
+  must preserve the original source identity on round trip.
 
 ### [ ] SGC.03 — prevent specification/instance/session/trace conflation
 
@@ -84,6 +97,11 @@ existing owners.
   player/payoff association. A Rust provider must independently read and emit
   the fixture. Its exact Cargo target and output hashes belong in the future
   receipt; Python echoing its own output is not cross-language qualification.
+  Select the minimal reference fixtures from the source inventory in spec.md.
+  Record source path/revision/hash, per-asset licence/attribution and any adaptation
+  in the existing receipt. UOGTO keeps authoritative semantics and fixture
+  ownership; the Paignia adapter consumes the pinned profile. Asserted examples
+  and runner test cases retain that role and cannot certify a numerical solver.
 
 ### [ ] SGC.06 — attribute a trace to its declared execution origin
 

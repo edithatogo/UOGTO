@@ -1,5 +1,30 @@
 # Conductor Run Log
 
+## 2026-11-08 - Created Paignia provider follow-up
+
+- Followed the maintainer's created repository with updated provider links and
+  provenance. Paignia is being populated with the renamed seed and T17 provider
+  work; consumer and valuation handoffs remain application-owned.
+- No ontology, namespace, fixture, dependency pin or runtime was changed. All
+  semantic and scientific acceptance remains scoped and pending; repository
+  creation is recorded separately from package publication and qualification.
+- Rechecked three existing documentation tests, created-provider/eight-leaf/
+  static-dynamic/IRI/local-link assertions and diff whitespace: passed.
+  `make validate` was retried and remains blocked by missing RDFLib.
+
+## 2026-11-07T22:05:53Z - Paignia semantic handoff reconciliation
+
+- Refined the existing eight-leaf semantic-game track and issue #123 handoff;
+  no competing track or ontology namespace was created. UOGTO retains authority,
+  while a future Paignia adapter consumes versioned profiles and minimal fixtures.
+- Preserved complete UOGTO core/extensions and legacy Kairos game-theory IRIs,
+  explicit mapping rejection, source provenance and CC-BY-4.0/MIT distinctions.
+- Validation: three existing documentation tests passed; inline pending-leaf,
+  receipt-scope, IRI/provenance and five local-link checks passed; diff whitespace
+  passed. `make validate` failed before validation because RDFLib is unavailable.
+- Static/dynamic semantic receipts, provider/package qualification and numerical
+  methods remain pending; the incubator rename is not a published release.
+
 ## [2026-11-07] - Decoupled Static and Dynamic Game Acceptance
 
 - Based on merged main `2455bdd8e527c396d95b656f457ebd5cdf3f3f1a`, refined

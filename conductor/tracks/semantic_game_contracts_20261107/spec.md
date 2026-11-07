@@ -9,13 +9,37 @@ existing SHACL suites reject representative invalid graphs. These are reference
 tooling and semantic checks, not proof of production Rust simulation or general
 solver correctness.
 
-UOGTO owns the versioned executable semantic subset and its mappings to the
-existing `uogto-game-core` and `uogto-game-solve` packages incubated in
-`new-drug-reimbursement-game`. Their provider T17 owns Rust package behavior and
-numerical qualification. Static game solving has no Kairos dependency. A
+UOGTO owns the ontology, versioned executable semantic subset, authoritative
+profiles and conformance fixtures. **Paignia** is the chosen Rust game library at
+the created [edithatogo/paignia repository](https://github.com/edithatogo/paignia).
+The renamed `paignia-core`/`paignia-solve` seed is transferring from
+`new-drug-reimbursement-game`, where its original IDs were `uogto-game-core`/
+`uogto-game-solve`. Repository creation and source transfer do not publish
+packages or qualify a provider.
+Existing receipts retain their historical package IDs. Bind future acceptance
+to the actual package IDs and immutable revision selected from provider T17.
+Paignia's transferred T17 keeps its seventeen IDs and owns Rust package behavior
+and numerical qualification; application-consumer/valuation handoffs .09/.10/.11
+retain their receiving-application owners. Static game solving
+has no Kairos dependency. A
 separate optional adapter depends on game core and Rust Kairos for simulation
 time, scheduling, state, RNG, and traces. UOGTO must not create another scheduler
 or generic game library. Domain applications retain their games and payoffs.
+
+Paignia may own a thin `paignia-uogto` adapter consuming those versioned profiles;
+UOGTO remains the semantic authority. Immediate transfer candidates are small
+reference/conformance fixtures and reusable test cases, not ontology ownership
+or the Python runner as a production engine. Inventory
+`examples/openspiel-matrix-game.jsonld`,
+`examples/pettingzoo-aec-gridworld.jsonld` and the cross-game action/payoff and
+reified/legacy mapping cases in `tests/test_game_runner.py`. Their asserted or
+illustrative origin is preserved; they do not establish actual external runtime
+interoperability or numerical correctness. Each reused asset records source
+repository/path/revision, hash, applicable licence, attribution and adaptations
+in the receiving provenance record. Ontology/documentation material retains
+CC-BY-4.0 attribution; code/tooling follows LICENSE-CODE (MIT). Inspect each
+asset before transfer. Keep one authoritative UOGTO fixture and pin a minimal
+consumer copy or generated derivative where installation requires it.
 
 Existing downstream `scientific_ecosystem_alignment_20261029` tracks retain
 provider-contract acceptance, pins, installed-consumer qualification, and their
@@ -45,6 +69,15 @@ and action identifiers, payoff ownership, and provenance. SHACL applies the
 chosen closed-world executable profile without silently tightening the entire
 open-world ontology. A proposed new term or public schema change requires its
 own explicit ontology change contract; none occurs in this planning change.
+
+The mapping inventory distinguishes canonical UOGTO
+`https://w3id.org/uogto/core#` and `https://w3id.org/uogto/extensions#` identifiers
+from Kairos's legacy `https://kairos.dev/ontology/game-theory#` identifiers.
+Preserve every complete source IRI. A matching local name or label does not
+assert equivalence: require an explicit, versioned mapping and reject ambiguous
+or unmapped terms. Do not rebrand namespaces to Paignia or relabel a Kairos
+fixture as UOGTO. Missing source attribution or provenance must be resolved
+before that fixture is redistributed as a qualified adapter input.
 
 Round trips compare semantic graphs and declared value/order invariants across
 Turtle, JSON-LD, and Rust interchange fixtures. Negative cases must detect

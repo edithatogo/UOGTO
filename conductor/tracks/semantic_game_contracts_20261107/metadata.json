@@ -4,17 +4,28 @@
   "status": "new",
   "execution_status": "pending",
   "created_at": "2026-11-07T00:00:00Z",
-  "updated_at": "2026-11-07T19:13:14Z",
-  "description": "Versioned executable UOGTO subset and identity-preserving mappings to the existing generic Rust game packages",
+  "updated_at": "2026-11-07T22:21:49Z",
+  "description": "Versioned executable UOGTO subset and identity-preserving mappings to Paignia's Rust game packages",
   "base_revision": "ac5b8e86c4a3547d008e83ba4cfcbb5f3ba95f25",
   "dependencies": [
     "uogto_interoperability_benchmarks_20260705",
-    "new-drug-reimbursement-game:T17 provider public contract"
+    "paignia:T17 provider public contract (transferred from the reimbursement incubator)"
   ],
   "preserved_ownership": "Downstream scientific_ecosystem_alignment_20261029 tracks retain provider/pin qualification; no local track with that ID exists at this base",
   "leaf_count": 8,
   "max_files_per_leaf": 5,
   "review_policy": "Routine diff and focused checks; specialist agent review at coherent semantic/public contract boundaries; no repeated human approval gate",
+  "provider_identity": {
+    "name": "Paignia",
+    "status": "chosen-name-provider-repository-created-seed-transfer-in-progress",
+    "repository": "edithatogo/paignia",
+    "incubator_repository": "edithatogo/new-drug-reimbursement-game",
+    "seed_packages": ["paignia-core", "paignia-solve"],
+    "historical_packages": ["uogto-game-core", "uogto-game-solve"],
+    "semantic_owner": "UOGTO",
+    "handoff": "https://github.com/edithatogo/UOGTO/issues/123",
+    "qualification": "Pending; bind exact provider revision and artifact before acceptance"
+  },
   "acceptance_scopes": {
     "static_semantic": {
       "status": "pending",
@@ -30,17 +41,17 @@
     }
   },
   "verification": {
-    "base_revision": "2455bdd8e527c396d95b656f457ebd5cdf3f3f1a",
-    "scope": "Planning documents only; no ontology or runtime qualification",
+    "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+    "scope": "Paignia identity, provenance and task reconciliation only; no ontology or runtime qualification",
     "status": "documentation_checks_passed_ontology_validation_blocked",
     "commands_passed": [
       "python -m pytest -q tests/test_field_expansion_roadmap.py",
-      "python - (inline dependency-closure, receipt-scope, local-link and diff-scope assertions)",
+      "python - (inline pending-leaf, receipt-scope, full-IRI, provenance and local-link assertions)",
       "git diff --check"
     ],
     "results": {
       "focused_documentation_tests": 3,
-      "stdlib_document_checks": "8 pending leaves; static closure is SGC.01–SGC.05; dynamic adds SGC.06/native evidence; reference labels independent; 5 local links; only the five authorized planning/status files changed",
+      "stdlib_document_checks": "8 pending leaves; static closure is SGC.01–SGC.05; dynamic adds SGC.06/native evidence; all three namespace families retained; per-asset provenance required; 5 local links",
       "registration_review": "Original registration: one metadata evidence-recording finding resolved; no other concrete findings"
     },
     "blocked_check": {
