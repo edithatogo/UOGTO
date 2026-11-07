@@ -1,5 +1,18 @@
 # Conductor Run Log
 
+## 2026-11-07T22:05:53Z - Paignia semantic handoff reconciliation
+
+- Refined the existing eight-leaf semantic-game track and issue #123 handoff;
+  no competing track or ontology namespace was created. UOGTO retains authority,
+  while a future Paignia adapter consumes versioned profiles and minimal fixtures.
+- Preserved complete UOGTO core/extensions and legacy Kairos game-theory IRIs,
+  explicit mapping rejection, source provenance and CC-BY-4.0/MIT distinctions.
+- Validation: three existing documentation tests passed; inline pending-leaf,
+  receipt-scope, IRI/provenance and five local-link checks passed; diff whitespace
+  passed. `make validate` failed before validation because RDFLib is unavailable.
+- Static/dynamic semantic receipts, provider/package qualification and numerical
+  methods remain pending; the incubator rename is not a published release.
+
 ## [2026-11-07] - Decoupled Static and Dynamic Game Acceptance
 
 - Based on merged main `2455bdd8e527c396d95b656f457ebd5cdf3f3f1a`, refined

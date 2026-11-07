@@ -1,5 +1,16 @@
 # UOGTO Project Status
 
+## 2026-11-08 Paignia Semantic Ownership
+
+- Recorded Paignia as the chosen library name and the incubator seed rename,
+  retaining UOGTO ontology/profile/conformance authority and historical package IDs.
+- Refined existing SGC.02/SGC.05 for full UOGTO and legacy Kairos IRI mapping,
+  minimal reusable reference fixtures and per-asset licence/provenance. All eight
+  leaves remain pending; static SGC.08 still does not require dynamic SGC.06.
+- Three existing documentation tests, inline scope/IRI/link checks and
+  `git diff --check` pass. `make validate` was attempted and remains blocked by
+  missing RDFLib. No semantic, numerical, runtime or release acceptance is claimed.
+
 ## 2026-11-07 Static and Dynamic Game Acceptance
 
 - Refined the existing semantic-game track without changing its eight task IDs
