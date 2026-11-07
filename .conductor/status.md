@@ -1,5 +1,16 @@
 # UOGTO Project Status
 
+## 2026-11-07 Executable Game Contract Planning
+
+- Added `semantic_game_contracts_20261107` with eight pending leaves for the
+  versioned executable subset, Rust package mappings, identity scopes, negative
+  SHACL checks, round trips, trace provenance, and reference-tool labelling.
+- Existing ontology/interoperability completion and downstream scientific
+  alignment ownership remain unchanged. No IRI, schema, pin, or runtime edits.
+- Planning validation is recorded in the new track metadata. The local
+  `make validate` attempt is blocked by missing RDFLib in the tools environment;
+  no ontology-validation pass or Rust execution is claimed.
+
 ## 2026-07-09 Open Issue Follow-Through
 
 - PR #84 remains merge-blocked by GitHub branch protection requiring an approving review from a writer; all required checks pass, self-approval was rejected by GitHub, and admin merge is still blocked by the same review/comment-resolution policy.
