@@ -1,5 +1,22 @@
 # Conductor Run Log
 
+## [2026-11-07] - Decoupled Static and Dynamic Game Acceptance
+
+- Based on merged main `2455bdd8e527c396d95b656f457ebd5cdf3f3f1a`, refined
+  `semantic_game_contracts_20261107` without changing task IDs or closing leaves.
+  SGC.08 records static compatibility independently; a dynamic-execution claim
+  still requires the SGC.06 trace contract and actual native-provider evidence.
+- Removed native-adapter readiness from SGC.07's reference-label prerequisite.
+  This permits honest labels without promoting reference execution to native.
+- Verification: three tests passed with `python -m pytest -q
+  tests/test_field_expansion_roadmap.py`; inline stdlib checks confirmed the
+  static dependency closure, conditional dynamic evidence, independent reference
+  labels, eight pending leaves, five local links, and the bounded diff.
+  `git diff --check` passed.
+- Required `make validate` was attempted with the available tools Python and
+  failed at import with `ModuleNotFoundError: No module named 'rdflib'`.
+  Ontology validation and all future runtime/semantic acceptance remain unverified.
+
 ## [2026-11-07] - Executable Game Contract Planning
 
 - Added and registered `semantic_game_contracts_20261107`; implementation

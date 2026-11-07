@@ -4,7 +4,7 @@
   "status": "new",
   "execution_status": "pending",
   "created_at": "2026-11-07T00:00:00Z",
-  "updated_at": "2026-11-07T00:00:00Z",
+  "updated_at": "2026-11-07T19:13:14Z",
   "description": "Versioned executable UOGTO subset and identity-preserving mappings to the existing generic Rust game packages",
   "base_revision": "ac5b8e86c4a3547d008e83ba4cfcbb5f3ba95f25",
   "dependencies": [
@@ -15,17 +15,33 @@
   "leaf_count": 8,
   "max_files_per_leaf": 5,
   "review_policy": "Routine diff and focused checks; specialist agent review at coherent semantic/public contract boundaries; no repeated human approval gate",
+  "acceptance_scopes": {
+    "static_semantic": {
+      "status": "pending",
+      "requires": ["SGC.01", "SGC.02", "SGC.03", "SGC.04", "SGC.05"],
+      "receipt_task": "SGC.08",
+      "required_evidence": "Version-matched profile, game packages and fixture hashes with actual Rust interchange; no Kairos or native-simulation prerequisite"
+    },
+    "dynamic_execution": {
+      "status": "pending",
+      "requires": ["SGC.01", "SGC.02", "SGC.03", "SGC.04", "SGC.05", "SGC.06"],
+      "receipt_task": "SGC.08",
+      "required_evidence": "Static semantic evidence plus the trace contract and actual native-provider dispatch evidence"
+    }
+  },
   "verification": {
+    "base_revision": "2455bdd8e527c396d95b656f457ebd5cdf3f3f1a",
     "scope": "Planning documents only; no ontology or runtime qualification",
     "status": "documentation_checks_passed_ontology_validation_blocked",
     "commands_passed": [
       "python -m pytest -q tests/test_field_expansion_roadmap.py",
+      "python - (inline dependency-closure, receipt-scope, local-link and diff-scope assertions)",
       "git diff --check"
     ],
     "results": {
       "focused_documentation_tests": 3,
-      "stdlib_document_checks": "8 pending leaves, exact file budgets, dependency/review/future-target declarations, historical text preservation, 57 local links, and no ontology/runtime/dependency diff passed",
-      "agent_review": "One metadata evidence-recording finding resolved; no other concrete findings"
+      "stdlib_document_checks": "8 pending leaves; static closure is SGC.01–SGC.05; dynamic adds SGC.06/native evidence; reference labels independent; 5 local links; only the five authorized planning/status files changed",
+      "registration_review": "Original registration: one metadata evidence-recording finding resolved; no other concrete findings"
     },
     "blocked_check": {
       "command": "make validate",
