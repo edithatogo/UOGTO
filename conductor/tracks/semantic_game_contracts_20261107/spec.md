@@ -10,13 +10,17 @@ tooling and semantic checks, not proof of production Rust simulation or general
 solver correctness.
 
 UOGTO owns the ontology, versioned executable semantic subset, authoritative
-profiles and conformance fixtures. **Paignia** is the chosen name of the Rust
-game library incubated in `new-drug-reimbursement-game`. Its seed is being renamed
-from `uogto-game-core`/`uogto-game-solve` to `paignia-core`/`paignia-solve`; this
-does not create a standalone repository, publish packages or qualify a provider.
+profiles and conformance fixtures. **Paignia** is the chosen Rust game library at
+the created [edithatogo/paignia repository](https://github.com/edithatogo/paignia).
+The renamed `paignia-core`/`paignia-solve` seed is transferring from
+`new-drug-reimbursement-game`, where its original IDs were `uogto-game-core`/
+`uogto-game-solve`. Repository creation and source transfer do not publish
+packages or qualify a provider.
 Existing receipts retain their historical package IDs. Bind future acceptance
 to the actual package IDs and immutable revision selected from provider T17.
-T17 owns Rust package behavior and numerical qualification. Static game solving
+Paignia's transferred T17 keeps its seventeen IDs and owns Rust package behavior
+and numerical qualification; application-consumer/valuation handoffs .09/.10/.11
+retain their receiving-application owners. Static game solving
 has no Kairos dependency. A
 separate optional adapter depends on game core and Rust Kairos for simulation
 time, scheduling, state, RNG, and traces. UOGTO must not create another scheduler

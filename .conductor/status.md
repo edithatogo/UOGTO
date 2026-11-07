@@ -1,5 +1,14 @@
 # UOGTO Project Status
 
+## 2026-11-08 Created Paignia Repository Handoff
+
+- Updated the semantic consumer contract to the created `edithatogo/paignia`
+  provider. Its renamed seed and T17 provider work are being transferred from
+  the reimbursement incubator; the seventeen T17 IDs and application handoffs
+  retain their owners. Registry publication and provider acceptance remain open.
+- UOGTO authority, per-asset provenance and the eight pending SGC leaves remain
+  unchanged. Static SGC.08 still does not depend on dynamic SGC.06.
+
 ## 2026-11-08 Paignia Semantic Ownership
 
 - Recorded Paignia as the chosen library name and the incubator seed rename,

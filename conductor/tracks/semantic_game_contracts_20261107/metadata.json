@@ -4,12 +4,12 @@
   "status": "new",
   "execution_status": "pending",
   "created_at": "2026-11-07T00:00:00Z",
-  "updated_at": "2026-11-07T22:05:53Z",
+  "updated_at": "2026-11-07T22:21:49Z",
   "description": "Versioned executable UOGTO subset and identity-preserving mappings to Paignia's Rust game packages",
   "base_revision": "ac5b8e86c4a3547d008e83ba4cfcbb5f3ba95f25",
   "dependencies": [
     "uogto_interoperability_benchmarks_20260705",
-    "new-drug-reimbursement-game:T17 provider public contract"
+    "paignia:T17 provider public contract (transferred from the reimbursement incubator)"
   ],
   "preserved_ownership": "Downstream scientific_ecosystem_alignment_20261029 tracks retain provider/pin qualification; no local track with that ID exists at this base",
   "leaf_count": 8,
@@ -17,8 +17,9 @@
   "review_policy": "Routine diff and focused checks; specialist agent review at coherent semantic/public contract boundaries; no repeated human approval gate",
   "provider_identity": {
     "name": "Paignia",
-    "status": "chosen-name-incubator-seed-rename-in-progress",
-    "repository": "edithatogo/new-drug-reimbursement-game",
+    "status": "chosen-name-provider-repository-created-seed-transfer-in-progress",
+    "repository": "edithatogo/paignia",
+    "incubator_repository": "edithatogo/new-drug-reimbursement-game",
     "seed_packages": ["paignia-core", "paignia-solve"],
     "historical_packages": ["uogto-game-core", "uogto-game-solve"],
     "semantic_owner": "UOGTO",

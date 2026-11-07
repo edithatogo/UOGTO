@@ -9,8 +9,9 @@ leaf before expanding scope. Provider and numerical completion stay with their
 existing owners.
 
 Paignia is the chosen provider name. Reuse these eight leaves and issue #123;
-no separate naming or adapter track is introduced. The incubator seed rename
-to `paignia-core`/`paignia-solve` is not publication or scientific acceptance.
+no separate naming or adapter track is introduced. The renamed seed is moving
+to the created Paignia repository; source transfer of `paignia-core`/`paignia-solve`
+is not publication or scientific acceptance.
 Resolve exact package IDs/revisions before running a provider-dependent leaf;
 retain `uogto-game-*` in historical receipts.
 
