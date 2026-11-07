@@ -1,0 +1,508 @@
+{
+  "schema": "uogto.current-evidence-snapshot.v1",
+  "snapshot_date": "2026-11-08",
+  "audit_base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+  "integrated_upstream_revision": "71139cca03f69256b9e88390dd21a3b8ad7f1dc1",
+  "scope": "Input fingerprint for reconciled semantic quality and accepted mappings; dated article evidence remains separate. Hashes identify working-tree inputs independent of the eventual commit identifier.",
+  "inputs": [
+    {
+      "path": "competency-questions/cq01-list-players.rq",
+      "sha256": "723f85195549e93a16d543857e7e7986ffc5c959af8e6262de8aaf247e5b4f5a"
+    },
+    {
+      "path": "competency-questions/cq02-list-strategies.rq",
+      "sha256": "db4f98643a1d7e890d91b32bdcd70515c1a2c9328bad01820ff8a20c2044a24e"
+    },
+    {
+      "path": "competency-questions/cq03-find-equilibria.rq",
+      "sha256": "8d2075a9db26c82b4aa8013e70566447b56d79ff74d1e7589c28529642d09706"
+    },
+    {
+      "path": "competency-questions/cq04-games-with-incomplete-information.rq",
+      "sha256": "a6a79f48dc8562b0cafcc464fa325e56ba2b06583c189a26300795d4028ee4de"
+    },
+    {
+      "path": "competency-questions/cq05-security-games-with-targets.rq",
+      "sha256": "04a83a144988f6798d8311efe433c4f704f5dfd71b8c38f5a7fe56a0dfb99929"
+    },
+    {
+      "path": "competency-questions/cq06-mechanisms-with-incentive-constraints.rq",
+      "sha256": "ccdfad4e40141ff0d6ff51727966d2f8305c2cada7ba67fa5a17535896be1052"
+    },
+    {
+      "path": "competency-questions/cq07-llm-games-with-tool-invocations.rq",
+      "sha256": "f4aead980c4a6eb130cafdbf35779367c7bd0de4cecdd6afe54fec0a9c6c9c1c"
+    },
+    {
+      "path": "competency-questions/cq08-executable-games-with-event-traces.rq",
+      "sha256": "d86b1d87010e6f8794fef1f0ca8f8e25852cd8535ca1163eef8207306db4d18c"
+    },
+    {
+      "path": "competency-questions/cq09-games-with-privacy-budget.rq",
+      "sha256": "7a69f6d81dea43292c52d6e17a15b2cb1d794debb078e2268d03bb176ad3dfca"
+    },
+    {
+      "path": "competency-questions/cq10-modules-and-imports.rq",
+      "sha256": "eb469387fe6fa4c7be124d324dabc7258c31a930353d438b20272f38dba29289"
+    },
+    {
+      "path": "competency-questions/cq11-mean-field-game-evidence.rq",
+      "sha256": "1b07aae31803cdf25840df9de7f012a8e5dd232262d6585b6c8285e5168d968e"
+    },
+    {
+      "path": "competency-questions/cq12-routing-game-evidence.rq",
+      "sha256": "7210a706a73c3509bdaa269d473a5c50f6fa7b4e0a260a91c768ffaa1a5d2d88"
+    },
+    {
+      "path": "competency-questions/cq13-evolutionary-game-evidence.rq",
+      "sha256": "6382fe7f928a39d7d3c0848236543a670b38a80729fbb7437d3173a5afc253e5"
+    },
+    {
+      "path": "competency-questions/cq14-institution-and-information-design-evidence.rq",
+      "sha256": "2551b17bc94a92349d2dc6cbaf100dd2ead31b42bae1a20f47f9194d3914c379"
+    },
+    {
+      "path": "competency-questions/cq15-marl-learning-evidence.rq",
+      "sha256": "5bc4cd5536a29081f62f56c94ce09ff03ecf1b2e0b3a7c77d4c8c1572d4a83b6"
+    },
+    {
+      "path": "competency-questions/cq16-trust-reputation-provenance-evidence.rq",
+      "sha256": "97355cd0b83bd86c267500e2b51a5b55018208ac7d57c04352ed30798e31299a"
+    },
+    {
+      "path": "competency-questions/cq17-hta-appraisal-game.rq",
+      "sha256": "b2e9be4136b69f57762ed4d20d487770edcf8e404e5f660e5fd0b053886c4644"
+    },
+    {
+      "path": "competency-questions/cq18-medical-treatment-choice.rq",
+      "sha256": "44e21ad90fb2b3cdb32e8c8c9214e99bc6d47458341ef5d9b4bf53c5fc02a2cc"
+    },
+    {
+      "path": "competency-questions/cq19-safety-coordination-game.rq",
+      "sha256": "6f371fa722a630b000411707d660cacea2daa4d24b7b123dcfc3b992c7d5cee5"
+    },
+    {
+      "path": "competency-questions/cq20-genomic-data-access-game.rq",
+      "sha256": "877163a0c8bb4f6c7fa4136e529697c1b00f3c94c394bc7d5b658745fd171614"
+    },
+    {
+      "path": "competency-questions/cq21-dynamic-game-representations.rq",
+      "sha256": "5b9460df135fcb6eb9bfcde9c975bd0ce85eed48f97441a54dbc603b91709953"
+    },
+    {
+      "path": "docs/ontology-comparison/accepted-alignments.sssom.tsv",
+      "sha256": "9cdf2100512cca84f7893b68464f01adc8b10cf28531f075fae0273d28b70f1b"
+    },
+    {
+      "path": "docs/ontology-comparison/accepted-alignments.ttl",
+      "sha256": "4016c66386715b14e4d4bd626eba7c17387a6bbcd215cacdaa65020c6f47a6e5"
+    },
+    {
+      "path": "docs/ontology-comparison/mapping-review.csv",
+      "sha256": "65d887ae52433b3b21bfd46c44b7807440f499e6a88d180d95e274cd219bc4e4"
+    },
+    {
+      "path": "examples/contract-principal-agent-game.ttl",
+      "sha256": "42306a67780c1bb7904131b94516f9b08b44823738591c0a49191d80dcc7f90d"
+    },
+    {
+      "path": "examples/cooperative-coalition-game.ttl",
+      "sha256": "74e74357d166671821a3e51fd54b2d0ba5e76e225832f053888d9f0196f78d68"
+    },
+    {
+      "path": "examples/digital-twin-security-game.ttl",
+      "sha256": "820e2e1668cd8ffd2fb6279fff7c219e0e7d6fad8b1b3cb03493b1e7fde70df7"
+    },
+    {
+      "path": "examples/dynamic-normal-form-game.ttl",
+      "sha256": "bcb3f9be3796be0d1a08034996c75d15aa1518e6ef4dcf1163519e2b2d85e39d"
+    },
+    {
+      "path": "examples/evolutionary-hawk-dove-game.ttl",
+      "sha256": "b1a237662f64c1007aab7c66845603d501b8854915b205e4f6422775d978cf18"
+    },
+    {
+      "path": "examples/extensive-form-game.ttl",
+      "sha256": "192f88c8a68bb30915a58ce74ce30ee79bb3a397ec2ced73b799e557b8f33d23"
+    },
+    {
+      "path": "examples/first-price-auction.jsonld",
+      "sha256": "4fecd1f18686fe05bb96ceb631224cc72e37a1bd8ea378fb2ce8ebde0ad18859"
+    },
+    {
+      "path": "examples/genomic-data-access-game.ttl",
+      "sha256": "e4a281a38d56057f26f1d0e75216975e90d9dcc498ee89061dadc1224280deb7"
+    },
+    {
+      "path": "examples/hta-payer-adoption-game.ttl",
+      "sha256": "0ee6663b0d4a19304b74fcca0356320cda04eb4752d8a68dcb15c245b28a4fd1"
+    },
+    {
+      "path": "examples/institutional-information-design-games.ttl",
+      "sha256": "cf7291789204a337863c9e9dd0d70475ba9e47e0b571c4501c509389eca0c411"
+    },
+    {
+      "path": "examples/llm-tool-use-game.jsonld",
+      "sha256": "f86d8166b7577930ec4c69fbf0c0fb25397445818531829232f4a244c7b302f1"
+    },
+    {
+      "path": "examples/marl-gridworld-game.jsonld",
+      "sha256": "d47b6b0a7967c9a3b88a403e9b65f3a872ff8478ec155846c240649e780c10b8"
+    },
+    {
+      "path": "examples/marl-learning-episode.ttl",
+      "sha256": "e5eaf54fe8fdd3a3c0682ee4545bc06a284e2d479f58df5ea2c76330476bb264"
+    },
+    {
+      "path": "examples/matching-market.ttl",
+      "sha256": "567e568c4905d6ce369d89d9685aa9eb8c7d0f054da51334bd86f17471d05306"
+    },
+    {
+      "path": "examples/mean-field-routing-game.ttl",
+      "sha256": "accded60e3d3b3c8b6edaa408155c2d81e73f4a9e97f33cfe0c85e499a6e15ef"
+    },
+    {
+      "path": "examples/normal-form-game.jsonld",
+      "sha256": "501faed35a18a6281f447da7a443a41fdc9ba212f5edc6d800a5519facf08481"
+    },
+    {
+      "path": "examples/openspiel-matrix-game.jsonld",
+      "sha256": "afc8b5e7bb53e83fb88e22f21757eaa8f6c5be213e584435e6813aa9abfa53e6"
+    },
+    {
+      "path": "examples/petri-net-execution-game.ttl",
+      "sha256": "adb5865dfbab57aa5f2af9c720f53c4f6dc68f8a1034d373e0343d31eaa12b18"
+    },
+    {
+      "path": "examples/pettingzoo-aec-gridworld.jsonld",
+      "sha256": "1361879788b62d0c8fa62f0a8a7f9e283cc5e4bce755987a5de2df21ff424b8f"
+    },
+    {
+      "path": "examples/prisoners-dilemma.jsonld",
+      "sha256": "7465db70ba5d07d56294768079d57598330a7939dd8dc67d91342a5885488869"
+    },
+    {
+      "path": "examples/privacy-budget-game.jsonld",
+      "sha256": "c939d748948d7edfbb5c2c226224a4d488a5d24666f8e72cab10f9e451067e7f"
+    },
+    {
+      "path": "examples/reputation-trust-game.ttl",
+      "sha256": "9b1b921b0c55b09e6f933cc21eb5d95e73a2fa76dcafc784ac50fc32952d291d"
+    },
+    {
+      "path": "examples/safety-barrier-coordination-game.ttl",
+      "sha256": "f1b5b99bcdfb6053e046141b46bcefbc5b3c720d8cad021e11de94596eb07757"
+    },
+    {
+      "path": "examples/security-stackelberg-game.jsonld",
+      "sha256": "5f9d4641b5503d43eb0ca2828f34c5021075301f40a6a1ebf89e5848bc48b7ef"
+    },
+    {
+      "path": "examples/shared-treatment-choice-game.ttl",
+      "sha256": "e9b19c82aa2bc071f8c83ed9cf3f81f20d93c178f283a42ee3347160adbfdea0"
+    },
+    {
+      "path": "examples/signalling-game.ttl",
+      "sha256": "bb289e6d520d10c8a7b3dff3f2660f487378f851e43e2aa21eac71fbcc34c575"
+    },
+    {
+      "path": "examples/stag-hunt.ttl",
+      "sha256": "2e30ecac5e13fa7a18f6538e228cebef4a86eb4aa5f0f19125e8ebab7002544b"
+    },
+    {
+      "path": "examples/stochastic-markov-game.jsonld",
+      "sha256": "0415f2544e604c88478dc911890c1eb7d45998b912889caf2ef57b69759f7ee7"
+    },
+    {
+      "path": "examples/two-route-congestion-game.ttl",
+      "sha256": "b4f54da5379a52315c1657906e3cba46af99f70b44d3acb78c57c1d6cd310874"
+    },
+    {
+      "path": "examples/voting-social-choice-game.jsonld",
+      "sha256": "eebecb27dab67757a0fb95e5a5022fe2279de4e6a6ed294cad0485698d5ad3b7"
+    },
+    {
+      "path": "jsonld/context.jsonld",
+      "sha256": "7877957945a10c383c92921b0eb8e51685d40405c1ff8c942082a6a4cd029584"
+    },
+    {
+      "path": "jsonld/core.context.jsonld",
+      "sha256": "dd1baa98ca220117c4d5d905168e2c9db3d590b53dc09c15d962078a2e4ce489"
+    },
+    {
+      "path": "jsonld/extensions.context.jsonld",
+      "sha256": "db114426facc031f2bb745d16f1bcdd235c03439b354babc1e2c6df4f8ce2d7e"
+    },
+    {
+      "path": "jsonld/packs.context.jsonld",
+      "sha256": "75626e9fc10d9666497781b9d04cf68251406de82a0cc408320541adeeead078"
+    },
+    {
+      "path": "ontologies/alignments/mcp-a2a.ttl",
+      "sha256": "91e8355764e86734cf466ebefccb0b4a1cf86f36763c0e66e1807cdbb807e198"
+    },
+    {
+      "path": "ontologies/alignments/open-games.ttl",
+      "sha256": "ac39b54de01ab52c589f4691ab8e8a622fc8126b64fd642df86356bc6c25a917"
+    },
+    {
+      "path": "ontologies/alignments/prov-o.ttl",
+      "sha256": "32d03b11dd51903e6b2beb8d6c4fcd6bbce8b26d06a97763a8ee120bf6031d2a"
+    },
+    {
+      "path": "ontologies/alignments/schema-org.ttl",
+      "sha256": "ff72ebe2a4485cf380b66e2a631521c42dd68bf5830448545aa7b2e22ba12a44"
+    },
+    {
+      "path": "ontologies/alignments/wot-thing-description.ttl",
+      "sha256": "4dae2f2c1e63adf3de26da3c18d9f8093dcc6131eddb2e5e872c794c3ccc6514"
+    },
+    {
+      "path": "ontologies/applied/genomic-policy.ttl",
+      "sha256": "a048658b120146c03829e348fec12b4f213f8ca716a6661ab47f224a532c0e1f"
+    },
+    {
+      "path": "ontologies/applied/health-economics-hta.ttl",
+      "sha256": "b47dafc63ea87ae43fd3242c9893cf2d56f9bfb7d04039f82fe2f8f53677ad3f"
+    },
+    {
+      "path": "ontologies/applied/medical-decision-modelling.ttl",
+      "sha256": "e6366b52932d5f5cb96b68933e6331b7b6c9068853f68c9345552e77882a7f38"
+    },
+    {
+      "path": "ontologies/applied/safety-systems.ttl",
+      "sha256": "8d408d5d1dbe47b607c9e703734cb0596d06f2544d17814b44ffa9456dbdf295"
+    },
+    {
+      "path": "ontologies/core/actions.ttl",
+      "sha256": "5f8070ed12573f5fcd3e380445984d5934807cad6ea133703fc47f951749bd8c"
+    },
+    {
+      "path": "ontologies/core/agents.ttl",
+      "sha256": "69cd19bbc5252e53b43fe63b0c949134e8e3579c2d96965cd9d1574e79a93cf3"
+    },
+    {
+      "path": "ontologies/core/dynamics.ttl",
+      "sha256": "f9c80b1f6505321cd9953fa6631e25ecabdfa49e9fccd77267ed902135ea45a4"
+    },
+    {
+      "path": "ontologies/core/equilibria.ttl",
+      "sha256": "641bebcf7d653663cc9ea5abbd11b4e795ad7437c5d0c88c4d37afde16002510"
+    },
+    {
+      "path": "ontologies/core/games.ttl",
+      "sha256": "13fbd77e66308c667a287dc812f3b5ba83cc4916f0e17ed15678c0eb62076dcb"
+    },
+    {
+      "path": "ontologies/core/information.ttl",
+      "sha256": "322246623ecb8c78e22c3a7c7f99333557d75d899617f4d353444079aa35d399"
+    },
+    {
+      "path": "ontologies/core/outcomes.ttl",
+      "sha256": "455d2de5dbfcb989ce55ab792d4ac446dd3b670f85b4a19ac3317ad77e8aea53"
+    },
+    {
+      "path": "ontologies/core/payoffs.ttl",
+      "sha256": "eb5122d7552acfb053e8f92b357cb77903ddfd255e4c0cc208bcd3ce40a2b66f"
+    },
+    {
+      "path": "ontologies/core/rules.ttl",
+      "sha256": "6391e55074fcc6f7ecd0f1aecf71a315bacfdcce930477a413e678dc2244ca1c"
+    },
+    {
+      "path": "ontologies/core/strategies.ttl",
+      "sha256": "7eec8a9dedfea1bb22a2b724ee78cdb0a5cf76248062de6225fe12118713d269"
+    },
+    {
+      "path": "ontologies/core/temporality.ttl",
+      "sha256": "0d09f73a87b59cf1ac199b72a20e46c41238a4ce92364636418e310da67fd23a"
+    },
+    {
+      "path": "ontologies/core/uogto-core.ttl",
+      "sha256": "4d752788fcba19d1711d2c619ca4928fa2fb681feb648ed8783c3668f2e80dfc"
+    },
+    {
+      "path": "ontologies/core/uogto-governance.ttl",
+      "sha256": "911095f5217920d10a5ad7e4126860d827422e9810616f8b6bb7bdbbf529f4e3"
+    },
+    {
+      "path": "ontologies/extensions/algorithmic-game-theory.ttl",
+      "sha256": "c960a99972c7c5dd1da5428d0da22a24333a377714bd9914f456aebdde685729"
+    },
+    {
+      "path": "ontologies/extensions/algorithmic-solvers-patch.ttl",
+      "sha256": "a8dc9eee6c7516061859d5838f59861c578b1473d5073999c926b84ca0798178"
+    },
+    {
+      "path": "ontologies/extensions/auctions.ttl",
+      "sha256": "86f7b7bd954a6d71fc9d3a03889e986a546db28c67eb06efc7c429596f035d96"
+    },
+    {
+      "path": "ontologies/extensions/bargaining.ttl",
+      "sha256": "5d66a403b0d71d57500d44eb5fff0473fa31367e3fdea827decf5f21b3888033"
+    },
+    {
+      "path": "ontologies/extensions/behavioural-games.ttl",
+      "sha256": "70d959b75d5fe42cddd1b749d62edeeab01f854a01ee1cd783ff2f6b5ccfc2c5"
+    },
+    {
+      "path": "ontologies/extensions/causal-games.ttl",
+      "sha256": "b33505b4bcb194394dc226d1797a118f1de22d3bcd9fb574bbab239a246fe3e1"
+    },
+    {
+      "path": "ontologies/extensions/compositional-open-games.ttl",
+      "sha256": "ef01115a7f4e2eaa81cb2e152355e1983d4f2a4a64676ea859401d6bb575966b"
+    },
+    {
+      "path": "ontologies/extensions/computational-social-choice.ttl",
+      "sha256": "b7f917fa89bb55cc9a31e9fb85b36eaec47ad8c93be59eeec9fca4075fc1c832"
+    },
+    {
+      "path": "ontologies/extensions/congestion-routing-games.ttl",
+      "sha256": "9aeaaa1d4d02928c75381175e1126bc0ce211b1d038449339b661f9a000d607f"
+    },
+    {
+      "path": "ontologies/extensions/contract-theory.ttl",
+      "sha256": "5bd1e30aaea93295596bd298243c07d56d78e7a514e2d1bb5fef9ff21f445242"
+    },
+    {
+      "path": "ontologies/extensions/cooperative.ttl",
+      "sha256": "c67cd7e0a74a27a40cdbdd1c2b16e127ff2790b49adf5bf0ce87df2495ffb7b0"
+    },
+    {
+      "path": "ontologies/extensions/deontic-logic.ttl",
+      "sha256": "9f092ac5f87dd08748d1bf88d917be54b41fc23f8a3ddada3ab70f46df130531"
+    },
+    {
+      "path": "ontologies/extensions/differential-hybrid-games.ttl",
+      "sha256": "dcb7636c310ebbd25eb65142a52507de55af31b4c34c6945d38f79d1d5aa36d7"
+    },
+    {
+      "path": "ontologies/extensions/digital-twin-games.ttl",
+      "sha256": "17ee8e31675b9e044e5d00fe2c57ae9547f6cb9b22a50c1cc738f71826c87fa0"
+    },
+    {
+      "path": "ontologies/extensions/epistemic-games.ttl",
+      "sha256": "f2c7131ce6026289800ed7a4c4d34a57a68969fcc8af9304d7f023cc28b4a0f6"
+    },
+    {
+      "path": "ontologies/extensions/evolutionary-games.ttl",
+      "sha256": "edc079bd5230b64696cc90d4690e777d5095e76746c7a95cf328ba8606075cdb"
+    },
+    {
+      "path": "ontologies/extensions/game-description-languages.ttl",
+      "sha256": "4b939e94e3fbd6fac9a57994c8c3953830e54836d243107a0013de031f8157cf"
+    },
+    {
+      "path": "ontologies/extensions/information-design.ttl",
+      "sha256": "adeba5d9c63bd199962ed98435f9d838cbea72dd3939ebe73a82df667a35f82c"
+    },
+    {
+      "path": "ontologies/extensions/institutional-economics.ttl",
+      "sha256": "4ab1f14a3d9081ad2668a8f8c1d782ad43674ac6f4067716efc1edc9b8a0809c"
+    },
+    {
+      "path": "ontologies/extensions/kg-execution-bindings.ttl",
+      "sha256": "929fe094c01402646e54b4d15229b3f45ede3024e630598d47d6025dc26b215b"
+    },
+    {
+      "path": "ontologies/extensions/learning-in-games.ttl",
+      "sha256": "a4063a8b9b973e8156d96bc61be6ea1aa8263f85c7e944262ba60d1f6848e4d6"
+    },
+    {
+      "path": "ontologies/extensions/llm-agent-games.ttl",
+      "sha256": "e712de90dc1d632e22094d49d45aa3fc9f8c126d119969b9ccc36946e664831b"
+    },
+    {
+      "path": "ontologies/extensions/marl.ttl",
+      "sha256": "d1f9c1d95b14c2578dee1291714967ab21299900822ac7d8e298fd6ca61f04d1"
+    },
+    {
+      "path": "ontologies/extensions/matching-allocation.ttl",
+      "sha256": "3147edc2f45a94ddd1eb3525f5985d7da228388a54ba064726b857dffd39fae2"
+    },
+    {
+      "path": "ontologies/extensions/mean-field-games.ttl",
+      "sha256": "ad8d02199efe718036b2e76928d882674fdbe41fe140ed5f9e1fa4d01f1458c1"
+    },
+    {
+      "path": "ontologies/extensions/mechanism-design.ttl",
+      "sha256": "8565ff17fa829868e353169c5f0b5122a4b644b96a4e80d47bd8fc9db741d511"
+    },
+    {
+      "path": "ontologies/extensions/network-games.ttl",
+      "sha256": "9d8034e1d33b49d06053ba54098de34d667282771b6dc65f16218d5a6db83640"
+    },
+    {
+      "path": "ontologies/extensions/petri-net-devs-hla.ttl",
+      "sha256": "0bc6f71b95c669f0434d8a10ba26c38ab58c510723f8cabb2661d28797a5b85c"
+    },
+    {
+      "path": "ontologies/extensions/privacy-disclosure.ttl",
+      "sha256": "19f9bba7583cbe30bdea6daaa8a2f9983692427641c3903b6e7cfcc9ab3160c9"
+    },
+    {
+      "path": "ontologies/extensions/security-games.ttl",
+      "sha256": "18dde8b03bbad94b311997c0083121f34ad8db96912083433011812695065516"
+    },
+    {
+      "path": "ontologies/extensions/trust-reputation-provenance.ttl",
+      "sha256": "98f8e6f2f881871bd95dee5df45aafbe47a0e49f25be7730c8d7a5c823c57e51"
+    },
+    {
+      "path": "ontologies/extensions/verification-games.ttl",
+      "sha256": "8e4ac35a373dcaf468871e31a90e9db6f5522fbc7f9a9d2af41056281116dc9d"
+    },
+    {
+      "path": "scripts/maintenance/build_article_hardening_quality.py",
+      "sha256": "2369f79f960d5489110ee67274e16e7b6d96fdf8a7ee8f531b946139f442388e"
+    },
+    {
+      "path": "shapes/applied-packs.shacl.ttl",
+      "sha256": "4daabc3abbac3b61eec444a6c40108b6d66f3a15df124e88290c93513a284f07"
+    },
+    {
+      "path": "shapes/core.shacl.ttl",
+      "sha256": "3699dc3ecc5357c77031e29f94c3108b46227f4433097f7126c5081c22dea0e4"
+    },
+    {
+      "path": "shapes/examples.shacl.ttl",
+      "sha256": "e5046677252d9f66b013fedf8d91d89b199bbc9eca2fbb44c4b4d52eb8287dc0"
+    },
+    {
+      "path": "shapes/execution.shacl.ttl",
+      "sha256": "258be2de940606a726aa0d3a58d627dc773d91bffdfcd62af8d763e0ab9794fc"
+    },
+    {
+      "path": "shapes/field-expansions.shacl.ttl",
+      "sha256": "be355dad6950a7dca48008a913075eeb7671a6d5bfd89658c278ef10f72c91c7"
+    },
+    {
+      "path": "shapes/game-types.shacl.ttl",
+      "sha256": "852d3e30c90f170b6419f1bc8297208792c3f339a71c0f5d60a3502b5a17d9d4"
+    },
+    {
+      "path": "shapes/governance.shacl.ttl",
+      "sha256": "763969039f4e2068bb9a8222431e7afe33771d249626e73062f56545acb9fb71"
+    },
+    {
+      "path": "shapes/temporality.shacl.ttl",
+      "sha256": "e922980a39a84f4a230795bf5bba49152da8893ef370c748d9295e15b2645468"
+    },
+    {
+      "path": "validation/competency-query-expectations.json",
+      "sha256": "4c2a66405c1e0ede2252c18e84482fab018f02f0b9dbcf67a857585aaec3e24a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "docs/quality/current-semantic-quality.json",
+      "sha256": "e8de8f6989128fd6376a60d1e6b2ba4486e11b97b9ab6eef42e15cc6b8bc600e"
+    },
+    {
+      "path": "docs/quality/current-semantic-quality.md",
+      "sha256": "95b6c219c5bdfe15a786b9d1845dd60f5830c237fbeb0e7581d31ad5ad3e6198"
+    }
+  ],
+  "hash_encoding_note": "SHA-256 of file bytes after LF normalisation, matching committed repository text."
+}

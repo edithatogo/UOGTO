@@ -2,9 +2,39 @@
 
 This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
-## [ ] Track: semantic_game_contracts_20261107
+## [x] Track: semantic_reconciliation_20261108
+
+- **Description**: Correct reproduced semantic, validation, mapping, packaging and reference-tool defects; reconcile Paignia and current evidence.
+- **Status**: Completed locally; 310 tests passed, one local arXiv-artifact skip. Hosted checks and merge status remain on the PR.
+- **Link**: [./tracks/semantic_reconciliation_20261108/](./tracks/semantic_reconciliation_20261108/)
+
+## [~] Track: ontology_coverage_synthesis_20261108
+
+- **Description**: Source and chart strategic predecessors, videogame vocabularies, formal languages and executable library concepts.
+- **Status**: Bounded audit OCS.01 complete; seven synthesis/evaluation leaves pending.
+- **Link**: [./tracks/ontology_coverage_synthesis_20261108/](./tracks/ontology_coverage_synthesis_20261108/)
+
+## [ ] Track: repository_maturity_20261108
+
+- **Description**: Formal semantic checks, environment compatibility, reproducible artifacts, performance and release evidence.
+- **Status**: New; six implementation leaves pending.
+- **Link**: [./tracks/repository_maturity_20261108/](./tracks/repository_maturity_20261108/)
+
+## [ ] Track: semantic_interoperability_frontier_20261108
+
+- **Description**: Qualify library interchange and test semantic preservation, composition, strategic information and game-construction hypotheses.
+- **Status**: New; twelve leaves pending. No actual external adapter or novelty claim.
+- **Link**: [./tracks/semantic_interoperability_frontier_20261108/](./tracks/semantic_interoperability_frontier_20261108/)
+
+## [ ] Track: video_game_environment_profiles_20261108
+
+- **Description**: Model bounded strategic scenarios from accessible environments and assess optional GTA relevance.
+- **Status**: New; four leaves pending. No commercial game integration claimed.
+- **Link**: [./tracks/video_game_environment_profiles_20261108/](./tracks/video_game_environment_profiles_20261108/)
+
+## [~] Track: semantic_game_contracts_20261107
 - **Description**: Versioned executable subset and identity-preserving mappings to the existing generic Rust game packages, with negative SHACL and round-trip evidence.
-- **Status**: New; eight implementation leaves pending. No IRI, schema, pin, or runtime change in this planning record.
+- **Status**: In Progress; SGC.07 reference-tool labels implemented by the reconciliation track. Seven implementation leaves and both consumer acceptance scopes remain pending.
 - **Link**: [./tracks/semantic_game_contracts_20261107/](./tracks/semantic_game_contracts_20261107/)
 
 ---

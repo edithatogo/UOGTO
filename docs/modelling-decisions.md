@@ -111,8 +111,46 @@ Before adding a new term, check the following:
 4. Is it a singleton record or release anchor? If yes, consider an individual.
 5. Is it a constraint or quality check? If yes, prefer SHACL.
 
-## 8. Cross-References
+## 8. Temporality, representation and execution
+
+`StaticGame` and `DynamicGame` classify strategic decision structure at a stated
+scope. `NormalFormRepresentation` and `ExtensiveFormRepresentation` describe how
+a game is represented. `hasRepresentation` links the specification to one or more
+representations. No representation implies either temporal class.
+
+A dynamic game can have a normal-form representation through complete contingent
+strategies. A simultaneous game can be represented as a tree whose information
+sets hide earlier moves. Successive API calls therefore need not constitute
+sequential strategic information. A repeated game and a one-shot stage use
+different identities if they receive different temporal classifications.
+
+`examples/dynamic-normal-form-game.ttl` and CQ21 demonstrate this distinction with
+a descriptive two-stage game and both representation kinds. Execution bindings
+are separate. The example does not establish a complete runnable game encoding.
+
+## 9. Solution categories and validation scope
+
+`SolutionConcept` describes a criterion; `GameSolution` describes a result meeting
+a criterion. `Equilibrium` and `AllocationSolution` are distinct result categories.
+Equilibrium computation is a computational problem, and an equilibrium predicate
+is a criterion rather than an equilibrium instance. Cooperative and bargaining
+allocations do not universally entail a strategic equilibrium profile.
+
+Default SHACL checks supplied player and probability values while allowing partial
+descriptions. A probability is finite and between zero and one; shapes allow the
+supported numeric datatypes rather than imposing a double-only OWL range. Full
+chance-distribution normalisation, information-set consistency and executable
+completeness belong to explicit game profiles.
+
+The aggregate context preserves the extension `hasActionSpace` alias. Use
+`coreHasActionSpace` for its separately declared core counterpart. Published IRIs
+remain stable, but corrected subclass entailments require downstream review.
+
+## 10. Cross-References
 
 - [Ontology design principles](ontology-design-principles.md)
 - [Ontology design patterns](ontology-design-patterns.md)
 - [Glossary](glossary.md)
+- [Semantic reconciliation and migration](semantic-reconciliation-20261108.md)
+- [Source audit and abstraction priorities](research/game-semantics-source-audit-20261108.md)
+- [Maturity and frontier programme](roadmap/frontier-programme-20261108.md)

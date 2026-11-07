@@ -1,8 +1,41 @@
 # Conductor Status
 
-Updated: `2026-07-21`
+Updated: `2026-11-08`
 
-## Active Work
+## 2026-11-08 — Semantic reconciliation and frontier programme
+
+- Reconciled the Paignia semantic handoff and strategic-information plan. UOGTO
+  owns semantics; Paignia owns computation; Kairos remains optional execution.
+  Upstream PR #126 is incorporated; the related PR #125 proposal is preserved.
+- Corrected result/criterion/computation hierarchies and causal wording; declared
+  runner predicates; added independent temporality/representation concepts and
+  CQ21; strengthened player/probability checks with passing positive controls.
+- Corrected mapping decisions to four structural narrow matches, six pending
+  domain reviews and 450 rejected candidates. Lexical scores cannot establish
+  equivalence. Earlier calibration and robustness scaffolds remain historical.
+- Reference runner/baseline output now declares its origin. Installed-wheel
+  smoke coverage and optional SVG derivative rendering are repaired.
+- Registered source-coverage, repository-maturity, frontier/interoperability and
+  video-game tracks. OCS.01 bounded audit is complete; broad source synthesis,
+  external adapters, research hypotheses and remaining leaves are pending.
+- SGC.07 is implemented; seven SGC leaves and both consumer receipt scopes remain
+  pending. Offline semantic acceptance is independent of StaticGame/DynamicGame.
+- Local verification: make validate passed; make test passed with 310 passed,
+  1 skipped (arXiv artifacts absent locally), 55 warnings; semantic audit and
+  comparison artifact checks passed. Current quality evidence covers 54 ontology
+  files, 8 shape files, 30 examples and 21 competency queries.
+- Independent internal code review found no blocking defects; its probability
+  datatype-policy observation was corrected and included in the full test run.
+- Hosted checks and merge status are reported by the pull request. No Rust solver,
+  external engine integration, exhaustive source coverage or frontier result is
+  qualified by this reconciliation.
+
+Canonical planning: [tracks](tracks.md). Programme:
+[frontier-programme-20261108](../docs/roadmap/frontier-programme-20261108.md).
+The older sections below record historical states, not current active-track counts
+or current dependency failures. Remote project boards were not resynchronised here.
+
+## Historical active-work snapshot — July 2026
 
 - `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. Live verification on 2026-07-07 confirms GitHub Project #8 is issue-backed with 68 UOGTO items: 32 Conductor track issues, 13 umbrella/workstream issues, and 23 merged pull requests. Stale draft placeholders remain removed, 21 Project #8 fields are available, PR `#72` is included as a completed publishing deliverable, and RI-HERO Project #9 mirrors the same 68 UOGTO items inside its larger 225-item program board. The only open/in-progress track is `uogto_publishing_discoverability_20260622`.
 - `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Cross-registry lessons from OLS and Bioregistry feedback were applied on 2026-07-07: LOV, OLS, and Ontobee now have supplemental comments with the core/extension namespace policy, approved sole-author/contact ORCID, and health-relevance explanation where relevant. External review/indexing remains open for LOV issue `83`, OLS public API/search visibility for issue `1305`, Ontobee issue `212`, Bioregistry issue `1999`, and any FAIRsharing curator follow-up.

@@ -1,5 +1,21 @@
 # UOGTO Project Status
 
+## 2026-11-08 — Current reconciliation evidence
+
+Canonical registry: `conductor/tracks.md`; current status and detailed verification:
+`conductor/status.md` and `conductor/tracks/semantic_reconciliation_20261108/metadata.json`.
+
+Semantic/mapping/runner repairs and the bounded source audit are implemented.
+`make validate`, semantic audit and comparison checks pass. `make test` reports
+310 passed, 1 skipped (local arXiv-artifact test), 55 warnings. SGC.07 is complete;
+seven SGC leaves and both receipt scopes remain pending. Four additional programme
+tracks retain their explicit pending implementation/research work. The status
+reporter now distinguishes canonical active tracks from historical bootstrap phases.
+
+Earlier missing-RDFLib notes below describe past environments; they are not the
+current validation result. Historical publication and board records retain their
+original scope. Hosted CI/merge status is supplied by the pull request.
+
 ## 2026-11-08 Created Paignia Repository Handoff
 
 - Updated the semantic consumer contract to the created `edithatogo/paignia`

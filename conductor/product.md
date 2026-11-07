@@ -1,13 +1,38 @@
 # Product Definition: UOGTO
 
 ## Concept
-Universal Open Game Theory Ontology (UOGTO) is a modular, version-controlled repository defining game-theoretic semantics, including classical, cooperative, multi-agent, simulation execution, mechanism design, and executable knowledge graph semantics.
+Universal Open Game Theory Ontology (UOGTO) is a modular semantic layer for game
+specifications, players, information, strategies, outcomes, solutions and execution
+provenance. It separates a specification from its instances, sessions and traces.
+Universality is a research objective, not an established coverage result.
 
 ## Automation & Maintenance
-Integrates automated dependency checks, robust C-drive protective disk guardians, semantic release tagging utilities, pre-commit git validation hooks, custom agent skills, GitHub Actions CI, and automated HTML SHACL validation reports.
+The repository provides builds, RDF/SHACL validation, competency queries, regression
+tests, packaging and GitHub Actions. Current required checks remain in force.
+Conductor records implementation and evidence separately from future research.
 
 ## Systematic Review Protocols
-Methodological scoping review protocol definitions (PRISMA-P and PRISMA-S compliant) are integrated to support systematic validation of UOGTO coverage against multi-database scholarly indices.
+Review protocols and dated acquisition/mapping records support coverage research.
+Having a protocol does not establish compliance, completed acquisition or exhaustive
+coverage. The [November audit](../docs/research/game-semantics-source-audit-20261108.md)
+records missing predecessors, source distinctions and retrieval limits.
 
-## Executable Simulation & Visualizer
-Includes an RDF-based execution runtime engine (`uogto-runner`), an interactive Streamlit-based playground/SHACL graph visualizer, and LLM-as-a-Player simulation hooks.
+## Reference tooling and computation boundary
+
+`uogto-runner` inspects graphs and looks up stored payoffs. The first-action baseline
+is deterministic; legacy LLM class names are compatibility aliases, not evidence of
+model calls. The Streamlit playground visualises graphs and validation results.
+
+[Paignia](https://github.com/edithatogo/paignia) owns reusable Rust game computation
+and adapters. UOGTO owns language-neutral semantics, source lineage, profiles and
+reference fixtures. Kairos is an optional execution provider. Actual Rust and
+external-library compatibility requires versioned receipts and executed tests.
+
+## Development priorities
+
+1. Correct reproduced defects and keep current evidence reproducible.
+2. Source and chart strategic predecessors, formal languages and library concepts.
+3. Qualify a finite executable profile through the existing semantic-contract track.
+4. Mature release and compatibility practices; measure adapters on independent cases.
+5. Test the [frontier programme](../docs/roadmap/frontier-programme-20261108.md)
+   against explicit baselines before making novelty claims.

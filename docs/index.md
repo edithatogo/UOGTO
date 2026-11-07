@@ -1,5 +1,14 @@
 # Documentation Index
 
+## Current Semantics and Programme
+
+- [November semantic reconciliation and migration](semantic-reconciliation-20261108.md)
+- [Current semantic quality evidence](quality/current-semantic-quality.md)
+- [Source audit and library abstraction priorities](research/game-semantics-source-audit-20261108.md)
+- [Machine-readable comparator register](research/game-semantics-source-register-20261108.json)
+- [Maturity and frontier programme](roadmap/frontier-programme-20261108.md)
+- [Conductor registry](../conductor/tracks.md)
+
 ## Repository Guides
 - [Ontology design patterns](ontology-design-patterns.md)
 - [Modelling decisions](modelling-decisions.md)
@@ -26,6 +35,11 @@
 - [Publication follow-up triage](registry/publication-follow-up-triage.md)
 
 ## Comparative Research
+
+The current comparison report uses corrected mapping decisions over the retained
+source corpus. Article snapshots and the older calibration/robustness reports
+retain their original inputs. See the reconciliation notes for the boundary.
+
 - [Ontology comparison report](ontology-comparison/report.md)
 - [Ontology comparison discovery protocol](ontology-comparison/discovery-protocol.md)
 - [Repository-only raw search output supplement](article-hardening/raw-search-output-supplement.md)

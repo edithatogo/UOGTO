@@ -89,23 +89,51 @@ def candidate_id(candidate):
     return "candidate-" + hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
 
 
+EQUIVALENCE_PREDICATES = {"owl:equivalentClass", "owl:equivalentProperty", "skos:exactMatch"}
+KNOWN_INCOMPATIBLE_PAIRS = {
+    ("http://www.w3.org/2002/07/owl#Thing", "https://w3id.org/uogto/extensions#Thing"):
+        "owl:Thing is the universal class; the UOGTO extension Thing is a physical device or asset counterpart.",
+    ("http://www.w3.org/ns/sosa/observes", "https://w3id.org/uogto/core#observes"):
+        "SOSA observes links a Sensor to an ObservableProperty; UOGTO observes links an agent to an observed signal or state.",
+}
+
+
+def validate_accepted_mapping(row):
+    """An accepted status or matching labels alone cannot establish equivalence."""
+    if row["review_status"] != "accepted" or row["decision_predicate"] not in EQUIVALENCE_PREDICATES:
+        return
+    pair = (row["source_term_iri"], row["uogto_term_iri"])
+    if pair in KNOWN_INCOMPATIBLE_PAIRS:
+        raise AssertionError("Incompatible equivalence: " + KNOWN_INCOMPATIBLE_PAIRS[pair])
+    evidence = json.loads(row.get("evidence_json") or "{}")
+    proof = evidence.get("semantic_equivalence_evidence")
+    if not isinstance(proof, dict) or not all(
+        isinstance(proof.get(field), str) and proof[field].strip()
+        for field in ("source_scope", "target_scope", "justification", "reference")
+    ):
+        raise AssertionError("Accepted equivalence requires scoped semantic evidence, not lexical scores")
+
+
 def prefill_decision(candidate):
     predicate = candidate["candidate_predicate"]
     confidence = float(candidate["confidence"])
     flags = set(candidate.get("review_flags", []))
     evidence = candidate.get("evidence") or {}
+    pair = (candidate["source_term_iri"], candidate["uogto_term_iri"])
+    if pair in KNOWN_INCOMPATIBLE_PAIRS:
+        return "rejected", "", "automation_semantic_guard", KNOWN_INCOMPATIBLE_PAIRS[pair]
     if predicate == "no_match":
         if evidence.get("type_compatible") is False:
-            return "rejected", "", "ontology_alignment_reviewer", "Rejected because the candidate crosses incompatible term types without an approved bridge pattern."
+            return "rejected", "", "automation_prefill", "Rejected because the candidate crosses incompatible term types without an approved bridge pattern."
         return "rejected", "", "automation_prefill", "Rejected because candidate generator classified this pair as no_match."
     if "metadata_only_source" in flags:
         return "defer_until_source_clarified", "", "automation_prefill", "Deferred until source artifact or domain review is available for metadata-only source."
     if evidence.get("external_is_uogto_parent") and predicate == "skos:narrowMatch":
-        return "accepted", predicate, "ontology_alignment_reviewer", "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence."
-    if confidence >= 0.53 and predicate in {"owl:equivalentClass", "owl:equivalentProperty", "skos:exactMatch"}:
-        return "accepted", predicate, "automation_prefill", "Accepted by deterministic exact/equivalent prefill; high-impact rows remain flagged for reviewer attention."
+        return "accepted", predicate, "repository_structural_evidence", "Accepted because the checked-in UOGTO alignment module asserts the UOGTO term as a subclass of the external source term; recorded as a conservative narrow match rather than equivalence."
+    if predicate in EQUIVALENCE_PREDICATES:
+        return "needs_domain_review", predicate, "automation_prefill", "Lexical and similarity evidence proposes a candidate only; equivalence requires explicit scoped semantic evidence."
     if confidence >= 0.55:
-        return "needs_domain_review", predicate, "automation_prefill", "Needs domain review because confidence is plausible but below automatic acceptance threshold."
+        return "needs_domain_review", predicate, "automation_prefill", "Needs domain review because similarity scores alone do not establish a mapping."
     return "needs_domain_review", predicate, "automation_prefill", "Needs domain review because confidence is low or evidence is incomplete."
 
 
@@ -161,6 +189,7 @@ def validate_review_rows(rows):
             raise AssertionError(f"Review row {index} has invalid decision predicate")
         if row["review_status"] == "accepted" and not row["decision_predicate"]:
             raise AssertionError(f"Accepted review row {index} requires decision_predicate")
+        validate_accepted_mapping(row)
         statuses[row["review_status"]] += 1
     return {"row_count": len(rows), "by_status": dict(sorted(statuses.items()))}
 
@@ -174,10 +203,11 @@ def build_alignment_graph(rows):
     graph.bind("dcterms", DCTERMS)
     graph.add((UOGTO_ALIGN.accepted_alignments, RDF.type, OWL.Ontology))
     graph.add((UOGTO_ALIGN.accepted_alignments, RDFS.label, Literal("UOGTO comparative ontology accepted alignments", lang="en")))
-    graph.add((UOGTO_ALIGN.accepted_alignments, DCTERMS.description, Literal("Accepted review-backed alignments generated from docs/ontology-comparison/mapping-review.csv.", lang="en")))
+    graph.add((UOGTO_ALIGN.accepted_alignments, DCTERMS.description, Literal("Accepted alignments supported by repository structure or scoped semantic review, generated from docs/ontology-comparison/mapping-review.csv.", lang="en")))
     for row in rows:
         if row["review_status"] != "accepted":
             continue
+        validate_accepted_mapping(row)
         predicate = APPROVED_PREDICATES[row["decision_predicate"]]
         source = URIRef(row["source_term_iri"])
         target = URIRef(row["uogto_term_iri"])
@@ -236,6 +266,8 @@ def sssom_confidence(value):
 
 def sssom_justification(row):
     evidence = json.loads(row.get("evidence_json") or "{}")
+    if evidence.get("external_is_uogto_parent"):
+        return "semapv:CompositeMatching"
     lexical_keys = ["exact_iri", "exact_label", "normalized_label", "synonym"]
     if any(evidence.get(key) for key in lexical_keys):
         return "semapv:LexicalMatching"
@@ -248,6 +280,7 @@ def sssom_rows(rows):
     accepted = [row for row in rows if row["review_status"] == "accepted"]
     output = []
     for row in accepted:
+        validate_accepted_mapping(row)
         subject_id = curie_for_iri(row["source_term_iri"])
         object_id = curie_for_iri(row["uogto_term_iri"])
         predicate_id = row["decision_predicate"]

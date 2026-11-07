@@ -1,0 +1,24 @@
+{
+  "track_id": "video_game_environment_profiles_20261108",
+  "type": "research",
+  "status": "new",
+  "execution_status": "pending",
+  "created_at": "2026-11-08T00:00:00+10:00",
+  "updated_at": "2026-11-08T00:00:00+10:00",
+  "description": "Relate real game environments to explicit strategic abstractions without conflating software titles with mathematical games",
+  "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+  "leaf_count": 4,
+  "dependencies": [
+    "semantic_reconciliation_20261108"
+  ],
+  "review_policy": "Focused internal review; scientific independent assessment is research evidence, not a repeated implementation approval gate",
+  "verification": {
+    "status": "planning_only",
+    "not_qualified": [
+      "exhaustive coverage",
+      "external interoperability",
+      "numerical validity",
+      "scientific frontier claim"
+    ]
+  }
+}

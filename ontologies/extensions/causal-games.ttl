@@ -38,7 +38,7 @@ uogtox:CounterfactualOutcome a owl:Class ;
 uogtox:StructuralEquation a owl:Class ;
     rdfs:subClassOf uogto:GameEntity ;
     rdfs:label "StructuralEquation"@en ;
-    skos:definition "An equation mapping endogenous variables to exogenous factors."@en .
+    skos:definition "An equation determining an endogenous variable as a function of its causal parent variables and exogenous factors."@en .
 
 uogtox:CausalPayoffModel a owl:Class ;
     rdfs:subClassOf uogto:GameEntity ;

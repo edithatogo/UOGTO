@@ -1,0 +1,12 @@
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Which dynamic games have normal-form representations and simultaneous choices?
+SELECT DISTINCT ?game ?representation ?action WHERE {
+    ?game a/rdfs:subClassOf* uogto:DynamicGame ;
+          uogto:hasRepresentation ?representation ;
+          uogto:hasState/uogto:hasAvailableAction ?action .
+    ?representation a/rdfs:subClassOf* uogto:NormalFormRepresentation .
+    ?action a/rdfs:subClassOf* uogto:SimultaneousAction .
+}
+ORDER BY ?game ?representation ?action

@@ -254,6 +254,46 @@
     },
     "steward": {
       "@id": "uogto:steward"
+    },
+    "AllocationSolution": "uogto:AllocationSolution",
+    "DynamicGame": "uogto:DynamicGame",
+    "ExtensiveFormRepresentation": "uogto:ExtensiveFormRepresentation",
+    "GameRepresentation": "uogto:GameRepresentation",
+    "GameSolution": "uogto:GameSolution",
+    "NormalFormRepresentation": "uogto:NormalFormRepresentation",
+    "SolutionConcept": "uogto:SolutionConcept",
+    "StaticGame": "uogto:StaticGame",
+    "belongsToPlayer": {
+      "@id": "uogto:belongsToPlayer",
+      "@type": "@id"
+    },
+    "hasAction": {
+      "@id": "uogto:hasAction",
+      "@type": "@id"
+    },
+    "hasActionProfile": {
+      "@id": "uogto:hasActionProfile",
+      "@type": "@id"
+    },
+    "hasActionSpace": {
+      "@id": "uogto:hasActionSpace",
+      "@type": "@id"
+    },
+    "hasPayoffMapping": {
+      "@id": "uogto:hasPayoffMapping",
+      "@type": "@id"
+    },
+    "hasRepresentation": {
+      "@id": "uogto:hasRepresentation",
+      "@type": "@id"
+    },
+    "hasSolutionConcept": {
+      "@id": "uogto:hasSolutionConcept",
+      "@type": "@id"
+    },
+    "coreHasActionSpace": {
+      "@id": "uogto:hasActionSpace",
+      "@type": "@id"
     }
   }
 }

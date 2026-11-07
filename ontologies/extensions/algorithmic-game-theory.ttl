@@ -21,7 +21,7 @@ uogtox:ComputationalProblem a owl:Class ;
     skos:definition "A problem computing strategic options."@en .
 
 uogtox:EquilibriumComputationProblem a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogtox:ComputationalProblem ;
     rdfs:label "EquilibriumComputationProblem"@en ;
     skos:definition "The specific task of finding game equilibria."@en .
 

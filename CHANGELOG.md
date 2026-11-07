@@ -1,4 +1,32 @@
 # Changelog
+
+## [Unreleased] — 2026-11-08 reconciliation
+
+### Semantic corrections
+
+- Separate solution criteria, allocation/equilibrium results and computational
+  problems; correct structural-equation direction. Existing IRIs are preserved,
+  but incorrect subclass entailments are removed.
+- Declare runner-used predicates; preserve the aggregate extension action-space
+  alias and add `coreHasActionSpace` for the core relation.
+- Add independent static/dynamic and normal/extensive representation concepts,
+  consistency shapes, a descriptive example and CQ21.
+- Reject literal player references and invalid/nonfinite probabilities; align
+  probability's datatype policy with supported numeric SHACL controls.
+- Remove unsupported accepted equivalences; retain four structural narrow matches
+  and require scoped evidence before exporting equivalence mappings.
+
+### Tooling and evidence
+
+- Label reference graph inspection and deterministic first-action behavior;
+  preserve legacy LLM aliases without implying model or native solver calls.
+- Exercise installed wheel imports outside the checkout; tolerate unavailable
+  optional image derivatives while preserving canonical SVG.
+- Report canonical active Conductor tracks separately from historical phases.
+- Add a bounded source audit, current quality evidence, migration notes and scoped
+  coverage, maturity, interoperability/frontier and video-game plans. External
+  adapters and general solver qualification remain pending.
+
 ## [2026-06-22]
 
 ### Bug Fixes

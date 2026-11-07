@@ -41,7 +41,7 @@ uogtox:CoplayFunction a owl:Class ;
     skos:definition "The function implementing game backward utility transfers."@en .
 
 uogtox:EquilibriumPredicate a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogto:SolutionConcept ;
     rdfs:label "EquilibriumPredicate"@en ;
     skos:definition "Predicate defining local equilibrium conditions."@en .
 
@@ -72,7 +72,7 @@ uogtox:hasEquilibriumPredicate a owl:ObjectProperty ;
     rdfs:label "hasEquilibriumPredicate"@en ;
     rdfs:domain uogtox:OpenGame ;
     rdfs:range uogtox:EquilibriumPredicate ;
-    skos:definition "Links an open game to its local equilibria."@en .
+    skos:definition "Links an open game to the predicate specifying its local equilibrium conditions."@en .
 
 uogtox:hasComposition a owl:ObjectProperty ;
     rdfs:label "hasComposition"@en ;
