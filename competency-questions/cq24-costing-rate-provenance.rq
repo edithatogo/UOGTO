@@ -1,0 +1,8 @@
+PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+# Effective time, knowledge time, release identity and valuation basis are distinct.
+SELECT ?quote ?release ?basis ?currency ?effectiveFrom ?knownFrom ?evidence
+WHERE {
+  ?quote a cost:UnitQuote ; cost:rateRelease ?release ; cost:valuationBasis ?basis ;
+    cost:currency ?currency ; cost:effectiveFrom ?effectiveFrom ; cost:knownFrom ?knownFrom ;
+    cost:evidenceReference ?evidence .
+}

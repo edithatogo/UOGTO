@@ -1,0 +1,174 @@
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://w3id.org/uogto/packs/costing-valuation> a owl:Ontology ;
+    rdfs:label "UOGTO Applied Pack - Costing and Valuation"@en ;
+    owl:versionInfo "0.1.0" ;
+    owl:imports <https://w3id.org/uogto/core> ;
+    skos:definition "An optional vocabulary for resource measurement, valuation, allocation, provenance and evidence of costing-reporting requirements. Importing the pack does not make a costing study, resource or amount a game or payoff."@en ;
+    rdfs:comment "Shapes check declared data consistency. They do not implement a costing engine, establish clinical appropriateness, verify sources or establish compliance with a reporting instrument. External seeAlso links indicate related vocabulary, not equivalence. The separate costing-hta bridge makes any payoff transformation explicit."@en .
+
+# Measurement, valuation and accounting boundaries.
+cost:CostingStudy a owl:Class ; rdfs:label "Costing study"@en ; skos:definition "A bounded investigation that measures resource use and applies explicit valuation and allocation policies for a decision purpose."@en .
+cost:StudyPopulation a owl:Class ; rdfs:label "Study population"@en ; skos:definition "The population and eligibility boundary to which a costing study applies."@en .
+cost:Perspective a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "Perspective"@en ; skos:definition "The viewpoint that determines whose resource consequences, transfers and outcomes are included."@en .
+cost:ValuationBasis a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "Valuation basis"@en ; skos:definition "The interpretation of a monetary amount, such as opportunity cost, expenditure, accounting cost, tariff or payment. A common currency does not make these interpretations interchangeable."@en .
+cost:ValuationPolicy a owl:Class ; rdfs:label "Valuation policy"@en ; skos:definition "A versionable choice of valuation basis, currency, price year, perspective and transformations applied to measured quantities."@en .
+cost:Resource a owl:Class ; rdfs:label "Resource"@en ; skos:definition "A labour, material, equipment, facility, time or other input that may be consumed, occupied or forgone."@en .
+cost:CostObject a owl:Class ; rdfs:label "Cost object"@en ; skos:definition "An identified person, specimen, episode, batch, service or other entity to which resource use or an allocated cost is attributed."@en .
+cost:OutputUnit a owl:Class ; rdfs:label "Output unit"@en ; skos:definition "An explicitly defined service-output denominator used to express a result, independently of the resource units used to produce it."@en .
+cost:ProductionBatch a owl:Class ; rdfs:subClassOf cost:CostObject ; rdfs:label "Production batch"@en ; skos:definition "A shared production event or group with an identity separate from the persons, specimens and outputs that benefit from it."@en .
+cost:ResourceUse a owl:Class ; owl:disjointWith cost:ActivityMeasure ; rdfs:label "Resource use"@en ; skos:definition "A uniquely identified observation or assumption about consumption, occupancy or forgone use of a specified resource for a cost object."@en ; rdfs:seeAlso qudt:QuantityValue .
+cost:ActivityMeasure a owl:Class ; rdfs:label "Activity measure"@en ; skos:definition "A count, duration or other measure of process activity or output. It is not itself resource consumption; valuation requires an explicit resource recipe or costing model."@en ; rdfs:seeAlso qudt:QuantityValue .
+cost:RationalValue a owl:Class ; rdfs:label "Rational value"@en ; skos:definition "An exact ratio of an integer numerator to a strictly positive integer denominator. This representation preserves non-terminating rational inputs without coercing them to decimal or binary floating-point approximations."@en .
+cost:UnitQuote a owl:Class ; rdfs:label "Unit quote"@en ; skos:definition "A sourced monetary amount per specified resource unit, with a valuation basis, effective interval and separate knowledge date."@en ; rdfs:seeAlso prov:Entity .
+cost:RateRelease a owl:Class ; rdfs:label "Rate release"@en ; skos:definition "An immutable identified collection of unit quotes available at a stated knowledge time. A later correction requires a distinct release identity."@en ; rdfs:seeAlso prov:Entity .
+cost:CostingMethod a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "Costing method"@en ; skos:definition "An explicit approach to identifying, measuring, valuing or allocating resources; distinct from a reporting instrument."@en .
+cost:ValuationLine a owl:Class ; rdfs:label "Valuation line"@en ; skos:definition "A traceable monetary valuation of one resource-use observation or an activity measure with an explicit valuation recipe, for one policy, component and scenario."@en .
+cost:ComponentLedger a owl:Class ; rdfs:label "Component ledger"@en ; skos:definition "A collection of source valuation lines under one policy. Allocating a line to recipients does not create an additional incurred expense."@en .
+cost:CostPool a owl:Class ; rdfs:label "Cost pool"@en ; skos:definition "A declared total of identified ledger lines to be allocated once across cost objects, with explicit unallocated residuals."@en .
+cost:AllocationPolicy a owl:Class ; rdfs:label "Allocation policy"@en ; skos:definition "A declared rule and driver for distributing a shared resource or cost pool, including treatment of unused capacity."@en .
+cost:Allocation a owl:Class ; rdfs:label "Allocation"@en ; skos:definition "A recipient's share of an existing cost pool. It is an attribution of the pool, not new resource consumption or a second valuation line."@en .
+cost:EvidenceArtifact a owl:Class ; rdfs:label "Evidence artifact"@en ; skos:definition "An identified source, extraction, observation, calculation or report fragment that supports an assertion, with its evidence and access status declared separately."@en ; rdfs:seeAlso prov:Entity .
+
+# Process semantics are independent of a particular execution engine or game model.
+cost:ProcessModel a owl:Class ; rdfs:label "Process model"@en ; skos:definition "A specification of activities and resource-production logic, optionally represented by a recipe, Petri net or BPMN model. This term does not claim that the model can be executed by this ontology."@en .
+cost:ProcessActivity a owl:Class ; rdfs:label "Process activity"@en ; skos:definition "An identified activity in a production or care process, with measurement and resource-use observations kept separate."@en ; rdfs:seeAlso prov:Activity .
+cost:ProcessExecution a owl:Class ; rdfs:label "Process execution"@en ; skos:definition "One actual or simulated realization of a process model, distinct from the model specification."@en ; rdfs:seeAlso prov:Activity .
+cost:Scenario a owl:Class ; rdfs:label "Scenario"@en ; skos:definition "A named combination of policy, model and input assumptions under which a valuation is evaluated."@en .
+cost:ParameterDraw a owl:Class ; rdfs:label "Parameter draw"@en ; skos:definition "An identified joint realization of uncertain model parameters. It is distinct from a person, subgroup and stochastic process realization."@en .
+cost:UncertaintySpecification a owl:Class ; owl:disjointWith cost:HeterogeneityDimension ; rdfs:label "Uncertainty specification"@en ; skos:definition "A description of uncertainty about parameters, measurements, methods, structures or stochastic realizations, with dependence assumptions explicit when used."@en .
+cost:HeterogeneityDimension a owl:Class ; rdfs:label "Heterogeneity dimension"@en ; skos:definition "A characteristic along which real populations, organizations or settings vary; distinct from uncertainty about the characteristic or its effects."@en .
+
+# Reporting records retain each instrument's identity and purpose.
+cost:ReportingDomain a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "Reporting domain"@en ; skos:definition "A reconciliation concept grouping related information needs across instruments without making their individual requirements equivalent."@en .
+cost:ReportingInstrument a owl:Class ; rdfs:label "Reporting instrument"@en ; skos:definition "An identified reporting guideline, conduct guide, reference case, appraisal tool or other requirement source, whose purpose is declared rather than conflated with other kinds of instrument."@en .
+cost:InstrumentVersion a owl:Class ; rdfs:label "Instrument version"@en ; skos:definition "A particular source-backed edition of an instrument. A domain mapping does not assert that every numbered requirement has been extracted or verified."@en .
+cost:ReportingRequirement a owl:Class ; rdfs:label "Reporting requirement"@en ; skos:definition "One identified requirement in a particular instrument version, represented by a source-grounded paraphrase and its original item identifier."@en .
+cost:ReportingProfile a owl:Class ; rdfs:label "Reporting profile"@en ; skos:definition "An explicit selection of instrument versions and requirements for a study context. A profile may combine sources while preserving their applicability and authority."@en .
+cost:RequirementMapping a owl:Class ; rdfs:label "Requirement mapping"@en ; skos:definition "A qualified, reasoned link from an instrument requirement to a domain concept or ontology term. It is not an OWL equivalence claim."@en .
+cost:Assessment a owl:Class ; rdfs:label "Assessment"@en ; skos:definition "An evidence-bearing judgment with an explicit purpose, method and assessed artifact. Reporting, methodological appraisal, computational verification and empirical validation are different assessment purposes."@en .
+cost:ReportingAssertion a owl:Class ; rdfs:subClassOf cost:Assessment ; rdfs:label "Reporting assertion"@en ; skos:definition "A study-specific assessment of a requirement's applicability and reporting status with supporting evidence. Reporting completeness is not a judgment of scientific validity or proper conduct."@en .
+cost:MethodologicalAssessment a owl:Class ; rdfs:subClassOf cost:Assessment ; rdfs:label "Methodological assessment"@en ; skos:definition "An appraisal of the suitability, conduct, assumptions or potential biases of a study's methods. It is separate from whether those methods were reported."@en .
+cost:ComputationalVerification a owl:Class ; rdfs:subClassOf cost:Assessment ; rdfs:label "Computational verification"@en ; skos:definition "An assessment of whether an implementation satisfies specified computational contracts, mathematical identities or test expectations. Passing verification does not establish empirical validity."@en .
+cost:EmpiricalValidation a owl:Class ; rdfs:subClassOf cost:Assessment ; rdfs:label "Empirical validation"@en ; skos:definition "An assessment of agreement between model behavior or predictions and relevant independent empirical evidence, with the scope and limitations of that evidence explicit."@en .
+
+# Open properties allow external domain packs to specialize the framework.
+cost:hasPerspective a owl:ObjectProperty ; rdfs:range cost:Perspective ; rdfs:label "has perspective"@en ; skos:definition "Identifies the viewpoint of a study or valuation policy."@en .
+cost:hasPopulation a owl:ObjectProperty ; rdfs:range cost:StudyPopulation ; rdfs:label "has population"@en ; skos:definition "Identifies a study's population boundary."@en .
+cost:valuationPolicy a owl:ObjectProperty ; rdfs:range cost:ValuationPolicy ; rdfs:label "valuation policy"@en ; skos:definition "Identifies the valuation policy used by a study, ledger or line."@en .
+cost:valuationBasis a owl:ObjectProperty ; rdfs:range cost:ValuationBasis ; rdfs:label "valuation basis"@en ; skos:definition "States the interpretation of a quote or valuation policy's monetary amounts."@en .
+cost:hasMethod a owl:ObjectProperty ; rdfs:range cost:CostingMethod ; rdfs:label "has method"@en ; skos:definition "Identifies a costing method used in a study."@en .
+cost:hasLedger a owl:ObjectProperty ; rdfs:range cost:ComponentLedger ; rdfs:label "has ledger"@en ; skos:definition "Links a study to a ledger of source valuations."@en .
+cost:hasLine a owl:ObjectProperty ; rdfs:range cost:ValuationLine ; rdfs:label "has line"@en ; skos:definition "Includes a source valuation line in a component ledger."@en .
+cost:usesResource a owl:ObjectProperty ; rdfs:range cost:Resource ; rdfs:label "uses resource"@en ; skos:definition "Identifies the input whose use is measured."@en .
+cost:forCostObject a owl:ObjectProperty ; rdfs:range cost:CostObject ; rdfs:label "for cost object"@en ; skos:definition "Identifies the entity to which a resource-use observation or activity measure is attributed."@en .
+cost:unit a owl:ObjectProperty ; rdfs:label "unit"@en ; skos:definition "Identifies the measurement unit using an IRI, preferably a suitable QUDT unit or an explicitly defined domain unit."@en ; rdfs:seeAlso qudt:unit .
+cost:perUnit a owl:ObjectProperty ; rdfs:label "per unit"@en ; skos:definition "Identifies the resource unit in the denominator of a unit quote."@en ; rdfs:seeAlso qudt:Unit .
+cost:quantityExact a owl:ObjectProperty ; rdfs:range cost:RationalValue ; rdfs:label "exact quantity"@en ; skos:definition "Specifies a resource or activity quantity as an exact rational value, as an alternative to a decimal quantity."@en .
+cost:quoteAmountExact a owl:ObjectProperty ; rdfs:range cost:RationalValue ; rdfs:label "exact quote amount"@en ; skos:definition "Specifies a monetary rate as an exact rational value, as an alternative to a decimal quote amount."@en .
+cost:outputUnit a owl:ObjectProperty ; rdfs:range cost:OutputUnit ; rdfs:label "output unit"@en ; skos:definition "Specifies the independently defined output denominator for a reported result."@en .
+cost:appliesToResource a owl:ObjectProperty ; rdfs:range cost:Resource ; rdfs:label "applies to resource"@en ; skos:definition "Identifies the resource priced by a quote."@en .
+cost:rateRelease a owl:ObjectProperty ; rdfs:range cost:RateRelease ; rdfs:label "rate release"@en ; skos:definition "Identifies the immutable release containing a unit quote."@en .
+cost:hasQuote a owl:ObjectProperty ; rdfs:range cost:UnitQuote ; rdfs:label "has quote"@en ; skos:definition "Includes a quote in a rate release."@en .
+cost:usedQuote a owl:ObjectProperty ; rdfs:range cost:UnitQuote ; rdfs:label "used quote"@en ; skos:definition "Identifies the quote used in a valuation line."@en .
+cost:sourceResourceUse a owl:ObjectProperty ; rdfs:range cost:ResourceUse ; rdfs:label "source resource use"@en ; skos:definition "Identifies the resource-use observation valued by a line."@en .
+cost:sourceActivityMeasure a owl:ObjectProperty ; rdfs:range cost:ActivityMeasure ; rdfs:label "source activity measure"@en ; skos:definition "Identifies an activity measure valued through the line's explicit recipe."@en .
+cost:componentLedger a owl:ObjectProperty ; rdfs:range cost:ComponentLedger ; rdfs:label "component ledger"@en ; skos:definition "Identifies the ledger supplying the components of a cost pool."@en .
+cost:hasComponentLine a owl:ObjectProperty ; rdfs:range cost:ValuationLine ; rdfs:label "has component line"@en ; skos:definition "Identifies an existing source valuation line included once in a cost pool."@en .
+cost:allocationPolicy a owl:ObjectProperty ; rdfs:range cost:AllocationPolicy ; rdfs:label "allocation policy"@en ; skos:definition "Identifies the rule governing allocation of a pool."@en .
+cost:hasAllocation a owl:ObjectProperty ; rdfs:range cost:Allocation ; rdfs:label "has allocation"@en ; skos:definition "Identifies one attribution of a cost pool."@en .
+cost:fromPool a owl:ObjectProperty ; rdfs:range cost:CostPool ; rdfs:label "from pool"@en ; skos:definition "Identifies the existing cost pool attributed by an allocation."@en .
+cost:allocatedTo a owl:ObjectProperty ; rdfs:range cost:CostObject ; rdfs:label "allocated to"@en ; skos:definition "Identifies the recipient cost object of an allocation."@en .
+cost:hasMember a owl:ObjectProperty ; rdfs:range cost:CostObject ; rdfs:label "has member"@en ; skos:definition "Records membership of a specimen or other cost object in a shared batch without implying identity or additional resource use."@en .
+cost:relatedCostObject a owl:ObjectProperty ; rdfs:range cost:CostObject ; rdfs:label "related cost object"@en ; skos:definition "Links distinct domain cost objects, such as a specimen and its infant, without collapsing their identities."@en .
+cost:evidenceReference a owl:ObjectProperty ; rdfs:label "evidence reference"@en ; skos:definition "Identifies an evidence artifact, accessible document or report fragment supporting a claim. Presence of a link alone does not verify the claim."@en ; rdfs:seeAlso prov:wasDerivedFrom .
+cost:sourceURL a owl:ObjectProperty ; rdfs:label "source URL"@en ; skos:definition "Identifies the retrievable source location of an instrument version or evidence artifact."@en .
+cost:hasProcessModel a owl:ObjectProperty ; rdfs:range cost:ProcessModel ; rdfs:label "has process model"@en ; skos:definition "Identifies the process specification used in a costing study."@en .
+cost:realizesModel a owl:ObjectProperty ; rdfs:range cost:ProcessModel ; rdfs:label "realizes model"@en ; skos:definition "Links a process execution to its specification."@en .
+cost:forActivity a owl:ObjectProperty ; rdfs:range cost:ProcessActivity ; rdfs:label "for activity"@en ; skos:definition "Identifies the activity associated with a measurement."@en .
+cost:hasUncertainty a owl:ObjectProperty ; rdfs:range cost:UncertaintySpecification ; rdfs:label "has uncertainty"@en ; skos:definition "Attaches an explicit uncertainty description to a study, input or method."@en .
+cost:hasHeterogeneityDimension a owl:ObjectProperty ; rdfs:range cost:HeterogeneityDimension ; rdfs:label "has heterogeneity dimension"@en ; skos:definition "Identifies a dimension of actual variation considered in a study."@en .
+cost:hasVersion a owl:ObjectProperty ; rdfs:range cost:InstrumentVersion ; rdfs:label "has version"@en ; skos:definition "Identifies an edition of a reporting or methods instrument."@en .
+cost:belongsToInstrument a owl:ObjectProperty ; rdfs:range cost:ReportingInstrument ; rdfs:label "belongs to instrument"@en ; skos:definition "Identifies the instrument of which an edition is a version."@en .
+cost:hasRequirement a owl:ObjectProperty ; rdfs:range cost:ReportingRequirement ; rdfs:label "has requirement"@en ; skos:definition "Identifies a source-grounded item in an instrument version."@en .
+cost:belongsToVersion a owl:ObjectProperty ; rdfs:range cost:InstrumentVersion ; rdfs:label "belongs to version"@en ; skos:definition "Identifies the exact edition from which a requirement was drawn."@en .
+cost:coversDomain a owl:ObjectProperty ; rdfs:range cost:ReportingDomain ; rdfs:label "covers domain"@en ; skos:definition "Records domain-level coverage without asserting complete item-level extraction or equivalence."@en .
+cost:includesRequirement a owl:ObjectProperty ; rdfs:range cost:ReportingRequirement ; rdfs:label "includes requirement"@en ; skos:definition "Selects a requirement into a reporting profile."@en .
+cost:includesInstrumentVersion a owl:ObjectProperty ; rdfs:range cost:InstrumentVersion ; rdfs:label "includes instrument version"@en ; skos:definition "Selects an explicitly identified instrument edition into a profile."@en .
+cost:sourceRequirement a owl:ObjectProperty ; rdfs:range cost:ReportingRequirement ; rdfs:label "source requirement"@en ; skos:definition "Identifies the source item described by a qualified mapping."@en .
+cost:mappedConcept a owl:ObjectProperty ; rdfs:label "mapped concept"@en ; skos:definition "Identifies a reconciliation concept, class or property related to a requirement, without treating the requirement and the term as equivalent."@en .
+cost:reportsRequirement a owl:ObjectProperty ; rdfs:range cost:ReportingRequirement ; rdfs:label "reports requirement"@en ; skos:definition "Identifies the source requirement evaluated by a study-specific reporting assertion."@en .
+cost:assessedStudy a owl:ObjectProperty ; rdfs:range cost:CostingStudy ; rdfs:label "assessed study"@en ; skos:definition "Identifies the costing study to which a reporting assertion applies."@en .
+cost:assessedArtifact a owl:ObjectProperty ; rdfs:label "assessed artifact"@en ; skos:definition "Identifies the study, model, implementation, dataset or other artifact to which an assessment applies."@en .
+
+# Numeric and temporal data retain exact decimal values and two time axes.
+cost:quantity a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "quantity"@en ; skos:definition "The nonnegative magnitude of an explicitly identified resource or activity measurement."@en .
+cost:resourceUseId a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "resource use identifier"@en ; skos:definition "A stable observation identifier used to detect repeated valuation of the same consumption within a component and scenario."@en .
+cost:quoteAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "quote amount"@en ; skos:definition "The nonnegative monetary amount per quoted resource unit before policy-specific transformations."@en .
+cost:exactNumerator a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "exact numerator"@en ; skos:definition "The integer numerator of an exact rational value; no decimal approximation is implied."@en .
+cost:exactDenominator a owl:DatatypeProperty ; rdfs:range xsd:positiveInteger ; rdfs:label "exact denominator"@en ; skos:definition "The strictly positive integer denominator of an exact rational value."@en .
+cost:lineAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "line amount"@en ; skos:definition "The decimal monetary output assigned by a source valuation line under its declared policy; a negative adjustment requires an explanation. Exact rational inputs are supported, but conversion and rounding to this decimal ledger profile must be explicit; arbitrary rational ledger arithmetic is not implemented by this ontology."@en .
+cost:poolAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "pool amount"@en ; skos:definition "The declared total of the source valuation lines included in a pool."@en .
+cost:allocationFraction a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "allocation fraction"@en ; skos:definition "The share of a pool attributed to one recipient, between zero and one."@en .
+cost:allocatedAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "allocated amount"@en ; skos:definition "The pool amount multiplied by the recipient's allocation fraction; an attribution, not a new expense."@en .
+cost:unallocatedFraction a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "unallocated fraction"@en ; skos:definition "The explicitly retained fraction of a cost pool that has not been allocated to recipients."@en .
+cost:unallocatedAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "unallocated amount"@en ; skos:definition "The explicitly retained amount of a cost pool that has not been allocated to recipients."@en .
+cost:currency a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "currency"@en ; skos:definition "The uppercase three-letter ISO 4217 currency code for monetary amounts. Matching codes do not imply matching valuation bases or price years."@en .
+cost:priceYear a owl:DatatypeProperty ; rdfs:range xsd:gYear ; rdfs:label "price year"@en ; skos:definition "The reference year of prices after the declared policy's price-level transformations."@en .
+cost:effectiveFrom a owl:DatatypeProperty ; rdfs:range xsd:date ; rdfs:label "effective from"@en ; skos:definition "Inclusive first date on which a quote applies; separate from when the quote became known."@en ; rdfs:seeAlso time:hasBeginning .
+cost:effectiveTo a owl:DatatypeProperty ; rdfs:range xsd:date ; rdfs:label "effective to"@en ; skos:definition "Exclusive end date of a quote's effective interval, when known."@en ; rdfs:seeAlso time:hasEnd .
+cost:knownFrom a owl:DatatypeProperty ; rdfs:range xsd:dateTime ; rdfs:label "known from"@en ; skos:definition "The time at which a quote or release was available to the analysis; independent of its effective interval."@en ; rdfs:seeAlso prov:generatedAtTime .
+cost:discountRate a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "discount rate"@en ; skos:definition "A declared annual discount rate, expressed as a proportion, whose timing convention must be stated in the valuation policy."@en .
+cost:componentKey a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "component key"@en ; skos:definition "The stable component identifier used to distinguish legitimate separate valuations in a ledger."@en .
+cost:scenarioKey a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "scenario key"@en ; skos:definition "The stable identity of the assumption scenario to which a valuation belongs."@en .
+cost:drawIndex a owl:DatatypeProperty ; rdfs:range xsd:nonNegativeInteger ; rdfs:label "draw index"@en ; skos:definition "The nonnegative index of a parameter realization within a declared sampling design."@en .
+
+# Descriptions and source status are separate from machine validation claims.
+cost:versionLabel a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "version label"@en ; skos:definition "The human-readable release or edition identifier associated with an immutable version identity."@en .
+cost:valuationRecipe a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "valuation recipe"@en ; skos:definition "An explicit explanation or reference for translating an activity measure into a valuation, including resource assumptions and transformations."@en .
+cost:adjustmentReason a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "adjustment reason"@en ; skos:definition "An explanation of a signed adjustment, such as a refund or correction, in a valuation line."@en .
+cost:allocationBasis a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "allocation basis"@en ; skos:definition "The declared allocation driver, denominator and treatment of idle capacity or unallocated residuals."@en .
+cost:processFormalism a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "process formalism"@en ; skos:definition "The representation used for a process model, such as a resource recipe, Petri net or BPMN 2.0; representation does not imply executable support."@en .
+cost:uncertaintyKind a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "uncertainty kind"@en ; skos:definition "The declared source of uncertainty, such as parameter, measurement, methodological, structural or stochastic uncertainty."@en .
+cost:distributionDescription a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "distribution description"@en ; skos:definition "A description of uncertainty distributions and joint dependence assumptions, without assuming independence by default."@en .
+cost:instrumentKind a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "instrument kind"@en ; skos:definition "The instrument's purpose, distinguishing reporting, conduct, appraisal, reference-case and other source types."@en .
+cost:verificationScope a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "verification scope"@en ; skos:definition "The reviewed scope of a registry entry, for example domain_mapping, item_mapping or full_checklist. This statement is not independent verification."@en .
+cost:itemIdentifier a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "item identifier"@en ; skos:definition "The requirement identifier used by the original instrument edition, preserved without inventing item numbering."@en .
+cost:requirementText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "requirement text"@en ; skos:definition "A source-grounded paraphrase of one requirement; source wording and citation remain authoritative."@en .
+cost:mappingRelation a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "mapping relation"@en ; skos:definition "The stated relationship of a requirement to a mapped concept, such as addresses, broader or related; never implicit logical equivalence."@en .
+cost:mappingRationale a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "mapping rationale"@en ; skos:definition "The explanation and limits of a proposed requirement-to-concept mapping."@en .
+cost:applicability a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "applicability"@en ; skos:definition "Whether a requirement is applicable, not-applicable or unresolved for an assessed study."@en .
+cost:assessmentStatus a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "assessment status"@en ; skos:definition "Whether the assessed requirement is reported, partial, not-reported or not-assessed, independently of applicability and methodological quality."@en .
+cost:assessmentMethod a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "assessment method"@en ; skos:definition "The method, instrument, validation design or computational test used to make an assessment."@en .
+cost:assessmentFinding a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "assessment finding"@en ; skos:definition "A scoped finding of an assessment, with no implicit numerical quality score and no conversion of reporting completeness into methodological or empirical validity."@en .
+cost:applicabilityRationale a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "applicability rationale"@en ; skos:definition "The reason a requirement is judged not applicable or its applicability remains unresolved."@en .
+cost:authority a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "authority"@en ; skos:definition "The named body or authors responsible for an instrument or source; this does not imply regulatory authority."@en .
+cost:citation a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "citation"@en ; skos:definition "A human-readable bibliographic citation for a source."@en .
+cost:evidenceStatus a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "evidence status"@en ; skos:definition "The declared evidential status of a source or assertion, such as synthetic, draft or source-verified, separately from access and shape validation."@en .
+cost:accessStatus a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "access status"@en ; skos:definition "The declared accessibility of a source, independently of its authority, evidence quality or validation status."@en .
+cost:validationStatus a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "validation status"@en ; skos:definition "A scoped statement about validation performed on an artifact, not a claim of scientific or clinical validity."@en .
+cost:sourceDigest a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "source digest"@en ; skos:definition "An algorithm-qualified digest of an exact source artifact, when available. A digest identifies bytes and does not establish truth or authority."@en .
+cost:licence a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "licence"@en ; skos:definition "The stated reuse licence or rights information associated with a source artifact."@en .
+
+# Vocabulary individuals are semantic choices, not defaults selected for a study.
+cost:economic-opportunity a cost:ValuationBasis ; rdfs:label "Economic opportunity cost"@en ; skos:definition "Value of the best alternative use of resources forgone."@en .
+cost:financial-expenditure a cost:ValuationBasis ; rdfs:label "Financial expenditure"@en ; skos:definition "Cash expenditure under an explicitly defined period and payment boundary."@en .
+cost:accounting-cost a cost:ValuationBasis ; rdfs:label "Accounting cost"@en ; skos:definition "Cost recognized under the declared accounting conventions, including any depreciation and accrual treatment."@en .
+cost:tariff-valuation a cost:ValuationBasis ; rdfs:label "Tariff valuation"@en ; skos:definition "Valuation by a published fee or tariff schedule; it is not assumed to measure resource opportunity cost."@en .
+cost:observed-payment a cost:ValuationBasis ; rdfs:label "Observed payment"@en ; skos:definition "An actual transfer or reimbursement observed for a transaction."@en .
+cost:funding-valuation a cost:ValuationBasis ; rdfs:label "Funding valuation"@en ; skos:definition "An amount assigned by a funding mechanism, separately from resource cost and observed payment."@en .
+cost:provider a cost:Perspective ; rdfs:label "Provider perspective"@en ; skos:definition "The viewpoint of the organization supplying the service."@en .
+cost:payer a cost:Perspective ; rdfs:label "Payer perspective"@en ; skos:definition "The viewpoint of the organization funding or reimbursing a service."@en .
+cost:societal a cost:Perspective ; rdfs:label "Societal perspective"@en ; skos:definition "A broad viewpoint that considers relevant resource consequences across affected parties, with the precise inclusion boundary declared."@en .
+cost:patient-family a cost:Perspective ; rdfs:label "Patient and family perspective"@en ; skos:definition "The viewpoint of the service recipient and family, including declared time and out-of-pocket consequences."@en .
+cost:bottom-up-microcosting a cost:CostingMethod ; rdfs:label "Bottom-up microcosting"@en ; skos:definition "Identification and measurement of individual resource components followed by explicit valuation."@en .
+cost:top-down-costing a cost:CostingMethod ; rdfs:label "Top-down costing"@en ; skos:definition "Allocation of an aggregate resource or cost total to activities or outputs using declared drivers."@en .
+cost:activity-based-costing a cost:CostingMethod ; rdfs:label "Activity-based costing"@en ; skos:definition "Assignment of resource costs through defined activities and cost drivers."@en .
+cost:time-driven-activity-based-costing a cost:CostingMethod ; rdfs:label "Time-driven activity-based costing"@en ; skos:definition "Assignment of capacity costs through explicit capacity rates and activity-time requirements."@en .

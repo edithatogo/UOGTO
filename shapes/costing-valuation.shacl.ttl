@@ -1,0 +1,290 @@
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# This is a closed-world consistency profile, not an economic calculation engine.
+# Decimal allocation comparisons allow 1e-9 absolute serialization tolerance.
+cost:CostingStudyShape a sh:NodeShape ;
+    sh:targetClass cost:CostingStudy ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:hasPerspective ; sh:class cost:Perspective ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:valuationPolicy ; sh:class cost:ValuationPolicy ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:hasMethod ; sh:class cost:CostingMethod ; sh:minCount 1 ] .
+
+cost:ValuationPolicyShape a sh:NodeShape ;
+    sh:targetClass cost:ValuationPolicy ;
+    sh:property [ sh:path cost:valuationBasis ; sh:class cost:ValuationBasis ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:hasPerspective ; sh:class cost:Perspective ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:currency ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:priceYear ; sh:datatype xsd:gYear ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+cost:ResourceUseShape a sh:NodeShape ;
+    sh:targetClass cost:ResourceUse ;
+    sh:not [ sh:class cost:ActivityMeasure ] ;
+    sh:property [ sh:path cost:resourceUseId ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:usesResource ; sh:class cost:Resource ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:forCostObject ; sh:class cost:CostObject ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:node cost:MeasuredQuantityShape ;
+    sh:property [ sh:path cost:unit ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+cost:ActivityMeasureShape a sh:NodeShape ;
+    sh:targetClass cost:ActivityMeasure ;
+    sh:not [ sh:class cost:ResourceUse ] ;
+    sh:property [ sh:path cost:forActivity ; sh:class cost:ProcessActivity ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:forCostObject ; sh:class cost:CostObject ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:node cost:MeasuredQuantityShape ;
+    sh:property [ sh:path cost:unit ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+cost:RationalValueShape a sh:NodeShape ;
+    sh:targetClass cost:RationalValue ;
+    sh:property [ sh:path cost:exactNumerator ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:exactDenominator ; sh:datatype xsd:positiveInteger ; sh:minInclusive 1 ; sh:minCount 1 ; sh:maxCount 1 ] .
+cost:NonnegativeRationalShape a sh:NodeShape ;
+    sh:class cost:RationalValue ;
+    sh:property [ sh:path cost:exactNumerator ; sh:minInclusive 0 ] .
+cost:MeasuredQuantityShape a sh:NodeShape ;
+    sh:message "A measured quantity must have exactly one nonnegative decimal or exact rational representation." ;
+    sh:xone (
+        [ sh:property [ sh:path cost:quantity ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:quantityExact ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path cost:quantityExact ; sh:node cost:NonnegativeRationalShape ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:quantity ; sh:maxCount 0 ] ]
+    ) .
+
+cost:UnitQuoteShape a sh:NodeShape ;
+    sh:targetClass cost:UnitQuote ;
+    sh:xone (
+        [ sh:property [ sh:path cost:quoteAmount ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:quoteAmountExact ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path cost:quoteAmountExact ; sh:node cost:NonnegativeRationalShape ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:quoteAmount ; sh:maxCount 0 ] ]
+    ) ;
+    sh:property [ sh:path cost:currency ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:perUnit ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:appliesToResource ; sh:class cost:Resource ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:valuationBasis ; sh:class cost:ValuationBasis ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:rateRelease ; sh:class cost:RateRelease ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:effectiveFrom ; sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ; sh:lessThan cost:effectiveTo ] ;
+    sh:property [ sh:path cost:effectiveTo ; sh:datatype xsd:date ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:knownFrom ; sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:evidenceReference ; sh:nodeKind sh:IRI ; sh:minCount 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A quote cannot become known after the release that claims to contain it." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:knownFrom ?known ; cost:rateRelease ?release .
+                ?release cost:knownFrom ?released . FILTER (?known > ?released) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "The quote and its immutable release must declare reciprocal membership." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:rateRelease ?release .
+                FILTER NOT EXISTS { ?release cost:hasQuote $this } }""" ] .
+
+cost:RateReleaseShape a sh:NodeShape ;
+    sh:targetClass cost:RateRelease ;
+    sh:property [ sh:path cost:versionLabel ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:knownFrom ; sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:hasQuote ; sh:class cost:UnitQuote ; sh:minCount 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Each included quote must identify this release." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:hasQuote ?quote .
+                FILTER NOT EXISTS { ?quote cost:rateRelease $this } }""" ] .
+
+cost:ValuationLineShape a sh:NodeShape ;
+    sh:targetClass cost:ValuationLine ;
+    sh:xone (
+        [ sh:property [ sh:path cost:sourceResourceUse ; sh:class cost:ResourceUse ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:sourceActivityMeasure ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path cost:sourceActivityMeasure ; sh:class cost:ActivityMeasure ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:sourceResourceUse ; sh:maxCount 0 ] ;
+          sh:property [ sh:path cost:valuationRecipe ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] ]
+    ) ;
+    sh:property [ sh:path cost:usedQuote ; sh:class cost:UnitQuote ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:valuationPolicy ; sh:class cost:ValuationPolicy ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:componentKey ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:scenarioKey ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:lineAmount ; sh:datatype xsd:decimal ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:valuationRecipe ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:property [ sh:path cost:adjustmentReason ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A rational-input valuation needs an explicit conversion and rounding recipe for the decimal output ledger." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE {
+                { $this cost:sourceResourceUse/cost:quantityExact ?rational }
+                UNION { $this cost:sourceActivityMeasure/cost:quantityExact ?rational }
+                UNION { $this cost:usedQuote/cost:quoteAmountExact ?rational }
+                FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe . FILTER (STRLEN(STR(?recipe)) > 0) } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Different measurement and quote units need an explicit unit-conversion recipe." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:sourceResourceUse/cost:unit ?unit ; cost:usedQuote/cost:perUnit ?perUnit .
+                FILTER (?unit != ?perUnit) FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A negative valuation adjustment needs an explicit explanation." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:lineAmount ?amount . FILTER (?amount < 0)
+                FILTER NOT EXISTS { $this cost:adjustmentReason ?reason . FILTER (STRLEN(STR(?reason)) > 0) } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A quote must price the observed resource or an explicit valuation recipe must explain the transformation." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:sourceResourceUse/cost:usesResource ?resource ; cost:usedQuote/cost:appliesToResource ?priced .
+                FILTER (?resource != ?priced) FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Currency or valuation-basis conversion must be described explicitly; a tariff is not silently treated as an economic cost." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:valuationPolicy ?policy ; cost:usedQuote ?quote .
+                ?policy cost:currency ?policyCurrency ; cost:valuationBasis ?policyBasis .
+                ?quote cost:currency ?quoteCurrency ; cost:valuationBasis ?quoteBasis .
+                FILTER (?policyCurrency != ?quoteCurrency || ?policyBasis != ?quoteBasis)
+                FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe } }""" ] .
+
+cost:ComponentLedgerShape a sh:NodeShape ;
+    sh:targetClass cost:ComponentLedger ;
+    sh:property [ sh:path cost:valuationPolicy ; sh:class cost:ValuationPolicy ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:hasLine ; sh:class cost:ValuationLine ; sh:minCount 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "All source lines in a ledger must use the ledger's declared valuation policy." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:valuationPolicy ?policy ; cost:hasLine/cost:valuationPolicy ?linePolicy .
+                FILTER (?policy != ?linePolicy) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A resource-use identifier may be valued only once per component and scenario in a ledger." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT DISTINCT $this WHERE { $this cost:hasLine ?first, ?second .
+                ?first cost:sourceResourceUse/cost:resourceUseId ?id ; cost:componentKey ?component ; cost:scenarioKey ?scenario .
+                ?second cost:sourceResourceUse/cost:resourceUseId ?id ; cost:componentKey ?component ; cost:scenarioKey ?scenario .
+                FILTER (?first != ?second) }""" ] .
+
+cost:AllocationPolicyShape a sh:NodeShape ;
+    sh:targetClass cost:AllocationPolicy ;
+    sh:property [ sh:path cost:allocationBasis ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .
+
+cost:CostPoolShape a sh:NodeShape ;
+    sh:targetClass cost:CostPool ;
+    sh:property [ sh:path cost:componentLedger ; sh:class cost:ComponentLedger ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:hasComponentLine ; sh:class cost:ValuationLine ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:allocationPolicy ; sh:class cost:AllocationPolicy ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:poolAmount ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:currency ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:hasAllocation ; sh:class cost:Allocation ] ;
+    sh:property [ sh:path cost:unallocatedFraction ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:unallocatedAmount ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Every pool component must be an existing line of the declared ledger." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:componentLedger ?ledger ; cost:hasComponentLine ?line .
+                FILTER NOT EXISTS { ?ledger cost:hasLine ?line } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Pool currency must match its ledger policy." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:currency ?currency ; cost:componentLedger/cost:valuationPolicy/cost:currency ?ledgerCurrency .
+                FILTER (?currency != ?ledgerCurrency) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A source line must not be included in two pools of the same ledger." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT DISTINCT $this WHERE { $this cost:componentLedger ?ledger ; cost:hasComponentLine ?line .
+                ?other cost:componentLedger ?ledger ; cost:hasComponentLine ?line . FILTER (?other != $this) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Pool amount must equal its component ledger lines." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:poolAmount ?declared .
+                { SELECT $this (SUM(?amount) AS ?total) WHERE { $this cost:hasComponentLine/cost:lineAmount ?amount } GROUP BY $this }
+                FILTER (ABS(?declared - ?total) > 0.000000001) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Allocated fractions plus the explicit residual must conserve one whole pool." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:unallocatedFraction ?residual .
+                { SELECT $this (SUM(?fraction) AS ?total) WHERE { $this a cost:CostPool .
+                    OPTIONAL { $this cost:hasAllocation/cost:allocationFraction ?fraction } } GROUP BY $this }
+                FILTER (ABS(COALESCE(?total, 0) + ?residual - 1) > 0.000000001) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Allocated amounts plus the explicit residual must conserve the source pool amount." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:poolAmount ?pool ; cost:unallocatedAmount ?residual .
+                { SELECT $this (SUM(?amount) AS ?total) WHERE { $this a cost:CostPool .
+                    OPTIONAL { $this cost:hasAllocation/cost:allocatedAmount ?amount } } GROUP BY $this }
+                FILTER (ABS(COALESCE(?total, 0) + ?residual - ?pool) > 0.000000001) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "An unallocated amount must agree with its unallocated fraction." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:poolAmount ?pool ; cost:unallocatedAmount ?amount ; cost:unallocatedFraction ?fraction .
+                FILTER (ABS(?amount - ?pool * ?fraction) > 0.000000001) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Each pool allocation must refer back to this pool." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:hasAllocation ?allocation .
+                FILTER NOT EXISTS { ?allocation cost:fromPool $this } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "One pool has one consolidated allocation per recipient cost object." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT DISTINCT $this WHERE { $this cost:hasAllocation ?first, ?second .
+                ?first cost:allocatedTo ?recipient . ?second cost:allocatedTo ?recipient . FILTER (?first != ?second) }""" ] .
+
+cost:AllocationShape a sh:NodeShape ;
+    sh:targetClass cost:Allocation ;
+    sh:property [ sh:path cost:fromPool ; sh:class cost:CostPool ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:allocatedTo ; sh:class cost:CostObject ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:allocationFraction ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:allocatedAmount ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Allocated amount must equal the stated share of its source pool." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:fromPool/cost:poolAmount ?pool ; cost:allocationFraction ?fraction ; cost:allocatedAmount ?amount .
+                FILTER (ABS(?amount - ?pool * ?fraction) > 0.000000001) }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "The source pool must include this allocation." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:fromPool ?pool . FILTER NOT EXISTS { ?pool cost:hasAllocation $this } }""" ] .
+
+cost:UncertaintySpecificationShape a sh:NodeShape ;
+    sh:targetClass cost:UncertaintySpecification ; sh:not [ sh:class cost:HeterogeneityDimension ] ;
+    sh:property [ sh:path cost:uncertaintyKind ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .
+cost:HeterogeneityDimensionShape a sh:NodeShape ;
+    sh:targetClass cost:HeterogeneityDimension ; sh:not [ sh:class cost:UncertaintySpecification ] .
+
+cost:ReportingInstrumentShape a sh:NodeShape ;
+    sh:targetClass cost:ReportingInstrument ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:instrumentKind ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .
+cost:InstrumentVersionShape a sh:NodeShape ;
+    sh:targetClass cost:InstrumentVersion ;
+    sh:property [ sh:path cost:belongsToInstrument ; sh:class cost:ReportingInstrument ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:versionLabel ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:sourceURL ; sh:nodeKind sh:IRI ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:verificationScope ; sh:datatype xsd:string ; sh:in ( "domain_mapping" "item_mapping" "full_checklist" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:coversDomain ; sh:class cost:ReportingDomain ] .
+cost:ReportingRequirementShape a sh:NodeShape ;
+    sh:targetClass cost:ReportingRequirement ;
+    sh:property [ sh:path cost:belongsToVersion ; sh:class cost:InstrumentVersion ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:itemIdentifier ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:requirementText ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .
+cost:ReportingProfileShape a sh:NodeShape ;
+    sh:targetClass cost:ReportingProfile ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:includesRequirement ; sh:class cost:ReportingRequirement ] ;
+    sh:property [ sh:path cost:includesInstrumentVersion ; sh:class cost:InstrumentVersion ] .
+cost:RequirementMappingShape a sh:NodeShape ;
+    sh:targetClass cost:RequirementMapping ;
+    sh:property [ sh:path cost:sourceRequirement ; sh:class cost:ReportingRequirement ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:mappedConcept ; sh:nodeKind sh:IRI ; sh:minCount 1 ] ;
+    sh:property [ sh:path cost:mappingRelation ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:mappingRationale ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .
+cost:ReportingAssertionShape a sh:NodeShape ;
+    sh:targetClass cost:ReportingAssertion ;
+    sh:property [ sh:path cost:reportsRequirement ; sh:class cost:ReportingRequirement ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:assessedStudy ; sh:class cost:CostingStudy ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:applicability ; sh:datatype xsd:string ; sh:in ( "applicable" "not-applicable" "unresolved" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:assessmentStatus ; sh:datatype xsd:string ; sh:in ( "reported" "partial" "not-reported" "not-assessed" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path cost:evidenceReference ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path cost:applicabilityRationale ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A reported or partially reported item requires an evidence reference." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:assessmentStatus ?status . FILTER (?status IN (\"reported\", \"partial\"))
+                FILTER NOT EXISTS { $this cost:evidenceReference ?evidence } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "A not-applicable judgment requires an explicit rationale." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:applicability \"not-applicable\" .
+                FILTER NOT EXISTS { $this cost:applicabilityRationale ?reason . FILTER (STRLEN(STR(?reason)) > 0) } }""" ] .

@@ -25,6 +25,11 @@ implementation evidence, and GitHub project synchronization.
 
 - [Executable subset and semantic identity](./tracks/semantic_game_contracts_20261107/index.md)
 
+## Applied costing and reporting
+
+- [Costing, valuation and reporting ontology](./tracks/costing_valuation_reporting_20261108/index.md)
+- [Reporting reconciliation guide](../docs/costing-valuation-reporting.md)
+
 ## Operating Notes
 
 - `conductor/tracks.md` is the readable registry for all active, completed, and

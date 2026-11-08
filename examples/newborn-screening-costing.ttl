@@ -1,0 +1,139 @@
+@prefix ex: <http://example.org/costing/newborn/> .
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix costhta: <https://w3id.org/uogto/bridges/costing-hta#> .
+@prefix hta: <https://w3id.org/uogto/packs/hta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Entirely synthetic arithmetic fixture: no clinical rates, clinical pathway,
+# screening eligibility, expected result probabilities or real patient data.
+# Source ledger = 10 + 10 + 100 + 30 = 150 fictional AUD.
+# Shared batch allocation = 50 + 50, never a second 100 per infant.
+ex:Infant a owl:Class ; rdfs:subClassOf cost:CostObject ;
+    rdfs:label "Synthetic infant cost object"@en ; skos:definition "An infant identity used only in this synthetic costing example."@en .
+ex:Specimen a owl:Class ; rdfs:subClassOf cost:CostObject ;
+    rdfs:label "Synthetic specimen cost object"@en ; skos:definition "A specimen identity separate from an infant and a production batch."@en .
+ex:ConfirmationEpisode a owl:Class ; rdfs:subClassOf cost:CostObject ;
+    rdfs:label "Synthetic confirmation episode"@en ; skos:definition "A fictitious follow-up episode distinct from a specimen, batch and infant."@en .
+
+ex:study a cost:CostingStudy ; rdfs:label "Synthetic newborn batch-costing demonstration"@en ;
+    cost:hasPerspective cost:provider ; cost:valuationPolicy ex:policy ;
+    cost:hasMethod cost:bottom-up-microcosting ; cost:hasLedger ex:ledger ;
+    cost:hasProcessModel ex:process-recipe ; cost:outputUnit ex:infant-screened ;
+    cost:hasUncertainty ex:rate-uncertainty ; cost:hasHeterogeneityDimension ex:transport-setting ;
+    cost:evidenceStatus "synthetic" ; cost:evidenceReference ex:fixture-source .
+ex:policy a cost:ValuationPolicy ; rdfs:label "Synthetic provider accounting policy"@en ;
+    cost:valuationBasis cost:accounting-cost ; cost:hasPerspective cost:provider ;
+    cost:currency "AUD" ; cost:priceYear "2026"^^xsd:gYear .
+ex:infant-screened a cost:OutputUnit ; rdfs:label "One infant screened"@en ;
+    skos:definition "The distinct infant denominator; specimens and repeat tests do not increase the infant count."@en .
+ex:process-recipe a cost:ProcessModel ; rdfs:label "Synthetic specimen and batch recipe"@en ;
+    cost:processFormalism "resource recipe" .
+ex:collection a cost:ProcessActivity ; rdfs:label "Synthetic collection activity"@en .
+ex:batch-analysis a cost:ProcessActivity ; rdfs:label "Synthetic batch activity"@en .
+ex:confirmation a cost:ProcessActivity ; rdfs:label "Synthetic confirmation activity"@en .
+ex:rate-uncertainty a cost:UncertaintySpecification ; cost:uncertaintyKind "parameter" ;
+    cost:distributionDescription "No distribution or numerical sampling is asserted by this arithmetic fixture." .
+ex:transport-setting a cost:HeterogeneityDimension ; rdfs:label "Variation in transport setting"@en .
+
+ex:infant-a a ex:Infant ; rdfs:label "Synthetic infant A"@en .
+ex:infant-b a ex:Infant ; rdfs:label "Synthetic infant B"@en .
+ex:specimen-a a ex:Specimen ; cost:relatedCostObject ex:infant-a .
+ex:specimen-b a ex:Specimen ; cost:relatedCostObject ex:infant-b .
+ex:batch-1 a cost:ProductionBatch ; cost:hasMember ex:specimen-a, ex:specimen-b .
+ex:confirmation-b a ex:ConfirmationEpisode ; cost:relatedCostObject ex:infant-b .
+ex:staff-time a cost:Resource ; rdfs:label "Synthetic staff minute"@en .
+ex:batch-kit a cost:Resource ; rdfs:label "Synthetic batch consumable unit"@en .
+
+ex:fixture-source a cost:EvidenceArtifact ; rdfs:label "Invented test values for ontology validation"@en ;
+    cost:evidenceStatus "synthetic" ; cost:accessStatus "included-in-repository" ;
+    cost:validationStatus "arithmetic-fixture-only" ;
+    cost:sourceURL <https://example.org/synthetic-newborn-costing-fixture> .
+ex:rates-v1 a cost:RateRelease ; cost:versionLabel "synthetic-1" ;
+    cost:knownFrom "2026-02-01T00:00:00Z"^^xsd:dateTime ;
+    cost:hasQuote ex:staff-quote, ex:batch-quote ; cost:evidenceStatus "synthetic" .
+ex:staff-quote a cost:UnitQuote ; cost:quoteAmount "2.00"^^xsd:decimal ;
+    cost:currency "AUD" ; cost:perUnit unit:MIN ; cost:appliesToResource ex:staff-time ;
+    cost:valuationBasis cost:accounting-cost ; cost:rateRelease ex:rates-v1 ;
+    cost:effectiveFrom "2026-01-01"^^xsd:date ; cost:effectiveTo "2027-01-01"^^xsd:date ;
+    cost:knownFrom "2026-02-01T00:00:00Z"^^xsd:dateTime ;
+    cost:evidenceReference ex:fixture-source ; prov:wasDerivedFrom ex:fixture-source .
+ex:batch-quote a cost:UnitQuote ; cost:quoteAmount "100.00"^^xsd:decimal ;
+    cost:currency "AUD" ; cost:perUnit unit:NUM ; cost:appliesToResource ex:batch-kit ;
+    cost:valuationBasis cost:accounting-cost ; cost:rateRelease ex:rates-v1 ;
+    cost:effectiveFrom "2026-01-01"^^xsd:date ; cost:effectiveTo "2027-01-01"^^xsd:date ;
+    cost:knownFrom "2026-02-01T00:00:00Z"^^xsd:dateTime ; cost:evidenceReference ex:fixture-source .
+
+ex:collection-a-use a cost:ResourceUse ; cost:resourceUseId "collection-a-staff" ;
+    cost:usesResource ex:staff-time ; cost:forCostObject ex:specimen-a ; cost:forActivity ex:collection ;
+    cost:quantity "5.00"^^xsd:decimal ; cost:unit unit:MIN .
+ex:collection-b-use a cost:ResourceUse ; cost:resourceUseId "collection-b-staff" ;
+    cost:usesResource ex:staff-time ; cost:forCostObject ex:specimen-b ; cost:forActivity ex:collection ;
+    cost:quantity "5.00"^^xsd:decimal ; cost:unit unit:MIN .
+ex:batch-use a cost:ResourceUse ; cost:resourceUseId "batch-1-kit" ;
+    cost:usesResource ex:batch-kit ; cost:forCostObject ex:batch-1 ; cost:forActivity ex:batch-analysis ;
+    cost:quantity "1.00"^^xsd:decimal ; cost:unit unit:NUM .
+ex:confirmation-use a cost:ResourceUse ; cost:resourceUseId "confirmation-b-staff" ;
+    cost:usesResource ex:staff-time ; cost:forCostObject ex:confirmation-b ; cost:forActivity ex:confirmation ;
+    cost:quantity "15.00"^^xsd:decimal ; cost:unit unit:MIN .
+ex:specimen-count a cost:ActivityMeasure ; cost:forActivity ex:batch-analysis ;
+    cost:forCostObject ex:batch-1 ; cost:quantity "2.00"^^xsd:decimal ; cost:unit unit:NUM .
+
+ex:collection-a-line a cost:ValuationLine ; cost:sourceResourceUse ex:collection-a-use ;
+    cost:usedQuote ex:staff-quote ; cost:valuationPolicy ex:policy ;
+    cost:componentKey "collection" ; cost:scenarioKey "synthetic-baseline" ; cost:lineAmount "10.00"^^xsd:decimal .
+ex:collection-b-line a cost:ValuationLine ; cost:sourceResourceUse ex:collection-b-use ;
+    cost:usedQuote ex:staff-quote ; cost:valuationPolicy ex:policy ;
+    cost:componentKey "collection" ; cost:scenarioKey "synthetic-baseline" ; cost:lineAmount "10.00"^^xsd:decimal .
+ex:batch-line a cost:ValuationLine ; cost:sourceResourceUse ex:batch-use ;
+    cost:usedQuote ex:batch-quote ; cost:valuationPolicy ex:policy ;
+    cost:componentKey "batch-analysis" ; cost:scenarioKey "synthetic-baseline" ; cost:lineAmount "100.00"^^xsd:decimal .
+ex:confirmation-line a cost:ValuationLine ; cost:sourceResourceUse ex:confirmation-use ;
+    cost:usedQuote ex:staff-quote ; cost:valuationPolicy ex:policy ;
+    cost:componentKey "confirmation" ; cost:scenarioKey "synthetic-baseline" ; cost:lineAmount "30.00"^^xsd:decimal .
+ex:ledger a cost:ComponentLedger ; cost:valuationPolicy ex:policy ;
+    cost:hasLine ex:collection-a-line, ex:collection-b-line, ex:batch-line, ex:confirmation-line .
+
+ex:equal-specimens a cost:AllocationPolicy ;
+    cost:allocationBasis "Two specimens from two infants share this one batch equally; no residual capacity is modeled in this synthetic fixture." .
+ex:batch-pool a cost:CostPool ; cost:componentLedger ex:ledger ; cost:hasComponentLine ex:batch-line ;
+    cost:allocationPolicy ex:equal-specimens ; cost:poolAmount "100.00"^^xsd:decimal ; cost:currency "AUD" ;
+    cost:hasAllocation ex:batch-to-a, ex:batch-to-b ;
+    cost:unallocatedFraction "0.00"^^xsd:decimal ; cost:unallocatedAmount "0.00"^^xsd:decimal .
+ex:batch-to-a a cost:Allocation ; cost:fromPool ex:batch-pool ; cost:allocatedTo ex:infant-a ;
+    cost:allocationFraction "0.50"^^xsd:decimal ; cost:allocatedAmount "50.00"^^xsd:decimal .
+ex:batch-to-b a cost:Allocation ; cost:fromPool ex:batch-pool ; cost:allocatedTo ex:infant-b ;
+    cost:allocationFraction "0.50"^^xsd:decimal ; cost:allocatedAmount "50.00"^^xsd:decimal .
+
+# These are synthetic requirements, not a claimed extraction from a real checklist.
+ex:fixture-instrument a cost:ReportingInstrument ; rdfs:label "Synthetic reporting instrument for tests"@en ;
+    cost:instrumentKind "reporting" ; cost:evidenceStatus "synthetic" ; cost:hasVersion ex:fixture-version .
+ex:fixture-version a cost:InstrumentVersion ; cost:belongsToInstrument ex:fixture-instrument ;
+    cost:versionLabel "synthetic-1" ; cost:sourceURL <https://example.org/synthetic-newborn-costing-fixture> ;
+    cost:verificationScope "item_mapping" ; cost:evidenceStatus "synthetic" ;
+    cost:hasRequirement ex:perspective-requirement, ex:family-time-requirement .
+ex:perspective-requirement a cost:ReportingRequirement ; cost:belongsToVersion ex:fixture-version ;
+    cost:itemIdentifier "SYN-1" ; cost:requirementText "State the study perspective." .
+ex:family-time-requirement a cost:ReportingRequirement ; cost:belongsToVersion ex:fixture-version ;
+    cost:itemIdentifier "SYN-2" ; cost:requirementText "Explain whether patient and family time is included." .
+ex:fixture-profile a cost:ReportingProfile ; rdfs:label "Synthetic newborn reporting profile"@en ;
+    cost:includesInstrumentVersion ex:fixture-version ;
+    cost:includesRequirement ex:perspective-requirement, ex:family-time-requirement .
+ex:perspective-mapping a cost:RequirementMapping ; cost:sourceRequirement ex:perspective-requirement ;
+    cost:mappedConcept cost:Perspective ; cost:mappingRelation "addresses" ;
+    cost:mappingRationale "The synthetic requirement asks for a declared viewpoint; it is not equivalent to the Perspective class." .
+ex:perspective-assertion a cost:ReportingAssertion ; cost:reportsRequirement ex:perspective-requirement ;
+    cost:assessedStudy ex:study ; cost:applicability "applicable" ; cost:assessmentStatus "reported" ;
+    cost:evidenceReference ex:policy .
+ex:family-time-assertion a cost:ReportingAssertion ; cost:reportsRequirement ex:family-time-requirement ;
+    cost:assessedStudy ex:study ; cost:applicability "applicable" ; cost:assessmentStatus "not-reported" .
+
+# A separate explicit bridge is the only game/payoff connection in this fixture.
+ex:budget-impact a hta:BudgetImpact ; rdfs:label "Synthetic accounting expenditure payoff"@en .
+ex:budget-bridge a costhta:PayoffValuationBridge ; costhta:inputLedger ex:ledger ;
+    costhta:targetPayoff ex:budget-impact ; costhta:objectiveDirection "minimize" ;
+    costhta:valueTransformation "Synthetic provider accounting perspective; sum incurred source lines once in 2026 AUD, positive expenditure is minimized. Allocation views are excluded from the sum; no utility or clinical outcome is inferred." .
