@@ -1,0 +1,95 @@
+{
+  "track_id": "manuscript_next_version_20261108",
+  "type": "documentation",
+  "status": "new",
+  "planning_status": "completed",
+  "execution_status": "pending",
+  "created_at": "2026-11-08T00:00:00+10:00",
+  "updated_at": "2026-11-08T00:00:00+10:00",
+  "description": "Integrate corrected semantics, comprehensive source attribution and scoped evidence into the next version of the existing UOGTO resource paper",
+  "base_revision": "f606ecc506130fdf88a435b3012b36c8760ad7a9",
+  "repositories": [
+    "."
+  ],
+  "dependencies": [
+    "semantic_reconciliation_20261108"
+  ],
+  "conditional_dependencies": {
+    "source_claims": "Relevant OCS.02\u201312 acquisition, charting, attribution and evaluation receipts; unavailable outcomes are explicit",
+    "external_interchange_claims": "Relevant SGC.01\u201305/static SGC.08 and FRT.01\u201305 receipts only if these optional claims are retained",
+    "native_execution_claims": "SGC.06/dynamic SGC.08 and FRT.06 only if native execution is claimed"
+  },
+  "owners": [
+    "manuscript_integration"
+  ],
+  "preserved_ownership": {
+    "OCS": "source discovery/acquisition, construct lineage and coverage/case evaluation",
+    "SGC": "executable profiles, identities, round trips and consumer receipts",
+    "FRT": "actual external adapters and frontier experiments",
+    "Paignia": "runtime, algorithms, solvers and adapter implementation",
+    "Kairos": "optional native simulation"
+  },
+  "leaf_count": 13,
+  "completed_leaves": [
+    "MNV.00"
+  ],
+  "pending_leaf_count": 12,
+  "planning_deliverable": "docs/paper/next-version-plan-20261108.md",
+  "publication_state_observed": {
+    "source": "docs/paper/arxiv-submission-state.md",
+    "source_updated": "2026-07-05",
+    "state": "not_submitted",
+    "arxiv_identifier": "not assigned",
+    "arxiv_version": "not assigned",
+    "qualification": "Repository record inspected; not an independent live arXiv verification"
+  },
+  "review_policy": "Existing internal review and CI; independent scientific review is evidence if obtained, not a repeated approval gate",
+  "verification": {
+    "status": "planning_integrity_and_integrated_repository_gates_passed",
+    "commands": [
+      "Inline Python: parse metadata; count thirteen leaves with MNV.00 complete and twelve pending; check local Markdown links; compare mapping status counts and quality metrics with source artifacts",
+      "git diff --check"
+    ],
+    "integration_owner": "Root records overall make validate/make test and registry/status integration",
+    "not_qualified": [
+      "new manuscript implementation",
+      "new source acquisition",
+      "held-out evaluation",
+      "independent expert agreement",
+      "external adapter or solver execution",
+      "public arXiv version",
+      "publication acceptance"
+    ],
+    "results": {
+      "planning_files": 5,
+      "completed_planning_leaves": 1,
+      "pending_implementation_leaves": 12,
+      "mapping_statuses": {
+        "accepted": 4,
+        "needs_domain_review": 6,
+        "rejected": 450
+      },
+      "current_quality_facts": "matched inspected JSON",
+      "existing_local_links": "resolved",
+      "diff_check": "passed",
+      "companion_links_resolved": [
+        "docs/research/comprehensive-game-semantics-sourcing-protocol.md",
+        "docs/research/game-semantics-bibliography-20261108.md",
+        "docs/research/game-semantics-bibliography-20261108.csl.json",
+        "docs/research/game-semantics-attribution-20261108.json"
+      ],
+      "integrated_gates": {
+        "make_validate": "passed",
+        "make_test": {
+          "passed": 310,
+          "skipped": 1,
+          "warnings": 55,
+          "skip_reason": "local arXiv artifacts unavailable"
+        },
+        "citation_package": "docs/research/game-semantics-citation-check-20261108.json",
+        "independent_internal_review": "no remaining blocking findings; not independent scientific review"
+      }
+    },
+    "scope_note": "Planning, link and consistency checks only. Integrated repository gates are recorded in conductor/status.md and runlog.md. No revised manuscript, evaluation, adapter or publication result is claimed."
+  }
+}

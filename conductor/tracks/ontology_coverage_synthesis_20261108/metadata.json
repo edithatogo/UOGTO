@@ -5,15 +5,15 @@
   "execution_status": "in_progress",
   "created_at": "2026-11-08T00:00:00+10:00",
   "updated_at": "2026-11-08T00:00:00+10:00",
-  "description": "Trace game-theory ontology and library concepts to sources, scope gaps and tested representations",
+  "description": "Comprehensively source, attribute and compare identifiable game-theory ontologies and related approaches; trace concepts into UOGTO and manuscript evidence",
   "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
-  "leaf_count": 8,
+  "leaf_count": 12,
   "dependencies": [
     "semantic_reconciliation_20261108"
   ],
   "review_policy": "Focused internal review; scientific independent assessment is research evidence, not a repeated implementation approval gate",
   "verification": {
-    "status": "bounded_audit_complete_remaining_leaves_pending",
+    "status": "bounded_audit_and_comprehensive_planning_delivered_research_execution_pending",
     "not_qualified": [
       "exhaustive coverage",
       "external interoperability",
@@ -22,11 +22,17 @@
     ],
     "evidence": [
       "docs/research/game-semantics-source-audit-20261108.md",
-      "docs/research/game-semantics-source-register-20261108.json"
+      "docs/research/game-semantics-source-register-20261108.json",
+      "docs/research/comprehensive-game-semantics-sourcing-protocol.md",
+      "docs/research/game-semantics-discovery-seeds-20261108.json",
+      "docs/research/game-semantics-bibliography-20261108.csl.json",
+      "docs/research/game-semantics-attribution-20261108.json"
     ]
   },
   "completed_leaves": [
     "OCS.01"
   ],
-  "pending_leaf_count": 7
+  "pending_leaf_count": 11,
+  "protocol": "docs/research/comprehensive-game-semantics-sourcing-protocol.md",
+  "scope_policy": "All identifiable in-scope sources through documented routes and cutoff; twenty-source audit is not a ceiling; world completeness is not claimed."
 }

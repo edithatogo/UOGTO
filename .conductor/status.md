@@ -1,5 +1,21 @@
 # UOGTO Project Status
 
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+The canonical source programme now includes comprehensive discovery, acquisition,
+attribution and comparison. All 90 declared input items are preserved in 60 seed
+records, with 74 references across 64 attribution records. Unresolved identities
+and inherited evidence remain explicit. OCS has eleven pending research leaves;
+MNV.00 planning is complete with twelve manuscript-integration leaves pending.
+
+Integrated make validate and make test pass: 310 passed, one local arXiv-artifact
+skip, 55 dependency warnings. SourceRight CSL, citation linkage, snapshot/link and
+track checks pass; internal review found no remaining blockers. These are planning
+and engineering checks, not completed comprehensive research or a revised paper.
+Canonical detail and evidence: `conductor/status.md`, `conductor/runlog.md`,
+`docs/research/game-semantics-citation-check-20261108.json` and
+`docs/paper/next-version-plan-20261108.md`. Hosted state is on PR #127.
+
 ## 2026-11-08 — Current reconciliation evidence
 
 Canonical registry: `conductor/tracks.md`; current status and detailed verification:

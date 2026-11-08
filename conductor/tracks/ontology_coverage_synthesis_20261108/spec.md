@@ -1,35 +1,43 @@
-# Specification — source coverage and concept synthesis
+# Specification — comprehensive source coverage and concept synthesis
 
 ## Purpose
-Preserve UOGTO's broad ambition while making coverage inspectable. The current
-baseline does not prove that every earlier game-theory ontology was acquired or
-incorporated. A discovered title, an accessible paper, a parsed vocabulary, an
-accepted mapping and a working adapter are different evidence states.
+Identify, attribute and compare all identifiable in-scope game-theory ontologies
+and the related languages, libraries, modelling standards and research approaches.
+Build on their concepts while making coverage, conflicts and missing evidence
+inspectable. A discovered title, retrieved paper, parsed vocabulary, accepted
+mapping and executed adapter are distinct evidence states. The bounded November
+audit is a starting point, not a closed source list.
 
 ## Requirements
-Maintain a dated source register with queries, authoritative URLs, artefact and
-licence availability, repository-baseline status, concept disposition and gaps.
-Separate strategic-interaction ontologies, videogame/design vocabularies, formal
-game languages, executable APIs and adjacent modelling standards. Follow citations
-and registrations from direct predecessors. Record failed searches and unresolved
-names without treating them as evidence of nonexistence.
+Execute the [comprehensive sourcing protocol](../../../docs/research/comprehensive-game-semantics-sourcing-protocol.md).
+Preserve the union of existing inventories and every new candidate with stable IDs,
+raw search provenance, screened dispositions, acquisition outcomes, citations,
+artifact-specific licences and exact content locators. Include paper-only and
+historical ontologies; distinguish strategic ontologies, videogame vocabularies,
+formal languages, executable APIs, supporting standards and research baselines.
+Follow backward/forward citations and terminology/registry routes, recording
+inaccessible services and unresolved identities without inferring nonexistence.
 
-For each imported or reused concept, record its source/version, intended meaning,
-relation to existing UOGTO terms, conflicts, licence/attribution, example, competency
-question and validation. Prefer a narrower or related mapping to equivalence unless
-substitutability is actually justified. A lexical score cannot accept an equivalence.
-Library APIs supply useful semantic requirements; implementation method names do
-not automatically become ontology classes.
+For each adopted, adapted or mapped concept, record source/version, meaning,
+relation to UOGTO terms, disagreements, attribution, example, competency question
+and validation obligation. Compare remaining concepts and state why they are
+already represented, deferred or outside scope. Lexical similarity does not accept
+equivalence; API methods do not automatically become ontology classes. Keep
+evidence availability separate from implemented semantic support.
 
 ## Acceptance
-A bounded independently inspectable register and concept-to-question matrix;
-selected direct predecessors have an acquisition or explicit inaccessible/licence
-outcome; no unsupported claim of exhaustive coverage. Existing historical search
-records are retained as dated snapshots. New sources extend the inventory rather
-than silently rewriting its old denominators.
+A reproducible census of the sources identifiable through the executed protocol
+as of a stated cutoff, with explicit gaps and operational stopping criteria;
+source-to-concept/claim lineage; a comparison matrix with actual denominators;
+and scoped case evidence. Account for every declared seed and all discovered
+eligible records. Preserve historical snapshots without silently changing their
+counts. Report bounded interim results honestly while the broader programme runs.
+A universal claim that no other ontology exists is not an acceptance condition.
 
-## Boundaries
-The ontology remains domain-neutral. Paignia owns numerical implementation. This
-track does not redistribute proprietary game assets, invent missing RDF sources,
-claim independent expert review from agent work or require an approval ceremony
-for routine development. External assessment is a bounded research activity.
+## Boundaries and ownership
+UOGTO remains domain-neutral and owns semantic synthesis. Paignia owns numerical
+implementation and runtime adapters; Kairos remains optional simulation. OCS owns
+source discovery, acquisition, charting and coverage evaluation. The MNV track
+integrates those receipts into the existing paper; SGC/FRT retain executable
+contracts, adapters and frontier experiments. No copied proprietary assets,
+invented missing sources, or independent-review claims based on agent work.

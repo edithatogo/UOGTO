@@ -22,6 +22,13 @@ general executable compatibility have not been established.
   identifies missing and incompletely examined predecessors and library concepts.
   Current OpenSpiel/PettingZoo fixtures provide local semantic checks; actual
   external adapters remain future work.
+- The [comprehensive sourcing protocol](docs/research/comprehensive-game-semantics-sourcing-protocol.md)
+  expands discovery beyond the initial audit. Its consolidated seed register,
+  [bibliography](docs/research/game-semantics-bibliography-20261108.md) and attribution
+  ledger preserve earlier sources, citations and unresolved acquisition limits.
+- The [next-paper plan](docs/paper/next-version-plan-20261108.md) maps corrections,
+  comparison evidence and attribution into the existing resource manuscript.
+  Planning is delivered; manuscript revision and broader source synthesis remain open.
 - The [maturity and frontier programme](docs/roadmap/frontier-programme-20261108.md)
   links scoped implementation work, library comparisons and research hypotheses
   to the [Conductor registry](conductor/tracks.md).

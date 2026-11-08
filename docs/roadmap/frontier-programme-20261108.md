@@ -8,6 +8,12 @@ game representations, solvers and environments, with explicit limits.
 The immediate [reconciliation](../semantic-reconciliation-20261108.md) repairs
 demonstrated defects. The [source audit](../research/game-semantics-source-audit-20261108.md)
 establishes why broader coverage and executable evidence are still needed.
+The [comprehensive sourcing protocol](../research/comprehensive-game-semantics-sourcing-protocol.md)
+now governs the expansion beyond that initial audit. The
+[consolidated seeds](../research/game-semantics-discovery-seeds-20261108.json),
+[bibliography](../research/game-semantics-bibliography-20261108.md) and
+[attribution ledger](../research/game-semantics-attribution-20261108.json) retain
+all previously identified sources and the evidence level of each citation.
 
 ## Evidence ladder
 
@@ -28,7 +34,8 @@ that outcome without relabelling ordinary integration as novelty.
 | Track | Immediate outcome | Dependencies and exit evidence |
 | --- | --- | --- |
 | [Semantic reconciliation](../../conductor/tracks/semantic_reconciliation_20261108/index.md) | Repair current category, constraint, mapping and tooling defects | Integrated validation and reviewed diff; no external solver claim |
-| [Source coverage and synthesis](../../conductor/tracks/ontology_coverage_synthesis_20261108/index.md) | Chart direct GTO predecessor, game vocabularies, languages and library concepts | Acquisition and concept-level evidence before coverage claims |
+| [Source coverage and synthesis](../../conductor/tracks/ontology_coverage_synthesis_20261108/index.md) | Comprehensively discover, attribute, chart and compare identifiable ontologies and related approaches | Executed search/acquisition records, construct lineage and declared comparison denominators |
+| [Next resource-paper version](../../conductor/tracks/manuscript_next_version_20261108/index.md) | Integrate corrected claims, sources, semantics and reproducible evidence into the existing manuscript | MNV consumes scoped OCS/validation receipts; real engine evidence only if such claims are retained |
 | [Semantic game contracts](../../conductor/tracks/semantic_game_contracts_20261107/index.md) | Versioned finite subset, full-IRI identity and Rust interchange | SGC.01–05 plus static SGC.08; native traces are a separate optional scope |
 | [Repository maturity](../../conductor/tracks/repository_maturity_20261108/index.md) | Formal profile checks, release compatibility and reproducibility | Required checks retained; focused additional gates match the changed behavior |
 | [Interoperability and frontier research](../../conductor/tracks/semantic_interoperability_frontier_20261108/index.md) | Real library adapters, adversarial cases and new semantic methods | SGC subset first; library and research leaves advance independently when their inputs are ready |
@@ -41,16 +48,25 @@ an unconditional simulation prerequisite, or a second consumer acceptance system
 
 ## Coverage before claims of universality
 
-The existing source inventory does not demonstrate that all game-theory ontologies
-were examined. Prioritise the direct GTO predecessor identified in Mejbri and
+The objective is to source **all identifiable in-scope game-theory ontologies**
+and all related approaches needed for fair comparison, with reproducible searches,
+explicit access limits and a publication cutoff. The existing source inventory
+does not demonstrate that all game-theory ontologies were examined. The protocol
+specifies scholarly, registry, repository and citation-chain routes, deduplication,
+artifact acquisition, stopping rules and future refreshes. Its sixty seed records
+preserve all ninety declared inputs; they are not sixty independently verified
+ontologies. OCS.09–12 extend discovery, attribution, related-approach abstraction
+and comparison beyond the twenty-source audit. Prioritise the direct GTO predecessor identified in Mejbri and
 colleagues' [2018 paper](https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533) and acquire
 the cited original 2013 work if permitted. Record inaccessible or paper-only sources
 honestly. Follow backward and forward citations, terminology variants, registries,
 and library references using a dated search protocol with explicit stopping rules.
 
-Keep four source families separate: strategic ontologies; videogame vocabularies
-such as GOP/VGO/CGO; declarative languages such as GDL/GDL-II/Ludii/VGDL; and
-executable libraries. A source can inform concepts without supplying an OWL import.
+Keep strategic ontologies, videogame vocabularies such as GOP/VGO/CGO,
+declarative languages such as GDL/GDL-II/Ludii/VGDL, executable libraries,
+supporting modelling standards and research baselines in distinct comparison
+strata. Retain the broader simulation/process/upper-ontology inventory and chart
+its relevant concepts; do not inflate direct strategic-ontology coverage with it. A source can inform concepts without supplying an OWL import.
 Chart game and solution assumptions, information, timing, probability, composition,
 learning, cooperation, allocation and execution. Record incompatible definitions
 and intentional exclusions. Preserve attribution and per-artifact licences.
@@ -162,6 +178,27 @@ dataset/code. It is not evidence of a general guarantee of natural-language fide
 These comparators make translation, composition and causal annotations alone
 insufficient novelty claims. The proposed improvement is more reliable, explicitly
 scoped semantic preservation and loss reporting, tested against these approaches.
+
+## From this programme to the next paper
+
+The [next-version plan](../paper/next-version-plan-20261108.md) is grounded in the
+existing manuscript, supplement, source generator and repository submission state.
+Its twelve correction groups address source-search scope, attribution, mapping
+counts and quality, temporality, execution claims, metric denominators and snapshot
+provenance. MNV.00 planning is complete; MNV.01–12 implement the revision.
+
+Prioritise a corrected, attributed **resource-paper revision** with an explicitly
+chosen evidence snapshot and bounded comparisons. The source programme supplies
+search and concept receipts; the manuscript track integrates them and regenerates
+the article package. Completed planning does not mean a revised paper or a
+comprehensive search has already been produced. The repository records no assigned
+arXiv identifier/version, so no public “v2” is asserted.
+
+Later methods papers can test real interchange, semantic-loss detection, typed
+composition, strategic information or constrained game construction against the
+cited baselines. They need actual experimental evidence. The next resource paper
+need not wait for every frontier leaf: narrow or defer unsupported claims and
+publish its unresolved source and semantic gaps explicitly.
 
 ## Real video games and GTA
 

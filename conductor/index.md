@@ -25,7 +25,8 @@ implementation evidence, and GitHub project synchronization.
 
 - [Executable subset and semantic identity](./tracks/semantic_game_contracts_20261107/index.md)
 - [Current semantic reconciliation](./tracks/semantic_reconciliation_20261108/index.md)
-- [Source coverage and synthesis](./tracks/ontology_coverage_synthesis_20261108/index.md)
+- [Comprehensive source coverage and synthesis](./tracks/ontology_coverage_synthesis_20261108/index.md)
+- [Next version of the existing resource paper](./tracks/manuscript_next_version_20261108/index.md)
 - [Repository maturity](./tracks/repository_maturity_20261108/index.md)
 - [Interoperability and frontier research](./tracks/semantic_interoperability_frontier_20261108/index.md)
 - [Video-game environment profiles](./tracks/video_game_environment_profiles_20261108/index.md)

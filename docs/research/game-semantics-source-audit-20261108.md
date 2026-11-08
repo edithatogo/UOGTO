@@ -2,6 +2,19 @@
 
 Audit date: **2026-11-08** (task/as-of date). Baseline examined: `a5f90557c40f054255a1d6c2541fd76f07aa5090`. The companion JSON records twenty selected primary-source comparators, discovery queries, retrieval limitations, licences where verified, and separate acquisition, mapping and execution states. This is a bounded targeted audit, not an exhaustive literature review.
 
+## Follow-up programme and attribution
+
+The [comprehensive sourcing protocol](comprehensive-game-semantics-sourcing-protocol.md)
+expands this bounded audit to all identifiable in-scope ontologies and related
+approaches. The [consolidated seeds](game-semantics-discovery-seeds-20261108.json)
+preserve the overlapping older inventories; the [bibliography](game-semantics-bibliography-20261108.md)
+and [attribution ledger](game-semantics-attribution-20261108.json) supply explicit
+citations and acquisition limits. Subsequent retrievals, including the rtGDL author
+PDF, are recorded there; the failed attempts below remain historical observations.
+The [next-paper plan](../paper/next-version-plan-20261108.md) maps these receipts to
+the existing manuscript. None of these planning additions makes the twenty-source
+audit exhaustive or qualifies new external execution.
+
 ## Finding and scope
 
 **The repository does not establish that all existing game-theory ontologies have been sourced.** Its baseline comparison inventory contains 21 sources, but the provenance manifest records only four parsed external RDF artefacts: schema.org, PROV-O, OWL-Time and SSN/SOSA. The remaining 17 are metadata records. These four support metadata, provenance, time and observations; they do not constitute a survey of strategic-game ontologies. The article-hardening extension inventory contains 39 records: four `parsed_rdf_owl`, fifteen `metadata_only`, two `literature_only` and eighteen `structured_non_rdf`. A structured-source label does not demonstrate that an executable corpus was acquired, parsed, semantically mapped or run.

@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased] — 2026-11-08 sourcing and manuscript programme
+
+- Add comprehensive source discovery/acquisition and comparison protocol, a
+  provenance-preserving sixty-record seed union, bibliography and attribution ledger.
+- Extend OCS with discovery, citation/claim lineage, related-approach crosswalk and
+  comparison leaves; distinguish inherited metadata from checked source evidence.
+- Plan the next existing resource-paper version around corrected claims, explicit
+  comparison/validation scope and reproducible artifacts. MNV planning is complete;
+  comprehensive research and manuscript implementation remain pending.
+
 ## [Unreleased] — 2026-11-08 reconciliation
 
 ### Semantic corrections

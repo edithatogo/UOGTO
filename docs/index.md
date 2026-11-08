@@ -6,6 +6,12 @@
 - [Current semantic quality evidence](quality/current-semantic-quality.md)
 - [Source audit and library abstraction priorities](research/game-semantics-source-audit-20261108.md)
 - [Machine-readable comparator register](research/game-semantics-source-register-20261108.json)
+- [Comprehensive sourcing protocol](research/comprehensive-game-semantics-sourcing-protocol.md)
+- [Consolidated discovery seeds](research/game-semantics-discovery-seeds-20261108.json)
+- [Bibliography and attribution limits](research/game-semantics-bibliography-20261108.md)
+- [Machine-readable citation lineage](research/game-semantics-attribution-20261108.json)
+- [Citation package validation and limits](research/game-semantics-citation-check-20261108.json)
+- [Next version of the existing paper](paper/next-version-plan-20261108.md)
 - [Maturity and frontier programme](roadmap/frontier-programme-20261108.md)
 - [Conductor registry](../conductor/tracks.md)
 

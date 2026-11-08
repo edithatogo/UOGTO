@@ -2,6 +2,37 @@
 
 Updated: `2026-11-08`
 
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+- Expanded source coverage to all identifiable in-scope game-theory ontologies and
+  related languages, libraries, modelling standards and research baselines, using
+  a reproducible protocol with explicit acquisition limits and stopping rules.
+- Preserved 90 existing input items in 60 discovery seed records. Added 74
+  bibliographic references and 64 attribution records; 59 seeds link to references,
+  while GBO remains unresolved. GDLf/GameLan's distinct identity and the original
+  2013 GTO acquisition remain explicit gaps. Inherited metadata is not recertified.
+- OCS.01 remains complete. OCS.09–12 extend discovery, attribution, remaining
+  crosswalks and comparison; the expanded OCS track has eleven pending research
+  leaves. Delivered protocol/citation infrastructure does not close their execution.
+- Registered manuscript_next_version_20261108: MNV.00 planning complete and twelve
+  integration leaves pending. Twelve correction groups and four research questions
+  tie the existing resource manuscript to scoped source and validation receipts.
+  Later interoperability/frontier studies retain separate evidence requirements.
+- Updated programme, product, registry and navigation; retained historical paper,
+  source snapshots, bibliography generator and SGC/FRT/Paignia ownership.
+- Integrated validation: make validate passed; make test passed with 310 passed,
+  one skipped (local arXiv artifacts unavailable), 55 dependency warnings. SourceRight
+  CSL validation, reference/source linkage, snapshot hashes, local links and Conductor
+  leaf/status checks passed. Independent internal review found no remaining blockers.
+- Citation structure and linkage do not certify all source content, licensing or
+  claim support. Comprehensive search completion, a revised manuscript, external
+  solver execution and a public arXiv version are not claimed. Hosted checks and
+  merge status are recorded on PR #127.
+
+Evidence: [sourcing protocol](../docs/research/comprehensive-game-semantics-sourcing-protocol.md),
+[citation checks](../docs/research/game-semantics-citation-check-20261108.json),
+[next-paper plan](../docs/paper/next-version-plan-20261108.md).
+
 ## 2026-11-08 — Semantic reconciliation and frontier programme
 
 - Reconciled the Paignia semantic handoff and strategic-information plan. UOGTO

@@ -1,0 +1,72 @@
+{
+  "schema": "uogto.game-semantics-citation-check.v1",
+  "checked_at": "2026-11-08T00:05:16.148338+00:00",
+  "base_revision": "f606ecc506130fdf88a435b3012b36c8760ad7a9",
+  "scope": "Structural validation and internal linkage for the sourcing follow-up; no worldwide source completeness or claim-support certification.",
+  "source_right": {
+    "command": "sourceright validate-csl --json docs/research/game-semantics-bibliography-20261108.csl.json",
+    "result": {
+      "ok": true,
+      "path": "docs/research/game-semantics-bibliography-20261108.csl.json",
+      "diagnostics": []
+    },
+    "normalization": "Eight DOI fields normalized by case only; original source URL/display strings retained in evidence."
+  },
+  "counts": {
+    "declared_input_items": 90,
+    "discovery_seed_records": 60,
+    "attribution_records": 64,
+    "reference_records": 74,
+    "seed_records_with_references": 59,
+    "uncited_identity_exceptions": 1
+  },
+  "checks": {
+    "unique_reference_and_source_ids": true,
+    "every_seed_has_attribution_record": true,
+    "every_reference_used_and_resolved": true,
+    "every_reference_has_evidence_level": true,
+    "duplicate_canonical_dois": {},
+    "inherited_level_zero_fields_not_invented": true,
+    "input_snapshot_hashes_match_declared_revision": true,
+    "input_ids_preserved": true,
+    "local_markdown_links_resolve": true,
+    "local_link_count_checked": 204,
+    "OCS_and_MNV_leaf_counts_match_metadata": true,
+    "MNV_in_canonical_status_reporter": true
+  },
+  "reference_evidence_level_counts": {
+    "0": 32,
+    "3": 2,
+    "4": 1,
+    "5": 39
+  },
+  "unresolved_no_reference_ids": [
+    "gbo_unresolved"
+  ],
+  "limits": [
+    "59 cited seed records does not mean 59 fully acquired or conceptually charted sources.",
+    "GDLf/GameLan distinct identity is unresolved; its linked citation supports only the generic GDL family.",
+    "The original 2013 GTO and standalone ontology remain unacquired; the 2018 article supplies indirect discovery evidence.",
+    "Inherited level-zero project citations still need original creator, version, licence and content verification.",
+    "The canonical historical manuscript bibliography is unchanged and requires MNV.03 reconciliation.",
+    "No independent expert agreement, external solver execution or comprehensive search completion is certified."
+  ],
+  "input_artifacts": [
+    {
+      "path": "docs/research/game-semantics-discovery-seeds-20261108.json",
+      "sha256": "e6da93ad8c98f5581941da6c1a3af2f777f3e89a4900a2c247ccbec4b587b1a6"
+    },
+    {
+      "path": "docs/research/game-semantics-bibliography-20261108.csl.json",
+      "sha256": "d7284bdb461b3807bf18d2afc907111e6282e7fff9c1f4f3842c632ce274c648"
+    },
+    {
+      "path": "docs/research/game-semantics-bibliography-20261108.md",
+      "sha256": "f8acffe337b28952e0123e83ad2ad5fb6c2621bf7da221ba644858602e001195"
+    },
+    {
+      "path": "docs/research/game-semantics-attribution-20261108.json",
+      "sha256": "921feaccb2ce1dfd74510164552281c333c423693f6d8a6f5be33e2e516a29a0"
+    }
+  ]
+}

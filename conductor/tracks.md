@@ -10,9 +10,15 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## [~] Track: ontology_coverage_synthesis_20261108
 
-- **Description**: Source and chart strategic predecessors, videogame vocabularies, formal languages and executable library concepts.
-- **Status**: Bounded audit OCS.01 complete; seven synthesis/evaluation leaves pending.
+- **Description**: Comprehensively source, attribute and compare identifiable game-theory ontologies, languages, libraries, modelling standards and research baselines.
+- **Status**: Bounded audit OCS.01 complete; comprehensive protocol, sixty-record seed union and citation catalogue delivered; eleven research leaves pending.
 - **Link**: [./tracks/ontology_coverage_synthesis_20261108/](./tracks/ontology_coverage_synthesis_20261108/)
+
+## [~] Track: manuscript_next_version_20261108
+
+- **Description**: Revise the existing UOGTO resource paper using corrected semantics, source attribution, explicit comparison scope and reproducible evidence.
+- **Status**: Planning MNV.00 complete; twelve manuscript-integration leaves pending. No new manuscript or public arXiv version claimed.
+- **Link**: [./tracks/manuscript_next_version_20261108/](./tracks/manuscript_next_version_20261108/)
 
 ## [ ] Track: repository_maturity_20261108
 

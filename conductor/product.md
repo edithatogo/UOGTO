@@ -31,8 +31,13 @@ external-library compatibility requires versioned receipts and executed tests.
 ## Development priorities
 
 1. Correct reproduced defects and keep current evidence reproducible.
-2. Source and chart strategic predecessors, formal languages and library concepts.
+2. Comprehensively source, attribute and compare identifiable strategic ontologies,
+   formal languages, library concepts and related modelling/research approaches.
 3. Qualify a finite executable profile through the existing semantic-contract track.
 4. Mature release and compatibility practices; measure adapters on independent cases.
 5. Test the [frontier programme](../docs/roadmap/frontier-programme-20261108.md)
    against explicit baselines before making novelty claims.
+
+The [next resource-paper plan](../docs/paper/next-version-plan-20261108.md) integrates
+corrected claims, comprehensive sourcing receipts and reproducible evidence; later
+interoperability and frontier publications require their own experimental results.
