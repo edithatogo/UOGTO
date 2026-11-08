@@ -81,7 +81,10 @@ ex:confirmation-use a cost:ResourceUse ; cost:resourceUseId "confirmation-b-staf
     cost:usesResource ex:staff-time ; cost:forCostObject ex:confirmation-b ; cost:forActivity ex:confirmation ;
     cost:quantity "15.00"^^xsd:decimal ; cost:unit unit:MIN .
 ex:specimen-count a cost:ActivityMeasure ; cost:forActivity ex:batch-analysis ;
+    cost:activityKind ex:specimen-count-kind ;
     cost:forCostObject ex:batch-1 ; cost:quantity "2.00"^^xsd:decimal ; cost:unit unit:NUM .
+ex:specimen-count-kind a cost:ActivityKind ; rdfs:label "Specimen count"@en ;
+    skos:definition "A count of specimens, distinct from infant count, shared-batch count and consumed resource units."@en .
 
 ex:collection-a-line a cost:ValuationLine ; cost:sourceResourceUse ex:collection-a-use ;
     cost:usedQuote ex:staff-quote ; cost:valuationPolicy ex:policy ;

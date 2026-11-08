@@ -35,7 +35,7 @@ of publishers' articles.
 | --- | --- |
 | Study scope | A bounded costing study, population, perspective, scenario and output denominator |
 | Resource measurement | Resource-use observations have their own identity; activity/output measures remain distinct |
-| Valuation | Quotes, immutable rate-release identities, effective periods and knowledge dates; valuation policy and basis are explicit |
+| Valuation | Quotes target exactly one resource or activity kind; immutable rate-release identities, effective periods and knowledge dates remain explicit |
 | Numerical representation | Decimal and exact rational inputs are distinguishable; rounding/conversion policy must be explicit at a monetary boundary |
 | Economic interpretation | Resource/opportunity cost, financial expenditure, accounting cost, tariff and payment remain separate bases |
 | Allocation | Source ledger, shared cost pool and allocated recipient views are separate; allocation does not create another incurred cost |
@@ -174,6 +174,14 @@ conservation. All amounts and resource assumptions are fictional. It is a
 semantic test fixture, not a clinical pathway, an Australian price release or
 a programme estimate. The tests include deliberately inconsistent records to
 show which declared invariants are rejected.
+
+The separate [weighted-activity funding example](../examples/activity-funding-valuation.ttl)
+uses wholly invented activity and funding amounts. It demonstrates that direct
+activity quotation can produce a funding view without asserting any resource
+consumption. Resource-use lines require resource quotes; activity-to-resource
+valuation or conversion of different activity kinds/units requires an explicit
+recipe. This supports the MCHS boundary without treating an NWAU-like measure
+as a physical input or declaring any synthetic rate official.
 
 ## Rebuild and verification
 

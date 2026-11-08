@@ -17,6 +17,7 @@ COST = Namespace("https://w3id.org/uogto/packs/costing-valuation#")
 BRIDGE = Namespace("https://w3id.org/uogto/bridges/costing-hta#")
 CORE = Namespace("https://w3id.org/uogto/core#")
 EX = Namespace("http://example.org/costing/newborn/")
+FUND = Namespace("http://example.org/costing/activity-funding/")
 
 
 @pytest.fixture(scope="module")
@@ -39,6 +40,11 @@ def data() -> Graph:
     return Graph().parse(ROOT / "examples/newborn-screening-costing.ttl", format="turtle")
 
 
+@pytest.fixture
+def funding_data() -> Graph:
+    return Graph().parse(ROOT / "examples/activity-funding-valuation.ttl", format="turtle")
+
+
 def check(data: Graph, schema: tuple[Graph, Graph]) -> tuple[bool, str]:
     ontology, shapes = schema
     conforms, _, report = validate(
@@ -59,6 +65,75 @@ def clone_subject(data: Graph, source: URIRef, target: URIRef) -> None:
 def test_synthetic_newborn_example_conforms(data, schema) -> None:
     conforms, report = check(data, schema)
     assert conforms, report
+
+
+def test_weighted_activity_funding_does_not_require_resource_classification(funding_data, schema) -> None:
+    ontology, shapes = schema
+    conforms, _, report = validate(
+        funding_data, shacl_graph=shapes, ont_graph=ontology, inference="rdfs", inplace=True
+    )
+    assert conforms, report
+    assert not list(funding_data.subjects(RDF.type, COST.Resource))
+    assert not list(funding_data.subjects(RDF.type, COST.ResourceUse))
+    assert funding_data.value(FUND["activity-quote"], COST.appliesToResource) is None
+    assert funding_data.value(FUND["funding-policy"], COST.valuationBasis) == COST["funding-valuation"]
+    amount = Decimal(funding_data.value(FUND["funding-line"], COST.lineAmount))
+    quantity = Decimal(funding_data.value(FUND["weighted-output"], COST.quantity))
+    rate = Decimal(funding_data.value(FUND["activity-quote"], COST.quoteAmount))
+    assert amount == quantity * rate == Decimal("42.50")
+
+
+def test_cross_kind_activity_quote_needs_an_explicit_recipe(funding_data, schema) -> None:
+    funding_data.set((FUND["activity-quote"], COST.appliesToActivityKind, FUND["raw-episode-kind"]))
+    conforms, report = check(funding_data, schema)
+    assert not conforms
+    assert "quoted activity kinds" in report
+
+
+def test_cross_unit_activity_quote_needs_an_explicit_recipe(funding_data, schema) -> None:
+    funding_data.set((FUND["activity-quote"], COST.perUnit, FUND["episode-unit"]))
+    conforms, report = check(funding_data, schema)
+    assert not conforms
+    assert "quoted activity units" in report
+
+
+def test_explicit_activity_conversion_recipe_is_representable(funding_data, schema) -> None:
+    funding_data.set((FUND["activity-quote"], COST.appliesToActivityKind, FUND["raw-episode-kind"]))
+    funding_data.set((FUND["activity-quote"], COST.perUnit, FUND["episode-unit"]))
+    funding_data.add((FUND["funding-line"], COST.valuationRecipe, Literal(
+        "For this synthetic fixture only, a model maps the 2.50 weighted units to 2.50 "
+        "equivalent episodes before applying the invented episode rate. No general "
+        "equivalence or actual conversion calculation is established by this assertion."
+    )))
+    conforms, report = check(funding_data, schema)
+    assert conforms, report
+
+
+def test_resource_consumption_cannot_be_directly_priced_by_an_activity_quote(data, schema) -> None:
+    data.remove((EX["staff-quote"], COST.appliesToResource, None))
+    data.add((EX["staff-quote"], COST.appliesToActivityKind, EX["specimen-count-kind"]))
+    conforms, report = check(data, schema)
+    assert not conforms
+    assert "XoneConstraintComponent" in report
+
+
+def test_activity_to_resource_recipe_preserves_resource_quote_support(data, schema) -> None:
+    data.remove((EX["batch-line"], COST.sourceResourceUse, None))
+    data.add((EX["batch-line"], COST.sourceActivityMeasure, EX["specimen-count"]))
+    data.add((EX["batch-line"], COST.valuationRecipe, Literal(
+        "Two synthetic specimens consume one shared batch kit; value that one kit "
+        "at the declared resource quote. The specimen count is not itself resource consumption."
+    )))
+    conforms, report = check(data, schema)
+    assert conforms, report
+
+
+def test_quote_cannot_simultaneously_target_resource_and_activity(funding_data, schema) -> None:
+    funding_data.add((FUND["invented-resource"], RDF.type, COST.Resource))
+    funding_data.add((FUND["activity-quote"], COST.appliesToResource, FUND["invented-resource"]))
+    conforms, report = check(funding_data, schema)
+    assert not conforms
+    assert "XoneConstraintComponent" in report
 
 
 def test_allocations_are_attributions_not_duplicate_expenses(data) -> None:

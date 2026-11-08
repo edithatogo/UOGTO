@@ -53,7 +53,35 @@
       "Importer validates declared counts and preserves source-specific extraction scope",
       "Coverage check accepts typed reporting instances only with explicit schema import",
       "Attribution competency query returns no invented zero-valued infant on an empty graph"
-    ]
+    ],
+    "initial_github_ci": {
+      "commit": "33a0aac205fd4a281753c5e3f3bac7b7f411cae1",
+      "tests": {
+        "passed": 310,
+        "skipped": 1,
+        "failed": 0
+      },
+      "required_gate": "passed, including manuscript/arXiv checks",
+      "validate_workflow": "tests passed; coverage command exposed instance-catalogue classification defect",
+      "run": "https://github.com/edithatogo/UOGTO/actions/runs/42429420720"
+    },
+    "follow_up": {
+      "scope": "Coverage CLI integration and explicit activity-kind quotations",
+      "focused_tests": {
+        "passed": 58,
+        "failed": 0
+      },
+      "make_validate": {
+        "status": "passed",
+        "examples": 31,
+        "competency_questions": 24
+      },
+      "make_coverage": "passed",
+      "git_diff_check": "passed",
+      "full_suite": "CI rerun pending on the follow-up commit",
+      "new_example": "examples/activity-funding-valuation.ttl",
+      "resource_boundary": "Synthetic weighted-activity funding example infers no Resource or ResourceUse instances"
+    }
   },
   "related_pull_requests": {
     "standards_check": "https://github.com/edithatogo/standards_check/pull/65",

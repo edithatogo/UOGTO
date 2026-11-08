@@ -31,6 +31,7 @@ cost:ResourceUseShape a sh:NodeShape ;
 cost:ActivityMeasureShape a sh:NodeShape ;
     sh:targetClass cost:ActivityMeasure ;
     sh:not [ sh:class cost:ResourceUse ] ;
+    sh:property [ sh:path cost:activityKind ; sh:class cost:ActivityKind ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:forActivity ; sh:class cost:ProcessActivity ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:forCostObject ; sh:class cost:CostObject ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:node cost:MeasuredQuantityShape ;
@@ -62,7 +63,12 @@ cost:UnitQuoteShape a sh:NodeShape ;
     ) ;
     sh:property [ sh:path cost:currency ; sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:perUnit ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ] ;
-    sh:property [ sh:path cost:appliesToResource ; sh:class cost:Resource ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:xone (
+        [ sh:property [ sh:path cost:appliesToResource ; sh:class cost:Resource ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:appliesToActivityKind ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path cost:appliesToActivityKind ; sh:class cost:ActivityKind ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path cost:appliesToResource ; sh:maxCount 0 ] ]
+    ) ;
     sh:property [ sh:path cost:valuationBasis ; sh:class cost:ValuationBasis ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:rateRelease ; sh:class cost:RateRelease ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:effectiveFrom ; sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ; sh:lessThan cost:effectiveTo ] ;
@@ -95,10 +101,18 @@ cost:ValuationLineShape a sh:NodeShape ;
     sh:targetClass cost:ValuationLine ;
     sh:xone (
         [ sh:property [ sh:path cost:sourceResourceUse ; sh:class cost:ResourceUse ; sh:minCount 1 ; sh:maxCount 1 ] ;
-          sh:property [ sh:path cost:sourceActivityMeasure ; sh:maxCount 0 ] ]
+          sh:property [ sh:path cost:sourceActivityMeasure ; sh:maxCount 0 ] ;
+          sh:property [ sh:path cost:usedQuote ; sh:node [
+              sh:property [ sh:path cost:appliesToResource ; sh:minCount 1 ] ] ] ]
         [ sh:property [ sh:path cost:sourceActivityMeasure ; sh:class cost:ActivityMeasure ; sh:minCount 1 ; sh:maxCount 1 ] ;
           sh:property [ sh:path cost:sourceResourceUse ; sh:maxCount 0 ] ;
-          sh:property [ sh:path cost:valuationRecipe ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] ]
+          sh:or (
+              [ sh:property [ sh:path cost:usedQuote ; sh:node [
+                  sh:property [ sh:path cost:appliesToActivityKind ; sh:minCount 1 ] ] ] ]
+              [ sh:property [ sh:path cost:usedQuote ; sh:node [
+                  sh:property [ sh:path cost:appliesToResource ; sh:minCount 1 ] ] ] ;
+                sh:property [ sh:path cost:valuationRecipe ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] ]
+          ) ]
     ) ;
     sh:property [ sh:path cost:usedQuote ; sh:class cost:UnitQuote ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:valuationPolicy ; sh:class cost:ValuationPolicy ; sh:minCount 1 ; sh:maxCount 1 ] ;
@@ -107,6 +121,17 @@ cost:ValuationLineShape a sh:NodeShape ;
     sh:property [ sh:path cost:lineAmount ; sh:datatype xsd:decimal ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path cost:valuationRecipe ; sh:datatype xsd:string ; sh:minLength 1 ] ;
     sh:property [ sh:path cost:adjustmentReason ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Different measured and quoted activity kinds need an explicit valuation recipe." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:sourceActivityMeasure/cost:activityKind ?kind ; cost:usedQuote/cost:appliesToActivityKind ?quotedKind .
+                FILTER (?kind != ?quotedKind) FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe } }""" ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Different measured and quoted activity units need an explicit unit-conversion recipe." ;
+        sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+            SELECT $this WHERE { $this cost:sourceActivityMeasure/cost:unit ?unit ; cost:usedQuote ?quote .
+                ?quote cost:appliesToActivityKind ?kind ; cost:perUnit ?perUnit .
+                FILTER (?unit != ?perUnit) FILTER NOT EXISTS { $this cost:valuationRecipe ?recipe } }""" ] ;
     sh:sparql [ a sh:SPARQLConstraint ;
         sh:message "A rational-input valuation needs an explicit conversion and rounding recipe for the decimal output ledger." ;
         sh:select """PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>

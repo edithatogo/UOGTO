@@ -47,3 +47,20 @@ runtime, source truth, clinical pathways or an external consensus standard.
 
 Source catalogue: [standards_check PR 65](https://github.com/edithatogo/standards_check/pull/65).
 Coordinating architecture: [MCHS PR 411](https://github.com/edithatogo/mchs/pull/411).
+
+### GitHub and follow-up evidence
+
+On commit `33a0aac205fd4a281753c5e3f3bac7b7f411cae1`, GitHub's full suite
+passed **310 tests with 1 skipped**. The Required Gate also passed, including
+manuscript/arXiv checks. The separate coverage command then exposed the same
+instance-catalogue assumption that the first test adjustment addressed.
+
+The follow-up fixes the actual coverage CLI with populated-catalogue checks and
+seven CLI regressions. It also adds explicit activity-kind quotation so weighted
+funding activity does not become a resource by inference. The fictional funding
+example has zero Resource and ResourceUse instances after RDFS inference.
+
+Follow-up local results: **58 focused tests passed**, `make validate` passed
+**31 examples and 24 competency questions**, `make coverage` passed, and
+`git diff --check` passed. The whole-suite CI rerun for this follow-up is pending;
+the earlier full-suite results are not relabelled as a test of a later commit.

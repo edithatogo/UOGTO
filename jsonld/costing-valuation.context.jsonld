@@ -436,6 +436,15 @@
     "assessmentMethod": {
       "@id": "cost:assessmentMethod",
       "@type": "xsd:string"
+    },
+    "ActivityKind": "cost:ActivityKind",
+    "activityKind": {
+      "@id": "cost:activityKind",
+      "@type": "@id"
+    },
+    "appliesToActivityKind": {
+      "@id": "cost:appliesToActivityKind",
+      "@type": "@id"
     }
   }
 }
