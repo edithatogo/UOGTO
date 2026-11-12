@@ -36,10 +36,6 @@ class Check:
     evidence: str = ""
     blocker: bool = False
 
-    @property
-    def passed(self) -> bool:
-        return self.earned >= self.points
-
 
 @dataclass
 class ScoreReport:
@@ -66,7 +62,7 @@ class ScoreReport:
         self.checks.append(check)
         if check.blocker:
             self.blockers.append(label)
-        elif not check.passed and severity in {"warning", "error"}:
+        elif check.earned < check.points and severity in {"warning", "error"}:
             self.warnings.append(label)
 
 
@@ -299,7 +295,7 @@ def score_submission(root: Path = ROOT) -> dict[str, Any]:
             "max_points": category.max_points,
             "earned_points": earned,
             "percent": pct,
-            "checks": [check.__dict__ | {"passed": check.passed} for check in checks],
+            "checks": [check.__dict__ | {"passed": check.earned >= check.points} for check in checks],
         }
 
     raw_total = round(sum(category["earned_points"] for category in by_category.values()), 2)
