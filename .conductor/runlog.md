@@ -1,5 +1,37 @@
 # Conductor Run Log
 
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+The canonical source programme now includes comprehensive discovery, acquisition,
+attribution and comparison. All 90 declared input items are preserved in 60 seed
+records, with 74 references across 64 attribution records. Unresolved identities
+and inherited evidence remain explicit. OCS has eleven pending research leaves;
+MNV.00 planning is complete with twelve manuscript-integration leaves pending.
+
+Integrated make validate and make test pass: 310 passed, one local arXiv-artifact
+skip, 55 dependency warnings. SourceRight CSL, citation linkage, snapshot/link and
+track checks pass; internal review found no remaining blockers. These are planning
+and engineering checks, not completed comprehensive research or a revised paper.
+Canonical detail and evidence: `conductor/status.md`, `conductor/runlog.md`,
+`docs/research/game-semantics-citation-check-20261108.json` and
+`docs/paper/next-version-plan-20261108.md`. Hosted state is on PR #127.
+
+## 2026-11-08 — Current reconciliation evidence
+
+Canonical registry: `conductor/tracks.md`; current status and detailed verification:
+`conductor/status.md` and `conductor/tracks/semantic_reconciliation_20261108/metadata.json`.
+
+Semantic/mapping/runner repairs and the bounded source audit are implemented.
+`make validate`, semantic audit and comparison checks pass. `make test` reports
+310 passed, 1 skipped (local arXiv-artifact test), 55 warnings. SGC.07 is complete;
+seven SGC leaves and both receipt scopes remain pending. Four additional programme
+tracks retain their explicit pending implementation/research work. The status
+reporter now distinguishes canonical active tracks from historical bootstrap phases.
+
+Earlier missing-RDFLib notes below describe past environments; they are not the
+current validation result. Historical publication and board records retain their
+original scope. Hosted CI/merge status is supplied by the pull request.
+
 ## 2026-11-08 - Created Paignia provider follow-up
 
 - Followed the maintainer's created repository with updated provider links and

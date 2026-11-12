@@ -161,6 +161,25 @@
     {
       "query": "cq20-genomic-data-access-game.rq", "example_graphs": ["examples/genomic-data-access-game.ttl"], "min_count": 1,
       "required_bindings": [{"game": "http://example.org/applied-pack/genomic-access", "consent": "http://example.org/applied-pack/research-consent", "risk": "http://example.org/applied-pack/disclosure-risk"}]
+    },
+    {
+      "query": "cq21-dynamic-game-representations.rq",
+      "example_graphs": [
+        "examples/dynamic-normal-form-game.ttl"
+      ],
+      "min_count": 4,
+      "required_bindings": [
+        {
+          "game": "http://example.org/temporality/two-stage-stochastic-game",
+          "representation": "http://example.org/temporality/normal-form",
+          "action": "http://example.org/temporality/alice-first-choice"
+        },
+        {
+          "game": "http://example.org/temporality/two-stage-stochastic-game",
+          "representation": "http://example.org/temporality/normal-form",
+          "action": "http://example.org/temporality/bob-later-choice"
+        }
+      ]
     }
   ]
 }

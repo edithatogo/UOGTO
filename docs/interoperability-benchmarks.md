@@ -7,6 +7,12 @@ compatibility before optional adapter tests exist.
 
 Machine-readable inventory: `docs/interoperability-benchmarks.json`.
 
+As of the November reconciliation, these remain local reference fixtures. Neither
+the OpenSpiel fixture nor the PettingZoo fixture executes the named external
+library. Paignia computation and actual library interoperability are tracked in
+the [frontier programme](roadmap/frontier-programme-20261108.md); source-level
+abstractions are charted in the [audit](research/game-semantics-source-audit-20261108.md).
+
 ## Current Fixtures
 
 | Target | License | Status | Fixture | Verification |

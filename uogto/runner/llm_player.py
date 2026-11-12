@@ -1,51 +1,67 @@
+"""Deterministic first-action baseline; legacy LLM names remain importable."""
+
 from uogto.runner.engine import RDFGameRunner
 
-class LLMPlayer:
+
+class FirstActionPlayer:
+    """Select the first supplied action without contacting a model or solver."""
+
+    execution_origin = "deterministic_first_action_baseline"
+
     def __init__(self, name, model_name="gpt-4o"):
         self.name = name
+        # Retained solely for compatibility with the former LLMPlayer API.
         self.model_name = model_name
 
     def make_choice(self, game_description, available_actions):
-        # We query a generic Ollama/remote endpoint or fallback to a heuristic if not authenticated.
-        # Standard fallback if no API key or endpoint is specified.
-        if available_actions:
-            return available_actions[0]
-        return None
+        return available_actions[0] if available_actions else None
 
-class LLMPlayerBench:
+
+class FirstActionPlayerBench:
+    """Select first actions in graph iteration order and look up stored payoffs."""
+
+    execution_origin = FirstActionPlayer.execution_origin
+
     def __init__(self, ttl_path):
         self.runner = RDFGameRunner(ttl_path)
 
     def run_session(self, spec_uri):
-        players = self.runner.get_players(spec_uri)
         choices = {}
-        
-        # Instantiate LLM players
-        for p in players:
-            player_uri = p["uri"]
-            player_label = p["label"] or player_uri
-            
+        for player in self.runner.get_players(spec_uri):
+            player_uri = player["uri"]
             actions = self.runner.get_actions(spec_uri, player_uri)
-            action_uris = [a["uri"] for a in actions]
-            
-            llm_player = LLMPlayer(name=player_label)
-            chosen_action = llm_player.make_choice("UOGTO Game Specification", action_uris)
-            choices[player_uri] = chosen_action
-            
-        payoffs = self.runner.query_payoff(spec_uri, choices)
+            baseline = FirstActionPlayer(name=player["label"] or player_uri)
+            choices[player_uri] = baseline.make_choice(
+                "UOGTO Game Specification", [action["uri"] for action in actions]
+            )
         return {
             "choices": choices,
-            "payoffs": payoffs
+            "payoffs": self.runner.query_payoff(spec_uri, choices),
+            "execution_origin": self.execution_origin,
+            "payoff_origin": "stored_graph_lookup",
+            "model_request_performed": False,
+            "native_solver_performed": False,
         }
+
+
+# Historical import names and constructor signatures remain supported.
+LLMPlayer = FirstActionPlayer
+LLMPlayerBench = FirstActionPlayerBench
 
 
 def main():
     import argparse
     import json
 
-    parser = argparse.ArgumentParser(description="Run a deterministic UOGTO LLM-player benchmark.")
+    parser = argparse.ArgumentParser(
+        description="Run the UOGTO deterministic first-action reference baseline."
+    )
     parser.add_argument("ttl_path", help="Turtle file containing a UOGTO game graph.")
     parser.add_argument("spec_uri", help="Game specification URI to run.")
     args = parser.parse_args()
-    result = LLMPlayerBench(args.ttl_path).run_session(args.spec_uri)
+    result = FirstActionPlayerBench(args.ttl_path).run_session(args.spec_uri)
     print(json.dumps(result, indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

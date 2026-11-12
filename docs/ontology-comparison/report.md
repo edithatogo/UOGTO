@@ -14,19 +14,19 @@ The discovery protocol records registry, repository, literature, and standards-b
 - redistributable_artifact
 
 ## Mapping Methods
-Mapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.
+Mapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Lexical and similarity scores propose candidates and cannot automatically establish equivalence. Existing repository subclass assertions support conservative narrow matches; accepted equivalences require explicit scoped semantic evidence, and the known universal-class/device and observation-role mismatches are rejected. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.
 
 ## Source Inventory
 - Candidate sources: 21
 - External terms: 3485
 - UOGTO terms: 561
 - Review candidates: 460
-- Accepted mappings: 12
+- Accepted mappings: 4
 
 ## Mapping Review Results
-- Accepted: 12
-- Needs domain review: 0
-- Rejected: 448
+- Accepted: 4
+- Needs domain review: 6
+- Rejected: 450
 
 The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate and rejected rows remain audit records and should not be treated as asserted ontology alignments.
 
@@ -45,9 +45,9 @@ The accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate
 ## Network Findings
 - Import/evidence source graph nodes: 75
 - Source-similarity graph nodes: 70
-- Term-alignment bipartite edges: 12
+- Term-alignment bipartite edges: 4
 - Source-similarity edges: 391
-- UOGTO module coverage edges: 12
+- UOGTO module coverage edges: 10
 
 The import/evidence graph and source-similarity graph are separate views; their node counts are not expected to match.
 

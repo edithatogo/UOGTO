@@ -1,10 +1,10 @@
 {
   "track_id": "semantic_game_contracts_20261107",
   "type": "feature",
-  "status": "new",
-  "execution_status": "pending",
+  "status": "in_progress",
+  "execution_status": "in_progress",
   "created_at": "2026-11-07T00:00:00Z",
-  "updated_at": "2026-11-07T22:21:49Z",
+  "updated_at": "2026-11-08T00:00:00+10:00",
   "description": "Versioned executable UOGTO subset and identity-preserving mappings to Paignia's Rust game packages",
   "base_revision": "ac5b8e86c4a3547d008e83ba4cfcbb5f3ba95f25",
   "dependencies": [
@@ -20,8 +20,14 @@
     "status": "chosen-name-provider-repository-created-seed-transfer-in-progress",
     "repository": "edithatogo/paignia",
     "incubator_repository": "edithatogo/new-drug-reimbursement-game",
-    "seed_packages": ["paignia-core", "paignia-solve"],
-    "historical_packages": ["uogto-game-core", "uogto-game-solve"],
+    "seed_packages": [
+      "paignia-core",
+      "paignia-solve"
+    ],
+    "historical_packages": [
+      "uogto-game-core",
+      "uogto-game-solve"
+    ],
     "semantic_owner": "UOGTO",
     "handoff": "https://github.com/edithatogo/UOGTO/issues/123",
     "qualification": "Pending; bind exact provider revision and artifact before acceptance"
@@ -29,37 +35,75 @@
   "acceptance_scopes": {
     "static_semantic": {
       "status": "pending",
-      "requires": ["SGC.01", "SGC.02", "SGC.03", "SGC.04", "SGC.05"],
+      "requires": [
+        "SGC.01",
+        "SGC.02",
+        "SGC.03",
+        "SGC.04",
+        "SGC.05"
+      ],
       "receipt_task": "SGC.08",
       "required_evidence": "Version-matched profile, game packages and fixture hashes with actual Rust interchange; no Kairos or native-simulation prerequisite"
     },
     "dynamic_execution": {
       "status": "pending",
-      "requires": ["SGC.01", "SGC.02", "SGC.03", "SGC.04", "SGC.05", "SGC.06"],
+      "requires": [
+        "SGC.01",
+        "SGC.02",
+        "SGC.03",
+        "SGC.04",
+        "SGC.05",
+        "SGC.06"
+      ],
       "receipt_task": "SGC.08",
       "required_evidence": "Static semantic evidence plus the trace contract and actual native-provider dispatch evidence"
     }
   },
+  "completed_leaves": [
+    "SGC.07"
+  ],
+  "pending_leaf_count": 7,
+  "verification_history": [
+    {
+      "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+      "scope": "Paignia identity, provenance and task reconciliation only; no ontology or runtime qualification",
+      "status": "documentation_checks_passed_ontology_validation_blocked",
+      "commands_passed": [
+        "python -m pytest -q tests/test_field_expansion_roadmap.py",
+        "python - (inline pending-leaf, receipt-scope, full-IRI, provenance and local-link assertions)",
+        "git diff --check"
+      ],
+      "results": {
+        "focused_documentation_tests": 3,
+        "stdlib_document_checks": "8 pending leaves; static closure is SGC.01\u2013SGC.05; dynamic adds SGC.06/native evidence; all three namespace families retained; per-asset provenance required; 5 local links",
+        "registration_review": "Original registration: one metadata evidence-recording finding resolved; no other concrete findings"
+      },
+      "blocked_check": {
+        "command": "make validate",
+        "python_selection": "PYTHON overridden to the available tools environment",
+        "result": "ModuleNotFoundError: No module named 'rdflib'",
+        "limitation": "RDFLib and PySHACL are absent from this environment; no repository dependency changed and no ontology-validation pass claimed"
+      },
+      "not_qualified": [
+        "Future semantic tests",
+        "Rust interchange",
+        "Simulation execution",
+        "Scientific methods"
+      ]
+    }
+  ],
   "verification": {
-    "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
-    "scope": "Paignia identity, provenance and task reconciliation only; no ontology or runtime qualification",
-    "status": "documentation_checks_passed_ontology_validation_blocked",
+    "status": "reference_tool_labels_implemented",
+    "scope": "SGC.07 only; previous planning verification retained in verification_history",
     "commands_passed": [
-      "python -m pytest -q tests/test_field_expansion_roadmap.py",
-      "python - (inline pending-leaf, receipt-scope, full-IRI, provenance and local-link assertions)",
-      "git diff --check"
+      "python -m pytest tests/test_runner_execution_origin.py tests/test_game_runner.py"
     ],
-    "results": {
-      "focused_documentation_tests": 3,
-      "stdlib_document_checks": "8 pending leaves; static closure is SGC.01–SGC.05; dynamic adds SGC.06/native evidence; all three namespace families retained; per-asset provenance required; 5 local links",
-      "registration_review": "Original registration: one metadata evidence-recording finding resolved; no other concrete findings"
-    },
-    "blocked_check": {
-      "command": "make validate",
-      "python_selection": "PYTHON overridden to the available tools environment",
-      "result": "ModuleNotFoundError: No module named 'rdflib'",
-      "limitation": "RDFLib and PySHACL are absent from this environment; no repository dependency changed and no ontology-validation pass claimed"
-    },
-    "not_qualified": ["Future semantic tests", "Rust interchange", "Simulation execution", "Scientific methods"]
+    "not_qualified": [
+      "SGC.01\u2013SGC.06",
+      "SGC.08",
+      "Rust interchange",
+      "Native simulation",
+      "Numerical or scientific validity"
+    ]
   }
 }

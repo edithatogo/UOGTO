@@ -16,17 +16,17 @@ uogtox:BargainingGame a owl:Class ;
     skos:definition "A cooperative scenario where players negotiate a division of resources."@en .
 
 uogtox:BargainingSolution a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogto:AllocationSolution ;
     rdfs:label "BargainingSolution"@en ;
-    skos:definition "An equilibrium outcome resolving strategic negotiation."@en .
+    skos:definition "A payoff allocation satisfying a bargaining solution concept for a feasible set and disagreement point."@en .
 
 uogtox:NashBargainingSolution a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogtox:BargainingSolution ;
     rdfs:label "NashBargainingSolution"@en ;
-    skos:definition "A bargaining solution maximizing the product of utilities."@en .
+    skos:definition "A feasible bargaining allocation maximizing the product of utility gains relative to the disagreement point."@en .
 
 uogtox:KalaiSmorodinskySolution a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogtox:BargainingSolution ;
     rdfs:label "KalaiSmorodinskySolution"@en ;
     skos:definition "A bargaining solution maintaining utility ratios relative to ideal options."@en .
 
