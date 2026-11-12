@@ -1,4 +1,5 @@
 import os
+import html
 import glob
 from rdflib import Graph
 from pyshacl import validate as shacl_validate
@@ -37,11 +38,11 @@ def generate_html_report(output_path="validation_report.html"):
         
         status_color = "#28a745" if conforms else "#dc3545"
         status_text = "Conforms" if conforms else "Violation"
-        details = "All shapes matched perfectly." if conforms else results_text.replace('\n', '<br>')
+        details = "All shapes matched perfectly." if conforms else html.escape(results_text).replace('\n', '<br>')
         
         rows += f"""
         <tr>
-            <td>{os.path.basename(ex)}</td>
+            <td>{html.escape(os.path.basename(ex))}</td>
             <td>{fmt}</td>
             <td style="color: white; background-color: {status_color}; font-weight: bold; text-align: center;">{status_text}</td>
             <td><code>{details}</code></td>
