@@ -77,3 +77,15 @@ class TestQueryDatabases(unittest.TestCase):
         results = query_crossref("test", limit=1)
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0]["title"], "Crossref Test Work")
+
+    @patch('urllib.request.urlopen')
+    def test_fetch_url_timeout(self, mock_urlopen):
+        import urllib.error
+        import socket
+        # Simulate a socket timeout exception
+        mock_urlopen.side_effect = urllib.error.URLError(socket.timeout("timed out"))
+
+        # Test that fetch_url handles the exception and returns None
+        from scripts.review.query_databases import fetch_url
+        result = fetch_url("http://example.com")
+        self.assertIsNone(result)
