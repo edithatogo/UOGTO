@@ -1,0 +1,45 @@
+@prefix ex: <http://example.org/costing/activity-funding/> .
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Entirely synthetic weighted-activity funding example, motivated by NWAU-like
+# valuation. Neither its unit definition, rate, weights nor result is an official
+# NWAU/NEP value or a claim about resource consumption or opportunity cost.
+# 2.50 invented weighted units x 17.00 invented AUD/unit = 42.50 funding amount.
+ex:weighted-output-kind a cost:ActivityKind ;
+    rdfs:label "Synthetic weighted service output"@en ;
+    skos:definition "A fictitious weighted output kind, distinct from raw episode count and from consumed resources."@en .
+ex:raw-episode-kind a cost:ActivityKind ;
+    rdfs:label "Synthetic raw episode count"@en ;
+    skos:definition "An unweighted episode count; it is not interchangeable with weighted output without an explicit transformation."@en .
+ex:weighted-unit a cost:OutputUnit ; rdfs:label "One synthetic weighted output unit"@en .
+ex:episode-unit a cost:OutputUnit ; rdfs:label "One synthetic episode"@en .
+ex:service-cohort a cost:CostObject ; rdfs:label "Synthetic service cohort"@en .
+ex:output-assignment a cost:ProcessActivity ; rdfs:label "Synthetic weighted-output assignment"@en .
+ex:weighted-output a cost:ActivityMeasure ;
+    cost:activityKind ex:weighted-output-kind ; cost:forActivity ex:output-assignment ;
+    cost:forCostObject ex:service-cohort ; cost:quantity "2.50"^^xsd:decimal ; cost:unit ex:weighted-unit .
+
+ex:funding-policy a cost:ValuationPolicy ;
+    cost:valuationBasis cost:funding-valuation ; cost:hasPerspective cost:provider ;
+    cost:currency "AUD" ; cost:priceYear "2026"^^xsd:gYear .
+ex:synthetic-source a cost:EvidenceArtifact ; rdfs:label "Invented funding values for a semantic fixture"@en ;
+    cost:evidenceStatus "synthetic" ; cost:accessStatus "included-in-repository" ;
+    cost:validationStatus "arithmetic-fixture-only" ;
+    cost:sourceURL <https://example.org/synthetic-activity-funding-fixture> .
+ex:rates-v1 a cost:RateRelease ; cost:versionLabel "synthetic-funding-1" ;
+    cost:knownFrom "2026-02-01T00:00:00Z"^^xsd:dateTime ; cost:hasQuote ex:activity-quote .
+ex:activity-quote a cost:UnitQuote ;
+    cost:appliesToActivityKind ex:weighted-output-kind ;
+    cost:quoteAmount "17.00"^^xsd:decimal ; cost:currency "AUD" ; cost:perUnit ex:weighted-unit ;
+    cost:valuationBasis cost:funding-valuation ; cost:rateRelease ex:rates-v1 ;
+    cost:effectiveFrom "2026-01-01"^^xsd:date ; cost:effectiveTo "2027-01-01"^^xsd:date ;
+    cost:knownFrom "2026-02-01T00:00:00Z"^^xsd:dateTime ; cost:evidenceReference ex:synthetic-source .
+ex:funding-line a cost:ValuationLine ;
+    cost:sourceActivityMeasure ex:weighted-output ; cost:usedQuote ex:activity-quote ;
+    cost:valuationPolicy ex:funding-policy ; cost:componentKey "weighted-activity-funding" ;
+    cost:scenarioKey "synthetic-baseline" ; cost:lineAmount "42.50"^^xsd:decimal .
+ex:funding-ledger a cost:ComponentLedger ;
+    cost:valuationPolicy ex:funding-policy ; cost:hasLine ex:funding-line .

@@ -1,0 +1,25 @@
+@prefix costhta: <https://w3id.org/uogto/bridges/costing-hta#> .
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix hta: <https://w3id.org/uogto/packs/hta#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/uogto/bridges/costing-hta> a owl:Ontology ;
+    rdfs:label "Explicit costing to HTA payoff bridge"@en ;
+    owl:imports <https://w3id.org/uogto/packs/costing-valuation>, <https://w3id.org/uogto/packs/hta> ;
+    skos:definition "An optional explicit transformation from a valuation ledger to a game or HTA payoff. Neither importing this bridge nor recording a monetary cost makes a cost, study or ledger a payoff."@en .
+
+costhta:PayoffValuationBridge a owl:Class ;
+    rdfs:label "Payoff valuation bridge"@en ;
+    skos:definition "A declared transformation from an input valuation ledger to a specific payoff, with perspective, units, sign and objective direction stated explicitly."@en .
+costhta:inputLedger a owl:ObjectProperty ; rdfs:range cost:ComponentLedger ;
+    rdfs:label "input ledger"@en ; skos:definition "Identifies the source valuation ledger of an explicitly defined payoff transformation."@en .
+costhta:targetPayoff a owl:ObjectProperty ; rdfs:range uogto:Payoff ; rdfs:seeAlso hta:BudgetImpact ;
+    rdfs:label "target payoff"@en ; skos:definition "Identifies the payoff produced by the transformation; a budget-impact payoff is one possible target, not a default classification of resource costs."@en .
+costhta:objectiveDirection a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "objective direction"@en ; skos:definition "States whether the target payoff is to be minimized or maximized."@en .
+costhta:valueTransformation a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "value transformation"@en ; skos:definition "Explains the perspective, units, sign, scope and any nonlinear transformation from the input ledger to the target payoff."@en .

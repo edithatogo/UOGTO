@@ -1,0 +1,12 @@
+@prefix costhta: <https://w3id.org/uogto/bridges/costing-hta#> .
+@prefix cost: <https://w3id.org/uogto/packs/costing-valuation#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+costhta:PayoffValuationBridgeShape a sh:NodeShape ;
+    sh:targetClass costhta:PayoffValuationBridge ;
+    sh:property [ sh:path costhta:inputLedger ; sh:class cost:ComponentLedger ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path costhta:targetPayoff ; sh:class uogto:Payoff ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path costhta:objectiveDirection ; sh:datatype xsd:string ; sh:in ( "minimize" "maximize" ) ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path costhta:valueTransformation ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ] .

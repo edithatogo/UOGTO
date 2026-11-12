@@ -1,0 +1,90 @@
+{
+  "track_id": "costing_valuation_reporting_20261108",
+  "type": "feature",
+  "status": "in_progress",
+  "execution_status": "semantic_implementation_verified_with_baseline_suite_limitations",
+  "created_at": "2026-11-08T00:00:00Z",
+  "updated_at": "2026-11-08T00:00:00Z",
+  "description": "Optional costing and valuation ontology with sourced reporting reconciliation and newborn-screening conformance example",
+  "base_revision": "71139cca03f69256b9e88390dd21a3b8ad7f1dc1",
+  "dependencies": [
+    "standards_check: costing reconciliation catalogue",
+    "mchs: shared_microcosting_valuation_20261108"
+  ],
+  "acceptance_scope": "Semantic definitions, source identity and declared consistency only",
+  "not_qualified": [
+    "Rust valuation runtime or language bindings",
+    "Empirical or clinical validity of a newborn-screening programme",
+    "External consensus endorsement or exhaustive global checklist coverage",
+    "Complete item-level transcription of every catalogued source",
+    "Independent review of editorial topic mappings"
+  ],
+  "verification": {
+    "status": "semantic_validation_passed; full_suite_has_reproduced_baseline_environment_failures",
+    "commands": [
+      "make validate PYTHON=QA_ENV_PYTHON",
+      "make test PYTHON=QA_ENV_PYTHON",
+      "git diff --check"
+    ],
+    "make_validate": {
+      "status": "passed",
+      "examples": 30,
+      "competency_questions": 24
+    },
+    "make_test": {
+      "passed": 307,
+      "skipped": 1,
+      "failed": 3,
+      "warnings": 56
+    },
+    "baseline_revision": "71139cca03f69256b9e88390dd21a3b8ad7f1dc1",
+    "baseline_failures": [
+      "Two visualization tests: ImageMagick lacks rsvg-convert delegate; reproduced on untouched base",
+      "Wheel smoke test: nested system-site-packages venv cannot see RDFLib installed only in the parent QA venv; reproduced on untouched base; wheel build itself passes"
+    ],
+    "environment": {
+      "rdflib": "7.6.0",
+      "pyshacl": "0.40.2",
+      "pytest": "9.2.0"
+    },
+    "scope": "Semantic definitions, source provenance, catalogue integrity and declared consistency; no costing runtime or empirical qualification",
+    "review_findings_resolved": [
+      "Importer checks local source bytes against the exact claimed Git commit",
+      "Importer validates declared counts and preserves source-specific extraction scope",
+      "Coverage check accepts typed reporting instances only with explicit schema import",
+      "Attribution competency query returns no invented zero-valued infant on an empty graph"
+    ],
+    "initial_github_ci": {
+      "commit": "33a0aac205fd4a281753c5e3f3bac7b7f411cae1",
+      "tests": {
+        "passed": 310,
+        "skipped": 1,
+        "failed": 0
+      },
+      "required_gate": "passed, including manuscript/arXiv checks",
+      "validate_workflow": "tests passed; coverage command exposed instance-catalogue classification defect",
+      "run": "https://github.com/edithatogo/UOGTO/actions/runs/42429420720"
+    },
+    "follow_up": {
+      "scope": "Coverage CLI integration and explicit activity-kind quotations",
+      "focused_tests": {
+        "passed": 58,
+        "failed": 0
+      },
+      "make_validate": {
+        "status": "passed",
+        "examples": 31,
+        "competency_questions": 24
+      },
+      "make_coverage": "passed",
+      "git_diff_check": "passed",
+      "full_suite": "CI rerun pending on the follow-up commit",
+      "new_example": "examples/activity-funding-valuation.ttl",
+      "resource_boundary": "Synthetic weighted-activity funding example infers no Resource or ResourceUse instances"
+    }
+  },
+  "related_pull_requests": {
+    "standards_check": "https://github.com/edithatogo/standards_check/pull/65",
+    "mchs": "https://github.com/edithatogo/mchs/pull/411"
+  }
+}

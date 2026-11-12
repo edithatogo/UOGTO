@@ -1,6 +1,4 @@
 import sys
-# Set stdout encoding to UTF-8 to prevent unicode map console output errors on windows shells
-sys.stdout.reconfigure(encoding='utf-8')
 
 import glob
 import json
@@ -19,7 +17,27 @@ PACK_NAMESPACES = {
     "mdm": "https://w3id.org/uogto/packs/medical-decision#",
     "safety": "https://w3id.org/uogto/packs/safety#",
     "genomic": "https://w3id.org/uogto/packs/genomic-policy#",
+    "cost": "https://w3id.org/uogto/packs/costing-valuation#",
 }
+BRIDGE_NAMESPACES = {
+    "costhta": "https://w3id.org/uogto/bridges/costing-hta#",
+}
+# Explicit registration follows docs/roadmap/applied-extension-pack-pattern.md;
+# arbitrary namespaces under /packs/ or /bridges/ are not automatically accepted.
+TERM_NAMESPACES = {
+    "uogto": CORE_NS,
+    "uogtox": EXT_NS,
+    **PACK_NAMESPACES,
+    **BRIDGE_NAMESPACES,
+}
+JSONLD_CONTEXT_FILES = (
+    "core.context.jsonld",
+    "extensions.context.jsonld",
+    "packs.context.jsonld",
+    "costing-valuation.context.jsonld",
+)
+CLASS_RE = re.compile(r"^[A-Z][A-Za-z0-9]*$")
+PROPERTY_RE = re.compile(r"^[a-z][A-Za-z0-9]*$")
 INSTANCE_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 def audit_semantics():
@@ -86,8 +104,7 @@ def audit_namespace_policy(graph):
     for subject in graph.subjects(RDF.type, OWL.Class):
         value = str(subject)
         if value.startswith("https://w3id.org/uogto/") and not (
-            value.startswith(CORE_NS) or value.startswith(EXT_NS)
-            or any(value.startswith(namespace) for namespace in PACK_NAMESPACES.values())
+            any(value.startswith(namespace) for namespace in TERM_NAMESPACES.values())
         ):
             print(f"Invalid UOGTO namespace for class: {subject}")
             conforms = False
@@ -105,7 +122,8 @@ def audit_property_separation(graph):
 
 def audit_jsonld_term_coverage(graph):
     context_terms = {}
-    for context_path in [ROOT / "jsonld/core.context.jsonld", ROOT / "jsonld/extensions.context.jsonld", ROOT / "jsonld/packs.context.jsonld"]:
+    for context_name in JSONLD_CONTEXT_FILES:
+        context_path = ROOT / "jsonld" / context_name
         context = json.loads(context_path.read_text(encoding="utf-8"))["@context"]
         for term, value in context.items():
             if isinstance(value, str):
@@ -117,17 +135,14 @@ def audit_jsonld_term_coverage(graph):
     for kind in [OWL.Class, OWL.ObjectProperty, OWL.DatatypeProperty]:
         for subject in graph.subjects(RDF.type, kind):
             value = str(subject)
-            if value.startswith(CORE_NS):
-                compact = "uogto:" + value.removeprefix(CORE_NS)
-            elif value.startswith(EXT_NS):
-                compact = "uogtox:" + value.removeprefix(EXT_NS)
-            else:
-                compact = next(
-                    (prefix + ":" + value.removeprefix(namespace) for prefix, namespace in PACK_NAMESPACES.items() if value.startswith(namespace)),
-                    None,
-                )
-                if compact is None:
-                    continue
+            compact = next(
+                (prefix + ":" + value.removeprefix(namespace)
+                 for prefix, namespace in TERM_NAMESPACES.items()
+                 if value.startswith(namespace)),
+                None,
+            )
+            if compact is None:
+                continue
             if compact not in context_terms:
                 missing.append(compact)
 
@@ -154,11 +169,25 @@ def audit_instance_naming():
             if "example.org/" not in value:
                 continue
             local = value.rstrip("/").split("/")[-1].split("#")[-1]
-            if not INSTANCE_RE.match(local):
-                print(f"Example instance is not kebab-case in {path}: {subject}")
+            # A schema declaration inside an example remains a class/property,
+            # not an individual merely because it uses the example namespace.
+            # Apply each AGENTS.md naming rule instead of exempting schema terms.
+            types = set(graph.objects(subject, RDF.type))
+            if types & {OWL.Class, RDFS.Class}:
+                pattern, kind, convention = CLASS_RE, "class", "UpperCamelCase"
+            elif types & {OWL.ObjectProperty, OWL.DatatypeProperty, OWL.AnnotationProperty, RDF.Property}:
+                pattern, kind, convention = PROPERTY_RE, "property", "lowerCamelCase"
+            else:
+                pattern, kind, convention = INSTANCE_RE, "instance", "kebab-case"
+            if not pattern.fullmatch(local):
+                print(f"Example {kind} is not {convention} in {path}: {subject}")
                 conforms = False
     return conforms
 
 if __name__ == "__main__":
+    # Preserve Windows CLI Unicode output without reconfiguring an importer's
+    # stdout (for example pytest capture or a library caller).
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding='utf-8')
     if not audit_semantics():
         sys.exit(1)
