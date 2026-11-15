@@ -1,5 +1,60 @@
 # Conductor Run Log
 
+## 2026-11-08 - Created Paignia provider follow-up
+
+- Followed the maintainer's created repository with updated provider links and
+  provenance. Paignia is being populated with the renamed seed and T17 provider
+  work; consumer and valuation handoffs remain application-owned.
+- No ontology, namespace, fixture, dependency pin or runtime was changed. All
+  semantic and scientific acceptance remains scoped and pending; repository
+  creation is recorded separately from package publication and qualification.
+- Rechecked three existing documentation tests, created-provider/eight-leaf/
+  static-dynamic/IRI/local-link assertions and diff whitespace: passed.
+  `make validate` was retried and remains blocked by missing RDFLib.
+
+## 2026-11-07T22:05:53Z - Paignia semantic handoff reconciliation
+
+- Refined the existing eight-leaf semantic-game track and issue #123 handoff;
+  no competing track or ontology namespace was created. UOGTO retains authority,
+  while a future Paignia adapter consumes versioned profiles and minimal fixtures.
+- Preserved complete UOGTO core/extensions and legacy Kairos game-theory IRIs,
+  explicit mapping rejection, source provenance and CC-BY-4.0/MIT distinctions.
+- Validation: three existing documentation tests passed; inline pending-leaf,
+  receipt-scope, IRI/provenance and five local-link checks passed; diff whitespace
+  passed. `make validate` failed before validation because RDFLib is unavailable.
+- Static/dynamic semantic receipts, provider/package qualification and numerical
+  methods remain pending; the incubator rename is not a published release.
+
+## [2026-11-07] - Decoupled Static and Dynamic Game Acceptance
+
+- Based on merged main `2455bdd8e527c396d95b656f457ebd5cdf3f3f1a`, refined
+  `semantic_game_contracts_20261107` without changing task IDs or closing leaves.
+  SGC.08 records static compatibility independently; a dynamic-execution claim
+  still requires the SGC.06 trace contract and actual native-provider evidence.
+- Removed native-adapter readiness from SGC.07's reference-label prerequisite.
+  This permits honest labels without promoting reference execution to native.
+- Verification: three tests passed with `python -m pytest -q
+  tests/test_field_expansion_roadmap.py`; inline stdlib checks confirmed the
+  static dependency closure, conditional dynamic evidence, independent reference
+  labels, eight pending leaves, five local links, and the bounded diff.
+  `git diff --check` passed.
+- Required `make validate` was attempted with the available tools Python and
+  failed at import with `ModuleNotFoundError: No module named 'rdflib'`.
+  Ontology validation and all future runtime/semantic acceptance remain unverified.
+
+## [2026-11-07] - Executable Game Contract Planning
+
+- Added and registered `semantic_game_contracts_20261107`; implementation
+  remains pending, separate from historical completed tracks.
+- Defined eight leaves with file budgets, dependencies, future acceptance
+  targets, and local/specialist review boundaries. Reuse `uogto-game-core` and
+  `uogto-game-solve`; preserve specification, instance, `PlaySession`, and trace
+  identity. Python reference tools are distinct from production Rust simulation.
+- Required `make validate` was attempted with the available tools Python and
+  stopped at `ModuleNotFoundError: No module named 'rdflib'`. RDFLib/PySHACL are
+  absent from that environment. No repository dependencies were changed and no
+  validation was waived. Structural/doc/JSON results are in the track metadata.
+
 ## [2026-07-03] - Repository Validation And Runtime Hardening
 
 - Completed repo-side implementation for `repo_validation_runtime_hardening_20260703`.
