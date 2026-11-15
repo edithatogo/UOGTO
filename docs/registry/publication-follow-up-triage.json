@@ -1,6 +1,6 @@
 {
   "schema": "uogto.publication-follow-up-triage.v1",
-  "last_verified": "2026-07-07",
+  "last_verified": "2026-07-21",
   "verification_summary": {
     "publication_status_live": "published",
     "documentation_live": true,
@@ -20,6 +20,24 @@
     "namespace_policy": "Treat `uogto` / `https://w3id.org/uogto/core#` as the primary core prefix and keep `uogtox` / `https://w3id.org/uogto/extensions#` as the separate extension namespace unless a compatibility track changes published IRIs.",
     "orcid": "https://orcid.org/0000-0002-9775-0603",
     "health_relevance": "UOGTO supports game-theoretic modelling across genomics, clinical genetics, paediatrics, health economics, behavioural/public-health interaction models, mechanism design, and health-simulation settings."
+  },
+  "future_enrichment": {
+    "track": "uogto_registry_metadata_enrichment_20260721",
+    "github_issue": "https://github.com/edithatogo/UOGTO/issues/93",
+    "decision_record": "docs/registry/registry-enrichment-decision.json",
+    "policy": "Assess organisation, publication, citation, association, author, ORCID, and health-domain enrichment only when the target registry provides a defensible field and authoritative evidence.",
+    "fairsharing_candidates": [
+      "organisation_links",
+      "publications",
+      "citations",
+      "record_associations"
+    ],
+    "wikidata_candidates": [
+      "author_or_orcid",
+      "health_domain",
+      "publication"
+    ],
+    "default_disposition": "deferred_pending_authoritative_evidence_or_curator_guidance"
   },
   "items": [
     {

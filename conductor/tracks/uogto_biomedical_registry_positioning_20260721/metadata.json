@@ -1,0 +1,13 @@
+{
+  "track_id": "uogto_biomedical_registry_positioning_20260721",
+  "type": "research",
+  "status": "completed",
+  "created_at": "2026-07-21T00:00:00Z",
+  "updated_at": "2026-07-21T22:00:00Z",
+  "description": "Prepare a defensible BioPortal and OBO Foundry positioning decision without premature submission.",
+  "github_issue": "https://github.com/edithatogo/UOGTO/issues/94",
+  "external_targets": [
+    "https://bioportal.bioontology.org/",
+    "https://obofoundry.org/"
+  ]
+}
