@@ -1,0 +1,10 @@
+PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+# Retrieve conserved shared-batch costs without adding allocation views to expense.
+SELECT ?pool ?poolAmount ?allocatedTotal ?unallocatedAmount ?recipientCount
+WHERE {
+  ?pool a cost:CostPool ; cost:poolAmount ?poolAmount ; cost:unallocatedAmount ?unallocatedAmount .
+  { SELECT ?pool (SUM(?amount) AS ?allocatedTotal) (COUNT(DISTINCT ?recipient) AS ?recipientCount)
+    WHERE { ?pool cost:hasAllocation ?allocation .
+            ?allocation cost:allocatedAmount ?amount ; cost:allocatedTo ?recipient . }
+    GROUP BY ?pool }
+}

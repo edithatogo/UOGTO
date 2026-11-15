@@ -161,6 +161,30 @@
     {
       "query": "cq20-genomic-data-access-game.rq", "example_graphs": ["examples/genomic-data-access-game.ttl"], "min_count": 1,
       "required_bindings": [{"game": "http://example.org/applied-pack/genomic-access", "consent": "http://example.org/applied-pack/research-consent", "risk": "http://example.org/applied-pack/disclosure-risk"}]
+    },
+    {
+      "query": "cq21-costing-batch-conservation.rq",
+      "example_graphs": ["examples/newborn-screening-costing.ttl"],
+      "min_count": 1,
+      "required_bindings": [{"pool": "http://example.org/costing/newborn/batch-pool", "poolAmount": "100.00", "allocatedTotal": "100.00", "recipientCount": "2", "unallocatedAmount": "0.00"}]
+    },
+    {
+      "query": "cq22-costing-reporting-evidence.rq",
+      "example_graphs": ["examples/newborn-screening-costing.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"item": "SYN-1", "status": "reported", "evidence": "http://example.org/costing/newborn/policy"}, {"item": "SYN-2", "status": "not-reported"}]
+    },
+    {
+      "query": "cq23-costing-infant-attribution.rq",
+      "example_graphs": ["examples/newborn-screening-costing.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"infant": "http://example.org/costing/newborn/infant-a", "attributedAmount": "60.00"}, {"infant": "http://example.org/costing/newborn/infant-b", "attributedAmount": "90.00"}]
+    },
+    {
+      "query": "cq24-costing-rate-provenance.rq",
+      "example_graphs": ["examples/newborn-screening-costing.ttl"],
+      "min_count": 2,
+      "required_bindings": [{"quote": "http://example.org/costing/newborn/staff-quote", "release": "http://example.org/costing/newborn/rates-v1", "basis": "https://w3id.org/uogto/packs/costing-valuation#accounting-cost", "effectiveFrom": "2026-01-01"}]
     }
   ]
 }

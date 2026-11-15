@@ -1,0 +1,450 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "id": "@id",
+    "type": "@type",
+    "cost": "https://w3id.org/uogto/packs/costing-valuation#",
+    "costhta": "https://w3id.org/uogto/bridges/costing-hta#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unitv": "http://qudt.org/vocab/unit/",
+    "label": "rdfs:label",
+    "definition": "skos:definition",
+    "PayoffValuationBridge": "costhta:PayoffValuationBridge",
+    "ActivityMeasure": "cost:ActivityMeasure",
+    "Allocation": "cost:Allocation",
+    "AllocationPolicy": "cost:AllocationPolicy",
+    "ComponentLedger": "cost:ComponentLedger",
+    "CostObject": "cost:CostObject",
+    "CostPool": "cost:CostPool",
+    "CostingMethod": "cost:CostingMethod",
+    "CostingStudy": "cost:CostingStudy",
+    "EvidenceArtifact": "cost:EvidenceArtifact",
+    "HeterogeneityDimension": "cost:HeterogeneityDimension",
+    "InstrumentVersion": "cost:InstrumentVersion",
+    "OutputUnit": "cost:OutputUnit",
+    "ParameterDraw": "cost:ParameterDraw",
+    "Perspective": "cost:Perspective",
+    "ProcessActivity": "cost:ProcessActivity",
+    "ProcessExecution": "cost:ProcessExecution",
+    "ProcessModel": "cost:ProcessModel",
+    "ProductionBatch": "cost:ProductionBatch",
+    "RateRelease": "cost:RateRelease",
+    "RationalValue": "cost:RationalValue",
+    "ReportingAssertion": "cost:ReportingAssertion",
+    "ReportingDomain": "cost:ReportingDomain",
+    "ReportingInstrument": "cost:ReportingInstrument",
+    "ReportingProfile": "cost:ReportingProfile",
+    "ReportingRequirement": "cost:ReportingRequirement",
+    "RequirementMapping": "cost:RequirementMapping",
+    "Resource": "cost:Resource",
+    "ResourceUse": "cost:ResourceUse",
+    "Scenario": "cost:Scenario",
+    "StudyPopulation": "cost:StudyPopulation",
+    "UncertaintySpecification": "cost:UncertaintySpecification",
+    "UnitQuote": "cost:UnitQuote",
+    "ValuationBasis": "cost:ValuationBasis",
+    "ValuationLine": "cost:ValuationLine",
+    "ValuationPolicy": "cost:ValuationPolicy",
+    "inputLedger": {
+      "@id": "costhta:inputLedger",
+      "@type": "@id"
+    },
+    "targetPayoff": {
+      "@id": "costhta:targetPayoff",
+      "@type": "@id"
+    },
+    "allocatedTo": {
+      "@id": "cost:allocatedTo",
+      "@type": "@id"
+    },
+    "allocationPolicy": {
+      "@id": "cost:allocationPolicy",
+      "@type": "@id"
+    },
+    "appliesToResource": {
+      "@id": "cost:appliesToResource",
+      "@type": "@id"
+    },
+    "assessedStudy": {
+      "@id": "cost:assessedStudy",
+      "@type": "@id"
+    },
+    "belongsToInstrument": {
+      "@id": "cost:belongsToInstrument",
+      "@type": "@id"
+    },
+    "belongsToVersion": {
+      "@id": "cost:belongsToVersion",
+      "@type": "@id"
+    },
+    "componentLedger": {
+      "@id": "cost:componentLedger",
+      "@type": "@id"
+    },
+    "coversDomain": {
+      "@id": "cost:coversDomain",
+      "@type": "@id"
+    },
+    "evidenceReference": {
+      "@id": "cost:evidenceReference",
+      "@type": "@id"
+    },
+    "forActivity": {
+      "@id": "cost:forActivity",
+      "@type": "@id"
+    },
+    "forCostObject": {
+      "@id": "cost:forCostObject",
+      "@type": "@id"
+    },
+    "fromPool": {
+      "@id": "cost:fromPool",
+      "@type": "@id"
+    },
+    "hasAllocation": {
+      "@id": "cost:hasAllocation",
+      "@type": "@id"
+    },
+    "hasComponentLine": {
+      "@id": "cost:hasComponentLine",
+      "@type": "@id"
+    },
+    "hasHeterogeneityDimension": {
+      "@id": "cost:hasHeterogeneityDimension",
+      "@type": "@id"
+    },
+    "hasLedger": {
+      "@id": "cost:hasLedger",
+      "@type": "@id"
+    },
+    "hasLine": {
+      "@id": "cost:hasLine",
+      "@type": "@id"
+    },
+    "hasMember": {
+      "@id": "cost:hasMember",
+      "@type": "@id"
+    },
+    "hasMethod": {
+      "@id": "cost:hasMethod",
+      "@type": "@id"
+    },
+    "hasPerspective": {
+      "@id": "cost:hasPerspective",
+      "@type": "@id"
+    },
+    "hasPopulation": {
+      "@id": "cost:hasPopulation",
+      "@type": "@id"
+    },
+    "hasProcessModel": {
+      "@id": "cost:hasProcessModel",
+      "@type": "@id"
+    },
+    "hasQuote": {
+      "@id": "cost:hasQuote",
+      "@type": "@id"
+    },
+    "hasRequirement": {
+      "@id": "cost:hasRequirement",
+      "@type": "@id"
+    },
+    "hasUncertainty": {
+      "@id": "cost:hasUncertainty",
+      "@type": "@id"
+    },
+    "hasVersion": {
+      "@id": "cost:hasVersion",
+      "@type": "@id"
+    },
+    "includesInstrumentVersion": {
+      "@id": "cost:includesInstrumentVersion",
+      "@type": "@id"
+    },
+    "includesRequirement": {
+      "@id": "cost:includesRequirement",
+      "@type": "@id"
+    },
+    "mappedConcept": {
+      "@id": "cost:mappedConcept",
+      "@type": "@id"
+    },
+    "outputUnit": {
+      "@id": "cost:outputUnit",
+      "@type": "@id"
+    },
+    "perUnit": {
+      "@id": "cost:perUnit",
+      "@type": "@id"
+    },
+    "quantityExact": {
+      "@id": "cost:quantityExact",
+      "@type": "@id"
+    },
+    "quoteAmountExact": {
+      "@id": "cost:quoteAmountExact",
+      "@type": "@id"
+    },
+    "rateRelease": {
+      "@id": "cost:rateRelease",
+      "@type": "@id"
+    },
+    "realizesModel": {
+      "@id": "cost:realizesModel",
+      "@type": "@id"
+    },
+    "relatedCostObject": {
+      "@id": "cost:relatedCostObject",
+      "@type": "@id"
+    },
+    "reportsRequirement": {
+      "@id": "cost:reportsRequirement",
+      "@type": "@id"
+    },
+    "sourceActivityMeasure": {
+      "@id": "cost:sourceActivityMeasure",
+      "@type": "@id"
+    },
+    "sourceRequirement": {
+      "@id": "cost:sourceRequirement",
+      "@type": "@id"
+    },
+    "sourceResourceUse": {
+      "@id": "cost:sourceResourceUse",
+      "@type": "@id"
+    },
+    "sourceURL": {
+      "@id": "cost:sourceURL",
+      "@type": "@id"
+    },
+    "unit": {
+      "@id": "cost:unit",
+      "@type": "@id"
+    },
+    "usedQuote": {
+      "@id": "cost:usedQuote",
+      "@type": "@id"
+    },
+    "usesResource": {
+      "@id": "cost:usesResource",
+      "@type": "@id"
+    },
+    "valuationBasis": {
+      "@id": "cost:valuationBasis",
+      "@type": "@id"
+    },
+    "valuationPolicy": {
+      "@id": "cost:valuationPolicy",
+      "@type": "@id"
+    },
+    "objectiveDirection": {
+      "@id": "costhta:objectiveDirection",
+      "@type": "xsd:string"
+    },
+    "valueTransformation": {
+      "@id": "costhta:valueTransformation",
+      "@type": "xsd:string"
+    },
+    "accessStatus": {
+      "@id": "cost:accessStatus",
+      "@type": "xsd:string"
+    },
+    "adjustmentReason": {
+      "@id": "cost:adjustmentReason",
+      "@type": "xsd:string"
+    },
+    "allocatedAmount": {
+      "@id": "cost:allocatedAmount",
+      "@type": "xsd:decimal"
+    },
+    "allocationBasis": {
+      "@id": "cost:allocationBasis",
+      "@type": "xsd:string"
+    },
+    "allocationFraction": {
+      "@id": "cost:allocationFraction",
+      "@type": "xsd:decimal"
+    },
+    "applicability": {
+      "@id": "cost:applicability",
+      "@type": "xsd:string"
+    },
+    "applicabilityRationale": {
+      "@id": "cost:applicabilityRationale",
+      "@type": "xsd:string"
+    },
+    "assessmentStatus": {
+      "@id": "cost:assessmentStatus",
+      "@type": "xsd:string"
+    },
+    "authority": {
+      "@id": "cost:authority",
+      "@type": "xsd:string"
+    },
+    "citation": {
+      "@id": "cost:citation",
+      "@type": "xsd:string"
+    },
+    "componentKey": {
+      "@id": "cost:componentKey",
+      "@type": "xsd:string"
+    },
+    "currency": {
+      "@id": "cost:currency",
+      "@type": "xsd:string"
+    },
+    "discountRate": {
+      "@id": "cost:discountRate",
+      "@type": "xsd:decimal"
+    },
+    "distributionDescription": {
+      "@id": "cost:distributionDescription",
+      "@type": "xsd:string"
+    },
+    "drawIndex": {
+      "@id": "cost:drawIndex",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "effectiveFrom": {
+      "@id": "cost:effectiveFrom",
+      "@type": "xsd:date"
+    },
+    "effectiveTo": {
+      "@id": "cost:effectiveTo",
+      "@type": "xsd:date"
+    },
+    "evidenceStatus": {
+      "@id": "cost:evidenceStatus",
+      "@type": "xsd:string"
+    },
+    "exactDenominator": {
+      "@id": "cost:exactDenominator",
+      "@type": "xsd:positiveInteger"
+    },
+    "exactNumerator": {
+      "@id": "cost:exactNumerator",
+      "@type": "xsd:integer"
+    },
+    "instrumentKind": {
+      "@id": "cost:instrumentKind",
+      "@type": "xsd:string"
+    },
+    "itemIdentifier": {
+      "@id": "cost:itemIdentifier",
+      "@type": "xsd:string"
+    },
+    "knownFrom": {
+      "@id": "cost:knownFrom",
+      "@type": "xsd:dateTime"
+    },
+    "licence": {
+      "@id": "cost:licence",
+      "@type": "xsd:string"
+    },
+    "lineAmount": {
+      "@id": "cost:lineAmount",
+      "@type": "xsd:decimal"
+    },
+    "mappingRationale": {
+      "@id": "cost:mappingRationale",
+      "@type": "xsd:string"
+    },
+    "mappingRelation": {
+      "@id": "cost:mappingRelation",
+      "@type": "xsd:string"
+    },
+    "poolAmount": {
+      "@id": "cost:poolAmount",
+      "@type": "xsd:decimal"
+    },
+    "priceYear": {
+      "@id": "cost:priceYear",
+      "@type": "xsd:gYear"
+    },
+    "processFormalism": {
+      "@id": "cost:processFormalism",
+      "@type": "xsd:string"
+    },
+    "quantity": {
+      "@id": "cost:quantity",
+      "@type": "xsd:decimal"
+    },
+    "quoteAmount": {
+      "@id": "cost:quoteAmount",
+      "@type": "xsd:decimal"
+    },
+    "requirementText": {
+      "@id": "cost:requirementText",
+      "@type": "xsd:string"
+    },
+    "resourceUseId": {
+      "@id": "cost:resourceUseId",
+      "@type": "xsd:string"
+    },
+    "scenarioKey": {
+      "@id": "cost:scenarioKey",
+      "@type": "xsd:string"
+    },
+    "sourceDigest": {
+      "@id": "cost:sourceDigest",
+      "@type": "xsd:string"
+    },
+    "unallocatedAmount": {
+      "@id": "cost:unallocatedAmount",
+      "@type": "xsd:decimal"
+    },
+    "unallocatedFraction": {
+      "@id": "cost:unallocatedFraction",
+      "@type": "xsd:decimal"
+    },
+    "uncertaintyKind": {
+      "@id": "cost:uncertaintyKind",
+      "@type": "xsd:string"
+    },
+    "validationStatus": {
+      "@id": "cost:validationStatus",
+      "@type": "xsd:string"
+    },
+    "valuationRecipe": {
+      "@id": "cost:valuationRecipe",
+      "@type": "xsd:string"
+    },
+    "verificationScope": {
+      "@id": "cost:verificationScope",
+      "@type": "xsd:string"
+    },
+    "versionLabel": {
+      "@id": "cost:versionLabel",
+      "@type": "xsd:string"
+    },
+    "Assessment": "cost:Assessment",
+    "ComputationalVerification": "cost:ComputationalVerification",
+    "EmpiricalValidation": "cost:EmpiricalValidation",
+    "MethodologicalAssessment": "cost:MethodologicalAssessment",
+    "assessedArtifact": {
+      "@id": "cost:assessedArtifact",
+      "@type": "@id"
+    },
+    "assessmentFinding": {
+      "@id": "cost:assessmentFinding",
+      "@type": "xsd:string"
+    },
+    "assessmentMethod": {
+      "@id": "cost:assessmentMethod",
+      "@type": "xsd:string"
+    },
+    "ActivityKind": "cost:ActivityKind",
+    "activityKind": {
+      "@id": "cost:activityKind",
+      "@type": "@id"
+    },
+    "appliesToActivityKind": {
+      "@id": "cost:appliesToActivityKind",
+      "@type": "@id"
+    }
+  }
+}

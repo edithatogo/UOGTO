@@ -27,6 +27,7 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
    ```
 
 ## Documentation and Citation
+- Costing, valuation and reporting reconciliation is documented in [docs/costing-valuation-reporting.md](docs/costing-valuation-reporting.md), including its source coverage and qualification limits.
 - Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.
 - Ontology design-pattern documentation is available at [docs/ontology-design-patterns.md](docs/ontology-design-patterns.md).
 - Ontology modelling decisions are explained in [docs/modelling-decisions.md](docs/modelling-decisions.md).

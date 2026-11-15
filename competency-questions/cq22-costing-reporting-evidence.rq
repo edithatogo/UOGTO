@@ -1,0 +1,9 @@
+PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+# Keep applicability, completion, source edition and evidence separate.
+SELECT ?study ?requirement ?version ?item ?applicability ?status ?evidence
+WHERE {
+  ?assertion a cost:ReportingAssertion ; cost:assessedStudy ?study ;
+    cost:reportsRequirement ?requirement ; cost:applicability ?applicability ; cost:assessmentStatus ?status .
+  ?requirement cost:belongsToVersion ?version ; cost:itemIdentifier ?item .
+  OPTIONAL { ?assertion cost:evidenceReference ?evidence }
+}

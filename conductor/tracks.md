@@ -2,6 +2,12 @@
 
 This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
+## [ ] Track: costing_valuation_reporting_20261108
+
+- **Description**: Optional costing and valuation semantics, sourced reporting reconciliation and a synthetic newborn-screening allocation example.
+- **Status**: Semantic implementation in review; independent mapping review, further source extraction and runtime qualification remain open.
+- **Link**: [./tracks/costing_valuation_reporting_20261108/](./tracks/costing_valuation_reporting_20261108/)
+
 ## [ ] Track: semantic_game_contracts_20261107
 - **Description**: Versioned executable subset and identity-preserving mappings to the existing generic Rust game packages, with negative SHACL and round-trip evidence.
 - **Status**: New; eight implementation leaves pending. No IRI, schema, pin, or runtime change in this planning record.

@@ -1,5 +1,14 @@
 # Conductor Run Log
 
+## 2026-11-08 — Costing, valuation and reporting reconciliation
+
+- Added optional applied costing semantics and a separate HTA payoff bridge.
+- Added exact input, rate provenance, shared allocation and reporting-evidence constraints.
+- Added a fictional newborn-screening batch example and four competency questions.
+- Reconciled a sourced standards_check catalogue into versioned domains, requirements and project-defined profiles.
+- Kept protocols/reviews, reporting completeness, appraisal and scientific validation distinct.
+- Validation evidence and remaining qualification are recorded in `tracks/costing_valuation_reporting_20261108/plan.md`.
+
 ## 2026-07-07 - GitHub Project Ledger Refresh
 
 - Rechecked the local Conductor ledger, GitHub issues, native subissues, and Project v2 boards after PR `#72` merged.

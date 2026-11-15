@@ -1,5 +1,14 @@
 # Conductor Status
 
+## Costing and reporting update — 2026-11-08
+
+`costing_valuation_reporting_20261108` adds an optional semantic pack, source
+catalogue reconciliation and synthetic newborn-screening conformance example.
+This work does not qualify a costing runtime, establish external consensus or
+close unrelated publishing/game-contract tracks. Exact validation evidence is
+recorded in the [track plan](./tracks/costing_valuation_reporting_20261108/plan.md).
+The historical status snapshot below retains its original date and scope.
+
 Updated: `2026-07-21`
 
 ## Active Work

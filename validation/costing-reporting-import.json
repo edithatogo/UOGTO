@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "source_repository": "https://github.com/edithatogo/standards_check",
+  "source_commit": "d1f1137edfa5375e0225ca2216903ce5583a44f0",
+  "source_commit_content_verified": true,
+  "searched_through": "2026-11-08",
+  "coverage_statement": "Bounded high-recall primary-source web review. This is not a registered systematic review or a claim of global exhaustiveness; national HTA manuals, specialty extensions and translations require continuing curation.",
+  "source_records": 26,
+  "instrument_versions": 20,
+  "context_publications": 6,
+  "domains": 31,
+  "requirements": 106,
+  "requirement_mappings": 125,
+  "profiles": 12,
+  "requirement_counts_by_source": {
+    "agreedt_2018": 44,
+    "cheers_2022": 28,
+    "cheers_voi_2023": 6,
+    "ghcc_2017": 17,
+    "idsi_2016": 11
+  },
+  "mapping_review_status": "editorial_mapping_review_required",
+  "complete_checklist_transcriptions": 0,
+  "input_sha256": {
+    "registry": "dba42197db8a317e07e18b32f718e38ccdc648a40370240d804423e3940f5378",
+    "mappings": "757606b5f703f18eca0474a3a4f6ebf1ed5270e5b867a305c6df67869c2819f1"
+  }
+}

@@ -1,0 +1,20 @@
+PREFIX cost: <https://w3id.org/uogto/packs/costing-valuation#>
+PREFIX ex: <http://example.org/costing/newborn/>
+# An allocation replaces the recipient view of pooled lines; it is never added
+# again as a second incurred expense. This query uses the fixture's one-step
+# specimen/episode-to-infant relationship, not an asserted universal care pathway.
+SELECT ?infant (SUM(?amount) AS ?attributedAmount)
+WHERE {
+  ?infant a ex:Infant .
+  {
+    ?line a cost:ValuationLine ; cost:sourceResourceUse/cost:forCostObject ?object ; cost:lineAmount ?amount .
+    ?object cost:relatedCostObject ?infant .
+    FILTER NOT EXISTS { ?pool cost:hasComponentLine ?line }
+  }
+  UNION
+  {
+    ?allocation a cost:Allocation ; cost:allocatedTo ?infant ; cost:allocatedAmount ?amount .
+  }
+}
+GROUP BY ?infant
+HAVING (COUNT(?amount) > 0)
