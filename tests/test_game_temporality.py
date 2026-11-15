@@ -72,13 +72,13 @@ def test_dynamic_simultaneous_stochastic_example_and_competency_bindings(ontolog
     assert len(set(data.subjects(RDF.type, CORE.SimultaneousAction))) == 4
     assert len(list(data.triples((None, CORE.probability, None)))) == 2
     graph = ontology + data
-    query = (ROOT / "competency-questions/cq21-dynamic-game-representations.rq").read_text()
+    query = (ROOT / "competency-questions/cq25-dynamic-game-representations.rq").read_text()
     rows = list(graph.query(query))
     assert {(str(row.game), str(row.representation), str(row.action)) for row in rows} == {
         (str(EX["two-stage-stochastic-game"]), str(EX["normal-form"]), str(EX[action]))
         for action in ("alice-first-choice", "bob-first-choice", "alice-later-choice", "bob-later-choice")
     }
     manifest = json.loads((ROOT / "validation/competency-query-expectations.json").read_text())
-    entry = next(item for item in manifest["queries"] if item["query"] == "cq21-dynamic-game-representations.rq")
+    entry = next(item for item in manifest["queries"] if item["query"] == "cq25-dynamic-game-representations.rq")
     for expected in entry["required_bindings"]:
         assert any(all(str(row.asdict()[key]) == value for key, value in expected.items()) for row in rows)

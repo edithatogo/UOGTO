@@ -163,7 +163,7 @@
       "required_bindings": [{"game": "http://example.org/applied-pack/genomic-access", "consent": "http://example.org/applied-pack/research-consent", "risk": "http://example.org/applied-pack/disclosure-risk"}]
     },
     {
-      "query": "cq21-dynamic-game-representations.rq",
+      "query": "cq25-dynamic-game-representations.rq",
       "example_graphs": [
         "examples/dynamic-normal-form-game.ttl"
       ],
