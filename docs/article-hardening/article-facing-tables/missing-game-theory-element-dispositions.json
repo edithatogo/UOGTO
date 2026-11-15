@@ -65,7 +65,7 @@
   ],
   "schema": "uogto.article.missing-game-theory-element-dispositions.v1",
   "sources": [
-    "docs\\article-hardening\\uogto-inclusion-candidates.json",
-    "docs\\article-hardening\\uogto-inclusion-candidates.csv"
+    "docs/article-hardening/uogto-inclusion-candidates.json",
+    "docs/article-hardening/uogto-inclusion-candidates.csv"
   ]
 }
