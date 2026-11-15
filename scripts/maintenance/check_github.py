@@ -85,7 +85,7 @@ def get_via_api(repo=REPO):
                 else:
                     issues.append(formatted)
             return issues[:10], prs[:10]
-    except urllib.error.URLError as e:
+    except (urllib.error.URLError, TimeoutError) as e:
         print(f"API fallback failed: {e}", file=sys.stderr)
         return None, None
 
