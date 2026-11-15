@@ -1,5 +1,5 @@
 name: Bug Report
-about: Report a reproducible problem in scripts, workflows, generated artifacts, or packaging
+description: Report a reproducible problem in scripts, workflows, generated artifacts, or packaging
 title: "[Bug]: "
 labels: bug
 body:

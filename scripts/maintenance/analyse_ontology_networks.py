@@ -22,11 +22,6 @@ def load_review(path=DEFAULT_REVIEW):
 def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
-
-def edge_key(left, right):
-    return tuple(sorted([left, right]))
-
-
 def graph_metrics(nodes, edges):
     adjacency = {node: set() for node in nodes}
     for left, right, *_ in edges:

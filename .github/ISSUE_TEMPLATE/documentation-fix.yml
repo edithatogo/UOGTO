@@ -1,5 +1,5 @@
 name: Documentation Fix
-about: Suggest a correction or clarification to docs, examples, glossary, or paper-supporting artifacts
+description: Suggest a correction or clarification to docs, examples, glossary, or paper-supporting artifacts
 title: "[Docs]: "
 labels: documentation
 body:
