@@ -214,11 +214,11 @@
   ],
   "schema": "uogto.article.mapping-robustness-table.v1",
   "sources": [
-    "docs\\ontology-comparison\\mapping-robustness\\mapping-robustness-ablation.json",
-    "docs\\ontology-comparison\\mapping-calibration\\mapping-review-calibration.json",
-    "docs\\ontology-comparison\\network-sensitivity.json",
-    "docs\\ontology-comparison\\accepted-alignments.sssom.tsv",
-    "docs\\ontology-comparison\\accepted-alignments.sssom.yml",
-    "docs\\ontology-comparison\\mapping-review.csv"
+    "docs/ontology-comparison/mapping-robustness/mapping-robustness-ablation.json",
+    "docs/ontology-comparison/mapping-calibration/mapping-review-calibration.json",
+    "docs/ontology-comparison/network-sensitivity.json",
+    "docs/ontology-comparison/accepted-alignments.sssom.tsv",
+    "docs/ontology-comparison/accepted-alignments.sssom.yml",
+    "docs/ontology-comparison/mapping-review.csv"
   ]
 }
