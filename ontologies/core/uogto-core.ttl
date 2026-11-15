@@ -154,8 +154,23 @@ uogto:Norm a owl:Class ;
     rdfs:label "Norm"@en ;
     skos:definition "A social constraint or expectation in institutional games."@en .
 
-uogto:Equilibrium a owl:Class ;
+uogto:SolutionConcept a owl:Class ;
     rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Solution Concept"@en ;
+    skos:definition "A criterion or rule specifying which strategy profiles, outcomes, or allocations count as solutions of a game."@en .
+
+uogto:GameSolution a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Game Solution"@en ;
+    skos:definition "A strategy profile, outcome, or allocation satisfying a specified solution concept for a game."@en .
+
+uogto:AllocationSolution a owl:Class ;
+    rdfs:subClassOf uogto:GameSolution ;
+    rdfs:label "Allocation Solution"@en ;
+    skos:definition "A payoff or resource allocation satisfying a cooperative or bargaining solution concept."@en .
+
+uogto:Equilibrium a owl:Class ;
+    rdfs:subClassOf uogto:GameSolution ;
     rdfs:label "Equilibrium"@en ;
     skos:definition "A strategy profile matching equilibrium conditions (e.g. Nash)."@en .
 
@@ -205,6 +220,34 @@ uogto:PayoffProfile a owl:Class ;
     skos:definition "Represents the aggregated profile of payoffs for all active players."@en .
 
 # Object Properties
+uogto:hasSolutionConcept a owl:ObjectProperty ;
+    rdfs:label "has solution concept"@en ;
+    rdfs:range uogto:SolutionConcept ;
+    skos:definition "Relates a game, solution result, or computational task to the criterion defining acceptable solutions."@en .
+
+uogto:hasActionSpace a owl:ObjectProperty ;
+    rdfs:label "has action space"@en ;
+    skos:definition "Links a game specification to a collection of available actions, optionally associated with a player through belongsToPlayer."@en .
+
+uogto:hasAction a owl:ObjectProperty ;
+    rdfs:label "has action"@en ;
+    rdfs:range uogto:Action ;
+    skos:definition "Lists an action contained in an action space or joint action profile."@en .
+
+uogto:belongsToPlayer a owl:ObjectProperty ;
+    rdfs:label "belongs to player"@en ;
+    rdfs:range uogto:Player ;
+    skos:definition "Identifies the player associated with an action, action space, or legacy payoff mapping."@en .
+
+uogto:hasPayoffMapping a owl:ObjectProperty ;
+    rdfs:label "has payoff mapping"@en ;
+    skos:definition "Links a game to a legacy mapping associating an action profile, player, and payoff value; retained for compatibility with reference runner graphs."@en .
+
+uogto:hasActionProfile a owl:ObjectProperty ;
+    rdfs:label "has action profile"@en ;
+    rdfs:range uogto:ActionProfile ;
+    skos:definition "Links a game element or legacy payoff mapping to its joint action profile."@en .
+
 uogto:hasPlayer a owl:ObjectProperty ;
     rdfs:label "has player"@en ;
     skos:definition "Associates a game specification or instance with its players."@en .
@@ -364,8 +407,7 @@ uogto:version a owl:DatatypeProperty ;
 
 uogto:probability a owl:DatatypeProperty ;
     rdfs:label "probability"@en ;
-    rdfs:range xsd:double ;
-    skos:definition "Transition or signal probability value (0 to 1)."@en .
+    skos:definition "A finite numeric transition or signal probability value from zero to one inclusive. Supported numeric literal datatypes and bounds are validated by SHACL."@en .
 
 uogto:payoffValue a owl:DatatypeProperty ;
     rdfs:label "payoff value"@en ;

@@ -1,4 +1,4 @@
-# Plan — eight pending semantic-contract leaves
+# Plan — eight semantic-contract leaves; one implemented
 
 Each leaf implements one behavior in at most five files. New paths and tests
 are marked **future** and must be created before use; a missing target or zero
@@ -119,7 +119,7 @@ retain `uogto-game-*` in historical receipts.
 
 ## Phase C — tooling interpretation and consumer acceptance
 
-### [ ] SGC.07 — identify Python runner output as reference tooling
+### [x] SGC.07 — identify Python runner output as reference tooling
 
 - Behavior: runner-facing output/help states its reference/experimental origin
   and never presents a Python run as production Rust simulation.
@@ -128,9 +128,9 @@ retain `uogto-game-*` in historical receipts.
   Rust provider, native adapter, or SGC.06 is not a prerequisite for honest labels.
 - Execution: local; no change to mathematical semantics or existing namespaces.
 - Files (4): `uogto/runner/engine.py`, `docs/uogto-for-game-theorists.md`,
-  `README.md`, `tests/test_runner_execution_origin.py` (future).
+  `README.md`, `tests/test_runner_execution_origin.py`.
 - Check: `python -m pytest tests/test_runner_execution_origin.py
-  tests/test_game_runner.py` (first target future). Existing reference fixtures
+  tests/test_game_runner.py`. Existing reference fixtures
   keep their documented role; a missing native path cannot silently fall back
   to Python while retaining a native/production label.
 
@@ -162,11 +162,12 @@ retain `uogto-game-*` in historical receipts.
 
 ## Completion evidence
 
-All leaves remain pending in this planning commit. Future completion records
+SGC.07 is implemented in the November reconciliation; the other seven leaves
+remain pending. Its origin-label and runner tests pass, and README/audience docs
+state the reference behavior. Future completion records
 exact revisions, commands, test counts, fixture hashes, failures, and specialist
 findings. A qualified static semantic receipt can be consumed while SGC.06 and
 the dynamic-execution receipt remain pending. Honest reference-tool labelling
 can proceed independently. Neither partial acceptance closes the optional work
-or the whole track. Preserve existing track ownership and external gates. No
-ontology term, IRI, public schema, dependency pin, runtime, or scientific claim
-changes as a side effect of creating this plan.
+or the whole track. Preserve existing track ownership and external gates. The original planning changes supplied no runtime qualification. Subsequent
+semantic repairs are separately recorded in `semantic_reconciliation_20261108`.

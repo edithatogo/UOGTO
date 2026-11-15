@@ -1,0 +1,41 @@
+{
+  "schema": "uogto.competency-query-id-reservations.v1",
+  "as_of_date": "2026-11-15",
+  "scope": "Query identity coordination for PR127 and PR128; no costing import or execution qualification.",
+  "reservation_is_implementation_evidence": false,
+  "source_heads": {
+    "127": "fa4e725d5f13830d3d44a2188c887fd546145ec3",
+    "128": "7e9075b8fd77543fc8853fab20319415cb86597d"
+  },
+  "policy": "The active expectation manifest contains only query files actually present. When PR128 is integrated, preserve the union CQ01-20, costing CQ21-24, and temporality CQ25; reservations do not mark pending work accepted.",
+  "historical_receipts": "Dated PR127 evidence refers to temporality as CQ21. Those receipts remain addressable at the recorded source head and are not new-head validation. The migration changes the filename and references only.",
+  "reservations": [
+    {
+      "number": 21,
+      "query": "cq21-costing-batch-conservation.rq",
+      "owner_pr": 128
+    },
+    {
+      "number": 22,
+      "query": "cq22-costing-reporting-evidence.rq",
+      "owner_pr": 128
+    },
+    {
+      "number": 23,
+      "query": "cq23-costing-infant-attribution.rq",
+      "owner_pr": 128
+    },
+    {
+      "number": 24,
+      "query": "cq24-costing-rate-provenance.rq",
+      "owner_pr": 128
+    },
+    {
+      "number": 25,
+      "query": "cq25-dynamic-game-representations.rq",
+      "owner_pr": 127,
+      "previous_query": "cq21-dynamic-game-representations.rq",
+      "unchanged_query_git_blob": "9b6ee8deed098919bcba437f097acb6cded059fb"
+    }
+  ]
+}

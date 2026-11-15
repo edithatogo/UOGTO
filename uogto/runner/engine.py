@@ -11,6 +11,10 @@ UOGTO = rdflib.Namespace("https://w3id.org/uogto/core#")
 
 
 class RDFGameRunner:
+    """Reference graph inspector and stored-payoff lookup helper."""
+
+    execution_origin = "reference_graph_inspection"
+
     def __init__(self, ttl_path):
         self.graph = rdflib.Graph()
         self.graph.parse(ttl_path, format=self._format_for_path(ttl_path))
@@ -166,7 +170,7 @@ class RDFGameRunner:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Inspect UOGTO game specifications in a Turtle graph.")
+    parser = argparse.ArgumentParser(description="Reference graph inspection of UOGTO game specifications and stored payoffs.")
     parser.add_argument("ttl_path", help="Path to a Turtle graph containing UOGTO game data.")
     args = parser.parse_args()
     runner = RDFGameRunner(args.ttl_path)

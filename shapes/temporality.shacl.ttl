@@ -1,0 +1,17 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+
+# These are consistency and value checks, not executable completeness profiles.
+uogto:StaticGameTemporalityShape a sh:NodeShape ;
+    sh:targetClass uogto:StaticGame ;
+    sh:not [ sh:class uogto:DynamicGame ] ;
+    sh:message "A game specification cannot be both static and dynamic at the same modelling scope."@en .
+
+uogto:GameRepresentationReferenceShape a sh:NodeShape ;
+    sh:targetSubjectsOf uogto:hasRepresentation ;
+    sh:property [
+        sh:path uogto:hasRepresentation ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:class uogto:GameRepresentation ;
+        sh:message "A representation reference must identify a GameRepresentation, including a normal-form or extensive-form representation."@en
+    ] .

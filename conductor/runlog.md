@@ -1,5 +1,69 @@
 # Conductor Run Log
 
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+- Expanded source coverage to all identifiable in-scope game-theory ontologies and
+  related languages, libraries, modelling standards and research baselines, using
+  a reproducible protocol with explicit acquisition limits and stopping rules.
+- Preserved 90 existing input items in 60 discovery seed records. Added 74
+  bibliographic references and 64 attribution records; 59 seeds link to references,
+  while GBO remains unresolved. GDLf/GameLan's distinct identity and the original
+  2013 GTO acquisition remain explicit gaps. Inherited metadata is not recertified.
+- OCS.01 remains complete. OCS.09–12 extend discovery, attribution, remaining
+  crosswalks and comparison; the expanded OCS track has eleven pending research
+  leaves. Delivered protocol/citation infrastructure does not close their execution.
+- Registered manuscript_next_version_20261108: MNV.00 planning complete and twelve
+  integration leaves pending. Twelve correction groups and four research questions
+  tie the existing resource manuscript to scoped source and validation receipts.
+  Later interoperability/frontier studies retain separate evidence requirements.
+- Updated programme, product, registry and navigation; retained historical paper,
+  source snapshots, bibliography generator and SGC/FRT/Paignia ownership.
+- Integrated validation: make validate passed; make test passed with 310 passed,
+  one skipped (local arXiv artifacts unavailable), 55 dependency warnings. SourceRight
+  CSL validation, reference/source linkage, snapshot hashes, local links and Conductor
+  leaf/status checks passed. Independent internal review found no remaining blockers.
+- Citation structure and linkage do not certify all source content, licensing or
+  claim support. Comprehensive search completion, a revised manuscript, external
+  solver execution and a public arXiv version are not claimed. Hosted checks and
+  merge status are recorded on PR #127.
+
+Evidence: [sourcing protocol](../docs/research/comprehensive-game-semantics-sourcing-protocol.md),
+[citation checks](../docs/research/game-semantics-citation-check-20261108.json),
+[next-paper plan](../docs/paper/next-version-plan-20261108.md).
+
+## 2026-11-08 — Semantic reconciliation and frontier programme
+
+- Reconciled the Paignia semantic handoff and strategic-information plan. UOGTO
+  owns semantics; Paignia owns computation; Kairos remains optional execution.
+  Upstream PR #126 is incorporated; the related PR #125 proposal is preserved.
+- Corrected result/criterion/computation hierarchies and causal wording; declared
+  runner predicates; added independent temporality/representation concepts and
+  CQ21; strengthened player/probability checks with passing positive controls.
+- Corrected mapping decisions to four structural narrow matches, six pending
+  domain reviews and 450 rejected candidates. Lexical scores cannot establish
+  equivalence. Earlier calibration and robustness scaffolds remain historical.
+- Reference runner/baseline output now declares its origin. Installed-wheel
+  smoke coverage and optional SVG derivative rendering are repaired.
+- Registered source-coverage, repository-maturity, frontier/interoperability and
+  video-game tracks. OCS.01 bounded audit is complete; broad source synthesis,
+  external adapters, research hypotheses and remaining leaves are pending.
+- SGC.07 is implemented; seven SGC leaves and both consumer receipt scopes remain
+  pending. Offline semantic acceptance is independent of StaticGame/DynamicGame.
+- Local verification: make validate passed; make test passed with 310 passed,
+  1 skipped (arXiv artifacts absent locally), 55 warnings; semantic audit and
+  comparison artifact checks passed. Current quality evidence covers 54 ontology
+  files, 8 shape files, 30 examples and 21 competency queries.
+- Independent internal code review found no blocking defects; its probability
+  datatype-policy observation was corrected and included in the full test run.
+- Hosted checks and merge status are reported by the pull request. No Rust solver,
+  external engine integration, exhaustive source coverage or frontier result is
+  qualified by this reconciliation.
+
+Canonical planning: [tracks](tracks.md). Programme:
+[frontier-programme-20261108](../docs/roadmap/frontier-programme-20261108.md).
+The older sections below record historical states, not current active-track counts
+or current dependency failures. Remote project boards were not resynchronised here.
+
 ## 2026-07-07 - GitHub Project Ledger Refresh
 
 - Rechecked the local Conductor ledger, GitHub issues, native subissues, and Project v2 boards after PR `#72` merged.

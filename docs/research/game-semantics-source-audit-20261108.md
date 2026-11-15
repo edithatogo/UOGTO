@@ -1,0 +1,71 @@
+# Strategic game semantics: source audit and abstraction priorities
+
+Audit date: **2026-11-08** (task/as-of date). Baseline examined: `a5f90557c40f054255a1d6c2541fd76f07aa5090`. The companion JSON records twenty selected primary-source comparators, discovery queries, retrieval limitations, licences where verified, and separate acquisition, mapping and execution states. This is a bounded targeted audit, not an exhaustive literature review.
+
+## Follow-up programme and attribution
+
+The [comprehensive sourcing protocol](comprehensive-game-semantics-sourcing-protocol.md)
+expands this bounded audit to all identifiable in-scope ontologies and related
+approaches. The [consolidated seeds](game-semantics-discovery-seeds-20261108.json)
+preserve the overlapping older inventories; the [bibliography](game-semantics-bibliography-20261108.md)
+and [attribution ledger](game-semantics-attribution-20261108.json) supply explicit
+citations and acquisition limits. Subsequent retrievals, including the rtGDL author
+PDF, are recorded there; the failed attempts below remain historical observations.
+The [next-paper plan](../paper/next-version-plan-20261108.md) maps these receipts to
+the existing manuscript. None of these planning additions makes the twenty-source
+audit exhaustive or qualifies new external execution.
+
+## Finding and scope
+
+**The repository does not establish that all existing game-theory ontologies have been sourced.** Its baseline comparison inventory contains 21 sources, but the provenance manifest records only four parsed external RDF artefacts: schema.org, PROV-O, OWL-Time and SSN/SOSA. The remaining 17 are metadata records. These four support metadata, provenance, time and observations; they do not constitute a survey of strategic-game ontologies. The article-hardening extension inventory contains 39 records: four `parsed_rdf_owl`, fifteen `metadata_only`, two `literature_only` and eighteen `structured_non_rdf`. A structured-source label does not demonstrate that an executable corpus was acquired, parsed, semantically mapped or run.
+
+These findings follow directly from `docs/ontology-comparison/source-inventory.json`, `source-provenance.json`, the four files under `sources/`, and `docs/article-hardening/source-extension-inventory.json`. At the baseline snapshot, the accepted alignment TSV contained twelve rows from schema.org, PROV-O and SSN/SOSA, with deterministic `automation_prefill` review labels; OWL-Time had no accepted row. These are historical audit observations, **not final counts after the concurrent mapping corrections**. A term match, RDF parse, expert-approved alignment and executable adapter are different accomplishments.
+
+Searches deliberately distinguished mathematical strategic interaction from game design, videogame metadata, game-description languages, executable libraries and simulation environments. They used primary publisher papers, author/project pages and official source repositories. Searches are recorded in the JSON; failed direct retrievals and unresolved names remain explicit. No claim of search saturation follows from the twenty selected sources.
+
+## Missing and incompletely examined sources
+
+The strongest verified strategic predecessor is **Mejbri's Game Theory Ontology (GTO)**. The [2018 EAI primary paper](https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533), *Towards a new requirements’ definition methodology using ontologies for Pervasive Games Based Learning Systems*, explicitly describes GTO for strategic-situation analysis and equilibrium-algorithm selection. Its reference 40 points to the 2013 *A Domain Ontology of Game Theory Applied to Game Based Learning*. This establishes relevant prior work missing from the inspected inventories. It does not establish that a standalone RDF/OWL/WSML release has been located. The 2018 article carries CC BY 3.0; a formal ontology's separate redistribution terms remain unverified. Acquire and chart the original 2013 work before claiming detailed equivalences or novelty over it.
+
+The [Game Ontology Project](https://gameontology.org/) is already a metadata seed. Its [original DiGRA paper](https://dl.digra.org/index.php/dl/article/view/136) concerns interface, rules, goals, entities and entity manipulation. [VGO](https://vocab.linkeddata.es/vgo/) and [CGO](https://autosemanticgame.institutedigitalgames.com/ontologies/cgo/) add missing videogame-ontology comparators. VGO's published licence is CC BY-NC-SA 2.0, while CGO states CC BY 4.0. These resources should inform gameplay and product/event metadata without being counted as complete mathematical strategic ontologies. “GBO” remains an unresolved acronym: the targeted searches did not establish an unambiguous primary game-ontology source. No expansion, artefact or coverage claim should be invented.
+
+The extension register already mentions GDL, combined GDL variants, Ludii and GVGAI/VGDL. They need construct-level comparison rather than another name-only entry. [Stanford GDL](https://logic.stanford.edu/ggp/chapters/clean_slate.html) provides declarative game descriptions; direct retrieval failed in this session, although primary indexed excerpts were available. The [original GDL-II publisher record](https://ojs.aaai.org/index.php/AAAI/article/view/7647) specifically supports randomness and incomplete state knowledge. It should not stand as evidence that GDL-III and GDLZ were separately examined. [Ludii](https://ludii.games/) describes games through ludemes. [PyVGDL](https://github.com/schaul/py-vgdl) supplies reusable dynamics, interaction and control constructs; its original implementation and maintained successors must be distinguished. A real-time GDL paper was identified through Stanford's indexed primary PDF, but full-text retrieval failed and its disposition remains follow-up.
+
+## Concepts to abstract from executable libraries
+
+[Gambit](https://gambitproject.readthedocs.io/en/latest/pygambit.html) and [OpenSpiel](https://openspiel.readthedocs.io/en/latest/concepts.html) are high-priority semantic comparators absent from the inspected inventories. They offer concrete distinctions that broad ontology labels can conceal. The following matrix is a design assessment against the baseline UOGTO files, not evidence of newly executed integrations or formal equivalence mappings.
+
+| Concept | Baseline UOGTO evidence | What executable sources expose | Required semantic treatment |
+| --- | --- | --- | --- |
+| Rules and realised play | `GameSpecification`, `GameInstance`, `PlaySession`, `EventTrace` | OpenSpiel separates game description from trajectory | Preserve these layers and identify trace/version provenance |
+| History versus state | `State`, `GameNode`, `EventTrace`; no explicit history class found | Gambit history objects; OpenSpiel states are associated with histories | Distinguish complete action history, compressed world state and session event log |
+| Information sets versus observations | `InformationSet`, `Belief`, `Signal`; MARL `ObservationSpace` | Gambit infosets; OpenSpiel information state and current observation | State player ownership, indistinguishability and recall; a current observation need not retain history |
+| Chance | `ChanceNode`, `StochasticOutcome`, generic `probability` | Explicit chance actions/outcome probabilities | Represent a distribution with support and normalisation, separately from strategic choice |
+| Action versus strategy | `Action`, `Strategy`, `StrategyProfile`, `PureStrategy`, `MixedStrategy`, MARL `Policy` | Local actions, complete plans, mixed plans and behavioural randomisation | Distinguish action choice, strategy support and per-information-set probability; record policy domain |
+| Reward versus utility | `Payoff`, `UtilityFunction`, MARL `RewardFunction`, learning `discountFactor` | OpenSpiel distinguishes immediate rewards and cumulative returns | State aggregation, horizon, discounting and player ownership; do not infer that a training reward equals preference utility |
+| Simultaneous versus sequential | `ActionProfile`, `SimultaneousAction`, `SequentialAction` | OpenSpiel transformations; PettingZoo AEC and Parallel scheduling | Classify information and decision structure independently of API call order |
+| Solution and diagnostics | `Equilibrium`, `Solver`, regret/exploitability metrics | Gambit solutions, PyCID interventions, Open Game Engine profitable deviations | Separate candidate profile, solution claim, computation and diagnostic; record assumptions and tolerance |
+
+The four parsed supporting ontologies supply useful provenance, temporal and observation scaffolding, but they do not supply these strategic invariants. GTO provides literature evidence of strategic modelling; its detailed concept coverage remains unverified pending original-source acquisition. GOP/VGO/CGO address different game-related questions and cannot fill that evidence gap by sharing labels such as “player” or “game”.
+
+[OpenSpiel's source contract](https://github.com/google-deepmind/open_spiel/blob/master/open_spiel/spiel.h) distinguishes observations from information states and rewards from returns. Those distinctions motivate explicit history and aggregation modelling. They also reveal that the baseline `PerfectInformation`/`ImperfectInformation` subclasses of `InformationSet` conflate a structural property with an individual set; this requires a deliberate modelling decision and validation examples rather than automatic label matching.
+
+Additional comparisons should include [PettingZoo](https://pettingzoo.farama.org/api/aec/), [PyCID](https://github.com/causalincentives/pycid) and the [CyberCat Open Game Engine](https://github.com/CyberCat-Institute/open-game-engine). PettingZoo separates AEC and parallel environment interfaces. PyCID connects decision and utility nodes with causal/informational structure and supports intervention analysis. Open Game Engine composes strategic components and checks deviations. These are libraries/formalisms, not acquired OWL ontologies. Repository licences inspected were MIT for PettingZoo/Open Game Engine, Apache 2.0 for OpenSpiel/PyCID and GPL 2.0 for Gambit; exact versions and documentation/code terms should be recorded before copying material or implementing adapters.
+
+## Static, dynamic, representation and scheduling
+
+A useful classification records three independent questions. First, **when do players make strategically informed choices?** A one-shot simultaneous game has a static decision structure; a sequential, repeated or stochastic game may permit later choices conditioned on earlier information. Second, **how is the model represented?** A dynamic finite game can have a normal-form representation containing complete contingent strategies, and a simultaneous game can be encoded in extensive form using information sets. Third, **how does software collect actions and advance time?** Sequential API calls can collect simultaneous choices without revealing the earlier ones.
+
+OpenSpiel explicitly documents simultaneous-to-turn-based transformation. [PettingZoo's AEC documentation](https://pettingzoo.farama.org/api/aec/) uses simultaneous-action rock-paper-scissors as an example, while its [Parallel API](https://pettingzoo.farama.org/api/parallel/) advances simultaneous action/observation environments. Therefore “normal form = static”, “extensive form = dynamic”, and “one agent API call at a time = sequential strategic game” are unsafe equivalences. Physical real time, discrete/continuous dynamics, strategic timing and computational scheduling need separate assertions.
+
+## What GTA can contribute
+
+[GTA V through DeepGTAV](https://github.com/aitorzip/DeepGTAV) demonstrates a research environment with configurable conditions, driving controls and returned data. It does not by itself establish a strategic multi-player model or equilibrium semantics. A concrete UOGTO use case must first bound the scenario: actors, available actions, information, transition uncertainty, objectives/payoffs, horizon, termination and intervention boundary.
+
+For example, an analyst could model a short two-driver merging interaction, stipulating each driver's objective and observation access. Another model could use a fixed traffic policy while training one controller; that is a different decision problem. These are proposed abstractions, not verified DeepGTAV multi-agent capabilities. Keep the videogame product, world assets, scenario specification, runtime session and telemetry separate. The plugin's GPL 3.0 licence does not grant redistribution rights to the commercial game assets.
+
+## Implementation disposition
+
+Keep **UOGTO language-neutral**: mathematical entities, semantic constraints, SHACL examples and source-qualified mappings belong here. The user-designated runtime target is [Paignia](https://github.com/edithatogo/paignia); runtime adapters, concrete policy implementations and solver runs belong there, with Kairos supplying optional simulation. The worker's initial web retrieval failed. A later integration read verified Paignia's bootstrap README at `0e28f1bf33ed8c7be5fa1d63b8cc40517b61d22c`, which describes source transfer and qualification as pending. No runtime capability is certified here.
+
+Prioritise original GTO acquisition and sampled Gambit/OpenSpiel construct charting, then examples that expose information leakage, chance normalisation, reward aggregation and static/dynamic classification errors. A later adapter result should record model identity, source version, conversion assumptions, execution evidence and unsupported features. This audit adds a source register and semantic agenda; it asserts no new formal alignment, external RDF acquisition or executed integration, and preserves the existing append-only evidence registers.
