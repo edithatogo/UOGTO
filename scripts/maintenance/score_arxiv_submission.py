@@ -62,7 +62,7 @@ class ScoreReport:
         self.checks.append(check)
         if check.blocker:
             self.blockers.append(label)
-        elif check.earned < check.points and severity in {"warning", "error"}:
+        elif not (check.earned >= check.points) and severity in {"warning", "error"}:
             self.warnings.append(label)
 
 
