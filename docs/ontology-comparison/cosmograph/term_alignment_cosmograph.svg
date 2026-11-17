@@ -4,58 +4,24 @@
 <text class="caption" x="48" y="78">All 12 accepted UOGTO-to-external mappings. The sparseness is deliberate: candidates are not asserted until reviewed.</text>
 <text class="label" x="128" y="118">External terms</text>
 <text class="label" x="1015" y="118">UOGTO terms</text>
-<path d="M480.0,368.2 C610,368.2 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,477.3 C610,477.3 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,586.4 C610,586.4 880,407.1 1015.0,407.1" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,750.0 C610,750.0 880,750.0 1015.0,750.0" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,204.5 C610,204.5 880,150.0 1015.0,150.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,259.1 C610,259.1 880,235.7 1015.0,235.7" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,531.8 C610,531.8 880,578.6 1015.0,578.6" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,695.5 C610,695.5 880,664.3 1015.0,664.3" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,640.9 C610,640.9 880,492.9 1015.0,492.9" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,313.6 C610,313.6 880,235.7 1015.0,235.7" fill="none" stroke="#0072B2" stroke-width="2.4" opacity="0.74"/>
-<path d="M480.0,422.7 C610,422.7 880,321.4 1015.0,321.4" fill="none" stroke="#009E73" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,350.0 C610,350.0 880,150.0 1015.0,150.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,550.0 C610,550.0 880,450.0 1015.0,450.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
+<path d="M480.0,750.0 C610,750.0 880,750.0 1015.0,750.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
 <path d="M480.0,150.0 C610,150.0 880,150.0 1015.0,150.0" fill="none" stroke="#D55E00" stroke-width="2.4" opacity="0.74"/>
 <rect x="180.0" y="133.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
 <text class="tiny" text-anchor="middle" x="330.0" y="154.0">Schema.org Action (1)</text>
-<rect x="180.0" y="187.5" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="208.5">PROV Activity (1)</text>
-<rect x="180.0" y="242.1" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="263.1">PROV Agent (1)</text>
-<rect x="180.0" y="296.6" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="317.6">FOAF Agent (1)</text>
-<rect x="180.0" y="351.2" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="372.2">OGP Description (1)</text>
-<rect x="180.0" y="405.7" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="426.7">Source Description (1)</text>
-<rect x="180.0" y="460.3" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="481.3">DCTERMS Description (1)</text>
-<rect x="180.0" y="514.8" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="535.8">PROV Entity (1)</text>
-<rect x="180.0" y="569.4" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="590.4">DCTERMS Identifier (1)</text>
-<rect x="180.0" y="623.9" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="644.9">SOSA Observes (1)</text>
-<rect x="180.0" y="678.5" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="699.5">PROV Role (1)</text>
+<rect x="180.0" y="333.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="354.0">PROV Activity (1)</text>
+<rect x="180.0" y="533.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
+<text class="tiny" text-anchor="middle" x="330.0" y="554.0">PROV Agent (1)</text>
 <rect x="180.0" y="733.0" width="300" height="34" fill="#EFF6FF" stroke="#2563EB" rx="5"/>
-<text class="tiny" text-anchor="middle" x="330.0" y="754.0">OWL Thing (1)</text>
+<text class="tiny" text-anchor="middle" x="330.0" y="754.0">PROV Entity (1)</text>
 <rect x="1015.0" y="133.0" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
 <text class="tiny" text-anchor="middle" x="1165.0" y="154.0">Action (2)</text>
-<rect x="1015.0" y="218.7" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="239.7">Agent (2)</text>
-<rect x="1015.0" y="304.4" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="325.4">Description (3)</text>
-<rect x="1015.0" y="390.1" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="411.1">Identifier (1)</text>
-<rect x="1015.0" y="475.9" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="496.9">Observes (1)</text>
-<rect x="1015.0" y="561.6" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="582.6">Outcome (1)</text>
-<rect x="1015.0" y="647.3" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="668.3">Role (1)</text>
+<rect x="1015.0" y="433.0" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
+<text class="tiny" text-anchor="middle" x="1165.0" y="454.0">Agent (1)</text>
 <rect x="1015.0" y="733.0" width="300" height="34" fill="#ECFDF5" stroke="#0F766E" rx="5"/>
-<text class="tiny" text-anchor="middle" x="1165.0" y="754.0">Thing (1)</text>
+<text class="tiny" text-anchor="middle" x="1165.0" y="754.0">Outcome (1)</text>
 <line x1="48" y1="826" x2="82" y2="826" stroke="#0072B2" stroke-width="3"/>
 <text class="tiny" x="92" y="830">owl:equivalentClass</text>
 <line x1="283" y1="826" x2="317" y2="826" stroke="#009E73" stroke-width="3"/>

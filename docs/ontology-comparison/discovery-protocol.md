@@ -1,5 +1,11 @@
 # Comparative Simulation Ontology Discovery Protocol
 
+> Historical protocol for the original comparison snapshot. The next paper's
+> broader search is governed by the [comprehensive sourcing protocol](../research/comprehensive-game-semantics-sourcing-protocol.md),
+> which includes paper-only ontologies, libraries, languages and related approaches
+> with separate evidence states. The older eligibility rules and search counts
+> below describe that earlier study; they do not close the new search.
+
 ## Purpose
 This protocol governs discovery for the UOGTO comparative simulation ontology mapping track. It records where to search, how to search, how to decide whether a source is in scope, and how to handle source licences before artifacts are copied into the repository.
 

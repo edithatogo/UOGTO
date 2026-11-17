@@ -1,0 +1,1910 @@
+[
+  {
+    "id": "seed-bfo",
+    "type": "webpage",
+    "title": "Basic Formal Ontology",
+    "URL": "https://github.com/BFO-ontology/BFO-2020"
+  },
+  {
+    "id": "seed-bpmn-2",
+    "type": "webpage",
+    "title": "Business Process Model and Notation 2.0",
+    "URL": "https://www.omg.org/spec/BPMN/2.0.2/"
+  },
+  {
+    "id": "seed-cellml",
+    "type": "webpage",
+    "title": "CellML",
+    "URL": "https://www.cellml.org/"
+  },
+  {
+    "id": "seed-devs",
+    "type": "webpage",
+    "title": "DEVS formalism and DEVS metamodel resources",
+    "URL": "https://acims.asu.edu/devs/"
+  },
+  {
+    "id": "seed-dolce",
+    "type": "webpage",
+    "title": "DOLCE",
+    "URL": "https://www.loa.istc.cnr.it/dolce/overview.html"
+  },
+  {
+    "id": "seed-emmo",
+    "type": "webpage",
+    "title": "European Materials and Modelling Ontology",
+    "URL": "https://github.com/emmo-repo/EMMO"
+  },
+  {
+    "id": "seed-fmi",
+    "type": "webpage",
+    "title": "Functional Mock-up Interface",
+    "URL": "https://fmi-standard.org/"
+  },
+  {
+    "id": "seed-gvgai-vgdl",
+    "type": "webpage",
+    "title": "General Video Game AI and VGDL resources",
+    "URL": "https://www.gvgai.net/"
+  },
+  {
+    "id": "seed-gymnasium",
+    "type": "webpage",
+    "title": "Gymnasium",
+    "URL": "https://github.com/Farama-Foundation/Gymnasium/blob/main/LICENSE"
+  },
+  {
+    "id": "seed-hla-fom",
+    "type": "webpage",
+    "title": "High Level Architecture Federation Object Model resources",
+    "URL": "https://www.sisostds.org/"
+  },
+  {
+    "id": "seed-kaos",
+    "type": "webpage",
+    "title": "KAoS ontology and policy services",
+    "URL": "https://ontology.ihmc.us/kaos.html"
+  },
+  {
+    "id": "seed-kisao",
+    "type": "webpage",
+    "title": "Kinetic Simulation Algorithm Ontology",
+    "URL": "https://github.com/SED-ML/KiSAO"
+  },
+  {
+    "id": "seed-mesa",
+    "type": "webpage",
+    "title": "Mesa",
+    "URL": "https://mesa.readthedocs.io/"
+  },
+  {
+    "id": "seed-miase",
+    "type": "webpage",
+    "title": "Minimum Information About a Simulation Experiment",
+    "URL": "https://co.mbine.org/standards/miase"
+  },
+  {
+    "id": "seed-modelica",
+    "type": "webpage",
+    "title": "Modelica language and Modelica Standard Library",
+    "URL": "https://modelica.org/"
+  },
+  {
+    "id": "seed-oaei",
+    "type": "webpage",
+    "title": "Ontology Alignment Evaluation Initiative",
+    "URL": "https://oaei.ontologymatching.org/"
+  },
+  {
+    "id": "seed-odd-protocol",
+    "type": "webpage",
+    "title": "ODD protocol for agent-based models",
+    "URL": "https://www.jasss.org/23/2/7.html"
+  },
+  {
+    "id": "seed-ontouml-ufo",
+    "type": "webpage",
+    "title": "OntoUML / Unified Foundational Ontology",
+    "URL": "https://ontouml.org/"
+  },
+  {
+    "id": "seed-osmo",
+    "type": "webpage",
+    "title": "Ontology for Simulation, Modelling, and Optimization",
+    "URL": "https://github.com/virtual-materials-marketplace/osmo"
+  },
+  {
+    "id": "seed-owl-s",
+    "type": "webpage",
+    "title": "OWL-S Semantic Markup for Web Services",
+    "URL": "https://www.w3.org/Submission/OWL-S/"
+  },
+  {
+    "id": "seed-p-plan",
+    "type": "webpage",
+    "title": "P-Plan ontology",
+    "URL": "https://vocab.linkeddata.es/p-plan/"
+  },
+  {
+    "id": "seed-pnml",
+    "type": "webpage",
+    "title": "Petri Net Markup Language",
+    "URL": "https://www.pnml.org/"
+  },
+  {
+    "id": "seed-robot",
+    "type": "webpage",
+    "title": "ROBOT ontology tool",
+    "URL": "https://robot.obolibrary.org/"
+  },
+  {
+    "id": "seed-sbgn",
+    "type": "webpage",
+    "title": "Systems Biology Graphical Notation",
+    "URL": "https://sbgn.github.io/"
+  },
+  {
+    "id": "seed-sbml",
+    "type": "webpage",
+    "title": "Systems Biology Markup Language",
+    "URL": "https://sbml.org/"
+  },
+  {
+    "id": "seed-sbo",
+    "type": "webpage",
+    "title": "Systems Biology Ontology",
+    "URL": "https://www.ebi.ac.uk/sbo/"
+  },
+  {
+    "id": "seed-sed-ml",
+    "type": "webpage",
+    "title": "Simulation Experiment Description Markup Language",
+    "URL": "https://sed-ml.org/"
+  },
+  {
+    "id": "seed-sssom",
+    "type": "webpage",
+    "title": "Simple Standard for Sharing Ontological Mappings (SSSOM)",
+    "URL": "https://mapping-commons.github.io/sssom/"
+  },
+  {
+    "id": "seed-sysml",
+    "type": "webpage",
+    "title": "Systems Modeling Language",
+    "URL": "https://www.omg.org/spec/SysML/"
+  },
+  {
+    "id": "seed-vimmp-ontologies",
+    "type": "webpage",
+    "title": "Virtual Materials Marketplace Ontologies",
+    "URL": "https://github.com/virtual-materials-marketplace"
+  },
+  {
+    "id": "seed-xmile",
+    "type": "webpage",
+    "title": "XMILE System Dynamics Standard",
+    "URL": "https://www.oasis-open.org/standard/xmile-v1-0/"
+  },
+  {
+    "id": "mejbri2018-requirements-gto",
+    "type": "article-journal",
+    "title": "Towards a new requirements’ definition methodology using ontologies for Pervasive Games Based Learning Systems",
+    "URL": "https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533",
+    "author": [
+      {
+        "given": "Yemna",
+        "family": "Mejbri"
+      },
+      {
+        "given": "Maha",
+        "family": "Khemaja"
+      },
+      {
+        "given": "Kaouther",
+        "family": "Raies"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          1,
+          4
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.4108/eai.4-1-2018.153533",
+    "container-title": "EAI Endorsed Transactions on Serious Games",
+    "volume": "4",
+    "issue": "14",
+    "page": "e5"
+  },
+  {
+    "id": "gop-project",
+    "type": "webpage",
+    "title": "Game Ontology Project",
+    "URL": "https://gameontology.org/",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "zagal2005-game-analysis",
+    "type": "paper-conference",
+    "title": "Towards an Ontological Language for Game Analysis",
+    "URL": "https://dl.digra.org/index.php/dl/article/view/136",
+    "author": [
+      {
+        "given": "José P.",
+        "family": "Zagal"
+      },
+      {
+        "given": "Michael",
+        "family": "Mateas"
+      },
+      {
+        "given": "Clara",
+        "family": "Fernández-Vara"
+      },
+      {
+        "given": "Brian",
+        "family": "Hochhalter"
+      },
+      {
+        "given": "Nolan",
+        "family": "Lichti"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.26503/dl.v2005i1.136",
+    "container-title": "Proceedings of DiGRA 2005 Conference: Changing Views: Worlds in Play"
+  },
+  {
+    "id": "vgo-ontology-1-0",
+    "type": "webpage",
+    "title": "The Video Game Ontology",
+    "URL": "https://vocab.linkeddata.es/vgo/",
+    "author": [
+      {
+        "given": "Janne",
+        "family": "Parkkila"
+      },
+      {
+        "given": "Filip",
+        "family": "Radulovic"
+      },
+      {
+        "given": "María",
+        "family": "Poveda"
+      },
+      {
+        "given": "Daniel",
+        "family": "Garijo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          12,
+          19
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "version": "1.0"
+  },
+  {
+    "id": "parkkila2017-videogame-interoperability",
+    "type": "article-journal",
+    "title": "An ontology for videogame interoperability",
+    "URL": "https://link.springer.com/article/10.1007/s11042-016-3552-6",
+    "author": [
+      {
+        "given": "Janne",
+        "family": "Parkkila"
+      },
+      {
+        "given": "Filip",
+        "family": "Radulovic"
+      },
+      {
+        "given": "Daniel",
+        "family": "Garijo"
+      },
+      {
+        "given": "María",
+        "family": "Poveda-Villalón"
+      },
+      {
+        "given": "Jouni",
+        "family": "Ikonen"
+      },
+      {
+        "given": "Jari",
+        "family": "Porras"
+      },
+      {
+        "given": "Asunción",
+        "family": "Gómez-Pérez"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1007/s11042-016-3552-6",
+    "container-title": "Multimedia Tools and Applications",
+    "volume": "76",
+    "page": "4981–5000",
+    "note": "First online 2016-05-17; journal issue 2017."
+  },
+  {
+    "id": "sacco2016-cgo",
+    "type": "webpage",
+    "title": "The Core Game Ontology (CGO)",
+    "URL": "https://autosemanticgame.institutedigitalgames.com/ontologies/cgo/",
+    "author": [
+      {
+        "given": "Owen",
+        "family": "Sacco"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "version": "1.0.0"
+  },
+  {
+    "id": "stanford-gdl-game-description",
+    "type": "webpage",
+    "title": "Chapter 2 - Game Description",
+    "URL": "https://logic.stanford.edu/ggp/chapters/clean_slate.html"
+  },
+  {
+    "id": "thielscher2010-gdl-ii",
+    "type": "paper-conference",
+    "title": "A General Game Description Language for Incomplete Information Games",
+    "URL": "https://ojs.aaai.org/index.php/AAAI/article/view/7647",
+    "author": [
+      {
+        "given": "Michael",
+        "family": "Thielscher"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          7,
+          4
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1609/aaai.v24i1.7647",
+    "container-title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "volume": "24",
+    "issue": "1",
+    "page": "994–999"
+  },
+  {
+    "id": "thielscher2017-gdl-iii",
+    "type": "paper-conference",
+    "title": "GDL-III: A Description Language for Epistemic General Game Playing",
+    "URL": "https://www.ijcai.org/Proceedings/2017/177",
+    "author": [
+      {
+        "given": "Michael",
+        "family": "Thielscher"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          8
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.24963/ijcai.2017/177",
+    "container-title": "Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence",
+    "page": "1276–1282"
+  },
+  {
+    "id": "mittelmann2019-gdlz",
+    "type": "report",
+    "title": "Game Description Logic with Integers: A GDL Numerical Extension",
+    "URL": "https://arxiv.org/abs/1912.01876",
+    "author": [
+      {
+        "given": "Munyque",
+        "family": "Mittelmann"
+      },
+      {
+        "given": "Laurent",
+        "family": "Perrussel"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          12,
+          4
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.1912.01876",
+    "genre": "arXiv preprint"
+  },
+  {
+    "id": "ludii-project",
+    "type": "webpage",
+    "title": "Ludii general game system",
+    "URL": "https://ludii.games/",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "piette2019-ludii",
+    "type": "report",
+    "title": "Ludii -- The Ludemic General Game System",
+    "URL": "https://arxiv.org/abs/1905.05013",
+    "author": [
+      {
+        "given": "Éric",
+        "family": "Piette"
+      },
+      {
+        "given": "Dennis J. N. J.",
+        "family": "Soemers"
+      },
+      {
+        "given": "Matthew",
+        "family": "Stephenson"
+      },
+      {
+        "given": "Chiara F.",
+        "family": "Sironi"
+      },
+      {
+        "given": "Mark H. M.",
+        "family": "Winands"
+      },
+      {
+        "given": "Cameron",
+        "family": "Browne"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          13
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.1905.05013",
+    "genre": "arXiv preprint",
+    "note": "v3 revised 2020-02-21; accepted at ECAI 2020."
+  },
+  {
+    "id": "py-vgdl-repository",
+    "type": "webpage",
+    "title": "PyVGDL: Video Game Description Language",
+    "URL": "https://github.com/schaul/py-vgdl",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "schaul2013-vgdl",
+    "type": "paper-conference",
+    "title": "A Video Game Description Language for Model-based or Interactive Learning",
+    "URL": "https://course.ccs.neu.edu/cs5150f13/readings/schaul_vgdl.pdf",
+    "author": [
+      {
+        "given": "Tom",
+        "family": "Schaul"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "container-title": "2013 IEEE Conference on Computational Intelligence in Games"
+  },
+  {
+    "id": "ebner2013-towards-vgdl",
+    "type": "chapter",
+    "title": "Towards a Video Game Description Language",
+    "URL": "https://drops.dagstuhl.de/entities/document/10.4230/DFU.Vol6.12191.85",
+    "author": [
+      {
+        "given": "Marc",
+        "family": "Ebner"
+      },
+      {
+        "given": "John",
+        "family": "Levine"
+      },
+      {
+        "given": "Simon M.",
+        "family": "Lucas"
+      },
+      {
+        "given": "Tom",
+        "family": "Schaul"
+      },
+      {
+        "given": "Tommy",
+        "family": "Thompson"
+      },
+      {
+        "given": "Julian",
+        "family": "Togelius"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          11,
+          18
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.4230/dfu.vol6.12191.85",
+    "publisher": "Schloss Dagstuhl – Leibniz-Zentrum für Informatik",
+    "container-title": "Artificial and Computational Intelligence in Games",
+    "collection-title": "Dagstuhl Follow-Ups",
+    "volume": "6",
+    "page": "85–100"
+  },
+  {
+    "id": "kowalski2015-rtgdl",
+    "type": "paper-conference",
+    "title": "Game Description Language for Real-time Games",
+    "URL": "https://kot.rogacz.com/Publications/Kowalski2015GameDescription.pdf",
+    "author": [
+      {
+        "given": "Jakub",
+        "family": "Kowalski"
+      },
+      {
+        "given": "Andrzej",
+        "family": "Kisielewicz"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "container-title": "IJCAI Workshop on General Intelligence in Game-Playing Agents (GIGA)",
+    "page": "23–30"
+  },
+  {
+    "id": "gambit-pygambit-docs",
+    "type": "webpage",
+    "title": "Gambit / PyGambit user documentation",
+    "URL": "https://gambitproject.readthedocs.io/en/latest/pygambit.html",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "openspiel-concepts",
+    "type": "webpage",
+    "title": "OpenSpiel concepts",
+    "URL": "https://openspiel.readthedocs.io/en/latest/concepts.html",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "openspiel-game-contract",
+    "type": "webpage",
+    "title": "OpenSpiel Game and State contract: spiel.h",
+    "URL": "https://github.com/google-deepmind/open_spiel/blob/master/open_spiel/spiel.h",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "lanctot2019-openspiel",
+    "type": "report",
+    "title": "OpenSpiel: A Framework for Reinforcement Learning in Games",
+    "URL": "https://arxiv.org/abs/1908.09453",
+    "author": [
+      {
+        "given": "Marc",
+        "family": "Lanctot"
+      },
+      {
+        "given": "Edward",
+        "family": "Lockhart"
+      },
+      {
+        "given": "Jean-Baptiste",
+        "family": "Lespiau"
+      },
+      {
+        "given": "Vinicius",
+        "family": "Zambaldi"
+      },
+      {
+        "given": "Satyaki",
+        "family": "Upadhyay"
+      },
+      {
+        "given": "Julien",
+        "family": "Pérolat"
+      },
+      {
+        "given": "Sriram",
+        "family": "Srinivasan"
+      },
+      {
+        "given": "Finbarr",
+        "family": "Timbers"
+      },
+      {
+        "given": "Karl",
+        "family": "Tuyls"
+      },
+      {
+        "given": "Shayegan",
+        "family": "Omidshafiei"
+      },
+      {
+        "given": "Daniel",
+        "family": "Hennes"
+      },
+      {
+        "given": "Dustin",
+        "family": "Morrill"
+      },
+      {
+        "given": "Paul",
+        "family": "Muller"
+      },
+      {
+        "given": "Timo",
+        "family": "Ewalds"
+      },
+      {
+        "given": "Ryan",
+        "family": "Faulkner"
+      },
+      {
+        "given": "János",
+        "family": "Kramár"
+      },
+      {
+        "given": "Bart",
+        "family": "De Vylder"
+      },
+      {
+        "given": "Brennan",
+        "family": "Saeta"
+      },
+      {
+        "given": "James",
+        "family": "Bradbury"
+      },
+      {
+        "given": "David",
+        "family": "Ding"
+      },
+      {
+        "given": "Sebastian",
+        "family": "Borgeaud"
+      },
+      {
+        "given": "Matthew",
+        "family": "Lai"
+      },
+      {
+        "given": "Julian",
+        "family": "Schrittwieser"
+      },
+      {
+        "given": "Thomas",
+        "family": "Anthony"
+      },
+      {
+        "given": "Edward",
+        "family": "Hughes"
+      },
+      {
+        "given": "Ivo",
+        "family": "Danihelka"
+      },
+      {
+        "given": "Jonah",
+        "family": "Ryan-Davis"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          26
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.1908.09453",
+    "genre": "arXiv preprint",
+    "note": "v6 revised 2020-09-26."
+  },
+  {
+    "id": "pettingzoo-aec-docs",
+    "type": "webpage",
+    "title": "PettingZoo AEC API",
+    "URL": "https://pettingzoo.farama.org/api/aec/",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pettingzoo-parallel-docs",
+    "type": "webpage",
+    "title": "PettingZoo Parallel API",
+    "URL": "https://pettingzoo.farama.org/api/parallel/",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "terry2020-pettingzoo",
+    "type": "report",
+    "title": "PettingZoo: Gym for Multi-Agent Reinforcement Learning",
+    "URL": "https://arxiv.org/abs/2009.14471",
+    "author": [
+      {
+        "given": "J. K.",
+        "family": "Terry"
+      },
+      {
+        "given": "Benjamin",
+        "family": "Black"
+      },
+      {
+        "given": "Nathaniel",
+        "family": "Grammel"
+      },
+      {
+        "given": "Mario",
+        "family": "Jayakumar"
+      },
+      {
+        "given": "Ananth",
+        "family": "Hari"
+      },
+      {
+        "given": "Ryan",
+        "family": "Sullivan"
+      },
+      {
+        "given": "Luis",
+        "family": "Santos"
+      },
+      {
+        "given": "Rodrigo",
+        "family": "Perez"
+      },
+      {
+        "given": "Caroline",
+        "family": "Horsch"
+      },
+      {
+        "given": "Clemens",
+        "family": "Dieffendahl"
+      },
+      {
+        "given": "Niall L.",
+        "family": "Williams"
+      },
+      {
+        "given": "Yashas",
+        "family": "Lokesh"
+      },
+      {
+        "given": "Praveen",
+        "family": "Ravi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          30
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.2009.14471",
+    "genre": "arXiv preprint",
+    "note": "v7 revised 2021-10-26."
+  },
+  {
+    "id": "pycid-repository",
+    "type": "webpage",
+    "title": "PyCID",
+    "URL": "https://github.com/causalincentives/pycid",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "fox2021-pycid-paper",
+    "type": "paper-conference",
+    "title": "PyCID: A Python Library for Causal Influence Diagrams",
+    "URL": "https://github.com/causalincentives/pycid/blob/master/CITATION.cff",
+    "author": [
+      {
+        "given": "James",
+        "family": "Fox"
+      },
+      {
+        "given": "Tom",
+        "family": "Everitt"
+      },
+      {
+        "given": "Ryan",
+        "family": "Carey"
+      },
+      {
+        "given": "Eric",
+        "family": "Langlois"
+      },
+      {
+        "given": "Alessandro",
+        "family": "Abate"
+      },
+      {
+        "given": "Michael",
+        "family": "Wooldridge"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.25080/majora-1b6fd038-008",
+    "container-title": "Proceedings of the 20th Python in Science Conference"
+  },
+  {
+    "id": "pycid-0-7-0",
+    "type": "software",
+    "title": "PyCID",
+    "URL": "https://github.com/causalincentives/pycid",
+    "author": [
+      {
+        "given": "James",
+        "family": "Fox"
+      },
+      {
+        "given": "Tom",
+        "family": "Everitt"
+      },
+      {
+        "given": "Ryan",
+        "family": "Carey"
+      },
+      {
+        "given": "Eric",
+        "family": "Langlois"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          12,
+          21
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "version": "0.7.0"
+  },
+  {
+    "id": "open-game-engine-repository",
+    "type": "webpage",
+    "title": "Open Game Engine",
+    "URL": "https://github.com/CyberCat-Institute/open-game-engine",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "deepgtav-repository",
+    "type": "webpage",
+    "title": "DeepGTAV",
+    "URL": "https://github.com/aitorzip/DeepGTAV",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "paignia-repository",
+    "type": "webpage",
+    "title": "Paignia repository",
+    "URL": "https://github.com/edithatogo/paignia"
+  },
+  {
+    "id": "schema-org-developers",
+    "type": "webpage",
+    "title": "Schema.org for Developers",
+    "URL": "https://schema.org/docs/developers.html",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "prov-o-2013",
+    "type": "report",
+    "title": "PROV-O: The PROV Ontology",
+    "URL": "https://www.w3.org/TR/2013/REC-prov-o-20130430/",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          4,
+          30
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "publisher": "World Wide Web Consortium",
+    "genre": "W3C Recommendation",
+    "editor": [
+      {
+        "given": "Timothy",
+        "family": "Lebo"
+      },
+      {
+        "given": "Satya",
+        "family": "Sahoo"
+      },
+      {
+        "given": "Deborah",
+        "family": "McGuinness"
+      }
+    ]
+  },
+  {
+    "id": "owl-time-2022",
+    "type": "report",
+    "title": "Time Ontology in OWL",
+    "URL": "https://www.w3.org/TR/2022/CRD-owl-time-20221115/",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          15
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "publisher": "World Wide Web Consortium",
+    "genre": "W3C Candidate Recommendation Draft",
+    "editor": [
+      {
+        "given": "Simon",
+        "family": "Cox"
+      },
+      {
+        "given": "Chris",
+        "family": "Little"
+      }
+    ]
+  },
+  {
+    "id": "ssn-sosa-2017",
+    "type": "report",
+    "title": "Semantic Sensor Network Ontology",
+    "URL": "https://www.w3.org/TR/2017/REC-vocab-ssn-20171019/",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          10,
+          19
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "publisher": "World Wide Web Consortium",
+    "genre": "W3C Recommendation"
+  },
+  {
+    "id": "ghani2018-compositional-game-theory",
+    "type": "paper-conference",
+    "title": "Compositional game theory",
+    "URL": "https://arxiv.org/abs/1603.04641",
+    "author": [
+      {
+        "given": "Neil",
+        "family": "Ghani"
+      },
+      {
+        "given": "Jules",
+        "family": "Hedges"
+      },
+      {
+        "given": "Viktor",
+        "family": "Winschel"
+      },
+      {
+        "given": "Philipp",
+        "family": "Zahn"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          7,
+          12
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1145/3209108.3209165",
+    "container-title": "Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in Computer Science",
+    "page": "472–481",
+    "note": "Preprint first 2016-03-15, revised 2018-02-15. Published LICS 2018; author Jules on arXiv, Julian in institutional metadata."
+  },
+  {
+    "id": "hammond2021-maid-refinements",
+    "type": "report",
+    "title": "Equilibrium Refinements for Multi-Agent Influence Diagrams: Theory and Practice",
+    "URL": "https://arxiv.org/abs/2102.05008",
+    "author": [
+      {
+        "given": "Lewis",
+        "family": "Hammond"
+      },
+      {
+        "given": "James",
+        "family": "Fox"
+      },
+      {
+        "given": "Tom",
+        "family": "Everitt"
+      },
+      {
+        "given": "Alessandro",
+        "family": "Abate"
+      },
+      {
+        "given": "Michael",
+        "family": "Wooldridge"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          9
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.2102.05008",
+    "genre": "arXiv preprint",
+    "note": "Accepted at AAMAS 2021."
+  },
+  {
+    "id": "hammond2023-causality-games",
+    "type": "article-journal",
+    "title": "Reasoning about Causality in Games",
+    "URL": "https://arxiv.org/abs/2301.02324",
+    "author": [
+      {
+        "given": "Lewis",
+        "family": "Hammond"
+      },
+      {
+        "given": "James",
+        "family": "Fox"
+      },
+      {
+        "given": "Tom",
+        "family": "Everitt"
+      },
+      {
+        "given": "Ryan",
+        "family": "Carey"
+      },
+      {
+        "given": "Alessandro",
+        "family": "Abate"
+      },
+      {
+        "given": "Michael",
+        "family": "Wooldridge"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.artint.2023.103919",
+    "container-title": "Artificial Intelligence",
+    "volume": "320",
+    "page": "103919",
+    "note": "Preprint 2023-01-05; revised 2023-04-17."
+  },
+  {
+    "id": "deng2025-gameinterpreter",
+    "type": "report",
+    "title": "From Natural Language to Extensive-Form Game Representations",
+    "URL": "https://arxiv.org/abs/2501.17282",
+    "author": [
+      {
+        "given": "Shilong",
+        "family": "Deng"
+      },
+      {
+        "given": "Yongzhao",
+        "family": "Wang"
+      },
+      {
+        "given": "Rahul",
+        "family": "Savani"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          28
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.48550/arxiv.2501.17282",
+    "genre": "arXiv preprint",
+    "note": "Revised 2025-01-31; accepted at AAMAS 2025."
+  },
+  {
+    "id": "wang2026-efg-consistency",
+    "type": "paper-conference",
+    "title": "From Natural Language to Extensive-Form Game Representations: Defining and Automatically Verifying Consistency",
+    "URL": "https://openreview.net/pdf/0cda049e6d21fce6c6b4f4707c8e03674f5c9d15.pdf",
+    "author": [
+      {
+        "given": "Yongzhao",
+        "family": "Wang"
+      },
+      {
+        "given": "Shilong",
+        "family": "Deng"
+      },
+      {
+        "given": "Daniel A.",
+        "family": "Kadnikov"
+      },
+      {
+        "given": "Ed",
+        "family": "Chalstrey"
+      },
+      {
+        "given": "Martin",
+        "family": "Gairing"
+      },
+      {
+        "given": "Enbo",
+        "family": "Sun"
+      },
+      {
+        "given": "Theodore",
+        "family": "Turocy"
+      },
+      {
+        "given": "Rahul",
+        "family": "Savani"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "container-title": "Strategic Engineering Workshop on LLMs and Game Theory at AAMAS 2026",
+    "note": "Workshop at AAMAS 2026, Paphos, May 25–29; paper year only asserted. June 3 seminar date is not publication date."
+  },
+  {
+    "id": "pddl-1-2-1998",
+    "type": "report",
+    "title": "PDDL — The Planning Domain Definition Language, Version 1.2",
+    "URL": "https://www.cs.cmu.edu/~mmv/planning/readings/98aips-PDDL.pdf",
+    "author": [
+      {
+        "given": "Malik",
+        "family": "Ghallab"
+      },
+      {
+        "given": "Adele",
+        "family": "Howe"
+      },
+      {
+        "given": "Craig",
+        "family": "Knoblock"
+      },
+      {
+        "given": "Drew",
+        "family": "McDermott"
+      },
+      {
+        "given": "Ashwin",
+        "family": "Ram"
+      },
+      {
+        "given": "Manuela",
+        "family": "Veloso"
+      },
+      {
+        "given": "Daniel",
+        "family": "Weld"
+      },
+      {
+        "given": "David",
+        "family": "Wilkins"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1998,
+          10
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "publisher": "Yale Center for Computational Vision and Control",
+    "number": "CVC TR-98-003/DCS TR-1165",
+    "version": "1.2"
+  },
+  {
+    "id": "rethlefsen2021-prisma-s",
+    "type": "article-journal",
+    "title": "PRISMA-S: an extension to the PRISMA statement for reporting literature searches in systematic reviews",
+    "URL": "https://jmla.pitt.edu/ojs/jmla/article/view/962",
+    "author": [
+      {
+        "given": "Melissa L.",
+        "family": "Rethlefsen"
+      },
+      {
+        "given": "Shona",
+        "family": "Kirtley"
+      },
+      {
+        "given": "Siw",
+        "family": "Waffenschmidt"
+      },
+      {
+        "given": "Ana Patricia",
+        "family": "Ayala"
+      },
+      {
+        "given": "David",
+        "family": "Moher"
+      },
+      {
+        "given": "Matthew J.",
+        "family": "Page"
+      },
+      {
+        "given": "Jonathan B.",
+        "family": "Koffel"
+      },
+      {
+        "literal": "PRISMA-S Group"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.5195/jmla.2021.962",
+    "container-title": "Journal of the Medical Library Association",
+    "volume": "109",
+    "issue": "2"
+  },
+  {
+    "id": "tricco2018-prisma-scr",
+    "type": "article-journal",
+    "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+    "URL": "https://www.acpjournals.org/doi/10.7326/M18-0850",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.7326/m18-0850",
+    "container-title": "Annals of Internal Medicine",
+    "volume": "169",
+    "issue": "7",
+    "page": "467–473"
+  },
+  {
+    "id": "matentzoglu2022-sssom",
+    "type": "article-journal",
+    "title": "A Simple Standard for Sharing Ontological Mappings (SSSOM)",
+    "URL": "https://academic.oup.com/database/article/doi/10.1093/database/baac035/6591806",
+    "author": [
+      {
+        "given": "Nicolas",
+        "family": "Matentzoglu"
+      },
+      {
+        "given": "James P.",
+        "family": "Balhoff"
+      },
+      {
+        "given": "Susan M.",
+        "family": "Bello"
+      },
+      {
+        "given": "Chris",
+        "family": "Bizon"
+      },
+      {
+        "given": "Matthew",
+        "family": "Brush"
+      },
+      {
+        "given": "Tiffany J.",
+        "family": "Callahan"
+      },
+      {
+        "given": "Christopher G.",
+        "family": "Chute"
+      },
+      {
+        "given": "William D.",
+        "family": "Duncan"
+      },
+      {
+        "given": "Chris T.",
+        "family": "Evelo"
+      },
+      {
+        "given": "Davera",
+        "family": "Gabriel"
+      },
+      {
+        "given": "John",
+        "family": "Graybeal"
+      },
+      {
+        "given": "Alasdair",
+        "family": "Gray"
+      },
+      {
+        "given": "Benjamin M.",
+        "family": "Gyori"
+      },
+      {
+        "given": "Melissa",
+        "family": "Haendel"
+      },
+      {
+        "given": "Henriette",
+        "family": "Harmse"
+      },
+      {
+        "given": "Nomi L.",
+        "family": "Harris"
+      },
+      {
+        "given": "Ian",
+        "family": "Harrow"
+      },
+      {
+        "given": "Harshad B.",
+        "family": "Hegde"
+      },
+      {
+        "given": "Amelia L.",
+        "family": "Hoyt"
+      },
+      {
+        "given": "Charles T.",
+        "family": "Hoyt"
+      },
+      {
+        "given": "Dazhi",
+        "family": "Jiao"
+      },
+      {
+        "given": "Ernesto",
+        "family": "Jiménez-Ruiz"
+      },
+      {
+        "given": "Simon",
+        "family": "Jupp"
+      },
+      {
+        "given": "Hyeongsik",
+        "family": "Kim"
+      },
+      {
+        "given": "Sebastian",
+        "family": "Koehler"
+      },
+      {
+        "given": "Thomas",
+        "family": "Liener"
+      },
+      {
+        "given": "Qinqin",
+        "family": "Long"
+      },
+      {
+        "given": "James",
+        "family": "Malone"
+      },
+      {
+        "given": "James A.",
+        "family": "McLaughlin"
+      },
+      {
+        "given": "Julie A.",
+        "family": "McMurry"
+      },
+      {
+        "given": "Sierra",
+        "family": "Moxon"
+      },
+      {
+        "given": "Monica C.",
+        "family": "Munoz-Torres"
+      },
+      {
+        "given": "David",
+        "family": "Osumi-Sutherland"
+      },
+      {
+        "given": "James A.",
+        "family": "Overton"
+      },
+      {
+        "given": "Bjoern",
+        "family": "Peters"
+      },
+      {
+        "given": "Tim",
+        "family": "Putman"
+      },
+      {
+        "given": "Núria",
+        "family": "Queralt-Rosinach"
+      },
+      {
+        "given": "Kent",
+        "family": "Shefchek"
+      },
+      {
+        "given": "Harold",
+        "family": "Solbrig"
+      },
+      {
+        "given": "Anne",
+        "family": "Thessen"
+      },
+      {
+        "given": "Tania",
+        "family": "Tudorache"
+      },
+      {
+        "given": "Nicole",
+        "family": "Vasilevsky"
+      },
+      {
+        "given": "Alex H.",
+        "family": "Wagner"
+      },
+      {
+        "given": "Christopher J.",
+        "family": "Mungall"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          25
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1093/database/baac035",
+    "container-title": "Database",
+    "volume": "2022",
+    "page": "baac035"
+  },
+  {
+    "id": "savani2025-gambit-16-2-1",
+    "type": "software",
+    "title": "Gambit: The package for computation in game theory",
+    "URL": "https://www.gambit-project.org/",
+    "author": [
+      {
+        "given": "Rahul",
+        "family": "Savani"
+      },
+      {
+        "given": "Theodore L.",
+        "family": "Turocy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "version": "16.2.1",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          8
+        ]
+      ]
+    },
+    "note": "Project-recommended citation for version 16.2.1, documented in the pinned v16.2.1 manual. This is a bibliographic edition, not an assertion of the installed, executed or latest release."
+  }
+]

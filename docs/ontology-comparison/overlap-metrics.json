@@ -250,10 +250,10 @@
         "uogto_source_id": "uogto_alignments_prov-o"
       },
       {
-        "accepted": 1,
+        "accepted": 0,
         "candidate_count": 1,
         "needs_domain_review": 0,
-        "rejected": 0,
+        "rejected": 1,
         "source_id": "prov_o",
         "uogto_source_id": "uogto_alignments_wot-thing-description"
       },
@@ -274,9 +274,9 @@
         "uogto_source_id": "uogto_core_agents"
       },
       {
-        "accepted": 1,
+        "accepted": 0,
         "candidate_count": 36,
-        "needs_domain_review": 0,
+        "needs_domain_review": 1,
         "rejected": 35,
         "source_id": "prov_o",
         "uogto_source_id": "uogto_core_uogto-core"
@@ -426,9 +426,9 @@
         "uogto_source_id": "uogto_core_rules"
       },
       {
-        "accepted": 4,
+        "accepted": 0,
         "candidate_count": 32,
-        "needs_domain_review": 0,
+        "needs_domain_review": 4,
         "rejected": 28,
         "source_id": "schema_org",
         "uogto_source_id": "uogto_core_uogto-core"
@@ -546,9 +546,9 @@
         "uogto_source_id": "uogto_extensions_trust-reputation-provenance"
       },
       {
-        "accepted": 1,
+        "accepted": 0,
         "candidate_count": 1,
-        "needs_domain_review": 0,
+        "needs_domain_review": 1,
         "rejected": 0,
         "source_id": "ssn_sosa",
         "uogto_source_id": "uogto_alignments_mcp-a2a"
@@ -586,10 +586,10 @@
         "uogto_source_id": "uogto_core_strategies"
       },
       {
-        "accepted": 1,
+        "accepted": 0,
         "candidate_count": 33,
         "needs_domain_review": 0,
-        "rejected": 32,
+        "rejected": 33,
         "source_id": "ssn_sosa",
         "uogto_source_id": "uogto_core_uogto-core"
       },
@@ -797,31 +797,31 @@
         "review_precision": 0.0
       },
       "prov_o": {
-        "accepted": 5,
-        "accepted_candidate_rate": 0.0427,
+        "accepted": 3,
+        "accepted_candidate_rate": 0.0256,
         "candidate_count": 117,
         "deferred": 0,
-        "needs_domain_review": 0,
-        "rejected": 112,
-        "review_precision": 0.0427
+        "needs_domain_review": 1,
+        "rejected": 113,
+        "review_precision": 0.0259
       },
       "schema_org": {
-        "accepted": 5,
-        "accepted_candidate_rate": 0.0417,
+        "accepted": 1,
+        "accepted_candidate_rate": 0.0083,
         "candidate_count": 120,
         "deferred": 0,
-        "needs_domain_review": 0,
+        "needs_domain_review": 4,
         "rejected": 115,
-        "review_precision": 0.0417
+        "review_precision": 0.0086
       },
       "ssn_sosa": {
-        "accepted": 2,
-        "accepted_candidate_rate": 0.0194,
+        "accepted": 0,
+        "accepted_candidate_rate": 0.0,
         "candidate_count": 103,
         "deferred": 0,
-        "needs_domain_review": 0,
-        "rejected": 101,
-        "review_precision": 0.0194
+        "needs_domain_review": 1,
+        "rejected": 102,
+        "review_precision": 0.0
       }
     }
   },
@@ -2142,11 +2142,8 @@
     }
   },
   "domain_module_coverage": {
-    "uogto_alignments_mcp-a2a": 1,
     "uogto_alignments_prov-o": 3,
-    "uogto_alignments_schema-org": 1,
-    "uogto_alignments_wot-thing-description": 1,
-    "uogto_core_uogto-core": 6
+    "uogto_alignments_schema-org": 1
   },
   "licence_coverage": {
     "metadata_only": 8,
@@ -2212,16 +2209,18 @@
   "schema": "uogto.ontology-comparison.overlap-metrics.v1",
   "source_cluster_overlap": {
     "general_web_schema": {
-      "accepted": 5,
+      "accepted": 1,
+      "needs_domain_review": 4,
       "rejected": 115
     },
     "observation_sensor": {
-      "accepted": 2,
-      "rejected": 101
+      "needs_domain_review": 1,
+      "rejected": 102
     },
     "provenance": {
-      "accepted": 5,
-      "rejected": 112
+      "accepted": 3,
+      "needs_domain_review": 1,
+      "rejected": 113
     },
     "time": {
       "rejected": 120
@@ -2334,15 +2333,15 @@
       "term_count": 1
     },
     "prov_o": {
-      "accepted_coverage": 0.0485,
-      "accepted_term_count": 5,
+      "accepted_coverage": 0.0291,
+      "accepted_term_count": 3,
       "candidate_coverage": 0.4563,
       "candidate_term_count": 47,
       "term_count": 103
     },
     "schema_org": {
-      "accepted_coverage": 0.0016,
-      "accepted_term_count": 5,
+      "accepted_coverage": 0.0003,
+      "accepted_term_count": 1,
       "candidate_coverage": 0.0137,
       "candidate_term_count": 44,
       "term_count": 3219
@@ -2355,8 +2354,8 @@
       "term_count": 1
     },
     "ssn_sosa": {
-      "accepted_coverage": 0.0408,
-      "accepted_term_count": 2,
+      "accepted_coverage": 0.0,
+      "accepted_term_count": 0,
       "candidate_coverage": 0.449,
       "candidate_term_count": 22,
       "term_count": 49
@@ -2377,7 +2376,7 @@
     }
   },
   "summary": {
-    "accepted_mapping_count": 12,
+    "accepted_mapping_count": 4,
     "external_source_count": 21,
     "external_term_count": 3485,
     "review_candidate_count": 460,
@@ -3904,8 +3903,8 @@
     }
   ],
   "uogto_coverage": {
-    "accepted_coverage": 0.0143,
-    "accepted_term_count": 8,
+    "accepted_coverage": 0.0053,
+    "accepted_term_count": 3,
     "candidate_coverage": 0.2656,
     "candidate_term_count": 149,
     "term_count": 561

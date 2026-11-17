@@ -31,10 +31,11 @@ class TestSssomMappingOutputs(unittest.TestCase):
                 "uogto_term_iri": "https://w3id.org/uogto/core#Action",
                 "uogto_label": "Action",
                 "uogto_term_type": "class",
-                "candidate_predicate": "owl:equivalentClass",
+                "candidate_predicate": "skos:narrowMatch",
                 "confidence": 0.9,
                 "evidence": {
                     "exact_label": True,
+                    "external_is_uogto_parent": True,
                     "exact_iri": False,
                     "normalized_label": True,
                     "synonym": False,
@@ -51,11 +52,11 @@ class TestSssomMappingOutputs(unittest.TestCase):
             loaded = list(csv.DictReader(handle, delimiter="\t"))
         self.assertEqual(loaded[0]["subject_id"], "schema:Action")
         self.assertEqual(loaded[0]["object_id"], "uogto:Action")
-        self.assertEqual(loaded[0]["mapping_justification"], "semapv:LexicalMatching")
+        self.assertEqual(loaded[0]["mapping_justification"], "semapv:CompositeMatching")
 
     def test_repo_sssom_outputs_validate(self):
         summary = align.validate_sssom_outputs()
-        self.assertEqual(summary["row_count"], 12)
+        self.assertEqual(summary["row_count"], 4)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+{
+  "track_id": "repository_maturity_20261108",
+  "type": "chore",
+  "status": "new",
+  "execution_status": "pending",
+  "created_at": "2026-11-08T00:00:00+10:00",
+  "updated_at": "2026-11-08T00:00:00+10:00",
+  "description": "Reproducible semantic quality, supported environments, package and release compatibility",
+  "leaf_count": 6,
+  "dependencies": [
+    "semantic_reconciliation_20261108"
+  ],
+  "verification": {
+    "status": "planning_only",
+    "not_qualified": [
+      "formal OWL profile certification",
+      "external adapters",
+      "new release",
+      "scientific frontier status"
+    ]
+  }
+}

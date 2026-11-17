@@ -36,17 +36,17 @@ uogtox:CharacteristicFunction a owl:Class ;
     skos:definition "A mapping from coalitions to their security payoffs."@en .
 
 uogtox:CoreSolution a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogto:AllocationSolution ;
     rdfs:label "Core Solution"@en ;
-    skos:definition "A payoff distribution where no coalition has incentive to deviate."@en .
+    skos:definition "A feasible payoff allocation that no coalition can improve upon for all its members using its own resources."@en .
 
 uogtox:ShapleyValue a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogto:AllocationSolution ;
     rdfs:label "Shapley Value"@en ;
     skos:definition "A unique distribution of cooperative surplus based on marginal contributions."@en .
 
 uogtox:BargainingSolution a owl:Class ;
-    rdfs:subClassOf uogto:Equilibrium ;
+    rdfs:subClassOf uogto:AllocationSolution ;
     rdfs:label "Bargaining Solution"@en ;
     skos:definition "A payoff allocation resolving strategic negotiation."@en .
 
