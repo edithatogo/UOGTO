@@ -62,3 +62,12 @@ class TestCheckGithub(unittest.TestCase):
                 content = f.read()
                 self.assertIn("A", content)
                 self.assertIn("B", content)
+
+    @patch('urllib.request.urlopen')
+    def test_get_via_api_response_read_timeout(self, mock_urlopen):
+        response = mock_urlopen.return_value.__enter__.return_value
+        response.read.side_effect = TimeoutError("timed out")
+
+        self.assertEqual(get_via_api(), (None, None))
+        mock_urlopen.assert_called_once()
+        self.assertEqual(mock_urlopen.call_args.kwargs.get("timeout"), 10)

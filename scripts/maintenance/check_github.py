@@ -67,7 +67,7 @@ def get_via_api(repo=REPO):
         headers=headers
     )
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode())
             issues = []
             prs = []
@@ -85,7 +85,7 @@ def get_via_api(repo=REPO):
                 else:
                     issues.append(formatted)
             return issues[:10], prs[:10]
-    except urllib.error.URLError as e:
+    except (urllib.error.URLError, TimeoutError) as e:
         print(f"API fallback failed: {e}", file=sys.stderr)
         return None, None
 
