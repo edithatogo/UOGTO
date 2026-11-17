@@ -1,6 +1,6 @@
 # Original Game Theory Ontology (GTO): bounded predecessor evidence, 18 November 2026
 
-**OCS.02 remains pending.** This is an abstract/bibliography acquisition increment, not acquisition of the full 2013 paper or formal ontology. Reuse source ID \`mejbri_gto\` from the original UOGTO discovery register; do not count a second source or upgrade worldwide coverage.
+**OCS.02 remains pending.** This is an abstract/bibliography acquisition increment, not acquisition of the full 2013 paper or formal ontology. Reuse source ID `mejbri_gto` from the original UOGTO discovery register; do not count a second source or upgrade worldwide coverage.
 
 ## Original 2013 source
 
@@ -19,9 +19,9 @@ Mejbri, Khemaja and Raies, *Towards a new requirements' definition methodology u
 
 | Observation | UOGTO comparison to conduct | Evidence status |
 | --- | --- | --- |
-| 2013 game-theoretic strategic-scenario ontology proposal | \`GameSpecification\` and game-theoretic vocabulary | Abstract only; no original classes charted |
+| 2013 game-theoretic strategic-scenario ontology proposal | `GameSpecification` and game-theoretic vocabulary | Abstract only; no original classes charted |
 | 2013 WSML keyword | Formal language and representation | No WSML bytes acquired |
-| 2018 discussion of GTO algorithm selection | \`SolutionConcept\`, \`ComputationalProblem\`, solver provenance | Intended workflow; no accepted IRI correspondence |
+| 2018 discussion of GTO algorithm selection | `SolutionConcept`, `ComputationalProblem`, solver provenance | Intended workflow; no accepted IRI correspondence |
 | 2018 requirements-priority/payoff example | Domain assumptions versus generic utility | Not adopted as a universal semantic equivalence |
 
 Historical 8 November source counts and mapping decisions are unchanged. No RDF was parsed, no automated adapter executed, no exact source-asset hash verified, and no universal absence or exhaustive survey claim is made.
