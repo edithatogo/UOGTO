@@ -25,8 +25,8 @@ def validate_record(record):
     assert original["page_start"] == 666
     assert original["conference"] == "7th European Conference on Games Based Learning"
     assert original["abstract_authors"] == ["Yemna Mejbri", "Maha Khemaja", "Rafik Braham"]
-    assert original["toc_authors"] != original["abstract_authors"]
-    assert original["author_discrepancy_unresolved"] is True
+    assert original["toc_authors"] == original["abstract_authors"]
+    assert original["author_discrepancy_unresolved"] is False
     assert original["doi"] is None
     followup = record["2018_followup"]
     assert followup["doi"] == "10.4108/eai.4-1-2018.153533"
@@ -83,12 +83,13 @@ def test_source_status_cannot_be_upgraded_from_abstract_only():
             validate_record(changed)
 
 
-def test_discrepancy_and_rights_holds_are_not_silently_removed():
+def test_abbreviated_reference_and_rights_holds_are_not_silently_removed():
     record = load_record()
     changed = copy.deepcopy(record)
-    changed["original_2013"]["author_discrepancy_unresolved"] = False
+    changed["original_2013"]["author_discrepancy_unresolved"] = True
     with pytest.raises(AssertionError):
         validate_record(changed)
+    assert "omits Rafik Braham" in record["2018_followup"]["reference_40_short_author_attribution"]
     changed = copy.deepcopy(record)
     changed["2013_rights"]["ontology_rights"] = "CC-BY-3.0"
     with pytest.raises(AssertionError):

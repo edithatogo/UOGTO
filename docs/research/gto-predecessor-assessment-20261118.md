@@ -9,7 +9,7 @@ The **7th European Conference on Games Based Learning** (Porto, 3–4 October 20
 - [2013 proceedings contents](https://www.proceedings.com/content/019/019356webtoc.pdf), volume 2, contents roman p.v.
 - [2013 conference abstract volume](https://citeseerx.ist.psu.edu/document?doi=3a242e4f34a97053fe9297043e4288064fa487c6&repid=rep1&type=pdf), abstract guide p.73.
 
-The reprint table of contents spells the second author **Khemajia**; the abstract spells **Khemaja**. A later abbreviated reference omits the third author. Preserve this discrepancy pending the original full paper. The next paper starts at p.674; that does **not** prove the predecessor's last page. No DOI was verified for the 2013 paper. The 2013 proceedings/abstract volume reserve copyright; no paper or ontology bytes are redistributed.
+The 2013 abstract records **Maha Khemaja**. The indexed table-of-contents extraction is not sufficient to assert a conflicting printed spelling. The 2018 follow-up's reference 40 abbreviates the predecessor's author list and **omits Rafik Braham**. Preserve the original three-author conference attribution pending acquisition of the full article. The next paper starts at p.674; that does **not** prove the predecessor's last page. No DOI was verified for the 2013 paper. The 2013 proceedings/abstract volume reserve copyright; no paper or ontology bytes are redistributed.
 
 ## 2018 primary follow-up
 

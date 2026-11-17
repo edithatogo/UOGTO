@@ -19,10 +19,10 @@
     ],
     "toc_authors": [
       "Yemna Mejbri",
-      "Maha Khemajia",
+      "Maha Khemaja",
       "Rafik Braham"
     ],
-    "author_discrepancy_unresolved": true,
+    "author_discrepancy_unresolved": false,
     "abstract_described_formalism": "WSML",
     "bibliographic_scope": "conference paper and abstract; no original full paper or formal ontology bytes",
     "next_toc_paper_start": 674,
@@ -141,7 +141,7 @@
   "acquisition_leads": [
     "Locate rights-permitted complete 2013 article and record exact bytes/version/hash before charting.",
     "Locate WSML/OWL/RDF ontology asset and verify its distinct licence and creator provenance.",
-    "Resolve Khemaja/Khemajia spelling and incomplete 2018 reference against the original paper.",
+    "Confirm complete 2013 article author metadata and reconcile the 2018 reference that omits Rafik Braham.",
     "Complete backward/forward citation searches with dated queries and screened denominators."
   ],
   "closure": {
