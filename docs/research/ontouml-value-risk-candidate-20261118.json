@@ -1,0 +1,109 @@
+{
+  "schema": "uogto.source-candidate.ontouml-value-risk.v1",
+  "as_of_date": "2026-11-18",
+  "candidate_id": "amaral2021-game-value-risk-ontouml",
+  "source_kind": "conceptual_game_ontology_publication",
+  "discovery": {
+    "new_to_20261108_seed_register": true,
+    "historical_seed_count_modified": false,
+    "candidate_status": "identified_and_eligible_but_not_incorporated_into_frozen_seed_denominator",
+    "search_route": "game-theoretical ontology value risk OntoUML / UFO; original DOI author PDF and university institutional publication record"
+  },
+  "publication": {
+    "title": "Modeling the Emergence of Value and Risk in Game Theoretical Approaches",
+    "authors": [
+      "Glenda Amaral",
+      "Daniele Porello",
+      "Tiago Prince Sales",
+      "Giancarlo Guizzardi"
+    ],
+    "year": 2021,
+    "doi": "10.1007/978-3-030-74196-9_5",
+    "book": "Advances in Enterprise Engineering XIV",
+    "series": "Lecture Notes in Business Information Processing",
+    "series_volume": 411,
+    "pages": "70-91",
+    "publisher": "Springer",
+    "conference_held": "2020-11-09/2020-11-10",
+    "distinguish_other_editions": "A separate 2025 single-author thesis chapter has a different DOI and must not be conflated with this publication."
+  },
+  "source_identifiers": {
+    "author_pdf_url": "https://www.inf.unibz.it/~tpsales/wp-content/uploads/Amaral-et-al.-Modeling-the-Emergence-of-Value-and-Risk-in-Game-Theoretical-Approaches-2020.pdf",
+    "institutional_metadata_url": "https://research.utwente.nl/en/publications/modeling-the-emergence-of-value-and-risk-in-game-theoretical-appr/",
+    "doi_url": "https://doi.org/10.1007/978-3-030-74196-9_5",
+    "content_sha256": null
+  },
+  "evidence": {
+    "institutional_metadata_verified": true,
+    "author_pdf_content_inspected": true,
+    "raw_pdf_bytes_hashed": false,
+    "full_original_ontouml_model_acquired": false,
+    "rdf_owl_serialization_acquired": false,
+    "rdf_owl_parsed": false,
+    "equivalence_mapping_accepted": false,
+    "runtime_or_solver_executed": false,
+    "licence_certified_for_redistribution": false,
+    "independent_validation_completed": false
+  },
+  "rights": {
+    "source_pdf_redistributed": false,
+    "source_pdf_licence": "not_verified",
+    "rights_policy": "Citation and independently worded short concept descriptions only; no direct image, model diagram or source-asset copy."
+  },
+  "construct_comparisons": [
+    {
+      "construct_id": "agent_game_player_role",
+      "source_locator": "2021 author PDF section 4; UFO-C game player role",
+      "source_interpretation": "Agents participate in games in a context-specific player role.",
+      "uogto_question": "Are Agent and Player identity, role and scope explicitly separated?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    },
+    {
+      "construct_id": "action_profile_as_event",
+      "source_locator": "2021 author PDF section 4; discussion of figures 6-7",
+      "source_interpretation": "Action profiles are complex events composed of individual actions.",
+      "uogto_question": "Does UOGTO distinguish strategic action-profile configurations from a realised event complex?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    },
+    {
+      "construct_id": "outcome_event_ontology",
+      "source_locator": "2021 author PDF sections 4 and 5",
+      "source_interpretation": "Outcome-linked situations, value and risk events receive explicit conceptual distinctions.",
+      "uogto_question": "Is Outcome separate from EventTrace, Payoff and experienced value/risk?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    },
+    {
+      "construct_id": "value_vs_risk_experience",
+      "source_locator": "2021 author PDF sections 3.2 and 4",
+      "source_interpretation": "COVER grounds value and risk in stakeholder-relative experiences.",
+      "uogto_question": "Are value/risk judgements stakeholder- and context-specific rather than equal to utility numbers?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    },
+    {
+      "construct_id": "ontouml_ufo_foundations",
+      "source_locator": "2021 author PDF sections 3 and 4",
+      "source_interpretation": "Game model uses OntoUML informed by Unified Foundational Ontology and COVER.",
+      "uogto_question": "Which UOGTO term meanings are supported by OntoUML conceptual comparisons without implying OWL equivalence?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    },
+    {
+      "construct_id": "bank_run_scenario",
+      "source_locator": "2021 author PDF sections 2.2, 5 and 6",
+      "source_interpretation": "Two-depositor bank-run game illustrates value and risk emergence from action profiles and outcomes.",
+      "uogto_question": "Can an independently authored strategic case compare game outcomes, valuation and risk without importing its model or claiming an executed solver?",
+      "mapping_decision": "comparison_only_no_equivalence"
+    }
+  ],
+  "scientific_boundary": "This source demonstrates relevant ontologically grounded game theory and value/risk concepts prior to UOGTO. It is not proof of complete mathematical, solver or web-ontology coverage or a general novelty comparison.",
+  "closure": {
+    "ocs09_complete": false,
+    "ocs11_complete": false,
+    "world_coverage_claim": false,
+    "next_steps": [
+      "Capture permitted immutable article bytes/hash and rights",
+      "Inspect model figures directly and any downloadable OntoUML/OWL resources",
+      "Compare terms with exact UOGTO source revisions and positive/negative competency questions",
+      "Add to post-freeze source census with dated denominator and bibliographic lineage"
+    ]
+  }
+}

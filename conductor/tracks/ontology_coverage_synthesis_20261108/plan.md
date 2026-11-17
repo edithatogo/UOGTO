@@ -83,6 +83,16 @@ negative tests: `tests/test_gto_predecessor_evidence.py`.
 - Acceptance: all existing seeds and newly discovered candidates have a disposition; all prespecified routes have results or access limits; backward/forward citation rounds and rerun cutoff are logged; source/artifact/version identities, hashes and unresolved aliases are retained. No fixed twenty-source ceiling or universal absence inference.
 - Execution: coding/research agent; split into linked leaves by independent source family or acquisition batch if more than five authored files are required.
 
+**2026-11-18 bounded OCS.09/11 candidate (not leaf completion):** The
+Amaral–Porello–Sales–Guizzardi (2021) OntoUML value/risk and game-theory
+paper was identified after the frozen 60-seed register. Its DOI, indexed
+source text, construct comparison, rights limitations and unacquired OWL
+status are recorded in `docs/research/ontouml-value-risk-candidate-20261118.json`
+and `docs/research/ontouml-value-risk-comparison-20261118.md`.
+Keep OCS.09, OCS.10 and OCS.11 pending; do not alter the 8 November
+historical denominator. Dedicated negative status tests are in
+`tests/test_ontouml_value_risk_candidate.py`.
+
 ## [ ] OCS.10 — Complete source attribution and concept/claim support appraisal
 
 - Depends on: delivered bibliography/attribution ledger; OCS.09 receipts as they become available; relevant OCS.02–05 and OCS.11 content.
