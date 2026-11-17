@@ -25,6 +25,15 @@ while OCS.09 broadens discovery. The twenty-source audit is not a scope limit.
 - Acceptance: Retrieve a permitted artefact or record paper-only/inaccessible status; inspect concepts rather than asserting a merge.
 - Execution: coding agent; split into a linked leaf if more than five authored files or a second independently testable behavior is needed. Generated derivatives are listed separately.
 
+
+**2026-11-18 bounded OCS.02 evidence increment (not a leaf completion):**
+The 2013 ECGBL conference abstract/contents and a 2018 publisher follow-up
+are independently corroborated in `docs/research/gto-predecessor-evidence-20261118.json`
+and `gto-predecessor-assessment-20261118.md`. The complete 2013 paper and standalone
+formal ontology remain unacquired; rights, original concepts and citation chaining
+are pending. The original OCS.02 checkbox remains unchecked. Focused provenance
+negative tests: `tests/test_gto_predecessor_evidence.py`.
+
 ## [ ] OCS.03 — Chart videogame vocabularies and formal game languages separately
 
 - Depends on: OCS.01.
