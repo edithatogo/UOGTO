@@ -103,22 +103,14 @@ def _pick_field(record: dict[str, Any], *names: str) -> str:
     return ""
 
 
-def _review_key(record: dict[str, Any]) -> tuple[str, str, str]:
-    return (
-        _normalize(_pick_field(record, "source_curie", "source_iri", "source_id", "left_curie", "left_id", "source_label", "left_label")),
-        _normalize(_pick_field(record, "target_curie", "target_iri", "target_id", "right_curie", "right_id", "target_label", "right_label")),
-        _normalize(_pick_field(record, "decision", "review_decision", "mapping_decision", "status", "final_status", "outcome")),
-    )
-
-
 def _agreement_metrics(left: list[str], right: list[str]) -> dict[str, float]:
-    pairs = [(l, r) for l, r in zip(left, right) if l and r]
+    pairs = [(left_val, r) for left_val, r in zip(left, right) if left_val and r]
     if not pairs:
         return {"pair_count": 0, "agreement_rate": 0.0, "kappa": 0.0}
 
     pair_count = len(pairs)
-    agreement_rate = sum(1 for l, r in pairs if l == r) / pair_count
-    left_counts = Counter(l for l, _ in pairs)
+    agreement_rate = sum(1 for left_val, r in pairs if left_val == r) / pair_count
+    left_counts = Counter(left_val for left_val, _ in pairs)
     right_counts = Counter(r for _, r in pairs)
     labels = sorted(set(left_counts) | set(right_counts))
     expected = sum(
@@ -146,8 +138,6 @@ def generate_report(
     accepted = [row for row in reviewed_rows if _is_positive(row)]
     rejected = [row for row in reviewed_rows if _is_positive(row) is False]
 
-    accepted = sorted(accepted, key=_review_key)
-    rejected = sorted(rejected, key=_review_key)
     half = max(sample_size // 2, 1)
     sample = accepted[:half] + rejected[:half]
     if len(sample) < sample_size:
