@@ -25,6 +25,7 @@ Each leaf has at most five authored outputs; split additional behaviors into lin
 - Depends on: Qualified profile for interchange cases; RDF validation baselines can proceed earlier.
 - Outputs (future): Benchmark corpus; runner; measured baseline; regression checks.
 - Acceptance: Measure time/memory at declared graph/game sizes, then set justified budgets; renaming/reordering properties expose deliberate payoff or identity mutations.
+- Bounded implementation: [synthetic graph properties and executed evidence](graph-properties-20261120.md). Scale measurement and consumer qualification remain open; this leaf is not complete.
 
 ## [ ] MAT.05 — Bind current metrics to their actual evidence inputs
 

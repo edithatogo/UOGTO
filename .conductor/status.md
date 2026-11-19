@@ -1,5 +1,11 @@
 # UOGTO Project Status
 
+## 2026-11-20 — Bounded graph properties
+
+MAT.04 has three passing synthetic metamorphic properties and a scoped bounded
+workflow. Scale and consumer qualification remain open. See the canonical
+[execution receipt](../conductor/tracks/repository_maturity_20261108/graph-properties-20261120.md).
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

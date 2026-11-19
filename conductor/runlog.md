@@ -1,5 +1,13 @@
 # Conductor Run Log
 
+## 2026-11-20 — Bounded MAT.04 graph properties
+
+Added a scoped Hypothesis suite and bounded PR/weekly workflow without modifying
+ontology or runner interfaces. Three properties pass at 500 examples on Python
+3.10.22; `make validate` passes. The initial full test run exposed a missing local
+build backend, retained in the [execution receipt](tracks/repository_maturity_20261108/graph-properties-20261120.md).
+MAT.04 remains open for measured scale and consumer qualification.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 - Expanded source coverage to all identifiable in-scope game-theory ontologies and

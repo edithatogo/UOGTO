@@ -29,6 +29,7 @@ dev = [
     "ruff>=0.3.0",
 ]
 runner = []
+properties = ["hypothesis>=6.168.5,<7"]
 playground = [
     "streamlit>=1.36.0",
     "networkx>=3.3",
