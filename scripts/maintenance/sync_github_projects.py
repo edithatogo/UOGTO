@@ -240,14 +240,6 @@ def parse_track_registry(root: Path) -> dict[str, dict[str, str]]:
     return registry
 
 
-def parse_track_descriptions(root: Path) -> dict[str, str]:
-    return {
-        track_id: data["description"]
-        for track_id, data in parse_track_registry(root).items()
-        if data["description"]
-    }
-
-
 def metadata_status(path: Path) -> str:
     metadata_path = path / "metadata.json"
     if not metadata_path.exists():
