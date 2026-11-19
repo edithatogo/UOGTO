@@ -1,5 +1,12 @@
 # Conductor Status
 
+## 2026-11-20 — Bounded MAT.04 graph properties
+
+Three generated properties cover signed scoped payoff lookup, RDF serialization,
+IRI/order/duplicate invariance and deliberate identity/payoff mutations. The
+500-example campaign passes; repository validation passes. MAT.04 scale and
+consumer acceptance remain open. [Evidence](tracks/repository_maturity_20261108/graph-properties-20261120.md).
+
 Updated: `2026-11-08`
 
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan

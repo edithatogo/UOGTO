@@ -1,5 +1,12 @@
 # Conductor Run Log
 
+## 2026-11-20 — Bounded graph properties
+
+Recorded generated signed-payoff, identity and serialization checks under the
+existing MAT.04 leaf. Three properties pass at 500 examples; repository validation
+passes. The [canonical receipt](../conductor/tracks/repository_maturity_20261108/graph-properties-20261120.md)
+retains the initial build-environment failure and remaining acceptance gates.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

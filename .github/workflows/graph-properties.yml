@@ -1,0 +1,49 @@
+name: Synthetic graph properties
+
+on:
+  pull_request:
+    paths:
+      - 'uogto/runner/engine.py'
+      - 'property_tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/graph-properties.yml'
+  schedule:
+    - cron: '59 18 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: graph-properties-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  properties:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GRAPH_PROPERTY_EXAMPLES: ${{ github.event_name == 'pull_request' && '50' || '500' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.10'
+      - name: Install project and generated-test extra
+        run: python -m pip install '.[dev,properties]'
+      - name: Exercise bounded graph metamorphisms
+        env:
+          PROPERTY_SEED: ${{ github.run_id }}
+        run: |
+          ulimit -v 4194304
+          timeout 600 python -m pytest property_tests -q --hypothesis-seed="$PROPERTY_SEED" --hypothesis-show-statistics --junitxml=.tmp/graph-properties.xml
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: synthetic-graph-properties
+          path: |
+            .tmp/graph-properties.xml
+            .hypothesis/examples/
+          include-hidden-files: true
+          retention-days: 14
