@@ -1,5 +1,25 @@
 # Conductor Run Log
 
+## 2026-11-21 — SGC.01 information-set profile and native witness
+
+- The source controls first failed with the projection unimplemented.
+- Specialist review reproduced scope union, malformed representation links,
+  dual semantic roles and competing memberships. Twelve new or revised controls
+  failed before the fixes. The selected graph, complete representation
+  validation and membership checks passed the reviewed control suite.
+- The repository-local CPython 3.15.2 run passed 413 tests, including the
+  installed wheel and the 37 new profile controls. The existing prebuilt
+  arXiv artifact test was skipped. Ontology, coverage, publishing-metadata
+  and registry link checks passed.
+- The pinned Rust 1.75.0 fixture admitted both full decision IRIs into the
+  declared set. It retained the native action order and rejected wrong
+  ownership, missing assignments, changed order and imperfect recall.
+- SHA-256 for the Turtle fixture and the Rust lock respectively:
+  `c7021e243175ee84823c748b3dd90cd838d4c243ed307e1f2db00cdb0142d68a`
+  and `f53b999009759f995f8c65b22a2c70c7df2873d1b1812ec07ba3f9f641b708e1`.
+  The native readout in `target/information-set-native-receipt.json` hashes to
+  `0f990656d00dd52c1e05478b70b88514cee3c205472f74bbb28ed00b490d0669`.
+
 ## 2026-11-21 — SGC.01 installed admission and Python 3.15.2 CI
 
 - The isolated wheel admits the shared finite declaration and rejects empty

@@ -40,7 +40,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## [~] Track: semantic_game_contracts_20261107
 - **Description**: Versioned executable subset and identity-preserving mappings to the existing generic Rust game packages, with negative SHACL and round-trip evidence.
-- **Status**: In Progress; SGC.07 reference-tool labels implemented by the reconciliation track. Seven implementation leaves and both consumer acceptance scopes remain pending.
+- **Status**: In progress. SGC.01 executable profiles and SGC.07 reference-tool labels are implemented. Six leaves and both consumer acceptance scopes remain pending.
 - **Link**: [./tracks/semantic_game_contracts_20261107/](./tracks/semantic_game_contracts_20261107/)
 
 ---
