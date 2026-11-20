@@ -73,19 +73,36 @@ def test_isolated_wheel_install_imports_runner_and_playground(tmp_path) -> None:
     )
     outside_checkout = tmp_path / "outside-checkout"
     outside_checkout.mkdir()
+    declaration = checkout / "tests/fixtures/paignia-static-declaration-v1.json"
     code = """
 import json
+import sys
 from pathlib import Path
 import uogto
 import uogto.interchange
 import uogto.runner
 import uogto.playground.app
 import rdflib, pyshacl, yaml, jsonschema
+from uogto.interchange import UnsupportedExecutableSubset, validate_executable_subset
+
+declaration = json.load(sys.stdin)
+assert validate_executable_subset(declaration)["status"] == "profile_declaration_compatible"
+for invalid_uri in ("", "relative-game-id"):
+    declaration["game"]["specification_iri"] = invalid_uri
+    try:
+        validate_executable_subset(declaration)
+    except UnsupportedExecutableSubset as exc:
+        assert exc.code == "unsupported_subset"
+        assert exc.path == "game.specification_iri"
+    else:
+        raise AssertionError(f"Accepted invalid specification URI {invalid_uri!r}")
+
 modules = [uogto, uogto.interchange, uogto.runner, uogto.playground.app]
 print(json.dumps([str(Path(module.__file__).resolve()) for module in modules]))
 """
     result = subprocess.run(
         [str(python), "-I", "-c", code], cwd=outside_checkout,
+        input=declaration.read_text(encoding="utf-8"),
         check=True, capture_output=True, text=True, timeout=60,
     )
     for origin in json.loads(result.stdout):

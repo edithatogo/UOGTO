@@ -18,29 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def valid_record() -> dict:
-    return {
-        "contract_version": "1.0.0",
-        "profile_id": PROFILE_ID,
-        "provider": {
-            "repository": "edithatogo/paignia",
-            "revision": "bd880dd756d2ba56cc5f479bc078cea31b53c1d1",
-            "core_package": "paignia-core",
-            "solver_package": "paignia-solve",
-            "package_version": "0.1.0",
-        },
-        "game": {
-            "specification_iri": "https://w3id.org/uogto/examples#game-one",
-            "specification_class": "https://w3id.org/uogto/core#GameSpecification",
-            "representation_class": "https://w3id.org/uogto/core#ExtensiveFormRepresentation",
-            "game_class": "FiniteAcyclicExtensive",
-            "information_structure": "PerfectInformation",
-            "chance_rule": "AllowZeroAndValidateEveryBranch",
-            "payoff_rule": "IntentionalSparseZero",
-            "selection_rule": "InputOrderPairwiseToleranceThenLexicographic",
-            "selection_tolerance": 0.0,
-            "native_execution_claim": False,
-        },
-    }
+    return json.loads(
+        (ROOT / "tests/fixtures/paignia-static-declaration-v1.json").read_text(encoding="utf-8")
+    )
 
 
 def test_admit_qualified_declaration_without_execution_claim():
@@ -87,7 +67,9 @@ def test_unsupported_contracts_fail_closed(path, bad):
     assert exc.value.code in ("unsupported_subset", "invalid_tolerance")
 
 
-@pytest.mark.parametrize("value", [-1, float("nan"), float("inf"), -float("inf"), 10**400, True, "0", None])
+@pytest.mark.parametrize(
+    "value", [-1, float("nan"), float("inf"), -float("inf"), 10**400, -(10**400), True, "0", None]
+)
 def test_invalid_tolerances_fail_without_coercion(value):
     record = valid_record()
     record["game"]["selection_tolerance"] = value
