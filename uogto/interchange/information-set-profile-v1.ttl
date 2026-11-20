@@ -1,0 +1,65 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix p: <urn:uogto:shapes:information-set:1.0.0#> .
+
+# The exporter supplies the target node for this profile.
+p:Specification a sh:NodeShape ;
+    sh:property [ sh:path rdf:type ; sh:hasValue uogto:GameSpecification ] ;
+    sh:property [
+        sh:path uogto:hasRepresentation ;
+        sh:node p:Representation ;
+        sh:qualifiedValueShape [
+            sh:property [ sh:path rdf:type ; sh:hasValue uogto:ExtensiveFormRepresentation ]
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1
+    ] ;
+    sh:property [
+        sh:path uogto:hasPlayer ; sh:minCount 1 ;
+        sh:node p:Player
+    ] ;
+    sh:property [
+        sh:path uogto:hasInitialState ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path uogto:hasState ; sh:minCount 1 ;
+        sh:node p:State
+    ] .
+
+p:Representation a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:xone (
+        [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:ExtensiveFormRepresentation ] ]
+        [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:NormalFormRepresentation ] ]
+    ) .
+
+p:Player a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [ sh:path rdf:type ; sh:hasValue uogto:Player ] .
+
+p:State a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:xone (
+        [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:DecisionNode ] ]
+        [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:ChanceNode ] ]
+        [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:TerminalNode ] ]
+    ) ;
+    sh:or ( p:DecisionBindings p:NonDecisionBindings ) .
+
+p:DecisionBindings a sh:NodeShape ;
+    sh:property [ sh:path rdf:type ; sh:hasValue uogto:DecisionNode ] ;
+    sh:property [
+        sh:path [ sh:inversePath uogto:controlsNode ] ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:node p:Player
+    ] ;
+    sh:property [
+        sh:path uogto:belongsToInformationSet ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+        sh:node [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:InformationSet ] ]
+    ] .
+
+p:NonDecisionBindings a sh:NodeShape ;
+    sh:not [ sh:property [ sh:path rdf:type ; sh:hasValue uogto:DecisionNode ] ] ;
+    sh:property [ sh:path [ sh:inversePath uogto:controlsNode ] ; sh:maxCount 0 ] ;
+    sh:property [ sh:path uogto:belongsToInformationSet ; sh:maxCount 0 ] .
