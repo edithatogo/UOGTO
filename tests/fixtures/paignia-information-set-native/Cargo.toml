@@ -1,0 +1,11 @@
+[package]
+name = "uogto-information-set-conformance"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+publish = false
+
+[dependencies]
+paignia-core = { git = "https://github.com/edithatogo/paignia.git", rev = "d4047c0648a89f2aee4461ff70bbc9641e5320cd", default-features = false }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
