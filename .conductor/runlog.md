@@ -1,5 +1,18 @@
 # Conductor Run Log
 
+## 2026-11-21 — SGC.01 installed admission and Python 3.15.2 CI
+
+- The isolated wheel admits the shared finite declaration and rejects empty
+  and relative specification URIs. Tolerance tests cover both signs beyond
+  the supported binary64 range.
+- A fresh project-local CPython 3.15.2 environment passed `make all
+  publishing-metadata registry-links` with 376 tests passing and the existing
+  prebuilt arXiv artifact test skipped. The workflow setup probe and
+  `actionlint` passed. `pixi lock --check` accepted both platform resolutions.
+- The hosted validation and manuscript gates retain their checks and select
+  the same repository runtime. The privacy workflow uses the shared locked
+  CPython 3.15.2 scanner. Hosted acceptance for PR #136 remains pending.
+
 ## 2026-11-20 — SGC.01 absolute identifier repair
 
 - Reproduced the relative-identifier failure on PR #136 head `672cde1`.

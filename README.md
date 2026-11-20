@@ -46,18 +46,24 @@ general executable compatibility have not been established.
 - `docs/`: Guides, mappings, and references.
 
 ## Quickstart
-1. Install dependencies:
-   ```bash
-   pip install -e .
-   ```
-2. Build merged files:
-   ```bash
-   make build
-   ```
-3. Run validation and tests:
-   ```bash
-   make all
-   ```
+
+The project uses the CPython patch release pinned in `.python-version`.
+Use the locked Pixi environment on Linux and Windows.
+
+```bash
+pixi install --locked
+pixi run python --version
+pixi run make all
+```
+
+On macOS, create a project-local environment and run the full validation suite.
+
+```bash
+uv venv --python "$(cat .python-version)" target/dev-python
+uv pip install --python target/dev-python/bin/python -e '.[dev]'
+target/dev-python/bin/python --version
+make all
+```
 
 ## Documentation and Citation
 - Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.

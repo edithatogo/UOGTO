@@ -1,4 +1,6 @@
-PYTHON ?= $(firstword $(wildcard .pixi/envs/default/python.exe .pixi/envs/default/bin/python) python)
+LOCAL_PYTHONS := target/dev-python/bin/python target/dev-python/Scripts/python.exe \
+                 .pixi/envs/default/python.exe .pixi/envs/default/bin/python
+PYTHON ?= $(firstword $(wildcard $(LOCAL_PYTHONS)) target/dev-python/bin/python)
 ARXIV_PDF_FLAGS ?= --require-pdf
 ARXIV_PDF_OUTPUT_DIR ?= .tmp/manuscript-build-arxiv
 
