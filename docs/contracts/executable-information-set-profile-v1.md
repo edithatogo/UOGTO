@@ -19,8 +19,10 @@ extensive representation, declared players, one initial state and a complete
 normal-form representations. Every state has one decision, chance or terminal
 kind. Each decision has one declared controller and one canonical
 `belongsToInformationSet` assignment. A decision's `hasInformationSet`
-assertion may name the same set. Each set's members share one controller and
-belong to the selected game. Explicit profile roles are exclusive, and
+assertion may name the same set. Both predicates reject incoming links from
+outside the selected game. The selected specification can enumerate its own
+set via `hasInformationSet`. Each set's members share one controller.
+Explicit profile roles are exclusive, and
 compatible supertypes such as `GameNode` may also be asserted.
 
 | Projected field | Source |

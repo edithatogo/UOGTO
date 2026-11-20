@@ -7,8 +7,11 @@
   dual semantic roles and competing memberships. Twelve new or revised controls
   failed before the fixes. The selected graph, complete representation
   validation and membership checks passed the reviewed control suite.
-- The repository-local CPython 3.15.2 run passed 413 tests, including the
-  installed wheel and the 37 new profile controls. The existing prebuilt
+- Hosted review exposed an alternate incoming membership from a foreign
+  state. The focused regression failed before the fix. Both predicates
+  now enforce the same member boundary.
+- The repository-local CPython 3.15.2 run passed 415 tests, including the
+  installed wheel and the 39 new profile controls. The existing prebuilt
   arXiv artifact test was skipped. Ontology, coverage, publishing-metadata
   and registry link checks passed.
 - The pinned Rust 1.75.0 fixture admitted both full decision IRIs into the

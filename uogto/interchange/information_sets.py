@@ -128,7 +128,9 @@ def project_information_sets(
     declarations = []
     for set_id, (owner, members) in sorted(sets.items()):
         _validate_identity(graph, set_id, _UOGTO.InformationSet, "declaration.sets.id")
-        if set(graph.subjects(_UOGTO.belongsToInformationSet, set_id)) - states:
+        canonical_members = set(graph.subjects(_UOGTO.belongsToInformationSet, set_id))
+        alternate_members = set(graph.subjects(_UOGTO.hasInformationSet, set_id)) - {specification}
+        if (canonical_members | alternate_members) - states:
             raise UnsupportedExecutableSubset(
                 "foreign_information_set_member", str(set_id), "member falls outside the declared game"
             )

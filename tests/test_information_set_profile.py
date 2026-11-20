@@ -106,9 +106,10 @@ def test_graph_must_satisfy_the_selected_profile(graph, remove, add):
         project_information_sets(graph, GAME.specification)
 
 
-def test_set_cannot_import_an_unscoped_member(graph):
+@pytest.mark.parametrize("predicate", [UOGTO.belongsToInformationSet, UOGTO.hasInformationSet])
+def test_set_cannot_import_an_unscoped_member(graph, predicate):
     graph.add((GAME.foreign_node, RDF.type, UOGTO.DecisionNode))
-    graph.add((GAME.foreign_node, UOGTO.belongsToInformationSet, SET))
+    graph.add((GAME.foreign_node, predicate, SET))
     with pytest.raises(UnsupportedExecutableSubset, match="foreign_information_set_member"):
         project_information_sets(graph, GAME.specification)
 
@@ -231,3 +232,9 @@ def test_conflicting_state_information_assertions_fail_closed(graph, resource, s
     graph.add((resource, UOGTO.hasInformationSet, set_id))
     with pytest.raises(UnsupportedExecutableSubset, match="conflicting_information_set_membership"):
         project_information_sets(graph, GAME.specification)
+
+
+def test_specification_may_enumerate_its_information_set(graph):
+    original = project_information_sets(graph, GAME.specification)
+    graph.add((GAME.specification, UOGTO.hasInformationSet, SET))
+    assert project_information_sets(graph, GAME.specification) == original
