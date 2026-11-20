@@ -8,10 +8,10 @@ from pathlib import Path
 import pytest
 
 from uogto.interchange.game_contract import (
+    EXPORT_SCHEMA,
     PROFILE_ID,
     UnsupportedExecutableSubset,
     validate_executable_subset,
-    EXPORT_SCHEMA,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,7 +87,7 @@ def test_unsupported_contracts_fail_closed(path, bad):
     assert exc.value.code in ("unsupported_subset", "invalid_tolerance")
 
 
-@pytest.mark.parametrize("value", [-1, float("nan"), float("inf"), -float("inf"), True, "0", None])
+@pytest.mark.parametrize("value", [-1, float("nan"), float("inf"), -float("inf"), 10**400, True, "0", None])
 def test_invalid_tolerances_fail_without_coercion(value):
     record = valid_record()
     record["game"]["selection_tolerance"] = value
@@ -111,6 +111,25 @@ def test_schema_document_matches_python_validator_contract():
     assert published == EXPORT_SCHEMA
     assert published["$schema"] == "https://json-schema.org/draft/2020-12/schema"
     assert published["properties"]["profile_id"]["const"] == PROFILE_ID
+
+
+@pytest.mark.parametrize(
+    "value",
+    ["../game-one", "//w3id.org/uogto/examples#game-one", "urn:example:game with space", "urn:example:game\n"],
+)
+def test_invalid_absolute_specification_uri_has_a_typed_field_error(value):
+    record = valid_record()
+    record["game"]["specification_iri"] = value
+    with pytest.raises(UnsupportedExecutableSubset) as exc:
+        validate_executable_subset(record)
+    assert exc.value.code == "unsupported_subset"
+    assert exc.value.path == "game.specification_iri"
+
+
+def test_absolute_urn_specification_is_supported():
+    record = valid_record()
+    record["game"]["specification_iri"] = "urn:example:game-one"
+    assert validate_executable_subset(record)["status"] == "profile_declaration_compatible"
 
 
 def test_validator_does_not_mutate_caller_record():

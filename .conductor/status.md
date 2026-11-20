@@ -1,5 +1,13 @@
 # UOGTO Project Status
 
+## 2026-11-20 — Executable declaration validation
+
+The SGC.01 repair candidate explicitly checks absolute specification URIs
+and rejects tolerances outside binary64 range. Its installed wheel imports
+the declaration module and validates the required package closure.
+The candidate passed `make validate` and `make test` on CPython 3.15.2.
+Provider information-set semantics and the consumer receipts remain open.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

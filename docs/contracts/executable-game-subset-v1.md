@@ -8,6 +8,10 @@ The admitted declaration requires a full GameSpecification IRI and exact `GameSp
 
 Optional `strategic_timing` may be `StaticGame` or `DynamicGame` because classification of strategic timing is independent of representation and the *static semantic* notion of offline qualification. A `DynamicGame` declaration does **not** establish a dynamic native execution; it may describe a finite sequential model for offline analysis.
 
+The installed validator checks the specification identifier as an absolute
+RFC 3986 URI using its required URI validator. Relative references, embedded
+spaces, and trailing whitespace fail at `game.specification_iri`.
+
 Source facts: [Paignia's accepted T17 review](https://github.com/edithatogo/paignia/blob/bd880dd756d2ba56cc5f479bc078cea31b53c1d1/docs/validation/t17-review-20261117.md) and [neutral conversion contract](https://github.com/edithatogo/paignia/blob/bd880dd756d2ba56cc5f479bc078cea31b53c1d1/docs/architecture/game-semantic-conversion-v1.md). Source-level declaration admission alone leaves SGC.01's provider graph/consumer qualification obligations open and is not a release claim.
 
 API: `from uogto.interchange import validate_executable_subset`. It raises `UnsupportedExecutableSubset(code, path, detail)` for unsupported input and returns `status=profile_declaration_compatible` with `native_execution_qualified=False` on declaration success. This contract never converts, coerces, fills missing payoffs or calls Rust.

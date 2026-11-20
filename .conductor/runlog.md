@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## 2026-11-20 — SGC.01 absolute identifier repair
+
+- Reproduced the relative-identifier failure on PR #136 head `672cde1`.
+  The minimal environment silently lacked the optional JSON Schema URI check.
+- The validator now uses a declared RFC 3986 dependency and rejects oversized
+  integer tolerances with the structured field error. The wheel smoke test
+  imports the installed interchange module.
+- On CPython 3.15.2 the focused declaration and wheel suite passed 35 tests.
+  Ontology validation passed. The full suite passed 374 tests with one skip.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

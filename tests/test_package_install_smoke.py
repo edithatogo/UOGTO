@@ -39,9 +39,12 @@ def test_isolated_wheel_install_imports_runner_and_playground(tmp_path) -> None:
     checkout = Path(__file__).resolve().parents[1]
     wheel_dir = tmp_path / "wheel"
     wheel_dir.mkdir()
+    build_command = (
+        "from setuptools.build_meta import build_wheel\n"
+        f"build_wheel({str(wheel_dir)!r})\n"
+    )
     subprocess.run(
-        [sys.executable, "-c", "from setuptools.build_meta import build_wheel; "
-         f"build_wheel({str(wheel_dir)!r})"],
+        [sys.executable, "-c", build_command],
         cwd=checkout, check=True, capture_output=True, text=True, timeout=120,
     )
     wheel = next(wheel_dir.glob("uogto-*.whl"))
@@ -74,10 +77,11 @@ def test_isolated_wheel_install_imports_runner_and_playground(tmp_path) -> None:
 import json
 from pathlib import Path
 import uogto
+import uogto.interchange
 import uogto.runner
 import uogto.playground.app
 import rdflib, pyshacl, yaml, jsonschema
-modules = [uogto, uogto.runner, uogto.playground.app]
+modules = [uogto, uogto.interchange, uogto.runner, uogto.playground.app]
 print(json.dumps([str(Path(module.__file__).resolve()) for module in modules]))
 """
     result = subprocess.run(

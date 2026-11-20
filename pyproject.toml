@@ -21,12 +21,15 @@ dependencies = [
     "pyshacl>=0.25.0",
     "pyyaml>=6.0.1",
     "jsonschema>=4.0.0",
+    "rfc3986-validator>=0.1.1",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
     "ruff>=0.3.0",
+    "setuptools>=61.0.0",
+    "wheel",
 ]
 runner = []
 playground = [
