@@ -41,10 +41,8 @@ jobs:
           verified="$(gh api "repos/${{ github.repository }}/git/tags/$remote_oid" --jq '.verification.verified')"
           test "$verified" = true
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
+      - name: Set up repository Python
+        uses: ./.github/actions/project-python
 
       - name: Install dependencies and run release readiness
         run: |

@@ -1,5 +1,28 @@
 # Conductor Run Log
 
+## 2026-11-21 — SGC.01 installed admission and Python 3.15.2 CI
+
+- The isolated wheel admits the shared finite declaration and rejects empty
+  and relative specification URIs. Tolerance tests cover both signs beyond
+  the supported binary64 range.
+- A fresh project-local CPython 3.15.2 environment passed `make all
+  publishing-metadata registry-links` with 376 tests passing and the existing
+  prebuilt arXiv artifact test skipped. The workflow setup probe and
+  `actionlint` passed. `pixi lock --check` accepted both platform resolutions.
+- The hosted validation and manuscript gates retain their checks and select
+  the same repository runtime. The privacy workflow uses the shared locked
+  CPython 3.15.2 scanner. Hosted acceptance for PR #136 remains pending.
+
+## 2026-11-20 — SGC.01 absolute identifier repair
+
+- Reproduced the relative-identifier failure on PR #136 head `672cde1`.
+  The minimal environment silently lacked the optional JSON Schema URI check.
+- The validator now uses a declared RFC 3986 dependency and rejects oversized
+  integer tolerances with the structured field error. The wheel smoke test
+  imports the installed interchange module.
+- On CPython 3.15.2 the focused declaration and wheel suite passed 35 tests.
+  Ontology validation passed. The full suite passed 374 tests with one skip.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

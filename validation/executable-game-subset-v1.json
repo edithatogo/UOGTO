@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/uogto/contracts/executable-game-subset-v1.json",
+  "title": "UOGTO source-to-Paignia finite-game subset declaration v1",
+  "description": "Declaration-level semantic admission only. Does not inspect a graph, verify solver correctness, run Rust, or qualify a native adapter or release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "profile_id",
+    "provider",
+    "game"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.0.0"
+    },
+    "profile_id": {
+      "const": "paignia/static-finite-perfect-information-sparse-zero/1.0.0"
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "revision",
+        "core_package",
+        "solver_package",
+        "package_version"
+      ],
+      "properties": {
+        "repository": {
+          "const": "edithatogo/paignia"
+        },
+        "revision": {
+          "const": "bd880dd756d2ba56cc5f479bc078cea31b53c1d1"
+        },
+        "core_package": {
+          "const": "paignia-core"
+        },
+        "solver_package": {
+          "const": "paignia-solve"
+        },
+        "package_version": {
+          "const": "0.1.0"
+        }
+      }
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "specification_iri",
+        "specification_class",
+        "representation_class",
+        "game_class",
+        "information_structure",
+        "chance_rule",
+        "payoff_rule",
+        "selection_rule",
+        "selection_tolerance",
+        "native_execution_claim"
+      ],
+      "properties": {
+        "specification_iri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "specification_class": {
+          "const": "https://w3id.org/uogto/core#GameSpecification"
+        },
+        "representation_class": {
+          "const": "https://w3id.org/uogto/core#ExtensiveFormRepresentation"
+        },
+        "game_class": {
+          "const": "FiniteAcyclicExtensive"
+        },
+        "information_structure": {
+          "const": "PerfectInformation"
+        },
+        "chance_rule": {
+          "const": "AllowZeroAndValidateEveryBranch"
+        },
+        "payoff_rule": {
+          "const": "IntentionalSparseZero"
+        },
+        "selection_rule": {
+          "const": "InputOrderPairwiseToleranceThenLexicographic"
+        },
+        "selection_tolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "strategic_timing": {
+          "enum": [
+            "StaticGame",
+            "DynamicGame"
+          ]
+        },
+        "native_execution_claim": {
+          "const": false
+        }
+      }
+    }
+  }
+}

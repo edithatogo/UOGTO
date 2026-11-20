@@ -7,13 +7,16 @@ channels = ["conda-forge"]
 platforms = ["win-64", "linux-64"]
 
 [dependencies]
-python = "3.10.*"
+python = "==3.15.2"
 rdflib = ">=7.0.0"
 pyshacl = ">=0.25.0"
 pytest = ">=8.0.0"
 pyyaml = ">=6.0.1"
 jsonschema = ">=4.0.0"
-ruff = ">=0.3.0"
+rfc3986-validator = ">=0.1.1"
+setuptools = ">=61.0.0"
+wheel = "*"
+ruff = ">=0.17.6"
 textstat = ">=0.7.13,<0.8"
 
 [tasks]

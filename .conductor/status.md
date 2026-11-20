@@ -1,5 +1,21 @@
 # UOGTO Project Status
 
+## 2026-11-21 — SGC.01 runtime qualification candidate
+
+The packaged v1 declaration admits an absolute specification URI and rejects
+relative and empty URIs. The repository-local CPython 3.15.2 environment passed
+the ontology, test, coverage, publishing-metadata and registry link checks.
+Linux and Windows Pixi locks resolve the same Python patch. Hosted gates and
+the information-set profile remain open.
+
+## 2026-11-20 — Executable declaration validation
+
+The SGC.01 repair candidate explicitly checks absolute specification URIs
+and rejects tolerances outside binary64 range. Its installed wheel imports
+the declaration module and validates the required package closure.
+The candidate passed `make validate` and `make test` on CPython 3.15.2.
+Provider information-set semantics and the consumer receipts remain open.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

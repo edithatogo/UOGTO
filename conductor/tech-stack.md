@@ -1,6 +1,6 @@
 # Technology Stack: UOGTO
 
-- **Language**: Python 3.10+
+- **Language**: CPython 3.15.2
 - **Package & Environment Manager**: Pixi
 - **Graph Framework**: rdflib
 - **Validation**: pyshacl
@@ -12,9 +12,9 @@
 
 ## Boundaries and optional integrations
 
-- The default semantic package retains Python 3.10+ compatibility. External adapters
-  may need newer interpreters; test their supported versions in separate optional
-  jobs and pin the actual library revisions used.
+- The semantic package, repository tooling and hosted validation use the
+  project-local interpreter at the patch release in `.python-version`. The
+  locked Linux and Windows Pixi environment uses the same release.
 - Paignia is the Rust provider for representations, strategic algorithms and solver
   diagnostics. Its versioned interchange must preserve full UOGTO IRIs and fixture
   identity. No Paignia package qualification is implied by the bootstrap README.
