@@ -1,5 +1,13 @@
 # UOGTO Project Status
 
+## 2026-11-21 — SGC.01 executable information-set handoff
+
+The scoped RDF profile and installed wheel preserve full identifiers and
+declare the selected game's root, typed state inventory and decision groups.
+Rust 1.75.0 admits the positive partition in `paignia-core` at `d4047c0` and
+rejects all four contrasting native controls. SGC.02–SGC.06 and SGC.08 remain
+open. [Profile and verification](../docs/contracts/executable-information-set-profile-v1.md)
+
 ## 2026-11-21 — SGC.01 runtime qualification candidate
 
 The packaged v1 declaration admits an absolute specification URI and rejects

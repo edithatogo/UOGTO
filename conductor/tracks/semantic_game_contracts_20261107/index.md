@@ -1,6 +1,6 @@
 # Versioned semantic contracts for Paignia
 
-Status: in progress; SGC.07 reference-tool labels implemented; seven leaves pending.
+Status: in progress. SGC.01 and SGC.07 are implemented. Six leaves remain pending.
 
 - [Specification](./spec.md)
 - [Implementation plan](./plan.md)
@@ -26,7 +26,6 @@ receipt scopes. UOGTO retains ontology, profile and conformance ownership.
 - [Owner-scoped roadmap and acceptance cases](strategic-information-integration.md).
   Planning only; existing implementation statuses, pins and release gates remain unchanged.
 
-The November reconciliation implements SGC.07 with tested reference-origin labels.
-The remaining seven leaves and both SGC.08 receipt scopes remain pending. Static
-semantic acceptance denotes offline interchange, independently of whether the
-model is a `StaticGame` or a `DynamicGame`.
+SGC.01 includes the [tested information-set profile](../../../docs/contracts/executable-information-set-profile-v1.md).
+Both SGC.08 receipt scopes remain pending. Static semantic acceptance denotes
+offline interchange for either strategic timing class.
