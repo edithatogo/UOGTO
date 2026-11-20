@@ -1,0 +1,23 @@
+UOGTO PR128 INDEPENDENT SYNTHETIC RED RECEIPT — 2026-11-20 Australia/Brisbane
+Environment: CPython 3.13.5, rdflib 7.5.0; no PySHACL available.
+Command (from isolated review worktree, querying exact recovered Git source bytes):
+python conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py --query-root competency-questions --expect-original-head
+Exit status: 1 (INTENTIONALLY RED, three costing semantic counterexamples).
+Remote Python reproducer Git blob: d6855f85ef26ebcae88af46eacccb4e2d929e780
+python -m py_compile conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py: exit 0
+
+CQ21 Git blob: 4fbdeb27546d3e78e384b85571b1962825f57574
+CQ23 Git blob: 1028141d5c3677eaeb5a94fff7b21771b16630f2
+PASS CQ21 baseline: actual=[(Decimal('100.00'), 2)]; expected=[(Decimal('100'), 2)]
+PASS CQ23 baseline: actual={'infant-a': Decimal('60.00'), 'infant-b': Decimal('90.00')}; expected={'infant-a': Decimal('60'), 'infant-b': Decimal('90')}
+FAIL CQ21 zero allocation: actual=[(None, None)]; expected=[(Decimal('0'), 0)]
+FAIL CQ23 direct scenario isolation: actual=Decimal('67.00'); expected=Decimal('60')
+FAIL CQ23 pooled scenario isolation: actual={'infant-a': Decimal('120.00'), 'infant-b': Decimal('150.00')}; expected={'infant-a': Decimal('60'), 'infant-b': Decimal('90')}
+Summary: 2/5 semantic checks passed; 3 failed
+
+Independent prior pinned suite re-run (unchanged old query bytes):
+python -m pytest -q test_pr128_queries.py --tb=short --disable-warnings
+Exit status 1: 8 passed, 3 failed, 597 warnings, 0.45s.
+The prior broader suite is preserved in conversation evidence; it was not pushed into the repository.
+The compact alternative-pool fixture is a SPARQL diagnostic only, NOT a valid complete SHACL case.
+No combined main+PR128 tree has been built or validated; no empirical/source-rights claim.
