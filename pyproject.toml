@@ -23,6 +23,7 @@ dependencies = [
     "pyyaml>=6.0.1",
     "jsonschema>=4.0.0",
     "rfc3986-validator>=0.1.1",
+    "rfc3987-syntax==1.1.0",
 ]
 
 [project.optional-dependencies]
@@ -46,6 +47,9 @@ uogto-runner-bench = "uogto.runner.llm_player:main"
 
 [tool.setuptools]
 include-package-data = true
+
+[tool.setuptools.package-data]
+"uogto.interchange" = ["information-set-profile-v1.ttl"]
 
 [tool.setuptools.packages.find]
 include = ["uogto*"]
