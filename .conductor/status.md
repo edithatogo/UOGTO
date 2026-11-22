@@ -1,5 +1,20 @@
 # UOGTO Project Status
 
+## 2026-11-22 — Executed tutorial declaration reuse
+
+The `finite-perfect-information` intake now records the synthetic tutorial
+coordination case at consumer revision
+`3851a2346c8e9cc457c7bfee67848be13fc8ca46`, with existing full-IRI terms, exact
+provider/validator pins, source hashes and separate semantic/native observations.
+Its semantic disposition is `reuse_existing`; no new class or solver is implied.
+The UOGTO declaration check accepts the supported profile and rejects unsupported
+execution/information claims. Full RDF mapping and SGC acceptance remain open.
+
+`make validate` now passes locally under CPython 3.15.2 with the tutorial's
+locked UOGTO dependency set. The 25 relative links and three recorded consumer
+hashes also pass. Ontology, SHACL, runtime and existing protected holds are
+unchanged; this does not convert tutorial startup failures into hosted passes.
+
 ## 2026-11-22 — Application and partner scope clarification
 
 The intake contract now names exactly `nhra_game`, `gtpcnz`,

@@ -101,3 +101,14 @@ The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as 
 This project is dual-licensed:
 - **Ontology and Documentation**: Creative Commons Attribution 4.0 International (CC-BY-4.0). See [LICENSE](LICENSE).
 - **Code and Tooling**: MIT License. See [LICENSE-CODE](LICENSE-CODE).
+
+## Development
+
+Use the [Quickstart](#quickstart) environment and follow the
+[contribution guide](CONTRIBUTING.md) for ontology changes, local validation
+and pull requests.
+
+## Security
+
+Follow the [security policy](SECURITY.md) to report vulnerabilities
+privately. Keep credentials and sensitive data out of public issues and pull requests.
