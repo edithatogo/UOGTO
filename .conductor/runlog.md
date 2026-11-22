@@ -1,5 +1,25 @@
 # Conductor Run Log
 
+## 2026-11-22 — Application and partner scope clarification
+
+- Applied the maintainer's exact six-application scope to the existing intake
+  contract; preserved the eight semantic keys and pending mapping work.
+- Distinguished Innovate's innovation capabilities and gradual, parity-qualified
+  generic-game migration from optional Kairos/Voiage/Dapane provider composition.
+  Voiage retains VoP/VoH and the `vop_poc_nz` demo. `archive-govt-nz` remains
+  archive-only material and Hugging Face registry context.
+- Removed the VoP design proposal from direct Paignia game-transfer leads and
+  separated existing pinned Innovate/Voiage evidence from application leads.
+  Cross-cutting UOGTO semantics do not transfer a provider's numerical ownership.
+- Updated agent/contribution guidance and the existing SGC policy increment.
+  No ontology, runtime, dependency, acceptance status or protected hold changed.
+- The four existing contribution-setup checks passed by direct `runpy`
+  invocation; all 25 local Markdown link targets in the six policy/navigation
+  files resolved; `git diff --check` passed. No supported-runtime or semantic
+  validation pass is added to the earlier environment record.
+- Preserved the original uncommitted working tree and empty staging area.
+  This follow-up made no remote calls or writes; the parent lane owns the PR update.
+
 ## 2026-11-22 — Downstream-game evolution policy
 
 - Base: `0050e19faec2abaa05e5d474e5eed0150bcbf073`; branch

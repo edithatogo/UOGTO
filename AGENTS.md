@@ -24,6 +24,9 @@ in Paignia's implementation register; return reusable games, mechanics and
 algorithms there and consume relevant upstream capabilities through their
 contracts. Preserve full IRIs, exact profile/provider revisions and per-asset
 provenance. Application-specific data and payoff assumptions stay downstream.
+The contract names the six current applications and capability-specific library
+partners. Preserve Innovate's gradual parity-qualified migration and Voiage's
+VoP/VoH ownership; compose upstream providers optionally without dependency cycles.
 An intake record does not replace existing SGC conformance or consumer evidence.
 
 ## Validation Requirements

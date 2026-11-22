@@ -11,8 +11,38 @@ Paignia owns the reusable Rust representations, game families, rules, solution
 methods and diagnostics. Its [implementation intake](https://github.com/edithatogo/paignia/blob/main/docs/integrations/downstream-game-intake.md)
 uses the same intake keys below and links back here for semantic dispositions.
 Applications retain institution-specific assumptions, empirical data and payoff
-construction. Relevant upstream repositories provide their own capabilities
-through explicit contracts rather than copied parallel implementations.
+construction. The repository roles below determine which library owns each
+capability and how optional composition remains acyclic.
+
+## Current application scope and library partners
+
+The maintainer-defined downstream application set is exactly
+[nhra_game](https://github.com/edithatogo/nhra_game),
+[gtpcnz](https://github.com/edithatogo/gtpcnz),
+[new-drug-reimbursement-game](https://github.com/edithatogo/new-drug-reimbursement-game),
+[ginsim](https://github.com/edithatogo/ginsim),
+[tobac](https://github.com/edithatogo/tobac) and
+[tutorial_health_gt](https://github.com/edithatogo/tutorial_health_gt).
+Their game changes enter this semantic ledger and Paignia's implementation
+intake. Inclusion identifies ownership and intended integration; each actual
+game still needs its own mapping, supported profile and consumer evidence.
+
+| Repository or capability | Ownership and integration contract |
+| --- | --- |
+| [Innovate](https://github.com/edithatogo/innovate) | A parallel innovation library with capability-specific boundaries. Innovation diffusion, adoption, substitution and domain behaviour stay there. Migrate mature generic game algorithms to Paignia method by method after numerical/behavioural parity and caller compatibility are demonstrated; retain the working implementation until the replacement is qualified. Its optional Paignia adapter is a library integration, not membership of the six-application set. |
+| [Kairos](https://github.com/edithatogo/kairos) | Reusable time, scheduling, state, RNG and replay provider, composed through the optional game-execution adapter. Static game solving does not acquire a mandatory simulation dependency. |
+| [Voiage](https://github.com/edithatogo/voiage) | Owns value-of-information, value-of-perspective (VoP) and value-of-heterogeneity (VoH) methods and estimands. Compose through explicit outcomes/strategy contracts. A genuinely shared game foundation may be supplied by Paignia after its specific need and parity are established; that does not move the information-value methods into Paignia. |
+| [Dapane](https://github.com/edithatogo/dapane) | Reusable costing and valuation provider. Compose through explicit optional adapters and declared valuation-to-utility mappings; monetary costs or transfers do not automatically become game payoffs. |
+| [vop_poc_nz](https://github.com/edithatogo/vop_poc_nz) | Its demonstration belongs with Voiage's VoP/VoH work. It is not a direct Paignia application or a generic-game transfer obligation. Route a separate shared-game need through the appropriate intake key only if such a need is demonstrated. |
+| [archive-govt-nz](https://github.com/edithatogo/archive-govt-nz) | Archive-only material and Hugging Face registry context. It is not a runtime provider or a direct Paignia application. Preserve archive/source provenance independently of numerical-library ownership. |
+
+Optional composition may use versioned data contracts or adapters that depend
+on the selected providers. Keep the dependency graph acyclic: an application
+or adapter can consume several libraries, but Paignia's core must not import
+an application or create a reverse dependency on a library that consumes it.
+Record dependencies per capability rather than imposing one total repository
+hierarchy. UOGTO continues to describe relevant cross-cutting semantics without
+taking ownership of any provider's numerical method.
 
 ## Development workflow
 
@@ -29,12 +59,14 @@ through explicit contracts rather than copied parallel implementations.
    definitions, SHACL constraints, JSON-LD context and example/query coverage.
    Pending concepts remain explicit; applications must not invent canonical
    UOGTO IRIs or treat similar labels as equivalent terms.
-3. **Return reusable implementation to Paignia.** Link the same key and UOGTO
-   change from the provider intake. New reusable games/mechanics and shared
-   algorithms belong in Paignia; the application consumes the supported
-   provider contract. Assess relevant existing upstream capabilities before
-   writing a substitute. Preserve source revision, licence and attribution for
-   any transferred fixture or code.
+3. **Return reusable game implementation to Paignia.** Link the same key and
+   UOGTO change from the provider intake. New reusable games/mechanics and
+   generic game algorithms belong in Paignia; application data, innovation
+   models and information-value methods retain the owners above. Assess
+   relevant upstream capabilities before writing a substitute. Existing
+   generic game methods migrate after parity and consumer qualification, not
+   merely because they appear in a partner library. Preserve source revision,
+   licence and attribution for any transferred fixture or code.
 4. **Bind the actual versions and tests.** A mapping identifies the UOGTO
    revision, full term IRIs, profile/version, source/example paths and fixture
    hashes; its provider link identifies the Paignia revision/packages and
@@ -73,7 +105,7 @@ row does not assert that all requested rules are already represented or solved.
 | `evolutionary-population` | Population-strategy dynamics and replicator methods. | [Evolutionary games](../../ontologies/extensions/evolutionary-games.ttl): `EvolutionaryGame`, `ReplicatorDynamic`. | **mapping_review_pending**. Map population state, time, payoff-to-fitness assumptions and trajectory meaning; numerical integration evidence stays with Paignia. |
 | `leader-follower-commitment` | Commitment and follower-response games, including bounded Stackelberg requests. | `GameSpecification`, `ExtensiveFormRepresentation`, strategy/action and observation concepts. | **mapping_review_pending**. Specify commitment visibility, response order, tie treatment and solution concept. The narrower `StackelbergSecurityGame` term must not be assigned to unrelated applications by name alone. |
 | `repeated-bargaining` | Repeated or alternating-offer bargaining, including a proposed reusable Rubinstein case. | [Bargaining module](../../ontologies/extensions/bargaining.ttl): `BargainingGame`, `BargainingProtocol`; strategic timing remains separate from representation. | **mapping_review_pending**. Map the horizon, offer protocol, discounting, disagreement outcome and information. Do not identify an alternating-offer game with a cooperative bargaining allocation solely because both concern bargaining. |
-| `cooperative-attribution` | Coalition values and contribution attribution, including information-source portfolio requests. | [Cooperative module](../../ontologies/extensions/cooperative.ttl): `CooperativeGame`, `ShapleyValue`. | **mapping_review_pending**. Declare players, coalition value function, baseline and allocation interpretation. Attribution is not automatically a strategic equilibrium or an executable game receipt. |
+| `cooperative-attribution` | Coalition values and contribution attribution where a shared game foundation is needed; Voiage retains information-source and VoP/VoH methods. | [Cooperative module](../../ontologies/extensions/cooperative.ttl): `CooperativeGame`, `ShapleyValue`. | **mapping_review_pending**. Declare players, coalition value function, baseline and allocation interpretation. Establish the generic-game need separately from the Voiage estimand; no direct transfer is inferred from a demo or archive. Attribution is not automatically a strategic equilibrium or an executable game receipt. |
 | `strategic-information` | Screening, signalling, enforcement, disclosure and strategic value-of-information requests. | `InformationSet`, `Signal`, `Belief`; [information design](../../ontologies/extensions/information-design.ttl) and [epistemic games](../../ontologies/extensions/epistemic-games.ttl). | **mapping_review_pending**. Record who observes what and when, incentive/payoff ownership, information leakage negatives and the requested solution criterion; reuse the [existing strategic-information plan](../../conductor/tracks/semantic_game_contracts_20261107/strategic-information-integration.md). |
 
 For every added or updated application case, append its source revision and
@@ -82,20 +114,24 @@ change, Paignia implementation disposition and downstream consumer change in
 both directions. An intake entry may remain pending while development proceeds,
 but it must not be reported as integrated semantic support.
 
-### Originating application leads
+### Application and partner evidence
 
 These immutable source links seed the pending reviews; they do not replace
-the full-IRI mappings and synthetic conformance examples still required.
+the full-IRI mappings and synthetic conformance examples still required. The
+application leads are a starting sample within the exact six-repository scope.
 
 - `two-player-normal-form`: [NHRA's QRE implementation](https://github.com/edithatogo/nhra_game/blob/3fe4aaa08521d103ddffbedd58eaa9d7d5256a55/src/nhra_gt/solvers_jax.py),
-  [GTPCNZ's pedagogical best response](https://github.com/edithatogo/gtpcnz/blob/4cae5a2f5ebeddd8e86de4263de55caf13c6ef1a/models/primarycare_model/engines/nash_opt_adapter.py)
-  and [Innovate's provider adapter](https://github.com/edithatogo/innovate/blob/a79a58d1be51a1c8d4968fd9a535d8b7e5992666/rust/crates/innovate-games/src/lib.rs).
+  and [GTPCNZ's pedagogical best response](https://github.com/edithatogo/gtpcnz/blob/4cae5a2f5ebeddd8e86de4263de55caf13c6ef1a/models/primarycare_model/engines/nash_opt_adapter.py).
 - `repeated-bargaining` and `leader-follower-commitment`:
   [NHRA's sequential methods](https://github.com/edithatogo/nhra_game/blob/3fe4aaa08521d103ddffbedd58eaa9d7d5256a55/src/nhra_gt/subgames/sequential.py).
 - `strategic-information` and applicable commitment/information-set concerns:
-  [GINSIM's extended models](https://github.com/edithatogo/ginsim/blob/26548c26352dcb571acfc44816cf702a52543fe0/src/model/extended_games.py)
-  and [Voiage's strategic behaviour](https://github.com/edithatogo/voiage/blob/11a2bc8685f71c2ff351def742d439c28373cd46/voiage/methods/strategic_behavior.py).
-- `cooperative-attribution`: [the value-of-perspective design proposal](https://github.com/edithatogo/vop_poc_nz/blob/7778459f1798e3b6631a285b292a3153ee233333/docs/method/COMPONENT_ATTRIBUTION_DESIGN.md).
+  [GINSIM's extended models](https://github.com/edithatogo/ginsim/blob/26548c26352dcb571acfc44816cf702a52543fe0/src/model/extended_games.py).
+
+Partner evidence is separate: [Innovate's provider adapter](https://github.com/edithatogo/innovate/blob/a79a58d1be51a1c8d4968fd9a535d8b7e5992666/rust/crates/innovate-games/src/lib.rs)
+is a bounded integration starting point, and [Voiage's strategic behaviour](https://github.com/edithatogo/voiage/blob/11a2bc8685f71c2ff351def742d439c28373cd46/voiage/methods/strategic_behavior.py)
+can inform shared semantic review. Neither source transfers an entire partner
+library's responsibilities. VoP/VoH demo and archive provenance remain with
+their respective owners described above.
 
 ## Validation and evidence boundaries
 

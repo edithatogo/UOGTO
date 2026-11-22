@@ -1,5 +1,20 @@
 # UOGTO Project Status
 
+## 2026-11-22 — Application and partner scope clarification
+
+The intake contract now names exactly `nhra_game`, `gtpcnz`,
+`new-drug-reimbursement-game`, `ginsim`, `tobac` and `tutorial_health_gt` as the
+current downstream applications. Innovate remains a parallel innovation
+library; generic game methods migrate gradually after parity. Kairos, Voiage
+and Dapane retain their reusable capabilities through optional, acyclic
+composition. Voiage owns VoP/VoH and their demo; archive/registry material is
+not a direct Paignia application or transfer requirement.
+
+This maintainer clarification changes documentation only. Four existing
+contribution checks, 25 local link targets and `git diff --check` passed.
+The previously recorded semantic-validation environment limitation and all
+SGC/provider acceptance scopes remain unchanged.
+
 ## 2026-11-22 — Downstream-game evolution policy
 
 The [canonical semantic intake](../docs/contracts/downstream-game-intake.md)

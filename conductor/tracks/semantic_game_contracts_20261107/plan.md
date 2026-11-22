@@ -167,6 +167,11 @@ retain `uogto-game-*` in historical receipts.
   linked from agent, contribution and PR guidance. Every new/changed downstream
   game has a UOGTO mapping/example disposition and a linked Paignia reuse or
   implementation decision, including cases that reuse existing vocabulary.
+- Clarified the current six-application scope and partner boundaries: Innovate
+  retains innovation capabilities while generic game methods migrate after
+  parity; Voiage retains VoP/VoH and their demo; Kairos/Voiage/Dapane compose
+  optionally without dependency cycles. Archive/registry material creates no
+  generic-game transfer obligation.
 - The register uses shared stable intake keys and exact existing profile pins.
   It introduces no ontology terms, executable profile, runtime dependency or
   additional acceptance system. The eight SGC leaf IDs and their existing

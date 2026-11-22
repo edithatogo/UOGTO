@@ -45,6 +45,10 @@ implementation and the originating application. Paignia owns shared game rules
 and solvers; relevant upstream providers retain their own capabilities, and the
 application retains its domain assumptions and data. Keep semantic, numerical
 and consumer-execution evidence distinct under the existing SGC track.
+The canonical contract names the six current downstream applications. Innovate
+remains a parallel innovation library with gradual, parity-qualified generic
+game migration; Voiage owns VoP/VoH and their demo. Kairos, Voiage and Dapane
+compose as optional providers through explicit contracts without dependency cycles.
 
 ## Pull Request Workflow
 
