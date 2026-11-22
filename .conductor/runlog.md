@@ -1,5 +1,31 @@
 # Conductor Run Log
 
+## 2026-11-22 — Downstream-game evolution policy
+
+- Base: `0050e19faec2abaa05e5d474e5eed0150bcbf073`; branch
+  `codex/game-evolution-contract-20261122`.
+- Added the canonical downstream semantic-intake contract and eight stable
+  keys, linked to Paignia's implementation register and existing SGC work.
+  Reuse requires a recorded UOGTO mapping/example update; vocabulary extension
+  requires a demonstrated gap. Domain assumptions stay with applications.
+- Linked agent, contribution and PR guidance; recorded the bounded policy
+  increment in the existing SGC index/plan. Reconciled metadata's SGC.01 count
+  against the already recorded declaration and information-set profile evidence.
+  No ontology, shape, executable schema, dependency, workflow or runtime changed.
+- Verification on available CPython 3.12.14: all four existing functions in
+  `tests/test_repo_contribution_setup.py` passed by direct invocation through
+  `runpy` (not a pytest run). All 25 local Markdown targets in the six policy
+  and SGC navigation files resolved. The SGC metadata parsed, retained eight
+  implementation leaves and both pending consumer scopes, and reconciled to
+  two completed leaves. `git diff --check` passed.
+- Required-target attempt: `make validate PYTHON=python` exited 2 because
+  `rdflib` is absent. PySHACL and pytest are also unavailable here. No semantic
+  validation, supported-runtime test or hosted-CI pass is claimed; the repository
+  continues to require CPython 3.15.2 and its normal integration gates.
+- SGC.02–SGC.06, SGC.08, independent numerical/provider qualification, PR #128
+  costing work and issue #134 source recovery retain their existing scope.
+  Remote publication and admission remain with the parent implementation lane.
+
 ## 2026-11-21 — SGC.01 information-set profile and native witness
 
 - The source controls first failed with the projection unimplemented.

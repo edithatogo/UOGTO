@@ -161,6 +161,20 @@ retain `uogto-game-*` in historical receipts.
 
 ## Completion evidence
 
+### Downstream-game policy increment — 22 November 2026
+
+- Implemented the [canonical intake contract and initial semantic register](../../../docs/contracts/downstream-game-intake.md),
+  linked from agent, contribution and PR guidance. Every new/changed downstream
+  game has a UOGTO mapping/example disposition and a linked Paignia reuse or
+  implementation decision, including cases that reuse existing vocabulary.
+- The register uses shared stable intake keys and exact existing profile pins.
+  It introduces no ontology terms, executable profile, runtime dependency or
+  additional acceptance system. The eight SGC leaf IDs and their existing
+  unfinished work remain unchanged.
+- Verification for this documentation increment is recorded in
+  [the run log](../../../.conductor/runlog.md). It is separate from the semantic
+  implementation evidence below and does not close either SGC.08 scope.
+
 SGC.01 qualifies the bounded declaration and information-set profiles.
 SGC.07 records the supported reference origin. Six leaves remain pending.
 Future completion records

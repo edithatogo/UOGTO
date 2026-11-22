@@ -1,5 +1,21 @@
 # UOGTO Project Status
 
+## 2026-11-22 — Downstream-game evolution policy
+
+The [canonical semantic intake](../docs/contracts/downstream-game-intake.md)
+requires a UOGTO mapping/example update for every new or changed downstream
+game and links reusable implementation to Paignia through shared intake keys.
+Two initial rows reuse existing bounded profiles; six require mapping review.
+Agent, contribution and PR guidance now carry this development contract.
+
+The SGC metadata now agrees with the existing index/plan: SGC.01 and SGC.07
+are implemented, with six leaves and both consumer acceptance scopes pending.
+This reconciles the recorded November profile evidence; no ontology or runtime
+behaviour changed. Four existing contribution checks and 25 local Markdown
+link targets passed. `make validate PYTHON=python` could not run because the
+available Python 3.12.14 environment lacks RDFLib; the declared repository
+runtime remains CPython 3.15.2. See the run log for the exact scope and limits.
+
 ## 2026-11-21 — SGC.01 executable information-set handoff
 
 The scoped RDF profile and installed wheel preserve full identifiers and
