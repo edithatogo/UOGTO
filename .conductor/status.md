@@ -1,5 +1,36 @@
 # UOGTO Project Status
 
+## 2026-11-22 — Application and partner scope clarification
+
+The intake contract now names exactly `nhra_game`, `gtpcnz`,
+`new-drug-reimbursement-game`, `ginsim`, `tobac` and `tutorial_health_gt` as the
+current downstream applications. Innovate remains a parallel innovation
+library; generic game methods migrate gradually after parity. Kairos, Voiage
+and Dapane retain their reusable capabilities through optional, acyclic
+composition. Voiage owns VoP/VoH and their demo; archive/registry material is
+not a direct Paignia application or transfer requirement.
+
+This maintainer clarification changes documentation only. Four existing
+contribution checks, 25 local link targets and `git diff --check` passed.
+The previously recorded semantic-validation environment limitation and all
+SGC/provider acceptance scopes remain unchanged.
+
+## 2026-11-22 — Downstream-game evolution policy
+
+The [canonical semantic intake](../docs/contracts/downstream-game-intake.md)
+requires a UOGTO mapping/example update for every new or changed downstream
+game and links reusable implementation to Paignia through shared intake keys.
+Two initial rows reuse existing bounded profiles; six require mapping review.
+Agent, contribution and PR guidance now carry this development contract.
+
+The SGC metadata now agrees with the existing index/plan: SGC.01 and SGC.07
+are implemented, with six leaves and both consumer acceptance scopes pending.
+This reconciles the recorded November profile evidence; no ontology or runtime
+behaviour changed. Four existing contribution checks and 25 local Markdown
+link targets passed. `make validate PYTHON=python` could not run because the
+available Python 3.12.14 environment lacks RDFLib; the declared repository
+runtime remains CPython 3.15.2. See the run log for the exact scope and limits.
+
 ## 2026-11-21 — SGC.01 executable information-set handoff
 
 The scoped RDF profile and installed wheel preserve full identifiers and
