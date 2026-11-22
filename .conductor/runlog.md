@@ -1,5 +1,21 @@
 # Conductor Run Log
 
+## 2026-11-22 — Executed tutorial reuse evidence
+
+- Added the bounded coordination example/mapping note under the existing
+  `finite-perfect-information` key, paired with Paignia's implementation note.
+  Recorded the private consumer's immutable revision, declaration hash and
+  existing full-IRI terms; copied no private source or empirical data.
+- Reused the tutorial's locked CPython 3.15.2 UOGTO dependency set in a local
+  validation environment. `make validate` passed all repository parsing,
+  SHACL example and competency-expectation checks.
+- Verified 25 relative links across the paired intake notes/plan and three
+  consumer file hashes. No ontology/runtime dependency or acceptance ledger was
+  changed. Native tutorial results and declaration validation remain distinct.
+- Full RDF mapping, public provider-fixture admission and SGC consumer
+  qualification remain open. Hosted tutorial jobs contain no executed steps;
+  neither their security scan nor lesson workflow is reported as passing.
+
 ## 2026-11-22 — Application and partner scope clarification
 
 - Applied the maintainer's exact six-application scope to the existing intake

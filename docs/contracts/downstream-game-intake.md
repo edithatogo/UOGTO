@@ -133,6 +133,45 @@ can inform shared semantic review. Neither source transfers an entire partner
 library's responsibilities. VoP/VoH demo and archive provenance remain with
 their respective owners described above.
 
+### Recorded consumer case: tutorial coordination, edition 0.2
+
+Shared intake key: `finite-perfect-information`; case identity:
+`urn:tutorial-health-gt:coordination:v1`. Semantic disposition: **reuse_existing**
+for the bounded declaration below. This is a synthetic teaching case, with no
+empirical health or financial data and no new ontology term.
+
+The commissioner chooses `no-offer` or `offer`; after an offer, the provider
+observes that choice and chooses `participate` or `decline`. Complete terminal
+utilities, ordered as commissioner/provider, are `(1, 1)`, `(3, 2)` and `(0, 0)`
+respectively. Utilities are invented, dimensionless preferences; they are not
+costs, transfers or health outcomes.
+
+| Declaration concern | Existing semantic reference |
+| --- | --- |
+| Specification | `https://w3id.org/uogto/core#GameSpecification` |
+| Representation | `https://w3id.org/uogto/core#ExtensiveFormRepresentation` |
+| Observations | `https://w3id.org/uogto/core#PerfectInformation` |
+| Sequential strategic timing | `https://w3id.org/uogto/core#DynamicGame`; this does not assert native dynamic execution. |
+
+The [consumer declaration](https://github.com/edithatogo/tutorial_health_gt/blob/3851a2346c8e9cc457c7bfee67848be13fc8ca46/examples/finite-coordination/declaration.json)
+has SHA-256 `08fe41af4158af49908e61c82d73511a1dabb7bc1f5a4e4f1a1dc2f97e919fab`.
+The repository is private; readers need access to inspect its source. Its
+[locked check](https://github.com/edithatogo/tutorial_health_gt/blob/3851a2346c8e9cc457c7bfee67848be13fc8ca46/examples/finite-coordination/check_declaration.py)
+ran with UOGTO `0050e19faec2abaa05e5d474e5eed0150bcbf073` and returned
+`profile_declaration_compatible`, with `native_execution_qualified=false`.
+Contrasting declarations requesting native execution or imperfect information
+were rejected. The provider profile is
+`paignia/static-finite-perfect-information-sparse-zero/1.0.0`, pinned to
+Paignia `bd880dd756d2ba56cc5f479bc078cea31b53c1d1`.
+
+The [paired Paignia case](https://github.com/edithatogo/paignia/blob/main/docs/integrations/downstream-game-intake.md#recorded-consumer-case-tutorial-coordination-edition-02)
+records the separate native execution and invalid-graph checks. This note is
+the example/mapping update for reuse of the declaration profile. A complete RDF
+instance graph, general round-trip mapping and SGC consumer acceptance remain
+pending; the declaration validator does not inspect the native graph. The
+tutorial's hosted jobs failed before execution, so this records local evidence
+only and closes no SGC obligation.
+
 ## Validation and evidence boundaries
 
 Run the existing relevant semantic, SHACL, fixture and competency tests for the
