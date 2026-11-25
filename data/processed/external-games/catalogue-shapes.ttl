@@ -1,0 +1,33 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uogto:external-game-catalogue-entry> a sh:NodeShape ;
+    sh:targetSubjectsOf dct:isPartOf ;
+    sh:nodeKind sh:IRI ;
+    sh:property [ sh:path dct:isPartOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class dcat:Dataset ] ;
+    sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path dct:format ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( "EFG" "NFG" "GAMUT" "OpenSpiel C++" "OpenSpiel Python" "OpenSpiel transform" ) ] ;
+    sh:property [ sh:path dct:subject ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path ( prov:wasDerivedFrom spdx:checksum ) ;
+                  sh:minCount 1 ; sh:maxCount 1 ; sh:class spdx:Checksum ] .
+
+<urn:uogto:external-game-source-checksum> a sh:NodeShape ;
+    sh:targetClass spdx:Checksum ;
+    sh:property [ sh:path spdx:algorithm ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:hasValue spdx:checksumAlgorithm_sha256 ] ;
+    sh:property [ sh:path spdx:checksumValue ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:string ; sh:pattern "^[0-9a-f]{64}$" ] .
+
+<urn:uogto:external-game-catalogue-release> a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [ sh:path dcat:version ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path dcat:downloadURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path spdx:checksum ; sh:minCount 1 ; sh:maxCount 1 ; sh:class spdx:Checksum ] .

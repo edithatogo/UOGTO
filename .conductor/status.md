@@ -1,5 +1,13 @@
 # UOGTO Project Status
 
+## 2026-11-25 — External game catalogues
+
+The versioned [catalogue](../docs/contracts/external-game-catalogues-v1.md)
+indexes all 38 bundled Gambit models, 35 Gambit GAMUT classes and 146
+OpenSpiel 2.0.2 source registrations. The JSON-LD dataset links exact
+source hashes and existing semantic classes. Executable admission is a
+separate game and method claim.
+
 ## 2026-11-22 — Executed tutorial declaration reuse
 
 The `finite-perfect-information` intake now records the synthetic tutorial

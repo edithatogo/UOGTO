@@ -1,5 +1,15 @@
 # Conductor Run Log
 
+## 2026-11-25 — External game catalogue qualification
+
+- Verified the frozen Gambit and OpenSpiel downloads. Reproduced the catalogue
+  from their model files and source registrations.
+- Reconciled the 123 registered identifiers in the T21 OpenSpiel binary with
+  the 126 C++ source registrations. Included the three optional C++ games
+  and 20 separate Python registrations.
+- The catalogue SHACL and SPARQL tests, repository validation and test suite
+  passed with Python 3.15.2.
+
 ## 2026-11-22 — Executed tutorial reuse evidence
 
 - Added the bounded coordination example/mapping note under the existing

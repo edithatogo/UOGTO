@@ -1,0 +1,4461 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "uogto": "https://w3id.org/uogto/core#",
+    "uogtox": "https://w3id.org/uogto/extensions#",
+    "identifier": "dct:identifier",
+    "label": "rdfs:label",
+    "format": "dct:format",
+    "version": "dcat:version",
+    "catalogue": {
+      "@id": "dct:isPartOf",
+      "@type": "@id"
+    },
+    "subject": {
+      "@id": "dct:subject",
+      "@type": "@id"
+    },
+    "source": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "download": {
+      "@id": "dcat:downloadURL",
+      "@type": "@id"
+    },
+    "checksum": {
+      "@id": "spdx:checksum",
+      "@type": "@id"
+    },
+    "algorithm": {
+      "@id": "spdx:algorithm",
+      "@type": "@id"
+    },
+    "checksumValue": "spdx:checksumValue"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "@type": "dcat:Dataset",
+      "label": "Gambit packaged model catalogue",
+      "version": "16.7.0",
+      "download": "https://github.com/gambitproject/gambit/releases/download/v16.7.0/gambit-16.7.0.tar.gz",
+      "checksum": {
+        "@id": "urn:sha256:35a2d7df4f8181cb216ce9a2b10ca820724768d8c69787a608a4a2725a745278",
+        "@type": "spdx:Checksum",
+        "algorithm": "spdx:checksumAlgorithm_sha256",
+        "checksumValue": "35a2d7df4f8181cb216ce9a2b10ca820724768d8c69787a608a4a2725a745278"
+      }
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "@type": "dcat:Dataset",
+      "label": "GAMUT classes exposed through Gambit",
+      "version": "16.7.0",
+      "download": "https://raw.githubusercontent.com/gambitproject/gambit/v16.7.0/src/pygambit/catalog.py",
+      "checksum": {
+        "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+        "@type": "spdx:Checksum",
+        "algorithm": "spdx:checksumAlgorithm_sha256",
+        "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+      }
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "@type": "dcat:Dataset",
+      "label": "OpenSpiel bundled game definitions",
+      "version": "2.0.2",
+      "download": "https://files.pythonhosted.org/packages/bb/3b/9d56d511eff27e26714aa232c945bb00335f792bc1959637ee0d2639a018/open_spiel-2.0.2.tar.gz",
+      "checksum": {
+        "@id": "urn:sha256:6f520dfe499b9e5e1e3a31cf77bf071abb02b98104789e7698021922a064e856",
+        "@type": "spdx:Checksum",
+        "algorithm": "spdx:checksumAlgorithm_sha256",
+        "checksumValue": "6f520dfe499b9e5e1e3a31cf77bf071abb02b98104789e7698021922a064e856"
+      }
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ArmsRace",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "ArmsRace",
+      "label": "ArmsRace",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BattleOfTheSexes",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BattleOfTheSexes",
+      "label": "BattleOfTheSexes",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BertrandOligopoly",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BertrandOligopoly",
+      "label": "BertrandOligopoly",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BidirectionalLEG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BidirectionalLEG",
+      "label": "BidirectionalLEG",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/Chicken",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "Chicken",
+      "label": "Chicken",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CollaborationGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CollaborationGame",
+      "label": "CollaborationGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CongestionGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CongestionGame",
+      "label": "CongestionGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CoordinationGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CoordinationGame",
+      "label": "CoordinationGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CournotDuopoly",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CournotDuopoly",
+      "label": "CournotDuopoly",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CovariantGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CovariantGame",
+      "label": "CovariantGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/DispersionGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "DispersionGame",
+      "label": "DispersionGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GrabTheDollar",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GrabTheDollar",
+      "label": "GrabTheDollar",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GreedyGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GreedyGame",
+      "label": "GreedyGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GuessThirdsAve",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GuessThirdsAve",
+      "label": "GuessThirdsAve",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/HawkAndDove",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "HawkAndDove",
+      "label": "HawkAndDove",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/LocationGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "LocationGame",
+      "label": "LocationGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/MajorityVoting",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "MajorityVoting",
+      "label": "MajorityVoting",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/MatchingPennies",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "MatchingPennies",
+      "label": "MatchingPennies",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/MinimumEffortGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "MinimumEffortGame",
+      "label": "MinimumEffortGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/NPlayerChicken",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "NPlayerChicken",
+      "label": "NPlayerChicken",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/NPlayerPrisonersDilemma",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "NPlayerPrisonersDilemma",
+      "label": "NPlayerPrisonersDilemma",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PolymatrixGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PolymatrixGame",
+      "label": "PolymatrixGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PrisonersDilemma",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PrisonersDilemma",
+      "label": "PrisonersDilemma",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RandomCompoundGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RandomCompoundGame",
+      "label": "RandomCompoundGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RandomGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RandomGame",
+      "label": "RandomGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RandomGraphicalGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RandomGraphicalGame",
+      "label": "RandomGraphicalGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RandomLEG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RandomLEG",
+      "label": "RandomLEG",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RandomZeroSum",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RandomZeroSum",
+      "label": "RandomZeroSum",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/RockPaperScissors",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "RockPaperScissors",
+      "label": "RockPaperScissors",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ShapleyGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "ShapleyGame",
+      "label": "ShapleyGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/SimpleInspectionGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "SimpleInspectionGame",
+      "label": "SimpleInspectionGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/TravelersDilemma",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "TravelersDilemma",
+      "label": "TravelersDilemma",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/TwoByTwoGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "TwoByTwoGame",
+      "label": "TwoByTwoGame",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/UniformLEG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "UniformLEG",
+      "label": "UniformLEG",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/WarOfAttrition",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "WarOfAttrition",
+      "label": "WarOfAttrition",
+      "format": "GAMUT",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "checksum": {
+          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/myerson1991/fig2_1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/myerson1991/fig2_1",
+      "label": "A simple Poker game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/myerson1991/fig2_1.efg",
+        "checksum": {
+          "@id": "urn:sha256:e62f1c9b81c4a5aaf97af951ec072d2a5396920fc773c3ccf505fd38d4950cb0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e62f1c9b81c4a5aaf97af951ec072d2a5396920fc773c3ccf505fd38d4950cb0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/myerson1991/fig4_2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/myerson1991/fig4_2",
+      "label": "Myerson (1991) Figure 4.2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/myerson1991/fig4_2.efg",
+        "checksum": {
+          "@id": "urn:sha256:7c4ce87556d377fc10e1483660c562943eeeed5303750a39f72c1f172ca3c87b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7c4ce87556d377fc10e1483660c562943eeeed5303750a39f72c1f172ca3c87b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_1",
+      "label": "Fig 5.1 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_1.efg",
+        "checksum": {
+          "@id": "urn:sha256:306addcbdf80a122255b8c2f328b8ec93857a9e1d221cde59b4f753e31dedad9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "306addcbdf80a122255b8c2f328b8ec93857a9e1d221cde59b4f753e31dedad9"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_10",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_10",
+      "label": "Fig 5.10 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_10.efg",
+        "checksum": {
+          "@id": "urn:sha256:f748943795fde1552402afcc6b8ab7a8f9c7fcadf2b2748f16cf4b02b1b48d14",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f748943795fde1552402afcc6b8ab7a8f9c7fcadf2b2748f16cf4b02b1b48d14"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_11",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_11",
+      "label": "Fig 5.11 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_11.efg",
+        "checksum": {
+          "@id": "urn:sha256:d42347c0d4d61afca03c89fc401a050902d749ffc46572048b01845ea534ab2a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d42347c0d4d61afca03c89fc401a050902d749ffc46572048b01845ea534ab2a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_12",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_12",
+      "label": "Fig 5.12 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_12.efg",
+        "checksum": {
+          "@id": "urn:sha256:31e30d66e439b6af8d7fc696b0951d94b06ffd0a02d3e67114be5dea1b4947c0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "31e30d66e439b6af8d7fc696b0951d94b06ffd0a02d3e67114be5dea1b4947c0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_15",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_15",
+      "label": "Fig 5.15 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_15.efg",
+        "checksum": {
+          "@id": "urn:sha256:6ffa1dd924975e5ca02dc9c80a4ebcb60ac5123dc4972dac04a119c002d8df21",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6ffa1dd924975e5ca02dc9c80a4ebcb60ac5123dc4972dac04a119c002d8df21"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_2",
+      "label": "Fig 5.2 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_2.efg",
+        "checksum": {
+          "@id": "urn:sha256:9869f79ff8385ef21be8e0a2de281d523e770a930e59f1bbae52a2cd1efaaef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9869f79ff8385ef21be8e0a2de281d523e770a930e59f1bbae52a2cd1efaaef3"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig5_9",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig5_9",
+      "label": "Fig 5.9 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig5_9.efg",
+        "checksum": {
+          "@id": "urn:sha256:3e03a23a624352d6c3c731bd67a7a00ef0cfd77ecbcc785840bfb1fec6fab028",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3e03a23a624352d6c3c731bd67a7a00ef0cfd77ecbcc785840bfb1fec6fab028"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig6_2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig6_2",
+      "label": "Fig 6.2 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig6_2.efg",
+        "checksum": {
+          "@id": "urn:sha256:13f43c57c8785ef960334b468aa1720228b26fc001f56fe00b19de5566998da4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "13f43c57c8785ef960334b468aa1720228b26fc001f56fe00b19de5566998da4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/shohamleytonbrown2008/fig6_8",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/shohamleytonbrown2008/fig6_8",
+      "label": "Fig 6.8 from Shoham and Leyton-Brown (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/shohamleytonbrown2008/fig6_8.efg",
+        "checksum": {
+          "@id": "urn:sha256:06d4b79a904902a5bef4b2fbbda7a1164e9c08857bb8f2d364d89a9ae1739688",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "06d4b79a904902a5bef4b2fbbda7a1164e9c08857bb8f2d364d89a9ae1739688"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/vonstengel2022/fig10.1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/vonstengel2022/fig10.1",
+      "label": "Figure 10.1 from von Stengel (2022)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/vonstengel2022/fig10.1.efg",
+        "checksum": {
+          "@id": "urn:sha256:3cc37b454271dbd3075bbbe422c627ec4e458c9bb0bb8d804580740305858192",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3cc37b454271dbd3075bbbe422c627ec4e458c9bb0bb8d804580740305858192"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/vonstengel2022/fig10.12",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/vonstengel2022/fig10.12",
+      "label": "Figure 10.12 from von Stengel (2022)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/vonstengel2022/fig10.12.efg",
+        "checksum": {
+          "@id": "urn:sha256:6be875ca541f8bdbae489381fb628f992beae63215d09854de56010725799a2d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6be875ca541f8bdbae489381fb628f992beae63215d09854de56010725799a2d"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/vonstengel2022/fig10.5",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/vonstengel2022/fig10.5",
+      "label": "Figure 10.5 from von Stengel (2022)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/vonstengel2022/fig10.5.efg",
+        "checksum": {
+          "@id": "urn:sha256:f78876c8baf9b2f6858704d93f5491b9d3d657886323ecfa341a9f04e8e38397",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f78876c8baf9b2f6858704d93f5491b9d3d657886323ecfa341a9f04e8e38397"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/vonstengel2022/fig10.7",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/vonstengel2022/fig10.7",
+      "label": "Figure 10.7 from von Stengel (2022)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/vonstengel2022/fig10.7.efg",
+        "checksum": {
+          "@id": "urn:sha256:46b2d535a4cbd41238cb951ebef524c7a2feb5fad97423f16b9b37e29c0533c4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "46b2d535a4cbd41238cb951ebef524c7a2feb5fad97423f16b9b37e29c0533c4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/watson2013/exercise29_6",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/watson2013/exercise29_6",
+      "label": "Princess Bride signaling game (from Watson)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/watson2013/exercise29_6.efg",
+        "checksum": {
+          "@id": "urn:sha256:1bbbe888849252601c4a421afa4822967755ff38915d0188efbb378b10709ccd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bbbe888849252601c4a421afa4822967755ff38915d0188efbb378b10709ccd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/books/watson2013/fig29_1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "books/watson2013/fig29_1",
+      "label": "Job-market signaling game (version from Watson)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/books/watson2013/fig29_1.efg",
+        "checksum": {
+          "@id": "urn:sha256:c18e0a44fbcdd13f894e8837645834253d501c6c99049002f646bdddb6173834",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c18e0a44fbcdd13f894e8837645834253d501c6c99049002f646bdddb6173834"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/conf/itcs/jakobsen2016/fig1a",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "conf/itcs/jakobsen2016/fig1a",
+      "label": "Jakobsen, Sorensen, Conitzer (2016) Figure 1(a)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/conf/itcs/jakobsen2016/fig1a.efg",
+        "checksum": {
+          "@id": "urn:sha256:2f5b3444ecc1bd2d9aa2652cc1b7b9965313b8a1ed8a474d50cee52a3d294ed9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2f5b3444ecc1bd2d9aa2652cc1b7b9965313b8a1ed8a474d50cee52a3d294ed9"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/conf/itcs/jakobsen2016/fig1b",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "conf/itcs/jakobsen2016/fig1b",
+      "label": "Jakobsen, Sorensen, Conitzer (2016) Figure 1(b)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/conf/itcs/jakobsen2016/fig1b.efg",
+        "checksum": {
+          "@id": "urn:sha256:64bf03ff232cdd6b34a48299702f51ce608a7e973808324e01d30d276df46711",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "64bf03ff232cdd6b34a48299702f51ce608a7e973808324e01d30d276df46711"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/conf/itcs/jakobsen2016/fig1c",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "conf/itcs/jakobsen2016/fig1c",
+      "label": "Jakobsen, Sorensen, Conitzer (2016) Figure 1(c)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/conf/itcs/jakobsen2016/fig1c.efg",
+        "checksum": {
+          "@id": "urn:sha256:18ece9e91d94012f8dc9f0da5532e9143970719a074ad4b9b441838415e813be",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "18ece9e91d94012f8dc9f0da5532e9143970719a074ad4b9b441838415e813be"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/conf/itcs/jakobsen2016/fig3",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "conf/itcs/jakobsen2016/fig3",
+      "label": "Jakobsen, Sorensen, Conitzer (2016) Figure 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/conf/itcs/jakobsen2016/fig3.efg",
+        "checksum": {
+          "@id": "urn:sha256:d871ffa054d4bbf9ac5e60ef847fbd297d1dc26a30de1df1479799e8259ce37b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d871ffa054d4bbf9ac5e60ef847fbd297d1dc26a30de1df1479799e8259ce37b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/geb/bagwell1995",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/geb/bagwell1995",
+      "label": "Bagwell (GEB 1995) commitment and (un)observability",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/geb/bagwell1995.efg",
+        "checksum": {
+          "@id": "urn:sha256:1486f2829575de6d700c33171229670b2c639a40e0d2ac27e5c70cf258196bde",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1486f2829575de6d700c33171229670b2c639a40e0d2ac27e5c70cf258196bde"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/geb/gilboa1997/fig1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/geb/gilboa1997/fig1",
+      "label": "Absent-Minded Driver (Gilboa 1997, GEB, Figure 2)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/geb/gilboa1997/fig1.efg",
+        "checksum": {
+          "@id": "urn:sha256:34551cf9c55b8330c7cc46d251a534f81ee5f5ad1a3132bbc4f25974c6162df8",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "34551cf9c55b8330c7cc46d251a534f81ee5f5ad1a3132bbc4f25974c6162df8"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/geb/gilboa1997/fig2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/geb/gilboa1997/fig2",
+      "label": "Two-Selves Absent-Minded Driver (Gilboa 1997, GEB, Figure 2)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/geb/gilboa1997/fig2.efg",
+        "checksum": {
+          "@id": "urn:sha256:3b94fa01563c1abceba3c9e70a87308e9bc2dd7b69309c442be335a1bb1e4bd9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3b94fa01563c1abceba3c9e70a87308e9bc2dd7b69309c442be335a1bb1e4bd9"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/geb/wichardt2008",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/geb/wichardt2008",
+      "label": "Wichardt (2008): 2 players, imperfect recall",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/geb/wichardt2008.efg",
+        "checksum": {
+          "@id": "urn:sha256:b52d4c60f2681be595b0e468a5168d8b9be6872ed6fb4e41024146f1a432575e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b52d4c60f2681be595b0e468a5168d8b9be6872ed6fb4e41024146f1a432575e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/nau2004/sec3",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/nau2004/sec3",
+      "label": "Battle of the Sexes",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/nau2004/sec3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:b8c75188405965192633b08e789a929804568d439abb6b88ffa369aeb2a3c02f",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b8c75188405965192633b08e789a929804568d439abb6b88ffa369aeb2a3c02f"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/nau2004/sec4",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/nau2004/sec4",
+      "label": "Three-player game with a unique Nash solution in irrational strategies",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/nau2004/sec4.nfg",
+        "checksum": {
+          "@id": "urn:sha256:08e9a1c7d892af29b8c5483eaa8bbe48eb119c12fdc27192da93e33d89ace45b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "08e9a1c7d892af29b8c5483eaa8bbe48eb119c12fdc27192da93e33d89ace45b"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/nau2004/sec5",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/nau2004/sec5",
+      "label": "Game with a continuum of completely mixed-strategy Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/nau2004/sec5.nfg",
+        "checksum": {
+          "@id": "urn:sha256:7d47d2bd637c4d3ad06b7f4bd1593318603998a23154a54ab1d71d92c505c5fa",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7d47d2bd637c4d3ad06b7f4bd1593318603998a23154a54ab1d71d92c505c5fa"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/nau2004/sec6",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/nau2004/sec6",
+      "label": "2x2x4 game with Nash equilibria in the relative interior of the correlated equilibrium polytope",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/nau2004/sec6.nfg",
+        "checksum": {
+          "@id": "urn:sha256:a7d39e94dd0a03325f6437931168560062c64995ef01aaadbd2f1b6bb5b7edbe",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a7d39e94dd0a03325f6437931168560062c64995ef01aaadbd2f1b6bb5b7edbe"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/selten1975/fig1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/selten1975/fig1",
+      "label": "Selten's horse (Selten IJGT 1975, Figure 1)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/selten1975/fig1.efg",
+        "checksum": {
+          "@id": "urn:sha256:faa820f8161774852dd5f72f23ab76667c193d63578a7e8e8b18158f521dbfce",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "faa820f8161774852dd5f72f23ab76667c193d63578a7e8e8b18158f521dbfce"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/selten1975/fig2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/selten1975/fig2",
+      "label": "Selten (IJGT 1975) Figure 2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/selten1975/fig2.efg",
+        "checksum": {
+          "@id": "urn:sha256:c31a657e01312d068fed3acb2ae63fe5ebcd7c8ff0136ef38fbe9c66ba742e72",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c31a657e01312d068fed3acb2ae63fe5ebcd7c8ff0136ef38fbe9c66ba742e72"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/ijgt/selten1975/fig3",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/ijgt/selten1975/fig3",
+      "label": "Selten (IJGT 1975) Figure 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/ijgt/selten1975/fig3.efg",
+        "checksum": {
+          "@id": "urn:sha256:90a315b6a857bafd4b968be699b41448b633c07d20764b31e3a32c0b9ba90672",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "90a315b6a857bafd4b968be699b41448b633c07d20764b31e3a32c0b9ba90672"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/mor/vonstengelforges2008/fig1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/mor/vonstengelforges2008/fig1",
+      "label": "Figure 1 from von Stengel and Forges (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/mor/vonstengelforges2008/fig1.efg",
+        "checksum": {
+          "@id": "urn:sha256:139fbee96370c5e30c17b6cff4b76a03c3367ebe9a9750720750d3537378d35a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "139fbee96370c5e30c17b6cff4b76a03c3367ebe9a9750720750d3537378d35a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/mor/vonstengelforges2008/fig6",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/mor/vonstengelforges2008/fig6",
+      "label": "Figure 6 from von Stengel and Forges (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/mor/vonstengelforges2008/fig6.efg",
+        "checksum": {
+          "@id": "urn:sha256:18a4ee17cfa9ec48df35a46b40390030189cb68df382c3645663ac9f089ebafd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "18a4ee17cfa9ec48df35a46b40390030189cb68df382c3645663ac9f089ebafd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/mor/vonstengelforges2008/fig9",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/mor/vonstengelforges2008/fig9",
+      "label": "Figure 9 from von Stengel and Forges (2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/mor/vonstengelforges2008/fig9.efg",
+        "checksum": {
+          "@id": "urn:sha256:2a08962f1dbe2901f2251f99fe858f15028837c13e9083a254af598faf112cc3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2a08962f1dbe2901f2251f99fe858f15028837c13e9083a254af598faf112cc3"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/other/reiley2008/fig1",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/other/reiley2008/fig1",
+      "label": "Stripped-down poker (Reiley et al 2008)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/other/reiley2008/fig1.efg",
+        "checksum": {
+          "@id": "urn:sha256:0f8e5e2070eb29b817a94f0abe1cf2d02a1c1d72ea8447f15bd61d9b9915536a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0f8e5e2070eb29b817a94f0abe1cf2d02a1c1d72ea8447f15bd61d9b9915536a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/other/shapley1974/fig2",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/other/shapley1974/fig2",
+      "label": "Fig 2 from 'A Note on the Lemke-Howson Algorithm' (Shapley 1974)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/other/shapley1974/fig2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:65e3da7c5f0aacd2d4d22aaa8e0dd1d4cb240eb178596d72e1311c431590e4b3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "65e3da7c5f0aacd2d4d22aaa8e0dd1d4cb240eb178596d72e1311c431590e4b3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models/journals/other/shapley1974/fig3",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/models",
+      "identifier": "journals/other/shapley1974/fig3",
+      "label": "Fig 3 from 'A Note on the Lemke-Howson Algorithm' (Shapley 1974)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/catalog/journals/other/shapley1974/fig3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:244f3c0d0d0c7b010206ab9fca54d8453111b988fe944460206a956ae13b6fd9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "244f3c0d0d0c7b010206ab9fca54d8453111b988fe944460206a956ae13b6fd9"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/2048",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "2048",
+      "label": "2048",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/twenty_forty_eight/2048.cc",
+        "checksum": {
+          "@id": "urn:sha256:2b482ba8e4c9ab200e6aa1f4b858bffc83f63a56afc6689ea66162fddca1b4ae",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2b482ba8e4c9ab200e6aa1f4b858bffc83f63a56afc6689ea66162fddca1b4ae"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/add_noise",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "add_noise",
+      "label": "Add noise to terminal utilities.",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/add_noise.cc",
+        "checksum": {
+          "@id": "urn:sha256:0e9d3889c481b6723c4eb2947e367f847e41641c55259d85d0f25e37aac4445a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0e9d3889c481b6723c4eb2947e367f847e41641c55259d85d0f25e37aac4445a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/amazons",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "amazons",
+      "label": "Amazons",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/amazons/amazons.cc",
+        "checksum": {
+          "@id": "urn:sha256:6a7c863e427f0f59bdb7085d97a9608d141ed7960caa1f264791771f8df04e6e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6a7c863e427f0f59bdb7085d97a9608d141ed7960caa1f264791771f8df04e6e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/antichess",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "antichess",
+      "label": "Antichess (Losing Chess)",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/antichess/antichess.cc",
+        "checksum": {
+          "@id": "urn:sha256:02f67b9cbdf638e62c217e20a4052288e2edd4651a95742b95289dee20f79fcc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "02f67b9cbdf638e62c217e20a4052288e2edd4651a95742b95289dee20f79fcc"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/backgammon",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "backgammon",
+      "label": "Backgammon",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/backgammon/backgammon.cc",
+        "checksum": {
+          "@id": "urn:sha256:ab5d3321577d34728dd9b7d520431b62f9dfc40b617ea820056bc15e194a20d7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ab5d3321577d34728dd9b7d520431b62f9dfc40b617ea820056bc15e194a20d7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/banqi",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "banqi",
+      "label": "Banqi",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/banqi/banqi.cc",
+        "checksum": {
+          "@id": "urn:sha256:93609fae5503660988f2a813dad15d9593c4ca6072d1eb7724555f292b0ede62",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "93609fae5503660988f2a813dad15d9593c4ca6072d1eb7724555f292b0ede62"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/bargaining",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "bargaining",
+      "label": "Bargaining",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/bargaining/bargaining.cc",
+        "checksum": {
+          "@id": "urn:sha256:9121efbdfee8f79eb425cfb196405d211881e7b21d18a6d9d1ab70d392c5ac9d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9121efbdfee8f79eb425cfb196405d211881e7b21d18a6d9d1ab70d392c5ac9d"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/battleship",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "battleship",
+      "label": "Battleship",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/battleship/battleship.cc",
+        "checksum": {
+          "@id": "urn:sha256:4367cb1d39f080f4fc00b9ec998113585bcdb7c194e10a62eab14b316c8c2c40",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4367cb1d39f080f4fc00b9ec998113585bcdb7c194e10a62eab14b316c8c2c40"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/blackjack",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "blackjack",
+      "label": "Blackjack",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/blackjack/blackjack.cc",
+        "checksum": {
+          "@id": "urn:sha256:7ae58f23685556c39ed6284b5d2974fddf22473f1f3d8996b90301fabd8dfb3b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7ae58f23685556c39ed6284b5d2974fddf22473f1f3d8996b90301fabd8dfb3b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/blotto",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "blotto",
+      "label": "Blotto",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/blotto/blotto.cc",
+        "checksum": {
+          "@id": "urn:sha256:e92ee6d11d8155741bb9eabc30f38af0767a9f1a60b50eb38c7fe2b2c341d7ee",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e92ee6d11d8155741bb9eabc30f38af0767a9f1a60b50eb38c7fe2b2c341d7ee"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/breakthrough",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "breakthrough",
+      "label": "Breakthrough",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/breakthrough/breakthrough.cc",
+        "checksum": {
+          "@id": "urn:sha256:0fab3259ce337e6523cea10486a54dc9c6eb527b5de28546d15928103bdfda9b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0fab3259ce337e6523cea10486a54dc9c6eb527b5de28546d15928103bdfda9b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/bridge",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "bridge",
+      "label": "Contract Bridge",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/bridge/bridge.cc",
+        "checksum": {
+          "@id": "urn:sha256:80aadf11ab0a6ab0c78f2b7077e60bc8b99c53b54ec846628f51b836ba33d5a3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "80aadf11ab0a6ab0c78f2b7077e60bc8b99c53b54ec846628f51b836ba33d5a3"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/bridge_uncontested_bidding",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "bridge_uncontested_bidding",
+      "label": "Bridge: Uncontested Bidding",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/bridge/bridge_uncontested_bidding.cc",
+        "checksum": {
+          "@id": "urn:sha256:e6b046e18a059fda0c3550648c961b9a596ade8b84beb7c94267e646c83811c4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e6b046e18a059fda0c3550648c961b9a596ade8b84beb7c94267e646c83811c4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/cached_tree",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "cached_tree",
+      "label": "Cached Tree Game Transform",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/cached_tree.cc",
+        "checksum": {
+          "@id": "urn:sha256:57903236e8734b4fdb65df08590422596339b0a00d9d31b7eb840cd4cc6289d7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "57903236e8734b4fdb65df08590422596339b0a00d9d31b7eb840cd4cc6289d7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/capture_the_flag",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "capture_the_flag",
+      "label": "Capture the Flag",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/capture_the_flag/capture_the_flag.cc",
+        "checksum": {
+          "@id": "urn:sha256:fdf398d3f9ccb42d5a34952ce8f450cfa0b429d3278ed1b30b7d90cab82981ba",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "fdf398d3f9ccb42d5a34952ce8f450cfa0b429d3278ed1b30b7d90cab82981ba"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/catch",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "catch",
+      "label": "Catch",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/catch/catch.cc",
+        "checksum": {
+          "@id": "urn:sha256:b0b49ad6b60ccdac388a89c85ff9eb1b11509bae865df196b0542799a03e72d0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b0b49ad6b60ccdac388a89c85ff9eb1b11509bae865df196b0542799a03e72d0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/chat_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "chat_game",
+      "label": "Chat Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/chat_game.py",
+        "checksum": {
+          "@id": "urn:sha256:280dd428bdfe294e6fa13c9bf83c04dc51685ad431074820a799a080dadaab63",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "280dd428bdfe294e6fa13c9bf83c04dc51685ad431074820a799a080dadaab63"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/checkers",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "checkers",
+      "label": "Checkers",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/checkers/checkers.cc",
+        "checksum": {
+          "@id": "urn:sha256:7314eb67d61278dc97b01564f418650acdbcd75c3513c85ffee30f595e7d9bb4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7314eb67d61278dc97b01564f418650acdbcd75c3513c85ffee30f595e7d9bb4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/chess",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "chess",
+      "label": "Chess",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/chess/chess.cc",
+        "checksum": {
+          "@id": "urn:sha256:f4d3f14ec2b7dfca2ab2b171ddda24639d3fe5d4af33132210fabf8317819788",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f4d3f14ec2b7dfca2ab2b171ddda24639d3fe5d4af33132210fabf8317819788"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/chinese_checkers",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "chinese_checkers",
+      "label": "Chinese Checkers",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/chinese_checkers/chinese_checkers.cc",
+        "checksum": {
+          "@id": "urn:sha256:9ecfa88dc05235af1fb7e3bbc5142fe9829dfe6c420631dbb5879d3e1bf53760",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9ecfa88dc05235af1fb7e3bbc5142fe9829dfe6c420631dbb5879d3e1bf53760"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/cliff_walking",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "cliff_walking",
+      "label": "CliffWalking",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/cliff_walking/cliff_walking.cc",
+        "checksum": {
+          "@id": "urn:sha256:e7d9551e48394e2530fadd66bb29cf582e95158eeae5801b4ce3775356e02c34",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e7d9551e48394e2530fadd66bb29cf582e95158eeae5801b4ce3775356e02c34"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/clobber",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "clobber",
+      "label": "Clobber",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/clobber/clobber.cc",
+        "checksum": {
+          "@id": "urn:sha256:7358836bc3242aa25fe419733b3f76d4a92f62af945fea202a91024b72f78ce2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7358836bc3242aa25fe419733b3f76d4a92f62af945fea202a91024b72f78ce2"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/coin_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "coin_game",
+      "label": "The Coin Game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/coin_game/coin_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:b551be7033488cf4a281946cc57d420b9235bdf7612c9268ccc3351cbf2d6bc6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b551be7033488cf4a281946cc57d420b9235bdf7612c9268ccc3351cbf2d6bc6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/colored_trails",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "colored_trails",
+      "label": "Colored Trails",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/colored_trails/colored_trails.cc",
+        "checksum": {
+          "@id": "urn:sha256:c3fb4717edbe40d9384a6e01d0f57c2f28fe45c47946ab02a98b00272b8cc8ba",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c3fb4717edbe40d9384a6e01d0f57c2f28fe45c47946ab02a98b00272b8cc8ba"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/connect_four",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "connect_four",
+      "label": "Connect Four",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/connect_four/connect_four.cc",
+        "checksum": {
+          "@id": "urn:sha256:979ebe791b35f9a61a269c4280f1cbf14c0a6685088a5f7cd31acd68ecf07f9e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "979ebe791b35f9a61a269c4280f1cbf14c0a6685088a5f7cd31acd68ecf07f9e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/coop_box_pushing",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "coop_box_pushing",
+      "label": "Cooperative Box Pushing",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/coop_box_pushing/coop_box_pushing.cc",
+        "checksum": {
+          "@id": "urn:sha256:0c4ec8ffda3a03b7d6e82399d0552e7b7a6604e3830dbe9e31761456cbc74f2d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0c4ec8ffda3a03b7d6e82399d0552e7b7a6604e3830dbe9e31761456cbc74f2d"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/coop_to_1p",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "coop_to_1p",
+      "label": "Cooperative Game As Single-Player",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/coop_to_1p.cc",
+        "checksum": {
+          "@id": "urn:sha256:e4ff4532e3d0b8b2d31ee68c71c5ca02a7518a15e002ba49e7cd921d243a1112",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e4ff4532e3d0b8b2d31ee68c71c5ca02a7518a15e002ba49e7cd921d243a1112"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/coordinated_mp",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "coordinated_mp",
+      "label": "Coordinated Matching Pennies",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/coordinated_mp/coordinated_mp.cc",
+        "checksum": {
+          "@id": "urn:sha256:8a7ed03060fbf9c94270f506df8e5a59367c12a69cc8c50a89b85d820c0ab2b2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8a7ed03060fbf9c94270f506df8e5a59367c12a69cc8c50a89b85d820c0ab2b2"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/crazy_eights",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "crazy_eights",
+      "label": "Crazy Eights",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/crazy_eights/crazy_eights.cc",
+        "checksum": {
+          "@id": "urn:sha256:0b89467de4fedacd32276202a31f73c9a270e6e1b43c0b428cc76397726475bf",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0b89467de4fedacd32276202a31f73c9a270e6e1b43c0b428cc76397726475bf"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/crazyhouse",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "crazyhouse",
+      "label": "Crazyhouse",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/crazyhouse/crazyhouse.cc",
+        "checksum": {
+          "@id": "urn:sha256:df6097dc33edf55a3ee238f1c256d8e71bfaeab05025905f38d97c7ade6cfeee",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "df6097dc33edf55a3ee238f1c256d8e71bfaeab05025905f38d97c7ade6cfeee"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/cribbage",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "cribbage",
+      "label": "Cribbage",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/cribbage/cribbage.cc",
+        "checksum": {
+          "@id": "urn:sha256:0e68e54fd3cb6058e29fd73244ac9ccc56b770be7710fd02f6ee9adf0b22e5b1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0e68e54fd3cb6058e29fd73244ac9ccc56b770be7710fd02f6ee9adf0b22e5b1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/crossword",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "crossword",
+      "label": "crossword",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/crossword/crossword.cc",
+        "checksum": {
+          "@id": "urn:sha256:bca798863839e74944c606054997ad8837a175f6dabd1243f2bf13dad87145d1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "bca798863839e74944c606054997ad8837a175f6dabd1243f2bf13dad87145d1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/cursor_go",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "cursor_go",
+      "label": "Cursor Go",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/cursor_go/cursor_go.cc",
+        "checksum": {
+          "@id": "urn:sha256:1319a6f0417916fcf7a58f1916a9f692f50b32a0f532a9505e46fe3f6972fb2a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1319a6f0417916fcf7a58f1916a9f692f50b32a0f532a9505e46fe3f6972fb2a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/dark_chess",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "dark_chess",
+      "label": "Dark Chess",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/dark_chess/dark_chess.cc",
+        "checksum": {
+          "@id": "urn:sha256:79ab172eaead2267a1d23173bfb7f30728a62c70398ca842b8b0bf9773ba0470",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "79ab172eaead2267a1d23173bfb7f30728a62c70398ca842b8b0bf9773ba0470"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/dark_hex",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "dark_hex",
+      "label": "Dark Hex",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/dark_hex/dark_hex.cc",
+        "checksum": {
+          "@id": "urn:sha256:9a976e8732764f03ba62f7f83b2935dc455ef2cf90895104b5da3001ed5aecd1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9a976e8732764f03ba62f7f83b2935dc455ef2cf90895104b5da3001ed5aecd1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/dark_hex_ir",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "dark_hex_ir",
+      "label": "Dark Hex with Imperfect Recall",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/dark_hex/dark_hex.cc",
+        "checksum": {
+          "@id": "urn:sha256:9a976e8732764f03ba62f7f83b2935dc455ef2cf90895104b5da3001ed5aecd1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9a976e8732764f03ba62f7f83b2935dc455ef2cf90895104b5da3001ed5aecd1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/deep_sea",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "deep_sea",
+      "label": "DeepSea",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/deep_sea/deep_sea.cc",
+        "checksum": {
+          "@id": "urn:sha256:ebb164b8a3f127d19406084f8ddd9fefd85fa0abfb15bd9f41c52f359119b653",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ebb164b8a3f127d19406084f8ddd9fefd85fa0abfb15bd9f41c52f359119b653"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/dots_and_boxes",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "dots_and_boxes",
+      "label": "Dots and Boxes",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/dots_and_boxes/dots_and_boxes.cc",
+        "checksum": {
+          "@id": "urn:sha256:e3cf0872ae608039a108dda0bbeb58bbe2dfaed84309ea083d90eb5acc7db468",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e3cf0872ae608039a108dda0bbeb58bbe2dfaed84309ea083d90eb5acc7db468"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/dou_dizhu",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "dou_dizhu",
+      "label": "Dou Dizhu",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/dou_dizhu/dou_dizhu.cc",
+        "checksum": {
+          "@id": "urn:sha256:8cd0834de570fdbe1ca18c545a6d32733e09572aa5c7c122cc4105aa386002b5",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8cd0834de570fdbe1ca18c545a6d32733e09572aa5c7c122cc4105aa386002b5"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/efg_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "efg_game",
+      "label": "efg_game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/efg_game/efg_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:be5d60c12fa7535e36caba0c67edecb0782f76d182719474d60d1c2486a784aa",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "be5d60c12fa7535e36caba0c67edecb0782f76d182719474d60d1c2486a784aa"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/einstein_wurfelt_nicht",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "einstein_wurfelt_nicht",
+      "label": "einstein_wurfelt_nicht",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/einstein_wurfelt_nicht/einstein_wurfelt_nicht.cc",
+        "checksum": {
+          "@id": "urn:sha256:8324637b060522f2241d5f8e78b8eb40fe2434bd939557aa73471633883bbe11",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8324637b060522f2241d5f8e78b8eb40fe2434bd939557aa73471633883bbe11"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/euchre",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "euchre",
+      "label": "Euchre",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/euchre/euchre.cc",
+        "checksum": {
+          "@id": "urn:sha256:8a623f1528dfb7c387baae70637ce385b32360eec12cfabf4ef0a3a44aceaeae",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8a623f1528dfb7c387baae70637ce385b32360eec12cfabf4ef0a3a44aceaeae"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/first_sealed_auction",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "first_sealed_auction",
+      "label": "First-Price Sealed-Bid Auction",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/first_sealed_auction/first_sealed_auction.cc",
+        "checksum": {
+          "@id": "urn:sha256:aa42c0956f07f6f4f0fea3adc9887bbf40cb3a2887c8e21b6b088c9d9da423e1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "aa42c0956f07f6f4f0fea3adc9887bbf40cb3a2887c8e21b6b088c9d9da423e1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/gin_rummy",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "gin_rummy",
+      "label": "Gin Rummy",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/gin_rummy/gin_rummy.cc",
+        "checksum": {
+          "@id": "urn:sha256:f8165cfc80dd2dda8a642cfb16956bfc7aab8903374e9b998c1572d92b7a042f",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f8165cfc80dd2dda8a642cfb16956bfc7aab8903374e9b998c1572d92b7a042f"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/go",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "go",
+      "label": "Go",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/go/go.cc",
+        "checksum": {
+          "@id": "urn:sha256:c75fd4af98b03dd093cd83c417b645bb6307c4a8a45d19489ce3ef0b2f24dbf4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c75fd4af98b03dd093cd83c417b645bb6307c4a8a45d19489ce3ef0b2f24dbf4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/go_fish",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "go_fish",
+      "label": "Go Fish",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/go_fish/go_fish.cc",
+        "checksum": {
+          "@id": "urn:sha256:b0e3d611664236dd7eb05a0d027e6ba6546db95bd96c08817b9c8810da5432ad",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b0e3d611664236dd7eb05a0d027e6ba6546db95bd96c08817b9c8810da5432ad"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/gomoku",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "gomoku",
+      "label": "Gomoku",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/gomoku/gomoku.cc",
+        "checksum": {
+          "@id": "urn:sha256:0e02e55e6b2c1bac0d75a9028c6328f19783809c667d782349fda795f6b98b1d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0e02e55e6b2c1bac0d75a9028c6328f19783809c667d782349fda795f6b98b1d"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/goofspiel",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "goofspiel",
+      "label": "Goofspiel",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/goofspiel/goofspiel.cc",
+        "checksum": {
+          "@id": "urn:sha256:443fe6fd7cf8687ce1f60c5f22b3e0ae75a04cf4d9ce04cbe6912ca97a026941",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "443fe6fd7cf8687ce1f60c5f22b3e0ae75a04cf4d9ce04cbe6912ca97a026941"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/hanabi",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "hanabi",
+      "label": "Hanabi",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/hanabi/hanabi.cc",
+        "checksum": {
+          "@id": "urn:sha256:65378ac35b5dc26497ddf8c05bebc8788d4c193619dfc65d2b12d8dc944ee9c6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "65378ac35b5dc26497ddf8c05bebc8788d4c193619dfc65d2b12d8dc944ee9c6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/havannah",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "havannah",
+      "label": "Havannah",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/havannah/havannah.cc",
+        "checksum": {
+          "@id": "urn:sha256:f4f206df9d981af3ff3f6d03ec3a5b2475e3a390cf2658940c63f3ba41d2e3b4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f4f206df9d981af3ff3f6d03ec3a5b2475e3a390cf2658940c63f3ba41d2e3b4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/hearts",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "hearts",
+      "label": "Hearts",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/hearts/hearts.cc",
+        "checksum": {
+          "@id": "urn:sha256:7ef2364abf7372747475f68a0892d97f2475e25dd17af0c2acd428f9db6e0158",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7ef2364abf7372747475f68a0892d97f2475e25dd17af0c2acd428f9db6e0158"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/hex",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "hex",
+      "label": "Hex",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/hex/hex.cc",
+        "checksum": {
+          "@id": "urn:sha256:6467591984191128055f37eecaf801a45983381fd525524bfbb3be5cbf7e7056",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6467591984191128055f37eecaf801a45983381fd525524bfbb3be5cbf7e7056"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/hive",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "hive",
+      "label": "Hive",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/hive/hive.cc",
+        "checksum": {
+          "@id": "urn:sha256:574ac2beea541e2f2f22de437e0001b3e0647b3eb431d7a3b10d5891d08043cf",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "574ac2beea541e2f2f22de437e0001b3e0647b3eb431d7a3b10d5891d08043cf"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/kriegspiel",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "kriegspiel",
+      "label": "Kriegspiel",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/kriegspiel/kriegspiel.cc",
+        "checksum": {
+          "@id": "urn:sha256:f4d52322944e1d01f35965105f41adae16879ee0972dd5084645e85d5ccddcbf",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f4d52322944e1d01f35965105f41adae16879ee0972dd5084645e85d5ccddcbf"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/kuhn_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "kuhn_poker",
+      "label": "Kuhn Poker",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/kuhn_poker/kuhn_poker.cc",
+        "checksum": {
+          "@id": "urn:sha256:e3d4a3d73df8ed60c3c3cbcb2bc4e514d2ab47e931123cb4031302bbf5a21f33",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e3d4a3d73df8ed60c3c3cbcb2bc4e514d2ab47e931123cb4031302bbf5a21f33"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/laser_tag",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "laser_tag",
+      "label": "Laser Tag",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/laser_tag/laser_tag.cc",
+        "checksum": {
+          "@id": "urn:sha256:84b45e601e523f644445768373b5d80356631ca8c4018eaafa1e68b79d3ea4b4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "84b45e601e523f644445768373b5d80356631ca8c4018eaafa1e68b79d3ea4b4"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/latent_ttt",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "latent_ttt",
+      "label": "Latent Tic Tac Toe",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/latent_ttt/latent_ttt.cc",
+        "checksum": {
+          "@id": "urn:sha256:a43cb896af0c90224dca40d8d9b20e7da6fa3c0baa0f9e965f29e80083c99c2c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a43cb896af0c90224dca40d8d9b20e7da6fa3c0baa0f9e965f29e80083c99c2c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/leduc_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "leduc_poker",
+      "label": "Leduc Poker",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/leduc_poker/leduc_poker.cc",
+        "checksum": {
+          "@id": "urn:sha256:decdf994c6af624e2f4ebdf31ba78a9c425d8f8bdbcb26917c39df94a978ced7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "decdf994c6af624e2f4ebdf31ba78a9c425d8f8bdbcb26917c39df94a978ced7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/lewis_signaling",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "lewis_signaling",
+      "label": "Lewis Signaling Game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/lewis_signaling/lewis_signaling.cc",
+        "checksum": {
+          "@id": "urn:sha256:06b6c4b6652cd3e8d021bee80e4b5ba35c01b20b9ae31453b21196aeba5bc358",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "06b6c4b6652cd3e8d021bee80e4b5ba35c01b20b9ae31453b21196aeba5bc358"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/liars_dice",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "liars_dice",
+      "label": "Liars Dice",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/liars_dice/liars_dice.cc",
+        "checksum": {
+          "@id": "urn:sha256:96ad54740c173fb26e58190ebbc2072a5ba22e3b591003a4b010c480f2066765",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "96ad54740c173fb26e58190ebbc2072a5ba22e3b591003a4b010c480f2066765"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/liars_dice_ir",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "liars_dice_ir",
+      "label": "Liars Dice with Imperfect Recall",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/liars_dice/liars_dice.cc",
+        "checksum": {
+          "@id": "urn:sha256:96ad54740c173fb26e58190ebbc2072a5ba22e3b591003a4b010c480f2066765",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "96ad54740c173fb26e58190ebbc2072a5ba22e3b591003a4b010c480f2066765"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/lines_of_action",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "lines_of_action",
+      "label": "Lines of Action",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/lines_of_action/lines_of_action.cc",
+        "checksum": {
+          "@id": "urn:sha256:f7b31f7d57001b76639b0809aca9dbe94df19876b5026c7822fad5fb773be041",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f7b31f7d57001b76639b0809aca9dbe94df19876b5026c7822fad5fb773be041"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/maedn",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "maedn",
+      "label": "Mensch-Aergere-Dich-Nicht",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/maedn/maedn.cc",
+        "checksum": {
+          "@id": "urn:sha256:0b378c5bf7740d77098cec8530a8e4fc30d5fcb6bab8cb1e561d7a286f9e7784",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0b378c5bf7740d77098cec8530a8e4fc30d5fcb6bab8cb1e561d7a286f9e7784"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mancala",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mancala",
+      "label": "Mancala",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mancala/mancala.cc",
+        "checksum": {
+          "@id": "urn:sha256:931bacceda142e89f49c478db9982d40a442cfcb67abea4b7888ca96a235b436",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "931bacceda142e89f49c478db9982d40a442cfcb67abea4b7888ca96a235b436"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/markov_soccer",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "markov_soccer",
+      "label": "Markov Soccer",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/markov_soccer/markov_soccer.cc",
+        "checksum": {
+          "@id": "urn:sha256:20d11c6ca71f837f455077562d8c8040e3a8ded9003ec37994f83b98ddbcbb21",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "20d11c6ca71f837f455077562d8c8040e3a8ded9003ec37994f83b98ddbcbb21"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matching_pennies_3p",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matching_pennies_3p",
+      "label": "Three-Player Matching Pennies",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matching_pennies_3p/matching_pennies_3p.cc",
+        "checksum": {
+          "@id": "urn:sha256:7610a57c996476452942a8bfd58c09ab6f80f117bb84c6750cb38e9fab909152",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7610a57c996476452942a8bfd58c09ab6f80f117bb84c6750cb38e9fab909152"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_bos",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_bos",
+      "label": "Bach or Stravinsky",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_brps",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_brps",
+      "label": "Biased Rock, Paper, Scissors",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_cd",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_cd",
+      "label": "Chicken-Dare",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_coordination",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_coordination",
+      "label": "Coordination",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_mp",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_mp",
+      "label": "Matching Pennies",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_pd",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_pd",
+      "label": "Prisoner's Dilemma",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_rps",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_rps",
+      "label": "Rock, Paper, Scissors",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_rpsw",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_rpsw",
+      "label": "Rock, Paper, Scissors, Water",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_sh",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_sh",
+      "label": "Stag Hunt",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/matrix_shapleys_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "matrix_shapleys_game",
+      "label": "Shapley's Game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/matrix_games/matrix_games.cc",
+        "checksum": {
+          "@id": "urn:sha256:0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d63f8fb82c4e705c385815c7aa077f673b0d1a5c359b267179ca4be8e6c8150"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mean_field_lin_quad",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mean_field_lin_quad",
+      "label": "Mean-Field Linear Quadratic Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/linear_quadratic.py",
+        "checksum": {
+          "@id": "urn:sha256:55ff99743a25a045b42e218f81a5a867c06dbf5dda2c07680641121cf9461468",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "55ff99743a25a045b42e218f81a5a867c06dbf5dda2c07680641121cf9461468"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mean_field_nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mean_field_nfg",
+      "label": "Mean-Field Normal-Form Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/normal_form_game.py",
+        "checksum": {
+          "@id": "urn:sha256:ea41ec12138567ec61f73ed10083eb03c6c791ef8e69b2b4dabaab31201503d0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ea41ec12138567ec61f73ed10083eb03c6c791ef8e69b2b4dabaab31201503d0"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mfg_crowd_modelling",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mfg_crowd_modelling",
+      "label": "Mean Field Crowd Modelling",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mfg/crowd_modelling.cc",
+        "checksum": {
+          "@id": "urn:sha256:f450c96c86c9ca06fe95e65fdf116ef3e51ca82d6fa9b65047faf64336d74449",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f450c96c86c9ca06fe95e65fdf116ef3e51ca82d6fa9b65047faf64336d74449"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mfg_crowd_modelling_2d",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mfg_crowd_modelling_2d",
+      "label": "Mean Field Crowd Modelling 2D",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mfg/crowd_modelling_2d.cc",
+        "checksum": {
+          "@id": "urn:sha256:cbafa26e080195e24ee3dde866271f3ea65cd50e666baaad633b8bec429a6cce",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cbafa26e080195e24ee3dde866271f3ea65cd50e666baaad633b8bec429a6cce"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mfg_dynamic_routing",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mfg_dynamic_routing",
+      "label": "Cpp Mean Field Dynamic Routing",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mfg/dynamic_routing.cc",
+        "checksum": {
+          "@id": "urn:sha256:c4113a51b13a62346e237fe4f07f32693590df904ff3d8c60597113200edbc6e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c4113a51b13a62346e237fe4f07f32693590df904ff3d8c60597113200edbc6e"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mfg_garnet",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mfg_garnet",
+      "label": "Mean Field Garnet",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mfg/garnet.cc",
+        "checksum": {
+          "@id": "urn:sha256:8fddf7987d4c967b4178f5935dbf68fc3a51daf8586979bac327f6dd5f3e70b4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8fddf7987d4c967b4178f5935dbf68fc3a51daf8586979bac327f6dd5f3e70b4"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/misere",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "misere",
+      "label": "Misere Version of a Regular Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/misere.cc",
+        "checksum": {
+          "@id": "urn:sha256:00455ef4ff464bd283f57e5c27b4a21ef2649a5a9e69988c72fa6c939beaada6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "00455ef4ff464bd283f57e5c27b4a21ef2649a5a9e69988c72fa6c939beaada6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/mnk",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "mnk",
+      "label": "m,n,k-game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/mnk/mnk.cc",
+        "checksum": {
+          "@id": "urn:sha256:8b4fa2d0bdbc8c25c09ecabfa0a8546743d66a2e5f7e00a5201722253fa54d0e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8b4fa2d0bdbc8c25c09ecabfa0a8546743d66a2e5f7e00a5201722253fa54d0e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/morpion_solitaire",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "morpion_solitaire",
+      "label": "Morpion Solitaire",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/morpion_solitaire/morpion_solitaire.cc",
+        "checksum": {
+          "@id": "urn:sha256:9407e01eedea548af98229c16dd038888b2aff5086c3a2edbce10c6d6ebdc264",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9407e01eedea548af98229c16dd038888b2aff5086c3a2edbce10c6d6ebdc264"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/negotiation",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "negotiation",
+      "label": "Negotiation",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/negotiation/negotiation.cc",
+        "checksum": {
+          "@id": "urn:sha256:2cc725b99aef68d0705a35bef9301f5cb7f6bb38718363ee2b2c0e368f2118de",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2cc725b99aef68d0705a35bef9301f5cb7f6bb38718363ee2b2c0e368f2118de"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/nfg_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "nfg_game",
+      "label": "nfg_game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/nfg_game/nfg_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:0ee41651c341e74c44cae869e5b21b1a9669758ef863e5cee5d466abec9aad1e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0ee41651c341e74c44cae869e5b21b1a9669758ef863e5cee5d466abec9aad1e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/nim",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "nim",
+      "label": "Nim",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/nim/nim.cc",
+        "checksum": {
+          "@id": "urn:sha256:e82027c5aeed6efbcaa2b2f6d8fc07587a17027760a93617f42d0494c7c43019",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e82027c5aeed6efbcaa2b2f6d8fc07587a17027760a93617f42d0494c7c43019"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/nine_mens_morris",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "nine_mens_morris",
+      "label": "Nine men's morris",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/nine_mens_morris/nine_mens_morris.cc",
+        "checksum": {
+          "@id": "urn:sha256:f78df2653406ca2e50f18964db5a2378833349487e62a2f1e0409540b83fc306",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f78df2653406ca2e50f18964db5a2378833349487e62a2f1e0409540b83fc306"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/normal_form_extensive_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "normal_form_extensive_game",
+      "label": "Normal-Form Version of an Extensive Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/normal_form_extensive_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:3ab80462fe19784655de4dfc6ac53e54a276b36dc87d4e11a332565cc90d4703",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3ab80462fe19784655de4dfc6ac53e54a276b36dc87d4e11a332565cc90d4703"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/oh_hell",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "oh_hell",
+      "label": "Oh Hell!",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/oh_hell/oh_hell.cc",
+        "checksum": {
+          "@id": "urn:sha256:4bb9a8f09c6162c9a743d24eae5307964e5add68abf1d1e41ff9b4f9448557d0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4bb9a8f09c6162c9a743d24eae5307964e5add68abf1d1e41ff9b4f9448557d0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/oshi_zumo",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "oshi_zumo",
+      "label": "Oshi Zumo",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/oshi_zumo/oshi_zumo.cc",
+        "checksum": {
+          "@id": "urn:sha256:36b7629e9f0bb12c5288f85504e3922efe7c8120bb92c5b1b8f26fa5f22feacc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "36b7629e9f0bb12c5288f85504e3922efe7c8120bb92c5b1b8f26fa5f22feacc"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/othello",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "othello",
+      "label": "Othello",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/othello/othello.cc",
+        "checksum": {
+          "@id": "urn:sha256:a29fa3966d5ff6da4cab1c020122a71d85817039d43877541dcbd42383b95cee",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a29fa3966d5ff6da4cab1c020122a71d85817039d43877541dcbd42383b95cee"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/oware",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "oware",
+      "label": "Oware",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/oware/oware.cc",
+        "checksum": {
+          "@id": "urn:sha256:7f06da59be3319a4abc1ebebb222cb538693ba643f6f7a515f84fb5bea8ff627",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7f06da59be3319a4abc1ebebb222cb538693ba643f6f7a515f84fb5bea8ff627"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/pathfinding",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "pathfinding",
+      "label": "Pathfinding",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/pathfinding/pathfinding.cc",
+        "checksum": {
+          "@id": "urn:sha256:26dfd5daf1d3512fde25988a1f911f844c49ffaca58ee8176d1ba673f90c0e86",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "26dfd5daf1d3512fde25988a1f911f844c49ffaca58ee8176d1ba673f90c0e86"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/pentago",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "pentago",
+      "label": "Pentago",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/pentago/pentago.cc",
+        "checksum": {
+          "@id": "urn:sha256:b34bc81f95f0ff6f5ced20ec6f00241c6c6e18fc6fff0d7939d0767f367a4fe6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b34bc81f95f0ff6f5ced20ec6f00241c6c6e18fc6fff0d7939d0767f367a4fe6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/phantom_go",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "phantom_go",
+      "label": "Phantom Go",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/phantom_go/phantom_go.cc",
+        "checksum": {
+          "@id": "urn:sha256:a073927b0deca1e617dfe73470b978a7b11092ad0fdc9b588c7c1053071e686b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a073927b0deca1e617dfe73470b978a7b11092ad0fdc9b588c7c1053071e686b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/phantom_ttt",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "phantom_ttt",
+      "label": "Phantom Tic Tac Toe",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/phantom_ttt/phantom_ttt.cc",
+        "checksum": {
+          "@id": "urn:sha256:d45dca9f56a0ed6131590c476875eacde848c906b2aa4ad93962c15362e65e2b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d45dca9f56a0ed6131590c476875eacde848c906b2aa4ad93962c15362e65e2b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/phantom_ttt_ir",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "phantom_ttt_ir",
+      "label": "Phantom Tic Tac Toe with Imperfect Recall",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/phantom_ttt/phantom_ttt.cc",
+        "checksum": {
+          "@id": "urn:sha256:d45dca9f56a0ed6131590c476875eacde848c906b2aa4ad93962c15362e65e2b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d45dca9f56a0ed6131590c476875eacde848c906b2aa4ad93962c15362e65e2b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/pig",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "pig",
+      "label": "Pig",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/pig/pig.cc",
+        "checksum": {
+          "@id": "urn:sha256:66336f3f0fd80ede3d48723985f48929c6d107de7af2651b06203159d30823dd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "66336f3f0fd80ede3d48723985f48929c6d107de7af2651b06203159d30823dd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_ant_foraging",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_ant_foraging",
+      "label": "Python Ant Foraging",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/ant_foraging.py",
+        "checksum": {
+          "@id": "urn:sha256:749da3ccc610c002fe972d7f886664e01b01b7d7b733cc5277915e4436071375",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "749da3ccc610c002fe972d7f886664e01b01b7d7b733cc5277915e4436071375"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_block_dominoes",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_block_dominoes",
+      "label": "Python block dominoes",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/block_dominoes.py",
+        "checksum": {
+          "@id": "urn:sha256:f9777b2b52640915d2d3990b630b7f44b90c826c2c649ee821dc5af8b98f135a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f9777b2b52640915d2d3990b630b7f44b90c826c2c649ee821dc5af8b98f135a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_dynamic_routing",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_dynamic_routing",
+      "label": "Python Dynamic Routing Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/dynamic_routing.py",
+        "checksum": {
+          "@id": "urn:sha256:e57ef2ce06358497984059e2b801746ba2f28f0f17e7f04a44c7de0ebe515f6c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e57ef2ce06358497984059e2b801746ba2f28f0f17e7f04a44c7de0ebe515f6c"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_hangman",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_hangman",
+      "label": "Python Hangman",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/hangman.py",
+        "checksum": {
+          "@id": "urn:sha256:6e197721b48233fda11ff3054e14f9ff7dd05a947214cd02a76041fdb9878508",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6e197721b48233fda11ff3054e14f9ff7dd05a947214cd02a76041fdb9878508"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_iterated_prisoners_dilemma",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_iterated_prisoners_dilemma",
+      "label": "Python Iterated Prisoner's Dilemma",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/iterated_prisoners_dilemma.py",
+        "checksum": {
+          "@id": "urn:sha256:9d8d945a4e075ebeafe5e1632e02f6ea3e1ca917c0fb77b0c5b5338403f11e49",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9d8d945a4e075ebeafe5e1632e02f6ea3e1ca917c0fb77b0c5b5338403f11e49"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_kuhn_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_kuhn_poker",
+      "label": "Python Kuhn Poker",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/kuhn_poker.py",
+        "checksum": {
+          "@id": "urn:sha256:0cd0fdee9632c8dfd66949758059da92c8044c7fb35f540611fea195fc7f452c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0cd0fdee9632c8dfd66949758059da92c8044c7fb35f540611fea195fc7f452c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_liars_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_liars_poker",
+      "label": "Python Liars Poker",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/liars_poker.py",
+        "checksum": {
+          "@id": "urn:sha256:7082c4fb1b50fd4b977e9dea2dca8393d26731e084fdd9350d3f7b664b9c5dce",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7082c4fb1b50fd4b977e9dea2dca8393d26731e084fdd9350d3f7b664b9c5dce"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_mfg_crowd_avoidance",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_mfg_crowd_avoidance",
+      "label": "Python Mean Field Crowd Avoidance",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/crowd_avoidance.py",
+        "checksum": {
+          "@id": "urn:sha256:65ec3f10a32164669ebfc915fedbce8b8fb385cec1fd497798fb00273ec5d4d2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "65ec3f10a32164669ebfc915fedbce8b8fb385cec1fd497798fb00273ec5d4d2"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_mfg_crowd_modelling",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_mfg_crowd_modelling",
+      "label": "Python Mean Field Crowd Modelling",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/crowd_modelling.py",
+        "checksum": {
+          "@id": "urn:sha256:ae4f82b57910b41f2bf1ae56763a75c835861e49b52b23ffc9d6b2f738e7f84a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ae4f82b57910b41f2bf1ae56763a75c835861e49b52b23ffc9d6b2f738e7f84a"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_mfg_dynamic_routing",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_mfg_dynamic_routing",
+      "label": "Python Mean Field Routing Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/dynamic_routing.py",
+        "checksum": {
+          "@id": "urn:sha256:8714707e3709d910ebb4a92a38ddfc536763c9287454901accea49d42ffaa6e9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8714707e3709d910ebb4a92a38ddfc536763c9287454901accea49d42ffaa6e9"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_mfg_periodic_aversion",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_mfg_periodic_aversion",
+      "label": "Mean-Field Periodic Aversion Game",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/periodic_aversion.py",
+        "checksum": {
+          "@id": "urn:sha256:5f7d5ed196226b7b814cc0f071bceed7e560a94a3df6531f2d8f8ba1a6ba201e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5f7d5ed196226b7b814cc0f071bceed7e560a94a3df6531f2d8f8ba1a6ba201e"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_mfg_predator_prey",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_mfg_predator_prey",
+      "label": "Python Mean Field Predator Prey",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/mfg/games/predator_prey.py",
+        "checksum": {
+          "@id": "urn:sha256:17b9526d90554bc40f2121fbccacbad4966633308b539edc69f6fec7cb9093d6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "17b9526d90554bc40f2121fbccacbad4966633308b539edc69f6fec7cb9093d6"
+        }
+      },
+      "subject": [
+        "uogtox:MeanFieldGame"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_pokerkit_wrapper",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_pokerkit_wrapper",
+      "label": "Python Pokerkit",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/pokerkit_wrapper.py",
+        "checksum": {
+          "@id": "urn:sha256:ee8b64f2d81f043b83f42673792157ea8ef8a907409ad277c809d22047e1bc7c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ee8b64f2d81f043b83f42673792157ea8ef8a907409ad277c809d22047e1bc7c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_pokerkit_wrapper_acpc_style",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_pokerkit_wrapper_acpc_style",
+      "label": "Python Pokerkit ACPC Style (mimicking UniversalPoker / ACPC)",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/pokerkit_wrapper.py",
+        "checksum": {
+          "@id": "urn:sha256:ee8b64f2d81f043b83f42673792157ea8ef8a907409ad277c809d22047e1bc7c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ee8b64f2d81f043b83f42673792157ea8ef8a907409ad277c809d22047e1bc7c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_repeated_pokerkit",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_repeated_pokerkit",
+      "label": "Python Repeated Pokerkit",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/repeated_pokerkit.py",
+        "checksum": {
+          "@id": "urn:sha256:ba64a517b6c8c107f004dd80825f9e9b6756ab30689078017df6dcce1568bbc7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ba64a517b6c8c107f004dd80825f9e9b6756ab30689078017df6dcce1568bbc7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_team_dominoes",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_team_dominoes",
+      "label": "Python Team Dominoes (4 players)",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/team_dominoes.py",
+        "checksum": {
+          "@id": "urn:sha256:ef9185bc6886a903c7f3e49f588085b3d428b96463b7f01b546ae651225f4c40",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ef9185bc6886a903c7f3e49f588085b3d428b96463b7f01b546ae651225f4c40"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/python_tic_tac_toe",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "python_tic_tac_toe",
+      "label": "Python Tic-Tac-Toe",
+      "format": "OpenSpiel Python",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/games/tic_tac_toe.py",
+        "checksum": {
+          "@id": "urn:sha256:946add5323a249747e9bbc656c9cd696dfc6d38a1752901ad6afb9ab4b49a4c4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "946add5323a249747e9bbc656c9cd696dfc6d38a1752901ad6afb9ab4b49a4c4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/quoridor",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "quoridor",
+      "label": "Quoridor",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/quoridor/quoridor.cc",
+        "checksum": {
+          "@id": "urn:sha256:9ea93330cd85b05ba0cc138d472455f0cf95cf245b9d55b3574741383d440cd5",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9ea93330cd85b05ba0cc138d472455f0cf95cf245b9d55b3574741383d440cd5"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/rbc",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "rbc",
+      "label": "Reconnaissance Blind Chess",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/rbc/rbc.cc",
+        "checksum": {
+          "@id": "urn:sha256:7972ce60fcf80a27068f0665c4259934017cea29852ff067f1c934ceff897517",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7972ce60fcf80a27068f0665c4259934017cea29852ff067f1c934ceff897517"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/repeated_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "repeated_game",
+      "label": "Repeated Normal-Form Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/repeated_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:8d4e8462a10857eefee47a24fd527da7e5191b9cef50bf0f58529d4bba6ba293",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8d4e8462a10857eefee47a24fd527da7e5191b9cef50bf0f58529d4bba6ba293"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/repeated_leduc_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "repeated_leduc_poker",
+      "label": "Repeated Leduc Poker",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/leduc_poker/repeated_leduc_poker.cc",
+        "checksum": {
+          "@id": "urn:sha256:ca057e6129c6612e6155f267ab2992642be5dc036a4cef8c61b7e92cd03d9bc8",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ca057e6129c6612e6155f267ab2992642be5dc036a4cef8c61b7e92cd03d9bc8"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/repeated_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "repeated_poker",
+      "label": "Repeated Poker",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/universal_poker/repeated_poker.cc",
+        "checksum": {
+          "@id": "urn:sha256:5b6fa503f0ad515ad3bc1fb01dd1d42447e545c1fd2e0d778612bf7a34b21e6b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5b6fa503f0ad515ad3bc1fb01dd1d42447e545c1fd2e0d778612bf7a34b21e6b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/restricted_nash_response",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "restricted_nash_response",
+      "label": "Restricted Nash Response Modification of a Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/restricted_nash_response.cc",
+        "checksum": {
+          "@id": "urn:sha256:eefe9ae7e54fdd00c81d770198867897d8766a69a87b665aa7987bfda88e2110",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "eefe9ae7e54fdd00c81d770198867897d8766a69a87b665aa7987bfda88e2110"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/sheriff",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "sheriff",
+      "label": "Sheriff",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/sheriff/sheriff.cc",
+        "checksum": {
+          "@id": "urn:sha256:32bd84e541d583808a28a94599d86a87accddfec7169663d4b190389287b0674",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "32bd84e541d583808a28a94599d86a87accddfec7169663d4b190389287b0674"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/shogi",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "shogi",
+      "label": "Shogi",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/shogi/shogi.cc",
+        "checksum": {
+          "@id": "urn:sha256:6378fb034e237446b62d3a1fcc218fa40b888cf539127f5c35c4b7d2d93059d1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6378fb034e237446b62d3a1fcc218fa40b888cf539127f5c35c4b7d2d93059d1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/skat",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "skat",
+      "label": "Skat",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/skat/skat.cc",
+        "checksum": {
+          "@id": "urn:sha256:33879c3a243a34278ae84d52d7d06d1de0d965b8331743e14a7f6dcc1eb35bee",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "33879c3a243a34278ae84d52d7d06d1de0d965b8331743e14a7f6dcc1eb35bee"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/snake",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "snake",
+      "label": "Snake",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/snake/snake.cc",
+        "checksum": {
+          "@id": "urn:sha256:95a2c212ae8a6bac25f16687b675504a82ad25d7d086abd03cb9762f70cf35a2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "95a2c212ae8a6bac25f16687b675504a82ad25d7d086abd03cb9762f70cf35a2"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/social_deduction",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "social_deduction",
+      "label": "Social Deduction",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/social_deduction/social_deduction.cc",
+        "checksum": {
+          "@id": "urn:sha256:67a4eeed0d51ee98241bbfa498bbcca1d1962cbcba7e1f5b353497b1e79b0395",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "67a4eeed0d51ee98241bbfa498bbcca1d1962cbcba7e1f5b353497b1e79b0395"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/solitaire",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "solitaire",
+      "label": "Klondike Solitaire",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/solitaire/solitaire.cc",
+        "checksum": {
+          "@id": "urn:sha256:38a3a8683bffd91aeea65863f09dfe137552c5e7a5ad28f2e3e0da62293ed4b2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "38a3a8683bffd91aeea65863f09dfe137552c5e7a5ad28f2e3e0da62293ed4b2"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/spades",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "spades",
+      "label": "Partnership Spades",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/spades/spades.cc",
+        "checksum": {
+          "@id": "urn:sha256:a2ea3a578b8fe15f9c0e0328b7c600ef2a2be4e29869b80681fd07651b030a0c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a2ea3a578b8fe15f9c0e0328b7c600ef2a2be4e29869b80681fd07651b030a0c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/start_at",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "start_at",
+      "label": "Start at specified subgame of a regular game.",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/start_at.cc",
+        "checksum": {
+          "@id": "urn:sha256:a737f1f1527a6237c70963254d31eda007680b74e1e38499e8a75df1554dfd85",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a737f1f1527a6237c70963254d31eda007680b74e1e38499e8a75df1554dfd85"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/stones_and_gems",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "stones_and_gems",
+      "label": "Stones and Gems",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/stones_and_gems/stones_and_gems.cc",
+        "checksum": {
+          "@id": "urn:sha256:557d8aa0f684a6eb1fc44ed21c3f0ede2438526ebedbb74492a4aee920d42e81",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "557d8aa0f684a6eb1fc44ed21c3f0ede2438526ebedbb74492a4aee920d42e81"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/tarok",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "tarok",
+      "label": "Slovenian Tarok",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/tarok/tarok.cc",
+        "checksum": {
+          "@id": "urn:sha256:f95f7596c8f7483bbbfdc4d5329ad345ab242432df34a776736bea00b2367079",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f95f7596c8f7483bbbfdc4d5329ad345ab242432df34a776736bea00b2367079"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/tic_tac_toe",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "tic_tac_toe",
+      "label": "Tic Tac Toe",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/tic_tac_toe/tic_tac_toe.cc",
+        "checksum": {
+          "@id": "urn:sha256:3a659e9d40a6623eba4c716ac676e0e6a568afae187eb4e11d4366650b4ab2d6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3a659e9d40a6623eba4c716ac676e0e6a568afae187eb4e11d4366650b4ab2d6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/tiny_bridge_2p",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "tiny_bridge_2p",
+      "label": "Tiny Bridge (Uncontested)",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/tiny_bridge/tiny_bridge.cc",
+        "checksum": {
+          "@id": "urn:sha256:97ac45465c95c3cce07d32e832a58f8c1aaa3d2af384f101c9ebc01859be429c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "97ac45465c95c3cce07d32e832a58f8c1aaa3d2af384f101c9ebc01859be429c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/tiny_bridge_4p",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "tiny_bridge_4p",
+      "label": "Tiny Bridge (Contested)",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/tiny_bridge/tiny_bridge.cc",
+        "checksum": {
+          "@id": "urn:sha256:97ac45465c95c3cce07d32e832a58f8c1aaa3d2af384f101c9ebc01859be429c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "97ac45465c95c3cce07d32e832a58f8c1aaa3d2af384f101c9ebc01859be429c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/tiny_hanabi",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "tiny_hanabi",
+      "label": "Tiny Hanabi",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/tiny_hanabi/tiny_hanabi.cc",
+        "checksum": {
+          "@id": "urn:sha256:ec2b88c3bf89a726d185754662e555f17c0a71d7a054d73ffce3b51d8dced650",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ec2b88c3bf89a726d185754662e555f17c0a71d7a054d73ffce3b51d8dced650"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/trade_comm",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "trade_comm",
+      "label": "Trading and Communication",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/trade_comm/trade_comm.cc",
+        "checksum": {
+          "@id": "urn:sha256:f6f6b5bf34a2adfb96c77df85a837c21f35a452af0cd72922815d22e981f0cf1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f6f6b5bf34a2adfb96c77df85a837c21f35a452af0cd72922815d22e981f0cf1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/turn_based_simultaneous_game",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "turn_based_simultaneous_game",
+      "label": "Turn-Based Version of a Simultaneous-Move Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/turn_based_simultaneous_game.cc",
+        "checksum": {
+          "@id": "urn:sha256:a50a3ff212e89986e4abf7ff4c717071c1f6593e545649d52da78b1d27177b3a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a50a3ff212e89986e4abf7ff4c717071c1f6593e545649d52da78b1d27177b3a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/twixt",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "twixt",
+      "label": "TwixT",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/twixt/twixt.cc",
+        "checksum": {
+          "@id": "urn:sha256:d0e55d97234303109cfcfcfb2066a0e7083043dc94354e3db451e47f23d250c5",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d0e55d97234303109cfcfcfb2066a0e7083043dc94354e3db451e47f23d250c5"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/ultimate_tic_tac_toe",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "ultimate_tic_tac_toe",
+      "label": "Ultimate Tic-Tac-Toe",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/ultimate_tic_tac_toe/ultimate_tic_tac_toe.cc",
+        "checksum": {
+          "@id": "urn:sha256:153f7fb6d78f8b4be75a345e1d1fd6246d446208d11bdedd547066d6ec687b2b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "153f7fb6d78f8b4be75a345e1d1fd6246d446208d11bdedd547066d6ec687b2b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/universal_poker",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "universal_poker",
+      "label": "Universal Poker",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/universal_poker/universal_poker.cc",
+        "checksum": {
+          "@id": "urn:sha256:5ae7f53979becac11d1ddf76998d6656cf38e69e95a1d35e2e2f7ca6c42732c1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5ae7f53979becac11d1ddf76998d6656cf38e69e95a1d35e2e2f7ca6c42732c1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/xiangqi",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "xiangqi",
+      "label": "Chinese Chess (Xiangqi)",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/xiangqi/xiangqi.cc",
+        "checksum": {
+          "@id": "urn:sha256:c431a8aee72fa5e5e7674f286f63883f3628182de8bcceca338fa9b992593907",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c431a8aee72fa5e5e7674f286f63883f3628182de8bcceca338fa9b992593907"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/y",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "y",
+      "label": "Y Connection Game",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/y/y.cc",
+        "checksum": {
+          "@id": "urn:sha256:113a533a610196c5e3f169775a039f0f38d19dd4d26a8e3f18236d18496456bd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "113a533a610196c5e3f169775a039f0f38d19dd4d26a8e3f18236d18496456bd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/yacht",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "yacht",
+      "label": "Yacht",
+      "format": "OpenSpiel C++",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/yacht/yacht.cc",
+        "checksum": {
+          "@id": "urn:sha256:472fa8f02f58d0ae25460f010481361b64e0e59dfbaccd19d8057b5cf934c58a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "472fa8f02f58d0ae25460f010481361b64e0e59dfbaccd19d8057b5cf934c58a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/zerosum",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "zerosum",
+      "label": "ZeroSum Version of a Regular Game",
+      "format": "OpenSpiel transform",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/game_transforms/zerosum.cc",
+        "checksum": {
+          "@id": "urn:sha256:cc2e4866a53b09c3eac2cf6cbf134a915231b643107bdfe73dd52518654e8f23",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "cc2e4866a53b09c3eac2cf6cbf134a915231b643107bdfe73dd52518654e8f23"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    }
+  ]
+}

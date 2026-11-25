@@ -61,7 +61,10 @@ EXPORT_SCHEMA = json.loads(r'''{
           "const": "edithatogo/paignia"
         },
         "revision": {
-          "const": "bd880dd756d2ba56cc5f479bc078cea31b53c1d1"
+          "enum": [
+            "bd880dd756d2ba56cc5f479bc078cea31b53c1d1",
+            "a04a19da06cc50e310a172574ed66f62000b891a"
+          ]
         },
         "core_package": {
           "const": "paignia-core"
@@ -175,6 +178,6 @@ def validate_executable_subset(record: Mapping[str, Any]) -> dict[str, object]:
     return {
         "status": "profile_declaration_compatible",
         "profile_id": PROFILE_ID,
-        "provider_revision": PROVIDER_REVISION,
+        "provider_revision": record["provider"]["revision"],
         "native_execution_qualified": False,
     }

@@ -1,5 +1,8 @@
 # Universal Open Game Theory Ontology (UOGTO)
 
+[External game catalogues](docs/contracts/external-game-catalogues-v1.md)
+link the Gambit and OpenSpiel release definitions to UOGTO terms.
+
 ## Overview
 UOGTO (Universal Open Game Theory Ontology) defines modular game-theoretic semantics
 for classical, cooperative, multi-agent, mechanism-design and simulation-related
