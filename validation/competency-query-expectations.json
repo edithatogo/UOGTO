@@ -180,6 +180,23 @@
           "action": "http://example.org/temporality/bob-later-choice"
         }
       ]
+    },
+    {
+      "query": "cq26-discounted-markov-stage-transitions.rq",
+      "example_graphs": ["examples/recurring-funding-discounted-markov-v1.ttl"],
+      "min_count": 16,
+      "required_bindings": [
+        {
+          "game": "https://example.org/uogto/recurring-funding/v1/specification",
+          "representation": "https://example.org/uogto/recurring-funding/v1/representation",
+          "state": "https://example.org/uogto/recurring-funding/v1/pressure",
+          "firstAction": "https://example.org/uogto/recurring-funding/v1/settle",
+          "secondAction": "https://example.org/uogto/recurring-funding/v1/accept",
+          "reward": "-1.0",
+          "nextState": "https://example.org/uogto/recurring-funding/v1/stable",
+          "weight": "0.25"
+        }
+      ]
     }
   ]
 }

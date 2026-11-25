@@ -1,5 +1,21 @@
 # Conductor Run Log
 
+## 2026-11-25 — Paignia T22 discounted Markov projection
+
+- Added the versioned RDF shape, packaged projector, synthetic recurring-funding
+  graph, JSON-LD terms and CQ26. CQ26 retrieves 16 labelled transitions.
+- Checked exact binary64 distribution mass at both `1e-12` boundaries and
+  under reordered axes. The projected policy and analytic Bellman reference
+  match the frozen fixture.
+- The fixture SHA-256 is
+  `2502af2adff68ff9b41e11c68f28ba93a9c452baa0b0f74831fec5ac768f8552`.
+- With CPython 3.15.2, `make validate` passed and all 40 focused checks
+  passed, including projection from an isolated installed wheel. The
+  broader `make test` run had 452 passes, one skip and one arXiv privacy-test failure. That
+  test expects basename-only output for paths outside the repository and
+  received a relative path from the repository-local test temp directory.
+- [UOGTO source admission and replay contract](../docs/contracts/executable-discounted-markov-profile-v1.md)
+
 ## 2026-11-25 — External game catalogue qualification
 
 - Verified the frozen Gambit and OpenSpiel downloads. Reproduced the catalogue

@@ -71,13 +71,15 @@ def test_isolated_wheel_install_imports_runner_and_playground(tmp_path) -> None:
     (site_packages / "smoke_dependencies.pth").write_text(
         "\n".join(dependency_roots) + "\n", encoding="utf-8",
     )
-    outside_checkout = tmp_path / "outside-checkout"
-    outside_checkout.mkdir()
+    isolated_cwd = tmp_path / "isolated-working-directory"
+    isolated_cwd.mkdir()
     declaration = checkout / "tests/fixtures/paignia-static-declaration-v1.json"
     rdf = checkout / "tests/fixtures/paignia-information-set-v1.ttl"
+    discounted_rdf = checkout / "examples/recurring-funding-discounted-markov-v1.ttl"
     payload = json.dumps({
         "declaration": json.loads(declaration.read_text(encoding="utf-8")),
         "rdf": rdf.read_text(encoding="utf-8"),
+        "discounted_rdf": discounted_rdf.read_text(encoding="utf-8"),
     })
     code = """
 import json
@@ -90,7 +92,7 @@ import uogto.playground.app
 import rdflib, pyshacl, yaml, jsonschema
 from rdflib import Graph, URIRef
 from uogto.interchange import UnsupportedExecutableSubset, validate_executable_subset
-from uogto.interchange import information_sets
+from uogto.interchange import discounted_markov, information_sets
 
 payload = json.load(sys.stdin)
 declaration = payload['declaration']
@@ -114,14 +116,23 @@ assert profile["declaration"]["sets"][0]["members"] == [
     "https://example.org/doors/left#choice",
     "https://example.org/doors/right#choice",
 ]
-modules = [uogto, uogto.interchange, information_sets, uogto.runner, uogto.playground.app]
+discounted = discounted_markov.project_game(
+    Graph().parse(data=payload["discounted_rdf"], format="turtle"),
+    discounted_markov.FROZEN_SPECIFICATION_IRI,
+)
+assert discounted["discount"] == 0.75
+assert discounted["method"]["policy"] == [[[1.0, 0.0], [1.0, 0.0]]] * 2
+modules = [
+    uogto, uogto.interchange, discounted_markov, information_sets, uogto.runner, uogto.playground.app,
+]
 print(json.dumps([str(Path(module.__file__).resolve()) for module in modules]))
 """
     result = subprocess.run(
-        [str(python), "-I", "-c", code], cwd=outside_checkout,
+        [str(python), "-I", "-c", code], cwd=isolated_cwd,
         input=payload,
         check=True, capture_output=True, text=True, timeout=60,
     )
     for origin in json.loads(result.stdout):
         assert Path(origin).is_relative_to(site_packages), origin
-        assert not Path(origin).is_relative_to(checkout), origin
+        # The temporary installed wheel can itself live under the checkout.
+        assert not Path(origin).is_relative_to(checkout / "uogto"), origin
