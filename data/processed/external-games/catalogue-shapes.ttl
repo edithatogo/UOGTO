@@ -13,7 +13,9 @@
     sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ; sh:datatype xsd:string ] ;
     sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
     sh:property [ sh:path dct:format ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:in ( "EFG" "NFG" "GAMUT" "OpenSpiel C++" "OpenSpiel Python" "OpenSpiel transform" ) ] ;
+                  sh:in ( "EFG" "NFG" "GAMUT" "GAMUT preset" "GAMUT collection"
+                          "OpenSpiel C++" "OpenSpiel Python" "OpenSpiel transform"
+                          "OpenSpiel loader" "OpenSpiel integration" ) ] ;
     sh:property [ sh:path dct:subject ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:property [ sh:path ( prov:wasDerivedFrom spdx:checksum ) ;

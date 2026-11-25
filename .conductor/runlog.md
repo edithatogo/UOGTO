@@ -7,6 +7,9 @@
 - Reconciled the 123 registered identifiers in the T21 OpenSpiel binary with
   the 126 C++ source registrations. Included the three optional C++ games
   and 20 separate Python registrations.
+- Independently checked the GAMUT registry, corrected two loader identifiers
+  and included the contributed Gambit files, GAMUT presets and collections,
+  and the two documented OpenSpiel companion interfaces.
 - The catalogue SHACL and SPARQL tests, repository validation and test suite
   passed with Python 3.15.2.
 

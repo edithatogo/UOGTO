@@ -3,8 +3,8 @@
 ## 2026-11-25 — External game catalogues
 
 The versioned [catalogue](../docs/contracts/external-game-catalogues-v1.md)
-indexes all 38 bundled Gambit models, 35 Gambit GAMUT classes and 146
-OpenSpiel 2.0.2 source registrations. The JSON-LD dataset links exact
+indexes 38 Gambit catalogue models and 131 contributed files, the 78 GAMUT
+registry entries and 146 OpenSpiel registrations with two companion interfaces. The JSON-LD dataset links exact
 source hashes and existing semantic classes. Executable admission is a
 separate game and method claim.
 

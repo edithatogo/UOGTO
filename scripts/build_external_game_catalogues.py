@@ -19,6 +19,7 @@ OPEN_SPIEL = "https://github.com/google-deepmind/open_spiel/blob/v2.0.2"
 SOURCES = {
     "gambit": "35a2d7df4f8181cb216ce9a2b10ca820724768d8c69787a608a4a2725a745278",
     "gambit_catalog": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+    "gamut": "3469fafaacf38b6fa2c30fc9d41501fb36f1b37811ca9d40be7964df2f698949",
     "openspiel": "6f520dfe499b9e5e1e3a31cf77bf071abb02b98104789e7698021922a064e856",
 }
 CONTEXT = {
@@ -31,6 +32,7 @@ CONTEXT = {
     "uogtox": "https://w3id.org/uogto/extensions#",
     "identifier": "dct:identifier",
     "label": "rdfs:label",
+    "alternative": "dct:alternative",
     "format": "dct:format",
     "version": "dcat:version",
     "catalogue": {"@id": "dct:isPartOf", "@type": "@id"},
@@ -93,15 +95,21 @@ def record(catalogue, key, label, format_name, source_uri, data, subjects):
 
 
 def gambit_models(path):
-    parent = f"{BASE}/gambit/16.7.0/models"
     for relative, data in read_archive(path):
-        if relative.parts[0] != "catalog" or relative.suffix not in {".efg", ".nfg"}:
+        if relative.suffix not in {".efg", ".nfg"}:
             continue
-        model = PurePosixPath(*relative.parts[1:])
-        key = model.with_suffix("").as_posix()
-        text = data.decode("utf-8-sig")
+        if relative.parts[0] == "catalog":
+            parent = f"{BASE}/gambit/16.7.0/models"
+            model = PurePosixPath(*relative.parts[1:])
+        elif relative.parts[:2] == ("contrib", "games"):
+            parent = f"{BASE}/gambit/16.7.0/contributed"
+            model = PurePosixPath(*relative.parts[2:])
+        else:
+            continue
+        key = (model.with_suffix("") if relative.parts[0] == "catalog" else model).as_posix()
+        text = data.decode("utf-8-sig", errors="replace")
         header = re.match(rf"\s*(?:EFG|NFG)\s+\d+\s+\w+\s+({QUOTED})", text)
-        if header is None:
+        if header is None and relative.parts[0] == "catalog":
             raise ValueError(f"missing Gambit catalogue header: {relative}")
         subject = (
             "uogto:NormalFormRepresentation"
@@ -111,7 +119,7 @@ def gambit_models(path):
         yield record(
             parent,
             key,
-            ast.literal_eval(header[1]),
+            ast.literal_eval(header[1]) if header else key,
             model.suffix[1:].upper(),
             f"{GAMBIT}/{quote(relative.as_posix())}",
             data,
@@ -119,7 +127,7 @@ def gambit_models(path):
         )
 
 
-def gamut_classes(path):
+def gamut_classes(path, archive):
     source = path.read_bytes()
     definitions = [
         node.value
@@ -130,17 +138,39 @@ def gamut_classes(path):
         )
     ]
     (definition,) = definitions
-    for entry in ast.literal_eval(definition):
-        key = entry["Class"]
-        yield record(
+    aliases = {"GuessThirdsAve": "GuessTwoThirdsAve", "ShapleyGame": "ShapleysGame"}
+    advertised = {
+        aliases.get(entry["Class"], entry["Class"]): entry["Class"]
+        for entry in ast.literal_eval(definition)
+    }
+    (registry,) = [
+        data
+        for relative, data in read_archive(archive)
+        if relative.as_posix() == "edu/stanford/multiagent/gamer/games.txt"
+    ]
+    entries = dict(
+        tuple(part.strip() for part in line.split("=", 1))
+        for line in registry.decode("ascii").splitlines()
+        if line.strip() and not line.startswith("#")
+    )
+    if {key for key, body in entries.items() if not body} != set(advertised):
+        raise ValueError("Gambit's GAMUT classes differ from the official registry")
+    for key, body in entries.items():
+        kind = (
+            "GAMUT" if not body else "GAMUT preset" if body.startswith("[") else "GAMUT collection"
+        )
+        row = record(
             f"{BASE}/gambit/16.7.0/gamut",
             key,
             key,
-            "GAMUT",
-            f"{GAMBIT}/src/pygambit/catalog.py",
-            source,
+            kind,
+            "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+            registry,
             ["uogto:NormalFormRepresentation"],
         )
+        if key in advertised and key != advertised[key]:
+            row["alternative"] = advertised[key]
+        yield row
 
 
 def cpp_types(source):
@@ -202,6 +232,21 @@ def subjects(facts):
 def openspiel_games(path):
     for relative, data in read_archive(path):
         directory = relative.parts[:2]
+        if relative.as_posix() in {
+            "open_spiel/python/coalitional_games/wvg.py",
+            "open_spiel/python/examples/ppo_example.py",
+        }:
+            weighted = relative.name == "wvg.py"
+            yield record(
+                f"{BASE}/openspiel/2.0.2",
+                "weighted_voting" if weighted else "atari",
+                "Weighted Voting Games" if weighted else "Atari integration",
+                "OpenSpiel integration",
+                f"{OPEN_SPIEL}/{relative}",
+                data,
+                ["uogtox:CooperativeGame"] if weighted else ["uogto:GameSpecification"],
+            )
+            continue
         if (
             relative.suffix == ".cc"
             and not relative.name.endswith("_test.cc")
@@ -230,7 +275,7 @@ def openspiel_games(path):
                     f"{BASE}/openspiel/2.0.2",
                     key,
                     label,
-                    format_name,
+                    "OpenSpiel loader" if key in {"nfg_game", "efg_game"} else format_name,
                     f"{OPEN_SPIEL}/{quote(relative.as_posix())}",
                     data,
                     subjects(facts),
@@ -250,10 +295,11 @@ def dataset(identifier, label, version, url, digest):
     }
 
 
-def build(gambit, gambit_catalog, openspiel):
+def build(gambit, gambit_catalog, gamut, openspiel):
     for path, key in (
         (gambit, "gambit"),
         (gambit_catalog, "gambit_catalog"),
+        (gamut, "gamut"),
         (openspiel, "openspiel"),
     ):
         verify_file(path, key)
@@ -266,11 +312,18 @@ def build(gambit, gambit_catalog, openspiel):
             SOURCES["gambit"],
         ),
         dataset(
-            f"{BASE}/gambit/16.7.0/gamut",
-            "GAMUT classes exposed through Gambit",
+            f"{BASE}/gambit/16.7.0/contributed",
+            "Gambit contributed models and parser fixtures",
             "16.7.0",
-            "https://raw.githubusercontent.com/gambitproject/gambit/v16.7.0/src/pygambit/catalog.py",
-            SOURCES["gambit_catalog"],
+            "https://github.com/gambitproject/gambit/releases/download/v16.7.0/gambit-16.7.0.tar.gz",
+            SOURCES["gambit"],
+        ),
+        dataset(
+            f"{BASE}/gambit/16.7.0/gamut",
+            "GAMUT generator registry linked from Gambit",
+            "1.0.1",
+            "https://gamut.stanford.edu/gamut.src.tgz",
+            SOURCES["gamut"],
         ),
         dataset(
             f"{BASE}/openspiel/2.0.2",
@@ -281,7 +334,11 @@ def build(gambit, gambit_catalog, openspiel):
         ),
     ]
     entries = sorted(
-        (*gambit_models(gambit), *gamut_classes(gambit_catalog), *openspiel_games(openspiel)),
+        (
+            *gambit_models(gambit),
+            *gamut_classes(gambit_catalog, gamut),
+            *openspiel_games(openspiel),
+        ),
         key=lambda item: item["@id"],
     )
     if len({entry["@id"] for entry in entries}) != len(entries):
@@ -293,17 +350,18 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--gambit", type=Path, required=True)
     parser.add_argument("--gambit-catalog", type=Path, required=True)
+    parser.add_argument("--gamut", type=Path, required=True)
     parser.add_argument("--openspiel", type=Path, required=True)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    catalogue = build(args.gambit, args.gambit_catalog, args.openspiel)
+    catalogue = build(args.gambit, args.gambit_catalog, args.gamut, args.openspiel)
     rendered = (json.dumps(catalogue, indent=2, ensure_ascii=False) + "\n").encode()
     if args.check:
         if OUTPUT.read_bytes() != rendered:
             raise SystemExit("committed catalogue differs from the frozen upstream releases")
     else:
         OUTPUT.write_bytes(rendered)
-    print(f"{len(catalogue['@graph']) - 3} definition references")
+    print(f"{sum('identifier' in row for row in catalogue['@graph'])} definition references")
 
 
 if __name__ == "__main__":

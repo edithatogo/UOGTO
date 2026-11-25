@@ -10,13 +10,22 @@ needed to load a particular game alongside a reference.
 | Release source | Entries |
 | --- | ---: |
 | Gambit 16.7.0 package catalogue | 38 models, comprising 32 EFG and 6 NFG files |
-| Gambit 16.7.0 GAMUT adapter | 35 generator classes |
-| OpenSpiel 2.0.2 source | 146 registrations, comprising 116 C++ games, 10 transforms and 20 Python games |
+| Gambit 16.7.0 contributed directory | 131 source files, comprising 86 EFG and 45 NFG files |
+| GAMUT 1.0.1 registry exposed through Gambit | 35 base generators, 17 presets and 26 collections |
+| OpenSpiel 2.0.2 source | 146 registrations, comprising 114 C++ games, 2 file loaders, 10 transforms and 20 Python games, plus two documented integrations |
 
 The T21 OpenSpiel binary exposes 123 of the 126 C++ registrations. The
 additional definitions are `hanabi`, `universal_poker` and `repeated_poker`,
-which are available through optional build components. Python game modules
-register separately. A transform needs its input game and configuration.
+which are available through optional build components. Python game modules register separately. A transform needs its input game
+and configuration. Weighted voting and Atari use their linked Python
+interfaces. The latter uses an external environment.
+
+The contributed Gambit directory includes parser controls and files that
+share a basename. Their keys retain the file suffix. A reference records the
+source even when the file is a negative parser control. The GAMUT registry
+uses `GuessTwoThirdsAve` and `ShapleysGame` as loader keys. The catalogue
+preserves the Gambit-listed spellings as aliases. Collections group or select
+generators. Presets provide parameters for a generator.
 
 ## Load and save
 
@@ -57,14 +66,16 @@ and game execution in the upstream libraries.
 
 ## Validate and reproduce
 
-Download the three named release sources from `dcat:downloadURL` in the
-catalogue. The builder checks all hashes before parsing source files.
+Download the release archives linked by `dcat:downloadURL` and the
+[tagged PyGambit catalogue module](https://raw.githubusercontent.com/gambitproject/gambit/v16.7.0/src/pygambit/catalog.py).
+The builder checks their hashes before parsing source files.
 Use the repository's qualified Python and pass explicit paths:
 
 ```sh
 target/dev-python/bin/python scripts/build_external_game_catalogues.py \
   --gambit /path/to/gambit-16.7.0.tar.gz \
   --gambit-catalog /path/to/v16.7.0/catalog.py \
+  --gamut /path/to/gamut.src.tgz \
   --openspiel /path/to/open_spiel-2.0.2.tar.gz --check
 target/dev-python/bin/python -m pytest -q tests/test_external_game_catalogues.py
 ```

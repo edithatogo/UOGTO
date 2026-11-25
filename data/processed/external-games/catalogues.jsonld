@@ -9,6 +9,7 @@
     "uogtox": "https://w3id.org/uogto/extensions#",
     "identifier": "dct:identifier",
     "label": "rdfs:label",
+    "alternative": "dct:alternative",
     "format": "dct:format",
     "version": "dcat:version",
     "catalogue": {
@@ -52,16 +53,29 @@
       }
     },
     {
-      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
       "@type": "dcat:Dataset",
-      "label": "GAMUT classes exposed through Gambit",
+      "label": "Gambit contributed models and parser fixtures",
       "version": "16.7.0",
-      "download": "https://raw.githubusercontent.com/gambitproject/gambit/v16.7.0/src/pygambit/catalog.py",
+      "download": "https://github.com/gambitproject/gambit/releases/download/v16.7.0/gambit-16.7.0.tar.gz",
       "checksum": {
-        "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+        "@id": "urn:sha256:35a2d7df4f8181cb216ce9a2b10ca820724768d8c69787a608a4a2725a745278",
         "@type": "spdx:Checksum",
         "algorithm": "spdx:checksumAlgorithm_sha256",
-        "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+        "checksumValue": "35a2d7df4f8181cb216ce9a2b10ca820724768d8c69787a608a4a2725a745278"
+      }
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "@type": "dcat:Dataset",
+      "label": "GAMUT generator registry linked from Gambit",
+      "version": "1.0.1",
+      "download": "https://gamut.stanford.edu/gamut.src.tgz",
+      "checksum": {
+        "@id": "urn:sha256:3469fafaacf38b6fa2c30fc9d41501fb36f1b37811ca9d40be7964df2f698949",
+        "@type": "spdx:Checksum",
+        "algorithm": "spdx:checksumAlgorithm_sha256",
+        "checksumValue": "3469fafaacf38b6fa2c30fc9d41501fb36f1b37811ca9d40be7964df2f698949"
       }
     },
     {
@@ -78,6 +92,2626 @@
       }
     },
     {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2s2x2x2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2s2x2x2.efg",
+      "label": "Two stage McKelvey McLennan game with 9 equilibria each stage",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2s2x2x2.efg",
+        "checksum": {
+          "@id": "urn:sha256:4a47756e2fb6f53309be52ccfd0bd8e340b03bf48550b0f24dbd840eefb71b0e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4a47756e2fb6f53309be52ccfd0bd8e340b03bf48550b0f24dbd840eefb71b0e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2smp.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2smp.efg",
+      "label": "Two-stage matching pennies game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2smp.efg",
+        "checksum": {
+          "@id": "urn:sha256:c1e7c2cd67db5153f5008eafe579bfb043a421c22ca5dcee611861f4bc23644f",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c1e7c2cd67db5153f5008eafe579bfb043a421c22ca5dcee611861f4bc23644f"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2.nfg",
+      "label": "Two person 2 x 2 game with unique mixed equilibrium",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:8b77226435b00a4f8393051b1d7bba5fba39a29e2b843ac218ac20faa28d070e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8b77226435b00a4f8393051b1d7bba5fba39a29e2b843ac218ac20faa28d070e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2a.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2a.nfg",
+      "label": "Two person 2 x 2 game with unique mixed equilibrium",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2a.nfg",
+        "checksum": {
+          "@id": "urn:sha256:b853814eb6c12c2e119555e1cb9231ca72826ae922fc599d463f53691a2cad84",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b853814eb6c12c2e119555e1cb9231ca72826ae922fc599d463f53691a2cad84"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2const.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2const.nfg",
+      "label": "2 x 2 constant sum game with unique mixed equilibrium",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2const.nfg",
+        "checksum": {
+          "@id": "urn:sha256:9f7bc5b40366c5dfc38b93966627f236c846a3b4ff34fd2dc9b578cdb1098cbb",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9f7bc5b40366c5dfc38b93966627f236c846a3b4ff34fd2dc9b578cdb1098cbb"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2x2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2x2.efg",
+      "label": "McKelvey McLennan game with 9 equilibria, 2 totally mixed",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2x2.efg",
+        "checksum": {
+          "@id": "urn:sha256:2998a4cab0794e7779fd9b8da248c9de1edfc1ee02e8e280b05b4074e6f0c91b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2998a4cab0794e7779fd9b8da248c9de1edfc1ee02e8e280b05b4074e6f0c91b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2x2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2x2.nfg",
+      "label": "2x2x2 Example from McKelvey-McLennan, with 9 Nash equilibria, 2 totally mixed",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2x2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:1dbe503df1eb27c1176816e49f678dfd33dbde42ed3b1b3efc6c998b8910181b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1dbe503df1eb27c1176816e49f678dfd33dbde42ed3b1b3efc6c998b8910181b"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2x2x2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2x2x2.nfg",
+      "label": "Four person, 2x2x2x2 game with 3 Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2x2x2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:10c728a3db9ad6055f62ee5093e0f0441472410dbc148b8f8e417a12508fa596",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "10c728a3db9ad6055f62ee5093e0f0441472410dbc148b8f8e417a12508fa596"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/2x2x2x2x2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "2x2x2x2x2.nfg",
+      "label": "Five person 2x2x2x2x2 game with five equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/2x2x2x2x2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:35bef184351db81c895bb3d8a3873e722913444f55589e41ef036b4a99028715",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "35bef184351db81c895bb3d8a3873e722913444f55589e41ef036b4a99028715"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/3x3x3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "3x3x3.nfg",
+      "label": "Three person 3x3x3 game with five equilibria (two pure)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/3x3x3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:0af5bdab74f9f4d24d69df030732021781cfa36930794d165a6ea214d287c98d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0af5bdab74f9f4d24d69df030732021781cfa36930794d165a6ea214d287c98d"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/4cards.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "4cards.efg",
+      "label": "4 Card poker, from Alix Martin",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/4cards.efg",
+        "checksum": {
+          "@id": "urn:sha256:fa7a751ff547bd3531c65de7fef6d383ba070c6617139dbb647ae39d0eb8a7d8",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "fa7a751ff547bd3531c65de7fef6d383ba070c6617139dbb647ae39d0eb8a7d8"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/5x4x3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "5x4x3.nfg",
+      "label": "Three person random 5x4x3 game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/5x4x3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:1c8fb9c163e32f1ea973e4fdede88b7b2cf167d8bc4a5cf1a7ac0ee019d29adf",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1c8fb9c163e32f1ea973e4fdede88b7b2cf167d8bc4a5cf1a7ac0ee019d29adf"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/8x2x2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "8x2x2.nfg",
+      "label": "Three person random 8x2x2 game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/8x2x2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:71258dc93c0115ae778fcf3fa4352c330f120e0c4eda9efa087d857fa580ce8d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "71258dc93c0115ae778fcf3fa4352c330f120e0c4eda9efa087d857fa580ce8d"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/8x8.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "8x8.nfg",
+      "label": "Random 8x8 game with 5 equilibria (3 pure)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/8x8.nfg",
+        "checksum": {
+          "@id": "urn:sha256:13a37273f9ec3e705a6dd1ea05f376a84b8ce1522acb3320a1f52a3329f71848",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "13a37273f9ec3e705a6dd1ea05f376a84b8ce1522acb3320a1f52a3329f71848"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/artist1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "artist1.efg",
+      "label": "Artist problem, one stage",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/artist1.efg",
+        "checksum": {
+          "@id": "urn:sha256:11a1532ae36282b295f52c55010c6dac8727253f5435373e3d9ae74f06b8cbdb",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "11a1532ae36282b295f52c55010c6dac8727253f5435373e3d9ae74f06b8cbdb"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/artist2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "artist2.efg",
+      "label": "Artist problem, two stages",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/artist2.efg",
+        "checksum": {
+          "@id": "urn:sha256:da97c6e993948453e8615f277bba898d77e2289dd60eb3b17565ea9501a432ca",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "da97c6e993948453e8615f277bba898d77e2289dd60eb3b17565ea9501a432ca"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/badgame1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "badgame1.efg",
+      "label": "Agent Nash not Player Nash",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/badgame1.efg",
+        "checksum": {
+          "@id": "urn:sha256:5d09a10616a043bf437561771ae93fb193fe924b7920feae4dc70da4ab02c56a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5d09a10616a043bf437561771ae93fb193fe924b7920feae4dc70da4ab02c56a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/badgame2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "badgame2.efg",
+      "label": "Agent SPE not Player SPE",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/badgame2.efg",
+        "checksum": {
+          "@id": "urn:sha256:6ea040e6357855ceb3626b63e088280d3f72f8af04cce0724ac30a395e649130",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6ea040e6357855ceb3626b63e088280d3f72f8af04cce0724ac30a395e649130"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bayes1a.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bayes1a.efg",
+      "label": "General Bayes game, one stage",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bayes1a.efg",
+        "checksum": {
+          "@id": "urn:sha256:3f9450516175b3655375e7fa885b5bdcd3cf3250fb71abba0c85f31e9918b7fa",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3f9450516175b3655375e7fa885b5bdcd3cf3250fb71abba0c85f31e9918b7fa"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bayes2a.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bayes2a.efg",
+      "label": "General Bayesian game, two stages",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bayes2a.efg",
+        "checksum": {
+          "@id": "urn:sha256:6547bcf507f195132b1195d8888b189258c0236f30945da16c2fd86f68a34699",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6547bcf507f195132b1195d8888b189258c0236f30945da16c2fd86f68a34699"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bcp2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bcp2.efg",
+      "label": "Banks-Camerer-Porter (GEB 94), Game 2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bcp2.efg",
+        "checksum": {
+          "@id": "urn:sha256:2170aa9ef9498d10d34790ac7e67d2259d516553e43f6eac5896c8c33b06b5f3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2170aa9ef9498d10d34790ac7e67d2259d516553e43f6eac5896c8c33b06b5f3"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bcp3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bcp3.efg",
+      "label": "Banks-Camerer-Porter (GEB 94), Game 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bcp3.efg",
+        "checksum": {
+          "@id": "urn:sha256:5e7a9d2085cfd96be39a83118ea809bad6eb9c45b088e4a35daab2807247554a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5e7a9d2085cfd96be39a83118ea809bad6eb9c45b088e4a35daab2807247554a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bcp4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bcp4.efg",
+      "label": "Banks-Camerer-Porter (GEB 94), Game 4",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bcp4.efg",
+        "checksum": {
+          "@id": "urn:sha256:6d328f99f049889538d655925125caf011f5577f814c4c1773d691cfbc0fd732",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6d328f99f049889538d655925125caf011f5577f814c4c1773d691cfbc0fd732"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bhg1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bhg1.efg",
+      "label": "Brandts-Holt, IJGT 93, Game 1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bhg1.efg",
+        "checksum": {
+          "@id": "urn:sha256:bbc1b71b2a8045640c8acb7193ed92645188bd882efdce9f006a56290e5e7bfc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "bbc1b71b2a8045640c8acb7193ed92645188bd882efdce9f006a56290e5e7bfc"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bhg2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bhg2.efg",
+      "label": "Brandts-Holt, IJGT 93, Game 2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bhg2.efg",
+        "checksum": {
+          "@id": "urn:sha256:11f65332b5a230fc4f398e39d0a4f72322c6b0393990d8c25f52bf3cc967751f",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "11f65332b5a230fc4f398e39d0a4f72322c6b0393990d8c25f52bf3cc967751f"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bhg3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bhg3.efg",
+      "label": "Brandts-Holt, IJGT 93, Game 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bhg3.efg",
+        "checksum": {
+          "@id": "urn:sha256:8f0f4703c901220eaf19bb0b2946b2fda07cfda51d6adaaedb4826cfe5a44460",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8f0f4703c901220eaf19bb0b2946b2fda07cfda51d6adaaedb4826cfe5a44460"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bhg4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bhg4.efg",
+      "label": "Brandts-Holt, IJGT 93, Game 4",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bhg4.efg",
+        "checksum": {
+          "@id": "urn:sha256:627d8280fffd2f9b90618cd8851f41b6bc2197cfbb1a21d60ff55fd283ba1a47",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "627d8280fffd2f9b90618cd8851f41b6bc2197cfbb1a21d60ff55fd283ba1a47"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/bhg5.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "bhg5.efg",
+      "label": "Brandts-Holt, IJGT 93, Game 5",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/bhg5.efg",
+        "checksum": {
+          "@id": "urn:sha256:57f88de8373af3907bbef1279f4a42e4d4fef601d274d0b2ad92b1d9eeb76898",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "57f88de8373af3907bbef1279f4a42e4d4fef601d274d0b2ad92b1d9eeb76898"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/caro2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "caro2.efg",
+      "label": "Caro2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/caro2.efg",
+        "checksum": {
+          "@id": "urn:sha256:0646892367c4c2aa6a3d40865a445c2b7f9a3afa70fe63a418b3544e77a24d6a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0646892367c4c2aa6a3d40865a445c2b7f9a3afa70fe63a418b3544e77a24d6a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cent2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cent2.efg",
+      "label": "Centipede game. Two inning, with probability of altruists.  ",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cent2.efg",
+        "checksum": {
+          "@id": "urn:sha256:c748781d73c61abb98508e01426dcae29313f048961a2c0aacd993282ce544ff",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c748781d73c61abb98508e01426dcae29313f048961a2c0aacd993282ce544ff"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cent2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cent2.nfg",
+      "label": "Centipede game. Two inning, with probability of altruists",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cent2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:842670375927a2c8a581ded5aac9c6425ff006610632f2b145aba94ae95d63cb",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "842670375927a2c8a581ded5aac9c6425ff006610632f2b145aba94ae95d63cb"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cent3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cent3.efg",
+      "label": "Centipede game. Three inning with probability of altruism.  ",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cent3.efg",
+        "checksum": {
+          "@id": "urn:sha256:256a88fd0e544a620a20da70d72734a1a6c3c6299f0f08cb4d7756f59b851fe9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "256a88fd0e544a620a20da70d72734a1a6c3c6299f0f08cb4d7756f59b851fe9"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cent4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cent4.efg",
+      "label": "Centipede game, 4 move",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cent4.efg",
+        "checksum": {
+          "@id": "urn:sha256:88b1d67d4c4e61e61dff968a561939fb4ec4cb92faf99e927b829f69cfd12482",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "88b1d67d4c4e61e61dff968a561939fb4ec4cb92faf99e927b829f69cfd12482"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cent6.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cent6.efg",
+      "label": "Centipede game, 6 move",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cent6.efg",
+        "checksum": {
+          "@id": "urn:sha256:2e87ae9ed9dcaac4d7dc64c2f09b87f60d8b576066a1ba7564d3090fa85be9f7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "2e87ae9ed9dcaac4d7dc64c2f09b87f60d8b576066a1ba7564d3090fa85be9f7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/centcs10.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "centcs10.efg",
+      "label": "Centipede game, 10 move constant sum",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/centcs10.efg",
+        "checksum": {
+          "@id": "urn:sha256:ba9c4a3b28b543d80f0ae751479f168987dc897dd226533c94fbfb1bbe1e7276",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ba9c4a3b28b543d80f0ae751479f168987dc897dd226533c94fbfb1bbe1e7276"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/centcs6.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "centcs6.efg",
+      "label": "Centipede game, 6 move constant sum",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/centcs6.efg",
+        "checksum": {
+          "@id": "urn:sha256:9e711af3c178bafada375d7c0bf25e82f8a6908a754081ec13f7ef1b95f63b28",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9e711af3c178bafada375d7c0bf25e82f8a6908a754081ec13f7ef1b95f63b28"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/condjury.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "condjury.efg",
+      "label": "Feddersen-Pesendorfer, three person Condorcet jury game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/condjury.efg",
+        "checksum": {
+          "@id": "urn:sha256:bfc7f59a2887b786bbfb6bec3e4f0a70cf5651d19fbe396e0ef9f071d3b9242c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "bfc7f59a2887b786bbfb6bec3e4f0a70cf5651d19fbe396e0ef9f071d3b9242c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord2.efg",
+      "label": "Two person 2x2 game coordination game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord2.efg",
+        "checksum": {
+          "@id": "urn:sha256:7c6a75436ebaa37db72e6b0861fe3cd0528685672c06fb3d9a13eed593f85cb0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7c6a75436ebaa37db72e6b0861fe3cd0528685672c06fb3d9a13eed593f85cb0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord2.nfg",
+      "label": "Two person 2x2 coordination game with 3 Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:585150cc1043ba92b017e830149f63f76cdd37d1791a57e31e34fe172531b8b6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "585150cc1043ba92b017e830149f63f76cdd37d1791a57e31e34fe172531b8b6"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord2ts.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord2ts.efg",
+      "label": "Two stage 2x2 game -- 3 Nash equilibria in stage game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord2ts.efg",
+        "checksum": {
+          "@id": "urn:sha256:323258d746e38434b8434edf44b372ee1b00499409eaa7172f9d9b8d22365d56",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "323258d746e38434b8434edf44b372ee1b00499409eaa7172f9d9b8d22365d56"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord3.efg",
+      "label": "Two person 3 x 3 coordination problem with 7 Nash equilibria",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord3.efg",
+        "checksum": {
+          "@id": "urn:sha256:d2d00343ca730e5c6d6f8321dab800f561b7fa509876e57a9f0821b45c558d9e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d2d00343ca730e5c6d6f8321dab800f561b7fa509876e57a9f0821b45c558d9e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord3.nfg",
+      "label": "3x3 coordination game with 7 Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:a2af112f706e74b7d273c43831a8c99ad3351d8205ea50600a6444de43384c27",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a2af112f706e74b7d273c43831a8c99ad3351d8205ea50600a6444de43384c27"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord333.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord333.nfg",
+      "label": "Three player 3x3x3 coordination game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord333.nfg",
+        "checksum": {
+          "@id": "urn:sha256:3a749e2455370dc76f71d560f661ccadfcb6b72ccb5d063bc7deac312bb3733e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3a749e2455370dc76f71d560f661ccadfcb6b72ccb5d063bc7deac312bb3733e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord4.efg",
+      "label": "Two person 4 x 4 coordination problem with 15 Nash equilibria",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord4.efg",
+        "checksum": {
+          "@id": "urn:sha256:965ca3b47f152e771ff2bb1acd0680ed7d8438c1e4d0434bdc3cc28c9baf43da",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "965ca3b47f152e771ff2bb1acd0680ed7d8438c1e4d0434bdc3cc28c9baf43da"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/coord4.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "coord4.nfg",
+      "label": "4x4 coordination game with 15 Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/coord4.nfg",
+        "checksum": {
+          "@id": "urn:sha256:0057ceacbf91f19b78956861aa96b1949b186bb99d9bbd686062d0ab1e7ac827",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0057ceacbf91f19b78956861aa96b1949b186bb99d9bbd686062d0ab1e7ac827"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/cs.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "cs.efg",
+      "label": "Chain store paradox, with three entrants",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/cs.efg",
+        "checksum": {
+          "@id": "urn:sha256:38188c423a371749e3cfd8cac5c745220fdd17eceae5f26e60bf022efa614c56",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "38188c423a371749e3cfd8cac5c745220fdd17eceae5f26e60bf022efa614c56"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/csg1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "csg1.nfg",
+      "label": "2x2 constant sum game with a continuum of equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/csg1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:3da1d452a007c04c802a19039572818d66a1961cbbc93489248d25b0b35a53c1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3da1d452a007c04c802a19039572818d66a1961cbbc93489248d25b0b35a53c1"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/csg2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "csg2.nfg",
+      "label": "Two person 4x4 constant sum game with a continuum of equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/csg2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:3768d7081c86e7ffbabf39d486f35a1ba99e4c956d06ce2f0b93b344d21d7684",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3768d7081c86e7ffbabf39d486f35a1ba99e4c956d06ce2f0b93b344d21d7684"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/csg3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "csg3.nfg",
+      "label": "Two person constant sum game with a continuum of equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/csg3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:ae6f72ca130578aa7beec728c033f15b0e215c0bb923f933efab0e42827c6893",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ae6f72ca130578aa7beec728c033f15b0e215c0bb923f933efab0e42827c6893"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/csg4.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "csg4.nfg",
+      "label": "Two person 4x4 constant sum game with a continuum of equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/csg4.nfg",
+        "checksum": {
+          "@id": "urn:sha256:10b8f77bfccb1f1ccdd5ddd1635ede5e941c50db3d812a0704b3f0f5a58fb540",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "10b8f77bfccb1f1ccdd5ddd1635ede5e941c50db3d812a0704b3f0f5a58fb540"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/deg1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "deg1.nfg",
+      "label": "Degenerate 3x3 game 1",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/deg1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:b3f6ef995c22849192e0b646734d6792963ad372639fa51149310caafae3e8ba",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b3f6ef995c22849192e0b646734d6792963ad372639fa51149310caafae3e8ba"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/deg2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "deg2.nfg",
+      "label": "Degenerate 3x3 game 2",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/deg2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:d16a462f179a6e0e25899526601895c123156fbdaa4befee2c395551b7cd4b18",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d16a462f179a6e0e25899526601895c123156fbdaa4befee2c395551b7cd4b18"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e04.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e04.efg",
+      "label": "Kreps-Wilson (Econometrica, 85), Figures 1,4,9, and 14",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e04.efg",
+        "checksum": {
+          "@id": "urn:sha256:b1a30acaf66c3950c49765eaa6bca94f33021c412f3713c58931ab4ea59cc54e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b1a30acaf66c3950c49765eaa6bca94f33021c412f3713c58931ab4ea59cc54e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e04.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e04.nfg",
+      "label": "Kreps-Wilson (Econometrica, 85), Figures 1,4,9,14, normal form",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e04.nfg",
+        "checksum": {
+          "@id": "urn:sha256:3a028d6e95f0296826a93e60dedf6fc5097a6e4c383792ca160796373023aa51",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3a028d6e95f0296826a93e60dedf6fc5097a6e4c383792ca160796373023aa51"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e05.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e05.efg",
+      "label": "Kreps, Wilson (Econometrica, 85), Figure 8",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e05.efg",
+        "checksum": {
+          "@id": "urn:sha256:ecf95ed2dcad3c378cb115f5e59367ead8527087f5949e5d623259774b68eb35",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ecf95ed2dcad3c378cb115f5e59367ead8527087f5949e5d623259774b68eb35"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e06.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e06.efg",
+      "label": "Kreps Wilson (Econometrica, 85), Figure 11",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e06.efg",
+        "checksum": {
+          "@id": "urn:sha256:01eadb65515b22b66e723a91cd851319a344296bcd85fdb621bcce5ebc7d7478",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "01eadb65515b22b66e723a91cd851319a344296bcd85fdb621bcce5ebc7d7478"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e07.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e07.efg",
+      "label": "Harsanyi (Managment Sci, 68), Table 1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e07.efg",
+        "checksum": {
+          "@id": "urn:sha256:baadfae0a1e40d590acb2b8aef57d1834e4704f0d8398994ffc7d362bf0aa465",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "baadfae0a1e40d590acb2b8aef57d1834e4704f0d8398994ffc7d362bf0aa465"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e07.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e07.nfg",
+      "label": "Harsanyi (Managment Sci, 68), Table 1",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e07.nfg",
+        "checksum": {
+          "@id": "urn:sha256:b6fc72fa3cfd2089616b390229b2fa318abc0449251f5682b5e0f0b16702140a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b6fc72fa3cfd2089616b390229b2fa318abc0449251f5682b5e0f0b16702140a"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e08.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e08.efg",
+      "label": "Plurality Voting, Three alternatives, simultaneous vote",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e08.efg",
+        "checksum": {
+          "@id": "urn:sha256:0af8ae9a607ddad558323622aec4b7320c70d9d6ee80d2334d7b0edef7f8d19a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0af8ae9a607ddad558323622aec4b7320c70d9d6ee80d2334d7b0edef7f8d19a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e09.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e09.efg",
+      "label": "Binary voting, Successive procedure, no recall",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e09.efg",
+        "checksum": {
+          "@id": "urn:sha256:3675e3f1028428c811dc434c4e15292940c0e0fe262d45d3dcd95c84dac29f49",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3675e3f1028428c811dc434c4e15292940c0e0fe262d45d3dcd95c84dac29f49"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e10.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e10.efg",
+      "label": "Nim with 5 stones",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e10.efg",
+        "checksum": {
+          "@id": "urn:sha256:21fb7c8cd8a8f7df73861e8eba44b8bde5b3fd9e93586a475454968a14a3aaba",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "21fb7c8cd8a8f7df73861e8eba44b8bde5b3fd9e93586a475454968a14a3aaba"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e10a.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e10a.efg",
+      "label": "Nim with 5 stones",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e10a.efg",
+        "checksum": {
+          "@id": "urn:sha256:8bd0de77484fe5d61ceba1ce54f0238f3dc32ca2678f11ae4b7d2b6acdaacc92",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8bd0de77484fe5d61ceba1ce54f0238f3dc32ca2678f11ae4b7d2b6acdaacc92"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e13.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e13.efg",
+      "label": "Two Stage Prisoners' Dilemma",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e13.efg",
+        "checksum": {
+          "@id": "urn:sha256:9100e186986568e3c8cd58293fb18dc8e4f7fb274847806a6105092dfe1d8298",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "9100e186986568e3c8cd58293fb18dc8e4f7fb274847806a6105092dfe1d8298"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e16.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e16.efg",
+      "label": "Peter's Game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e16.efg",
+        "checksum": {
+          "@id": "urn:sha256:610a9fd6b5abadb96dcd712dc51a21f1d6ab44d1384897507b221513d79cb2c0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "610a9fd6b5abadb96dcd712dc51a21f1d6ab44d1384897507b221513d79cb2c0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e17.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e17.efg",
+      "label": "Cho-Kreps (QJE 87) Fig 1, Beer-Quiche Game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e17.efg",
+        "checksum": {
+          "@id": "urn:sha256:5698c153b5375127d6b5bd32c273749ac01c5cb71960b704752657ec8d1090af",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5698c153b5375127d6b5bd32c273749ac01c5cb71960b704752657ec8d1090af"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/e18.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "e18.efg",
+      "label": "Banks-Sobel, Example 1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/e18.efg",
+        "checksum": {
+          "@id": "urn:sha256:378ac5b356e186570e3a62b3ff3077c66c8fd30987a4ece9267b61ef35fb893e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "378ac5b356e186570e3a62b3ff3077c66c8fd30987a4ece9267b61ef35fb893e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g1.efg",
+      "label": "van der Laan et al. Three person, 2 x 2 x 2 example with no pure Nash ",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g1.efg",
+        "checksum": {
+          "@id": "urn:sha256:4adb06de82c190574e13c5c29c3996422028350968cc7db2a96e485b43b9aca6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4adb06de82c190574e13c5c29c3996422028350968cc7db2a96e485b43b9aca6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g1.nfg",
+      "label": "van der Laan et al. Three person, 2x2x2 example with no pure, 1 totally mixed equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:c06aaf9bc66c2369dd45848ca5264906e3860fd5973b05422938cbe28d863988",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c06aaf9bc66c2369dd45848ca5264906e3860fd5973b05422938cbe28d863988"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g2.efg",
+      "label": "van der Laan et al. Three person 3 x 3 x 3 example with no pure Nash",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g2.efg",
+        "checksum": {
+          "@id": "urn:sha256:47bcbf00aa06af85e758f8987210b235792a2467867b1d53d74dd8eb7a2d6032",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "47bcbf00aa06af85e758f8987210b235792a2467867b1d53d74dd8eb7a2d6032"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g2.nfg",
+      "label": "van der Laan et al. Three person 3x3x3 example with no pure, and one mixed equilibrium",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:70cb32f8bec984f0c2f81bfa7ab156f9c3a75b9fe80c6a0ebd0066b61d26b604",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "70cb32f8bec984f0c2f81bfa7ab156f9c3a75b9fe80c6a0ebd0066b61d26b604"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g3.efg",
+      "label": "van der Laan et al. Four person, 2 x 2 x 2 x 2 example with no Pure Nash.",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g3.efg",
+        "checksum": {
+          "@id": "urn:sha256:16228b0a178fe9de58a34706bfa62994c1ac90d888f7c0664684419205e3e59c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "16228b0a178fe9de58a34706bfa62994c1ac90d888f7c0664684419205e3e59c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/g3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "g3.nfg",
+      "label": "van der Laan et al. Four person, 2x2x2x2 example with no pure, and five mixed equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/g3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:b5464dbdffd77fd6c16efccf135c3e05231971e5ac33bd907b95489ad4154872",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "b5464dbdffd77fd6c16efccf135c3e05231971e5ac33bd907b95489ad4154872"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/holdout.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "holdout.efg",
+      "label": "McKelvey-Palfrey (JET 77), 7 stage version of holdout game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/holdout.efg",
+        "checksum": {
+          "@id": "urn:sha256:aaeca76a0df7126bbb9ec2061dc4c50c7364ddde11f1a48eefebce73efa87b8b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "aaeca76a0df7126bbb9ec2061dc4c50c7364ddde11f1a48eefebce73efa87b8b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/holdout7.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "holdout7.efg",
+      "label": "McKelvey-Palfrey (JET 77), 7 stage version of holdout game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/holdout7.efg",
+        "checksum": {
+          "@id": "urn:sha256:7602cf10e009b9fe80dcce41870cf6572c984d8535115a883e4ee05a84807008",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7602cf10e009b9fe80dcce41870cf6572c984d8535115a883e4ee05a84807008"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/hs1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "hs1.efg",
+      "label": "Harsanyi, Selten (1988): example reanalyzed by Dickhaut Kaplan ",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/hs1.efg",
+        "checksum": {
+          "@id": "urn:sha256:3e632ec70633496e25ad732089d7b770216dd14f9433080a7654b7c57d6af74e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3e632ec70633496e25ad732089d7b770216dd14f9433080a7654b7c57d6af74e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/jury_mr.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "jury_mr.efg",
+      "label": "Jury game, majority rule",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/jury_mr.efg",
+        "checksum": {
+          "@id": "urn:sha256:35dfb1a64f982a4533a0235cfd45b23316456ea3ecc0e922ba625f2e48e565fd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "35dfb1a64f982a4533a0235cfd45b23316456ea3ecc0e922ba625f2e48e565fd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/jury_un.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "jury_un.efg",
+      "label": "Jury game, unanimous vote required",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/jury_un.efg",
+        "checksum": {
+          "@id": "urn:sha256:126b8cefaa931f75eef9ee86216e9bdcc796ec5dced6d8c1b1df9a4b53bff07a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "126b8cefaa931f75eef9ee86216e9bdcc796ec5dced6d8c1b1df9a4b53bff07a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/km1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "km1.efg",
+      "label": "Kohlberg Mertens, Example 1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/km1.efg",
+        "checksum": {
+          "@id": "urn:sha256:859628b3bbb5c0185d7a4d11a6ee4a5b5a4deac506852f4aaec8c6da856465c6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "859628b3bbb5c0185d7a4d11a6ee4a5b5a4deac506852f4aaec8c6da856465c6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/km2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "km2.efg",
+      "label": "Kohlberg, Mertens, Example 2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/km2.efg",
+        "checksum": {
+          "@id": "urn:sha256:6005d17df159745690fc5c4ceba7a1b1b9fd551b3c5f624a07515ce2facee6c4",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6005d17df159745690fc5c4ceba7a1b1b9fd551b3c5f624a07515ce2facee6c4"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/km3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "km3.efg",
+      "label": "Kohlberg, Mertens, Example 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/km3.efg",
+        "checksum": {
+          "@id": "urn:sha256:c3aaef94689f6f7c485c9b7791edadabf88a8ea5ec60d91c2a39ebc5c7f535df",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "c3aaef94689f6f7c485c9b7791edadabf88a8ea5ec60d91c2a39ebc5c7f535df"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/km6.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "km6.efg",
+      "label": "Kohlberg, Mertens, Example 6",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/km6.efg",
+        "checksum": {
+          "@id": "urn:sha256:4a210ade14d643956925a14e5b2c132c64efa2ef46235dcf24f18027c25600ed",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4a210ade14d643956925a14e5b2c132c64efa2ef46235dcf24f18027c25600ed"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/loopback.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "loopback.nfg",
+      "label": "Backward-bending principal logit branch",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/loopback.nfg",
+        "checksum": {
+          "@id": "urn:sha256:e862b0c5c2ddc4dff5fad3467386cba9b3c15ed6afb87bd07c797bd7e9a56868",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e862b0c5c2ddc4dff5fad3467386cba9b3c15ed6afb87bd07c797bd7e9a56868"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/mixdom.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "mixdom.nfg",
+      "label": "Two person 4x4 game needing mixed domination",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/mixdom.nfg",
+        "checksum": {
+          "@id": "urn:sha256:d99c0d8234a5765b5761e67ddeb237e6a81ae7f565cd9adba0b6b5745c35bad1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d99c0d8234a5765b5761e67ddeb237e6a81ae7f565cd9adba0b6b5745c35bad1"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/mixdom2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "mixdom2.nfg",
+      "label": "Two person 4x4 game needing mixed domination",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/mixdom2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:5b11c55630bd557fa1431d1dc42f225d05f882f7732fb08e571665122ae4b181",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5b11c55630bd557fa1431d1dc42f225d05f882f7732fb08e571665122ae4b181"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/montyhal.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "montyhal.efg",
+      "label": "The Monty Hall 'Lets make a deal' problem",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/montyhal.efg",
+        "checksum": {
+          "@id": "urn:sha256:999545abbbb4f6f968da3ec04e55404734132f7e95c97d9b5a452276328c4aa3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "999545abbbb4f6f968da3ec04e55404734132f7e95c97d9b5a452276328c4aa3"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_2-1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_2-1.efg",
+      "label": "Myerson (Game Theory), Exercise 2.1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_2-1.efg",
+        "checksum": {
+          "@id": "urn:sha256:0d02a6cea23422e1ea4553b7c46f3ac431b25cb6ddc51608054d3a896e1aab17",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0d02a6cea23422e1ea4553b7c46f3ac431b25cb6ddc51608054d3a896e1aab17"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_2-4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_2-4.efg",
+      "label": "Myerson (Game Theory), Exercise 2.4",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_2-4.efg",
+        "checksum": {
+          "@id": "urn:sha256:1eadf08869c05c68bae7d25fa5bfa3fd792bf7a4d4a27dcb19102099f3d45964",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1eadf08869c05c68bae7d25fa5bfa3fd792bf7a4d4a27dcb19102099f3d45964"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_2-8.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_2-8.efg",
+      "label": "Myerson (Game Theory), Exercise 2.8",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_2-8.efg",
+        "checksum": {
+          "@id": "urn:sha256:5f7d8aaac8f7233606b10ffff3b5719f49b27807e1d84625ebac9e54cd3ef2e9",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5f7d8aaac8f7233606b10ffff3b5719f49b27807e1d84625ebac9e54cd3ef2e9"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-3a.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-3a.efg",
+      "label": "Myerson (Game Theory), Exercise 3.3a",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-3a.efg",
+        "checksum": {
+          "@id": "urn:sha256:bdb9e42db398546c3264b9db10c7cdea270d4ad03aa53eba0014df43d26de336",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "bdb9e42db398546c3264b9db10c7cdea270d4ad03aa53eba0014df43d26de336"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-3b.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-3b.efg",
+      "label": "Myerson (Game Theory), Exercise 3.3b",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-3b.efg",
+        "checksum": {
+          "@id": "urn:sha256:bf70cda08e5747c1837ddc1f722baad7163895f89d7c62719258b4d4ebc74523",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "bf70cda08e5747c1837ddc1f722baad7163895f89d7c62719258b4d4ebc74523"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-3c.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-3c.efg",
+      "label": "Myerson (Game Theory), Exercise 3.3c",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-3c.efg",
+        "checksum": {
+          "@id": "urn:sha256:52d39b72af9d99baad309b7b2df3e73675bd220576b54cf417782d16d05cabd6",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "52d39b72af9d99baad309b7b2df3e73675bd220576b54cf417782d16d05cabd6"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-3d.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-3d.efg",
+      "label": "Myerson (Game Theory), Exercise 3.3d",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-3d.efg",
+        "checksum": {
+          "@id": "urn:sha256:4515155f727b27eaf88702a4766c4d6436f6e3550c27b909fc8c82382b0582af",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4515155f727b27eaf88702a4766c4d6436f6e3550c27b909fc8c82382b0582af"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-3e.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-3e.efg",
+      "label": "Myerson (Game Theory), Exercise 3.3e",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-3e.efg",
+        "checksum": {
+          "@id": "urn:sha256:74ba2352b7341f6c346a57d30034f2a3d7a5bc3d1a7d512903c5b861a7f83c97",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "74ba2352b7341f6c346a57d30034f2a3d7a5bc3d1a7d512903c5b861a7f83c97"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/my_3-4.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "my_3-4.efg",
+      "label": "Myerson (Game Theory), Exercise 3.4",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/my_3-4.efg",
+        "checksum": {
+          "@id": "urn:sha256:ed80368511cc74fba703af90e15f00f809db87af246f21af01123e8ab5c459ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ed80368511cc74fba703af90e15f00f809db87af246f21af01123e8ab5c459ec"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/myerson.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "myerson.efg",
+      "label": "Myerson - Game with no solution in behavioral strategies",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/myerson.efg",
+        "checksum": {
+          "@id": "urn:sha256:ece6d50945cc2e31343d2190bfdf7bcb65756197a016601e97af3295f8b3330e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ece6d50945cc2e31343d2190bfdf7bcb65756197a016601e97af3295f8b3330e"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/nim.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "nim.efg",
+      "label": "Nim-like game. One pile of 5 stones. Players alternately take 1 or 2 stones. Player to take last stone wins.",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/nim.efg",
+        "checksum": {
+          "@id": "urn:sha256:5aba111dbd5b9ad37e265afc0f7b39aea782e7ec5c6ee15483507b7db428ee7b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "5aba111dbd5b9ad37e265afc0f7b39aea782e7ec5c6ee15483507b7db428ee7b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/nim7.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "nim7.efg",
+      "label": "Nim-like game. One pile of 7 stones. Players alternately take 1 or 2 stones. Player to take last stone wins.",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/nim7.efg",
+        "checksum": {
+          "@id": "urn:sha256:edeb82535e5b2781f465ff12ae8f8669d43a8172fd81271bdf738d69ace7061b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "edeb82535e5b2781f465ff12ae8f8669d43a8172fd81271bdf738d69ace7061b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/oneill.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "oneill.nfg",
+      "label": "Oneill's (1987 Proc NAS) game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/oneill.nfg",
+        "checksum": {
+          "@id": "urn:sha256:e59c0fa19f66b72855d42277b19b4b2ca4cbcf47312fe799a7ac71b7ea45cec8",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e59c0fa19f66b72855d42277b19b4b2ca4cbcf47312fe799a7ac71b7ea45cec8"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/palf.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "palf.efg",
+      "label": "McKelvey-Palfrey: one stage mixed strategy learning game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/palf.efg",
+        "checksum": {
+          "@id": "urn:sha256:7c828b448908e9dbad9f2d31b7a1cfae0ac47746e43946929e7db5a5471bb84d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7c828b448908e9dbad9f2d31b7a1cfae0ac47746e43946929e7db5a5471bb84d"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/palf2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "palf2.efg",
+      "label": "McKelvey-Palfrey: two stage mixed strategy learning game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/palf2.efg",
+        "checksum": {
+          "@id": "urn:sha256:e94cb474c4833cdac2b113f76ad297f2ddd988a4cd79e36d521fcbf37d3a17ea",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "e94cb474c4833cdac2b113f76ad297f2ddd988a4cd79e36d521fcbf37d3a17ea"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/palf3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "palf3.efg",
+      "label": "Palfrey one sided incomplete info game with both types mixing",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/palf3.efg",
+        "checksum": {
+          "@id": "urn:sha256:3ff7295212680d844a46522959dc521aa9f6d82c3bbb5099fe0d64a556766e9c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3ff7295212680d844a46522959dc521aa9f6d82c3bbb5099fe0d64a556766e9c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/pd.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "pd.nfg",
+      "label": "Two person Prisoner's Dilemma game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/pd.nfg",
+        "checksum": {
+          "@id": "urn:sha256:1646efc7b5491695f7713e68d7085312642ac4becf5a05d9f96d7419f94edcad",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1646efc7b5491695f7713e68d7085312642ac4becf5a05d9f96d7419f94edcad"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/perfect1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "perfect1.nfg",
+      "label": "Game with no dominated strategies, and dominated equilibrium",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/perfect1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:ccfec2d0a874182171474a8334fb13ca8ff0d60a16aa1c023cb0504123bb2d9a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ccfec2d0a874182171474a8334fb13ca8ff0d60a16aa1c023cb0504123bb2d9a"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/perfect2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "perfect2.nfg",
+      "label": "Game with no dominated pure strategies but with dominated Nash equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/perfect2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:efe9f3a8c0f9af34b499332c31433ca54ed2bdb4a63e7e112c362d2b24d7995c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "efe9f3a8c0f9af34b499332c31433ca54ed2bdb4a63e7e112c362d2b24d7995c"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/perfect3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "perfect3.nfg",
+      "label": "Three person version of perfect2",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/perfect3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:4cec0791417ca5078b8fe8bd5d718e88db463b94afb814dff2e797d8f3e9a7f7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4cec0791417ca5078b8fe8bd5d718e88db463b94afb814dff2e797d8f3e9a7f7"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/pvw.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "pvw.efg",
+      "label": "Game from van Winden",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/pvw.efg",
+        "checksum": {
+          "@id": "urn:sha256:1c6834cb4d84b8e1567f7e39944ca0a34e5ffdcbfc3fa6096483af55e0fe7c1a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1c6834cb4d84b8e1567f7e39944ca0a34e5ffdcbfc3fa6096483af55e0fe7c1a"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/pvw2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "pvw2.efg",
+      "label": "Game 2 from van Winden",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/pvw2.efg",
+        "checksum": {
+          "@id": "urn:sha256:6a80f7e110e99cf5c5c63f8864926886c9918a10a50fc825f63ad50109ab2556",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6a80f7e110e99cf5c5c63f8864926886c9918a10a50fc825f63ad50109ab2556"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sh3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sh3.efg",
+      "label": "Wilson's example of inaccessible equilibria (Shapley, 1974, Math Prog Stud)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sh3.efg",
+        "checksum": {
+          "@id": "urn:sha256:1aa6e49da0484367f1fc345411f059663ad67e003e7ad14b09f19dbc5eca2bfd",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1aa6e49da0484367f1fc345411f059663ad67e003e7ad14b09f19dbc5eca2bfd"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sh3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sh3.nfg",
+      "label": "Wilson's example of inaccessible equilibria (Shapley, 1974, Math Prog Stud)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sh3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:4a4f31eb211ba06e6b7949c712f00f2218f67747ac15e57cb4cbb24269917b17",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4a4f31eb211ba06e6b7949c712f00f2218f67747ac15e57cb4cbb24269917b17"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/stengel.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "stengel.nfg",
+      "label": "von Stengel's two person 6 x 6 game with 75 equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/stengel.nfg",
+        "checksum": {
+          "@id": "urn:sha256:ecd749306f07b7b3f91256e969782f003d0991b4d1bd58ca0a6f91ddfa6ff68a",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "ecd749306f07b7b3f91256e969782f003d0991b4d1bd58ca0a6f91ddfa6ff68a"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sww1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sww1.efg",
+      "label": "Schotter-Weigelt-Wilson (GEB 94), Fig 1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sww1.efg",
+        "checksum": {
+          "@id": "urn:sha256:7c4fb0af0dac8c26a5ab2ee6cdbf0329839111835d2bcf0852c1570a37548ab7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7c4fb0af0dac8c26a5ab2ee6cdbf0329839111835d2bcf0852c1570a37548ab7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sww1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sww1.nfg",
+      "label": "Schotter-Weigelt-Wilson Fig 1 game in normal form",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sww1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:0a594a5dedf46f3317c03192da844f258af88f3ed74ec11fd12bddb5fc11f88e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "0a594a5dedf46f3317c03192da844f258af88f3ed74ec11fd12bddb5fc11f88e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sww2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sww2.efg",
+      "label": "Schotter-Weigelt-Wilson (GEB 94), Fig 2",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sww2.efg",
+        "checksum": {
+          "@id": "urn:sha256:fbb2c63f2041189cef224298bece710d3b74dc8943f34e2a94b29bd265b7b1f1",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "fbb2c63f2041189cef224298bece710d3b74dc8943f34e2a94b29bd265b7b1f1"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/sww3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "sww3.efg",
+      "label": "Schotter-Weigelt-Wilson (GEB 94), Fig 3",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/sww3.efg",
+        "checksum": {
+          "@id": "urn:sha256:1a6b9abc7e733f6000188cb137d390bf26e401ab63f41f5af203c65136df14cc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1a6b9abc7e733f6000188cb137d390bf26e401ab63f41f5af203c65136df14cc"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/tim.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "tim.efg",
+      "label": "Game from Tim Feddersen",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/tim.efg",
+        "checksum": {
+          "@id": "urn:sha256:7188406d4d3024693ed38149bfd4ec17356af6652ebe20fe28c1d2b902c6b7fc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "7188406d4d3024693ed38149bfd4ec17356af6652ebe20fe28c1d2b902c6b7fc"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/todd1.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "todd1.nfg",
+      "label": "Todd's (incorrect) example of incaccessible equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/todd1.nfg",
+        "checksum": {
+          "@id": "urn:sha256:600f952431e1424502ceb841346485aeb805a57343f2b104a9ac64292924fe19",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "600f952431e1424502ceb841346485aeb805a57343f2b104a9ac64292924fe19"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/todd2.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "todd2.nfg",
+      "label": "Todd's (corrected) example of incaccessible equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/todd2.nfg",
+        "checksum": {
+          "@id": "urn:sha256:eef12990c9c9c08fde63bec12d9fbfb1b404cbef32fa3fac4747082f90352076",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "eef12990c9c9c08fde63bec12d9fbfb1b404cbef32fa3fac4747082f90352076"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/todd3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "todd3.nfg",
+      "label": "Todd's second example of incaccessible equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/todd3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:4e7802651c4b4a308ceadfd67118b5db1092fe8d5d919684a61b3ec15876d69c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "4e7802651c4b4a308ceadfd67118b5db1092fe8d5d919684a61b3ec15876d69c"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/ttt.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "ttt.efg",
+      "label": "Tic Tac Toe (Not finished yet)",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/ttt.efg",
+        "checksum": {
+          "@id": "urn:sha256:561df4ab0cd302f0ea0f3d5803047fc5cbe26473a31b9920ebe9c625aa67e05c",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "561df4ab0cd302f0ea0f3d5803047fc5cbe26473a31b9920ebe9c625aa67e05c"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/vd.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "vd.efg",
+      "label": "Van Damme's Game",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/vd.efg",
+        "checksum": {
+          "@id": "urn:sha256:3ab9e516f7f89088f6fff1691164e8e14fde8cc9c6a7e2de4a16e12f755f11c0",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "3ab9e516f7f89088f6fff1691164e8e14fde8cc9c6a7e2de4a16e12f755f11c0"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/vd.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "vd.nfg",
+      "label": "Van Damme's burning a dollar Game",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/vd.nfg",
+        "checksum": {
+          "@id": "urn:sha256:8679df9756c2b67fd13e3af3c9cb722f27c0839700d015a3c2848f3418ba78b2",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "8679df9756c2b67fd13e3af3c9cb722f27c0839700d015a3c2848f3418ba78b2"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/w_ex1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "w_ex1.efg",
+      "label": "Wilson's ex1",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/w_ex1.efg",
+        "checksum": {
+          "@id": "urn:sha256:6d2e6cf87aeca0646ec79c9a2bd1daa1948987adef3c6da8bd971b0d964d47ec",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6d2e6cf87aeca0646ec79c9a2bd1daa1948987adef3c6da8bd971b0d964d47ec"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/w_ex2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "w_ex2.efg",
+      "label": "Wilson's ex2:  Two stage battle of the sexes",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/w_ex2.efg",
+        "checksum": {
+          "@id": "urn:sha256:f7927c2493a1152ae5ab49f470c0896a9f66f1a37ca55dff31eab83b0cf0747d",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f7927c2493a1152ae5ab49f470c0896a9f66f1a37ca55dff31eab83b0cf0747d"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/wilson1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "wilson1.efg",
+      "label": "Wilson (1991): a game with two weakly stable sets.",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/wilson1.efg",
+        "checksum": {
+          "@id": "urn:sha256:1c5d594372009214f8f7a4ccacf5a1cff0c36a58d691c12b7c3030864f696ff7",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1c5d594372009214f8f7a4ccacf5a1cff0c36a58d691c12b7c3030864f696ff7"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/wink3.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "wink3.nfg",
+      "label": "Simple example where CBFS != AllNash",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/wink3.nfg",
+        "checksum": {
+          "@id": "urn:sha256:12061af29788dcc8dbe2c5feb1917cbe85a766a7b484c4c0bdf260fd90e9656e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "12061af29788dcc8dbe2c5feb1917cbe85a766a7b484c4c0bdf260fd90e9656e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/winkels.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "winkels.nfg",
+      "label": "Winkels, 1979 degenerate game with 12 extreme equilibria",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/winkels.nfg",
+        "checksum": {
+          "@id": "urn:sha256:a0479f3623078faf02cba65a926f8b0f35f49f8eab211167c3219a4c3292a580",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a0479f3623078faf02cba65a926f8b0f35f49f8eab211167c3219a4c3292a580"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/work1.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "work1.efg",
+      "label": "Employer - Employee problem, one stage",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/work1.efg",
+        "checksum": {
+          "@id": "urn:sha256:d16d65d2ad3bd849793af3ed67e6d017633e5ffd616fad4e37b3571a8fc376fc",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "d16d65d2ad3bd849793af3ed67e6d017633e5ffd616fad4e37b3571a8fc376fc"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/work2.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "work2.efg",
+      "label": "Employer - Employee problem, two stages",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/work2.efg",
+        "checksum": {
+          "@id": "urn:sha256:99a4dd6bba27017f85903eda96c9242f96d4ae39708538645b13422e4a9dd15b",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "99a4dd6bba27017f85903eda96c9242f96d4ae39708538645b13422e4a9dd15b"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/work3.efg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "work3.efg",
+      "label": "Employer - Employee problem, three stages",
+      "format": "EFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/work3.efg",
+        "checksum": {
+          "@id": "urn:sha256:fd2fcea678d69450531feb51cbec160afcca7be10ff93bb014e6ad8a49df9f03",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "fd2fcea678d69450531feb51cbec160afcca7be10ff93bb014e6ad8a49df9f03"
+        }
+      },
+      "subject": [
+        "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/yamamoto.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "yamamoto.nfg",
+      "label": "Example game from Yamamoto (IJGT, 1993)",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/yamamoto.nfg",
+        "checksum": {
+          "@id": "urn:sha256:597be46d8310e45070b8617a007d68e3d7625abb2a8019248e374adf23df0b8e",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "597be46d8310e45070b8617a007d68e3d7625abb2a8019248e374adf23df0b8e"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed/zero.nfg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/contributed",
+      "identifier": "zero.nfg",
+      "label": "Two person 2 x 2 game with all zero payoffs",
+      "format": "NFG",
+      "source": {
+        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/contrib/games/zero.nfg",
+        "checksum": {
+          "@id": "urn:sha256:6ee83487e30b960250dccfc8d9a162bdc7c1c19b826a54d499e2afe3a1ee7b99",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "6ee83487e30b960250dccfc8d9a162bdc7c1c19b826a54d499e2afe3a1ee7b99"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
       "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ArmsRace",
       "@type": "prov:Entity",
       "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
@@ -85,12 +2719,12 @@
       "label": "ArmsRace",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -105,12 +2739,12 @@
       "label": "BattleOfTheSexes",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -125,12 +2759,12 @@
       "label": "BertrandOligopoly",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -145,12 +2779,72 @@
       "label": "BidirectionalLEG",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BidirectionalLEG-CG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BidirectionalLEG-CG",
+      "label": "BidirectionalLEG-CG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BidirectionalLEG-RG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BidirectionalLEG-RG",
+      "label": "BidirectionalLEG-RG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/BidirectionalLEG-SG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "BidirectionalLEG-SG",
+      "label": "BidirectionalLEG-SG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -165,12 +2859,32 @@
       "label": "Chicken",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ClassicalMatrixgame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "ClassicalMatrixgame",
+      "label": "ClassicalMatrixgame",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -185,12 +2899,72 @@
       "label": "CollaborationGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CompactlyRepresentable",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CompactlyRepresentable",
+      "label": "CompactlyRepresentable",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CompleteOpposition",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CompleteOpposition",
+      "label": "CompleteOpposition",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CompoundGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CompoundGame",
+      "label": "CompoundGame",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -205,12 +2979,32 @@
       "label": "CongestionGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CongestionGameClass",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CongestionGameClass",
+      "label": "CongestionGameClass",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -225,12 +3019,32 @@
       "label": "CoordinationGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CoordinationGameClass",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CoordinationGameClass",
+      "label": "CoordinationGameClass",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -245,12 +3059,12 @@
       "label": "CournotDuopoly",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -265,12 +3079,72 @@
       "label": "CovariantGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CovariantGame-Neg",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CovariantGame-Neg",
+      "label": "CovariantGame-Neg",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CovariantGame-Pos",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CovariantGame-Pos",
+      "label": "CovariantGame-Pos",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/CovariantGame-Zero",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "CovariantGame-Zero",
+      "label": "CovariantGame-Zero",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -285,12 +3159,172 @@
       "label": "DispersionGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/DominanceSolvableEq",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "DominanceSolvableEq",
+      "label": "DominanceSolvableEq",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/DominantStrategies",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "DominantStrategies",
+      "label": "DominantStrategies",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ESSGames",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "ESSGames",
+      "label": "ESSGames",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/Game2ActionOrParam",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "Game2ActionOrParam",
+      "label": "Game2ActionOrParam",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/Game2PlayerOrParam",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "Game2PlayerOrParam",
+      "label": "Game2PlayerOrParam",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GameWithActionParam",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GameWithActionParam",
+      "label": "GameWithActionParam",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GameWithPlayerParam",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GameWithPlayerParam",
+      "label": "GameWithPlayerParam",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GeometricGame",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GeometricGame",
+      "label": "GeometricGame",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -305,12 +3339,92 @@
       "label": "GrabTheDollar",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GraphicalGame-RG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GraphicalGame-RG",
+      "label": "GraphicalGame-RG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GraphicalGame-Road",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GraphicalGame-Road",
+      "label": "GraphicalGame-Road",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GraphicalGame-SG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GraphicalGame-SG",
+      "label": "GraphicalGame-SG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GraphicalGame-SW",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "GraphicalGame-SW",
+      "label": "GraphicalGame-SW",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -325,12 +3439,12 @@
       "label": "GreedyGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -338,24 +3452,25 @@
       ]
     },
     {
-      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GuessThirdsAve",
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/GuessTwoThirdsAve",
       "@type": "prov:Entity",
       "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
-      "identifier": "GuessThirdsAve",
-      "label": "GuessThirdsAve",
+      "identifier": "GuessTwoThirdsAve",
+      "label": "GuessTwoThirdsAve",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
         "uogto:NormalFormRepresentation"
-      ]
+      ],
+      "alternative": "GuessThirdsAve"
     },
     {
       "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/HawkAndDove",
@@ -365,12 +3480,12 @@
       "label": "HawkAndDove",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -385,12 +3500,12 @@
       "label": "LocationGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -405,12 +3520,12 @@
       "label": "MajorityVoting",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -425,12 +3540,12 @@
       "label": "MatchingPennies",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -445,12 +3560,12 @@
       "label": "MinimumEffortGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -465,12 +3580,12 @@
       "label": "NPlayerChicken",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -485,12 +3600,112 @@
       "label": "NPlayerPrisonersDilemma",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/NoDominantStrategies",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "NoDominantStrategies",
+      "label": "NoDominantStrategies",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/NoPSNE",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "NoPSNE",
+      "label": "NoPSNE",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/OriginalPaperNPlayerDist",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "OriginalPaperNPlayerDist",
+      "label": "OriginalPaperNPlayerDist",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/OritinalPaper2PlayerDist",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "OritinalPaper2PlayerDist",
+      "label": "OritinalPaper2PlayerDist",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PSNEGameClass",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PSNEGameClass",
+      "label": "PSNEGameClass",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -505,12 +3720,112 @@
       "label": "PolymatrixGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PolymatrixGame-CG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PolymatrixGame-CG",
+      "label": "PolymatrixGame-CG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PolymatrixGame-RG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PolymatrixGame-RG",
+      "label": "PolymatrixGame-RG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PolymatrixGame-Road",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PolymatrixGame-Road",
+      "label": "PolymatrixGame-Road",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PolymatrixGame-SW",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PolymatrixGame-SW",
+      "label": "PolymatrixGame-SW",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/PotentialGameClass",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "PotentialGameClass",
+      "label": "PotentialGameClass",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -525,12 +3840,12 @@
       "label": "PrisonersDilemma",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -545,12 +3860,12 @@
       "label": "RandomCompoundGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -565,12 +3880,12 @@
       "label": "RandomGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -585,12 +3900,12 @@
       "label": "RandomGraphicalGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -605,12 +3920,12 @@
       "label": "RandomLEG",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -625,12 +3940,12 @@
       "label": "RandomZeroSum",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -645,12 +3960,12 @@
       "label": "RockPaperScissors",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -658,24 +3973,25 @@
       ]
     },
     {
-      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ShapleyGame",
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/ShapleysGame",
       "@type": "prov:Entity",
       "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
-      "identifier": "ShapleyGame",
-      "label": "ShapleyGame",
+      "identifier": "ShapleysGame",
+      "label": "ShapleysGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
         "uogto:NormalFormRepresentation"
-      ]
+      ],
+      "alternative": "ShapleyGame"
     },
     {
       "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/SimpleInspectionGame",
@@ -685,12 +4001,92 @@
       "label": "SimpleInspectionGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/StrictEqGameClass",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "StrictEqGameClass",
+      "label": "StrictEqGameClass",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/StronglySymmetricGames",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "StronglySymmetricGames",
+      "label": "StronglySymmetricGames",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/SupermodularGames",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "SupermodularGames",
+      "label": "SupermodularGames",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/SymmetricTwoByTwo",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "SymmetricTwoByTwo",
+      "label": "SymmetricTwoByTwo",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -705,12 +4101,12 @@
       "label": "TravelersDilemma",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -725,12 +4121,12 @@
       "label": "TwoByTwoGame",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -745,12 +4141,92 @@
       "label": "UniformLEG",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/UniformLEG-CG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "UniformLEG-CG",
+      "label": "UniformLEG-CG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/UniformLEG-RG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "UniformLEG-RG",
+      "label": "UniformLEG-RG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/UniformLEG-SG",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "UniformLEG-SG",
+      "label": "UniformLEG-SG",
+      "format": "GAMUT preset",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/UniqueNEGames",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "UniqueNEGames",
+      "label": "UniqueNEGames",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -765,12 +4241,32 @@
       "label": "WarOfAttrition",
       "format": "GAMUT",
       "source": {
-        "@id": "https://github.com/gambitproject/gambit/blob/v16.7.0/src/pygambit/catalog.py",
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
         "checksum": {
-          "@id": "urn:sha256:cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec",
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
           "@type": "spdx:Checksum",
           "algorithm": "spdx:checksumAlgorithm_sha256",
-          "checksumValue": "cfa0ffee6879b510e04ff1f8922ab6309f7610995800c4ae2430eb66be7cf6ec"
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
+        }
+      },
+      "subject": [
+        "uogto:NormalFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut/WeaklySymmetricGames",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/gambit/16.7.0/gamut",
+      "identifier": "WeaklySymmetricGames",
+      "label": "WeaklySymmetricGames",
+      "format": "GAMUT collection",
+      "source": {
+        "@id": "https://gamut.stanford.edu/gamut.src.tgz#src/edu/stanford/multiagent/gamer/games.txt",
+        "checksum": {
+          "@id": "urn:sha256:1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "1bc5c8582742685ad0313cdb8db2904a572e7221bf24113925e2bb3e9c7baef3"
         }
       },
       "subject": [
@@ -1618,6 +5114,26 @@
       ]
     },
     {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/atari",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "atari",
+      "label": "Atari integration",
+      "format": "OpenSpiel integration",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/examples/ppo_example.py",
+        "checksum": {
+          "@id": "urn:sha256:a2231e16e459624e4c5789b0f1922f7fc5c1fa686c588f1921285137fe27a1f8",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "a2231e16e459624e4c5789b0f1922f7fc5c1fa686c588f1921285137fe27a1f8"
+        }
+      },
+      "subject": [
+        "uogto:GameSpecification"
+      ]
+    },
+    {
       "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/backgammon",
       "@type": "prov:Entity",
       "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
@@ -2323,7 +5839,7 @@
       "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
       "identifier": "efg_game",
       "label": "efg_game",
-      "format": "OpenSpiel C++",
+      "format": "OpenSpiel loader",
       "source": {
         "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/efg_game/efg_game.cc",
         "checksum": {
@@ -3263,7 +6779,7 @@
       "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
       "identifier": "nfg_game",
       "label": "nfg_game",
-      "format": "OpenSpiel C++",
+      "format": "OpenSpiel loader",
       "source": {
         "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/games/nfg_game/nfg_game.cc",
         "checksum": {
@@ -4375,6 +7891,26 @@
       },
       "subject": [
         "uogto:ExtensiveFormRepresentation"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/uogto/catalogues/openspiel/2.0.2/weighted_voting",
+      "@type": "prov:Entity",
+      "catalogue": "https://w3id.org/uogto/catalogues/openspiel/2.0.2",
+      "identifier": "weighted_voting",
+      "label": "Weighted Voting Games",
+      "format": "OpenSpiel integration",
+      "source": {
+        "@id": "https://github.com/google-deepmind/open_spiel/blob/v2.0.2/open_spiel/python/coalitional_games/wvg.py",
+        "checksum": {
+          "@id": "urn:sha256:f30dd46067f9e058d6b1519b7e0a752bd93fc41702bdb43a85190f0be7129151",
+          "@type": "spdx:Checksum",
+          "algorithm": "spdx:checksumAlgorithm_sha256",
+          "checksumValue": "f30dd46067f9e058d6b1519b7e0a752bd93fc41702bdb43a85190f0be7129151"
+        }
+      },
+      "subject": [
+        "uogtox:CooperativeGame"
       ]
     },
     {

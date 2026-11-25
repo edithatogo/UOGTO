@@ -13,10 +13,14 @@ CATALOGUE = ROOT / "data/processed/external-games"
 DCT = Namespace("http://purl.org/dc/terms/")
 BASE = "https://w3id.org/uogto/catalogues/"
 EXPECTED = {
-    "EFG": 32,
-    "NFG": 6,
+    "EFG": 118,
+    "NFG": 51,
     "GAMUT": 35,
-    "OpenSpiel C++": 116,
+    "GAMUT collection": 26,
+    "GAMUT preset": 17,
+    "OpenSpiel C++": 114,
+    "OpenSpiel integration": 2,
+    "OpenSpiel loader": 2,
     "OpenSpiel Python": 20,
     "OpenSpiel transform": 10,
 }
@@ -55,11 +59,16 @@ def test_external_catalogue_profile():
     assert {
         ("gambit/16.7.0/models", "books/myerson1991/fig2_1"),
         ("gambit/16.7.0/gamut", "CongestionGame"),
+        ("gambit/16.7.0/gamut", "GuessTwoThirdsAve"),
+        ("gambit/16.7.0/gamut", "ShapleysGame"),
+        ("gambit/16.7.0/contributed", "coord2.efg"),
         ("openspiel/2.0.2", "matrix_pd"),
         ("openspiel/2.0.2", "hanabi"),
         ("openspiel/2.0.2", "universal_poker"),
         ("openspiel/2.0.2", "python_kuhn_poker"),
         ("openspiel/2.0.2", "turn_based_simultaneous_game"),
+        ("openspiel/2.0.2", "efg_game"),
+        ("openspiel/2.0.2", "weighted_voting"),
     } <= ids
     assert not set(graph.subjects(RDF.type, URIRef("https://w3id.org/uogto/core#GameInstance")))
 
