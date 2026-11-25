@@ -1,5 +1,14 @@
 # UOGTO Project Status
 
+## 2026-11-25 — Paignia T22 discounted Markov semantics
+
+The [discounted Markov profile](../docs/contracts/executable-discounted-markov-profile-v1.md)
+adds source-side admission, ordered projection and a frozen synthetic
+recurring-funding replay for [UOGTO #144](https://github.com/edithatogo/UOGTO/issues/144).
+Admission checks complete labelled bindings and the exact binary64 mass bound.
+The replay has exact first-seat values `[32/13, -16/13]` and initial value
+`20/13`. Paignia owns native solver and I/O qualification.
+
 ## 2026-11-25 — External game catalogues
 
 The versioned [catalogue](../docs/contracts/external-game-catalogues-v1.md)

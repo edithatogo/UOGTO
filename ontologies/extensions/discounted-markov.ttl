@@ -1,0 +1,75 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/uogto/extensions/discounted-markov> a owl:Ontology ;
+    rdfs:label "UOGTO Extension - Discounted Markov Games"@en ;
+    owl:imports <https://w3id.org/uogto/core/temporality>,
+                <https://w3id.org/uogto/core/actions>,
+                <https://w3id.org/uogto/extensions/marl> .
+
+uogtox:DiscountedZeroSumMarkovRepresentation a owl:Class ;
+    rdfs:subClassOf uogto:GameRepresentation ;
+    rdfs:label "Discounted zero-sum Markov representation"@en ;
+    skos:definition "A representation of an infinite-horizon two-player zero-sum game with finite, publicly observed states, simultaneous actions and a time-invariant discounted stage utility. The first player receives the stage reward and the second receives its negation."@en .
+
+uogtox:MarkovStageDecision a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Markov stage decision"@en ;
+    skos:definition "A binding of one current state and one joint action to an immediate stage reward and a next-state distribution."@en .
+
+uogtox:modelDiscountFactor a owl:DatatypeProperty ;
+    rdfs:range xsd:double ;
+    rdfs:label "model discount factor"@en ;
+    skos:definition "The factor by which the game representation discounts future stage utility for each stage of delay."@en .
+
+uogtox:playerOrder a owl:ObjectProperty ;
+    rdfs:range rdf:List ;
+    rdfs:label "player order"@en ;
+    skos:definition "An ordered RDF list of the player identities occupying the seats of a game representation."@en .
+
+uogtox:stateOrder a owl:ObjectProperty ;
+    rdfs:range rdf:List ;
+    rdfs:label "state order"@en ;
+    skos:definition "An ordered RDF list of the state identities used by a game representation."@en .
+
+uogtox:actionOrder a owl:ObjectProperty ;
+    rdfs:range rdf:List ;
+    rdfs:label "action order"@en ;
+    skos:definition "An ordered RDF list of the actions available to a player in every state of the representation."@en .
+
+uogtox:hasInitialWeight a owl:ObjectProperty ;
+    rdfs:label "has initial weight"@en ;
+    skos:definition "Associates a representation with a labelled entry in its distribution over the initial state."@en .
+
+uogtox:hasStageDecision a owl:ObjectProperty ;
+    rdfs:range uogtox:MarkovStageDecision ;
+    rdfs:label "has stage decision"@en ;
+    skos:definition "Includes a current-state and joint-action binding in a Markov transition function."@en .
+
+uogtox:atState a owl:ObjectProperty ;
+    rdfs:range uogto:State ;
+    rdfs:label "at state"@en ;
+    skos:definition "Identifies the state indexing a Markov stage decision, initial weight or policy row."@en .
+
+uogtox:stageReward a owl:DatatypeProperty ;
+    rdfs:range xsd:double ;
+    rdfs:label "stage reward"@en ;
+    skos:definition "The utility earned by the first player when the current state and joint action occur, before drawing the next state."@en .
+
+uogtox:hasStationaryProfile a owl:ObjectProperty ;
+    rdfs:range uogtox:JointPolicy ;
+    rdfs:label "has stationary profile"@en ;
+    skos:definition "Links a game representation to a profile of independently sampled player policies whose action distributions depend only on the current state."@en .
+
+uogtox:hasPolicyRow a owl:ObjectProperty ;
+    rdfs:label "has policy row"@en ;
+    skos:definition "Associates a joint policy with the action distribution for one player at one state."@en .
+
+uogtox:hasActionWeight a owl:ObjectProperty ;
+    rdfs:label "has action weight"@en ;
+    skos:definition "Associates a policy row with a weight labelled by the action to which it applies."@en .
