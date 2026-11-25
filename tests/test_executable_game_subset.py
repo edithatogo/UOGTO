@@ -23,13 +23,20 @@ def valid_record() -> dict:
     )
 
 
-def test_admit_qualified_declaration_without_execution_claim():
+@pytest.mark.parametrize("revision", [
+    "bd880dd756d2ba56cc5f479bc078cea31b53c1d1",
+    "a04a19da06cc50e310a172574ed66f62000b891a",
+])
+def test_admit_qualified_declaration_without_execution_claim(revision):
     record = valid_record()
+    record["provider"]["revision"] = revision
+    expected = copy.deepcopy(record)
     result = validate_executable_subset(record)
     assert result["status"] == "profile_declaration_compatible"
     assert result["profile_id"] == PROFILE_ID
+    assert result["provider_revision"] == revision
     assert result["native_execution_qualified"] is False
-    assert record == valid_record()
+    assert record == expected
 
 
 @pytest.mark.parametrize("timing", ["StaticGame", "DynamicGame"])
