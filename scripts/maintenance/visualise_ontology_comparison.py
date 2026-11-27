@@ -1,4 +1,4 @@
-import argparse, csv, html, json, math, shutil, subprocess
+import argparse, csv, html, json, math, shutil, subprocess, warnings
 from collections import Counter
 from pathlib import Path
 
@@ -374,17 +374,36 @@ def sync_paper_graph_pdfs(output_dir, paper_dir=DEFAULT_PAPER_FIGURES):
 
 
 def optional_image_derivatives(svg_path):
+    # An installed ImageMagick may lack its SVG delegate. Prefer Inkscape when
+    # present, then try ImageMagick, while keeping canonical SVG generation usable.
+    inkscape = shutil.which('inkscape')
     magick = shutil.which('magick')
-    if not magick:
+    if not inkscape and not magick:
         return []
     written = []
     for suffix in ('.png', '.pdf'):
         output = svg_path.with_suffix(suffix)
-        command = [magick, '-density', '180', str(svg_path), str(output)]
-        if suffix == '.pdf':
-            command = [magick, '-density', '110', str(svg_path), '-compress', 'Zip', '-quality', '90', str(output)]
-        subprocess.run(command, check=True)
-        written.append(output)
+        commands = []
+        if inkscape:
+            commands.append([
+                inkscape, str(svg_path), '--export-type=' + suffix[1:],
+                '--export-filename=' + str(output), '--export-dpi=180',
+            ])
+        if magick:
+            command = [magick, '-density', '180', str(svg_path), str(output)]
+            if suffix == '.pdf':
+                command = [magick, '-density', '110', str(svg_path), '-compress', 'Zip', '-quality', '90', str(output)]
+            commands.append(command)
+        for command in commands:
+            try:
+                subprocess.run(command, check=True, capture_output=True, timeout=120)
+                written.append(output)
+                break
+            except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                continue
+        else:
+            output.unlink(missing_ok=True)
+            warnings.warn(f'Optional {suffix} derivative unavailable for {svg_path}; SVG retained.', RuntimeWarning)
     return written
 
 
@@ -776,7 +795,7 @@ def render_report(path, inventory, review_rows, overlap, network, visualisation_
     licence_counts = Counter(source.get('licence_disposition', 'unspecified') for source in inventory.get('sources', []))
     licence_rows = '\n'.join('- {}'.format(key, value) for key, value in sorted(licence_counts.items()))
     report += '## Inclusion and Exclusion Summary\nThe discovery protocol records registry, repository, literature, and standards-body routes. Included records are retained when they are ontologies, vocabularies, schemas, metamodels, or formal standards that can inform game-theory or simulation semantics. Narrative-only or non-redistributable resources are not imported as ontology artifacts; they are kept as metadata-only or transformed-summary records where appropriate.\n\n{}\n\n'.format(licence_rows)
-    report += '## Mapping Methods\nMapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.\n\n'
+    report += '## Mapping Methods\nMapping candidates are generated from exact IRI matches, exact and normalized labels, synonym and token overlap, definition similarity, hierarchy context, property signatures, type compatibility, and source reliability. Lexical and similarity scores propose candidates and cannot automatically establish equivalence. Existing repository subclass assertions support conservative narrow matches; accepted equivalences require explicit scoped semantic evidence, and the known universal-class/device and observation-role mismatches are rejected. Only rows with `review_status` equal to `accepted` are emitted to `accepted-alignments.ttl`; rejected, deferred, and `needs_domain_review` rows remain candidate evidence and reviewer workload rather than asserted alignments.\n\n'
     report += '## Source Inventory\n- Candidate sources: {}\n- External terms: {}\n- UOGTO terms: {}\n- Review candidates: {}\n- Accepted mappings: {}\n\n'.format(len(inventory.get('sources', [])), summary['external_term_count'], summary['uogto_term_count'], summary['review_candidate_count'], accepted)
     report += '## Mapping Review Results\n- Accepted: {}\n- Needs domain review: {}\n- Rejected: {}\n\nThe accepted alignment TTL is evidence-backed by `mapping-review.csv`. Candidate and rejected rows remain audit records and should not be treated as asserted ontology alignments.\n\n'.format(accepted, needs_review, rejected)
     report += '## Overlap Findings\n| Source | Unmatched terms | Candidate coverage |\n| --- | ---: | ---: |\n{}\n\n'.format(top_sources_md)

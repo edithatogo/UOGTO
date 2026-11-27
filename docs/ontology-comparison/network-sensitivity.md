@@ -6,10 +6,10 @@ This report compares network communities and bridge terms across the key network
 
 | scenario | source nodes | source edges | source communities | alignment nodes | alignment edges | alignment communities |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| all_sources__accepted_mappings | 75 | 68 | 7 | 20 | 12 | 8 |
-| parsed_sources_only__accepted_mappings | 74 | 51 | 23 | 20 | 12 | 8 |
-| all_sources__accepted_plus_close_related | 75 | 68 | 7 | 20 | 12 | 8 |
-| parsed_sources_only__accepted_plus_close_related | 74 | 51 | 23 | 20 | 12 | 8 |
+| all_sources__accepted_mappings | 75 | 68 | 7 | 7 | 4 | 3 |
+| parsed_sources_only__accepted_mappings | 74 | 51 | 23 | 7 | 4 | 3 |
+| all_sources__accepted_plus_close_related | 75 | 68 | 7 | 7 | 4 | 3 |
+| parsed_sources_only__accepted_plus_close_related | 74 | 51 | 23 | 7 | 4 | 3 |
 
 ## Sensitivity
 
@@ -21,6 +21,6 @@ This report compares network communities and bridge terms across the key network
 ## Bridge Overlap
 
 - Source-graph bridge overlap: format:turtle, import:core, ssn_sosa.
-- Alignment-graph bridge overlap: source:http://ogp.me/ns#description, source:http://purl.org/dc/terms/description, uogto:https://w3id.org/uogto/core#Action, uogto:https://w3id.org/uogto/core#Agent, uogto:https://w3id.org/uogto/core#description.
+- Alignment-graph bridge overlap: source:http://www.w3.org/ns/prov#Activity, source:http://www.w3.org/ns/prov#Agent, source:http://www.w3.org/ns/prov#Entity, source:https://schema.org/Action, uogto:https://w3id.org/uogto/core#Action.
 
 The accepted-only and close/related variants let the article report how much network structure depends on conservative review versus permissive relational inclusion.

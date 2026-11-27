@@ -1,5 +1,5 @@
 name: RI-HERO Publication and Registry Intake
-about: Intake for RI-HERO publication, discoverability, and registry work
+description: Intake for RI-HERO publication, discoverability, and registry work
 labels: ri-hero, ri-hero-publishing
 body:
   - type: textarea

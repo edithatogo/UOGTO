@@ -1,0 +1,47 @@
+@prefix ex:     <http://example.org/temporality/> .
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Two periods of simultaneous choices with a stochastic state transition.
+# The normal-form strategies are complete contingent plans over both periods.
+ex:two-stage-stochastic-game a uogto:DynamicGame ;
+    rdfs:label "Two-stage simultaneous stochastic game"@en ;
+    uogto:hasPlayer ex:alice, ex:bob ;
+    uogto:hasRepresentation ex:normal-form, ex:extensive-form ;
+    uogto:hasState ex:stage-one, ex:stage-two-good, ex:stage-two-bad ;
+    uogto:hasInitialState ex:stage-one ;
+    uogto:hasTransition ex:good-transition, ex:bad-transition ;
+    uogto:hasStrategyProfile ex:contingent-profile ;
+    uogto:compiledToExecutionModel ex:table-inspection-model .
+
+ex:alice a uogto:Player ; uogto:identifier "alice" .
+ex:bob a uogto:Player ; uogto:identifier "bob" .
+ex:normal-form a uogto:NormalFormRepresentation ;
+    rdfs:label "Complete contingent strategies and their expected payoffs"@en .
+ex:extensive-form a uogto:ExtensiveFormRepresentation ;
+    rdfs:label "Two stages with simultaneous choices and a chance transition"@en .
+ex:stage-one a uogto:InitialState ; uogto:timeIndex 1 ;
+    uogto:hasAvailableAction ex:alice-first-choice, ex:bob-first-choice .
+ex:stage-two-good a uogto:State ; uogto:timeIndex 2 ;
+    uogto:hasAvailableAction ex:alice-later-choice, ex:bob-later-choice .
+ex:stage-two-bad a uogto:State ; uogto:timeIndex 2 ;
+    uogto:hasAvailableAction ex:alice-later-choice, ex:bob-later-choice .
+ex:alice-first-choice a uogto:SimultaneousAction ; uogto:belongsToPlayer ex:alice .
+ex:bob-first-choice a uogto:SimultaneousAction ; uogto:belongsToPlayer ex:bob .
+ex:alice-later-choice a uogto:SimultaneousAction ; uogto:belongsToPlayer ex:alice .
+ex:bob-later-choice a uogto:SimultaneousAction ; uogto:belongsToPlayer ex:bob .
+ex:good-transition a uogto:Transition ;
+    uogto:transitionsFrom ex:stage-one ; uogto:transitionsTo ex:stage-two-good ;
+    uogto:probability 0.75 .
+ex:bad-transition a uogto:Transition ;
+    uogto:transitionsFrom ex:stage-one ; uogto:transitionsTo ex:stage-two-bad ;
+    uogto:probability 0.25 .
+ex:contingent-profile a uogto:StrategyProfile ;
+    uogto:hasStrategy ex:alice-plan, ex:bob-plan .
+ex:alice-plan a uogto:Strategy ;
+    rdfs:label "Alice's complete plan, including a choice in each second-stage state"@en .
+ex:bob-plan a uogto:Strategy ;
+    rdfs:label "Bob's complete plan, including a choice in each second-stage state"@en .
+# A reference tool can inspect a strategy table without simulating these stages.
+ex:table-inspection-model a uogto:ExecutionModel ;
+    rdfs:label "Reference inspection of the normal-form table"@en .

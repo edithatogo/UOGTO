@@ -1,0 +1,130 @@
+@prefix ex: <https://example.org/uogto/recurring-funding/v1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+
+# Frozen synthetic T22 policy-evaluation fixture. Rewards are dimensionless.
+ex:specification a uogto:GameSpecification, uogto:DynamicGame, uogtox:MarkovGame ;
+    rdfs:label "Synthetic recurring funding"@en ;
+    uogto:hasRepresentation ex:representation ;
+    uogto:hasPlayer ex:commissioner, ex:provider ;
+    uogto:hasState ex:stable, ex:pressure ;
+    uogto:hasTransition ex:transition-kernel .
+
+ex:representation a uogtox:DiscountedZeroSumMarkovRepresentation ;
+    dct:conformsTo <urn:uogto:profile:discounted-markov:1.0.0> ;
+    uogtox:playerOrder ( ex:commissioner ex:provider ) ;
+    uogtox:stateOrder ( ex:stable ex:pressure ) ;
+    uogtox:modelDiscountFactor 7.5e-1 ;
+    uogtox:hasInitialWeight ex:initial-stable, ex:initial-pressure ;
+    uogtox:hasStationaryProfile ex:stationary-profile .
+
+ex:transition-kernel a uogto:TransitionFunction ;
+    uogtox:hasStageDecision
+        ex:stable-settle-accept, ex:stable-settle-contend,
+        ex:stable-defer-accept, ex:stable-defer-contend,
+        ex:pressure-settle-accept, ex:pressure-settle-contend,
+        ex:pressure-defer-accept, ex:pressure-defer-contend .
+
+ex:commissioner a uogto:Player ; uogto:identifier "commissioner" ;
+    uogto:observes ex:stable, ex:pressure ;
+    uogtox:actionOrder ( ex:settle ex:defer ) .
+ex:provider a uogto:Player ; uogto:identifier "provider" ;
+    uogto:observes ex:stable, ex:pressure ;
+    uogtox:actionOrder ( ex:accept ex:contend ) .
+ex:settle a uogto:Action, uogto:SimultaneousAction ; uogto:belongsToPlayer ex:commissioner .
+ex:defer a uogto:Action, uogto:SimultaneousAction ; uogto:belongsToPlayer ex:commissioner .
+ex:accept a uogto:Action, uogto:SimultaneousAction ; uogto:belongsToPlayer ex:provider .
+ex:contend a uogto:Action, uogto:SimultaneousAction ; uogto:belongsToPlayer ex:provider .
+ex:stable a uogto:State ; uogto:hasAvailableAction ex:settle, ex:defer, ex:accept, ex:contend .
+ex:pressure a uogto:State ; uogto:hasAvailableAction ex:settle, ex:defer, ex:accept, ex:contend .
+
+ex:initial-stable uogtox:atState ex:stable ; uogto:probability 7.5e-1 .
+ex:initial-pressure uogtox:atState ex:pressure ; uogto:probability 2.5e-1 .
+
+ex:settle-accept a uogto:ActionProfile ; uogto:hasAction ex:settle, ex:accept .
+ex:settle-contend a uogto:ActionProfile ; uogto:hasAction ex:settle, ex:contend .
+ex:defer-accept a uogto:ActionProfile ; uogto:hasAction ex:defer, ex:accept .
+ex:defer-contend a uogto:ActionProfile ; uogto:hasAction ex:defer, ex:contend .
+
+ex:stable-settle-accept a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:stable ; uogto:hasActionProfile ex:settle-accept ; uogtox:stageReward 2e0 ;
+    uogto:hasTransition ex:ssa-stable, ex:ssa-pressure .
+ex:ssa-stable a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:stable ; uogto:probability 5e-1 .
+ex:ssa-pressure a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 5e-1 .
+
+ex:stable-settle-contend a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:stable ; uogto:hasActionProfile ex:settle-contend ; uogtox:stageReward 3e0 ;
+    uogto:hasTransition ex:ssc-stable, ex:ssc-pressure .
+ex:ssc-stable a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:stable ; uogto:probability 1e0 .
+ex:ssc-pressure a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 0e0 .
+
+ex:stable-defer-accept a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:stable ; uogto:hasActionProfile ex:defer-accept ; uogtox:stageReward 0e0 ;
+    uogto:hasTransition ex:sda-stable, ex:sda-pressure .
+ex:sda-stable a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:stable ; uogto:probability 0e0 .
+ex:sda-pressure a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 1e0 .
+
+ex:stable-defer-contend a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:stable ; uogto:hasActionProfile ex:defer-contend ; uogtox:stageReward 1e0 ;
+    uogto:hasTransition ex:sdc-stable, ex:sdc-pressure .
+ex:sdc-stable a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:stable ; uogto:probability 5e-1 .
+ex:sdc-pressure a uogto:Transition ; uogto:transitionsFrom ex:stable ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 5e-1 .
+
+ex:pressure-settle-accept a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:pressure ; uogto:hasActionProfile ex:settle-accept ; uogtox:stageReward -1e0 ;
+    uogto:hasTransition ex:psa-stable, ex:psa-pressure .
+ex:psa-stable a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:stable ; uogto:probability 2.5e-1 .
+ex:psa-pressure a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 7.5e-1 .
+
+ex:pressure-settle-contend a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:pressure ; uogto:hasActionProfile ex:settle-contend ; uogtox:stageReward -1e0 ;
+    uogto:hasTransition ex:psc-stable, ex:psc-pressure .
+ex:psc-stable a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:stable ; uogto:probability 1e0 .
+ex:psc-pressure a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 0e0 .
+
+ex:pressure-defer-accept a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:pressure ; uogto:hasActionProfile ex:defer-accept ; uogtox:stageReward -2e0 ;
+    uogto:hasTransition ex:pda-stable, ex:pda-pressure .
+ex:pda-stable a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:stable ; uogto:probability 0e0 .
+ex:pda-pressure a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 1e0 .
+
+ex:pressure-defer-contend a uogtox:MarkovStageDecision ;
+    uogtox:atState ex:pressure ; uogto:hasActionProfile ex:defer-contend ; uogtox:stageReward 1e0 ;
+    uogto:hasTransition ex:pdc-stable, ex:pdc-pressure .
+ex:pdc-stable a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:stable ; uogto:probability 0e0 .
+ex:pdc-pressure a uogto:Transition ; uogto:transitionsFrom ex:pressure ;
+    uogto:transitionsTo ex:pressure ; uogto:probability 1e0 .
+
+ex:stationary-profile a uogtox:JointPolicy ;
+    uogtox:hasPolicyRow ex:commissioner-stable, ex:provider-stable,
+                         ex:commissioner-pressure, ex:provider-pressure .
+ex:commissioner-stable uogto:belongsToPlayer ex:commissioner ; uogtox:atState ex:stable ;
+    uogtox:hasActionWeight ex:weight-settle, ex:weight-defer .
+ex:provider-stable uogto:belongsToPlayer ex:provider ; uogtox:atState ex:stable ;
+    uogtox:hasActionWeight ex:weight-accept, ex:weight-contend .
+ex:commissioner-pressure uogto:belongsToPlayer ex:commissioner ; uogtox:atState ex:pressure ;
+    uogtox:hasActionWeight ex:weight-settle, ex:weight-defer .
+ex:provider-pressure uogto:belongsToPlayer ex:provider ; uogtox:atState ex:pressure ;
+    uogtox:hasActionWeight ex:weight-accept, ex:weight-contend .
+
+ex:weight-settle uogto:hasAction ex:settle ; uogto:probability 1e0 .
+ex:weight-defer uogto:hasAction ex:defer ; uogto:probability 0e0 .
+ex:weight-accept uogto:hasAction ex:accept ; uogto:probability 1e0 .
+ex:weight-contend uogto:hasAction ex:contend ; uogto:probability 0e0 .

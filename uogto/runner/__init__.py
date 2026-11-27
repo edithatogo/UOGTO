@@ -1,4 +1,4 @@
-"""Runtime helpers for executing simple UOGTO game graphs."""
+"""Reference graph inspection and deterministic baseline helpers."""
 
 from .engine import RDFGameRunner
 

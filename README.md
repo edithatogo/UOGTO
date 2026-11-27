@@ -1,7 +1,43 @@
 # Universal Open Game Theory Ontology (UOGTO)
 
+[External game catalogues](docs/contracts/external-game-catalogues-v1.md)
+link the Gambit and OpenSpiel release definitions to UOGTO terms.
+
 ## Overview
-UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled repository defining game-theoretic semantics, including classical, cooperative, multi-agent, simulation execution, mechanism design, and executable knowledge graph semantics.
+UOGTO (Universal Open Game Theory Ontology) defines modular game-theoretic semantics
+for classical, cooperative, multi-agent, mechanism-design and simulation-related
+models. It supplies OWL vocabularies, SHACL constraints, examples and competency
+queries. Its broad scope is an aim; exhaustive coverage of earlier ontologies and
+general executable compatibility have not been established.
+
+## Current capabilities and programme
+
+- Static/dynamic strategic structure is explicit and independent of normal/extensive
+  representation and software scheduling. See the
+  [semantic reconciliation and migration notes](docs/semantic-reconciliation-20261108.md).
+- Python `RDFGameRunner` is reference graph inspection and stored-payoff lookup.
+  `FirstActionPlayer` is a deterministic baseline; the legacy `LLMPlayer` alias
+  does not invoke a language model. Outputs identify their execution origin.
+- [Paignia](https://github.com/edithatogo/paignia) owns the intended Rust computation
+  and adapter layer. The versioned executable subset and cross-language conformance
+  work remain tracked by [semantic game contracts](conductor/tracks/semantic_game_contracts_20261107/index.md).
+- The [November source audit](docs/research/game-semantics-source-audit-20261108.md)
+  identifies missing and incompletely examined predecessors and library concepts.
+  Current OpenSpiel/PettingZoo fixtures provide local semantic checks; actual
+  external adapters remain future work.
+- The [comprehensive sourcing protocol](docs/research/comprehensive-game-semantics-sourcing-protocol.md)
+  expands discovery beyond the initial audit. Its consolidated seed register,
+  [bibliography](docs/research/game-semantics-bibliography-20261108.md) and attribution
+  ledger preserve earlier sources, citations and unresolved acquisition limits.
+- The [next-paper plan](docs/paper/next-version-plan-20261108.md) maps corrections,
+  comparison evidence and attribution into the existing resource manuscript.
+  Planning is delivered; manuscript revision and broader source synthesis remain open.
+- The [maturity and frontier programme](docs/roadmap/frontier-programme-20261108.md)
+  links scoped implementation work, library comparisons and research hypotheses
+  to the [Conductor registry](conductor/tracks.md).
+- [Current quality evidence](docs/quality/current-semantic-quality.md) is separate
+  from dated article snapshots. Example conformance does not establish full
+  ontology coverage, solver correctness or scientific frontier status.
 
 ## Repository Layout
 - `ontologies/`: Main OWL/TTL schema definitions.
@@ -13,24 +49,30 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - `docs/`: Guides, mappings, and references.
 
 ## Quickstart
-1. Install dependencies:
-   ```bash
-   pip install -e .
-   ```
-2. Build merged files:
-   ```bash
-   make build
-   ```
-3. Run validation and tests:
-   ```bash
-   make all
-   ```
+
+The project uses the CPython patch release pinned in `.python-version`.
+Use the locked Pixi environment on Linux and Windows.
+
+```bash
+pixi install --locked
+pixi run python --version
+pixi run make all
+```
+
+On macOS, create a project-local environment and run the full validation suite.
+
+```bash
+uv venv --python "$(cat .python-version)" target/dev-python
+uv pip install --python target/dev-python/bin/python -e '.[dev]'
+target/dev-python/bin/python --version
+make all
+```
 
 ## Documentation and Citation
 - Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.
 - Ontology design-pattern documentation is available at [docs/ontology-design-patterns.md](docs/ontology-design-patterns.md).
 - Ontology modelling decisions are explained in [docs/modelling-decisions.md](docs/modelling-decisions.md).
-- Executable interoperability benchmark fixtures and target inventory are tracked in [docs/interoperability-benchmarks.md](docs/interoperability-benchmarks.md).
+- Reference interoperability fixtures and target inventory are tracked in [docs/interoperability-benchmarks.md](docs/interoperability-benchmarks.md).
 - Glossary terms are collected in [docs/glossary.md](docs/glossary.md).
 - Audience-specific guidance is available at [docs/uogto-for.md](docs/uogto-for.md).
 - Citation and reuse guidance is available at [docs/how-to-cite-and-reuse-uogto.md](docs/how-to-cite-and-reuse-uogto.md).
@@ -41,6 +83,7 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - Registry preparation materials for LOV and OLS are under [docs/registry/](docs/registry/).
 - Comparative ontology mapping outputs, figures, and report are under [docs/ontology-comparison/](docs/ontology-comparison/), with the main report at [docs/ontology-comparison/report.md](docs/ontology-comparison/report.md).
 - Article-hardening protocol, evidence package, source-acquisition manifest, tables, figures, and review logs are under [docs/article-hardening/](docs/article-hardening/).
+- Sole-developer merge and validation policy is documented in [docs/governance/sole-developer-harness.md](docs/governance/sole-developer-harness.md).
 
 ## RI-HERO
 The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as part of a broader health economics research on outcomes framing.
@@ -61,3 +104,14 @@ The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as 
 This project is dual-licensed:
 - **Ontology and Documentation**: Creative Commons Attribution 4.0 International (CC-BY-4.0). See [LICENSE](LICENSE).
 - **Code and Tooling**: MIT License. See [LICENSE-CODE](LICENSE-CODE).
+
+## Development
+
+Use the [Quickstart](#quickstart) environment and follow the
+[contribution guide](CONTRIBUTING.md) for ontology changes, local validation
+and pull requests.
+
+## Security
+
+Follow the [security policy](SECURITY.md) to report vulnerabilities
+privately. Keep credentials and sensitive data out of public issues and pull requests.

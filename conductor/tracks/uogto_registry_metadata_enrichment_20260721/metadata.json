@@ -1,0 +1,13 @@
+{
+  "track_id": "uogto_registry_metadata_enrichment_20260721",
+  "type": "chore",
+  "status": "completed",
+  "created_at": "2026-07-21T00:00:00Z",
+  "updated_at": "2026-07-21T22:00:00Z",
+  "description": "Implement repository-owned FAIRsharing and Wikidata enrichment evidence and maintain external registry follow-up.",
+  "github_issue": "https://github.com/edithatogo/UOGTO/issues/93",
+  "external_issues": [
+    "https://fairsharing.org/8382",
+    "https://www.wikidata.org/wiki/Q140323510"
+  ]
+}

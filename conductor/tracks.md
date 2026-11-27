@@ -2,6 +2,47 @@
 
 This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
+## [x] Track: semantic_reconciliation_20261108
+
+- **Description**: Correct reproduced semantic, validation, mapping, packaging and reference-tool defects; reconcile Paignia and current evidence.
+- **Status**: Completed locally; 310 tests passed, one local arXiv-artifact skip. Hosted checks and merge status remain on the PR.
+- **Link**: [./tracks/semantic_reconciliation_20261108/](./tracks/semantic_reconciliation_20261108/)
+
+## [~] Track: ontology_coverage_synthesis_20261108
+
+- **Description**: Comprehensively source, attribute and compare identifiable game-theory ontologies, languages, libraries, modelling standards and research baselines.
+- **Status**: Bounded audit OCS.01 complete; comprehensive protocol, sixty-record seed union and citation catalogue delivered; eleven research leaves pending.
+- **Link**: [./tracks/ontology_coverage_synthesis_20261108/](./tracks/ontology_coverage_synthesis_20261108/)
+
+## [~] Track: manuscript_next_version_20261108
+
+- **Description**: Revise the existing UOGTO resource paper using corrected semantics, source attribution, explicit comparison scope and reproducible evidence.
+- **Status**: Planning MNV.00 complete; twelve manuscript-integration leaves pending. No new manuscript or public arXiv version claimed.
+- **Link**: [./tracks/manuscript_next_version_20261108/](./tracks/manuscript_next_version_20261108/)
+
+## [ ] Track: repository_maturity_20261108
+
+- **Description**: Formal semantic checks, environment compatibility, reproducible artifacts, performance and release evidence.
+- **Status**: New; six implementation leaves pending.
+- **Link**: [./tracks/repository_maturity_20261108/](./tracks/repository_maturity_20261108/)
+
+## [ ] Track: semantic_interoperability_frontier_20261108
+
+- **Description**: Qualify library interchange and test semantic preservation, composition, strategic information and game-construction hypotheses.
+- **Status**: New; twelve leaves pending. No actual external adapter or novelty claim.
+- **Link**: [./tracks/semantic_interoperability_frontier_20261108/](./tracks/semantic_interoperability_frontier_20261108/)
+
+## [ ] Track: video_game_environment_profiles_20261108
+
+- **Description**: Model bounded strategic scenarios from accessible environments and assess optional GTA relevance.
+- **Status**: New; four leaves pending. No commercial game integration claimed.
+- **Link**: [./tracks/video_game_environment_profiles_20261108/](./tracks/video_game_environment_profiles_20261108/)
+
+## [~] Track: semantic_game_contracts_20261107
+- **Description**: Versioned executable subset and identity-preserving mappings to the existing generic Rust game packages, with negative SHACL and round-trip evidence.
+- **Status**: In progress. SGC.01 executable profiles and SGC.07 reference-tool labels are implemented. Six leaves and both consumer acceptance scopes remain pending.
+- **Link**: [./tracks/semantic_game_contracts_20261107/](./tracks/semantic_game_contracts_20261107/)
+
 ---
 
 ## [x] Track: uogto_bootstrap_20260620
@@ -179,3 +220,29 @@ These tracks are retained for audit history but are no longer active work items.
 - **Description**: Respond to Bioregistry namespace and ORCID feedback and update local registry follow-up evidence.
 - **Status**: Completed and archived; Bioregistry maintainer review remains external.
 - **Link**: [./archive/uogto_bioregistry_namespace_response_20260705/](./archive/uogto_bioregistry_namespace_response_20260705/)
+
+## [x] Track: uogto_registry_metadata_enrichment_20260721
+- **Description**: Implement repository-owned FAIRsharing and Wikidata enrichment evidence and maintain external registry follow-up.
+- **Status**: Repository implementation completed; external curator and registry decisions remain gated.
+- **GitHub issue**: [#93](https://github.com/edithatogo/UOGTO/issues/93)
+- **Link**: [./tracks/uogto_registry_metadata_enrichment_20260721/](./tracks/uogto_registry_metadata_enrichment_20260721/)
+
+## [x] Track: uogto_biomedical_registry_positioning_20260721
+- **Description**: Prepare a defensible BioPortal and OBO Foundry positioning decision without premature submission.
+- **Status**: Repository decision package completed; submission remains conditional on an approved scope and governance fit.
+- **GitHub issue**: [#94](https://github.com/edithatogo/UOGTO/issues/94)
+- **Link**: [./tracks/uogto_biomedical_registry_positioning_20260721/](./tracks/uogto_biomedical_registry_positioning_20260721/)
+
+## [x] Track: uogto_namespace_compatibility_contingency_20260721
+- **Description**: Assess a future Bioregistry namespace-compatibility layer without changing published UOGTO IRIs.
+- **Status**: Compatibility decision completed; activation of migration work depends on Bioregistry maintainer requirements.
+- **GitHub issue**: [#95](https://github.com/edithatogo/UOGTO/issues/95)
+- **External issue**: [Bioregistry #1999](https://github.com/biopragmatics/bioregistry/issues/1999)
+- **Link**: [./tracks/uogto_namespace_compatibility_contingency_20260721/](./tracks/uogto_namespace_compatibility_contingency_20260721/)
+
+## [x] Track: uogto_registry_handoff_implementation_20260722
+- **Description**: Implement BARTOC and Research Vocabularies Australia registry handoff packages and generated evidence.
+- **Status**: Repository implementation complete; external submission and curator/publication decisions remain open.
+- **GitHub parent issue**: [#65](https://github.com/edithatogo/UOGTO/issues/65)
+- **GitHub subissues**: [#98](https://github.com/edithatogo/UOGTO/issues/98), [#99](https://github.com/edithatogo/UOGTO/issues/99)
+- **Link**: [./tracks/uogto_registry_handoff_implementation_20260722/](./tracks/uogto_registry_handoff_implementation_20260722/)
