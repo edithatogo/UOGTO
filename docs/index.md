@@ -3,6 +3,7 @@
 ## Current Semantics and Programme
 
 - [November semantic reconciliation and migration](semantic-reconciliation-20261108.md)
+- [Discounted Markov executable profile and replay fixture](contracts/executable-discounted-markov-profile-v1.md)
 - [Current semantic quality evidence](quality/current-semantic-quality.md)
 - [Source audit and library abstraction priorities](research/game-semantics-source-audit-20261108.md)
 - [Machine-readable comparator register](research/game-semantics-source-register-20261108.json)

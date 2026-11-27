@@ -21,6 +21,8 @@
     "IncentiveCompatibilityConstraint": "uogtox:IncentiveCompatibilityConstraint",
     "IndividualRationalityConstraint": "uogtox:IndividualRationalityConstraint",
     "MarkovGame": "uogtox:MarkovGame",
+    "DiscountedZeroSumMarkovRepresentation": "uogtox:DiscountedZeroSumMarkovRepresentation",
+    "MarkovStageDecision": "uogtox:MarkovStageDecision",
     "MultiAgentEnvironment": "uogtox:MultiAgentEnvironment",
     "Policy": "uogtox:Policy",
     "JointPolicy": "uogtox:JointPolicy",
@@ -283,6 +285,57 @@
     "concessionRate": {
       "@id": "uogtox:concessionRate",
       "@type": "xsd:double"
+    },
+    "conformsTo": {
+      "@id": "http://purl.org/dc/terms/conformsTo",
+      "@type": "@id"
+    },
+    "modelDiscountFactor": {
+      "@id": "uogtox:modelDiscountFactor",
+      "@type": "xsd:double"
+    },
+    "stageReward": {
+      "@id": "uogtox:stageReward",
+      "@type": "xsd:double"
+    },
+    "playerOrder": {
+      "@id": "uogtox:playerOrder",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "stateOrder": {
+      "@id": "uogtox:stateOrder",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "actionOrder": {
+      "@id": "uogtox:actionOrder",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "hasInitialWeight": {
+      "@id": "uogtox:hasInitialWeight",
+      "@type": "@id"
+    },
+    "hasStageDecision": {
+      "@id": "uogtox:hasStageDecision",
+      "@type": "@id"
+    },
+    "atState": {
+      "@id": "uogtox:atState",
+      "@type": "@id"
+    },
+    "hasStationaryProfile": {
+      "@id": "uogtox:hasStationaryProfile",
+      "@type": "@id"
+    },
+    "hasPolicyRow": {
+      "@id": "uogtox:hasPolicyRow",
+      "@type": "@id"
+    },
+    "hasActionWeight": {
+      "@id": "uogtox:hasActionWeight",
+      "@type": "@id"
     },
     "hasPolicy": {
       "@id": "uogtox:hasPolicy",

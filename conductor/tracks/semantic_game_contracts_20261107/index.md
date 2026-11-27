@@ -1,6 +1,6 @@
 # Versioned semantic contracts for Paignia
 
-Status: in progress; SGC.07 reference-tool labels implemented; seven leaves pending.
+Status: in progress. SGC.01 and SGC.07 are implemented. Six leaves remain pending.
 
 - [Specification](./spec.md)
 - [Implementation plan](./plan.md)
@@ -9,6 +9,7 @@ Status: in progress; SGC.07 reference-tool labels implemented; seven leaves pend
 - [Existing modelling decisions](../../../docs/modelling-decisions.md)
 - [Paignia provider repository](https://github.com/edithatogo/paignia) (T17 transfer and qualification remain provider-owned)
 - [Existing Paignia semantic handoff](https://github.com/edithatogo/UOGTO/issues/123)
+- [Downstream-game intake contract and semantic register](../../../docs/contracts/downstream-game-intake.md)
 
 This track supplies semantic contracts and conformance evidence. It does not
 replace provider qualification, implement a simulation core, change published
@@ -26,7 +27,14 @@ receipt scopes. UOGTO retains ontology, profile and conformance ownership.
 - [Owner-scoped roadmap and acceptance cases](strategic-information-integration.md).
   Planning only; existing implementation statuses, pins and release gates remain unchanged.
 
-The November reconciliation implements SGC.07 with tested reference-origin labels.
-The remaining seven leaves and both SGC.08 receipt scopes remain pending. Static
-semantic acceptance denotes offline interchange, independently of whether the
-model is a `StaticGame` or a `DynamicGame`.
+SGC.01 includes the [tested information-set profile](../../../docs/contracts/executable-information-set-profile-v1.md).
+Both SGC.08 receipt scopes remain pending. Static semantic acceptance denotes
+offline interchange for either strategic timing class.
+
+## Downstream-game evolution — 22 November 2026
+
+The linked intake contract records how each new downstream game improves UOGTO
+and returns reusable implementation to Paignia. Its eight initial intake keys
+include two existing bounded profiles and six pending semantic reviews. This
+policy increment preserves the eight SGC implementation leaves and both pending
+consumer acceptance scopes.

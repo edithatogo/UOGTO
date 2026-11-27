@@ -26,7 +26,7 @@ def main():
             
     # 2. Parse SHACL files
     shacl_g = Graph()
-    shacl_files = glob.glob("shapes/*.ttl")
+    shacl_files = glob.glob("shapes/*.ttl") + glob.glob("uogto/interchange/*-profile-v1.ttl")
     for shacl in shacl_files:
         try:
             shacl_g.parse(shacl, format="turtle")

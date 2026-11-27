@@ -2,6 +2,98 @@
 
 **Review date:** 20 November 2026 (Australia/Brisbane). **Disposition:** independent review evidence complete; **PR #128 blocked/returned to the existing costing writer**, not accepted or merged. **Receiving acknowledgement requested, not yet established.** This file is evidence in a *separate review lane*, not a change to the writer's costing ontology, queries, tests, source-import pipeline, track status or shared Conductor registry.
 
+## Review amendment — 28 November 2026 (Australia/Brisbane)
+
+The sections below retain the 20 November evidence; this amendment records the
+current review. Main has advanced to `b3f1de0119ee1c1e49913d9c1f9284e053e43433`.
+PR128 remains at `7e9075b8fd77543fc8853fab20319415cb86597d`, conflicted, and the
+writer/integrator acknowledgement is still absent. The [renewed receiving
+request](https://github.com/edithatogo/UOGTO/pull/128#issuecomment-7229938074)
+preserves the existing writer and integrator assignments. No costing fix,
+combined-tree acceptance, source recovery or archive action is claimed.
+
+### Ponytail and correctness review
+
+The complexity review found no unnecessary abstraction or dependency in the
+compact reproducer. A separate correctness review found that its infant-keyed
+CQ23 dictionaries would overwrite separate scenario rows from a future corrected
+query. That could give order-dependent false passes or failures. The smallest
+sound correction is to remove the optional hash bypass and require the two
+original Git blobs on every run. This is now a historical reproducer only.
+Future acceptance belongs to the writer's chosen scenario contract and must
+preserve scenario identity and row multiplicity. The original 20 November log
+and its old command remain historical evidence, not instructions for the updated
+script.
+
+Fresh local checks on current main plus these review changes used CPython
+3.15.2, RDFLib 7.6.0, PySHACL 0.40.2 and pytest 9.2.0:
+
+| Executed check | Observed result | Scope |
+| --- | --- | --- |
+| `make all` (`build`, `validate`, `test`, `coverage`) | Pass; 453 passed, 1 skipped, 24,707 warnings, pytest 65.44 s | Current main plus review files; excludes unmerged CQ21–24 |
+| `scripts/maintenance/audit_semantics.py` | Pass; 55 ontology files | Current review tree |
+| Updated historical reproducer | 2 baseline passes, 3 failures, exit 1 | Unchanged original PR128 CQ21/CQ23 blobs |
+| Changed-query rejection | Both CQ21 and CQ23 mutations rejected before semantic execution | Mandatory original-byte guard |
+| `python -m py_compile` | Pass | Updated reproducer |
+| `git diff --check` | Pass | Review changes |
+
+The compact run and guard results are in `review-checks-20261128.txt`. The
+intentional semantic failures remain writer-owned defects; they are not waived
+by the passing main-based suite. No new SHACL claim is made for the compact
+diagnostic fixture. Fresh hosted checks and any merge result are recorded in
+PR138 against the resulting remote head; historical checks are not relabelled.
+
+### Integration now also preserves CQ26
+
+Current main has 22 expectations: CQ01–20, CQ25 and CQ26. PR128 has 24:
+CQ01–24. The static union is **26 distinct queries**. Satisfying the requested
+CQ01–25 combined verification must also retain and execute CQ26; a 25-entry
+manifest would now drop current-main work. Main's manifest blob is
+`7d4ebbfb2a37987cf430b00500c88a124d0d3e82`, CQ25 remains
+`9b6ee8deed098919bcba437f097acb6cded059fb`, and CQ26 is
+`58c6381e001200bf3cb14fc0897dc189156eada5`. This inventory is not a combined run.
+
+### Other merge-review dependencies
+
+A newer [scheduled privacy run](https://github.com/edithatogo/UOGTO/actions/runs/45811415789)
+failed on current main after an earlier successful push run. A sanitized
+[handoff under existing security issue #107](https://github.com/edithatogo/UOGTO/issues/107#issuecomment-7229938315)
+routes diagnosis to the existing central privacy rollout and UOGTO security
+owners. This lane does not waive the failure, change shared policy, or disclose
+matched values. Current PR checks must be inspected separately.
+
+The bounded maintenance review found #110 and #114 contain small dead-code
+deletions, but their old August checks do not validate current-main integration.
+PR109 must retain its deterministic sample ordering: an independently replayed
+four-row, two-sample control selects `[a,b]` for both input orders on current
+main, while PR109 `279bfef55954de17600100db317e15b0a10ae511` changes from `[a,b]`
+to `[z,y]` when the same rows are reversed. No shared writer branch was changed.
+
+### Next research steps within existing ownership
+
+These are falsifiable proposals, not achieved frontier results or new tracks.
+
+1. **Costing writer and integrator:** qualify zero/partial/full conservation,
+   distinct recipient counts, direct and pooled scenario isolation, multi-line
+   pools and malformed scenario provenance using shape-qualified fixtures and
+   complete result rows; then execute CQ01–26 on the actual combined commit.
+2. **Existing SGC/Paignia owners:** use the existing information-set and
+   discounted-Markov profiles for a real version-matched read/write round trip.
+   Preserve full identities, labelled axes, payoff ownership, timing,
+   probabilities and provider revisions. A mutated payoff owner or information
+   partition must fail beside a valid passing control. Reuse current native
+   receipts and SGC.02–05/SGC.08; do not add another acceptance framework.
+3. **Existing FRT.04/FRT.07 and MAT.04 owners:** test semantic-loss detection on
+   independently specified held-out cases and seeded mutations, comparing direct
+   conversion, identity-only checks and the semantic checker. Predeclare missed
+   errors, false rejection, supported-case denominator, runtime and memory, then
+   ablate individual checks. Implementation alone cannot establish superiority.
+
+These follow the existing [frontier programme](../../../docs/roadmap/frontier-programme-20261108.md)
+and [Markov contract](../../../docs/contracts/executable-discounted-markov-profile-v1.md).
+Issue #134 remains held; none of these proposals recovers predecessor artifacts,
+grants source rights or qualifies manuscript publication.
+
 ## Provenance and ownership
 
 - Repository: [edithatogo/UOGTO](https://github.com/edithatogo/UOGTO).
@@ -36,9 +128,9 @@ CQ22 evidence and CQ24 rate-provenance baseline pass, as does a separate 4-row s
 
 ```shell
 python conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py \
-  --query-root PATH_TO_PR128_CHECKOUT/competency-questions --expect-original-head
+  --query-root PATH_TO_PR128_CHECKOUT/competency-questions
 # Exit 1: 2 baseline checks pass, 3 negative regression checks fail.
-# Remove --expect-original-head only to test the costing writer's subsequent query edits.
+# Only the pinned historical bytes are accepted; changed queries are rejected.
 ```
 
 The standalone script was executed locally on 2026-11-20 against the exact query bytes: 2 passes / 3 failures, expected exit 1; `python -m py_compile` passed. No real patients, funding figures or empirical observations are involved. Local PySHACL was not installed, so **no new local SHACL pass** is claimed. The optional diagnostic repair prototypes in the prior receiving artifact passed in isolation but are *not* a validated patch or instruction to replace owner code.
@@ -65,4 +157,4 @@ After writer corrections, the existing integrator should non-forcibly reconcile 
 
 ## Close-out boundary
 
-**Review evidence:** complete and published for the independent reviewer lane. **Owner receipt:** pending express acknowledgement. **Costing acceptance, CQ01–25 integration, source recovery, scientific appraisal and release:** all remain with their existing owners and **not complete**. This evidence-only review PR must remain separate; do not merge or archive on an absent owner acknowledgement. Shared `conductor/status.md`, `conductor/runlog.md`, track registry, root CI and owner-owned code are intentionally untouched.
+**Review evidence:** published for the independent reviewer lane. **Owner receipt:** pending express acknowledgement. **Costing acceptance, combined CQ integration, source recovery, scientific appraisal and release:** all remain with their existing owners and **not complete**. Under the user's 28 November review-and-merge instruction, this separate evidence PR may be merged after its current checks pass; that records the review without admitting costing or completing the handoff. Do not archive this lane. Shared `conductor/status.md`, `conductor/runlog.md`, track registry, root CI and owner-owned code are intentionally untouched.

@@ -1,0 +1,23 @@
+{
+  "contract_version": "1.0.0",
+  "profile_id": "paignia/static-finite-perfect-information-sparse-zero/1.0.0",
+  "provider": {
+    "repository": "edithatogo/paignia",
+    "revision": "bd880dd756d2ba56cc5f479bc078cea31b53c1d1",
+    "core_package": "paignia-core",
+    "solver_package": "paignia-solve",
+    "package_version": "0.1.0"
+  },
+  "game": {
+    "specification_iri": "https://w3id.org/uogto/examples#game-one",
+    "specification_class": "https://w3id.org/uogto/core#GameSpecification",
+    "representation_class": "https://w3id.org/uogto/core#ExtensiveFormRepresentation",
+    "game_class": "FiniteAcyclicExtensive",
+    "information_structure": "PerfectInformation",
+    "chance_rule": "AllowZeroAndValidateEveryBranch",
+    "payoff_rule": "IntentionalSparseZero",
+    "selection_rule": "InputOrderPairwiseToleranceThenLexicographic",
+    "selection_tolerance": 0.0,
+    "native_execution_claim": false
+  }
+}

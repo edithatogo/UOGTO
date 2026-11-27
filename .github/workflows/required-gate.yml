@@ -18,10 +18,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v7
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.10"
+      - name: Set up repository Python
+        uses: ./.github/actions/project-python
 
       - name: Install Python dependencies
         run: |
@@ -41,6 +39,17 @@ jobs:
           make test
           make publishing-metadata
           make registry-links
+
+      - name: Verify the Paignia information-set profile
+        shell: bash
+        run: |
+          rustup toolchain install 1.75.0 --profile minimal --no-self-update
+          RUSTC="$(rustup which --toolchain 1.75.0 rustc)"
+          RUSTDOC="$(rustup which --toolchain 1.75.0 rustdoc)"
+          native_cargo="$(rustup which --toolchain 1.75.0 cargo)"
+          export RUSTC RUSTDOC
+          "$RUSTC" --version
+          python -m scripts.verify_information_set_profile --cargo "$native_cargo"
 
       - name: Build manuscript and arXiv package
         run: |

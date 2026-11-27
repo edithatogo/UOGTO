@@ -51,7 +51,7 @@ class TestManuscriptBuild(unittest.TestCase):
         for expected in [
             'name: Build Manuscript PDF',
             'actions/checkout@v7',
-            'actions/setup-python@v6',
+            './.github/actions/project-python',
             'latexmk',
             'texlive-latex-base',
             'make manuscript-pdf',

@@ -14,6 +14,21 @@ UOGTO (Universal Open Game Theory Ontology) is a modular, version-controlled rep
 - Properties: lowerCamelCase (e.g. `hasPlayer`, `payoffValue`)
 - Instances: kebab-case (e.g. `prisoners-dilemma`, `defect`)
 
+## Downstream Game Evolution
+
+Follow [the downstream-game intake contract](docs/contracts/downstream-game-intake.md)
+when adding or changing a downstream game. UOGTO owns the canonical semantic
+intake and must receive its mapping/example update even when existing terms
+suffice. Extend vocabulary only for a demonstrated gap. Use the same intake key
+in Paignia's implementation register; return reusable games, mechanics and
+algorithms there and consume relevant upstream capabilities through their
+contracts. Preserve full IRIs, exact profile/provider revisions and per-asset
+provenance. Application-specific data and payoff assumptions stay downstream.
+The contract names the six current applications and capability-specific library
+partners. Preserve Innovate's gradual parity-qualified migration and Voiage's
+VoP/VoH ownership; compose upstream providers optionally without dependency cycles.
+An intake record does not replace existing SGC conformance or consumer evidence.
+
 ## Validation Requirements
 - All TTL files must parse using RDFLib.
 - Examples must validate against SHACL shapes using PySHACL.

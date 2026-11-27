@@ -1,5 +1,8 @@
 # Universal Open Game Theory Ontology (UOGTO)
 
+[External game catalogues](docs/contracts/external-game-catalogues-v1.md)
+link the Gambit and OpenSpiel release definitions to UOGTO terms.
+
 ## Overview
 UOGTO (Universal Open Game Theory Ontology) defines modular game-theoretic semantics
 for classical, cooperative, multi-agent, mechanism-design and simulation-related
@@ -46,18 +49,24 @@ general executable compatibility have not been established.
 - `docs/`: Guides, mappings, and references.
 
 ## Quickstart
-1. Install dependencies:
-   ```bash
-   pip install -e .
-   ```
-2. Build merged files:
-   ```bash
-   make build
-   ```
-3. Run validation and tests:
-   ```bash
-   make all
-   ```
+
+The project uses the CPython patch release pinned in `.python-version`.
+Use the locked Pixi environment on Linux and Windows.
+
+```bash
+pixi install --locked
+pixi run python --version
+pixi run make all
+```
+
+On macOS, create a project-local environment and run the full validation suite.
+
+```bash
+uv venv --python "$(cat .python-version)" target/dev-python
+uv pip install --python target/dev-python/bin/python -e '.[dev]'
+target/dev-python/bin/python --version
+make all
+```
 
 ## Documentation and Citation
 - Human-readable ontology documentation is generated with WIDOCO and published through GitHub Pages at <https://edithatogo.github.io/UOGTO/>.
@@ -95,3 +104,14 @@ The repo is also tracked inside the RI-HERO meta-program, which treats UOGTO as 
 This project is dual-licensed:
 - **Ontology and Documentation**: Creative Commons Attribution 4.0 International (CC-BY-4.0). See [LICENSE](LICENSE).
 - **Code and Tooling**: MIT License. See [LICENSE-CODE](LICENSE-CODE).
+
+## Development
+
+Use the [Quickstart](#quickstart) environment and follow the
+[contribution guide](CONTRIBUTING.md) for ontology changes, local validation
+and pull requests.
+
+## Security
+
+Follow the [security policy](SECURITY.md) to report vulnerabilities
+privately. Keep credentials and sensitive data out of public issues and pull requests.

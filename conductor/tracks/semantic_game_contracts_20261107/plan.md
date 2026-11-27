@@ -1,4 +1,4 @@
-# Plan — eight semantic-contract leaves; one implemented
+# Plan for eight semantic-contract leaves
 
 Each leaf implements one behavior in at most five files. New paths and tests
 are marked **future** and must be created before use; a missing target or zero
@@ -17,20 +17,19 @@ retain `uogto-game-*` in historical receipts.
 
 ## Phase A — explicit subset and identities
 
-### [ ] SGC.01 — reject an unsupported executable contract version
+### [x] SGC.01 — reject an unsupported executable contract version
 
-- Behavior: an executable-profile validator rejects unknown versions and
-  representations outside the declared subset instead of silently coercing them.
-- Depends on: the existing interoperability inventory and game provider T17.01
-  public contract; do not assume every ontology class is executable.
-- Execution: specialist, semantic subset and public compatibility policy.
-- Files (4, future): `docs/contracts/executable-game-subset-v1.md`,
-  `validation/executable-game-subset-v1.json`,
-  `uogto/interchange/game_contract.py`, `tests/test_executable_game_subset.py`.
-- Check: `python -m pytest tests/test_executable_game_subset.py` (future target).
-  Known supported fixtures pass; unknown versions and unsupported game classes
-  produce named failures. Record exact Paignia core/solver IDs and versions from
-  the selected provider artifact, including legacy IDs when auditing old evidence.
+- The finite perfect-information declaration at Paignia `bd880dd` rejects
+  unknown versions, unsupported representations and malformed source URIs.
+  [Installed declaration and hosted checks](https://github.com/edithatogo/UOGTO/pull/136)
+- The information-set profile projects a scoped RDF decision partition and
+  admits it through `paignia-core` 0.1.0 at `d4047c0`. The paired fixture
+  retains full IRIs, exact node roles and order. Its native controls distinguish
+  foreign ownership, incomplete coverage, reordered actions and imperfect
+  recall. [Information-set contract](../../../docs/contracts/executable-information-set-profile-v1.md)
+- Verify the scoped RDF and installed wheel controls with pytest. The required
+  gate runs `scripts.verify_information_set_profile` against the pinned native
+  crate with Rust 1.75.0.
 
 ### [ ] SGC.02 — preserve full semantic identifiers in Rust interchange
 
@@ -162,9 +161,28 @@ retain `uogto-game-*` in historical receipts.
 
 ## Completion evidence
 
-SGC.07 is implemented in the November reconciliation; the other seven leaves
-remain pending. Its origin-label and runner tests pass, and README/audience docs
-state the reference behavior. Future completion records
+### Downstream-game policy increment — 22 November 2026
+
+- Implemented the [canonical intake contract and initial semantic register](../../../docs/contracts/downstream-game-intake.md),
+  linked from agent, contribution and PR guidance. Every new/changed downstream
+  game has a UOGTO mapping/example disposition and a linked Paignia reuse or
+  implementation decision, including cases that reuse existing vocabulary.
+- Clarified the current six-application scope and partner boundaries: Innovate
+  retains innovation capabilities while generic game methods migrate after
+  parity; Voiage retains VoP/VoH and their demo; Kairos/Voiage/Dapane compose
+  optionally without dependency cycles. Archive/registry material creates no
+  generic-game transfer obligation.
+- The register uses shared stable intake keys and exact existing profile pins.
+  It introduces no ontology terms, executable profile, runtime dependency or
+  additional acceptance system. The eight SGC leaf IDs and their existing
+  unfinished work remain unchanged.
+- Verification for this documentation increment is recorded in
+  [the run log](../../../.conductor/runlog.md). It is separate from the semantic
+  implementation evidence below and does not close either SGC.08 scope.
+
+SGC.01 qualifies the bounded declaration and information-set profiles.
+SGC.07 records the supported reference origin. Six leaves remain pending.
+Future completion records
 exact revisions, commands, test counts, fixture hashes, failures, and specialist
 findings. A qualified static semantic receipt can be consumed while SGC.06 and
 the dynamic-execution receipt remain pending. Honest reference-tool labelling

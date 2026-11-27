@@ -1,10 +1,12 @@
-"""Independent synthetic CQ21/CQ23 receiving checks, deliberately not in pytest's suite.
+"""Historical synthetic CQ21/CQ23 reproducer, deliberately not in pytest's suite.
 
 Usage (on a checkout containing PR128 query files):
   python conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py \
-      --query-root competency-questions --expect-original-head
+      --query-root competency-questions
 
-With no --expect-original-head, rerun on the costing writer's corrected query bytes.
+Only the original pinned query bytes are accepted. Corrected queries need the
+writer's scenario-aware acceptance tests; this fixture is a SPARQL diagnostic,
+not a complete SHACL instance or a future-query acceptance contract.
 Exit 1 on any semantic counterexample. No external source data, edits or network.
 """
 from __future__ import annotations
@@ -55,13 +57,12 @@ def cash(value):
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--query-root", type=Path, required=True)
-    parser.add_argument("--expect-original-head", action="store_true")
     args = parser.parse_args()
     queries = {}
     for n, name in NAMES.items():
         data = (args.query_root / name).read_bytes()
         git_blob = hashlib.sha1(f"blob {len(data)}\0".encode() + data).hexdigest()
-        if args.expect_original_head and git_blob != EXPECTED_GIT_BLOBS[n]:
+        if git_blob != EXPECTED_GIT_BLOBS[n]:
             raise ValueError(f"CQ{n} exact Git blob mismatch: {git_blob}")
         print(f"CQ{n} Git blob: {git_blob}")
         queries[n] = data.decode("utf-8")

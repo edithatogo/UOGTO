@@ -1,5 +1,92 @@
 # UOGTO Project Status
 
+## 2026-11-25 — Paignia T22 discounted Markov semantics
+
+The [discounted Markov profile](../docs/contracts/executable-discounted-markov-profile-v1.md)
+adds source-side admission, ordered projection and a frozen synthetic
+recurring-funding replay for [UOGTO #144](https://github.com/edithatogo/UOGTO/issues/144).
+Admission checks complete labelled bindings and the exact binary64 mass bound.
+The replay has exact first-seat values `[32/13, -16/13]` and initial value
+`20/13`. Paignia owns native solver and I/O qualification.
+
+## 2026-11-25 — External game catalogues
+
+The versioned [catalogue](../docs/contracts/external-game-catalogues-v1.md)
+indexes 38 Gambit catalogue models and 131 contributed files, the 78 GAMUT
+registry entries and 146 OpenSpiel registrations with two companion interfaces. The JSON-LD dataset links exact
+source hashes and existing semantic classes. Executable admission is a
+separate game and method claim.
+
+## 2026-11-22 — Executed tutorial declaration reuse
+
+The `finite-perfect-information` intake now records the synthetic tutorial
+coordination case at consumer revision
+`3851a2346c8e9cc457c7bfee67848be13fc8ca46`, with existing full-IRI terms, exact
+provider/validator pins, source hashes and separate semantic/native observations.
+Its semantic disposition is `reuse_existing`; no new class or solver is implied.
+The UOGTO declaration check accepts the supported profile and rejects unsupported
+execution/information claims. Full RDF mapping and SGC acceptance remain open.
+
+`make validate` now passes locally under CPython 3.15.2 with the tutorial's
+locked UOGTO dependency set. The 25 relative links and three recorded consumer
+hashes also pass. Ontology, SHACL, runtime and existing protected holds are
+unchanged; this does not convert tutorial startup failures into hosted passes.
+
+## 2026-11-22 — Application and partner scope clarification
+
+The intake contract now names exactly `nhra_game`, `gtpcnz`,
+`new-drug-reimbursement-game`, `ginsim`, `tobac` and `tutorial_health_gt` as the
+current downstream applications. Innovate remains a parallel innovation
+library; generic game methods migrate gradually after parity. Kairos, Voiage
+and Dapane retain their reusable capabilities through optional, acyclic
+composition. Voiage owns VoP/VoH and their demo; archive/registry material is
+not a direct Paignia application or transfer requirement.
+
+This maintainer clarification changes documentation only. Four existing
+contribution checks, 25 local link targets and `git diff --check` passed.
+The previously recorded semantic-validation environment limitation and all
+SGC/provider acceptance scopes remain unchanged.
+
+## 2026-11-22 — Downstream-game evolution policy
+
+The [canonical semantic intake](../docs/contracts/downstream-game-intake.md)
+requires a UOGTO mapping/example update for every new or changed downstream
+game and links reusable implementation to Paignia through shared intake keys.
+Two initial rows reuse existing bounded profiles; six require mapping review.
+Agent, contribution and PR guidance now carry this development contract.
+
+The SGC metadata now agrees with the existing index/plan: SGC.01 and SGC.07
+are implemented, with six leaves and both consumer acceptance scopes pending.
+This reconciles the recorded November profile evidence; no ontology or runtime
+behaviour changed. Four existing contribution checks and 25 local Markdown
+link targets passed. `make validate PYTHON=python` could not run because the
+available Python 3.12.14 environment lacks RDFLib; the declared repository
+runtime remains CPython 3.15.2. See the run log for the exact scope and limits.
+
+## 2026-11-21 — SGC.01 executable information-set handoff
+
+The scoped RDF profile and installed wheel preserve full identifiers and
+declare the selected game's root, typed state inventory and decision groups.
+Rust 1.75.0 admits the positive partition in `paignia-core` at `d4047c0` and
+rejects all four contrasting native controls. SGC.02–SGC.06 and SGC.08 remain
+open. [Profile and verification](../docs/contracts/executable-information-set-profile-v1.md)
+
+## 2026-11-21 — SGC.01 runtime qualification candidate
+
+The packaged v1 declaration admits an absolute specification URI and rejects
+relative and empty URIs. The repository-local CPython 3.15.2 environment passed
+the ontology, test, coverage, publishing-metadata and registry link checks.
+Linux and Windows Pixi locks resolve the same Python patch. Hosted gates and
+the information-set profile remain open.
+
+## 2026-11-20 — Executable declaration validation
+
+The SGC.01 repair candidate explicitly checks absolute specification URIs
+and rejects tolerances outside binary64 range. Its installed wheel imports
+the declaration module and validates the required package closure.
+The candidate passed `make validate` and `make test` on CPython 3.15.2.
+Provider information-set semantics and the consumer receipts remain open.
+
 ## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
 
 The canonical source programme now includes comprehensive discovery, acquisition,

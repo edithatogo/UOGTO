@@ -23,6 +23,16 @@ Describe the change and the reason for it.
 - [ ] Release, registry, manuscript, or RI-HERO impacts are noted below.
 - [ ] Not applicable.
 
+## Downstream Game Intake
+
+For a new or changed game, complete the [intake contract](../docs/contracts/downstream-game-intake.md).
+
+- Intake key and originating repository/source revision:
+- UOGTO mapping/example update and disposition (`reuse_existing`, `extension_required`, `unsupported`, or `mapping_review_pending`):
+- Linked Paignia reusable implementation and relevant upstream-provider decision:
+- Exact semantic/profile versions, full-IRI mapping and bounded test evidence:
+- [ ] No new or changed game is involved.
+
 ## Validation
 
 - [ ] `make validate`
