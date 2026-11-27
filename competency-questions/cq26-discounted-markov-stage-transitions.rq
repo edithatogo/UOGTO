@@ -1,0 +1,27 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX uogto: <https://w3id.org/uogto/core#>
+PREFIX uogtox: <https://w3id.org/uogto/extensions#>
+
+# Which immediate rewards and next-state weights are attached to each labelled
+# state and joint action of a discounted Markov representation?
+SELECT ?game ?representation ?state ?firstAction ?secondAction ?reward ?nextState ?weight
+WHERE {
+  ?game uogto:hasRepresentation ?representation ; uogto:hasTransition ?kernel .
+  ?representation dct:conformsTo <urn:uogto:profile:discounted-markov:1.0.0> ;
+                  uogtox:playerOrder ?seats .
+  ?kernel uogtox:hasStageDecision ?decision .
+  ?seats rdf:first ?firstPlayer ;
+         rdf:rest/rdf:first ?secondPlayer .
+  ?decision uogtox:atState ?state ;
+            uogto:hasActionProfile ?actions ;
+            uogtox:stageReward ?reward ;
+            uogto:hasTransition ?transition .
+  ?actions uogto:hasAction ?firstAction, ?secondAction .
+  ?firstAction uogto:belongsToPlayer ?firstPlayer .
+  ?secondAction uogto:belongsToPlayer ?secondPlayer .
+  ?transition uogto:transitionsFrom ?state ;
+              uogto:transitionsTo ?nextState ;
+              uogto:probability ?weight .
+}
+ORDER BY ?game ?representation ?state ?firstAction ?secondAction ?nextState

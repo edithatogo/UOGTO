@@ -1,5 +1,167 @@
 # UOGTO Project Status
 
+## 2026-11-25 — Paignia T22 discounted Markov semantics
+
+The [discounted Markov profile](../docs/contracts/executable-discounted-markov-profile-v1.md)
+adds source-side admission, ordered projection and a frozen synthetic
+recurring-funding replay for [UOGTO #144](https://github.com/edithatogo/UOGTO/issues/144).
+Admission checks complete labelled bindings and the exact binary64 mass bound.
+The replay has exact first-seat values `[32/13, -16/13]` and initial value
+`20/13`. Paignia owns native solver and I/O qualification.
+
+## 2026-11-25 — External game catalogues
+
+The versioned [catalogue](../docs/contracts/external-game-catalogues-v1.md)
+indexes 38 Gambit catalogue models and 131 contributed files, the 78 GAMUT
+registry entries and 146 OpenSpiel registrations with two companion interfaces. The JSON-LD dataset links exact
+source hashes and existing semantic classes. Executable admission is a
+separate game and method claim.
+
+## 2026-11-22 — Executed tutorial declaration reuse
+
+The `finite-perfect-information` intake now records the synthetic tutorial
+coordination case at consumer revision
+`3851a2346c8e9cc457c7bfee67848be13fc8ca46`, with existing full-IRI terms, exact
+provider/validator pins, source hashes and separate semantic/native observations.
+Its semantic disposition is `reuse_existing`; no new class or solver is implied.
+The UOGTO declaration check accepts the supported profile and rejects unsupported
+execution/information claims. Full RDF mapping and SGC acceptance remain open.
+
+`make validate` now passes locally under CPython 3.15.2 with the tutorial's
+locked UOGTO dependency set. The 25 relative links and three recorded consumer
+hashes also pass. Ontology, SHACL, runtime and existing protected holds are
+unchanged; this does not convert tutorial startup failures into hosted passes.
+
+## 2026-11-22 — Application and partner scope clarification
+
+The intake contract now names exactly `nhra_game`, `gtpcnz`,
+`new-drug-reimbursement-game`, `ginsim`, `tobac` and `tutorial_health_gt` as the
+current downstream applications. Innovate remains a parallel innovation
+library; generic game methods migrate gradually after parity. Kairos, Voiage
+and Dapane retain their reusable capabilities through optional, acyclic
+composition. Voiage owns VoP/VoH and their demo; archive/registry material is
+not a direct Paignia application or transfer requirement.
+
+This maintainer clarification changes documentation only. Four existing
+contribution checks, 25 local link targets and `git diff --check` passed.
+The previously recorded semantic-validation environment limitation and all
+SGC/provider acceptance scopes remain unchanged.
+
+## 2026-11-22 — Downstream-game evolution policy
+
+The [canonical semantic intake](../docs/contracts/downstream-game-intake.md)
+requires a UOGTO mapping/example update for every new or changed downstream
+game and links reusable implementation to Paignia through shared intake keys.
+Two initial rows reuse existing bounded profiles; six require mapping review.
+Agent, contribution and PR guidance now carry this development contract.
+
+The SGC metadata now agrees with the existing index/plan: SGC.01 and SGC.07
+are implemented, with six leaves and both consumer acceptance scopes pending.
+This reconciles the recorded November profile evidence; no ontology or runtime
+behaviour changed. Four existing contribution checks and 25 local Markdown
+link targets passed. `make validate PYTHON=python` could not run because the
+available Python 3.12.14 environment lacks RDFLib; the declared repository
+runtime remains CPython 3.15.2. See the run log for the exact scope and limits.
+
+## 2026-11-21 — SGC.01 executable information-set handoff
+
+The scoped RDF profile and installed wheel preserve full identifiers and
+declare the selected game's root, typed state inventory and decision groups.
+Rust 1.75.0 admits the positive partition in `paignia-core` at `d4047c0` and
+rejects all four contrasting native controls. SGC.02–SGC.06 and SGC.08 remain
+open. [Profile and verification](../docs/contracts/executable-information-set-profile-v1.md)
+
+## 2026-11-21 — SGC.01 runtime qualification candidate
+
+The packaged v1 declaration admits an absolute specification URI and rejects
+relative and empty URIs. The repository-local CPython 3.15.2 environment passed
+the ontology, test, coverage, publishing-metadata and registry link checks.
+Linux and Windows Pixi locks resolve the same Python patch. Hosted gates and
+the information-set profile remain open.
+
+## 2026-11-20 — Executable declaration validation
+
+The SGC.01 repair candidate explicitly checks absolute specification URIs
+and rejects tolerances outside binary64 range. Its installed wheel imports
+the declaration module and validates the required package closure.
+The candidate passed `make validate` and `make test` on CPython 3.15.2.
+Provider information-set semantics and the consumer receipts remain open.
+
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+The canonical source programme now includes comprehensive discovery, acquisition,
+attribution and comparison. All 90 declared input items are preserved in 60 seed
+records, with 74 references across 64 attribution records. Unresolved identities
+and inherited evidence remain explicit. OCS has eleven pending research leaves;
+MNV.00 planning is complete with twelve manuscript-integration leaves pending.
+
+Integrated make validate and make test pass: 310 passed, one local arXiv-artifact
+skip, 55 dependency warnings. SourceRight CSL, citation linkage, snapshot/link and
+track checks pass; internal review found no remaining blockers. These are planning
+and engineering checks, not completed comprehensive research or a revised paper.
+Canonical detail and evidence: `conductor/status.md`, `conductor/runlog.md`,
+`docs/research/game-semantics-citation-check-20261108.json` and
+`docs/paper/next-version-plan-20261108.md`. Hosted state is on PR #127.
+
+## 2026-11-08 — Current reconciliation evidence
+
+Canonical registry: `conductor/tracks.md`; current status and detailed verification:
+`conductor/status.md` and `conductor/tracks/semantic_reconciliation_20261108/metadata.json`.
+
+Semantic/mapping/runner repairs and the bounded source audit are implemented.
+`make validate`, semantic audit and comparison checks pass. `make test` reports
+310 passed, 1 skipped (local arXiv-artifact test), 55 warnings. SGC.07 is complete;
+seven SGC leaves and both receipt scopes remain pending. Four additional programme
+tracks retain their explicit pending implementation/research work. The status
+reporter now distinguishes canonical active tracks from historical bootstrap phases.
+
+Earlier missing-RDFLib notes below describe past environments; they are not the
+current validation result. Historical publication and board records retain their
+original scope. Hosted CI/merge status is supplied by the pull request.
+
+## 2026-11-08 Created Paignia Repository Handoff
+
+- Updated the semantic consumer contract to the created `edithatogo/paignia`
+  provider. Its renamed seed and T17 provider work are being transferred from
+  the reimbursement incubator; the seventeen T17 IDs and application handoffs
+  retain their owners. Registry publication and provider acceptance remain open.
+- UOGTO authority, per-asset provenance and the eight pending SGC leaves remain
+  unchanged. Static SGC.08 still does not depend on dynamic SGC.06.
+
+## 2026-11-08 Paignia Semantic Ownership
+
+- Recorded Paignia as the chosen library name and the incubator seed rename,
+  retaining UOGTO ontology/profile/conformance authority and historical package IDs.
+- Refined existing SGC.02/SGC.05 for full UOGTO and legacy Kairos IRI mapping,
+  minimal reusable reference fixtures and per-asset licence/provenance. All eight
+  leaves remain pending; static SGC.08 still does not require dynamic SGC.06.
+- Three existing documentation tests, inline scope/IRI/link checks and
+  `git diff --check` pass. `make validate` was attempted and remains blocked by
+  missing RDFLib. No semantic, numerical, runtime or release acceptance is claimed.
+
+## 2026-11-07 Static and Dynamic Game Acceptance
+
+- Refined the existing semantic-game track without changing its eight task IDs
+  or pending implementation status. Static semantic receipts require
+  SGC.01–SGC.05; dynamic claims additionally require SGC.06 and native dispatch
+  evidence. Reference-tool labelling can proceed before a native adapter exists.
+- Static acceptance leaves the dynamic receipt and optional work open. No
+  ontology, schema, runtime, dependency, pin, or provider qualification changed.
+- Focused dependency/scope checks, five local links, three existing documentation
+  tests, and `git diff --check` passed. `make validate` remains blocked by missing
+  RDFLib in the tools environment; no ontology-validation pass is claimed.
+
+## 2026-11-07 Executable Game Contract Planning
+
+- Added `semantic_game_contracts_20261107` with eight pending leaves for the
+  versioned executable subset, Rust package mappings, identity scopes, negative
+  SHACL checks, round trips, trace provenance, and reference-tool labelling.
+- Existing ontology/interoperability completion and downstream scientific
+  alignment ownership remain unchanged. No IRI, schema, pin, or runtime edits.
+- Planning validation is recorded in the new track metadata. The local
+  `make validate` attempt is blocked by missing RDFLib in the tools environment;
+  no ontology-validation pass or Rust execution is claimed.
+
 ## 2026-07-09 Open Issue Follow-Through
 
 - PR #84 remains merge-blocked by GitHub branch protection requiring an approving review from a writer; all required checks pass, self-approval was rejected by GitHub, and admin merge is still blocked by the same review/comment-resolution policy.

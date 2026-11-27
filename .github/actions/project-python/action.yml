@@ -1,0 +1,24 @@
+name: UOGTO project Python
+description: Set up and verify UOGTO's repository-local CPython.
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      with:
+        python-version-file: .python-version
+    - name: Verify the local interpreter
+      shell: bash
+      run: |
+        python -m venv target/dev-python
+        target/dev-python/bin/python -I - <<'PYTHON'
+        import platform
+        import sys
+        from pathlib import Path
+        expected = Path(".python-version").read_text().strip()
+        if platform.python_implementation() != "CPython" or platform.python_version() != expected:
+            raise SystemExit(f"Expected CPython {expected}, found {sys.version}")
+        if Path(sys.prefix).resolve() != Path("target/dev-python").resolve():
+            raise SystemExit(f"Unexpected environment {sys.prefix}")
+        print(sys.executable, sys.version)
+        PYTHON
+        echo "$GITHUB_WORKSPACE/target/dev-python/bin" >> "$GITHUB_PATH"

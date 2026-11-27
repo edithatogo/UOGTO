@@ -1,5 +1,229 @@
 # Conductor Run Log
 
+## 2026-11-25 — Paignia T22 discounted Markov projection
+
+- Added the versioned RDF shape, packaged projector, synthetic recurring-funding
+  graph, JSON-LD terms and CQ26. CQ26 retrieves 16 labelled transitions.
+- Checked exact binary64 distribution mass at both `1e-12` boundaries and
+  under reordered axes. The projected policy and analytic Bellman reference
+  match the frozen fixture.
+- The fixture SHA-256 is
+  `2502af2adff68ff9b41e11c68f28ba93a9c452baa0b0f74831fec5ac768f8552`.
+- With CPython 3.15.2, `make validate` passed and all 40 focused checks
+  passed, including projection from an isolated installed wheel. The
+  broader `make test` run had 452 passes, one skip and one arXiv privacy-test failure. That
+  test expects basename-only output for paths outside the repository and
+  received a relative path from the repository-local test temp directory.
+- [UOGTO source admission and replay contract](../docs/contracts/executable-discounted-markov-profile-v1.md)
+
+## 2026-11-25 — External game catalogue qualification
+
+- Verified the frozen Gambit and OpenSpiel downloads. Reproduced the catalogue
+  from their model files and source registrations.
+- Reconciled the 123 registered identifiers in the T21 OpenSpiel binary with
+  the 126 C++ source registrations. Included the three optional C++ games
+  and 20 separate Python registrations.
+- Independently checked the GAMUT registry, corrected two loader identifiers
+  and included the contributed Gambit files, GAMUT presets and collections,
+  and the two documented OpenSpiel companion interfaces.
+- The catalogue SHACL and SPARQL tests, repository validation and test suite
+  passed with Python 3.15.2.
+
+## 2026-11-22 — Executed tutorial reuse evidence
+
+- Added the bounded coordination example/mapping note under the existing
+  `finite-perfect-information` key, paired with Paignia's implementation note.
+  Recorded the private consumer's immutable revision, declaration hash and
+  existing full-IRI terms; copied no private source or empirical data.
+- Reused the tutorial's locked CPython 3.15.2 UOGTO dependency set in a local
+  validation environment. `make validate` passed all repository parsing,
+  SHACL example and competency-expectation checks.
+- Verified 25 relative links across the paired intake notes/plan and three
+  consumer file hashes. No ontology/runtime dependency or acceptance ledger was
+  changed. Native tutorial results and declaration validation remain distinct.
+- Full RDF mapping, public provider-fixture admission and SGC consumer
+  qualification remain open. Hosted tutorial jobs contain no executed steps;
+  neither their security scan nor lesson workflow is reported as passing.
+
+## 2026-11-22 — Application and partner scope clarification
+
+- Applied the maintainer's exact six-application scope to the existing intake
+  contract; preserved the eight semantic keys and pending mapping work.
+- Distinguished Innovate's innovation capabilities and gradual, parity-qualified
+  generic-game migration from optional Kairos/Voiage/Dapane provider composition.
+  Voiage retains VoP/VoH and the `vop_poc_nz` demo. `archive-govt-nz` remains
+  archive-only material and Hugging Face registry context.
+- Removed the VoP design proposal from direct Paignia game-transfer leads and
+  separated existing pinned Innovate/Voiage evidence from application leads.
+  Cross-cutting UOGTO semantics do not transfer a provider's numerical ownership.
+- Updated agent/contribution guidance and the existing SGC policy increment.
+  No ontology, runtime, dependency, acceptance status or protected hold changed.
+- The four existing contribution-setup checks passed by direct `runpy`
+  invocation; all 25 local Markdown link targets in the six policy/navigation
+  files resolved; `git diff --check` passed. No supported-runtime or semantic
+  validation pass is added to the earlier environment record.
+- Preserved the original uncommitted working tree and empty staging area.
+  This follow-up made no remote calls or writes; the parent lane owns the PR update.
+
+## 2026-11-22 — Downstream-game evolution policy
+
+- Base: `0050e19faec2abaa05e5d474e5eed0150bcbf073`; branch
+  `codex/game-evolution-contract-20261122`.
+- Added the canonical downstream semantic-intake contract and eight stable
+  keys, linked to Paignia's implementation register and existing SGC work.
+  Reuse requires a recorded UOGTO mapping/example update; vocabulary extension
+  requires a demonstrated gap. Domain assumptions stay with applications.
+- Linked agent, contribution and PR guidance; recorded the bounded policy
+  increment in the existing SGC index/plan. Reconciled metadata's SGC.01 count
+  against the already recorded declaration and information-set profile evidence.
+  No ontology, shape, executable schema, dependency, workflow or runtime changed.
+- Verification on available CPython 3.12.14: all four existing functions in
+  `tests/test_repo_contribution_setup.py` passed by direct invocation through
+  `runpy` (not a pytest run). All 25 local Markdown targets in the six policy
+  and SGC navigation files resolved. The SGC metadata parsed, retained eight
+  implementation leaves and both pending consumer scopes, and reconciled to
+  two completed leaves. `git diff --check` passed.
+- Required-target attempt: `make validate PYTHON=python` exited 2 because
+  `rdflib` is absent. PySHACL and pytest are also unavailable here. No semantic
+  validation, supported-runtime test or hosted-CI pass is claimed; the repository
+  continues to require CPython 3.15.2 and its normal integration gates.
+- SGC.02–SGC.06, SGC.08, independent numerical/provider qualification, PR #128
+  costing work and issue #134 source recovery retain their existing scope.
+  Remote publication and admission remain with the parent implementation lane.
+
+## 2026-11-21 — SGC.01 information-set profile and native witness
+
+- The source controls first failed with the projection unimplemented.
+- Specialist review reproduced scope union, malformed representation links,
+  dual semantic roles and competing memberships. Twelve new or revised controls
+  failed before the fixes. The selected graph, complete representation
+  validation and membership checks passed the reviewed control suite.
+- Hosted review exposed an alternate incoming membership from a foreign
+  state. The focused regression failed before the fix. Both predicates
+  now enforce the same member boundary.
+- The repository-local CPython 3.15.2 run passed 415 tests, including the
+  installed wheel and the 39 new profile controls. The existing prebuilt
+  arXiv artifact test was skipped. Ontology, coverage, publishing-metadata
+  and registry link checks passed.
+- The pinned Rust 1.75.0 fixture admitted both full decision IRIs into the
+  declared set. It retained the native action order and rejected wrong
+  ownership, missing assignments, changed order and imperfect recall.
+- SHA-256 for the Turtle fixture and the Rust lock respectively:
+  `c7021e243175ee84823c748b3dd90cd838d4c243ed307e1f2db00cdb0142d68a`
+  and `f53b999009759f995f8c65b22a2c70c7df2873d1b1812ec07ba3f9f641b708e1`.
+  The native readout in `target/information-set-native-receipt.json` hashes to
+  `0f990656d00dd52c1e05478b70b88514cee3c205472f74bbb28ed00b490d0669`.
+
+## 2026-11-21 — SGC.01 installed admission and Python 3.15.2 CI
+
+- The isolated wheel admits the shared finite declaration and rejects empty
+  and relative specification URIs. Tolerance tests cover both signs beyond
+  the supported binary64 range.
+- A fresh project-local CPython 3.15.2 environment passed `make all
+  publishing-metadata registry-links` with 376 tests passing and the existing
+  prebuilt arXiv artifact test skipped. The workflow setup probe and
+  `actionlint` passed. `pixi lock --check` accepted both platform resolutions.
+- The hosted validation and manuscript gates retain their checks and select
+  the same repository runtime. The privacy workflow uses the shared locked
+  CPython 3.15.2 scanner. Hosted acceptance for PR #136 remains pending.
+
+## 2026-11-20 — SGC.01 absolute identifier repair
+
+- Reproduced the relative-identifier failure on PR #136 head `672cde1`.
+  The minimal environment silently lacked the optional JSON Schema URI check.
+- The validator now uses a declared RFC 3986 dependency and rejects oversized
+  integer tolerances with the structured field error. The wheel smoke test
+  imports the installed interchange module.
+- On CPython 3.15.2 the focused declaration and wheel suite passed 35 tests.
+  Ontology validation passed. The full suite passed 374 tests with one skip.
+
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+The canonical source programme now includes comprehensive discovery, acquisition,
+attribution and comparison. All 90 declared input items are preserved in 60 seed
+records, with 74 references across 64 attribution records. Unresolved identities
+and inherited evidence remain explicit. OCS has eleven pending research leaves;
+MNV.00 planning is complete with twelve manuscript-integration leaves pending.
+
+Integrated make validate and make test pass: 310 passed, one local arXiv-artifact
+skip, 55 dependency warnings. SourceRight CSL, citation linkage, snapshot/link and
+track checks pass; internal review found no remaining blockers. These are planning
+and engineering checks, not completed comprehensive research or a revised paper.
+Canonical detail and evidence: `conductor/status.md`, `conductor/runlog.md`,
+`docs/research/game-semantics-citation-check-20261108.json` and
+`docs/paper/next-version-plan-20261108.md`. Hosted state is on PR #127.
+
+## 2026-11-08 — Current reconciliation evidence
+
+Canonical registry: `conductor/tracks.md`; current status and detailed verification:
+`conductor/status.md` and `conductor/tracks/semantic_reconciliation_20261108/metadata.json`.
+
+Semantic/mapping/runner repairs and the bounded source audit are implemented.
+`make validate`, semantic audit and comparison checks pass. `make test` reports
+310 passed, 1 skipped (local arXiv-artifact test), 55 warnings. SGC.07 is complete;
+seven SGC leaves and both receipt scopes remain pending. Four additional programme
+tracks retain their explicit pending implementation/research work. The status
+reporter now distinguishes canonical active tracks from historical bootstrap phases.
+
+Earlier missing-RDFLib notes below describe past environments; they are not the
+current validation result. Historical publication and board records retain their
+original scope. Hosted CI/merge status is supplied by the pull request.
+
+## 2026-11-08 - Created Paignia provider follow-up
+
+- Followed the maintainer's created repository with updated provider links and
+  provenance. Paignia is being populated with the renamed seed and T17 provider
+  work; consumer and valuation handoffs remain application-owned.
+- No ontology, namespace, fixture, dependency pin or runtime was changed. All
+  semantic and scientific acceptance remains scoped and pending; repository
+  creation is recorded separately from package publication and qualification.
+- Rechecked three existing documentation tests, created-provider/eight-leaf/
+  static-dynamic/IRI/local-link assertions and diff whitespace: passed.
+  `make validate` was retried and remains blocked by missing RDFLib.
+
+## 2026-11-07T22:05:53Z - Paignia semantic handoff reconciliation
+
+- Refined the existing eight-leaf semantic-game track and issue #123 handoff;
+  no competing track or ontology namespace was created. UOGTO retains authority,
+  while a future Paignia adapter consumes versioned profiles and minimal fixtures.
+- Preserved complete UOGTO core/extensions and legacy Kairos game-theory IRIs,
+  explicit mapping rejection, source provenance and CC-BY-4.0/MIT distinctions.
+- Validation: three existing documentation tests passed; inline pending-leaf,
+  receipt-scope, IRI/provenance and five local-link checks passed; diff whitespace
+  passed. `make validate` failed before validation because RDFLib is unavailable.
+- Static/dynamic semantic receipts, provider/package qualification and numerical
+  methods remain pending; the incubator rename is not a published release.
+
+## [2026-11-07] - Decoupled Static and Dynamic Game Acceptance
+
+- Based on merged main `2455bdd8e527c396d95b656f457ebd5cdf3f3f1a`, refined
+  `semantic_game_contracts_20261107` without changing task IDs or closing leaves.
+  SGC.08 records static compatibility independently; a dynamic-execution claim
+  still requires the SGC.06 trace contract and actual native-provider evidence.
+- Removed native-adapter readiness from SGC.07's reference-label prerequisite.
+  This permits honest labels without promoting reference execution to native.
+- Verification: three tests passed with `python -m pytest -q
+  tests/test_field_expansion_roadmap.py`; inline stdlib checks confirmed the
+  static dependency closure, conditional dynamic evidence, independent reference
+  labels, eight pending leaves, five local links, and the bounded diff.
+  `git diff --check` passed.
+- Required `make validate` was attempted with the available tools Python and
+  failed at import with `ModuleNotFoundError: No module named 'rdflib'`.
+  Ontology validation and all future runtime/semantic acceptance remain unverified.
+
+## [2026-11-07] - Executable Game Contract Planning
+
+- Added and registered `semantic_game_contracts_20261107`; implementation
+  remains pending, separate from historical completed tracks.
+- Defined eight leaves with file budgets, dependencies, future acceptance
+  targets, and local/specialist review boundaries. Reuse `uogto-game-core` and
+  `uogto-game-solve`; preserve specification, instance, `PlaySession`, and trace
+  identity. Python reference tools are distinct from production Rust simulation.
+- Required `make validate` was attempted with the available tools Python and
+  stopped at `ModuleNotFoundError: No module named 'rdflib'`. RDFLib/PySHACL are
+  absent from that environment. No repository dependencies were changed and no
+  validation was waived. Structural/doc/JSON results are in the track metadata.
+
 ## [2026-07-03] - Repository Validation And Runtime Hardening
 
 - Completed repo-side implementation for `repo_validation_runtime_hardening_20260703`.

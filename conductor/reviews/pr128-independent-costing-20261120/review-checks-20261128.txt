@@ -1,0 +1,19 @@
+Independent historical reproducer verification — 28 November 2026 (Australia/Brisbane)
+PR128 input head: 7e9075b8fd77543fc8853fab20319415cb86597d
+Python: 3.15.2; RDFLib: 7.6.0; PySHACL: 0.40.2
+Script Git blob: 63ceb13c778384694877dd7b9ebf665060f1da2d
+Command: python conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py --query-root PATH_TO_PR128_QUERIES
+
+CQ21 Git blob: 4fbdeb27546d3e78e384b85571b1962825f57574
+CQ23 Git blob: 1028141d5c3677eaeb5a94fff7b21771b16630f2
+PASS CQ21 baseline: actual=[(Decimal('100.00'), 2)]; expected=[(Decimal('100'), 2)]
+PASS CQ23 baseline: actual={'infant-a': Decimal('60.00'), 'infant-b': Decimal('90.00')}; expected={'infant-a': Decimal('60'), 'infant-b': Decimal('90')}
+FAIL CQ21 zero allocation: actual=[(None, None)]; expected=[(Decimal('0'), 0)]
+FAIL CQ23 direct scenario isolation: actual=Decimal('67.00'); expected=Decimal('60')
+FAIL CQ23 pooled scenario isolation: actual={'infant-a': Decimal('120.00'), 'infant-b': Decimal('150.00')}; expected={'infant-a': Decimal('60'), 'infant-b': Decimal('90')}
+Summary: 2/5 semantic checks passed; 3 failed
+Exit: 1
+PASS immutable-source guard: changed cq21-costing-batch-conservation.rq rejected before semantic execution
+PASS immutable-source guard: changed cq23-costing-infant-attribution.rq rejected before semantic execution
+PASS python -m py_compile conductor/reviews/pr128-independent-costing-20261120/check_cq21_cq23.py
+No corrected-query acceptance, full fixture SHACL qualification or combined CQ01–26 run is claimed.

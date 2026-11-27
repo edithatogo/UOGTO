@@ -1,0 +1,117 @@
+{
+  "track_id": "semantic_game_contracts_20261107",
+  "type": "feature",
+  "status": "in_progress",
+  "execution_status": "in_progress",
+  "created_at": "2026-11-07T00:00:00Z",
+  "updated_at": "2026-11-22T00:00:00+10:00",
+  "description": "Versioned executable UOGTO subset and identity-preserving mappings to Paignia's Rust game packages",
+  "base_revision": "ac5b8e86c4a3547d008e83ba4cfcbb5f3ba95f25",
+  "dependencies": [
+    "uogto_interoperability_benchmarks_20260705",
+    "paignia:T17 provider public contract (transferred from the reimbursement incubator)"
+  ],
+  "preserved_ownership": "Downstream scientific_ecosystem_alignment_20261029 tracks retain provider/pin qualification; no local track with that ID exists at this base",
+  "leaf_count": 8,
+  "max_files_per_leaf": 5,
+  "review_policy": "Routine diff and focused checks; specialist agent review at coherent semantic/public contract boundaries; no repeated human approval gate",
+  "provider_identity": {
+    "name": "Paignia",
+    "status": "chosen-name-provider-repository-created-seed-transfer-in-progress",
+    "repository": "edithatogo/paignia",
+    "incubator_repository": "edithatogo/new-drug-reimbursement-game",
+    "seed_packages": [
+      "paignia-core",
+      "paignia-solve"
+    ],
+    "historical_packages": [
+      "uogto-game-core",
+      "uogto-game-solve"
+    ],
+    "semantic_owner": "UOGTO",
+    "handoff": "https://github.com/edithatogo/UOGTO/issues/123",
+    "qualification": "Pending; bind exact provider revision and artifact before acceptance"
+  },
+  "acceptance_scopes": {
+    "static_semantic": {
+      "status": "pending",
+      "requires": [
+        "SGC.01",
+        "SGC.02",
+        "SGC.03",
+        "SGC.04",
+        "SGC.05"
+      ],
+      "receipt_task": "SGC.08",
+      "required_evidence": "Version-matched profile, game packages and fixture hashes with actual Rust interchange; no Kairos or native-simulation prerequisite"
+    },
+    "dynamic_execution": {
+      "status": "pending",
+      "requires": [
+        "SGC.01",
+        "SGC.02",
+        "SGC.03",
+        "SGC.04",
+        "SGC.05",
+        "SGC.06"
+      ],
+      "receipt_task": "SGC.08",
+      "required_evidence": "Static semantic evidence plus the trace contract and actual native-provider dispatch evidence"
+    }
+  },
+  "completed_leaves": [
+    "SGC.01",
+    "SGC.07"
+  ],
+  "pending_leaf_count": 6,
+  "verification_history": [
+    {
+      "base_revision": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+      "scope": "Paignia identity, provenance and task reconciliation only; no ontology or runtime qualification",
+      "status": "documentation_checks_passed_ontology_validation_blocked",
+      "commands_passed": [
+        "python -m pytest -q tests/test_field_expansion_roadmap.py",
+        "python - (inline pending-leaf, receipt-scope, full-IRI, provenance and local-link assertions)",
+        "git diff --check"
+      ],
+      "results": {
+        "focused_documentation_tests": 3,
+        "stdlib_document_checks": "8 pending leaves; static closure is SGC.01\u2013SGC.05; dynamic adds SGC.06/native evidence; all three namespace families retained; per-asset provenance required; 5 local links",
+        "registration_review": "Original registration: one metadata evidence-recording finding resolved; no other concrete findings"
+      },
+      "blocked_check": {
+        "command": "make validate",
+        "python_selection": "PYTHON overridden to the available tools environment",
+        "result": "ModuleNotFoundError: No module named 'rdflib'",
+        "limitation": "RDFLib and PySHACL are absent from this environment; no repository dependency changed and no ontology-validation pass claimed"
+      },
+      "not_qualified": [
+        "Future semantic tests",
+        "Rust interchange",
+        "Simulation execution",
+        "Scientific methods"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "bounded_profiles_and_reference_tool_labels_implemented",
+    "scope": "Existing SGC.01 bounded declaration/information-set profiles and SGC.07 reference labels; status reconciled to the already recorded profile evidence, not a new semantic execution claim",
+    "source_evidence": [
+      "docs/contracts/executable-game-subset-v1.md",
+      "docs/contracts/executable-information-set-profile-v1.md",
+      "https://github.com/edithatogo/UOGTO/pull/136",
+      "https://github.com/edithatogo/UOGTO/pull/139",
+      ".conductor/runlog.md: 2026-11-21 SGC.01 information-set profile and native witness"
+    ],
+    "commands_passed": [
+      "python -m pytest tests/test_runner_execution_origin.py tests/test_game_runner.py"
+    ],
+    "not_qualified": [
+      "SGC.02\u2013SGC.06",
+      "SGC.08",
+      "Rust interchange",
+      "Native simulation",
+      "Numerical or scientific validity"
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 name: RI-HERO Implementation and Validation Intake
-about: Intake for RI-HERO implementation, validation, and release-readiness work
+description: Intake for RI-HERO implementation, validation, and release-readiness work
 labels: ri-hero, ri-hero-validation
 body:
   - type: textarea

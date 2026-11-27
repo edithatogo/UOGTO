@@ -1,0 +1,39 @@
+@prefix uogto:  <https://w3id.org/uogto/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/uogto/core/temporality> a owl:Ontology ;
+    rdfs:label "UOGTO Core - Game Temporality and Representation"@en ;
+    skos:definition "Separates the temporal structure of strategic interaction from mathematical representation and software execution."@en ;
+    owl:imports <https://w3id.org/uogto/core> .
+
+uogto:StaticGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    owl:disjointWith uogto:DynamicGame ;
+    rdfs:label "Static Game"@en ;
+    skos:definition "A game with a single strategic decision stage, in which players do not condition later decisions on an evolving history within the game. This classification does not specify a representation or software execution order."@en .
+
+uogto:DynamicGame a owl:Class ;
+    rdfs:subClassOf uogto:GameSpecification ;
+    rdfs:label "Dynamic Game"@en ;
+    skos:definition "A game with strategic decisions over successive stages or continuous time, allowing decisions to depend on the history or evolving state. Decisions within a stage may be simultaneous, and complete contingent strategies may be represented in normal form."@en .
+
+uogto:GameRepresentation a owl:Class ;
+    rdfs:subClassOf uogto:GameEntity ;
+    rdfs:label "Game Representation"@en ;
+    skos:definition "A mathematical description of a game, distinct from its temporal strategic structure and from the software execution model implementing it."@en .
+
+uogto:NormalFormRepresentation a owl:Class ;
+    rdfs:subClassOf uogto:GameRepresentation ;
+    rdfs:label "Normal Form Representation"@en ;
+    skos:definition "A representation specifying players, their complete strategies, and payoffs for strategy profiles. It can describe static games or the contingent strategies of dynamic games."@en .
+
+uogto:ExtensiveFormRepresentation a owl:Class ;
+    rdfs:subClassOf uogto:GameRepresentation ;
+    rdfs:label "Extensive Form Representation"@en ;
+    skos:definition "A representation specifying decision histories, available actions, information sets, chance moves where relevant, and terminal payoffs. Its use does not by itself classify a game as static or dynamic."@en .
+
+uogto:hasRepresentation a owl:ObjectProperty ;
+    rdfs:label "has representation"@en ;
+    skos:definition "Links a game specification to a mathematical representation; multiple representations may describe the same game independently of its execution model."@en .

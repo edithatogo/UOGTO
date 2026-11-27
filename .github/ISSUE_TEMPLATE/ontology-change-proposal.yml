@@ -1,5 +1,5 @@
 name: Ontology Change Proposal
-about: Propose a class, property, module, alignment, deprecation, or modelling change
+description: Propose a class, property, module, alignment, deprecation, or modelling change
 title: "[Ontology]: "
 labels: ontology-change, needs-discussion
 body:

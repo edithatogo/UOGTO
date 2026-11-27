@@ -1,3 +1,6 @@
+# Historical bootstrap phases retained for compatibility and audit history.
+# Current active work is registered here; do not duplicate those tasks below.
+canonical_registry: conductor/tracks.md
 phases:
   - id: phase_00_bootstrap
     name: "Bootstrap Repo and Tooling"

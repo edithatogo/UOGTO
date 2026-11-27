@@ -34,6 +34,22 @@ documentation aligned.
   affects public interpretation.
 - Record release, registry, manuscript, and RI-HERO impacts when relevant.
 
+## Games Added by Downstream Projects
+
+Use the [downstream-game intake contract](docs/contracts/downstream-game-intake.md)
+for every new or changed game. Record its source revision, full-IRI mapping and
+semantic disposition in UOGTO. Existing vocabulary can be reused through an
+updated example, mapping or competency case; add ontology terms only where the
+case demonstrates a gap. Link the same intake key to Paignia's reusable
+implementation and the originating application. Paignia owns shared game rules
+and solvers; relevant upstream providers retain their own capabilities, and the
+application retains its domain assumptions and data. Keep semantic, numerical
+and consumer-execution evidence distinct under the existing SGC track.
+The canonical contract names the six current downstream applications. Innovate
+remains a parallel innovation library with gradual, parity-qualified generic
+game migration; Voiage owns VoP/VoH and their demo. Kairos, Voiage and Dapane
+compose as optional providers through explicit contracts without dependency cycles.
+
 ## Pull Request Workflow
 
 1. Fork the repo and create a feature branch from `main`.

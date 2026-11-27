@@ -140,6 +140,9 @@ TRACK_OVERRIDES: dict[str, dict[str, str]] = {
     "uogto_alignment_evidence_expansion_20260705": {"workstream": "Ontology", "gate_type": "Repo-local"},
     "uogto_manuscript_submission_revision_20260705": {"workstream": "Manuscript", "gate_type": "External submission"},
     "uogto_bioregistry_namespace_response_20260705": {"workstream": "Registry", "gate_type": "External review"},
+    "uogto_registry_metadata_enrichment_20260721": {"workstream": "Registry", "gate_type": "External review"},
+    "uogto_biomedical_registry_positioning_20260721": {"workstream": "Registry", "gate_type": "External review"},
+    "uogto_namespace_compatibility_contingency_20260721": {"workstream": "Registry", "gate_type": "External review"},
 }
 
 EXISTING_TRACK_ISSUES = {
@@ -149,6 +152,9 @@ EXISTING_TRACK_ISSUES = {
     "uogto_alignment_evidence_expansion_20260705": 30,
     "uogto_manuscript_submission_revision_20260705": 31,
     "uogto_bioregistry_namespace_response_20260705": 34,
+    "uogto_registry_metadata_enrichment_20260721": 93,
+    "uogto_biomedical_registry_positioning_20260721": 94,
+    "uogto_namespace_compatibility_contingency_20260721": 95,
 }
 
 WORKSTREAM_ISSUES = list(range(4, 17))

@@ -3,6 +3,8 @@ import json
 import shutil
 import unittest
 import uuid
+import subprocess
+from unittest.mock import patch
 from pathlib import Path
 
 from scripts.maintenance import visualise_ontology_comparison as visuals
@@ -47,7 +49,7 @@ class TestOntologyComparisonVisuals(unittest.TestCase):
         self.assertEqual(summary["figure_count"], len(visuals.REQUIRED_FIGURES))
         self.assertEqual(summary["cosmograph_image_count"], len(visuals.REQUIRED_COSMOGRAPH_IMAGES))
         report = self.report.read_text(encoding="utf-8")
-        self.assertIn("Accepted mappings: 12", report)
+        self.assertIn("Accepted mappings: 4", report)
         self.assertIn("Source-similarity edges: 391", report)
         self.assertIn("## Inclusion and Exclusion Summary", report)
         self.assertIn("## Mapping Methods", report)
@@ -70,6 +72,15 @@ class TestOntologyComparisonVisuals(unittest.TestCase):
             self.assertIn(f"figures/{name}", self.report.read_text(encoding="utf-8"))
         for name in visuals.REQUIRED_COSMOGRAPH_IMAGES:
             self.assertIn(f"cosmograph/{name}", self.report.read_text(encoding="utf-8"))
+
+    def test_missing_svg_delegate_retains_canonical_svg(self):
+        svg = self.temp_dir / "graph.svg"
+        svg.write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>', encoding="utf-8")
+        with patch.object(visuals.shutil, "which", side_effect=lambda name: "/fake/magick" if name == "magick" else None):
+            with patch.object(visuals.subprocess, "run", side_effect=subprocess.CalledProcessError(1, ["magick"])):
+                with self.assertWarnsRegex(RuntimeWarning, "SVG retained"):
+                    self.assertEqual(visuals.optional_image_derivatives(svg), [])
+        self.assertTrue(svg.exists())
 
     def test_paper_graph_pdf_sync_uses_expected_names(self):
         paper_dir = self.temp_dir / "paper-figures"

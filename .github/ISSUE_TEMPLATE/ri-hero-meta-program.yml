@@ -1,5 +1,5 @@
 name: RI-HERO Meta-Program Intake
-about: Intake for RI-HERO cross-cutting program work and synthesis
+description: Intake for RI-HERO cross-cutting program work and synthesis
 labels: ri-hero, ri-hero-epic
 body:
   - type: textarea

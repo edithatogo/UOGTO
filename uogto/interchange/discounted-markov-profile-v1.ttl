@@ -1,0 +1,126 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix uogtox: <https://w3id.org/uogto/extensions#> .
+@prefix p: <urn:uogto:shapes:discounted-markov:1.0.0#> .
+
+# The projector re-targets this shape to the selected representation.
+p:Representation a sh:NodeShape ;
+    sh:targetClass uogtox:DiscountedZeroSumMarkovRepresentation ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogtox:DiscountedZeroSumMarkovRepresentation ;
+    sh:property [
+        sh:path [ sh:inversePath uogto:hasRepresentation ] ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:node p:Specification
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ; sh:maxCount 1 ;
+        sh:hasValue <urn:uogto:profile:discounted-markov:1.0.0>
+    ] ;
+    sh:property [
+        sh:path uogtox:modelDiscountFactor ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:double ; sh:minInclusive 0.0e0 ; sh:maxExclusive 1.0e0
+    ] ;
+    sh:property [ sh:path uogtox:playerOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:node p:AxisHead ] ;
+    sh:property [ sh:path uogtox:stateOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:node p:AxisHead ] ;
+    sh:property [ sh:path uogtox:hasInitialWeight ; sh:minCount 1 ; sh:node p:InitialWeight ] ;
+    sh:property [
+        sh:path uogtox:hasStationaryProfile ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node p:StationaryProfile
+    ] .
+
+p:Specification a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:GameSpecification, uogto:DynamicGame, uogtox:MarkovGame ;
+    sh:not [ sh:class uogto:StaticGame ] ;
+    sh:property [ sh:path uogto:hasRepresentation ; sh:maxCount 1 ] ;
+    sh:property [ sh:path uogto:hasPlayer ; sh:minCount 2 ; sh:maxCount 2 ; sh:node p:Player ] ;
+    sh:property [ sh:path uogto:hasState ; sh:minCount 1 ; sh:node p:State ] ;
+    sh:property [ sh:path uogto:hasTransition ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:node p:Kernel ] .
+
+p:Kernel a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:TransitionFunction ;
+    sh:property [ sh:path uogtox:hasStageDecision ; sh:minCount 1 ; sh:node p:StageDecision ] .
+
+p:AxisHead a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path rdf:first ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path rdf:rest ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:BlankNodeOrIRI ] .
+
+p:Player a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:Player ;
+    sh:property [ sh:path uogto:observes ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uogtox:actionOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:node p:AxisHead ] .
+
+p:State a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:State ;
+    sh:not [ sh:class uogto:TerminalState ] ;
+    sh:property [ sh:path uogto:hasAvailableAction ; sh:minCount 2 ; sh:node p:Action ] .
+
+p:Action a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:Action, uogto:SimultaneousAction ;
+    sh:property [
+        sh:path uogto:belongsToPlayer ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI
+    ] .
+
+p:Weight a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+        sh:path uogto:probability ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:double ; sh:minInclusive 0.0e0 ; sh:maxInclusive 1.0e0
+    ] .
+
+p:InitialWeight a sh:NodeShape ;
+    sh:node p:Weight ;
+    sh:property [ sh:path uogtox:atState ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+p:StageDecision a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogtox:MarkovStageDecision ;
+    sh:property [ sh:path uogtox:atState ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [
+        sh:path uogto:hasActionProfile ; sh:minCount 1 ; sh:maxCount 1 ; sh:node p:ActionProfile
+    ] ;
+    sh:property [
+        sh:path uogtox:stageReward ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:double
+    ] ;
+    sh:property [ sh:path uogto:hasTransition ; sh:minCount 1 ; sh:node p:Transition ] .
+
+p:ActionProfile a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogto:ActionProfile ;
+    sh:property [ sh:path uogto:hasAction ; sh:minCount 2 ; sh:maxCount 2 ; sh:nodeKind sh:IRI ] .
+
+p:Transition a sh:NodeShape ;
+    sh:node p:Weight ;
+    sh:class uogto:Transition ;
+    sh:property [
+        sh:path uogto:transitionsFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path uogto:transitionsTo ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI
+    ] .
+
+p:StationaryProfile a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class uogtox:JointPolicy ;
+    sh:property [ sh:path uogtox:hasPolicyRow ; sh:minCount 1 ; sh:node p:PolicyRow ] .
+
+p:PolicyRow a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [ sh:path uogtox:atState ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [
+        sh:path uogto:belongsToPlayer ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI
+    ] ;
+    sh:property [ sh:path uogtox:hasActionWeight ; sh:minCount 1 ; sh:node p:ActionWeight ] .
+
+p:ActionWeight a sh:NodeShape ;
+    sh:node p:Weight ;
+    sh:property [ sh:path uogto:hasAction ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .

@@ -1,5 +1,5 @@
 name: Validation Failure
-about: Report RDF, SHACL, competency-query, packaging, or CI validation failures
+description: Report RDF, SHACL, competency-query, packaging, or CI validation failures
 title: "[Validation]: "
 labels: bug, validation
 body:

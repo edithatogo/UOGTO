@@ -1,0 +1,154 @@
+{
+  "schema": "uogto.gto-predecessor-evidence.v1",
+  "as_of_date": "2026-11-18",
+  "scope": "OCS.02 bounded original-predecessor bibliographic/abstract corroboration and 2018 follow-up; partial evidence, not full acquisition or concept qualification",
+  "reuses_source_id": "mejbri_gto",
+  "original_2013": {
+    "source_id": "mejbri_gto",
+    "title": "A Domain Ontology of Game Theory Applied to Game Based Learning",
+    "year": 2013,
+    "conference": "7th European Conference on Games Based Learning",
+    "event_location": "Porto, Portugal",
+    "event_dates": "2013-10-03/2013-10-04",
+    "page_start": 666,
+    "doi": null,
+    "abstract_authors": [
+      "Yemna Mejbri",
+      "Maha Khemaja",
+      "Rafik Braham"
+    ],
+    "toc_authors": [
+      "Yemna Mejbri",
+      "Maha Khemaja",
+      "Rafik Braham"
+    ],
+    "author_discrepancy_unresolved": false,
+    "abstract_described_formalism": "WSML",
+    "bibliographic_scope": "conference paper and abstract; no original full paper or formal ontology bytes",
+    "next_toc_paper_start": 674,
+    "next_toc_paper_start_is_not_a_verified_last_page": true
+  },
+  "2018_followup": {
+    "title": "Towards a new requirements’ definition methodology using ontologies for Pervasive Games Based Learning Systems",
+    "authors": [
+      "Yemna Mejbri",
+      "Maha Khemaja",
+      "Kaouther Raies"
+    ],
+    "published_date": "2018-01-04",
+    "doi": "10.4108/eai.4-1-2018.153533",
+    "journal_article_licence": "CC-BY-3.0",
+    "full_paper_text_inspected": true,
+    "licence_does_not_transfer_to_2013_or_ontology": true,
+    "reference_40_short_author_attribution": "Y. Mejbri, M. Khemaja (2013); omits Rafik Braham recorded in the original conference abstract and proceedings contents",
+    "scope_limitation": "The follow-up reports GTO use in identifying equilibrium-prediction algorithms; no separately retrieved WSML/OWL source or qualified mappings",
+    "figure_caption_warning": "The requirements-ontology figure caption does not verify the original GTO class and property structure."
+  },
+  "evidence_state": {
+    "2013_toc_verified": true,
+    "2013_abstract_inspected": true,
+    "2013_full_paper_bytes_acquired": false,
+    "2013_full_text_charted": false,
+    "standalone_gto_artifact_acquired": false,
+    "source_content_hash_verified": false,
+    "gto_rdf_parsed": false,
+    "gto_iri_mapping_reviewed": false,
+    "gto_adapter_executed": false,
+    "source_licence_certified": false
+  },
+  "2013_rights": {
+    "declared_proceedings_status": "all-rights-reserved",
+    "abstract_volume_status": "all-rights-reserved",
+    "ontology_rights": "unverified",
+    "paper_or_ontology_bytes_redistributed": false,
+    "interpretation": "Bibliographic citation and factual concept summaries only; no source text, figures or ontology asset redistributed."
+  },
+  "sources": [
+    {
+      "source_id": "proceedings-2013-toc",
+      "url": "https://www.proceedings.com/content/019/019356webtoc.pdf",
+      "publisher_or_host": "Curran Associates / Academic Conferences Ltd reprint contents",
+      "asserted_access": "toc_inspected",
+      "observed_part": "ECGBL 2013 proceedings volume 2 contents p.v; article starts p.666",
+      "raw_pdf_bytes_preserved": false,
+      "content_sha256": null,
+      "licence_for_text_or_assets": "all-rights-reserved"
+    },
+    {
+      "source_id": "ecgbl-2013-abstract",
+      "url": "https://citeseerx.ist.psu.edu/document?doi=3a242e4f34a97053fe9297043e4288064fa487c6&repid=rep1&type=pdf",
+      "publisher_or_host": "ECGBL 2013 conference abstract volume indexed by CiteSeerX",
+      "asserted_access": "abstract_inspected",
+      "observed_part": "conference abstract guide p.73, author names, strategic-scenario modelling and WSML keyword",
+      "raw_pdf_bytes_preserved": false,
+      "content_sha256": null,
+      "licence_for_text_or_assets": "all-rights-reserved"
+    },
+    {
+      "source_id": "eai-2018-primary-followup",
+      "url": "https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533",
+      "publisher_or_host": "EAI Endorsed Transactions on Serious Games",
+      "asserted_access": "publisher_full_text_inspected",
+      "observed_part": "section 4.2 (GTO identification of equilibrium-prediction algorithms), reference 40",
+      "raw_pdf_bytes_preserved": false,
+      "content_sha256": null,
+      "licence_for_text_or_assets": "CC-BY-3.0 (2018 journal article only)"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "GTO-PRECEDENCE-2013",
+      "claim": "A domain ontology of game theory was described in a conference paper in 2013, prior to UOGTO.",
+      "source_ids": [
+        "proceedings-2013-toc",
+        "ecgbl-2013-abstract"
+      ],
+      "support_type": "bibliography_and_abstract",
+      "not_supported": [
+        "original complete class diagram",
+        "full text inspected",
+        "standalone ontology release"
+      ]
+    },
+    {
+      "claim_id": "GTO-USE-2018",
+      "claim": "A 2018 follow-up discusses use of GTO to identify equilibrium-prediction algorithms.",
+      "source_ids": [
+        "eai-2018-primary-followup"
+      ],
+      "support_type": "publisher_article_narrative",
+      "not_supported": [
+        "native execution",
+        "validated ontology equivalence",
+        "asset licensing"
+      ]
+    }
+  ],
+  "concept_evidence": [
+    {
+      "concept": "strategic_game_description",
+      "scope": "2013 original abstract reports representation intent, not exact vocabulary",
+      "uogto_relation": "research_comparison_required",
+      "mapping_status": "not_evaluated"
+    },
+    {
+      "concept": "equilibrium_algorithm_selection",
+      "scope": "2018 follow-up reports intended GTO queries, not executed solver evidence",
+      "uogto_relation": "research_comparison_required",
+      "mapping_status": "not_evaluated"
+    }
+  ],
+  "acquisition_leads": [
+    "Locate rights-permitted complete 2013 article and record exact bytes/version/hash before charting.",
+    "Locate WSML/OWL/RDF ontology asset and verify its distinct licence and creator provenance.",
+    "Confirm complete 2013 article author metadata and reconcile the 2018 reference that omits Rafik Braham.",
+    "Complete backward/forward citation searches with dated queries and screened denominators."
+  ],
+  "closure": {
+    "ocs02_complete": false,
+    "broad_discovery_complete": false,
+    "proposed_ontology_mapping_accepted": false,
+    "reason": "2013 paper and standalone ontology have not been acquired; systematic citation chaining remains pending."
+  },
+  "no_global_coverage_claim": true
+}

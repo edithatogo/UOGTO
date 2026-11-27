@@ -1,8 +1,72 @@
 # Conductor Status
 
-Updated: `2026-07-07`
+Updated: `2026-11-08`
 
-## Active Work
+## 2026-11-08 — Comprehensive sourcing, attribution and next-paper plan
+
+- Expanded source coverage to all identifiable in-scope game-theory ontologies and
+  related languages, libraries, modelling standards and research baselines, using
+  a reproducible protocol with explicit acquisition limits and stopping rules.
+- Preserved 90 existing input items in 60 discovery seed records. Added 74
+  bibliographic references and 64 attribution records; 59 seeds link to references,
+  while GBO remains unresolved. GDLf/GameLan's distinct identity and the original
+  2013 GTO acquisition remain explicit gaps. Inherited metadata is not recertified.
+- OCS.01 remains complete. OCS.09–12 extend discovery, attribution, remaining
+  crosswalks and comparison; the expanded OCS track has eleven pending research
+  leaves. Delivered protocol/citation infrastructure does not close their execution.
+- Registered manuscript_next_version_20261108: MNV.00 planning complete and twelve
+  integration leaves pending. Twelve correction groups and four research questions
+  tie the existing resource manuscript to scoped source and validation receipts.
+  Later interoperability/frontier studies retain separate evidence requirements.
+- Updated programme, product, registry and navigation; retained historical paper,
+  source snapshots, bibliography generator and SGC/FRT/Paignia ownership.
+- Integrated validation: make validate passed; make test passed with 310 passed,
+  one skipped (local arXiv artifacts unavailable), 55 dependency warnings. SourceRight
+  CSL validation, reference/source linkage, snapshot hashes, local links and Conductor
+  leaf/status checks passed. Independent internal review found no remaining blockers.
+- Citation structure and linkage do not certify all source content, licensing or
+  claim support. Comprehensive search completion, a revised manuscript, external
+  solver execution and a public arXiv version are not claimed. Hosted checks and
+  merge status are recorded on PR #127.
+
+Evidence: [sourcing protocol](../docs/research/comprehensive-game-semantics-sourcing-protocol.md),
+[citation checks](../docs/research/game-semantics-citation-check-20261108.json),
+[next-paper plan](../docs/paper/next-version-plan-20261108.md).
+
+## 2026-11-08 — Semantic reconciliation and frontier programme
+
+- Reconciled the Paignia semantic handoff and strategic-information plan. UOGTO
+  owns semantics; Paignia owns computation; Kairos remains optional execution.
+  Upstream PR #126 is incorporated; the related PR #125 proposal is preserved.
+- Corrected result/criterion/computation hierarchies and causal wording; declared
+  runner predicates; added independent temporality/representation concepts and
+  CQ21; strengthened player/probability checks with passing positive controls.
+- Corrected mapping decisions to four structural narrow matches, six pending
+  domain reviews and 450 rejected candidates. Lexical scores cannot establish
+  equivalence. Earlier calibration and robustness scaffolds remain historical.
+- Reference runner/baseline output now declares its origin. Installed-wheel
+  smoke coverage and optional SVG derivative rendering are repaired.
+- Registered source-coverage, repository-maturity, frontier/interoperability and
+  video-game tracks. OCS.01 bounded audit is complete; broad source synthesis,
+  external adapters, research hypotheses and remaining leaves are pending.
+- SGC.07 is implemented; seven SGC leaves and both consumer receipt scopes remain
+  pending. Offline semantic acceptance is independent of StaticGame/DynamicGame.
+- Local verification: make validate passed; make test passed with 310 passed,
+  1 skipped (arXiv artifacts absent locally), 55 warnings; semantic audit and
+  comparison artifact checks passed. Current quality evidence covers 54 ontology
+  files, 8 shape files, 30 examples and 21 competency queries.
+- Independent internal code review found no blocking defects; its probability
+  datatype-policy observation was corrected and included in the full test run.
+- Hosted checks and merge status are reported by the pull request. No Rust solver,
+  external engine integration, exhaustive source coverage or frontier result is
+  qualified by this reconciliation.
+
+Canonical planning: [tracks](tracks.md). Programme:
+[frontier-programme-20261108](../docs/roadmap/frontier-programme-20261108.md).
+The older sections below record historical states, not current active-track counts
+or current dependency failures. Remote project boards were not resynchronised here.
+
+## Historical active-work snapshot — July 2026
 
 - `uogto_github_project_reconciliation_20260705`: Completed directly as project-governance work. Live verification on 2026-07-07 confirms GitHub Project #8 is issue-backed with 68 UOGTO items: 32 Conductor track issues, 13 umbrella/workstream issues, and 23 merged pull requests. Stale draft placeholders remain removed, 21 Project #8 fields are available, PR `#72` is included as a completed publishing deliverable, and RI-HERO Project #9 mirrors the same 68 UOGTO items inside its larger 225-item program board. The only open/in-progress track is `uogto_publishing_discoverability_20260622`.
 - `uogto_publishing_discoverability_20260622`: Active external-review monitoring. Cross-registry lessons from OLS and Bioregistry feedback were applied on 2026-07-07: LOV, OLS, and Ontobee now have supplemental comments with the core/extension namespace policy, approved sole-author/contact ORCID, and health-relevance explanation where relevant. External review/indexing remains open for LOV issue `83`, OLS public API/search visibility for issue `1305`, Ontobee issue `212`, Bioregistry issue `1999`, and any FAIRsharing curator follow-up.
@@ -13,6 +77,10 @@ Updated: `2026-07-07`
 - `uogto_alignment_evidence_expansion_20260705`: Completed and archived. Evidence-backed parent-axiom alignments are expanded, mapping-review queues are resolved to 12 accepted and 448 rejected rows, and synchronized comparison/manuscript artifacts are regenerated.
 - `uogto_manuscript_submission_revision_20260705`: Completed and archived. Submission decision memo, revision backlog, arXiv state record, manuscript/supplement framing updates, and verification evidence are in place; arXiv identifier and rendered-PDF approval remain external upload gates.
 - `uogto_bioregistry_namespace_response_20260705`: Completed and archived. Bioregistry response <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885550451> defends the published core/extension namespace split, limits the registration to the primary `uogto` core prefix, and leaves any required namespace squashing to a separate compatibility track. ORCID follow-up <https://github.com/biopragmatics/bioregistry/issues/1999#issuecomment-4885988980> adds the approved sole-author/contact ORCID.
+- `uogto_registry_metadata_enrichment_20260721`: Repository implementation completed and issue <https://github.com/edithatogo/UOGTO/issues/93> is closed. Repository evidence records FAIRsharing and Wikidata enrichment candidates with fail-closed deferred decisions.
+- `uogto_biomedical_registry_positioning_20260721`: Repository decision package completed and issue <https://github.com/edithatogo/UOGTO/issues/94> is closed. BioPortal and OBO Foundry remain conditional targets pending a defensible biomedical scope and governance fit.
+- `uogto_namespace_compatibility_contingency_20260721`: Compatibility decision completed and issue <https://github.com/edithatogo/UOGTO/issues/95> is closed. The decision preserves published v1.0.0 IRIs and defines a migration trigger only if Bioregistry requires namespace squashing.
+- `uogto_registry_handoff_implementation_20260722`: Repository implementation completed for BARTOC and Research Vocabularies Australia handoff packages; external submission, review, and publication evidence remain open in issues <https://github.com/edithatogo/UOGTO/issues/98> and <https://github.com/edithatogo/UOGTO/issues/99>.
 - `repo_arxiv_submission_hardening_20260702`: Completed repo-side implementation. Repository contribution templates, main-only workflow cleanup, `Required Gate`, dual-license REUSE metadata, and strict arXiv reviewer simulation have been added. Current strict local score is `998.18/1000`, with no blockers and a minimum category score of `98.0%`.
 - `repo_validation_runtime_hardening_20260703`: Completed and archived. Competency-query expected-result validation, negative SHACL coverage, fresh-checkout build/test ordering, runtime packaging, Python 3.10 Pixi parity, SourceRight/WIDOCO pinning, and Conductor state consistency are implemented and verified.
 

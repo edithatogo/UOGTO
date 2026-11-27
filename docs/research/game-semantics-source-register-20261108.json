@@ -1,0 +1,909 @@
+{
+  "schema": "uogto.game-semantics-source-register.v1",
+  "audit_date": "2026-11-08",
+  "date_note": "Task/as-of date; environment wall-clock date may differ. No future publication inference is intended.",
+  "repository_snapshot": "a5f90557c40f054255a1d6c2541fd76f07aa5090",
+  "scope": "Bounded targeted primary-source audit, not an exhaustive or systematic review. Twenty selected sources include supporting ontologies, libraries and languages as separately typed comparators.",
+  "source_count": 20,
+  "completeness_claim": false,
+  "baseline_evidence": {
+    "inventory": "docs/ontology-comparison/source-inventory.json",
+    "sources": 21,
+    "parsed_sources": 4,
+    "metadata_only_sources": 17,
+    "extension_inventory": "docs/article-hardening/source-extension-inventory.json",
+    "extension_sources": 39,
+    "extension_evidence_levels": {
+      "parsed_rdf_owl": 4,
+      "metadata_only": 15,
+      "literature_only": 2,
+      "structured_non_rdf": 18
+    },
+    "interpretation": "structured_non_rdf is a register label, not proof of corpus parsing or execution",
+    "mapping_count_note": "Baseline a5f90557 had 12 accepted alignment rows (schema_org 5, prov_o 5, ssn_sosa 2, owl_time 0). Concurrent corrections may change these; no final mapping count asserted by this historical register."
+  },
+  "status_definitions": {
+    "missing": "Absent from the two inspected source inventories before this audit; not a global absence claim.",
+    "metadata_only": "Registered or textually charted; external formal artefact not parsed into a local term inventory.",
+    "parsed": "Existing local RDF has parse/provenance evidence.",
+    "mapped": "Accepted alignment rows exist; semantic review quality must be checked separately.",
+    "executed": "Concrete source-specific adapter/runtime executed with recorded evidence; none newly executed in this audit."
+  },
+  "search_protocol": {
+    "strategy": "Targeted keyword searches, GTO backward-reference check, direct official documentation/repository opens; system1 used to verify primary coverage gaps. Secondary hits used only as discovery leads.",
+    "queries": [
+      {
+        "engine": "system2",
+        "query": "game theory ontology Mejbri 2013 2018 ontology game theory"
+      },
+      {
+        "engine": "system2",
+        "query": "video game ontology VGO GBO game ontology primary"
+      },
+      {
+        "engine": "system1",
+        "query": "\"game theory\" \"ontology\" Mejbri Khemaja Braham"
+      },
+      {
+        "engine": "system1",
+        "query": "\"Game-Based\" \"GBO\" ontology games"
+      },
+      {
+        "engine": "system1",
+        "query": "\"game theory ontology\" OWL"
+      },
+      {
+        "engine": "system2",
+        "query": "\"GBO\" \"game\" \"ontology\""
+      },
+      {
+        "engine": "system2",
+        "query": "\"A Domain Ontology of Game Theory Applied to Game Based Learning\" Mejbri pdf"
+      },
+      {
+        "engine": "system2",
+        "query": "\"game theory ontology\" -UOGTO -edithatogo -researchgate -csauthors"
+      },
+      {
+        "engine": "system2",
+        "query": "\"Mejbri\" \"GTO\" ontology"
+      },
+      {
+        "engine": "system1",
+        "query": "\"GBO\" \"game ontology\""
+      },
+      {
+        "engine": "system1",
+        "query": "\"game behaviour ontology\""
+      },
+      {
+        "engine": "system1",
+        "query": "\"game behavior ontology\""
+      },
+      {
+        "engine": "system1",
+        "query": "\"game theory ontology\" -site:edithatogo.github.io -site:github.com/edithatogo -site:kirethresearch.org"
+      },
+      {
+        "engine": "system2",
+        "query": "OpenGameEngine compositional game theory github"
+      },
+      {
+        "engine": "system2",
+        "query": "\"GBO\" ontology game design -blockchain -gradient -facemask -steg"
+      },
+      {
+        "engine": "system2",
+        "query": "GDL II Thielscher 2010 general game playing imperfect information paper"
+      },
+      {
+        "engine": "system2",
+        "query": "DeepGTAV github driving dataset"
+      },
+      {
+        "engine": "system1",
+        "query": "\"OpenGameEngine\""
+      },
+      {
+        "engine": "system1",
+        "query": "\"GBO\" \"ontology\" \"games\" -blockchain -gradient -facemask -philarchive"
+      },
+      {
+        "engine": "system1",
+        "query": "\"GDL\" \"Game Description Language\" site:logic.stanford.edu"
+      },
+      {
+        "engine": "system2",
+        "query": "\"open game engine\" \"CyberCat\""
+      },
+      {
+        "engine": "system2",
+        "query": "\"OpenGameEngine\" game theory Haskell"
+      },
+      {
+        "engine": "system2",
+        "query": "\"GBO\" \"game\" ontology Sacco"
+      }
+    ],
+    "direct_open_policy": "Primary project pages, original publisher/author papers and source repositories only for substantive conclusions. Retrieval failures retained explicitly.",
+    "exclusions": "Unrelated blockchain/GeoLink GBO acronyms, unrelated OpenGameEngine videogame engine, philosophical ontology discussions without operational strategic vocabulary, search spam.",
+    "stopping_rule": "Stop after required ontology/library/language/runtime/environment families receive a primary-source disposition; no saturation or exhaustive coverage claim."
+  },
+  "sources": [
+    {
+      "source_id": "mejbri_gto",
+      "name": "Mejbri Game Theory Ontology: 2013 predecessor documented in 2018 paper",
+      "source_type": "strategic_game_theory_ontology_literature",
+      "primary_url": "https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_full_text",
+        "web_reference_ids": [
+          "turn20view0",
+          "turn21view4",
+          "turn21view5"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "CC-BY-3.0",
+        "scope": "2018 paper; standalone ontology artefact licence unverified",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "disposition": "Priority predecessor: chart published concepts; locate original 2013 paper and WSML/OWL artefact before term-level equivalence claims.",
+      "concepts": [
+        "strategic_situation",
+        "payoff",
+        "equilibrium",
+        "algorithm_selection"
+      ],
+      "bibliographic_note": "The 2018 article is Towards a new requirements\u2019 definition methodology using ontologies for Pervasive Games Based Learning Systems, by Yemna Mejbri, Maha Khemaja and Kaouther Raies. Reference 40 cites the 2013 A Domain Ontology of Game Theory Applied to Game Based Learning. Do not treat these as two independently acquired ontology releases.",
+      "artifact_url": null,
+      "limitations": [
+        "2013 full paper and standalone ontology not acquired",
+        "2018 narrative confirmation does not establish complete term coverage"
+      ]
+    },
+    {
+      "source_id": "game_ontology_project",
+      "name": "Game Ontology Project (GOP)",
+      "source_type": "game_studies_vocabulary",
+      "primary_url": "https://gameontology.org/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_project_and_paper",
+        "web_reference_ids": [
+          "turn22search0",
+          "turn22search1"
+        ]
+      },
+      "prior_inventory_status": "metadata_only",
+      "prior_source_ids": [
+        "game_ontology_project"
+      ],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "Adjacent game-design vocabulary; compare structural elements without counting it as a complete strategic-game ontology.",
+      "concepts": [
+        "interface",
+        "rules",
+        "goals",
+        "entities",
+        "entity_manipulation"
+      ]
+    },
+    {
+      "source_id": "vgo",
+      "name": "Video Game Ontology (VGO)",
+      "source_type": "videogame_ontology",
+      "primary_url": "https://vocab.linkeddata.es/vgo/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_owl_view",
+        "web_reference_ids": [
+          "turn22view1",
+          "turn19search0"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "CC-BY-NC-SA-2.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "scope": "published VGO documentation/ontology; do not assume UOGTO redistribution compatibility"
+      },
+      "disposition": "Chart gameplay events, players and products; keep videogame product and strategic game specification distinct.",
+      "concepts": [
+        "game_product",
+        "player",
+        "game_event",
+        "achievement"
+      ]
+    },
+    {
+      "source_id": "cgo",
+      "name": "Core Game Ontology (CGO)",
+      "source_type": "videogame_ontology",
+      "primary_url": "https://autosemanticgame.institutedigitalgames.com/ontologies/cgo/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation",
+        "web_reference_ids": [
+          "turn23view1"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "scope": "CGO documentation states ontology licence"
+      },
+      "disposition": "Additional adjacent videogame ontology missing from existing inventories; sample source terms before mapping.",
+      "concepts": [
+        "videogame_metadata"
+      ]
+    },
+    {
+      "source_id": "stanford_gdl",
+      "name": "Stanford Game Description Language",
+      "source_type": "formal_language",
+      "primary_url": "https://logic.stanford.edu/ggp/chapters/clean_slate.html",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_indexed_excerpt_open_failed",
+        "web_reference_ids": [
+          "turn24search4",
+          "turn27view1"
+        ]
+      },
+      "prior_inventory_status": "literature_or_structured_metadata",
+      "prior_source_ids": [
+        "gdlf_gamelan",
+        "stanford_gdl"
+      ],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "Replace secondary discovery URL in future appended evidence with primary Stanford reference; chart roles/legal actions/state/goal/terminal.",
+      "concepts": [
+        "role",
+        "initial_state",
+        "legal_action",
+        "transition",
+        "goal",
+        "terminal"
+      ],
+      "limitations": [
+        "Direct page open returned 502; search indexed primary excerpt was available",
+        "Do not conflate different GDL syntax/version descriptions"
+      ]
+    },
+    {
+      "source_id": "gdl_ii",
+      "name": "GDL-II: incomplete-information game description",
+      "source_type": "formal_language",
+      "primary_url": "https://ojs.aaai.org/index.php/AAAI/article/view/7647",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_publisher_abstract",
+        "web_reference_ids": [
+          "turn26view6",
+          "turn23search48"
+        ]
+      },
+      "prior_inventory_status": "literature_only",
+      "prior_source_ids": [
+        "gdl_ii_iii_gdlz"
+      ],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "Separate GDL-II from combined variant seed; chart randomness and incomplete state knowledge. This row does not verify GDL-III/GDLZ.",
+      "concepts": [
+        "randomness",
+        "incomplete_state_knowledge",
+        "player_knowledge"
+      ]
+    },
+    {
+      "source_id": "ludii",
+      "name": "Ludii general game system",
+      "source_type": "formal_language_and_system",
+      "primary_url": "https://ludii.games/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_project_documentation",
+        "web_reference_ids": [
+          "turn22view3"
+        ]
+      },
+      "prior_inventory_status": "structured_non_rdf",
+      "prior_source_ids": [
+        "ludii"
+      ],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "Use ludemes and sampled game descriptions as construct evidence; no executable or corpus acquisition claimed.",
+      "concepts": [
+        "ludeme",
+        "equipment",
+        "rules",
+        "playable_game"
+      ]
+    },
+    {
+      "source_id": "vgdl",
+      "name": "PyVGDL / Video Game Description Language",
+      "source_type": "formal_language_and_system",
+      "primary_url": "https://github.com/schaul/py-vgdl",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_repository_readme",
+        "web_reference_ids": [
+          "turn22view4"
+        ]
+      },
+      "prior_inventory_status": "structured_non_rdf",
+      "prior_source_ids": [
+        "gvgai_vgdl"
+      ],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "BSD-3-Clause",
+        "scope": "schaul/py-vgdl repository; independently maintained extensions require separate review"
+      },
+      "disposition": "Chart interactions, dynamics and control; distinguish original dormant implementation from VGDL2/java-vgdl.",
+      "concepts": [
+        "sprite",
+        "interaction",
+        "control",
+        "termination",
+        "stochastic_event"
+      ]
+    },
+    {
+      "source_id": "gambit",
+      "name": "Gambit / PyGambit",
+      "source_type": "strategic_game_library",
+      "primary_url": "https://gambitproject.readthedocs.io/en/latest/pygambit.html",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_api_and_repository",
+        "web_reference_ids": [
+          "turn20view1",
+          "turn25view3"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "GPL-2.0",
+        "scope": "repository badge; documentation/code terms must be checked before copying"
+      },
+      "disposition": "Priority executable semantic comparator; version-pin concrete adapters in Paignia and test strategic/extensive form fixtures.",
+      "concepts": [
+        "strategic_game",
+        "extensive_game",
+        "history",
+        "information_set",
+        "action",
+        "strategy",
+        "mixed_strategy",
+        "mixed_behavior",
+        "perfect_recall",
+        "payoff",
+        "equilibrium"
+      ]
+    },
+    {
+      "source_id": "openspiel",
+      "name": "OpenSpiel",
+      "source_type": "game_learning_and_analysis_library",
+      "primary_url": "https://openspiel.readthedocs.io/en/latest/concepts.html",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_source",
+        "web_reference_ids": [
+          "turn20view2",
+          "turn21view0",
+          "turn25view0",
+          "turn27view2",
+          "turn27view3",
+          "turn25view4"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "Apache-2.0",
+        "scope": "google-deepmind/open_spiel repository"
+      },
+      "disposition": "Priority semantic comparator for history, observation, information state, chance and simultaneous transformations; no integration executed in this audit.",
+      "concepts": [
+        "game",
+        "trajectory",
+        "state",
+        "history",
+        "legal_action",
+        "chance_outcome",
+        "information_state",
+        "observation",
+        "reward",
+        "return",
+        "simultaneous",
+        "sequential"
+      ]
+    },
+    {
+      "source_id": "pettingzoo",
+      "name": "PettingZoo AEC and Parallel APIs",
+      "source_type": "multiagent_environment_api",
+      "primary_url": "https://pettingzoo.farama.org/api/aec/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_repository",
+        "web_reference_ids": [
+          "turn21view1",
+          "turn23view2",
+          "turn25view1",
+          "turn25view2",
+          "turn25view5"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "MIT",
+        "scope": "Farama-Foundation/PettingZoo repository; bundled environments/assets may differ"
+      },
+      "disposition": "Use as scheduling/environment comparator; AEC action order alone cannot classify strategic timing.",
+      "concepts": [
+        "agent_selection",
+        "observation",
+        "action_space",
+        "reward",
+        "termination",
+        "truncation",
+        "aec",
+        "parallel"
+      ],
+      "additional_primary_urls": [
+        "https://pettingzoo.farama.org/api/parallel/"
+      ]
+    },
+    {
+      "source_id": "pycid",
+      "name": "PyCID causal influence diagrams",
+      "source_type": "graphical_strategic_model_library",
+      "primary_url": "https://github.com/causalincentives/pycid",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_repository_readme",
+        "web_reference_ids": [
+          "turn21view2",
+          "turn28view0"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "Apache-2.0",
+        "scope": "causalincentives/pycid repository"
+      },
+      "disposition": "Chart causal vs informational links, decisions, utility ownership and intervention semantics; avoid treating a causal graph as an extensive-form tree.",
+      "concepts": [
+        "causal_influence_diagram",
+        "multiagent_cid",
+        "decision",
+        "utility",
+        "optimal_policy",
+        "nash_equilibrium",
+        "intervention"
+      ]
+    },
+    {
+      "source_id": "open_game_engine",
+      "name": "CyberCat Open Game Engine",
+      "source_type": "compositional_strategic_game_library",
+      "primary_url": "https://github.com/CyberCat-Institute/open-game-engine",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_repository_readme",
+        "web_reference_ids": [
+          "turn26view0",
+          "turn27view5"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "MIT",
+        "scope": "CyberCat-Institute/open-game-engine repository"
+      },
+      "disposition": "Chart composition, context and profitable-deviation diagnostics; distinct from unrelated OpenGameEngine 2D/3D engine.",
+      "concepts": [
+        "open_game",
+        "composition",
+        "strategy",
+        "equilibrium_check",
+        "profitable_deviation"
+      ]
+    },
+    {
+      "source_id": "deepgtav",
+      "name": "DeepGTAV",
+      "source_type": "research_environment_plugin",
+      "primary_url": "https://github.com/aitorzip/DeepGTAV",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_repository_readme",
+        "web_reference_ids": [
+          "turn24view0",
+          "turn25view6",
+          "turn27view6"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "GPL-3.0",
+        "scope": "plugin repository only; GTAV engine, assets, mods and data rights separate"
+      },
+      "disposition": "Contextual example for bounded scenario modelling; driving observation/control API does not itself define a multi-player strategic game.",
+      "concepts": [
+        "scenario",
+        "initial_conditions",
+        "observation",
+        "driving_command",
+        "reward",
+        "data_capture"
+      ]
+    },
+    {
+      "source_id": "paignia",
+      "name": "Paignia runtime target",
+      "source_type": "runtime_target",
+      "primary_url": "https://github.com/edithatogo/paignia",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "user_supplied_url_open_failed",
+        "web_reference_ids": [
+          "turn23view0"
+        ],
+        "followup": {
+          "method": "GitHub connector and read-only git checkout",
+          "revision": "0e28f1bf33ed8c7be5fa1d63b8cc40517b61d22c",
+          "artifact": "README.md",
+          "result": "Bootstrap read; source transfer and package qualification described as pending."
+        }
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "User-designated runtime home; bootstrap README verified. No package or execution qualification.",
+      "concepts": [
+        "execution_binding",
+        "runtime_adapter"
+      ],
+      "limitations": [
+        "Initial web open returned DisabledError; later repository read verified the bootstrap only.",
+        "No Paignia solver, adapter or native simulation was executed in this audit."
+      ]
+    },
+    {
+      "source_id": "rtgdl",
+      "name": "Game Description Language for Real-time Games",
+      "source_type": "formal_language",
+      "primary_url": "https://logic.stanford.edu/ggp/readings/real_time_gdl.pdf",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_indexed_excerpt_open_failed",
+        "web_reference_ids": [
+          "turn24search11",
+          "turn27view0"
+        ]
+      },
+      "prior_inventory_status": "missing",
+      "prior_source_ids": [],
+      "repository_status": {
+        "stage": "metadata_only",
+        "parsed": false,
+        "mapped": false,
+        "executed": false
+      },
+      "licence": {
+        "name": "not_verified",
+        "disposition": "metadata_and_paraphrase_only"
+      },
+      "disposition": "Follow-up candidate for physical time and action timing; no full-text parse or licence verified.",
+      "concepts": [
+        "real_time",
+        "action_timing"
+      ],
+      "limitations": [
+        "Direct open returned 502; only indexed primary excerpt inspected"
+      ]
+    },
+    {
+      "source_id": "schema_org",
+      "name": "schema.org",
+      "source_type": "general_or_supporting_ontology",
+      "primary_url": "https://schema.org/docs/developers.html",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_existing_local_rdf",
+        "web_reference_ids": [
+          "turn26view4"
+        ]
+      },
+      "prior_inventory_status": "parsed_rdf_owl",
+      "prior_source_ids": [
+        "schema_org"
+      ],
+      "repository_status": {
+        "stage": "mapped",
+        "parsed": true,
+        "mapped": true,
+        "executed": false,
+        "accepted_alignment_rows": 5,
+        "mapping_review": "automation_prefill; not blanket expert semantic endorsement",
+        "artifact_path": "docs/ontology-comparison/sources/schema_org.ttl",
+        "triple_count": 17949,
+        "sha256": "320938f0945d717fc317f822c707f10944e7a7a0097018665a3b95dcf475b39d"
+      },
+      "licence": {
+        "name": "existing_repository_redistributable_artifact_disposition",
+        "scope": "See baseline source inventory/provenance; document licence and RDF licence may differ"
+      },
+      "disposition": "Retain supporting ontology; do not count as strategic-game source coverage.",
+      "concepts": [
+        "general_metadata"
+      ]
+    },
+    {
+      "source_id": "prov_o",
+      "name": "PROV-O",
+      "source_type": "general_or_supporting_ontology",
+      "primary_url": "https://www.w3.org/TR/prov-o/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_existing_local_rdf",
+        "web_reference_ids": [
+          "turn26view1"
+        ]
+      },
+      "prior_inventory_status": "parsed_rdf_owl",
+      "prior_source_ids": [
+        "prov_o"
+      ],
+      "repository_status": {
+        "stage": "mapped",
+        "parsed": true,
+        "mapped": true,
+        "executed": false,
+        "accepted_alignment_rows": 5,
+        "mapping_review": "automation_prefill; not blanket expert semantic endorsement",
+        "artifact_path": "docs/ontology-comparison/sources/prov_o.owl",
+        "triple_count": 1146,
+        "sha256": "02a4d7409ee3e1f697a04e4980d8d208a847cc7fa5180ca0d187540abb66919f"
+      },
+      "licence": {
+        "name": "existing_repository_redistributable_artifact_disposition",
+        "scope": "See baseline source inventory/provenance; document licence and RDF licence may differ"
+      },
+      "disposition": "Retain supporting ontology; do not count as strategic-game source coverage.",
+      "concepts": [
+        "entity",
+        "activity",
+        "agent",
+        "derivation"
+      ]
+    },
+    {
+      "source_id": "owl_time",
+      "name": "OWL-Time",
+      "source_type": "general_or_supporting_ontology",
+      "primary_url": "https://www.w3.org/TR/owl-time/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_existing_local_rdf",
+        "web_reference_ids": [
+          "turn26view2"
+        ]
+      },
+      "prior_inventory_status": "parsed_rdf_owl",
+      "prior_source_ids": [
+        "owl_time"
+      ],
+      "repository_status": {
+        "stage": "parsed",
+        "parsed": true,
+        "mapped": false,
+        "executed": false,
+        "accepted_alignment_rows": 0,
+        "mapping_review": "automation_prefill; not blanket expert semantic endorsement",
+        "artifact_path": "docs/ontology-comparison/sources/owl_time.ttl",
+        "triple_count": 1296,
+        "sha256": "251bd6970b0d7a5efa97ff681afe81a297df85deab3d860fa4f8eeba72d8f16c"
+      },
+      "licence": {
+        "name": "existing_repository_redistributable_artifact_disposition",
+        "scope": "See baseline source inventory/provenance; document licence and RDF licence may differ"
+      },
+      "disposition": "Retain supporting ontology; do not count as strategic-game source coverage.",
+      "concepts": [
+        "instant",
+        "interval",
+        "duration"
+      ]
+    },
+    {
+      "source_id": "ssn_sosa",
+      "name": "SSN/SOSA",
+      "source_type": "general_or_supporting_ontology",
+      "primary_url": "https://www.w3.org/TR/vocab-ssn/",
+      "retrieval_date": "2026-11-08",
+      "retrieval_evidence": {
+        "level": "primary_documentation_and_existing_local_rdf",
+        "web_reference_ids": [
+          "turn26view3"
+        ]
+      },
+      "prior_inventory_status": "parsed_rdf_owl",
+      "prior_source_ids": [
+        "ssn_sosa"
+      ],
+      "repository_status": {
+        "stage": "mapped",
+        "parsed": true,
+        "mapped": true,
+        "executed": false,
+        "accepted_alignment_rows": 2,
+        "mapping_review": "automation_prefill; not blanket expert semantic endorsement",
+        "artifact_path": "docs/ontology-comparison/sources/ssn_sosa.ttl",
+        "triple_count": 520,
+        "sha256": "184d86189191146e314cc52b1bceb96fca11e70aacbc160d71588102a5153eb9"
+      },
+      "licence": {
+        "name": "existing_repository_redistributable_artifact_disposition",
+        "scope": "See baseline source inventory/provenance; document licence and RDF licence may differ"
+      },
+      "disposition": "Retain supporting ontology; do not count as strategic-game source coverage.",
+      "concepts": [
+        "observation",
+        "procedure",
+        "result",
+        "sensor"
+      ]
+    }
+  ],
+  "unresolved_candidates": [
+    {
+      "label": "GBO",
+      "status": "unresolved_acronym",
+      "primary_url": null,
+      "reason": "No primary game-ontology artefact unambiguously identified by the bounded GBO/game behaviour/game behavior queries. Do not invent its expansion or count it as an acquired ontology.",
+      "next_action": "Resolve original citation/title/namespace before comparing."
+    },
+    {
+      "label": "Mejbri et al. 2013 standalone GTO",
+      "status": "original_artifact_not_acquired",
+      "evidence_url": "https://eudl.eu/pdf/10.4108/eai.4-1-2018.153533",
+      "reason": "2018 primary paper confirms predecessor at reference 40; original 2013 full paper and formal release not retrieved."
+    }
+  ],
+  "limitations": [
+    "No new third-party ontology copied or RDF parsed.",
+    "No runtime dependency installed or simulator executed.",
+    "No new formal alignment asserted.",
+    "Latest documentation URLs are mutable; version-pin when implementing adapters.",
+    "This companion audit preserves prior hash-chained registers; it does not rewrite their records."
+  ],
+  "current_mapping_note": {
+    "scope": "Corrected decisions over the retained baseline comparison corpus",
+    "accepted": 4,
+    "needs_domain_review": 6,
+    "rejected": 450,
+    "report": "docs/ontology-comparison/report.md"
+  }
+}

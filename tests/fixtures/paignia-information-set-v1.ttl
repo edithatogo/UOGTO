@@ -1,0 +1,24 @@
+@prefix uogto: <https://w3id.org/uogto/core#> .
+@prefix game: <https://example.org/doors#> .
+@prefix left: <https://example.org/doors/left#> .
+@prefix right: <https://example.org/doors/right#> .
+
+game:specification a uogto:GameSpecification ;
+    uogto:hasRepresentation game:extensive ;
+    uogto:hasPlayer game:décideur ;
+    uogto:hasInitialState game:deal ;
+    uogto:hasState game:deal, left:choice, right:choice, game:pass, game:play .
+
+game:extensive a uogto:ExtensiveFormRepresentation .
+game:décideur a uogto:Player ;
+    uogto:controlsNode left:choice, right:choice .
+
+game:deal a uogto:ChanceNode .
+game:pass a uogto:TerminalNode .
+game:play a uogto:TerminalNode .
+
+left:choice a uogto:DecisionNode ;
+    uogto:belongsToInformationSet game:choix-privé .
+right:choice a uogto:DecisionNode ;
+    uogto:belongsToInformationSet game:choix-privé .
+game:choix-privé a uogto:InformationSet .

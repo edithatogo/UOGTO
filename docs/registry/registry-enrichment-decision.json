@@ -1,0 +1,62 @@
+{
+  "schema": "uogto.registry-enrichment-decision.v1",
+  "last_reviewed": "2026-07-21",
+  "source_issue": "https://github.com/edithatogo/UOGTO/issues/93",
+  "fairsharing": {
+    "record": "https://fairsharing.org/8382",
+    "status": "awaiting_curator_review",
+    "candidates": [
+      {
+        "field": "organisation_links",
+        "decision": "deferred_pending_curator_guidance",
+        "rationale": "Add only a defensible organisation record and an editable FAIRsharing field."
+      },
+      {
+        "field": "publications",
+        "decision": "deferred_pending_publication_identifier",
+        "rationale": "Add the manuscript or related publication only when a stable public identifier is available."
+      },
+      {
+        "field": "citations",
+        "decision": "deferred_pending_curation",
+        "rationale": "Do not infer citation relationships from the repository or DOI alone."
+      },
+      {
+        "field": "record_associations",
+        "decision": "deferred_pending_defensible_association",
+        "rationale": "Create associations only where the related FAIRsharing record and relationship are authoritative."
+      }
+    ],
+    "next_action": "Check curator guidance or authenticated editable fields before proposing any update."
+  },
+  "wikidata": {
+    "item": "https://www.wikidata.org/wiki/Q140323510",
+    "status": "live_minimal_metadata",
+    "candidates": [
+      {
+        "field": "author_or_orcid",
+        "decision": "deferred",
+        "rationale": "Add only with a stable Wikidata property and a reference that directly supports the statement."
+      },
+      {
+        "field": "health_domain",
+        "decision": "deferred",
+        "rationale": "Applications in health do not by themselves establish that UOGTO is a biomedical ontology."
+      },
+      {
+        "field": "publication",
+        "decision": "deferred_pending_publication_identifier",
+        "rationale": "Add a publication statement after the manuscript has a stable public identifier."
+      }
+    ],
+    "current_verified_statements": [
+      "repository",
+      "official_website",
+      "version",
+      "release",
+      "doi",
+      "license"
+    ]
+  },
+  "policy": "Repository evidence is complete; external curation and schema-supported enrichment remain gates."
+}
