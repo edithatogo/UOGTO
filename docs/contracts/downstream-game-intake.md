@@ -173,6 +173,44 @@ pending; the declaration validator does not inspect the native graph. The
 tutorial's hosted jobs failed before execution, so this records local evidence
 only and closes no SGC obligation.
 
+### Recorded consumer case: tutorial coordination, edition 0.3
+
+The same synthetic case and intake key are retained; no new vocabulary,
+empirical health data or native dynamic execution is admitted. Edition 0.2
+remains the declaration-only rollback at its original pins.
+
+The [provider receipt](https://github.com/edithatogo/paignia/blob/8c17466cd9ca062b897eaa72a6780edc08375885/docs/integrations/downstream-game-intake.md#tutorial-coordination-edition-03)
+records signed Paignia 0.1.0 at `a04a19da06cc50e310a172574ed66f62000b891a`.
+The declaration check uses UOGTO `d93dfffe192fed2f833bd9b0681694113f663b9c`;
+the separate RDF bridge stages the [provider's locked ontology bundle](https://github.com/edithatogo/paignia/blob/a04a19da06cc50e310a172574ed66f62000b891a/verification/uogto_interchange/ontology-lock.json)
+at UOGTO `cc0c84201929996580bb4af98774cf2145b224ae`. These two source
+revisions are not interchangeable. The admitted profile remains
+`paignia/static-finite-perfect-information-sparse-zero/1.0.0`.
+
+The [receiving lesson PR](https://github.com/edithatogo/tutorial_health_gt/pull/15)
+merged at `eec4d60558bd8b8e0f999d6ee0188a7bc6bdb40d`. The [lesson workflow](https://github.com/edithatogo/tutorial_health_gt/actions/runs/45641146686/job/139299812534)
+and [privacy workflow](https://github.com/edithatogo/tutorial_health_gt/actions/runs/45641146572)
+both passed on that exact revision. The hosted lesson log reports the
+following asserted RDF fixture digests (SHA-256) and ordered utilities:
+
+| Fixture | SHA-256 | Commissioner/provider |
+| --- | --- | --- |
+| Baseline | `d44c1716e476febc17986503ab9f1b7ebb1057880578d9a06f476eea44e23b2f` | (3, 2) |
+| Changed payoff | `bae0a02a72773b678b89a83d7681b988903674e25f0189efb4dfa141557e1467` | (1, 1) |
+
+The hosted declaration check still returned `native_execution_qualified=false`;
+the separate RDF replay validated the pinned bundle, projected the ordered
+decision graph to the Rust solver, checked its returned RDF specification
+link and rejected duplicate action positions. The provider receipt separately
+records independent controls for reordered actions, changed off-path payoffs
+and invalid node inventory. The tutorial repository and logs require access;
+no private source files are redistributed here.
+
+This is receiving evidence for the named finite perfect-information case,
+not an unrestricted RDF round trip, a current-main repin, a qualification of
+all SGC leaves, or release/publication approval. General semantic and
+dynamic acceptance remain with their existing owners (issue #123).
+
 ## Validation and evidence boundaries
 
 Run the existing relevant semantic, SHACL, fixture and competency tests for the
