@@ -417,33 +417,6 @@ def examples_per_module(
         "example_terms": example_terms,
     }
 
-def examples_per_module(
-    example_graphs: dict[str, Graph],
-    term_modules: dict[URIRef, set[str]],
-    module_terms: dict[str, dict[str, set[URIRef]]],
-) -> dict:
-    module_examples: dict[str, set[str]] = defaultdict(set)
-    example_terms = {}
-    for example, graph in example_graphs.items():
-        terms = {term for term in graph.predicates() if is_named_uogto_term(term)}
-        terms |= {term for term in graph.objects(None, RDF.type) if is_named_uogto_term(term)}
-        example_terms[example] = sorted(str(term) for term in terms)
-        for term in terms:
-            for module in term_modules.get(term, set()):
-                module_examples[module].add(example)
-    modules = {}
-    for module in sorted(module_terms):
-        modules[module] = {
-            "example_count": len(module_examples[module]),
-            "examples": sorted(module_examples[module]),
-        }
-    return {
-        "example_count": len(example_graphs),
-        "modules_with_examples": sum(1 for examples in module_examples.values() if examples),
-        "modules": modules,
-        "example_terms": example_terms,
-    }
-
 
 
 def graph_named_terms(graph: Graph) -> set[URIRef]:
