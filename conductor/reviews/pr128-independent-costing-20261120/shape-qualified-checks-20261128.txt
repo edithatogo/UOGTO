@@ -1,0 +1,23 @@
+Review execution: 2026-11-28 Australia/Brisbane
+Receiving base: 82364d9fee2614ecac02d1ab8a945854c6116aa3
+Pinned writer source: 7e9075b8fd77543fc8853fab20319415cb86597d
+Runtime: CPython 3.15.2; RDFLib 7.6.0; PySHACL 0.40.2; pytest 9.2.0; Ruff 0.17.6
+Script Git blob: 3e5fe63675123896ab2427347b850c0f4272b820
+Historical diagnostic: 5/5 shape expectations satisfied; 2 query checks pass; 3 fail; exit 1
+See shape-qualified-results-20261128.json for full bindings and eight source pins.
+Independent review: same JSON output; no correctness blocker; Lean already. Ship.
+PASS make validate (main plus review files; 22 CQ expectations: 01-20,25,26)
+PASS make test (453 passed, 1 skipped, 24707 warnings, 65.41 s)
+PASS python -m ruff check conductor/reviews/pr128-independent-costing-20261120/check_shape_qualified_cq21_cq23.py
+PASS python -m py_compile conductor/reviews/pr128-independent-costing-20261120/check_shape_qualified_cq21_cq23.py
+PASS git diff --check
+Guard probes appended one comment to each input in isolated temporary copies, one at a time.
+PASS changed-input rejection (exit 2, before semantic output): examples/newborn-screening-costing.ttl
+PASS changed-input rejection (exit 2, before semantic output): ontologies/applied/costing-valuation.ttl
+PASS changed-input rejection (exit 2, before semantic output): ontologies/applied/health-economics-hta.ttl
+PASS changed-input rejection (exit 2, before semantic output): ontologies/bridges/costing-hta.ttl
+PASS changed-input rejection (exit 2, before semantic output): shapes/costing-valuation.shacl.ttl
+PASS changed-input rejection (exit 2, before semantic output): shapes/costing-hta.shacl.ttl
+PASS changed-input rejection (exit 2, before semantic output): competency-questions/cq21-costing-batch-conservation.rq
+PASS changed-input rejection (exit 2, before semantic output): competency-questions/cq23-costing-infant-attribution.rq
+PASS no optional original-byte bypass: unsupported --expect-original-head rejected (exit 2)

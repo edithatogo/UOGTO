@@ -2,7 +2,106 @@
 
 **Review date:** 20 November 2026 (Australia/Brisbane). **Disposition:** independent review evidence complete; **PR #128 blocked/returned to the existing costing writer**, not accepted or merged. **Receiving acknowledgement requested, not yet established.** This file is evidence in a *separate review lane*, not a change to the writer's costing ontology, queries, tests, source-import pipeline, track status or shared Conductor registry.
 
-## Review amendment — 28 November 2026 (Australia/Brisbane)
+## Follow-through — 28 November 2026 (Australia/Brisbane)
+
+**Current disposition:** the reviewer-owned qualification increment is verified
+and ready for publication. The existing costing writer's CQ21/CQ23 fixes and
+receiving acknowledgement remain pending. Combined CQ integration and admission
+remain with the existing integrator. The recovery hold tracked in #134 remains
+in force; this review lane is not archived. The earlier dated sections below are
+preserved historical records, not the current main or current acceptance state.
+
+### Complete fixtures qualify the historical counterexamples
+
+The new [standalone diagnostic](check_shape_qualified_cq21_cq23.py) starts from
+the writer's complete, synthetic newborn fixture at PR128
+`7e9075b8fd77543fc8853fab20319415cb86597d`. It requires exact Git blobs for the
+fixture, three costing/HTA ontologies, two costing/HTA shape files and CQ21/CQ23.
+All eight identities are recorded in the [full execution receipt](shape-qualified-results-20261128.json).
+Validation uses RDFS inference, no remote OWL imports and `inplace=False`;
+queries then run against the asserted fixture, not an inference-expanded graph.
+This matches the scope of the writer's costing/HTA test schema. It is not a
+claim that every repository shape or the combined integration tree was tested.
+
+| Case | Asserted triples | Costing/HTA SHACL result | Original query observation |
+| --- | ---: | --- | --- |
+| Unchanged baseline | 241 | Conforms | CQ21: allocated 100, residual 0, recipients 2; CQ23: A=60, B=90 |
+| Fully unallocated pool | 229 | Conforms | CQ21: allocated total and recipient count unbound; expected 0 and 0, residual 100 |
+| Alternative direct valuation | 249 | Conforms | CQ23: A=70, B=90; the alternative 10 is mixed into baseline A=60 |
+| Alternative pooled valuation | 269 | Conforms | CQ23: A=110, B=140; alternative 50/50 is mixed into baseline 60/90 |
+| Alternative pool line missing its scenario | 268 | Rejected as intended | Exact line/scenarioKey/MinCount violation confirmed; no query correctness claim |
+
+The zero-allocation mutation updates both residual amount and fraction and
+removes the allocation subjects and pool links. Alternative scenarios clone
+complete existing lines, pools and allocations, retaining the original quote,
+quantity and valuation amounts. Pool membership and reciprocal allocation links
+are rewired consistently. Consequently the new results differ numerically from
+the old sparse 7-unit/120-unit diagnostic; neither receipt is relabelled.
+
+The fresh run has **5/5 shape expectations satisfied, 2 query checks passed and
+3 query checks failed, exit 1**. Full IRIs, datatypes, unbound values and complete
+result rows are retained without collapsing duplicate rows into dictionaries.
+Baseline invariance under an alternative scenario is a diagnostic of the pinned
+queries; the writer still owns the choice between selected-scenario and grouped
+scenario output. Changed inputs are rejected before execution, so this helper
+cannot qualify future corrected queries. The original sparse helper/log remain
+unchanged. The [guard-check log](shape-qualified-checks-20261128.txt) records all
+eight changed-input rejections and the absence of an optional pin bypass.
+
+```shell
+python conductor/reviews/pr128-independent-costing-20261120/check_shape_qualified_cq21_cq23.py \
+  --source-root PATH_TO_ORIGINAL_PR128_CHECKOUT
+# Exit 1: the historical query defects remain present.
+# Exit 2: an input pin or the shape-qualification premise failed.
+```
+
+Ponytail's independent replay reproduced the complete JSON receipt exactly and
+verified all eight source guards. No correctness blocker was found; complexity
+verdict: **Lean already. Ship.** Local `make validate`, targeted Ruff and
+`py_compile` passed. Local `make test` passed: **453 passed, 1 skipped, 24,707
+warnings, 65.41 s** on receiving main plus these review files. The normal suite
+does not collect this standalone historical diagnostic. Hosted results are
+recorded with publication, without treating the historical failures as green.
+
+### Actual receiving-main checks after the earlier merges
+
+The prior review and bounded maintenance changes are now on main:
+[PR138 / c00301f](https://github.com/edithatogo/UOGTO/commit/c00301ffd7ad3843fcd3bcf40eb93485ea602d48),
+[PR110 / 1d672af](https://github.com/edithatogo/UOGTO/commit/1d672af8179428abb340db266d5cacf1d594f277), and
+[PR114 / 82364d9](https://github.com/edithatogo/UOGTO/commit/82364d9fee2614ecac02d1ab8a945854c6116aa3).
+All seven push workflows on actual receiving main `82364d9` succeeded.
+[Validate UOGTO](https://github.com/edithatogo/UOGTO/actions/runs/46082992680)
+ran `make all`: **453 passed, 1 skipped, 24,707 warnings, 83.35 s**.
+[Required Gate](https://github.com/edithatogo/UOGTO/actions/runs/46082992804)
+also ran validation/tests: **453 passed, 1 skipped, 24,707 warnings, 86.92 s**,
+plus its native-profile and manuscript checks. These are receiving-main results,
+not just historical pull-request checks.
+
+The main manifest still executes 22 expectations: CQ01–20, CQ25 and CQ26.
+CQ25 returns 4 expected rows; CQ26 returns 16. CQ21–24 remain in unmerged PR128.
+The requested combined CQ01–25 acceptance must retain CQ26 and execute the actual
+26-query integrated commit. That integration has not been performed by this lane.
+[Privacy push run](https://github.com/edithatogo/UOGTO/actions/runs/46082992850)
+passed for its changed-file scope (one file); it does not resolve the earlier
+full-scope scheduled failure routed under #107.
+
+### Receiving dependency and next owned work
+
+The existing [PR128 handoff](https://github.com/edithatogo/UOGTO/pull/128#issuecomment-7229938074)
+remains the concrete routing surface for the costing track owner and integrator
+conversation `6af96da1-c088-83ec-85a8-ab19f5f4512c`. The PR128 and linked MCHS411
+records identify the maintainer account but no distinct writer contact. There
+is still no express writer or integrator acknowledgement. Publishing a request
+or an independent review is not that acknowledgement.
+
+The next writer-owned work is the CQ21/CQ23 correction with zero/partial/full,
+scenario-isolation and malformed-provenance regressions; next integrator-owned
+work is combined CQ01–26 verification. This increment advances the first research
+recommendation with shape-qualified evidence. Native round trips and held-out
+semantic-loss experiments remain proposals for the existing SGC/Paignia and
+FRT/MAT owners, without an achieved frontier claim or a new shared track.
+
+## Earlier review amendment — 28 November 2026 (Australia/Brisbane)
 
 The sections below retain the 20 November evidence; this amendment records the
 current review. Main has advanced to `b3f1de0119ee1c1e49913d9c1f9284e053e43433`.
